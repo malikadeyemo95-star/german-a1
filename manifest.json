@@ -1,0 +1,14 @@
+{
+  "name": "German A1 in 30 Days",
+  "short_name": "German A1",
+  "description": "Complete 30-day German A1 self-study course — offline, no dependencies.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0f1220",
+  "theme_color": "#0f1220",
+  "icons": [
+    { "src": "icon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

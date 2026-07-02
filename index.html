@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f1220">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="German A1">
 <title>German A1 in 30 Days</title>
 <style>
 :root{--bg:#0f1220;--card:#1a1e33;--txt:#e8eaf6;--mut:#9aa0c3;--acc:#ffd166;--acc2:#6ee7b7;--red:#ff6b6b;--line:#2a2f52}
@@ -48,11 +55,41 @@ li{margin:4px 0}
 .nav2{display:flex;justify-content:space-between;gap:10px;margin:14px 0 10px}
 .nav2 button{flex:1;background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:15px}
 p{margin:8px 0}
+/* --- TTS speak buttons --- */
+.say{background:#232849;border:1px solid var(--line);color:var(--acc2);border-radius:8px;padding:1px 7px;font-size:13px;margin-left:6px;cursor:pointer;vertical-align:middle;line-height:1.5}
+.say:active{background:var(--acc);color:#111}
+body.no-tts .say{display:none}
+.fc{position:relative}
+.fc .say{position:absolute;bottom:4px;right:4px;margin:0}
+/* --- flashcard shuffle --- */
+.shuf{background:var(--card);border:1px solid var(--acc2);color:var(--acc2);border-radius:8px;padding:6px 12px;font-size:14px;margin:6px 0;cursor:pointer}
+/* --- header progress + streak --- */
+#pwrap{display:flex;align-items:center;gap:8px;margin:0 0 7px;font-size:12.5px;color:var(--mut)}
+#pbar{flex:1;height:5px;background:var(--card);border-radius:3px;overflow:hidden}
+#pfill{height:100%;width:0;background:var(--acc2);border-radius:3px;transition:width .3s}
+#streak{color:var(--acc);font-weight:700;float:right}
+/* --- interactive quizzes --- */
+.quizI .qq{margin:12px 0 6px;font-weight:600}
+.quizI .opt{display:block;width:100%;text-align:left;background:#232849;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px 10px;margin:5px 0;font-size:14.5px;cursor:pointer}
+.quizI .opt.ok{background:#1d4034;border-color:var(--acc2);color:var(--acc2);font-weight:700}
+.quizI .opt.bad{background:#42222c;border-color:var(--red);color:var(--red)}
+.quizI .score{margin:10px 0;font-weight:700;color:var(--acc)}
+.best{color:var(--acc2);font-weight:400;font-size:13px}
+/* --- Review All (spaced repetition) --- */
+#rvCard{background:#232849;border:1px solid var(--line);border-radius:14px;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:20px;font-weight:700;cursor:pointer;margin:12px 0}
+#rvCard .a{color:var(--acc2)}
+#rvCard .say{position:static;margin-left:10px}
+.rvBtns{display:flex;gap:10px}
+.rvBtns button{flex:1;border-radius:10px;padding:12px;font-size:15px;border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer}
+.rvBtns .again{border-color:var(--red);color:var(--red)}
+.rvBtns .got{border-color:var(--acc2);color:var(--acc2)}
+.rvMeta{color:var(--mut);font-size:13px;margin:6px 0}
 </style>
 </head>
 <body>
 <header>
-<h1>🇩🇪 German A1 in 30 Days</h1>
+<h1>🇩🇪 German A1 in 30 Days <span id="streak" title="Daily study streak"></span></h1>
+<div id="pwrap"><div id="pbar"><div id="pfill"></div></div><span id="ptext">0/30 days</span></div>
 <nav id="nav"></nav>
 </header>
 <main>
@@ -4278,6 +4315,20 @@ p{margin:8px 0}
 <label class="done"><input type="checkbox" data-day="30"> ✅ Mark Day 30 complete — COURSE FINISHED! 🏆</label>
 </section>
 
+<!-- ============ REVIEW ALL (SRS) ============ -->
+<section id="review" class="day" data-chip="🃏 Review" data-title="Review All — Spaced-Repetition Flashcards">
+<h2>🃏 Review All Flashcards</h2>
+<p class="goal">🎯 Every flashcard from all 30 days in one deck. Tap the card to flip — then be honest: <b>Again</b> brings it back soon, <b>Got it</b> retires it for this session. Cards you miss appear first next time.</p>
+<div id="rvMeta" class="rvMeta"></div>
+<div id="rvCard"><span>Loading deck…</span></div>
+<div class="rvBtns" id="rvBtns" style="display:none">
+<button class="again" id="rvAgain">↩ Again</button>
+<button class="got" id="rvGot">✓ Got it</button>
+</div>
+<div class="rvBtns" style="margin-top:10px"><button id="rvRestart">⟳ Restart session</button></div>
+<div class="tip">💡 Do one Review session every day after finishing the day's lesson — 5 minutes here is worth an hour of rereading.</div>
+</section>
+
 </main>
 <script>
 const secs=[...document.querySelectorAll('section.day')];
@@ -4285,11 +4336,11 @@ const nav=document.getElementById('nav');
 let done={};
 try{done=JSON.parse(localStorage.getItem('ga1done')||'{}')}catch(e){}
 
-function label(i){return secs[i].id==='intro'?'Start':'Day '+secs[i].id.slice(1);}
+function label(i){const s=secs[i];return s.dataset.chip||(s.id==='intro'?'Start':'Day '+s.id.slice(1));}
 
 secs.forEach((s,i)=>{
   const b=document.createElement('button');
-  b.textContent=s.id==='intro'?'Start':s.id.slice(1);
+  b.textContent=s.dataset.chip||(s.id==='intro'?'Start':s.id.slice(1));
   b.dataset.target=s.id;
   b.title=s.dataset.title||'';
   b.addEventListener('click',()=>show(s.id));
@@ -4336,6 +4387,238 @@ let last='intro';
 try{last=localStorage.getItem('ga1last')||'intro'}catch(e){}
 if(!document.getElementById(last))last='intro';
 show(last);
+
+/* ===== 1. German text-to-speech (Web Speech API) ===== */
+let deVoice=null;
+function pickVoice(){
+  const v=speechSynthesis.getVoices();
+  if(!v.length)return; // voices not loaded yet — keep buttons until we know
+  deVoice=v.find(x=>x.lang==='de-DE')||v.find(x=>x.lang&&x.lang.toLowerCase().startsWith('de'))||null;
+  document.body.classList.toggle('no-tts',!deVoice);
+}
+if('speechSynthesis' in window){
+  pickVoice();
+  speechSynthesis.onvoiceschanged=pickVoice;
+}else{
+  document.body.classList.add('no-tts');
+}
+function speak(t){
+  if(!('speechSynthesis' in window))return;
+  const txt=t.replace(/\.\.\.|…/g,', ').replace(/[¨→⚠️✅☐🔊]/g,' ').replace(/\s+/g,' ').trim();
+  if(!txt)return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(txt);
+  u.lang='de-DE';
+  if(deVoice)u.voice=deVoice;
+  u.rate=0.9; // slightly slower for learners
+  speechSynthesis.speak(u);
+}
+function sayBtn(txt){
+  const b=document.createElement('button');
+  b.className='say';b.type='button';b.textContent='🔊';b.title='Anhören (listen)';
+  b.setAttribute('aria-label','Listen in German');
+  b.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();speak(txt);});
+  return b;
+}
+// mark German text for screen readers / correct hyphenation
+document.querySelectorAll('.de, .fc .a').forEach(el=>el.setAttribute('lang','de'));
+// vocab (and grammar) table cells
+document.querySelectorAll('td.de').forEach(td=>{
+  const txt=td.textContent;
+  if(txt.trim())td.appendChild(sayBtn(txt));
+});
+// dialogue lines
+document.querySelectorAll('.dlg .de').forEach(sp=>{
+  sp.insertAdjacentElement('afterend',sayBtn(sp.textContent));
+});
+// flashcards: speak the German side, never flip
+document.querySelectorAll('.fc').forEach(fc=>{
+  const a=fc.querySelector('.a');
+  if(a)fc.appendChild(sayBtn(a.textContent));
+});
+
+/* ===== 2a. Shuffle button above every flashcard grid ===== */
+function shuffleArr(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+document.querySelectorAll('.fcgrid').forEach(g=>{
+  const b=document.createElement('button');
+  b.className='shuf';b.type='button';b.textContent='🔀 Shuffle';
+  b.addEventListener('click',()=>shuffleArr([...g.children]).forEach(c=>g.appendChild(c)));
+  g.parentElement.insertBefore(b,g);
+});
+
+/* ===== 2b. Review All — one deck, simple spaced repetition ===== */
+let srs={};
+try{srs=JSON.parse(localStorage.getItem('ga1srs')||'{}')}catch(e){}
+function srsSave(){try{localStorage.setItem('ga1srs',JSON.stringify(srs))}catch(e){}}
+const rvCard=document.getElementById('rvCard'),
+      rvBtns=document.getElementById('rvBtns'),
+      rvMeta=document.getElementById('rvMeta');
+let rvDeck=[],rvCur=null,rvFlipped=false,rvInit=false;
+
+function allCards(){
+  const out=[];
+  document.querySelectorAll('.fcgrid .fc').forEach(fc=>{
+    const q=fc.querySelector('.q'),a=fc.querySelector('.a');
+    if(!q||!a)return;
+    const day=fc.closest('section.day').id;
+    out.push({q:q.textContent,a:a.textContent,day,key:(q.textContent+'|'+a.textContent).slice(0,80)});
+  });
+  return out;
+}
+function rvStart(){
+  rvDeck=allCards();
+  shuffleArr(rvDeck);
+  rvDeck.sort((x,y)=>(srs[y.key]||0)-(srs[x.key]||0)); // hardest first, random within ties
+  rvNext();
+}
+function rvNext(){
+  rvBtns.style.display='none';rvFlipped=false;
+  if(!rvDeck.length){
+    rvCur=null;
+    rvCard.innerHTML='<span>🎉 Session complete! Well done. Tap „Restart session" for another round.</span>';
+    rvMeta.textContent='0 cards left';
+    return;
+  }
+  rvCur=rvDeck[0];
+  rvCard.textContent='';
+  const s=document.createElement('span');s.textContent=rvCur.q;rvCard.appendChild(s);
+  const miss=srs[rvCur.key]||0;
+  rvMeta.textContent=rvDeck.length+' cards left · Day '+rvCur.day.slice(1)+(miss?' · missed '+miss+'×':'');
+}
+rvCard.addEventListener('click',()=>{
+  if(!rvCur||rvFlipped)return;
+  rvFlipped=true;
+  rvCard.textContent='';
+  const s=document.createElement('span');s.className='a';s.setAttribute('lang','de');s.textContent=rvCur.a;
+  rvCard.appendChild(s);
+  rvCard.appendChild(sayBtn(rvCur.a));
+  rvBtns.style.display='flex';
+});
+document.getElementById('rvAgain').addEventListener('click',()=>{
+  if(!rvCur)return;
+  srs[rvCur.key]=(srs[rvCur.key]||0)+1;srsSave();
+  const c=rvDeck.shift();
+  rvDeck.splice(Math.min(5,rvDeck.length),0,c); // requeue ~5 positions later
+  markActivity();rvNext();
+});
+document.getElementById('rvGot').addEventListener('click',()=>{
+  if(!rvCur)return;
+  srs[rvCur.key]=Math.max(0,(srs[rvCur.key]||0)-1);srsSave();
+  rvDeck.shift();
+  markActivity();rvNext();
+});
+document.getElementById('rvRestart').addEventListener('click',rvStart);
+// build the deck the first time the Review tab is opened
+const _origShow=show;
+show=function(id){_origShow(id);if(id==='review'&&!rvInit){rvInit=true;rvStart();}};
+function markActivity(){if(typeof bumpStreak==='function')bumpStreak();} // streak arrives in step 4
+
+/* ===== 3. Interactive multiple-choice quizzes ===== */
+let quizBest={};
+try{quizBest=JSON.parse(localStorage.getItem('ga1quiz')||'{}')}catch(e){}
+// shorten an answer-key entry into a clean option label
+function cleanAns(t){
+  let s=t.replace(/\(.*?\)/g,'').split('—')[0].split(' or:')[0].trim();
+  if(!s)s=t.trim();
+  return s;
+}
+const quizPool=[]; // global distractor pool
+const quizzes=[];
+document.querySelectorAll('section.day details').forEach(d=>{
+  const sum=d.querySelector(':scope>summary');
+  if(!sum||!/Mini quiz/.test(sum.textContent))return;
+  const qol=d.querySelector(':scope>ol');
+  const key=d.querySelector('details.key');
+  const kol=key&&key.querySelector('ol');
+  if(!qol||!kol)return;
+  const qs=[...qol.children],ks=[...kol.children];
+  if(!qs.length||qs.length!==ks.length)return;
+  const answers=ks.map(li=>cleanAns(li.textContent));
+  answers.forEach(a=>{if(a.length<60)quizPool.push(a)});
+  quizzes.push({day:d.closest('section.day').id.slice(1),sum,qol,qs,answers});
+});
+function bestLabel(sum,best,n){
+  let sp=sum.querySelector('.best');
+  if(!sp){sp=document.createElement('span');sp.className='best';sum.appendChild(sp);}
+  sp.textContent=(best!=null)?' · Best: '+best+'/'+n:'';
+}
+quizzes.forEach(qz=>{
+  const n=qz.qs.length;
+  const wrap=document.createElement('div');wrap.className='quizI';
+  const scoreEl=document.createElement('div');scoreEl.className='score';scoreEl.textContent='Score: 0/'+n;
+  let answered=0,score=0;
+  qz.qs.forEach((li,i)=>{
+    const correct=qz.answers[i];
+    const qq=document.createElement('div');qq.className='qq';qq.innerHTML=(i+1)+'. '+li.innerHTML;
+    wrap.appendChild(qq);
+    // distractors: same quiz first, global pool as backup
+    let opts=[correct];
+    shuffleArr(qz.answers.filter(a=>a!==correct)).slice(0,2).forEach(a=>opts.push(a));
+    let guard=0;
+    while(opts.length<3&&quizPool.length&&guard++<25){
+      const c=quizPool[Math.floor(Math.random()*quizPool.length)];
+      if(!opts.includes(c))opts.push(c);
+    }
+    opts=[...new Set(opts)];shuffleArr(opts);
+    const box=document.createElement('div');
+    opts.forEach(o=>{
+      const b=document.createElement('button');b.className='opt';b.type='button';b.textContent=o;
+      b.addEventListener('click',()=>{
+        if(box.dataset.done)return;
+        box.dataset.done='1';answered++;
+        if(o===correct){b.classList.add('ok');score++;}
+        else{b.classList.add('bad');[...box.children].forEach(x=>{if(x.textContent===correct)x.classList.add('ok')});}
+        scoreEl.textContent='Score: '+score+'/'+n;
+        if(answered===n){
+          scoreEl.textContent='✅ '+score+'/'+n+' correct'+(score===n?' — perfekt! 🎉':'');
+          const best=Math.max(score,quizBest[qz.day]||0);
+          quizBest[qz.day]=best;
+          try{localStorage.setItem('ga1quiz',JSON.stringify(quizBest))}catch(e){}
+          bestLabel(qz.sum,best,n);
+        }
+      });
+      box.appendChild(b);
+    });
+    wrap.appendChild(box);
+  });
+  wrap.appendChild(scoreEl);
+  qz.qol.style.display='none'; // original questions hidden; answer-key box stays as fallback
+  qz.qol.insertAdjacentElement('afterend',wrap);
+  if(quizBest[qz.day]!=null)bestLabel(qz.sum,quizBest[qz.day],n);
+});
+
+/* ===== 4. Progress bar + study streak ===== */
+function dayStr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+let streak={last:'',count:0};
+try{streak=JSON.parse(localStorage.getItem('ga1streak')||'{"last":"","count":0}')}catch(e){}
+function bumpStreak(){
+  const today=dayStr(new Date());
+  if(streak.last===today)return;
+  const yest=dayStr(new Date(Date.now()-864e5));
+  streak.count=(streak.last===yest)?streak.count+1:1;
+  streak.last=today;
+  try{localStorage.setItem('ga1streak',JSON.stringify(streak))}catch(e){}
+  drawStreak();
+}
+function drawStreak(){
+  const today=dayStr(new Date()),yest=dayStr(new Date(Date.now()-864e5));
+  const alive=streak.last===today||streak.last===yest; // broken streaks show nothing
+  document.getElementById('streak').textContent=(alive&&streak.count>0)?'🔥'+streak.count:'';
+}
+function drawProgress(){
+  const n=Object.values(done).filter(Boolean).length;
+  document.getElementById('pfill').style.width=Math.min(100,n/30*100)+'%';
+  document.getElementById('ptext').textContent=n+'/30 days';
+}
+document.querySelectorAll('.done input').forEach(cb=>{
+  cb.addEventListener('change',()=>{drawProgress();if(cb.checked)bumpStreak();});
+});
+drawProgress();drawStreak();
+
+/* ===== 5. Offline PWA: register the service worker (fails silently, e.g. when opened as a plain file) ===== */
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').catch(()=>{});
+}
 </script>
 </body>
 </html>
