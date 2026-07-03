@@ -5354,5 +5354,264 @@ show=function(id){
   if(/^d\d+$/.test(id))renderMissionTasks(); // keep the weak-due badge fresh
 };
 </script>
+<script>
+/* ================================================================
+   TRAINER LAYER — Phase 3: listening trainer, speaking studio,
+   pronunciation trainer, everyday German, survival panel.
+   ================================================================ */
+'use strict';
+function speakR(t,rate){
+  if(!('speechSynthesis' in window))return;
+  const txt=String(t).replace(/–|—/g,',').replace(/\s+/g,' ').trim();
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(txt);
+  u.lang='de-DE';if(deVoice)u.voice=deVoice;u.rate=rate;
+  speechSynthesis.speak(u);
+}
+function ttsWarn(){return document.body.classList.contains('no-tts')?'<div class="warn">⚠️ German voice not found on this device. Audio may not sound natural — try Chrome or Safari, or check your system voices.</div>':'';}
+// ---- dialogue toolbars: play all / slow / hide German (listening practice) ----
+document.querySelectorAll('.dlg').forEach(dlg=>{
+  const lines=[...dlg.querySelectorAll('.de')].map(s=>s.textContent);
+  if(!lines.length)return;
+  const tb=document.createElement('div');tb.className='toolbar';
+  tb.innerHTML='<button type="button">▶ Play all</button><button type="button">🐢 Play slow</button><button type="button">🙈 Hide German</button>';
+  const[pa,ps,hd]=tb.children;
+  let i=0,timer=null;
+  function playSeq(rate){
+    clearTimeout(timer);i=0;
+    (function step(){
+      if(i>=lines.length)return;
+      speakR(lines[i],rate);
+      const est=lines[i].length*(rate<0.9?110:80)+900;
+      i++;timer=setTimeout(step,est);
+    })();
+  }
+  pa.addEventListener('click',()=>playSeq(0.9));
+  ps.addEventListener('click',()=>playSeq(0.65));
+  hd.addEventListener('click',()=>{
+    const on=dlg.classList.toggle('deHidden');
+    dlg.querySelectorAll('.de').forEach(s=>s.style.filter=on?'blur(5px)':'');
+    hd.textContent=on?'👀 Show German':'🙈 Hide German';
+  });
+  dlg.insertAdjacentElement('afterbegin',tb);
+});
+// ---- listening trainer ----
+const LISTEN=[
+{t:'An der Kasse',s:'Das macht zusammen 14 Euro 80. – Kann ich mit Karte zahlen? – Ja, natürlich. Brauchen Sie eine Tüte? – Nein, danke.',
+ qs:[{q:'How much is the total?',o:['€14.80','€40.80','€14.18'],a:0},{q:'How does the customer pay?',o:['cash','by card','doesn’t pay'],a:1},{q:'Does the customer take a bag?',o:['yes','no','two bags'],a:1}]},
+{t:'Eine Telefonnummer',s:'Meine Nummer ist null eins sieben sechs – vier fünf – acht acht – zwei drei.',
+ qs:[{q:'Which number did you hear?',o:['0176 45 88 23','0176 54 88 32','0167 45 88 23'],a:0}]},
+{t:'Im Fitnessstudio',s:'Entschuldigung, ist das Gerät noch frei? – Nein, ich brauche noch zehn Minuten. – Kein Problem, ich mache zuerst Rücken.',
+ qs:[{q:'Is the machine free?',o:['yes','no','it is broken'],a:1},{q:'How long does the person still need?',o:['5 minutes','10 minutes','20 minutes'],a:1},{q:'What does the other person train first?',o:['chest','legs','back (Rücken)'],a:2}]},
+{t:'Die Wettervorhersage',s:'Und jetzt das Wetter: Heute ist es bewölkt, maximal 14 Grad. Morgen scheint die Sonne, bis 21 Grad.',
+ qs:[{q:'Today’s weather?',o:['sunny, 21°','cloudy, 14°','rain, 14°'],a:1},{q:'Tomorrow?',o:['sun, up to 21°','snow','storm'],a:0}]},
+{t:'Beim Bürgeramt',s:'Guten Tag, ich möchte mich anmelden. – Haben Sie einen Termin? – Ja, um halb elf. – Gut. Ihr Formular und Ihren Pass, bitte.',
+ qs:[{q:'What does the person want?',o:['to register (anmelden)','to pay a bill','a new passport'],a:0},{q:'When is the appointment?',o:['11:30','10:30','11:00'],a:1},{q:'What does the clerk ask for?',o:['form and passport','money','a photo'],a:0}]},
+{t:'Am Gleis',s:'Achtung am Gleis vier: Der Zug nach Hamburg hat heute circa fünfzehn Minuten Verspätung.',
+ qs:[{q:'Where is the train going?',o:['Hamburg','Hannover','Frankfurt'],a:0},{q:'How late is it?',o:['about 15 minutes','50 minutes','5 minutes'],a:0},{q:'Which platform?',o:['4','14','40'],a:0}]}];
+let listenInit=false;
+function renderListen(){
+  const body=document.getElementById('listenBody');
+  body.innerHTML=ttsWarn()+LISTEN.map((L,li)=>{
+    return '<div class="dcard" data-l="'+li+'"><h3>🎧 '+esc(L.t)+'</h3>'+
+      '<div class="toolbar"><button type="button" data-p="0.9">▶ Play</button><button type="button" data-p="0.65">🐢 Slow</button><button type="button" data-p="0.9" class="rep">🔁 Repeat</button></div>'+
+      L.qs.map((q,qi)=>'<div class="qq">'+esc(q.q)+'</div><div>'+q.o.map((o,oi)=>'<button class="opt" data-q="'+qi+'" data-o="'+oi+'">'+esc(o)+'</button>').join('')+'</div>').join('')+
+      '<div class="fb" data-fb></div><details style="display:none" data-tr><summary>📜 Transcript</summary><p class="de" lang="de">'+esc(L.s)+'</p></details></div>';
+  }).join('');
+  LISTEN.forEach((L,li)=>{
+    const card=body.querySelector('[data-l="'+li+'"]');
+    card.querySelectorAll('.toolbar button').forEach(b=>b.addEventListener('click',()=>speakR(L.s,+b.dataset.p)));
+    let answered=0,right=0;
+    card.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
+      const qi=+b.dataset.q;
+      if(card.dataset['done'+qi])return;
+      card.dataset['done'+qi]=1;answered++;
+      const ok=+b.dataset.o===L.qs[qi].a;
+      b.classList.add(ok?'ok':'bad');
+      if(!ok){
+        card.querySelector('.opt[data-q="'+qi+'"][data-o="'+L.qs[qi].a+'"]').classList.add('ok');
+        weakAdd('Listening: '+L.t+' — '+L.qs[qi].q,L.qs[qi].o[L.qs[qi].a],'Listening');
+      }else right++;
+      addSkill('listening',2);
+      if(answered===L.qs.length){
+        card.querySelector('[data-fb]').className='fb '+(right===answered?'ok':'bad');
+        card.querySelector('[data-fb]').textContent='✅ '+right+'/'+answered+' — transcript unlocked below.';
+        card.querySelector('[data-tr]').style.display='block';
+      }
+    }));
+  });
+}
+// ---- recording helper (graceful everywhere) ----
+function makeRecorder(){
+  const el=document.createElement('div');el.className='rec';
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia||!window.MediaRecorder){
+    el.innerHTML='<span style="color:var(--mut);font-size:13px">🎙 Recording isn’t supported in this browser — say it aloud anyway, that’s what counts!</span>';
+    return el;
+  }
+  el.innerHTML='<button type="button" class="go">● Record me</button><button type="button" class="stop" disabled>■ Stop</button><audio controls style="max-width:200px;height:36px"></audio>';
+  const[go,stop]=el.querySelectorAll('button'),audio=el.querySelector('audio');
+  let mr=null,chunks=[];
+  go.addEventListener('click',async()=>{
+    try{
+      const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+      chunks=[];mr=new MediaRecorder(stream);
+      mr.ondataavailable=e=>chunks.push(e.data);
+      mr.onstop=()=>{
+        audio.src=URL.createObjectURL(new Blob(chunks,{type:mr.mimeType||'audio/webm'}));
+        stream.getTracks().forEach(t=>t.stop());
+        addSkill('speaking',3);addSkill('pron',1);markActivity();
+      };
+      mr.start();go.disabled=true;stop.disabled=false;go.textContent='● Recording…';
+    }catch(err){
+      el.innerHTML='<span style="color:var(--mut);font-size:13px">🎙 Microphone blocked or unavailable ('+esc(err.name||'error')+'). Practice aloud without recording.</span>';
+    }
+  });
+  stop.addEventListener('click',()=>{if(mr&&mr.state!=='inactive')mr.stop();go.disabled=false;stop.disabled=true;go.textContent='● Record me';});
+  return el;
+}
+// ---- speaking studio ----
+const SPEAK=[
+{id:'intro',t:'Introduce yourself',p:'Say who you are, where you’re from, where you live, and what you speak.',m:'Hallo, ich heiße Malik. Ich komme aus Nigeria. Ich wohne in Berlin. Ich spreche Englisch und ein bisschen Deutsch.'},
+{id:'spell',t:'Spell your name + phone number',p:'Say your name, spell it with German letters, then say your phone number digit by digit.',m:'Mein Name ist Malik. Ich buchstabiere: M – A – L – I – K. Meine Telefonnummer ist null eins sieben sechs, vier fünf, acht acht, zwei drei.'},
+{id:'order',t:'Order at a café',p:'Order a drink and something to eat, then ask for the price.',m:'Ich hätte gern einen Kaffee und ein Brötchen mit Käse. Was kostet das, bitte?'},
+{id:'termin',t:'Make an appointment',p:'Call and ask for an appointment on Friday at 9.',m:'Guten Tag, ich möchte einen Termin machen. Geht es am Freitag um neun Uhr?'},
+{id:'work',t:'At work',p:'Say your working hours today, then ask someone to repeat and speak slowly.',m:'Ich arbeite heute von halb sieben bis fünfzehn Uhr. Können Sie das bitte wiederholen? Können Sie bitte langsam sprechen?'},
+{id:'routine',t:'Your daily routine',p:'Describe your morning in 3–4 sentences.',m:'Ich stehe um sechs Uhr auf. Ich dusche und frühstücke. Dann fahre ich zur Arbeit.'},
+{id:'yesterday',t:'Talk about yesterday',p:'Say 3 sentences about yesterday using war/hatte and one perfect-tense verb.',m:'Gestern war ich müde. Ich habe lange gearbeitet. Am Abend habe ich gekocht und ferngesehen.'}];
+const SPKCHECKS=['I spoke without reading','My pronunciation was clear','I used correct word order','I want to repeat this later'];
+let speakInit=false;
+function renderSpeak(){
+  const body=document.getElementById('speakBody');
+  body.innerHTML=ttsWarn()+
+    '<div class="tip">👄 Watch these sounds: <b lang="de">ich</b> (soft “ch”), <b lang="de">Deutsch</b> (“DOYtch”), <b lang="de">wohne</b> (W = English V!), <b lang="de">Berlin</b> (“bare-LEEN”), and German <b>J</b> = English Y (<span lang="de">ja</span> = “yah”).</div>'+
+    SPEAK.map((S,i)=>{
+      const st=X.speakDone[S.id]||{checks:[]};
+      return '<div class="dcard" data-s="'+i+'"><h3>🎤 '+esc(S.t)+(st.done?' ✅':'')+'</h3><p>'+esc(S.p)+'</p>'+
+        '<div class="toolbar"><button type="button" data-mdl>👀 Show model answer</button><button type="button" data-p="0.9">🔊 Model</button><button type="button" data-p="0.65">🐢 Slow</button></div>'+
+        '<p class="de" lang="de" data-model style="display:none">'+esc(S.m)+'</p>'+
+        '<div data-rec></div>'+
+        SPKCHECKS.map((c,ci)=>'<label style="display:block;font-size:14px"><input type="checkbox" data-c="'+ci+'" '+(st.checks&&st.checks[ci]?'checked':'')+'> '+esc(c)+'</label>').join('')+
+        '</div>';
+    }).join('');
+  SPEAK.forEach((S,i)=>{
+    const card=body.querySelector('[data-s="'+i+'"]');
+    card.querySelector('[data-rec]').appendChild(makeRecorder());
+    const mdl=card.querySelector('[data-model]');
+    card.querySelector('[data-mdl]').addEventListener('click',e=>{
+      const showing=mdl.style.display!=='none';
+      mdl.style.display=showing?'none':'block';
+      e.target.textContent=showing?'👀 Show model answer':'🙈 Hide model answer';
+    });
+    card.querySelectorAll('[data-p]').forEach(b=>b.addEventListener('click',()=>speakR(S.m,+b.dataset.p)));
+    card.querySelectorAll('[data-c]').forEach(cb=>cb.addEventListener('change',()=>{
+      const st=X.speakDone[S.id]||{checks:[]};
+      st.checks=st.checks||[];st.checks[+cb.dataset.c]=cb.checked;
+      st.done=st.checks.filter(Boolean).length>=2;
+      X.speakDone[S.id]=st;saveX();addSkill('speaking',1);
+    }));
+  });
+}
+// ---- pronunciation trainer ----
+const PRON=[
+{s:'W → “v”',e:'German W always sounds like English V.',m:'Top front teeth touch your lower lip.',w:['Wasser','wohnen','wer','wie'],d:'Wein – wir – war – wo',n:'“Wasser” = VASS-er, never WASS-er. This is the #1 accent giveaway.'},
+{s:'V → “f”',e:'German V usually sounds like English F.',m:'Same mouth as F.',w:['Vater','viel','vier','von'],d:'vier – für – Vogel – voll'},
+{s:'J → “y”',e:'German J sounds like English Y.',m:'Tongue relaxed, like “yes”.',w:['ja','Jahr','jetzt','jung'],d:'ja – Jacke – Juli – jeden'},
+{s:'Z → “ts”',e:'Z is a sharp TS, like “cats”.',m:'Tongue tip behind top teeth, quick hiss.',w:['zehn','Zeit','Zug','zusammen'],d:'zwei – zwanzig – Zucker – Zimmer'},
+{s:'ei vs ie',e:'ei = “eye”; ie = “ee”. Say the SECOND letter’s English name.',m:'ei opens wide, ie smiles.',w:['nein','drei','sieben','wie'],d:'Wein – Wien · dein – dienen · leise – Liebe'},
+{s:'eu / äu → “oy”',e:'Both sound like “oy” in “boy”.',m:'Round then relax.',w:['neun','heute','Häuser','Leute'],d:'neu – neun – teuer – Freund'},
+{s:'sch / st / sp',e:'sch = “sh”; st/sp at a word start = “sht/shp”.',m:'Lips pushed forward.',w:['Schule','Straße','sprechen','Stadt'],d:'schön – Schlüssel – Sport – Student'},
+{s:'ch: ich vs ach',e:'After e/i: soft hiss (ich). After a/o/u: throaty (Buch).',m:'Soft ch: smile and push air over the tongue. Hard ch: like clearing your throat gently.',w:['ich','nicht','Buch','acht'],d:'ich – mich – Küche · Buch – Woche – kochen',n:'Don’t say “ick” or “ish” — practice the soft hiss daily.'},
+{s:'ä ö ü',e:'ä ≈ “e” in bed. ö = say “ay” with rounded lips. ü = say “ee” with rounded lips.',m:'For ö and ü: freeze your tongue, round ONLY the lips.',w:['Mädchen','schön','fünf','über'],d:'können – möchte – müssen – Tür',n:'ü is not “oo”! “fünf” ≠ “foonf”. Say “feenf”, then round your lips.'},
+{s:'ß → “ss”',e:'ß is just a sharp double-s.',m:'Simple hiss.',w:['heißen','Straße','groß','weiß'],d:'heiße – dreißig – Fuß'},
+{s:'German R',e:'Gargled in the throat at the start; almost silent at the end (-er sounds like “a”).',m:'Like gently gargling water.',w:['rot','Rücken','fahren','Arbeit'],d:'richtig – Regen – Wasser (VASS-a!) – Lehrer (LEER-a)'}];
+let pronInit=false;
+function renderPron(){
+  const body=document.getElementById('pronBody');
+  body.innerHTML=ttsWarn()+PRON.map((P,i)=>
+    '<div class="dcard"><h3>'+esc(P.s)+'</h3><p>'+esc(P.e)+'</p>'+
+    '<p style="font-size:14px;color:var(--mut)">👄 Mouth: '+esc(P.m)+'</p>'+
+    '<div>'+P.w.map(w=>'<span class="tbadge" lang="de">'+esc(w)+'</span>').join('')+' <button class="say" data-w="'+esc(P.w.join(', '))+'">🔊</button></div>'+
+    '<p style="font-size:14px">Drill (listen → repeat 3×): <span class="de" lang="de">'+esc(P.d)+'</span> <button class="say" data-w="'+esc(P.d.replace(/·/g,','))+'">🔊</button> <button class="say" data-slow="'+esc(P.d.replace(/·/g,','))+'">🐢</button></p>'+
+    (P.n?'<div class="warn" style="font-size:13px">⚠️ '+esc(P.n)+'</div>':'')+
+    '<div data-rec></div><button class="ghost" data-done="'+i+'">✓ I drilled this sound</button></div>').join('');
+  body.querySelectorAll('[data-w]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.w,0.85)}));
+  body.querySelectorAll('[data-slow]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.slow,0.6)}));
+  body.querySelectorAll('[data-rec]').forEach(d=>d.appendChild(makeRecorder()));
+  body.querySelectorAll('[data-done]').forEach(b=>b.addEventListener('click',()=>{addSkill('pron',2);b.textContent='✓ Drilled — nice!';}));
+}
+// ---- everyday German (life in Germany) ----
+const LIFE=[
+['🏭 At work',[
+['Ich arbeite heute von 6:30 bis 15:00 Uhr.','I’m working today from 6:30 to 15:00.'],
+['Ich brauche Hilfe.','I need help.'],
+['Ich habe eine Frage.','I have a question.'],
+['Können Sie das bitte wiederholen?','Could you please repeat that?'],
+['Können Sie bitte langsam sprechen?','Could you please speak slowly?'],
+['Ich verstehe das nicht.','I don’t understand that.'],
+['Ich bin fertig.','I’m done/finished.'],
+['Ich habe ein Problem.','I have a problem.']]],
+['🏋️ At the gym',[
+['Ist das Gerät frei?','Is this machine free?'],
+['Wie lange brauchst du noch?','How much longer do you need?'],
+['Ich trainiere heute Brust und Bizeps.','I’m training chest and biceps today.'],
+['Ich mache heute Rücken.','I’m doing back today.'],
+['Wo ist die Umkleide?','Where is the changing room?']]],
+['🛒 At REWE / Lidl',[
+['Wo finde ich Reis?','Where do I find rice?'],
+['Haben Sie eine Tüte?','Do you have a bag?'],
+['Ich möchte bezahlen.','I’d like to pay.'],
+['Kann ich mit Karte zahlen?','Can I pay by card?'],
+['Wie viel kostet das?','How much does that cost?']]],
+['🏛 Bürgeramt & appointments',[
+['Ich habe einen Termin.','I have an appointment.'],
+['Ich möchte mich anmelden.','I’d like to register (my address).'],
+['Hier ist mein Pass.','Here is my passport.'],
+['Können Sie das bitte erklären?','Could you please explain that?'],
+['Ich spreche nur ein bisschen Deutsch.','I only speak a little German.']]],
+['🚇 Public transport',[
+['Wo ist der Bahnhof?','Where is the station?'],
+['Welche Bahn fährt nach Alexanderplatz?','Which train goes to Alexanderplatz?'],
+['Ich brauche ein Ticket.','I need a ticket.'],
+['Ist dieser Platz frei?','Is this seat free?']]],
+['🏠 Daily life',[
+['Ich wohne in Berlin.','I live in Berlin.'],
+['Ich komme aus Nigeria.','I come from Nigeria.'],
+['Ich lerne Deutsch.','I’m learning German.'],
+['Ich gehe zur Arbeit.','I’m going to work.'],
+['Ich gehe ins Fitnessstudio.','I’m going to the gym.']]]];
+let lifeInit=false;
+function renderLife(){
+  const body=document.getElementById('lifeBody');
+  body.innerHTML=LIFE.map(mod=>'<div class="dcard"><h3>'+esc(mod[0])+'</h3>'+
+    mod[1].map(p=>'<div class="ph" style="display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:8px 0;font-size:15px"><div><span class="de" lang="de">'+esc(p[0])+'</span><br><span class="tr">'+esc(p[1])+'</span></div><button class="say" data-t="'+esc(p[0])+'">🔊</button></div>').join('')+
+    '</div>').join('');
+  body.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.t,0.9)}));
+}
+// ---- Survival German floating panel ----
+const SOS=[
+['Ich verstehe das nicht.','I don’t understand.'],
+['Können Sie bitte langsam sprechen?','Please speak slowly.'],
+['Können Sie das bitte wiederholen?','Please repeat that.'],
+['Ich spreche nur ein bisschen Deutsch.','I only speak a little German.'],
+['Können wir Englisch sprechen?','Can we speak English?'],
+['Ich brauche Hilfe.','I need help.'],
+['Einen Moment, bitte.','One moment, please.'],
+['Wo ist die Toilette?','Where is the toilet?']];
+const sosPanel=document.getElementById('sosPanel');
+sosPanel.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">🆘 Survival German</h3><button class="ghost" id="sosX">✕</button></div>'+
+  SOS.map(p=>'<div class="ph"><div><span class="de" lang="de">'+esc(p[0])+'</span><br><span class="tr" style="font-size:13px;color:var(--mut)">'+esc(p[1])+'</span></div><button class="say" data-t="'+esc(p[0])+'">🔊</button></div>').join('');
+document.getElementById('sosBtn').addEventListener('click',()=>sosPanel.classList.toggle('open'));
+sosPanel.querySelector('#sosX').addEventListener('click',()=>sosPanel.classList.remove('open'));
+sosPanel.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.t,0.85)}));
+// ---- lazy rendering ----
+const __show5=show;
+show=function(id){
+  __show5(id);
+  if(id==='listen'&&!listenInit){listenInit=true;renderListen();}
+  if(id==='speak'&&!speakInit){speakInit=true;renderSpeak();}
+  if(id==='pron'&&!pronInit){pronInit=true;renderPron();}
+  if(id==='life'&&!lifeInit){lifeInit=true;renderLife();}
+};
+</script>
 </body>
 </html>
