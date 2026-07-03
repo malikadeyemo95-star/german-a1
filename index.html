@@ -84,6 +84,84 @@ body.no-tts .say{display:none}
 .rvBtns .again{border-color:var(--red);color:var(--red)}
 .rvBtns .got{border-color:var(--acc2);color:var(--acc2)}
 .rvMeta{color:var(--mut);font-size:13px;margin:6px 0}
+/* ===== trainer layer ===== */
+body{padding-bottom:70px}
+.bnav{position:fixed;bottom:0;left:0;right:0;background:rgba(15,18,32,.97);border-top:1px solid var(--line);display:flex;z-index:20}
+.bnav button{flex:1;background:none;border:none;color:var(--mut);font-size:11px;padding:8px 2px 10px;cursor:pointer;line-height:1.3}
+.bnav button span{display:block;font-size:20px}
+.bnav button.on{color:var(--acc)}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.dcard h3{margin:0 0 8px}
+.dhead{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin:0 0 6px}
+.modeBtns{display:flex;gap:8px;margin:8px 0}
+.modeBtns button{flex:1;background:#232849;border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:8px 4px;font-size:13px;cursor:pointer}
+.modeBtns button.on{border-color:var(--acc);color:var(--acc);font-weight:700}
+.bigbtn{display:block;width:100%;background:var(--acc);color:#111;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer;margin:10px 0}
+.bigbtn.sec{background:var(--card);color:var(--txt);border:1px solid var(--line)}
+.skillrow{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13.5px}
+.skillrow .nm{flex:0 0 128px}
+.skillrow .bar{flex:1;height:7px;background:#232849;border-radius:4px;overflow:hidden}
+.skillrow .bar i{display:block;height:100%;background:var(--acc2);border-radius:4px}
+.skillrow .pc{flex:0 0 38px;text-align:right;color:var(--mut)}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dgrid button{background:#232849;border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:12px 8px;font-size:13.5px;cursor:pointer;text-align:left;line-height:1.35}
+.dgrid button b{display:block;font-size:19px;margin-bottom:2px}
+.mission{background:linear-gradient(135deg,#1a1e33,#20304a);border:1px solid var(--acc);border-radius:14px;padding:14px;margin:10px 0}
+.mission .can{font-size:16px;font-weight:700;margin:4px 0 8px}
+.mission ul{margin:6px 0}
+.tbadge{display:inline-block;background:#232849;border:1px solid var(--line);border-radius:14px;padding:2px 10px;font-size:12.5px;margin:2px 3px 2px 0;color:var(--mut)}
+.tbadge.req{border-color:var(--acc2);color:var(--acc2)}
+.wild{background:#20304a;border-left:4px solid var(--acc);border-radius:8px;padding:10px;margin:10px 0;font-size:14px}
+.wild input[type=text]{width:100%;margin-top:6px}
+input[type=text],textarea{background:#12152a;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px;font-size:15px;font-family:inherit;box-sizing:border-box}
+textarea{width:100%;min-height:110px}
+.tin{width:60%;max-width:280px}
+.chkbtn{background:var(--acc2);color:#111;border:none;border-radius:8px;padding:9px 14px;font-size:14px;font-weight:700;cursor:pointer;margin-left:6px}
+.ghost{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px;cursor:pointer}
+.fb{margin:6px 0;font-size:14px}
+.fb.ok{color:var(--acc2)} .fb.bad{color:var(--red)}
+.bpool,.bans{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;margin:8px 0;padding:8px;border:1px dashed var(--line);border-radius:10px}
+.bchip{background:#232849;border:1px solid var(--acc2);color:var(--txt);border-radius:9px;padding:8px 12px;font-size:15px;cursor:pointer}
+.bans .bchip{border-color:var(--acc)}
+.weakrow{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:8px 0;font-size:14px;align-items:center}
+.weakrow .cat{color:var(--mut);font-size:12px}
+.pill{display:inline-block;background:#232849;border-radius:12px;padding:1px 9px;font-size:12px;color:var(--acc)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.toolbar button{background:#232849;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:7px 11px;font-size:13.5px;cursor:pointer}
+.hidden-tr .de{filter:blur(0)}
+.trHide .dlg .de~.tr{display:none}
+body.challenge .tr{filter:blur(4px);cursor:pointer}
+body.challenge .tr.peek{filter:none}
+.timer{position:sticky;top:64px;background:var(--card);border:1px solid var(--acc);border-radius:10px;padding:8px;text-align:center;font-weight:700;font-size:18px;z-index:5}
+.sos{position:fixed;bottom:78px;right:14px;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:22px;z-index:21;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.sospanel{position:fixed;bottom:0;left:0;right:0;max-height:70vh;overflow:auto;background:var(--card);border-top:2px solid var(--red);border-radius:16px 16px 0 0;padding:16px;z-index:22;display:none}
+.sospanel.open{display:block}
+.sospanel .ph{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:9px 0;font-size:15px;gap:8px}
+.sov{position:fixed;inset:0;background:rgba(10,12,24,.96);z-index:30;display:none;padding:16px;overflow:auto}
+.sov.open{display:block}
+.sov input{width:100%;font-size:17px;padding:12px}
+.sres{border-bottom:1px solid var(--line);padding:10px 4px;cursor:pointer;font-size:14.5px}
+.sres small{color:var(--mut);display:block}
+.rec{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.rec button{border-radius:10px;padding:10px 14px;border:1px solid var(--line);background:#232849;color:var(--txt);font-size:14px;cursor:pointer}
+.rec .go{border-color:var(--red);color:var(--red)}
+.wc{color:var(--mut);font-size:13px;text-align:right}
+.vgrid{display:grid;grid-template-columns:1fr;gap:6px}
+.star{background:none;border:none;color:var(--acc);font-size:20px;cursor:pointer;vertical-align:middle}
+.verdict{font-size:17px;font-weight:700;margin:10px 0}
+.tri{display:flex;gap:6px}
+.tri button{flex:1;background:#232849;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:7px 4px;font-size:13px;cursor:pointer}
+.tri button.on{border-color:var(--acc);color:var(--acc)}
+body.light{--bg:#f2f4fb;--card:#ffffff;--txt:#181c30;--mut:#5b6180;--acc:#a06a00;--acc2:#067a53;--red:#c22945;--line:#d7dbee}
+body.light header,body.light .bnav{background:rgba(255,255,255,.97)}
+body.light .fc,body.light th,body.light .quizI .opt,body.light #rvCard,body.light .modeBtns button,body.light .dgrid button,body.light .bchip,body.light .toolbar button,body.light .rec button,body.light .tri button,body.light .tbadge,body.light .skillrow .bar,body.light .say{background:#eceff8;color:var(--txt)}
+body.light .tip{background:#e2f3ec;color:#14432f}
+body.light .warn{background:#fbe6ea;color:#6b1f30}
+body.light .wild,body.light .mission{background:#eef1fb}
+body.light input[type=text],body.light textarea{background:#fff;color:var(--txt)}
+body.light .key{background:#e8edfb}
+body.light #nav button{background:#eceff8;color:var(--txt)}
+body.light #nav button.on{background:var(--acc);color:#fff}
 </style>
 </head>
 <body>
@@ -4329,16 +4407,81 @@ body.no-tts .say{display:none}
 <div class="tip">💡 Do one Review session every day after finishing the day's lesson — 5 minutes here is worth an hour of rereading.</div>
 </section>
 
+<!-- ============ TRAINER SECTIONS (UI filled by JS) ============ -->
+<section id="dash" class="day" data-nonav="1" data-title="Dashboard">
+<h2>🏠 Dashboard</h2>
+<div id="dashBody"></div>
+</section>
+
+<section id="weak" class="day" data-nonav="1" data-title="My Weak List — Error Notebook">
+<h2>📕 My Weak List</h2>
+<p class="goal">🎯 Everything you get wrong lands here automatically. Two correct reviews in a row and an item graduates out.</p>
+<div id="weakBody"></div>
+</section>
+
+<section id="builder" class="day" data-nonav="1" data-title="Sentence Builder — Word Order Trainer">
+<h2>🧩 Sentence Builder</h2>
+<p class="goal">🎯 German verb-second word order is THE beginner boss fight. Tap the words into the right order.</p>
+<div id="builderBody"></div>
+</section>
+
+<section id="drills" class="day" data-nonav="1" data-title="Typed Drills — Active Recall">
+<h2>⌨️ Typed Drills</h2>
+<p class="goal">🎯 Type the answer — no multiple choice to lean on. Umlauts: you can type ae/oe/ue/ss instead of ä/ö/ü/ß.</p>
+<div id="drillsBody"></div>
+</section>
+
+<section id="listen" class="day" data-nonav="1" data-title="Listening Trainer">
+<h2>🎧 Listening Trainer</h2>
+<p class="goal">🎯 Listen first — the transcript stays hidden until you've answered the questions.</p>
+<div id="listenBody"></div>
+</section>
+
+<section id="speak" class="day" data-nonav="1" data-title="Speaking Studio — Record Yourself">
+<h2>🎤 Speaking Studio</h2>
+<p class="goal">🎯 Say it out loud, record yourself, compare with the model. Your mouth needs training, not just your eyes.</p>
+<div id="speakBody"></div>
+</section>
+
+<section id="pron" class="day" data-nonav="1" data-title="Pronunciation Trainer">
+<h2>👄 Pronunciation Trainer</h2>
+<p class="goal">🎯 The 11 German sounds that give English speakers away — with drills.</p>
+<div id="pronBody"></div>
+</section>
+
+<section id="life" class="day" data-nonav="1" data-title="Everyday German — Work, Gym, Shops, Amt">
+<h2>🇩🇪 Everyday German</h2>
+<p class="goal">🎯 The exact sentences you need this week in Germany — work, gym, supermarket, Bürgeramt, transport.</p>
+<div id="lifeBody"></div>
+</section>
+
+<section id="write" class="day" data-nonav="1" data-title="Writing Trainer">
+<h2>✍️ Writing Trainer</h2>
+<p class="goal">🎯 A1 exam writing: ~25–40 words, cover every bullet point, greeting + closing. Model answers unlock after you submit.</p>
+<div id="writeBody"></div>
+</section>
+
+<section id="exam" class="day" data-nonav="1" data-title="A1 Exam Mode">
+<h2>🎓 A1 Exam Mode</h2>
+<div id="examBody"></div>
+</section>
+
 </main>
+
+<button class="sos" id="sosBtn" title="Survival German" aria-label="Survival German phrases">🆘</button>
+<div class="sospanel" id="sosPanel"></div>
+<div class="sov" id="sov"></div>
+<nav class="bnav" id="bnav"></nav>
 <script>
 const secs=[...document.querySelectorAll('section.day')];
 const nav=document.getElementById('nav');
 let done={};
 try{done=JSON.parse(localStorage.getItem('ga1done')||'{}')}catch(e){}
 
-function label(i){const s=secs[i];return s.dataset.chip||(s.id==='intro'?'Start':'Day '+s.id.slice(1));}
+const navSecs=secs.filter(s=>!('nonav'in s.dataset)); // trainer sections live in the bottom nav instead
+function label(i){const s=navSecs[i];return s.dataset.chip||(s.id==='intro'?'Start':'Day '+s.id.slice(1));}
 
-secs.forEach((s,i)=>{
+navSecs.forEach((s,i)=>{
   const b=document.createElement('button');
   b.textContent=s.dataset.chip||(s.id==='intro'?'Start':s.id.slice(1));
   b.dataset.target=s.id;
@@ -4347,8 +4490,8 @@ secs.forEach((s,i)=>{
   nav.appendChild(b);
   // prev/next buttons at the bottom of each day
   const n=document.createElement('div');n.className='nav2';
-  if(i>0){const p=document.createElement('button');p.textContent='← '+label(i-1);p.addEventListener('click',()=>show(secs[i-1].id));n.appendChild(p);}
-  if(i<secs.length-1){const x=document.createElement('button');x.textContent=label(i+1)+' →';x.addEventListener('click',()=>show(secs[i+1].id));n.appendChild(x);}
+  if(i>0){const p=document.createElement('button');p.textContent='← '+label(i-1);p.addEventListener('click',()=>show(navSecs[i-1].id));n.appendChild(p);}
+  if(i<navSecs.length-1){const x=document.createElement('button');x.textContent=label(i+1)+' →';x.addEventListener('click',()=>show(navSecs[i+1].id));n.appendChild(x);}
   s.appendChild(n);
 });
 
@@ -4382,11 +4525,11 @@ document.querySelectorAll('.done input').forEach(cb=>{
   });
 });
 
-// restore last visited day
+// land on the dashboard; "Continue" jumps back to the last visited day
 let last='intro';
 try{last=localStorage.getItem('ga1last')||'intro'}catch(e){}
 if(!document.getElementById(last))last='intro';
-show(last);
+show('dash');
 
 /* ===== 1. German text-to-speech (Web Speech API) ===== */
 let deVoice=null;
@@ -4619,6 +4762,273 @@ drawProgress();drawStreak();
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
+</script>
+<script>
+/* ================================================================
+   TRAINER LAYER — Phase 1: state, dashboard, missions, study modes,
+   skills, navigation. (Old keys ga1done/ga1quiz/ga1streak stay valid.)
+   ================================================================ */
+'use strict';
+const todayISO=()=>dayStr(new Date());
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+// ---- central state blob (new features only) ----
+let X={v:1,skills:{},srs2:{},weak:[],wild:{},speakDone:{},writeDone:{},weekly:{},examBest:0,
+      bookmarks:[],lastDay:'',lastStudy:'',settings:{mode:'normal',light:false,challenge:false,font:0}};
+try{const raw=JSON.parse(localStorage.getItem('ga1x')||'null');if(raw&&raw.v)X=Object.assign(X,raw);}catch(e){}
+// migrate old miss counts into the new SRS once
+if(!X.migrated){try{const old=JSON.parse(localStorage.getItem('ga1srs')||'{}');
+  Object.keys(old).forEach(k=>{if(old[k]>0)X.srs2[k]={due:todayISO(),iv:0,miss:old[k]};});}catch(e){}
+  X.migrated=true;}
+function saveX(){try{localStorage.setItem('ga1x',JSON.stringify(X))}catch(e){}}
+// ---- skill tracking ----
+const SKILLS=[['vocab','🧠 Vocabulary',300],['grammar','🧩 Grammar',160],['listening','🎧 Listening',60],
+  ['speaking','🗣 Speaking',40],['reading','📖 Reading',90],['writing','✍️ Writing',36],
+  ['pron','👄 Pronunciation',40],['exam','🎓 Exam ready',100]];
+function addSkill(k,pts){X.skills[k]=(X.skills[k]||0)+pts;X.lastStudy=todayISO();saveX();}
+function skillPct(k){const def=SKILLS.find(s=>s[0]===k);
+  if(k==='exam'){ // blend: exam attempts + average of core skills
+    const core=['vocab','grammar','listening','speaking','reading','writing'].reduce((a,s)=>a+skillPct(s),0)/6;
+    return Math.round(Math.min(100,core*0.6+(X.examBest||0)*0.4));}
+  return Math.min(100,Math.round((X.skills[k]||0)/def[2]*100));}
+// ---- weak list core (fed by Phase 2 trainers + existing quizzes) ----
+function weakAdd(q,a,cat){
+  const id=(q+'|'+a).slice(0,90);
+  let it=X.weak.find(w=>w.id===id);
+  if(it){it.miss++;it.ok=0;it.due=todayISO();}
+  else X.weak.push({id,q,a,cat:cat||'General',miss:1,ok:0,due:todayISO()});
+  saveX();
+}
+function weakDue(){const t=todayISO();return X.weak.filter(w=>w.due<=t);}
+function srsDueCount(){const t=todayISO();return Object.values(X.srs2).filter(c=>c.due<=t).length;}
+// ---- study modes ----
+const MODES={
+  light:{name:'⚡ Light',min:30,tasks:['Weak-list review','10 flashcards (Review deck)','Re-read one grammar box','One speaking task','Mini quiz']},
+  normal:{name:'🙂 Normal',min:75,tasks:['Weak-list review','Vocabulary + flashcards','Grammar lesson','One listening task','One speaking task','Mini quiz']},
+  beast:{name:'🔥 Beast',min:150,tasks:['Weak-list review','Full lesson (all sections)','Flashcards + Review deck','Listening + dialogue shadowing','Speaking recording','Writing task','Homework','Wild task']}
+};
+// ---- daily missions (can-do + real-life use + German-in-the-wild task) ----
+const MISSIONS={
+1:{can:'greet people, say please/thank you, and pronounce German from spelling.',use:'„Guten Morgen" to colleagues; danke/bitte at the Kasse.',wild:'Say „Guten Morgen!" or „Hallo!" to one real person today.',ex:'Guten Morgen! / Hallo!'},
+2:{can:'introduce myself, ask someone’s name, and use sein.',use:'Meeting a new colleague at work.',wild:'Introduce yourself aloud — full name, then spell it with German letter names.',ex:'Ich heiße … — M wie Martha …'},
+3:{can:'count to 100, say my age and phone number, and use haben.',use:'Prices, PINs, phone numbers.',wild:'Read one German price aloud in a shop (quietly is fine).',ex:'2,99 € — zwei Euro neunundneunzig.'},
+4:{can:'say where I come from, where I live, and what languages I speak.',use:'Small talk at work: Woher kommst du?',wild:'Answer aloud: Woher kommst du? Wo wohnst du? Was sprichst du?',ex:'Ich komme aus Nigeria. Ich wohne in Berlin.'},
+5:{can:'talk about my job and ask yes/no questions.',use:'„Was machst du beruflich?"',wild:'Say your job and workplace in German.',ex:'Ich arbeite als … bei …'},
+6:{can:'describe my family with mein/dein/sein/ihr.',use:'Talking about family with colleagues.',wild:'Describe 3 family members aloud (name, age, job).',ex:'Meine Mutter heißt … Sie ist …'},
+7:{can:'introduce myself completely — Week 1 survival check.',use:'Any first meeting in Germany.',wild:'Record a 60-second self-introduction on your phone.',ex:''},
+8:{can:'name everyday things WITH der/die/das.',use:'Shopping, describing, asking for things.',wild:'Say 5 things in your room with their articles.',ex:'der Tisch, die Lampe, das Bett …'},
+9:{can:'use plural forms.',use:'„Zwei Brötchen, bitte!"',wild:'Count 3 objects around you: ein Stuhl, zwei Stühle …',ex:''},
+10:{can:'use the accusative (einen!) and kein.',use:'„Ich brauche einen Termin."',wild:'Say 3 things you need today: Ich brauche einen/eine/ein …',ex:''},
+11:{can:'say what I eat and don’t eat with nicht/kein.',use:'Kantine, Imbiss, invitations.',wild:'Name 5 foods in your kitchen in German.',ex:'das Brot, der Käse …'},
+12:{can:'order food and drinks politely.',use:'Bäckerei, Imbiss, Restaurant.',wild:'Order (or rehearse ordering) something: Ich hätte gern …',ex:'Ich hätte gern einen Kaffee.'},
+13:{can:'shop, ask prices, and use irregular verbs.',use:'REWE, Lidl, Markt.',wild:'Read 3 price tags aloud at the supermarket.',ex:'Was kostet das?'},
+14:{can:'handle a full shopping/restaurant situation — Week 2 check.',use:'Weekend shopping.',wild:'Do one full imaginary market dialogue aloud, both roles.',ex:''},
+15:{can:'tell the time and say dates, days, months.',use:'Appointments, train times, work schedule.',wild:'Say today’s date and the current time in German.',ex:'Heute ist der … Es ist halb …'},
+16:{can:'describe my daily routine with separable verbs.',use:'Telling colleagues about your day.',wild:'Narrate your morning aloud: Ich stehe um … auf.',ex:''},
+17:{can:'say what I can, must and want to do.',use:'„Ich muss heute länger arbeiten."',wild:'Say 3 things you must do this week (muss … + verb at the end!).',ex:'Ich muss am Freitag einkaufen.'},
+18:{can:'make, move and cancel appointments.',use:'Zahnarzt, Bürgeramt, Friseur.',wild:'Say your next real appointment: Ich habe am … um … einen Termin.',ex:''},
+19:{can:'buy tickets and ask for directions.',use:'U-Bahn, Bus, asking strangers.',wild:'Ask (or rehearse): Entschuldigung, wo ist …?',ex:'Wo ist die Haltestelle?'},
+20:{can:'use the key prepositions as ready chunks.',use:'nach Hause, zur Arbeit, ins Fitnessstudio.',wild:'Describe your route to work in 3 sentences.',ex:'Ich fahre mit der U-Bahn zur Arbeit.'},
+21:{can:'handle appointments, directions and time — Week 3 check.',use:'A normal Monday in Germany.',wild:'Make one imaginary phone appointment aloud.',ex:''},
+22:{can:'talk about hobbies with gern/lieber/am liebsten.',use:'Small talk at the gym or work.',wild:'Tell someone (or the mirror) your 3 hobbies.',ex:'Ich gehe gern ins Fitnessstudio.'},
+23:{can:'describe a flat and read housing ads.',use:'WG search, talking to the Vermieter.',wild:'Describe your home in 5 sentences.',ex:'Es gibt einen Balkon.'},
+24:{can:'make weather small talk.',use:'Elevator, Kasse, gym.',wild:'Say today’s weather aloud in 3 sentences.',ex:'Es regnet. Es sind 12 Grad.'},
+25:{can:'describe symptoms and handle doctor/pharmacy.',use:'Arzt, Apotheke, sick note for work.',wild:'Write one short German message to a friend.',ex:'Hallo! Wie geht’s? Ich lerne Deutsch!'},
+26:{can:'talk about yesterday with war and hatte.',use:'„Wie war dein Wochenende?"',wild:'Say 3 sentences about yesterday with war/hatte.',ex:'Gestern war ich müde.'},
+27:{can:'say what I did using the perfect tense.',use:'Telling colleagues what you did.',wild:'Say what you ate today: Ich habe … gegessen.',ex:''},
+28:{can:'use the perfect with sein — Week 4 check.',use:'Any story about your day.',wild:'Tell your whole day so far in the past tense.',ex:'Ich bin um 6 Uhr aufgestanden.'},
+29:{can:'fill German forms and write formal messages.',use:'Bürgeramt, Anmeldung, work email.',wild:'Fill the form in today’s lesson with your real data.',ex:''},
+30:{can:'pass a complete A1 mock exam.',use:'The real Goethe/telc exam.',wild:'Take the mock exam. Then celebrate. 🎉',ex:''}
+};
+// ---- inject mission cards + wild tasks into every day ----
+for(let d=1;d<=30;d++){
+  const sec=document.getElementById('d'+d),M=MISSIONS[d];
+  if(!sec||!M)continue;
+  const goal=sec.querySelector('.goal');
+  const card=document.createElement('div');card.className='mission';
+  const mode=MODES[X.settings.mode]||MODES.normal;
+  const w=X.wild[d]||{};
+  card.innerHTML=
+    '<div class="dhead">🚀 Today’s mission · ~<span class="mmin">'+mode.min+'</span> min in <span class="mname">'+mode.name+'</span> mode</div>'+
+    '<div class="can">By the end of today, I can '+esc(M.can)+'</div>'+
+    (M.use?'<div style="font-size:14px;color:var(--mut)">Real life: '+esc(M.use)+'</div>':'')+
+    '<div class="mtasks" style="margin:8px 0"></div>'+
+    '<div class="wild">🌍 <b>German in the wild:</b> '+esc(M.wild)+
+    (M.ex?'<br><span class="de" lang="de">'+esc(M.ex)+'</span>':'')+
+    '<br><label style="display:block;margin-top:6px"><input type="checkbox" class="wilddone" '+(w.done?'checked':'')+'> I did it!</label>'+
+    '<input type="text" class="wildnote" placeholder="What did I say or notice?" value="'+esc(w.note||'')+'"></div>'+
+    '<div style="font-size:13px;color:var(--mut)">Optional challenge: do today’s flashcards in the Review deck too — and add anything you got wrong to tomorrow.</div>';
+  (goal||sec.querySelector('h2')).insertAdjacentElement('afterend',card);
+  card.querySelector('.wilddone').addEventListener('change',e=>{
+    X.wild[d]=X.wild[d]||{};X.wild[d].done=e.target.checked;saveX();
+    if(e.target.checked){addSkill('speaking',1);if(typeof bumpStreak==='function')bumpStreak();}
+  });
+  card.querySelector('.wildnote').addEventListener('change',e=>{X.wild[d]=X.wild[d]||{};X.wild[d].note=e.target.value;saveX();});
+}
+function renderMissionTasks(){
+  const mode=MODES[X.settings.mode]||MODES.normal;
+  document.querySelectorAll('.mission').forEach(c=>{
+    c.querySelector('.mmin').textContent=mode.min;
+    c.querySelector('.mname').textContent=mode.name;
+    c.querySelector('.mtasks').innerHTML=mode.tasks.map(t=>'<span class="tbadge req">'+esc(t)+'</span>').join('');
+  });
+}
+renderMissionTasks();
+// ---- bookmarks: star on every day heading ----
+navSecs.forEach(s=>{
+  if(!/^d\d+$/.test(s.id))return;
+  const st=document.createElement('button');st.className='star';st.title='Bookmark this day';
+  const paint=()=>st.textContent=X.bookmarks.includes(s.id)?'★':'☆';paint();
+  st.addEventListener('click',()=>{
+    const i=X.bookmarks.indexOf(s.id);
+    if(i>=0)X.bookmarks.splice(i,1);else X.bookmarks.push(s.id);
+    saveX();paint();
+  });
+  s.querySelector('h2').appendChild(st);
+});
+// ---- dashboard ----
+function currentDay(){for(let d=1;d<=30;d++){if(!done[d])return d;}return 30;}
+function renderDash(){
+  const body=document.getElementById('dashBody');
+  const cd=currentDay();
+  const sec=document.getElementById('d'+cd);
+  const title=(sec.dataset.title||'').replace(/^Day \d+ — /,'');
+  const goal=(sec.querySelector('.goal')||{}).textContent||'';
+  const nDone=Object.values(done).filter(Boolean).length;
+  const wk=weakDue().length,due=srsDueCount();
+  const mode=MODES[X.settings.mode];
+  const t=todayISO(),yest=dayStr(new Date(Date.now()-864e5));
+  const gap=X.lastStudy&&X.lastStudy<yest;
+  let h='';
+  // today card
+  h+='<div class="dcard"><div class="dhead">Today</div>'+
+     '<h3>Day '+cd+' — '+esc(title)+'</h3>'+
+     '<p style="margin:4px 0;color:var(--acc2);font-size:14px">'+esc(goal.replace(/^🎯\s*/,''))+'</p>'+
+     '<div class="modeBtns">'+Object.keys(MODES).map(m=>'<button data-mode="'+m+'" class="'+(m===X.settings.mode?'on':'')+'">'+MODES[m].name+'<br><small>'+MODES[m].min+' min</small></button>').join('')+'</div>'+
+     '<div>'+mode.tasks.map(x=>'<span class="tbadge req">'+esc(x)+'</span>').join('')+'</div>'+
+     '<button class="bigbtn" id="goToday">▶ Continue — Day '+cd+'</button>'+
+     (wk||due?'<div style="font-size:14px">📌 Due today: <span class="pill">'+due+' flashcards</span> <span class="pill">'+wk+' weak items</span></div>':'<div style="font-size:14px;color:var(--mut)">No reviews due — nice and clean. ✨</div>')+
+     '</div>';
+  // recovery
+  if(gap){h+='<div class="dcard" style="border-color:var(--acc)"><div class="dhead">Welcome back 👋</div>'+
+    '<p style="margin:4px 0">You missed a day — completely normal. Don’t restart, just warm up with a <b>15-minute recovery session</b>:</p>'+
+    '<ul style="margin:6px 0"><li>5 flashcards (Review deck)</li><li>1 listening task</li><li>1 speaking recording</li><li>1 mini quiz</li></ul>'+
+    '<button class="bigbtn sec" data-go="review">Start with 5 flashcards →</button></div>';}
+  // progress card
+  h+='<div class="dcard"><div class="dhead">Course progress</div>'+
+     '<div class="skillrow"><span class="nm">📅 30-day course</span><span class="bar"><i style="width:'+(nDone/30*100)+'%"></i></span><span class="pc">'+nDone+'/30</span></div>'+
+     SKILLS.map(s=>'<div class="skillrow"><span class="nm">'+s[1]+'</span><span class="bar"><i style="width:'+skillPct(s[0])+'%"></i></span><span class="pc">'+skillPct(s[0])+'%</span></div>').join('')+
+     '<div style="font-size:13px;color:var(--mut);margin-top:6px">'+(streak.count>0?'🔥 Streak: '+streak.count+' day'+(streak.count>1?'s':''):'Start your streak today!')+(X.lastStudy?' · last studied: '+X.lastStudy:'')+'</div></div>';
+  // tools
+  const tools=[['review','🃏','Flashcards<br><small>'+due+' due</small>'],['weak','📕','Weak list<br><small>'+wk+' due</small>'],
+    ['drills','⌨️','Typed drills'],['builder','🧩','Sentence builder'],['listen','🎧','Listening'],['speak','🎤','Speaking'],
+    ['pron','👄','Pronunciation'],['life','🇩🇪','Everyday German'],['write','✍️','Writing'],['exam','🎓','Exam mode']];
+  h+='<div class="dcard"><div class="dhead">Practice</div><div class="dgrid">'+
+     tools.map(t=>'<button data-go="'+t[0]+'"><b>'+t[1]+'</b>'+t[2]+'</button>').join('')+'</div></div>';
+  // bookmarks
+  if(X.bookmarks.length){h+='<div class="dcard"><div class="dhead">⭐ Bookmarked lessons</div>'+
+    X.bookmarks.map(id=>{const s2=document.getElementById(id);return s2?'<button class="ghost" data-go="'+id+'" style="margin:3px">'+esc(s2.dataset.title||id)+'</button>':''}).join('')+'</div>';}
+  // settings
+  h+='<div class="dcard"><div class="dhead">Settings</div>'+
+     '<div class="toolbar">'+
+     '<button id="setLight">'+(X.settings.light?'🌙 Dark mode':'☀️ Light mode')+'</button>'+
+     '<button id="setChal">'+(X.settings.challenge?'🇩🇪 Challenge: ON':'🇩🇪 Challenge mode: off')+'</button>'+
+     '<button id="fMinus">A−</button><button id="fPlus">A+</button>'+
+     '<button data-go="intro">📖 How this course works</button></div>'+
+     '<div style="font-size:13px;color:var(--mut)">Challenge mode blurs English translations — tap any translation to peek. '+(cd>10?'<b>You’re past Day 10 — time to switch it on!</b>':'Recommended from Day 10.')+'</div></div>';
+  body.innerHTML=h;
+  body.querySelector('#goToday').addEventListener('click',()=>show('d'+cd));
+  body.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go)));
+  body.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
+    X.settings.mode=b.dataset.mode;saveX();renderMissionTasks();renderDash();}));
+  body.querySelector('#setLight').addEventListener('click',()=>{X.settings.light=!X.settings.light;saveX();applySettings();renderDash();});
+  body.querySelector('#setChal').addEventListener('click',()=>{X.settings.challenge=!X.settings.challenge;saveX();applySettings();renderDash();});
+  body.querySelector('#fMinus').addEventListener('click',()=>{X.settings.font=Math.max(-1,X.settings.font-1);saveX();applySettings();});
+  body.querySelector('#fPlus').addEventListener('click',()=>{X.settings.font=Math.min(2,X.settings.font+1);saveX();applySettings();});
+}
+function applySettings(){
+  document.body.classList.toggle('light',!!X.settings.light);
+  document.body.classList.toggle('challenge',!!X.settings.challenge);
+  document.body.style.fontSize=(16+X.settings.font*1.5)+'px';
+}
+applySettings();
+// challenge mode: tap a blurred translation to peek
+document.addEventListener('click',e=>{
+  if(document.body.classList.contains('challenge')){
+    const tr=e.target.closest('.tr');
+    if(tr)tr.classList.toggle('peek');
+  }
+});
+// ---- bottom navigation ----
+const BNAV=[['dash','🏠','Home'],['today','📅','Today'],['review','🃏','Cards'],['weak','📕','Weak'],['exam','🎓','Exam']];
+const bnav=document.getElementById('bnav');
+BNAV.forEach(t=>{
+  const b=document.createElement('button');b.innerHTML='<span>'+t[1]+'</span>'+t[2];b.dataset.bt=t[0];
+  b.addEventListener('click',()=>show(t[0]==='today'?'d'+currentDay():t[0]));
+  bnav.appendChild(b);
+});
+const sb=document.createElement('button');sb.innerHTML='<span>🔍</span>Search';sb.addEventListener('click',openSearch);bnav.appendChild(sb);
+function paintBnav(id){[...bnav.children].forEach(b=>b.classList.toggle('on',b.dataset.bt===id||(b.dataset.bt==='today'&&/^d\d/.test(id))));}
+// ---- search ----
+let sIndex=null;
+function buildIndex(){
+  sIndex=[];
+  secs.forEach(s=>{
+    if(s.dataset.title)sIndex.push({d:s.id,t:s.dataset.title,k:s.dataset.title.toLowerCase(),el:null});
+    s.querySelectorAll('summary').forEach(su=>{
+      const det=su.parentElement;
+      sIndex.push({d:s.id,t:su.textContent.trim().slice(0,70)+' — '+(s.dataset.title||''),k:su.textContent.toLowerCase(),el:det});
+    });
+    s.querySelectorAll('td.de').forEach(td=>{
+      const en=td.nextElementSibling?td.nextElementSibling.textContent:'';
+      sIndex.push({d:s.id,t:td.textContent.replace('🔊','').trim()+' = '+en.slice(0,40),k:(td.textContent+' '+en).toLowerCase(),el:td.closest('details')});
+    });
+  });
+}
+const sov=document.getElementById('sov');
+function openSearch(){
+  if(!sIndex)buildIndex();
+  sov.innerHTML='<div style="display:flex;gap:8px"><input type="text" id="sq" placeholder="Search days, grammar, vocabulary… (e.g. accusative, Termin, halb)"><button class="ghost" id="sClose">✕</button></div><div id="sres"></div>';
+  sov.classList.add('open');
+  const q=document.getElementById('sq'),res=document.getElementById('sres');
+  q.focus();
+  document.getElementById('sClose').addEventListener('click',()=>sov.classList.remove('open'));
+  q.addEventListener('input',()=>{
+    const v=q.value.trim().toLowerCase();
+    if(v.length<2){res.innerHTML='';return;}
+    const hits=sIndex.filter(x=>x.k.includes(v)).slice(0,25);
+    res.innerHTML=hits.map((x,i)=>'<div class="sres" data-i="'+sIndex.indexOf(x)+'">'+esc(x.t)+'<small>'+esc((document.getElementById(x.d)||{dataset:{}}).dataset.title||x.d)+'</small></div>').join('')||'<p style="color:var(--mut)">No results.</p>';
+    res.querySelectorAll('.sres').forEach(r=>r.addEventListener('click',()=>{
+      const hit=sIndex[+r.dataset.i];
+      sov.classList.remove('open');
+      show(hit.d);
+      if(hit.el){hit.el.open=true;hit.el.scrollIntoView({block:'center'});}
+    }));
+  });
+}
+// ---- show() wrapper: dashboard render, last-day memory, bottom-nav highlight ----
+const __show3=show;
+show=function(id){
+  __show3(id);
+  if(id==='dash')renderDash();
+  if(/^d\d+$/.test(id)){X.lastDay=id;saveX();}
+  paintBnav(id);
+};
+// day-completion also counts as reading practice + study activity
+document.querySelectorAll('.done input').forEach(cb=>cb.addEventListener('change',()=>{if(cb.checked)addSkill('reading',5);}));
+// existing MC quiz answers feed grammar skill + weak list
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.quizI .opt');
+  if(!b)return;
+  if(b.classList.contains('ok')&&!b.dataset.counted){b.dataset.counted=1;addSkill('grammar',1);}
+  if(b.classList.contains('bad')&&!b.dataset.counted){
+    b.dataset.counted=1;
+    const box=b.parentElement,qq=box.previousElementSibling;
+    const okBtn=[...box.children].find(x=>x.classList.contains('ok'));
+    const day=b.closest('section.day');
+    weakAdd(qq?qq.textContent.slice(0,80):'Quiz question',okBtn?okBtn.textContent:'?','Day '+(day?day.id.slice(1):'?')+' quiz');
+  }
+});
+renderDash();paintBnav('dash');
 </script>
 </body>
 </html>
