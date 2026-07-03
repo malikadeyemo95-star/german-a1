@@ -4685,11 +4685,26 @@ function bestLabel(sum,best,n){
   if(!sp){sp=document.createElement('span');sp.className='best';sum.appendChild(sp);}
   sp.textContent=(best!=null)?' · Best: '+best+'/'+n:'';
 }
+// tolerant answer matching: case, spaces, punctuation, umlaut alternatives (ae/oe/ue/ss)
+function normDE(s){return String(s).toLowerCase().trim()
+  .replace(/[.,!?;:"'’‘„“”()]/g,'').replace(/\s+/g,' ')
+  .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss');}
 quizzes.forEach(qz=>{
   const n=qz.qs.length;
   const wrap=document.createElement('div');wrap.className='quizI';
   const scoreEl=document.createElement('div');scoreEl.className='score';scoreEl.textContent='Score: 0/'+n;
   let answered=0,score=0;
+  function finishQ(right){
+    answered++;if(right)score++;
+    scoreEl.textContent='Score: '+score+'/'+n;
+    if(answered===n){
+      scoreEl.textContent='✅ '+score+'/'+n+' correct'+(score===n?' — perfekt! 🎉':'');
+      const best=Math.max(score,quizBest[qz.day]||0);
+      quizBest[qz.day]=best;
+      try{localStorage.setItem('ga1quiz',JSON.stringify(quizBest))}catch(e){}
+      bestLabel(qz.sum,best,n);
+    }
+  }
   qz.qs.forEach((li,i)=>{
     const correct=qz.answers[i];
     const qq=document.createElement('div');qq.className='qq';qq.innerHTML=(i+1)+'. '+li.innerHTML;
@@ -4704,24 +4719,39 @@ quizzes.forEach(qz=>{
     }
     opts=[...new Set(opts)];shuffleArr(opts);
     const box=document.createElement('div');
+    let settled=false;
     opts.forEach(o=>{
       const b=document.createElement('button');b.className='opt';b.type='button';b.textContent=o;
       b.addEventListener('click',()=>{
-        if(box.dataset.done)return;
-        box.dataset.done='1';answered++;
-        if(o===correct){b.classList.add('ok');score++;}
+        if(settled)return;
+        settled=true;
+        if(o===correct){b.classList.add('ok');}
         else{b.classList.add('bad');[...box.children].forEach(x=>{if(x.textContent===correct)x.classList.add('ok')});}
-        scoreEl.textContent='Score: '+score+'/'+n;
-        if(answered===n){
-          scoreEl.textContent='✅ '+score+'/'+n+' correct'+(score===n?' — perfekt! 🎉':'');
-          const best=Math.max(score,quizBest[qz.day]||0);
-          quizBest[qz.day]=best;
-          try{localStorage.setItem('ga1quiz',JSON.stringify(quizBest))}catch(e){}
-          bestLabel(qz.sum,best,n);
-        }
+        finishQ(o===correct);
       });
       box.appendChild(b);
     });
+    // typed active recall for short answers — options only as a fallback
+    if(correct.length<=24){
+      box.style.display='none';
+      const trow=document.createElement('div');
+      trow.innerHTML='<input type="text" class="tin" lang="de" autocapitalize="off" autocomplete="off" placeholder="Type your answer…"> <button class="chkbtn" type="button">Check</button> <button class="ghost" type="button">Options</button><div class="fb"></div>';
+      const inp=trow.querySelector('input'),fb=trow.querySelector('.fb');
+      const checkTyped=()=>{
+        if(!inp.value.trim())return;
+        const right=normDE(inp.value)===normDE(correct);
+        if(right){fb.className='fb ok';fb.innerHTML='✔ Richtig! — <b>'+correct+'</b>';}
+        else{
+          fb.className='fb bad';fb.innerHTML='✘ Correct: <b>'+correct+'</b>. Type it once more to lock it in — it’s saved to your 📕 Weak List.';
+          if(!settled&&typeof weakAdd==='function')weakAdd(qq.textContent.slice(0,80),correct,'Day '+qz.day+' quiz');
+        }
+        if(!settled){settled=true;finishQ(right);if(right&&typeof addSkill==='function')addSkill('grammar',1);}
+      };
+      trow.querySelector('.chkbtn').addEventListener('click',checkTyped);
+      inp.addEventListener('keydown',e=>{if(e.key==='Enter')checkTyped();});
+      trow.querySelector('.ghost').addEventListener('click',()=>{box.style.display='block';});
+      wrap.appendChild(trow);
+    }
     wrap.appendChild(box);
   });
   wrap.appendChild(scoreEl);
@@ -5029,6 +5059,300 @@ document.addEventListener('click',e=>{
   }
 });
 renderDash();paintBnav('dash');
+</script>
+<script>
+/* ================================================================
+   TRAINER LAYER — Phase 2: real SRS, noun cards, typed drills,
+   sentence builder, weak-list review.
+   ================================================================ */
+'use strict';
+// ---- curated nouns: article + plural + example (never shown without article) ----
+const NOUNS=[
+['der Termin','die Termine','appointment','Ich habe einen Termin um 10 Uhr.'],
+['die Wohnung','die Wohnungen','flat','Die Wohnung ist hell und ruhig.'],
+['die Rechnung','die Rechnungen','bill','Die Rechnung, bitte!'],
+['der Bahnhof','die Bahnhöfe','train station','Wo ist der Bahnhof?'],
+['der Schlüssel','die Schlüssel','key','Ich suche meinen Schlüssel.'],
+['die Frage','die Fragen','question','Ich habe eine Frage.'],
+['das Handy','die Handys','mobile phone','Mein Handy ist kaputt.'],
+['der Zug','die Züge','train','Der Zug fährt um 8 Uhr ab.'],
+['die Tasche','die Taschen','bag','Die Tasche ist neu.'],
+['das Brot','die Brote','bread','Das Brot ist frisch.'],
+['der Apfel','die Äpfel','apple','Ich esse einen Apfel.'],
+['die Tüte','die Tüten','shopping bag','Haben Sie eine Tüte?'],
+['das Ticket','die Tickets','ticket','Ich brauche ein Ticket.'],
+['die Haltestelle','die Haltestellen','stop','Die Haltestelle ist dort.'],
+['der Arzt','die Ärzte','doctor','Ich gehe morgen zum Arzt.'],
+['die Apotheke','die Apotheken','pharmacy','Die Apotheke ist neben der Bank.'],
+['das Zimmer','die Zimmer','room','Das Zimmer ist klein, aber hell.'],
+['die Küche','die Küchen','kitchen','Die Küche ist neu.'],
+['die Pause','die Pausen','break','Um zwölf mache ich eine Pause.'],
+['das Formular','die Formulare','form','Bitte füllen Sie das Formular aus.']];
+const SENTCARDS=[
+['I have an appointment at 10 o’clock.','Ich habe einen Termin um 10 Uhr.'],
+['Can you please speak slowly?','Können Sie bitte langsam sprechen?'],
+['I would like to pay by card.','Ich möchte mit Karte zahlen.'],
+['Where do I find rice?','Wo finde ich Reis?'],
+['I get up at six o’clock.','Ich stehe um sechs Uhr auf.'],
+['Yesterday I was tired.','Gestern war ich müde.']];
+// ---- full card pool: base DOM cards + generated types ----
+let CARDS=null;
+function cardPool(){
+  if(CARDS)return CARDS;
+  CARDS=[];
+  allCards().forEach(c=>CARDS.push({key:c.key,type:'en2de',q:c.q,a:c.a}));
+  NOUNS.forEach(n=>{
+    const bare=n[0].split(' ')[1];
+    CARDS.push({key:'art|'+bare,type:'article',q:'der, die oder das?\n___ '+bare,a:n[0]+' ('+n[2]+')'});
+    CARDS.push({key:'pl|'+bare,type:'plural',q:'Plural of „'+n[0]+'“?',a:n[1]});
+    CARDS.push({key:'cl|'+bare,type:'cloze',q:n[3].replace(bare,'_____')+'\n('+n[2]+')',a:n[3]});
+    CARDS.push({key:'au|'+bare,type:'audio',q:'🔊 Listen — what did you hear?',a:n[0]+', '+n[1]+' — '+n[2],sp:n[0]+'. '+n[3]});
+  });
+  SENTCARDS.forEach(s=>CARDS.push({key:'sx|'+s[1].slice(0,40),type:'sentence',q:'Say it in German:\n“'+s[0]+'”',a:s[1]}));
+  return CARDS;
+}
+// ---- real SRS: Again (later today) / Hard (1d) / Good (3d) / Easy (7d) ----
+function plusDays(n){return dayStr(new Date(Date.now()+n*864e5));}
+document.querySelector('#review .goal').innerHTML='🎯 Spaced repetition: grade yourself honestly. <b>Again</b> = later today · <b>Hard</b> = tomorrow · <b>Good</b> = in 3 days · <b>Easy</b> = in 7 days. Due cards come back automatically.';
+rvBtns.innerHTML='<button class="again" data-g="again">↩ Again</button><button data-g="hard" style="border-color:var(--acc);color:var(--acc)">😬 Hard</button><button data-g="good" style="border-color:var(--acc2);color:var(--acc2)">🙂 Good</button><button class="got" data-g="easy">😎 Easy</button>';
+rvStart=function(){
+  const pool=cardPool(),t=todayISO();
+  const due=[],fresh=[];
+  pool.forEach(c=>{
+    const st=X.srs2[c.key];
+    if(st){if(st.due<=t)due.push(c);}
+    else fresh.push(c);
+  });
+  shuffleArr(due);due.sort((a,b)=>((X.srs2[b.key]||{}).miss||0)-((X.srs2[a.key]||{}).miss||0));
+  shuffleArr(fresh);
+  rvDeck=due.concat(fresh.slice(0,20)); // hardest first, then up to 20 new cards
+  if(!rvDeck.length){ // nothing due: offer cram
+    rvDeck=shuffleArr(pool.slice()).slice(0,20);
+    rvMeta.textContent='Nothing due today 🎉 — cram mode: 20 random cards.';
+  }
+  rvNext();
+};
+rvNext=function(){
+  rvBtns.style.display='none';rvFlipped=false;
+  if(!rvDeck.length){
+    rvCur=null;
+    rvCard.innerHTML='<span>🎉 Session complete! Your next reviews are scheduled — check back tomorrow.</span>';
+    rvMeta.textContent='0 cards left';
+    if(typeof renderMissionTasks==='function')renderMissionTasks();
+    return;
+  }
+  rvCur=rvDeck[0];
+  rvCard.textContent='';
+  const s=document.createElement('span');s.style.whiteSpace='pre-line';s.textContent=rvCur.q;
+  if(/[äöüß]|^(der|die|das|ich|du|wo|was)/i.test(rvCur.q))s.setAttribute('lang','de');
+  rvCard.appendChild(s);
+  if(rvCur.type==='audio'&&rvCur.sp)rvCard.appendChild(sayBtn(rvCur.sp));
+  const st=X.srs2[rvCur.key];
+  rvMeta.textContent=rvDeck.length+' cards left · '+rvCur.type+(st&&st.miss?' · missed '+st.miss+'×':' · new');
+};
+// flip (capture phase pre-empts the old handler)
+rvCard.addEventListener('click',()=>{
+  if(!rvCur||rvFlipped)return;
+  rvFlipped=true;
+  rvCard.textContent='';
+  const s=document.createElement('span');s.className='a';s.setAttribute('lang','de');s.style.whiteSpace='pre-line';s.textContent=rvCur.a;
+  rvCard.appendChild(s);
+  rvCard.appendChild(sayBtn(rvCur.a.split('—')[0].split('(')[0]));
+  rvBtns.style.display='flex';
+},true);
+rvBtns.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+  if(!rvCur)return;
+  const g=b.dataset.g,k=rvCur.key;
+  const st=X.srs2[k]||{due:todayISO(),iv:0,miss:0};
+  if(g==='again'){st.miss++;st.iv=0;st.due=todayISO();}
+  if(g==='hard'){st.iv=1;st.due=plusDays(1);}
+  if(g==='good'){st.iv=3;st.due=plusDays(3);}
+  if(g==='easy'){st.iv=7;st.due=plusDays(7);}
+  X.srs2[k]=st;
+  addSkill('vocab',1);markActivity();
+  const c=rvDeck.shift();
+  if(g==='again')rvDeck.splice(Math.min(5,rvDeck.length),0,c); // later this session too
+  rvNext();
+}));
+// ---- typed drills (categorised → feeds the weak list) ----
+const DRILLS=[
+['sein','du ___ müde (sein)','bist'],['sein','wir ___ zu Hause (sein)','sind'],['sein','ihr ___ nett (sein)','seid'],['sein','ich ___ fertig (sein)','bin'],
+['haben','du ___ Hunger (haben)','hast'],['haben','er ___ eine Frage (haben)','hat'],['haben','ihr ___ Zeit (haben)','habt'],['haben','ich ___ einen Termin (haben)','habe'],
+['werden','du ___ Arzt (werden)','wirst'],['werden','es ___ kalt (werden)','wird'],
+['Verb endings','du wohn___ in Berlin','wohnst'],['Verb endings','er arbeit___ viel','arbeitet'],['Verb endings','ihr lern___ Deutsch','lernt'],['Verb endings','sie (she) sprich___ Englisch','spricht'],
+['Articles','___ Tisch (m)','der'],['Articles','___ Lampe (f)','die'],['Articles','___ Buch (n)','das'],['Articles','___ Zeitung (-ung!)','die'],['Articles','___ Mädchen (-chen!)','das'],['Articles','___ Computer','der'],
+['Plurals','das Buch → die ___','Bücher'],['Plurals','der Stuhl → die ___','Stühle'],['Plurals','die Frau → die ___','Frauen'],['Plurals','das Kind → die ___','Kinder'],['Plurals','der Apfel → die ___','Äpfel'],
+['nicht/kein','Ich habe ___ Zeit.','keine'],['nicht/kein','Das Brot ist ___ frisch.','nicht'],['nicht/kein','Er hat ___ Auto.','kein'],['nicht/kein','Ich trinke ___ Kaffee. (m!)','keinen'],['nicht/kein','Das ist ___ mein Handy.','nicht'],
+['Accusative','Ich kaufe ein___ Tisch. (m)','einen'],['Accusative','Sie sucht d___ Schlüssel. (m)','den'],['Accusative','Wir möchten ein___ Suppe. (f)','eine'],['Accusative','Er hat kein___ Bruder. (m)','keinen'],
+['Modal verbs','ich ___ schwimmen (können)','kann'],['Modal verbs','du ___ arbeiten (müssen)','musst'],['Modal verbs','er ___ schlafen (wollen)','will'],['Modal verbs','___ ich hier parken? (dürfen)','darf'],['Modal verbs','ihr ___ lernen (sollen)','sollt'],
+['Separable verbs','Ich stehe um 6 Uhr ___. (aufstehen)','auf'],['Separable verbs','Der Kurs fängt um 9 ___. (anfangen)','an'],['Separable verbs','Kommst du ___? (mitkommen)','mit'],['Separable verbs','Er sieht abends ___. (fernsehen)','fern'],
+['Perfect','machen → ge___','gemacht'],['Perfect','essen → ge___','gegessen'],['Perfect','trinken → ge___','getrunken'],['Perfect','einkaufen → ein___','eingekauft'],['Perfect','bestellen → ___ (no ge!)','bestellt'],
+['Numbers','24 in words','vierundzwanzig'],['Numbers','67 in words','siebenundsechzig'],['Numbers','„vierzig" in digits','40'],['Numbers','„siebzehn" in digits','17'],
+['Time','14:30 (everyday German)','halb drei'],['Time','9:15 (everyday German)','Viertel nach neun'],['Time','16:45 (everyday German)','Viertel vor fünf'],
+['W-questions','„___ kommst du?" — Aus Ghana.','Woher'],['W-questions','„___ wohnst du?" — In Köln.','Wo'],['W-questions','„___ ist das?" — Das ist Anna.','Wer']];
+let drillsInit=false;
+function renderDrills(){
+  const body=document.getElementById('drillsBody');
+  const cats=[...new Set(DRILLS.map(d=>d[0]))];
+  let cat='all',right=0,total=0,cur=null;
+  body.innerHTML='<div class="toolbar" id="dcats"></div><div class="dcard"><div class="qq" id="dq"></div>'+
+    '<input type="text" class="tin" id="din" lang="de" autocapitalize="off" autocomplete="off" placeholder="Type your answer…"> '+
+    '<button class="chkbtn" id="dchk">Check</button> <button class="ghost" id="dskip">Skip →</button>'+
+    '<div class="fb" id="dfb"></div><div class="rvMeta" id="dscore"></div></div>';
+  const tb=body.querySelector('#dcats');
+  ['all',...cats].forEach(c=>{
+    const b=document.createElement('button');b.textContent=c==='all'?'🌀 Mixed':c;
+    b.addEventListener('click',()=>{cat=c;[...tb.children].forEach(x=>x.style.borderColor='');b.style.borderColor='var(--acc)';next();});
+    tb.appendChild(b);
+  });
+  const dq=body.querySelector('#dq'),din=body.querySelector('#din'),dfb=body.querySelector('#dfb'),ds=body.querySelector('#dscore');
+  function next(){
+    const set=DRILLS.filter(d=>cat==='all'||d[0]===cat);
+    cur=set[Math.floor(Math.random()*set.length)];
+    dq.innerHTML='<span class="pill">'+esc(cur[0])+'</span> &nbsp;<span lang="de">'+esc(cur[1])+'</span>';
+    din.value='';dfb.textContent='';din.focus();
+  }
+  function check(){
+    if(!cur||!din.value.trim())return;
+    total++;
+    if(normDE(din.value)===normDE(cur[2])){
+      right++;dfb.className='fb ok';dfb.innerHTML='✔ Richtig: <b>'+esc(cur[2])+'</b>';
+      addSkill(/Articles|Plurals/.test(cur[0])?'vocab':'grammar',1);
+      setTimeout(next,900);
+    }else{
+      dfb.className='fb bad';dfb.innerHTML='✘ Correct: <b>'+esc(cur[2])+'</b> — saved to your Weak List. Type it once, then hit Skip.';
+      weakAdd(cur[1],cur[2],cur[0]);
+    }
+    ds.textContent='Session: '+right+'/'+total+' correct';
+  }
+  body.querySelector('#dchk').addEventListener('click',check);
+  din.addEventListener('keydown',e=>{if(e.key==='Enter')check();});
+  body.querySelector('#dskip').addEventListener('click',next);
+  next();
+}
+// ---- sentence builder ----
+const BUILD=[
+{w:['morgen','gehe','ich','zur Arbeit'],a:'Morgen gehe ich zur Arbeit',alt:['Ich gehe morgen zur Arbeit'],x:'„Morgen“ takes position 1, so the verb „gehe“ must stay in position 2 — the subject „ich“ moves behind the verb.'},
+{w:['ich','wohne','in Berlin'],a:'Ich wohne in Berlin',x:'Subject – verb (position 2) – place.'},
+{w:['wo','wohnst','du'],a:'Wo wohnst du',q:1,x:'W-word first, verb second, subject third.'},
+{w:['kommst','du','aus Nigeria'],a:'Kommst du aus Nigeria',q:1,x:'Yes/no questions start with the verb.'},
+{w:['am Montag','arbeite','ich','nicht'],a:'Am Montag arbeite ich nicht',alt:['Ich arbeite am Montag nicht'],x:'Time phrase first → verb stays second; „nicht“ goes to the end.'},
+{w:['ich','kann','gut','schwimmen'],a:'Ich kann gut schwimmen',x:'Modal verb in position 2, infinitive at the very end (verb bracket).'},
+{w:['wir','müssen','heute','einkaufen'],a:'Wir müssen heute einkaufen',alt:['Heute müssen wir einkaufen'],x:'Modal bracket: müssen … einkaufen.'},
+{w:['ich','stehe','um sechs Uhr','auf'],a:'Ich stehe um sechs Uhr auf',x:'Separable prefix „auf“ flies to the very end.'},
+{w:['der Kurs','fängt','um neun Uhr','an'],a:'Der Kurs fängt um neun Uhr an',x:'anfangen: fängt … an — prefix at the end.'},
+{w:['ich','habe','keine','Zeit'],a:'Ich habe keine Zeit',x:'kein negates nouns: keine Zeit (feminine).'},
+{w:['das Brot','ist','nicht','frisch'],a:'Das Brot ist nicht frisch',x:'„nicht“ stands directly before the adjective.'},
+{w:['ich','habe','gestern','Pizza','gegessen'],a:'Ich habe gestern Pizza gegessen',alt:['Gestern habe ich Pizza gegessen'],x:'Perfect bracket: habe (position 2) … gegessen (end).'},
+{w:['wir','sind','nach Berlin','gefahren'],a:'Wir sind nach Berlin gefahren',x:'Movement verbs build the perfect with sein.'},
+{w:['was','möchten','Sie','trinken'],a:'Was möchten Sie trinken',q:1,x:'W-word, modal in position 2, infinitive at the end.'},
+{w:['heute Abend','sehe','ich','fern'],a:'Heute Abend sehe ich fern',alt:['Ich sehe heute Abend fern'],x:'Time first → inversion; separable „fern“ at the end.'},
+{w:['ich','möchte','einen Termin','machen'],a:'Ich möchte einen Termin machen',x:'möchte + accusative (einen Termin) + infinitive at the end.'},
+{w:['darf','ich','hier','parken'],a:'Darf ich hier parken',q:1,x:'Yes/no question with a modal: modal first, infinitive last.'},
+{w:['ich','gehe','am Samstag','ins Fitnessstudio'],a:'Ich gehe am Samstag ins Fitnessstudio',alt:['Am Samstag gehe ich ins Fitnessstudio'],x:'Time before place: am Samstag → ins Fitnessstudio.'}];
+let builderInit=false;
+function renderBuilder(){
+  const body=document.getElementById('builderBody');
+  let cur=null,order=shuffleArr([...BUILD.keys()]),pos=0;
+  body.innerHTML='<div class="dcard"><div class="dhead" id="bnum"></div><div class="bans" id="bans"></div><div class="bpool" id="bpool"></div>'+
+    '<div class="toolbar"><button class="chkbtn" id="bchk">Check</button><button class="ghost" id="bclr">Clear</button><button class="ghost" id="bnxt">Next →</button></div>'+
+    '<div class="fb" id="bfb"></div></div>';
+  const pool=body.querySelector('#bpool'),ans=body.querySelector('#bans'),fb=body.querySelector('#bfb');
+  function load(){
+    cur=BUILD[order[pos%order.length]];
+    fb.textContent='';ans.innerHTML='';pool.innerHTML='';
+    body.querySelector('#bnum').textContent='Sentence '+(pos%order.length+1)+' of '+BUILD.length+(cur.q?' · question':' · statement');
+    shuffleArr(cur.w.slice()).forEach(w=>{
+      const c=document.createElement('button');c.className='bchip';c.textContent=w;c.setAttribute('lang','de');
+      c.addEventListener('click',()=>{(c.parentElement===pool?ans:pool).appendChild(c);fb.textContent='';});
+      pool.appendChild(c);
+    });
+  }
+  body.querySelector('#bchk').addEventListener('click',()=>{
+    const got=[...ans.children].map(c=>c.textContent).join(' ');
+    if(!got)return;
+    const ok=[cur.a,...(cur.alt||[])].some(v=>normDE(got)===normDE(v));
+    const punct=cur.q?'?':'.';
+    if(ok){fb.className='fb ok';fb.innerHTML='✔ <b lang="de">'+esc(cur.a+punct)+'</b><br>'+esc(cur.x||'');addSkill('grammar',2);}
+    else{fb.className='fb bad';fb.innerHTML='✘ Correct: <b lang="de">'+esc(cur.a+punct)+'</b><br>'+esc(cur.x||'')+'<br><i>Saved to your Weak List.</i>';
+      weakAdd('Word order: '+cur.w.join(' / '),cur.a+punct,'Word order');}
+  });
+  body.querySelector('#bclr').addEventListener('click',()=>{[...ans.children].forEach(c=>pool.appendChild(c));fb.textContent='';});
+  body.querySelector('#bnxt').addEventListener('click',()=>{pos++;load();});
+  load();
+}
+// ---- weak list section ----
+function renderWeak(){
+  const body=document.getElementById('weakBody');
+  const t=todayISO(),due=weakDue();
+  if(!X.weak.length){body.innerHTML='<div class="dcard"><p>📗 Your error notebook is empty. Wrong answers from quizzes, drills and the sentence builder land here automatically.</p></div>';return;}
+  let h='<div class="dcard"><button class="bigbtn" id="wgo"'+(due.length?'':' disabled style="opacity:.5"')+'>▶ Review '+due.length+' due item'+(due.length===1?'':'s')+'</button>';
+  const cats={};X.weak.forEach(w=>{cats[w.cat]=(cats[w.cat]||0)+1;});
+  h+='<div>'+Object.keys(cats).sort((a,b)=>cats[b]-cats[a]).map(c=>'<span class="tbadge">'+esc(c)+' × '+cats[c]+'</span>').join('')+'</div></div>';
+  h+='<div class="dcard" id="wsess" style="display:none"></div><div class="dcard"><div class="dhead">All items ('+X.weak.length+')</div>'+
+     X.weak.map((w,i)=>'<div class="weakrow"><div><span lang="de">'+esc(w.q)+'</span> → <b lang="de">'+esc(w.a)+'</b><div class="cat">'+esc(w.cat)+' · missed '+w.miss+'× · due '+esc(w.due)+'</div></div><button class="ghost" data-del="'+i+'">✕</button></div>').join('')+'</div>';
+  body.innerHTML=h;
+  body.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{X.weak.splice(+b.dataset.del,1);saveX();renderWeak();}));
+  const go=body.querySelector('#wgo');
+  if(due.length)go.addEventListener('click',()=>{
+    const sess=body.querySelector('#wsess');sess.style.display='block';go.style.display='none';
+    let queue=shuffleArr(due.slice());
+    function nextW(){
+      if(!queue.length){sess.innerHTML='<p class="fb ok">🎉 Weak review done! Items answered correctly twice in a row graduate out.</p>';renderWeak();return;}
+      const it=queue[0];
+      sess.innerHTML='<div class="qq"><span class="pill">'+esc(it.cat)+'</span> <span lang="de">'+esc(it.q)+'</span></div>'+
+        '<input type="text" class="tin" id="win" lang="de" autocapitalize="off" placeholder="Type the answer…"> <button class="chkbtn" id="wchk">Check</button> <button class="ghost" id="wrev">Reveal</button><div class="fb" id="wfb"></div>';
+      const win=sess.querySelector('#win'),wfb=sess.querySelector('#wfb');
+      function grade(right){
+        if(right){it.ok=(it.ok||0)+1;if(it.ok>=2){X.weak.splice(X.weak.indexOf(it),1);}else it.due=plusDays(1);}
+        else{it.miss++;it.ok=0;it.due=todayISO();queue.push(it);}
+        saveX();queue.shift();setTimeout(nextW,900);
+      }
+      function checkW(){
+        if(!win.value.trim())return;
+        const right=normDE(win.value)===normDE(it.a);
+        wfb.className='fb '+(right?'ok':'bad');
+        wfb.innerHTML=(right?'✔ Richtig: ':'✘ Correct: ')+'<b lang="de">'+esc(it.a)+'</b>';
+        grade(right);
+      }
+      sess.querySelector('#wchk').addEventListener('click',checkW);
+      win.addEventListener('keydown',e=>{if(e.key==='Enter')checkW();});
+      sess.querySelector('#wrev').addEventListener('click',()=>{
+        wfb.innerHTML='<b lang="de">'+esc(it.a)+'</b> — did you know it?'+
+          ' <button class="chkbtn" id="wy">✓ Yes</button> <button class="ghost" id="wn">✗ No</button>';
+        wfb.className='fb';
+        wfb.querySelector('#wy').addEventListener('click',()=>grade(true));
+        wfb.querySelector('#wn').addEventListener('click',()=>grade(false));
+      });
+      win.focus();
+    }
+    nextW();
+  });
+}
+// ---- mission cards get a live weak-review badge ----
+const __rmt=renderMissionTasks;
+renderMissionTasks=function(){
+  __rmt();
+  const k=weakDue().length;
+  if(!k)return;
+  document.querySelectorAll('.mission .mtasks').forEach(m=>{
+    const s=document.createElement('span');
+    s.className='tbadge';s.style.borderColor='var(--red)';s.style.color='var(--red)';s.style.cursor='pointer';
+    s.textContent='📕 '+k+' weak due — start here';
+    s.addEventListener('click',()=>show('weak'));
+    m.appendChild(s);
+  });
+};
+renderMissionTasks();
+// ---- lazy section rendering ----
+const __show4=show;
+show=function(id){
+  __show4(id);
+  if(id==='weak')renderWeak();
+  if(id==='drills'&&!drillsInit){drillsInit=true;renderDrills();}
+  if(id==='builder'&&!builderInit){builderInit=true;renderBuilder();}
+  if(/^d\d+$/.test(id))renderMissionTasks(); // keep the weak-due badge fresh
+};
 </script>
 </body>
 </html>

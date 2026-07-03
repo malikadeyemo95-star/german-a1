@@ -20,6 +20,8 @@ self.addEventListener('activate', e => {
 // Stale-while-revalidate: serve from cache instantly, refresh the cache in the
 // background so the next visit gets updates — and everything works fully offline.
 self.addEventListener('fetch', e => {
+  // dev: never serve from cache on localhost
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
   if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
   e.respondWith(
     caches.open(CACHE).then(async cache => {
