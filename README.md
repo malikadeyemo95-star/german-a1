@@ -11,6 +11,35 @@ mock exam in **one HTML file**. Built for studying 2–3 hours a day on a phone.
 ![Screenshot](screenshot.png)
 *(screenshot placeholder — add one from your phone)*
 
+## The trainer
+
+This is no longer just a textbook — it's an interactive A1 trainer:
+
+- **🏠 Dashboard** — today's mission, study-mode picker (Light 30 min / Normal 75 min /
+  Beast 2.5 h), due reviews, skill bars for vocabulary, grammar, listening, speaking,
+  reading, writing, pronunciation and exam readiness.
+- **🚀 Daily missions** — every day starts with "By the end of today, I can…", a real-life
+  use case, mode-filtered tasks and a *German in the wild* real-world challenge.
+- **🃏 Real spaced repetition** — Again / Hard / Good / Easy scheduling (today / 1 / 3 / 7
+  days) across EN→DE, article, plural, cloze, audio-recognition and sentence cards.
+  Nouns always come with article + plural + example sentence.
+- **📕 Weak-list error notebook** — every wrong answer (quizzes, drills, builder,
+  listening, exam) is captured by category and reviewed until you get it right twice.
+- **⌨️ Typed active recall** — quizzes and drills demand typed answers with
+  umlaut-tolerant checking (ae/oe/ue/ss accepted).
+- **🧩 Sentence builder** — tap scrambled words into verb-second order, with explanations.
+- **🎧 Listening trainer** — built-in German TTS, transcripts locked until you answer.
+- **🎤 Speaking studio** — record yourself (MediaRecorder), compare with slow/normal
+  model audio, self-check pronunciation.
+- **👄 Pronunciation trainer** — the 11 sounds that give English speakers away.
+- **🇩🇪 Everyday German + 🆘 Survival panel** — work, gym, REWE/Lidl, Bürgeramt,
+  transport phrases with audio, one tap away.
+- **🎓 Timed exam mode** — Hören/Lesen auto-scored, Schreiben/Sprechen self-scored,
+  locked keys, pass/fail verdict, weakest-area report, plus official Goethe/telc links.
+- **🏕 Weekly survival checks** on Days 7/14/21/28 with Ready / Almost / Repeat verdicts.
+- **🔥 Streaks with recovery mode**, challenge mode (blur English, tap to peek),
+  light/dark theme, font-size control, search, bookmarks, bottom navigation.
+
 ## What's inside
 
 - **30-day curriculum** — every day has 13 sections: grammar lesson, vocabulary
