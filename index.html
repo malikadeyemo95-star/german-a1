@@ -5613,5 +5613,210 @@ show=function(id){
   if(id==='life'&&!lifeInit){lifeInit=true;renderLife();}
 };
 </script>
+<script>
+/* ================================================================
+   TRAINER LAYER — Phase 4: exam mode, writing trainer,
+   weekly survival checks, official practice links.
+   ================================================================ */
+'use strict';
+// ---- writing trainer ----
+const WRITE=[
+{id:'sick',t:'Message to your boss: you are sick',b:['Say you are sick','Say you cannot come tomorrow','Say the sick note (Krankschreibung) is coming'],
+ m:'Sehr geehrte Frau Müller,\nich bin leider krank und habe Fieber. Ich kann morgen nicht zur Arbeit kommen. Die Krankschreibung schicke ich Ihnen heute.\nMit freundlichen Grüßen\nMalik'},
+{id:'party',t:'Reply to a party invitation from Jonas',b:['Thank him for the invitation','Say you are coming and when','Ask if you can bring something'],
+ m:'Lieber Jonas,\nvielen Dank für die Einladung! Ich komme gern und bin um 19 Uhr da. Soll ich etwas mitbringen, vielleicht einen Salat?\nViele Grüße\nMalik'},
+{id:'course',t:'Email to a language school',b:['Say you want to take a German course','Ask when it starts and what it costs','Ask if there is an evening course'],
+ m:'Sehr geehrte Damen und Herren,\nich möchte einen Deutschkurs machen. Wann beginnt der Kurs und was kostet er? Ich arbeite bis 16 Uhr — gibt es einen Abendkurs?\nMit freundlichen Grüßen\nMalik Adeyemo'},
+{id:'cancel',t:'Cancel an appointment politely',b:['Cancel the Tuesday appointment','Give a short reason','Suggest a new time'],
+ m:'Sehr geehrte Frau Weber,\nich muss den Termin am Dienstag leider absagen. Ich bin krank. Passt es am Freitag um 10 Uhr?\nMit freundlichen Grüßen\nMalik'}];
+const WCHECK=['Greeting included','All bullet points answered','Simple, clear sentences','Nouns capitalized','Verb in position 2','Closing included','About 25–40 words'];
+let writeInit=false;
+function renderWrite(){
+  const body=document.getElementById('writeBody');
+  body.innerHTML=WRITE.map((W,i)=>{
+    const doneW=X.writeDone[W.id];
+    return '<div class="dcard" data-w="'+i+'"><h3>✍️ '+esc(W.t)+(doneW?' ✅':'')+'</h3>'+
+    '<ul>'+W.b.map(b=>'<li>'+esc(b)+'</li>').join('')+'</ul>'+
+    '<textarea lang="de" placeholder="Schreiben Sie hier… (25–40 Wörter)"></textarea><div class="wc">0 words</div>'+
+    '<button class="chkbtn" data-sub>Submit & compare</button>'+
+    '<div data-after style="display:none"><h3>Model answer</h3><p class="de" lang="de" style="white-space:pre-line"></p>'+
+    '<div class="dhead">Self-check</div>'+WCHECK.map(c=>'<label style="display:block;font-size:14px"><input type="checkbox"> '+esc(c)+'</label>').join('')+
+    '<div class="tip">💡 Tips: keep sentences short (subject–verb–rest) · check every noun starts with a capital · a greeting + closing alone earn points in the real exam.</div></div></div>';
+  }).join('');
+  WRITE.forEach((W,i)=>{
+    const card=body.querySelector('[data-w="'+i+'"]');
+    const ta=card.querySelector('textarea'),wc=card.querySelector('.wc');
+    ta.addEventListener('input',()=>{
+      const n=ta.value.trim()?ta.value.trim().split(/\s+/).length:0;
+      wc.textContent=n+' words'+(n<25?' (aim for 25+)':n>45?' (A1 needs only ~30!)':' ✓');
+    });
+    card.querySelector('[data-sub]').addEventListener('click',()=>{
+      if(ta.value.trim().split(/\s+/).length<10){wc.textContent='Write at least ~10 words first!';return;}
+      const after=card.querySelector('[data-after]');
+      after.style.display='block';
+      after.querySelector('p').textContent=W.m;
+      if(!X.writeDone[W.id]){X.writeDone[W.id]=true;saveX();addSkill('writing',8);markActivity();}
+    });
+  });
+}
+// ---- weekly survival checks on days 7/14/21/28 ----
+const WEEKLY={
+7:{items:['Introduce yourself (name, age, country, city)','Spell your name with German letters','Say your phone number','Ask someone how they are — and answer','Use sein and haben correctly'],fix:'Days 1–6'},
+14:{items:['Order food and drinks politely','Handle a shopping dialogue with prices','Use der/die/das and einen/eine/ein correctly','Talk about your family and home','Say what you want / don’t have (kein!)'],fix:'Days 8–13'},
+21:{items:['Make, move or cancel an appointment','Ask for directions and understand the answer','Tell the time and today’s date','Use the modal verbs (kann/muss/will/darf/soll)','Use separable verbs (stehe … auf)'],fix:'Days 15–20'},
+28:{items:['Describe symptoms at a doctor/pharmacy','Talk about yesterday (war/hatte + perfect)','Write a short email (25–40 words)','Fill in a simple German form','Do exam-style listening/reading tasks'],fix:'Days 22–27'}};
+Object.keys(WEEKLY).forEach(d=>{
+  const sec=document.getElementById('d'+d);if(!sec)return;
+  const W=WEEKLY[d];
+  const saved=X.weekly[d]||[];
+  const card=document.createElement('div');card.className='dcard';card.style.borderColor='var(--acc)';
+  card.innerHTML='<div class="dhead">🏕 Week '+(d/7)+' survival check — can you do this in real life?</div>'+
+    W.items.map((it,i)=>'<div style="margin:8px 0"><div style="font-size:14.5px">'+esc(it)+'</div><div class="tri" data-i="'+i+'">'+
+    ['✅ Yes','😬 Shaky','❌ Not yet'].map((l,v)=>'<button data-v="'+(2-v)+'" class="'+(saved[i]===2-v?'on':'')+'">'+l+'</button>').join('')+'</div></div>').join('')+
+    '<div class="verdict" data-verdict></div>';
+  const mission=sec.querySelector('.mission');
+  (mission||sec.querySelector('h2')).insertAdjacentElement('afterend',card);
+  function verdict(){
+    const vals=X.weekly[d]||[];
+    if(vals.filter(v=>v!=null).length<W.items.length){card.querySelector('[data-verdict]').textContent='';return;}
+    const sum=vals.reduce((a,b)=>a+b,0);
+    const v=card.querySelector('[data-verdict]');
+    if(sum>=9){v.textContent='🟢 READY — you own this week. Move on!';v.style.color='var(--acc2)';}
+    else if(sum>=6){v.textContent='🟡 ALMOST READY — redo the shaky items above, then re-check.';v.style.color='var(--acc)';}
+    else{v.textContent='🔴 REPEAT '+W.fix+' — do their quizzes + flashcards again before moving on.';v.style.color='var(--red)';}
+  }
+  card.querySelectorAll('.tri').forEach(tri=>tri.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    const i=+tri.dataset.i;
+    X.weekly[d]=X.weekly[d]||[];X.weekly[d][i]=+b.dataset.v;saveX();
+    tri.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    verdict();
+  })));
+  verdict();
+});
+// ---- A1 exam mode ----
+const EXAM={
+h:[{s:'Hallo Ben, hier ist Lisa. Wir treffen uns morgen um Viertel nach sieben vor dem Restaurant. Bring bitte deinen Freund mit!',
+    qs:[{q:'When do they meet?',o:['6:45','7:15','7:30'],a:1},{q:'Where do they meet?',o:['in the restaurant','in front of the restaurant','at Lisa’s home'],a:1}]},
+   {s:'Sehr geehrte Kunden, unser Geschäft schließt heute schon um 18 Uhr. Morgen sind wir ab 9 Uhr wieder für Sie da.',
+    qs:[{q:'The shop closes today at…',o:['18:00','19:00','20:00'],a:0},{q:'Tomorrow it opens at…',o:['8:00','9:00','10:00'],a:1}]},
+   {s:'Praxis Doktor Sommer, guten Tag. Ihr Termin am Montag fällt leider aus. Wir haben neue Termine am Mittwoch um 8:30 Uhr oder am Donnerstag um 15 Uhr. Bitte rufen Sie uns zurück.',
+    qs:[{q:'The Monday appointment is…',o:['confirmed','cancelled','moved to Tuesday'],a:1},{q:'One new option is…',o:['Wed 8:30','Wed 15:00','Thu 8:30'],a:0}]}],
+l:[{t:'E-Mail von der Sprachschule',s:'Liebe Frau Kern, der Deutschkurs beginnt am Montag, dem 5. März, um 18 Uhr. Der Kurs ist zweimal pro Woche: montags und mittwochs. Das Kursbuch bekommen Sie im Kurs. Bitte bringen Sie 15 Euro für das Buch mit. Mit freundlichen Grüßen, Sprachschule Aktiv',
+    qs:[{q:'Der Kurs beginnt am Montag.',a:true},{q:'Der Kurs ist dreimal pro Woche.',a:false},{q:'Das Kursbuch ist kostenlos.',a:false}]},
+   {t:'Zettel im Hausflur',s:'Liebe Nachbarn, am Samstag ab 14 Uhr feiern wir im Garten ein Sommerfest. Alle sind willkommen! Bitte bringen Sie einen Salat oder einen Kuchen mit. Bei Regen feiern wir im Keller. — Haus 12',
+    qs:[{q:'Das Fest ist am Samstag.',a:true},{q:'Man soll etwas mitbringen.',a:true},{q:'Bei Regen fällt das Fest aus.',a:false}]}],
+w:{task:'You cannot come to your German course on Monday. Write to the language school (about 30 words): 1) why you cannot come · 2) ask for the homework · 3) greeting + closing.',
+   m:'Sehr geehrte Damen und Herren,\nich kann am Montag leider nicht zum Kurs kommen, denn ich muss arbeiten. Können Sie mir bitte die Hausaufgaben schicken? Vielen Dank!\nMit freundlichen Grüßen\nMalik Adeyemo'},
+s:['Introduce yourself: name, age, country, city, languages, job, hobby — then spell your surname and say your phone number.',
+   'Topic „Einkaufen“: ask three W-questions (Was…? Wo…? Wie viel…?) and answer them yourself.',
+   'Make two polite requests: ask someone to open the window, and ask someone to repeat something.']};
+let examInit=false,exTimer=null;
+function renderExam(){
+  const body=document.getElementById('examBody');
+  let h='<p class="goal">🎯 A full timed run: Hören + Lesen auto-scored, Schreiben + Sprechen self-scored. Answer keys stay locked until you submit. Pass mark: 60%.</p>';
+  h+='<div class="tip">ℹ️ Goethe A1 and telc A1 test the same core skills — listening, reading, writing and speaking — but task formats and timing can differ. Use official model tests before booking.</div>';
+  if(X.examBest)h+='<p>🏅 Your best so far: <b>'+X.examBest+'%</b></p>';
+  h+='<button class="bigbtn" id="exStart">▶ Start exam (45-minute timer)</button>';
+  h+='<div id="exPaper" style="display:none"></div>';
+  // official links
+  h+='<div class="dcard"><div class="dhead">📎 Official exam practice</div><ul style="font-size:14px">'+
+     '<li><a href="https://www.goethe.de/de/spr/kup/prf/prf/gzsd1/ueb.html" target="_blank" rel="noopener" style="color:var(--acc2)">Goethe-Zertifikat A1 (Start Deutsch 1) — free practice materials, incl. listening audio</a></li>'+
+     '<li><a href="https://www.goethe.de/de/spr/kup/prf/prf/gzsd1.html" target="_blank" rel="noopener" style="color:var(--acc2)">Goethe A1 exam info page</a> — also search YouTube for „Goethe Zertifikat A1 mündliche Prüfung“ to watch real speaking exams</li>'+
+     '<li><a href="https://www.telc.net" target="_blank" rel="noopener" style="color:var(--acc2)">telc.net</a> — search „telc Deutsch A1 Übungstest“ for the free mock exam PDF + audio</li></ul>'+
+     '<p style="font-size:13px;color:var(--mut)">If a link has moved, search the exact phrases above — the materials are free.</p></div>';
+  body.innerHTML=h;
+  document.getElementById('exStart').addEventListener('click',startExam);
+}
+function startExam(){
+  const paper=document.getElementById('exPaper');
+  paper.style.display='block';
+  document.getElementById('exStart').style.display='none';
+  const end=Date.now()+45*60*1000;
+  let p='<div class="timer" id="exTime">45:00</div>';
+  // Hören
+  p+='<div class="dcard"><h3>Teil 1 · Hören (6 points)</h3><p style="font-size:13px;color:var(--mut)">Play each audio max. twice. No transcript until you submit!</p>';
+  EXAM.h.forEach((H,hi)=>{
+    p+='<div class="toolbar"><b>Audio '+(hi+1)+':</b> <button type="button" data-xh="'+hi+'">▶ Play</button></div>';
+    H.qs.forEach((q,qi)=>{
+      p+='<div class="qq">'+esc(q.q)+'</div><div>'+q.o.map((o,oi)=>'<button class="opt" data-h="'+hi+'-'+qi+'" data-o="'+oi+'">'+esc(o)+'</button>').join('')+'</div>';
+    });
+  });
+  p+='</div>';
+  // Lesen
+  p+='<div class="dcard"><h3>Teil 2 · Lesen (6 points)</h3>';
+  EXAM.l.forEach((L,li)=>{
+    p+='<h3 style="font-size:14px">'+esc(L.t)+'</h3><p class="de" lang="de">'+esc(L.s)+'</p>';
+    L.qs.forEach((q,qi)=>{
+      p+='<div class="qq" lang="de">'+esc(q.q)+'</div><div><button class="opt" data-r="'+li+'-'+qi+'" data-o="true">Richtig</button><button class="opt" data-r="'+li+'-'+qi+'" data-o="false">Falsch</button></div>';
+    });
+  });
+  p+='</div>';
+  // Schreiben
+  p+='<div class="dcard"><h3>Teil 3 · Schreiben (6 points)</h3><p>'+esc(EXAM.w.task)+'</p><textarea id="exW" lang="de"></textarea><div class="wc" id="exWc">0 words</div></div>';
+  // Sprechen
+  p+='<div class="dcard"><h3>Teil 4 · Sprechen (6 points)</h3>'+EXAM.s.map((s,i)=>'<div class="qq">'+(i+1)+'. '+esc(s)+'</div>').join('')+'<div id="exRec"></div></div>';
+  p+='<button class="bigbtn" id="exSubmit">📤 Submit exam</button><div id="exResult"></div>';
+  paper.innerHTML=p;
+  document.getElementById('exRec').appendChild(makeRecorder());
+  paper.querySelectorAll('[data-xh]').forEach(b=>{
+    let plays=0;
+    b.addEventListener('click',()=>{if(plays>=2){b.textContent='(max. 2 plays)';return;}plays++;speakR(EXAM.h[+b.dataset.xh].s,0.9);});
+  });
+  const picks={};
+  paper.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.dataset.h?'h'+b.dataset.h:'r'+b.dataset.r;
+    picks[k]=b.dataset.o;
+    [...b.parentElement.children].forEach(x=>x.style.borderColor='');
+    b.style.borderColor='var(--acc)';
+  }));
+  const exW=document.getElementById('exW');
+  exW.addEventListener('input',()=>{document.getElementById('exWc').textContent=(exW.value.trim()?exW.value.trim().split(/\s+/).length:0)+' words';});
+  clearInterval(exTimer);
+  exTimer=setInterval(()=>{
+    const left=Math.max(0,end-Date.now());
+    const m=Math.floor(left/60000),s2=Math.floor(left%60000/1000);
+    document.getElementById('exTime').textContent=(left?m+':'+String(s2).padStart(2,'0'):'⏰ Time is up — submit now!');
+    if(!left)clearInterval(exTimer);
+  },1000);
+  document.getElementById('exSubmit').addEventListener('click',()=>{
+    clearInterval(exTimer);
+    let auto=0,hPts=0,lPts=0;
+    EXAM.h.forEach((H,hi)=>H.qs.forEach((q,qi)=>{if(+picks['h'+hi+'-'+qi]===q.a){auto++;hPts++;}else weakAdd('Exam Hören: '+q.q,q.o[q.a],'Listening');}));
+    EXAM.l.forEach((L,li)=>L.qs.forEach((q,qi)=>{if(picks['r'+li+'-'+qi]===String(q.a)){auto++;lPts++;}else weakAdd('Exam Lesen: '+q.q,q.a?'Richtig':'Falsch','Reading');}));
+    addSkill('listening',hPts);addSkill('reading',lPts);
+    const res=document.getElementById('exResult');
+    res.innerHTML='<div class="dcard"><h3>🔓 Keys unlocked — self-score the rest</h3>'+
+      '<div class="dhead">Hören transcripts</div>'+EXAM.h.map(H=>'<p class="de" lang="de" style="font-size:13.5px">'+esc(H.s)+'</p>').join('')+
+      '<div class="dhead">Model answer (Schreiben)</div><p class="de" lang="de" style="white-space:pre-line">'+esc(EXAM.w.m)+'</p>'+
+      '<div class="dhead">Schreiben — give yourself 0–6 (greeting/closing ✓, all 3 points ✓, understandable ✓)</div><div class="tri" id="exWs">'+[0,1,2,3,4,5,6].map(v=>'<button data-v="'+v+'">'+v+'</button>').join('')+'</div>'+
+      '<div class="dhead">Sprechen — listen to your recording, give yourself 0–6</div><div class="tri" id="exSs">'+[0,1,2,3,4,5,6].map(v=>'<button data-v="'+v+'">'+v+'</button>').join('')+'</div>'+
+      '<button class="bigbtn" id="exFinal">Calculate result</button><div id="exVerdict"></div></div>';
+    let ws=null,ss=null;
+    res.querySelectorAll('#exWs button').forEach(b=>b.addEventListener('click',()=>{ws=+b.dataset.v;res.querySelectorAll('#exWs button').forEach(x=>x.classList.toggle('on',x===b));}));
+    res.querySelectorAll('#exSs button').forEach(b=>b.addEventListener('click',()=>{ss=+b.dataset.v;res.querySelectorAll('#exSs button').forEach(x=>x.classList.toggle('on',x===b));}));
+    document.getElementById('exFinal').addEventListener('click',()=>{
+      if(ws==null||ss==null){document.getElementById('exVerdict').innerHTML='<p class="fb bad">Score Schreiben and Sprechen first!</p>';return;}
+      const total=auto+ws+ss,pct=Math.round(total/24*100);
+      const parts=[['Hören',hPts,6],['Lesen',lPts,6],['Schreiben',ws,6],['Sprechen',ss,6]];
+      parts.sort((a,b)=>a[1]/a[2]-b[1]/b[2]);
+      const weakest=parts[0];
+      const fixMap={'Hören':'listen','Lesen':'weak','Schreiben':'write','Sprechen':'speak'};
+      X.examBest=Math.max(X.examBest||0,pct);saveX();addSkill('writing',ws);addSkill('speaking',ss);
+      document.getElementById('exVerdict').innerHTML=
+        '<div class="verdict" style="color:'+(pct>=60?'var(--acc2)':'var(--red)')+'">'+(pct>=60?'🎉 PASSED':'❌ Not yet')+' — '+total+'/24 ('+pct+'%)</div>'+
+        '<div>'+parts.map(pt=>'<span class="tbadge">'+pt[0]+' '+pt[1]+'/'+pt[2]+'</span>').join('')+'</div>'+
+        '<p>📌 Weakest area: <b>'+weakest[0]+'</b> — <button class="ghost" onclick="show(\''+fixMap[weakest[0]]+'\')">train it now →</button></p>'+
+        '<button class="bigbtn sec" onclick="examInit=false;show(\'dash\');show(\'exam\')">⟳ Retry exam</button>';
+      renderDash&&X.lastDay;
+    });
+  });
+}
+const __show6=show;
+show=function(id){
+  __show6(id);
+  if(id==='write'&&!writeInit){writeInit=true;renderWrite();}
+  if(id==='exam'&&!examInit){examInit=true;renderExam();}
+};
+</script>
 </body>
 </html>
