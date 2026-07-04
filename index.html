@@ -45,7 +45,7 @@ ol,ul{padding-left:22px;margin:8px 0}
 li{margin:4px 0}
 .key{background:var(--inset);border-color:var(--line)}
 .fcgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
-.fc{background:var(--raise);border:1px solid var(--line);border-radius:10px;min-height:60px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;cursor:pointer;font-weight:600}
+.fc{background:var(--raise);border:1px solid var(--line);border-radius:12px;min-height:64px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;cursor:pointer;font-weight:600}
 .fc .a{display:none;color:var(--acc2)}
 .fc.flip .q{display:none}
 .fc.flip .a{display:block}
@@ -71,19 +71,19 @@ body.no-tts .say{display:none}
 #streak{color:var(--acc);font-weight:700;float:right}
 /* --- interactive quizzes --- */
 .quizI .qq{margin:12px 0 6px;font-weight:600}
-.quizI .opt{display:block;width:100%;text-align:left;background:var(--raise);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px 10px;margin:5px 0;font-size:14.5px;cursor:pointer}
-.quizI .opt.ok{background:#1d4034;border-color:var(--acc2);color:var(--acc2);font-weight:700}
-.quizI .opt.bad{background:#42222c;border-color:var(--red);color:var(--red)}
+.quizI .opt{display:block;width:100%;text-align:left;background:var(--raise);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:11px 12px;margin:6px 0;font-size:.9em;min-height:44px;cursor:pointer}
+.quizI .opt.ok{background:#1b3a30;background:color-mix(in srgb,var(--acc2) 15%,var(--raise));border-color:var(--acc2);color:var(--acc2);font-weight:700}
+.quizI .opt.bad{background:#3a2029;background:color-mix(in srgb,var(--red) 15%,var(--raise));border-color:var(--red);color:var(--red)}
 .quizI .score{margin:10px 0;font-weight:700;color:var(--acc)}
 .best{color:var(--acc2);font-weight:400;font-size:13px}
 /* --- Review All (spaced repetition) --- */
-#rvCard{background:var(--raise);border:1px solid var(--line);border-radius:14px;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:20px;font-weight:700;cursor:pointer;margin:12px 0}
-#rvCard .a{color:var(--acc2)}
+#rvCard{background:var(--raise);border:1px solid var(--line);border-radius:16px;min-height:200px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-size:1.25em;font-weight:700;cursor:pointer;margin:12px 0}
+#rvCard .a{color:var(--de)}
 #rvCard .say{position:static;margin-left:10px}
-.rvBtns{display:flex;gap:10px}
-.rvBtns button{flex:1;border-radius:10px;padding:12px;font-size:15px;border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer}
-.rvBtns .again{border-color:var(--red);color:var(--red)}
-.rvBtns .got{border-color:var(--acc2);color:var(--acc2)}
+.rvBtns{display:flex;gap:8px}
+.rvBtns button{flex:1;border-radius:12px;padding:13px 4px;font-size:.9em;min-height:48px;border:1px solid var(--line);background:var(--raise);color:var(--txt);cursor:pointer}
+.rvBtns .again{color:var(--red)}
+.rvBtns .got{color:var(--acc2)}
 .rvMeta{color:var(--mut);font-size:13px;margin:6px 0}
 /* ===== trainer layer ===== */
 body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
@@ -91,18 +91,22 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 .bnav button{flex:1;background:none;border:none;color:var(--mut);font-size:.7em;font-weight:600;padding:8px 2px 10px;cursor:pointer;line-height:1.3;transition:color .14s}
 .bnav button span{display:block;font-size:22px}
 .bnav button.on{color:var(--acc);font-weight:700}
-.dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.dcard.hero{background:var(--raise);border:0;padding:20px}
 .dcard h3{margin:0 0 8px}
 .dhead{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin:0 0 6px}
 .modeBtns{display:flex;gap:8px;margin:8px 0}
 .modeBtns button{flex:1;background:var(--raise);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:8px 4px;font-size:13px;cursor:pointer}
 .modeBtns button.on{border-color:var(--acc);color:var(--acc);font-weight:700}
-.bigbtn{display:block;width:100%;background:var(--acc);color:#111;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer;margin:10px 0}
-.bigbtn.sec{background:var(--card);color:var(--txt);border:1px solid var(--line)}
+.bigbtn{display:block;width:100%;background:var(--acc);color:#14161f;border:none;border-radius:12px;padding:14px;min-height:48px;font-size:1em;font-weight:650;cursor:pointer;margin:10px 0}
+.bigbtn:disabled{opacity:.35}
+.bigbtn.sec{background:transparent;color:var(--txt);border:1px solid var(--line)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible,.fc:focus-visible{outline:none;box-shadow:0 0 0 3px var(--focus)}
 .skillrow{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13.5px}
 .skillrow .nm{flex:0 0 128px}
 .skillrow .bar{flex:1;height:7px;background:var(--raise);border-radius:4px;overflow:hidden}
-.skillrow .bar i{display:block;height:100%;background:var(--acc2);border-radius:4px}
+.skillrow .bar i{display:block;height:100%;background:var(--mut);opacity:.55;border-radius:4px}
+.skillrow .bar i.full{background:var(--acc2);opacity:1}
 .skillrow .pc{flex:0 0 38px;text-align:right;color:var(--mut)}
 .dgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .dgrid button{background:var(--raise);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:12px 8px;font-size:13.5px;cursor:pointer;text-align:left;line-height:1.35}
@@ -114,11 +118,12 @@ body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
 .tbadge.req{border-color:var(--acc2);color:var(--acc2)}
 .wild{background:var(--inset);border-left:4px solid var(--acc);border-radius:8px;padding:10px;margin:10px 0;font-size:14px}
 .wild input[type=text]{width:100%;margin-top:6px}
-input[type=text],textarea{background:var(--inset);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:9px;font-size:15px;font-family:inherit;box-sizing:border-box}
+input[type=text],textarea{background:var(--inset);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:12px;min-height:44px;font-size:.95em;font-family:inherit;box-sizing:border-box}
+input[type=text]:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--focus);outline:none}
 textarea{width:100%;min-height:110px}
 .tin{width:60%;max-width:280px}
-.chkbtn{background:var(--acc2);color:#111;border:none;border-radius:8px;padding:9px 14px;font-size:14px;font-weight:700;cursor:pointer;margin-left:6px}
-.ghost{background:var(--card);color:var(--mut);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px;cursor:pointer}
+.chkbtn{background:var(--acc);color:#14161f;border:none;border-radius:10px;padding:11px 16px;min-height:44px;font-size:.9em;font-weight:650;cursor:pointer;margin-left:6px}
+.ghost{background:transparent;color:var(--mut);border:1px solid var(--line);border-radius:10px;padding:10px 13px;min-height:40px;font-size:.82em;cursor:pointer}
 .fb{margin:6px 0;font-size:14px}
 .fb.ok{color:var(--acc2)} .fb.bad{color:var(--red)}
 .bpool,.bans{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;margin:8px 0;padding:8px;border:1px dashed var(--line);border-radius:10px}
@@ -175,9 +180,10 @@ body.steps .day details.step{display:none}
 body.steps .day details.step.cur{display:block}
 .stepdone{color:var(--acc2);font-size:12.5px}
 /* ===== deck tabs / bank filters ===== */
-.tabs{display:flex;gap:6px;overflow-x:auto;margin:8px 0}
-.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:6px 12px;font-size:13px;cursor:pointer}
-.tabs button.on{border-color:var(--acc);color:var(--acc);font-weight:700}
+.tabs{display:flex;gap:2px;overflow-x:auto;margin:8px 0;background:var(--inset);border-radius:12px;padding:3px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;border:0;background:transparent;color:var(--mut);border-radius:9px;padding:8px 13px;min-height:38px;font-size:.8em;cursor:pointer}
+.tabs button.on{background:var(--raise);color:var(--txt);font-weight:650}
 /* ===== badges ===== */
 .badges{display:flex;flex-wrap:wrap;gap:8px}
 .badge{background:var(--raise);border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:12.5px;text-align:center;min-width:86px;opacity:.35}
@@ -5077,7 +5083,7 @@ function renderDash(){
   // progress card
   h+='<div class="dcard"><div class="dhead">Course progress</div>'+
      '<div class="skillrow"><span class="nm">📅 30-day course</span><span class="bar"><i style="width:'+(nDone/30*100)+'%"></i></span><span class="pc">'+nDone+'/30</span></div>'+
-     SKILLS.map(s=>'<div class="skillrow"><span class="nm">'+s[1]+'</span><span class="bar"><i style="width:'+skillPct(s[0])+'%"></i></span><span class="pc">'+skillPct(s[0])+'%</span></div>').join('')+
+     SKILLS.map(s=>{const p=skillPct(s[0]);return '<div class="skillrow"><span class="nm">'+s[1]+'</span><span class="bar"><i class="'+(p>=100?'full':'')+'" style="width:'+p+'%"></i></span><span class="pc">'+p+'%</span></div>';}).join('')+
      '<div style="font-size:13px;color:var(--mut);margin-top:6px">'+(streak.count>0?'🔥 Streak: '+streak.count+' day'+(streak.count>1?'s':''):'Start your streak today!')+(X.lastStudy?' · last studied: '+X.lastStudy:'')+'</div></div>';
   // tools
   const tools=[['review','🃏','Flashcards<br><small>'+due+' due</small>'],['weak','📕','Weak list<br><small>'+wk+' due</small>'],
@@ -5245,7 +5251,7 @@ function cardPool(){
 // ---- real SRS: Again (later today) / Hard (1d) / Good (3d) / Easy (7d) ----
 function plusDays(n){return dayStr(new Date(Date.now()+n*864e5));}
 document.querySelector('#review .goal').innerHTML='🎯 Spaced repetition: grade yourself honestly. <b>Again</b> = later today · <b>Hard</b> = tomorrow · <b>Good</b> = in 3 days · <b>Easy</b> = in 7 days. Due cards come back automatically.';
-rvBtns.innerHTML='<button class="again" data-g="again">↩ Again</button><button data-g="hard" style="border-color:var(--acc);color:var(--acc)">😬 Hard</button><button data-g="good" style="border-color:var(--acc2);color:var(--acc2)">🙂 Good</button><button class="got" data-g="easy">😎 Easy</button>';
+rvBtns.innerHTML='<button class="again" data-g="again">↩ Again</button><button data-g="hard" style="color:var(--acc)">😬 Hard</button><button data-g="good" style="color:var(--acc2)">🙂 Good</button><button class="got" data-g="easy">😎 Easy</button>';
 rvStart=function(){
   const pool=cardPool(),t=todayISO();
   const due=[],fresh=[];
