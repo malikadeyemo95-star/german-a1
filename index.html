@@ -162,6 +162,49 @@ body.light input[type=text],body.light textarea{background:#fff;color:var(--txt)
 body.light .key{background:#e8edfb}
 body.light #nav button{background:#eceff8;color:var(--txt)}
 body.light #nav button.on{background:var(--acc);color:#fff}
+/* ===== guided stepper ===== */
+.stepbar{position:sticky;top:110px;z-index:6;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;margin:10px 0}
+.stepbar .sp{height:6px;background:#232849;border-radius:3px;overflow:hidden;margin:6px 0}
+.stepbar .sp i{display:block;height:100%;background:var(--acc);border-radius:3px;transition:width .3s}
+.stepnav{display:flex;gap:8px;align-items:center}
+.stepnav button{border-radius:9px;padding:9px 13px;border:1px solid var(--line);background:#232849;color:var(--txt);font-size:14px;cursor:pointer}
+.stepnav .nx{flex:1;background:var(--acc);color:#111;font-weight:700;border-color:var(--acc)}
+.stepnav .steplabel{flex:1;text-align:center;font-size:13px;color:var(--mut)}
+body.steps .day details.step{display:none}
+body.steps .day details.step.cur{display:block}
+.stepdone{color:var(--acc2);font-size:12.5px}
+/* ===== deck tabs / bank filters ===== */
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:8px 0}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:16px;padding:6px 12px;font-size:13px;cursor:pointer}
+.tabs button.on{border-color:var(--acc);color:var(--acc);font-weight:700}
+/* ===== badges ===== */
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{background:#232849;border:1px solid var(--line);border-radius:12px;padding:8px 10px;font-size:12.5px;text-align:center;min-width:86px;opacity:.35}
+.badge.won{opacity:1;border-color:var(--acc)}
+.badge b{display:block;font-size:20px}
+/* ===== vocab bank rows ===== */
+.vrow{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding:7px 0;font-size:14.5px;align-items:center}
+.vrow small{color:var(--mut)}
+/* ===== quiz explanations ===== */
+.xpl{background:#20304a;border-left:3px solid var(--acc);border-radius:6px;padding:7px 9px;margin:6px 0;font-size:13.5px}
+/* ===== skill color accents ===== */
+details[data-skill="grammar"]>summary{color:#7eb8ff}
+details[data-skill="vocab"]>summary{color:var(--acc2)}
+details[data-skill="listen"]>summary{color:#c9a6ff}
+details[data-skill="speak"]>summary{color:#ffb47e}
+details[data-skill="write"]>summary{color:#ff9ec2}
+/* ===== print ===== */
+@media print{
+header,.bnav,.sos,.sospanel,.sov,.star,.toolbar,.stepbar,.nav2,.bigbtn,.say,.shuf,.done,.fb,.mission .wild input,#nav{display:none!important}
+body{background:#fff;color:#000;padding:0}
+section.day{display:block!important}
+section.day:not(.active){display:none!important}
+details{border:1px solid #999;page-break-inside:avoid}
+.de{color:#000;font-weight:700}
+.tr,.goal{color:#444}
+table,th,td{border-color:#999}
+th{background:#eee;color:#000}
+}
 </style>
 </head>
 <body>
@@ -4466,6 +4509,24 @@ body.light #nav button.on{background:var(--acc);color:#fff}
 <div id="examBody"></div>
 </section>
 
+<section id="gbank" class="day" data-nonav="1" data-title="Grammar Bank — All Topics">
+<h2>🧩 Grammar Bank</h2>
+<p class="goal">🎯 Every A1 grammar topic in one place — jump straight to the lesson or drill it.</p>
+<div id="gbankBody"></div>
+</section>
+
+<section id="vbank" class="day" data-nonav="1" data-title="Vocabulary Bank — All Words">
+<h2>📚 Vocabulary Bank</h2>
+<p class="goal">🎯 Every word from the course. Nouns always show their article — filter, search, listen.</p>
+<div id="vbankBody"></div>
+</section>
+
+<section id="place" class="day" data-nonav="1" data-title="Placement Test — Where Should I Start?">
+<h2>🧭 Placement Test</h2>
+<p class="goal">🎯 8 quick questions. Answer honestly — the result tells you where to start.</p>
+<div id="placeBody"></div>
+</section>
+
 </main>
 
 <button class="sos" id="sosBtn" title="Survival German" aria-label="Survival German phrases">🆘</button>
@@ -5817,6 +5878,92 @@ show=function(id){
   if(id==='write'&&!writeInit){writeInit=true;renderWrite();}
   if(id==='exam'&&!examInit){examInit=true;renderExam();}
 };
+</script>
+<script>
+/* ================================================================
+   TRAINER LAYER — Phase 5a: guided lesson stepper with per-section
+   progress + continue-at-section, dashboard next-action.
+   ================================================================ */
+'use strict';
+X.steps=X.steps||{};
+if(X.settings.steps===undefined)X.settings.steps=true;
+document.body.classList.toggle('steps',X.settings.steps);
+const STEPPERS={};
+for(let d=1;d<=30;d++){
+  const sec=document.getElementById('d'+d);if(!sec)continue;
+  const steps=[...sec.children].filter(el=>el.tagName==='DETAILS');
+  if(!steps.length)continue;
+  steps.forEach(s=>s.classList.add('step'));
+  const st=X.steps[d]=X.steps[d]||{i:0,done:{}};
+  const bar=document.createElement('div');bar.className='stepbar';
+  bar.innerHTML='<div style="display:flex;justify-content:space-between;font-size:13px"><span>Day '+d+' progress: <b class="cnt"></b></span><button class="ghost all" style="padding:2px 9px">📜 Show all</button></div>'+
+    '<div class="sp"><i></i></div>'+
+    '<div class="stepnav"><button class="pv">◀</button><span class="steplabel"></span><button class="nx">Next ▶</button></div>';
+  const anchor=sec.querySelector('.mission')||sec.querySelector('.goal')||sec.querySelector('h2');
+  anchor.insertAdjacentElement('afterend',bar);
+  const cnt=bar.querySelector('.cnt'),fill=bar.querySelector('.sp i'),lbl=bar.querySelector('.steplabel'),
+        pv=bar.querySelector('.pv'),nx=bar.querySelector('.nx'),all=bar.querySelector('.all');
+  function paint(){
+    const N=steps.length,doneN=Object.keys(st.done).length;
+    st.i=Math.max(0,Math.min(st.i,N-1));
+    steps.forEach((s,j)=>{s.classList.toggle('cur',j===st.i);if(j===st.i&&document.body.classList.contains('steps'))s.open=true;});
+    cnt.textContent=doneN+'/'+N+' sections';
+    fill.style.width=(doneN/N*100)+'%';
+    const sum=steps[st.i].querySelector('summary');
+    lbl.innerHTML='Step '+(st.i+1)+'/'+N+': '+esc(sum?sum.textContent.trim().slice(0,34):'')+(st.done[st.i]?' <span class="stepdone">✓</span>':'');
+    pv.disabled=st.i===0;
+    nx.textContent=st.i===N-1?(doneN>=N?'🎉 Done':'Finish ✔'):'Next ▶';
+    all.textContent=document.body.classList.contains('steps')?'📜 Show all':'🪜 Step mode';
+  }
+  nx.addEventListener('click',()=>{
+    st.done[st.i]=1;
+    if(st.i<steps.length-1){st.i++;}
+    else{sec.querySelector('.done').scrollIntoView({block:'center'});}
+    saveX();paint();
+    if(st.i<steps.length-1||!st.done[steps.length-1])bar.scrollIntoView({block:'start'});
+  });
+  pv.addEventListener('click',()=>{st.i=Math.max(0,st.i-1);saveX();paint();});
+  all.addEventListener('click',()=>{
+    X.settings.steps=!X.settings.steps;saveX();
+    document.body.classList.toggle('steps',X.settings.steps);
+    Object.values(STEPPERS).forEach(p=>p());
+  });
+  STEPPERS[d]=paint;
+  paint();
+}
+// dashboard: day-section progress + recommended next action
+const __rd=renderDash;
+renderDash=function(){
+  __rd();
+  const body=document.getElementById('dashBody');
+  const cd=currentDay(),st=X.steps[cd];
+  const today=body.querySelector('.dcard');
+  if(st&&today){
+    const N=[...document.querySelectorAll('#d'+cd+' details.step')].length||12;
+    const doneN=Object.keys(st.done).length;
+    const line=document.createElement('div');
+    line.style.cssText='font-size:13.5px;margin:4px 0';
+    line.innerHTML='📖 Day '+cd+' sections: <b>'+doneN+'/'+N+'</b> — you’ll continue at step '+(st.i+1)+'.';
+    today.querySelector('.modeBtns').insertAdjacentElement('beforebegin',line);
+  }
+  // recommended next action
+  const wk=weakDue().length,due=srsDueCount();
+  const rec=document.createElement('div');rec.className='dcard';
+  let act,go;
+  if(wk>0){act='📕 Clear your '+wk+' weak items first — 5 minutes, biggest payoff.';go='weak';}
+  else if(due>0){act='🃏 '+due+' flashcards are due — do them before new content.';go='review';}
+  else{act='▶ Continue with Day '+cd+' — nothing overdue. Perfect.';go='d'+cd;}
+  rec.innerHTML='<div class="dhead">Recommended next action</div><p style="margin:4px 0">'+act+'</p><button class="bigbtn sec" data-go="'+go+'">Do it →</button>';
+  body.insertBefore(rec,body.children[1]);
+  rec.querySelector('[data-go]').addEventListener('click',()=>show(go));
+};
+const __show7=show;
+show=function(id){
+  __show7(id);
+  const m=/^d(\d+)$/.exec(id);
+  if(m&&STEPPERS[+m[1]])STEPPERS[+m[1]]();
+};
+if(document.querySelector('section.day.active').id==='dash'){show('dash');}
 </script>
 </body>
 </html>
