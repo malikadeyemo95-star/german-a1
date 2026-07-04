@@ -6104,5 +6104,238 @@ rvNext=function(){
   rvMeta.textContent=rvDeck.length+' left · Day '+rvCur.day+' · '+rvCur.type+' · '+cardStatus(rvCur.key)+(st&&st.miss?' · missed '+st.miss+'×':'');
 };
 </script>
+<script>
+/* ================================================================
+   Phase 5c: Grammar Bank, Vocabulary Bank, badges, profile,
+   placement test, busy mode, print, writing checks, AI-tutor prompt.
+   ================================================================ */
+'use strict';
+// ---- busy mode (15 min) ----
+MODES.busy={name:'⏱ Busy',min:15,tasks:['5 flashcards (Review deck)','1 grammar rule (re-read one box)','3 typed drills','1 speaking sentence aloud','1 weak item']};
+const __rmt2=renderMissionTasks;
+renderMissionTasks=function(){
+  __rmt2();
+  if(X.settings.mode==='busy')document.querySelectorAll('.mission .mtasks').forEach(m=>{
+    const s=document.createElement('span');s.className='tbadge';s.textContent='⏱ light review — day stays incomplete';m.appendChild(s);
+  });
+};
+// ---- Grammar Bank ----
+const GBANK=[['Alphabet & pronunciation','d1'],['sein (to be)','d2'],['Personal pronouns · du vs Sie','d2'],['haben · numbers 0–100','d3'],
+['Regular verb endings','d4'],['W-questions','d4'],['Yes/no questions · werden','d5'],['Possessives (mein/dein/sein/ihr)','d6'],
+['der / die / das · ein / eine','d8'],['Plural forms','d9'],['Accusative case · kein','d10'],['nicht vs kein','d11'],
+['möchten · polite ordering','d12'],['Stem-changing verbs (isst, fährt)','d13'],['Time · dates · am/um/im','d15'],['Separable verbs','d16'],
+['Modals: können, müssen, wollen','d17'],['Modals: dürfen, sollen · man','d18'],['Imperative','d19'],['Prepositions (chunks)','d20'],
+['gern/lieber · verb-second word order','d22'],['es gibt + accusative','d23'],['war & hatte (simple past)','d26'],['Perfect with haben','d27'],
+['Perfect with sein','d28'],['Formal letters & forms','d29']];
+let gbankInit=false;
+function renderGbank(){
+  const body=document.getElementById('gbankBody');
+  body.innerHTML='<div class="dcard">'+GBANK.map(g=>'<div class="weakrow"><div>'+esc(g[0])+'<div class="cat">'+esc((document.getElementById(g[1])||{dataset:{}}).dataset.title||'')+'</div></div>'+
+    '<span><button class="ghost" data-les="'+g[1]+'">📖</button> <button class="ghost" data-drill>⌨️</button></span></div>').join('')+'</div>';
+  body.querySelectorAll('[data-les]').forEach(b=>b.addEventListener('click',()=>{
+    const id=b.dataset.les;show(id);
+    const det=[...document.querySelectorAll('#'+id+' details')].find(d=>d.querySelector('summary').textContent.includes('📖'));
+    if(det){const st=X.steps[+id.slice(1)];if(st){st.i=[...document.querySelectorAll('#'+id+' details.step')].indexOf(det);STEPPERS[+id.slice(1)]&&STEPPERS[+id.slice(1)]();}det.open=true;det.scrollIntoView({block:'start'});}
+  }));
+  body.querySelectorAll('[data-drill]').forEach(b=>b.addEventListener('click',()=>show('drills')));
+}
+// ---- Vocabulary Bank (auto-built from all vocab tables) ----
+let VOCAB=null,vbankInit=false;
+function vocabAll(){
+  if(VOCAB)return VOCAB;
+  VOCAB=[];
+  for(let d=1;d<=30;d++){
+    const sec=document.getElementById('d'+d);if(!sec)continue;
+    sec.querySelectorAll('details').forEach(det=>{
+      const sum=det.querySelector('summary');
+      if(!sum||!sum.textContent.includes('📚'))return;
+      det.querySelectorAll('td.de').forEach(td=>{
+        const en=td.nextElementSibling?td.nextElementSibling.textContent.trim():'';
+        const de=td.textContent.replace(/🔊/g,'').trim();
+        if(de&&en)VOCAB.push({de,en,day:d});
+      });
+    });
+  }
+  return VOCAB;
+}
+function wordsLearned(){const u=unlockedDay();return vocabAll().filter(v=>v.day<u).length;}
+function renderVbank(){
+  const body=document.getElementById('vbankBody');
+  body.innerHTML='<div class="dcard"><input type="text" id="vq" placeholder="Search German or English…" style="width:100%">'+
+    '<div class="tabs" id="vart"><button data-a="all" class="on">All</button><button data-a="der">der</button><button data-a="die">die</button><button data-a="das">das</button></div>'+
+    '<label style="font-size:13.5px"><input type="checkbox" id="vlearned" checked> Only words from lessons I’ve reached</label>'+
+    '<div class="rvMeta" id="vcount"></div><div id="vlist"></div></div>';
+  const vq=body.querySelector('#vq'),vl=body.querySelector('#vlist'),vc=body.querySelector('#vcount');
+  let art='all';
+  function paint(){
+    const q=vq.value.trim().toLowerCase(),u=unlockedDay(),learnedOnly=body.querySelector('#vlearned').checked;
+    let rows=vocabAll().filter(v=>
+      (!learnedOnly||v.day<=u)&&
+      (art==='all'||v.de.toLowerCase().startsWith(art+' '))&&
+      (!q||v.de.toLowerCase().includes(q)||v.en.toLowerCase().includes(q)));
+    vc.textContent=rows.length+' words'+(learnedOnly?' (unlocked)':' (whole course)');
+    vl.innerHTML=rows.slice(0,120).map(v=>'<div class="vrow"><div><span class="de" lang="de">'+esc(v.de)+'</span> — '+esc(v.en)+'<br><small>Day '+v.day+'</small></div><button class="say" data-t="'+esc(v.de)+'">🔊</button></div>').join('')+(rows.length>120?'<p class="rvMeta">…'+(rows.length-120)+' more — refine your search.</p>':'');
+    vl.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.t,0.9)}));
+  }
+  vq.addEventListener('input',paint);
+  body.querySelector('#vlearned').addEventListener('change',paint);
+  body.querySelectorAll('#vart button').forEach(b=>b.addEventListener('click',()=>{
+    art=b.dataset.a;body.querySelectorAll('#vart button').forEach(x=>x.classList.toggle('on',x===b));paint();
+  }));
+  paint();
+}
+// ---- placement test ----
+const PLACE=[
+{q:'„Guten Abend" means…',o:['Good evening','Good morning','Good night'],a:0},
+{q:'du ___ müde',o:['bist','bin','ist'],a:0},
+{q:'wir ___ Hunger',o:['haben','habt','hat'],a:0},
+{q:'24 =',o:['vierundzwanzig','zweiundvierzig','vierzehn'],a:0},
+{q:'„___ wohnst du?" — In Berlin.',o:['Wo','Woher','Wer'],a:0},
+{q:'___ Buch (the book)',o:['das','der','die'],a:0},
+{q:'Ich habe ___ Zeit. (no time)',o:['keine','nicht','kein'],a:0},
+{q:'„Ich möchte einen Termin machen" means…',o:['I’d like to make an appointment','I have an appointment','I’m cancelling an appointment'],a:0}];
+let placeInit=false;
+function renderPlace(){
+  const body=document.getElementById('placeBody');
+  body.innerHTML='<div class="dcard">'+PLACE.map((p,i)=>'<div class="qq">'+(i+1)+'. <span lang="de">'+esc(p.q)+'</span></div><div>'+
+    shuffleArr(p.o.map((o,oi)=>({o,oi}))).map(x=>'<button class="opt" data-p="'+i+'" data-o="'+x.oi+'">'+esc(x.o)+'</button>').join('')+'</div>').join('')+
+    '<button class="bigbtn" id="pGo">Show my result</button><div id="pRes"></div></div>';
+  const picks={};
+  body.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{
+    picks[b.dataset.p]=+b.dataset.o;
+    [...b.parentElement.children].forEach(x=>x.style.borderColor='');
+    b.style.borderColor='var(--acc)';
+  }));
+  body.querySelector('#pGo').addEventListener('click',()=>{
+    let sc=0;PLACE.forEach((p,i)=>{if(picks[i]===p.a)sc++;});
+    let rec,go;
+    if(sc>=7){rec='💪 Strong start! Skim Week 1 fast (1–2 days), then work properly from <b>Day 8</b>.';go='d8';}
+    else if(sc>=4){rec='🙂 You know some basics. Start at <b>Day 1</b> in Normal mode — Week 1 will move quickly.';go='d1';}
+    else{rec='🌱 Complete beginner — perfect, this course was built for you. Start at <b>Day 1</b>.';go='d1';}
+    document.getElementById('pRes').innerHTML='<div class="verdict">'+sc+'/8</div><p>'+rec+'</p><button class="bigbtn" onclick="show(\''+go+'\')">Start →</button>';
+  });
+}
+// ---- badges ----
+function badgeList(){
+  const nDone=Object.values(done).filter(Boolean).length;
+  return[
+['🇩🇪','First step',!!done[1]],['📅','Week 1',nDone>=7],['🔥','7-day streak',streak.count>=7],
+['🧠','100 reviews',(X.skills.vocab||0)>=100],['🎤','First recording',Object.keys(X.speakDone).length>0],
+['✍️','First writing',Object.keys(X.writeDone).length>0],['🧩','Grammar grinder',(X.skills.grammar||0)>=50],
+['🎓','Exam brave',(X.examBest||0)>0],['🏆','A1 ready',(X.examBest||0)>=60&&nDone>=30]];
+}
+// ---- profile & personalization ----
+function applyProfile(){
+  const P=X.profile;
+  if(!P||!P.name)return;
+  const rep=t=>t.replace(/Malik Adeyemo/g,P.name).replace(/\bMalik\b/g,P.name.split(' ')[0])
+    .replace(/\bNigeria\b/g,P.from||'Nigeria').replace(/\bBerlin\b/g,P.city||'Berlin');
+  SPEAK.forEach(s=>{s.m=rep(s.m)});
+  WRITE.forEach(w=>{w.m=rep(w.m)});
+  EXAM.w.m=rep(EXAM.w.m);
+  LIFE.forEach(mod=>mod[1].forEach(p=>{p[0]=rep(p[0]);p[1]=rep(p[1])}));
+}
+applyProfile();
+// ---- AI tutor prompt generator (honest: a live tutor needs a backend/API key) ----
+function tutorPrompt(){
+  const cd=currentDay(),sec=document.getElementById('d'+cd);
+  const cats={};X.weak.forEach(w=>{cats[w.cat]=(cats[w.cat]||0)+1;});
+  const P=X.profile||{};
+  return'You are my patient German A1 tutor. About me: my name is '+(P.name||'…')+', I am from '+(P.from||'…')+
+    ', I live in '+(P.city||'Germany')+(P.job?', I work as '+P.job:'')+'. I am on Day '+cd+' of a 30-day A1 course: "'+
+    (sec?sec.dataset.title:'')+'".\nMy weak areas: '+(Object.keys(cats).join(', ')||'none recorded yet')+
+    '.\nSome items I got wrong recently:\n'+X.weak.slice(0,10).map(w=>'- '+w.q+' → '+w.a).join('\n')+
+    '\n\nPlease: 1) quiz me on my weak areas ONE question at a time, 2) correct my German gently and explain each mistake in simple English, 3) keep all German at A1 level, 4) sometimes roleplay real situations (supermarket, Bürgeramt, gym, work). Start now with your first question.';
+}
+// ---- writing auto-checks (heuristics — appended after the model answer) ----
+const CHK_NOUNS=['termin','arbeit','frage','zeit','hunger','kurs','hausaufgaben','rechnung','wohnung','party','einladung','salat','krankschreibung','fieber','woche','grüße','uhr'];
+function autoCheck(t){
+  const finds=[];
+  CHK_NOUNS.forEach(n=>{const re=new RegExp('(^|[ ,.!?])'+n+'\\b');if(re.test(t))finds.push('Capitalize the noun: „'+n+'“ → „'+n[0].toUpperCase()+n.slice(1)+'“ (all German nouns are capitalized).');});
+  if(/\b(bin|bist|ist|sind|seid)\s+(hunger|durst)\b/i.test(t))finds.push('„Ich habe Hunger/Durst“ — hunger and thirst use HABEN, not sein.');
+  if(/\bwohne?\s+aus\b/i.test(t))finds.push('„wohnen in“ (live in) vs „kommen aus“ (come from) — you mixed them.');
+  [['fur','für'],['uber','über'],['konnen','können'],['mochte','möchte'],['grusse','Grüße']].forEach(u=>{
+    if(new RegExp('\\b'+u[0]+'\\b','i').test(t))finds.push('Umlaut missing: „'+u[0]+'“ → „'+u[1]+'“ (or type '+u[1].replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue')+').');});
+  if(/^(heute|morgen|gestern|am [a-zäöü]+|um \d+ ?uhr)\s+(ich|du|er|sie|es|wir|ihr)\s+/im.test(t))
+    finds.push('Verb-second! If the sentence starts with a time word, the VERB comes next: „Heute gehe ich…“, not „Heute ich gehe…“.');
+  return finds;
+}
+document.getElementById('writeBody').addEventListener('click',e=>{
+  const b=e.target.closest('[data-sub]');if(!b)return;
+  setTimeout(()=>{
+    const card=b.closest('.dcard'),after=card.querySelector('[data-after]');
+    if(!after||after.style.display==='none')return;
+    let box=card.querySelector('.autochk');
+    if(!box){box=document.createElement('div');box.className='autochk';after.appendChild(box);}
+    const finds=autoCheck(card.querySelector('textarea').value);
+    box.innerHTML='<div class="dhead">Automatic checks (mechanical only — compare with the model for grammar)</div>'+
+      (finds.length?finds.map(f=>'<div class="xpl">⚠️ '+esc(f)+'</div>').join(''):'<div class="fb ok">✔ No mechanical mistakes found (capitalization, umlauts, sein/haben, verb-second).</div>');
+  },50);
+});
+// ---- print current section ----
+function printSec(id){
+  show(id);
+  const wasSteps=document.body.classList.contains('steps');
+  document.body.classList.remove('steps');
+  document.querySelectorAll('#'+id+' details').forEach(d=>d.open=true);
+  setTimeout(()=>{window.print();if(wasSteps)document.body.classList.add('steps');},150);
+}
+navSecs.forEach(s=>{
+  if(!/^d\d+$/.test(s.id))return;
+  const pb=document.createElement('button');pb.className='star';pb.textContent='🖨';pb.title='Print / save as PDF';
+  pb.addEventListener('click',()=>printSec(s.id));
+  s.querySelector('h2').appendChild(pb);
+});
+// ---- dashboard additions: tools, badges, profile, AI tutor, words learned ----
+const __rd2=renderDash;
+renderDash=function(){
+  __rd2();
+  const body=document.getElementById('dashBody');
+  // extra tools into the practice grid
+  const grid=body.querySelector('.dgrid');
+  [['gbank','🧩','Grammar Bank'],['vbank','📚','Vocabulary Bank<br><small>'+wordsLearned()+' words learned</small>'],['place','🧭','Placement test']].forEach(t=>{
+    const b=document.createElement('button');b.innerHTML='<b>'+t[1]+'</b>'+t[2];
+    b.addEventListener('click',()=>show(t[0]));grid.appendChild(b);
+  });
+  // badges
+  const bc=document.createElement('div');bc.className='dcard';
+  bc.innerHTML='<div class="dhead">🏅 Achievements</div><div class="badges">'+
+    badgeList().map(b=>'<div class="badge'+(b[2]?' won':'')+'"><b>'+b[0]+'</b>'+esc(b[1])+'</div>').join('')+'</div>';
+  body.appendChild(bc);
+  // profile
+  const P=X.profile||{};
+  const pc=document.createElement('div');pc.className='dcard';
+  pc.innerHTML='<div class="dhead">👤 My profile (personalizes the examples)</div>'+
+    ['name','from','city','job','why'].map(k=>'<input type="text" data-pk="'+k+'" placeholder="'+{name:'Name',from:'I come from…',city:'I live in…',job:'My job',why:'Why German? (work / exam / daily life)'}[k]+'" value="'+esc(P[k]||'')+'" style="width:100%;margin:3px 0">').join('')+
+    '<button class="chkbtn" id="pSave">Save profile</button>';
+  body.appendChild(pc);
+  pc.querySelector('#pSave').addEventListener('click',()=>{
+    X.profile=X.profile||{};
+    pc.querySelectorAll('[data-pk]').forEach(i=>X.profile[i.dataset.pk]=i.value.trim());
+    saveX();applyProfile();
+    speakInit=false;lifeInit=false;writeInit=false; // re-render with your data next visit
+    pc.querySelector('#pSave').textContent='✔ Saved — models now use your data';
+  });
+  // AI tutor
+  const tc=document.createElement('div');tc.className='dcard';
+  tc.innerHTML='<div class="dhead">🤖 AI tutor</div><p style="font-size:14px">A live tutor needs an AI service, which a free offline site can’t include. Instead: this button builds a ready-made tutor prompt from your <b>current day + weak list + profile</b> — paste it into ChatGPT, Claude or any chatbot for a personalized session.</p>'+
+    '<button class="bigbtn sec" id="tCopy">📋 Copy my tutor prompt</button><textarea id="tOut" style="display:none;min-height:80px"></textarea>';
+  body.appendChild(tc);
+  tc.querySelector('#tCopy').addEventListener('click',()=>{
+    const p=tutorPrompt(),out=tc.querySelector('#tOut');
+    out.style.display='block';out.value=p;
+    if(navigator.clipboard)navigator.clipboard.writeText(p).then(()=>{tc.querySelector('#tCopy').textContent='✔ Copied — paste it into any AI chat';}).catch(()=>{});
+  });
+};
+// ---- lazy renders + land on dashboard with everything wired ----
+const __show8=show;
+show=function(id){
+  __show8(id);
+  if(id==='gbank'&&!gbankInit){gbankInit=true;renderGbank();}
+  if(id==='vbank'&&!vbankInit){vbankInit=true;renderVbank();}
+  if(id==='place'&&!placeInit){placeInit=true;renderPlace();}
+};
+if(document.querySelector('section.day.active').id==='dash')show('dash');
+</script>
 </body>
 </html>
