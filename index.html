@@ -6006,7 +6006,103 @@ show=function(id){
   const m=/^d(\d+)$/.exec(id);
   if(m&&STEPPERS[+m[1]])STEPPERS[+m[1]]();
 };
-if(document.querySelector('section.day.active').id==='dash'){show('dash');}
+/* ================================================================
+   Phase 5b: flashcard unlocking by lesson + deck categories +
+   card status. "Review only includes what you have already learned."
+   ================================================================ */
+const NOUN_DAY={Termin:18,Wohnung:23,Rechnung:12,Bahnhof:19,Schlüssel:8,Frage:5,Handy:8,Zug:19,Tasche:8,Brot:11,Apfel:11,Tüte:13,Ticket:19,Haltestelle:19,Arzt:25,Apotheke:25,Zimmer:23,Küche:23,Pause:16,Formular:29};
+const SENT_DAY=[18,17,13,13,16,26];
+cardPool=function(){
+  if(CARDS)return CARDS;
+  CARDS=[];
+  allCards().forEach(c=>CARDS.push({key:c.key,type:'en2de',q:c.q,a:c.a,day:+c.day.slice(1)||1}));
+  NOUNS.forEach(n=>{
+    const bare=n[0].split(' ')[1],dy=NOUN_DAY[bare]||10;
+    CARDS.push({key:'art|'+bare,type:'article',day:dy,q:'der, die oder das?\n___ '+bare,a:n[0]+' ('+n[2]+')'});
+    CARDS.push({key:'pl|'+bare,type:'plural',day:dy,q:'Plural of „'+n[0]+'“?',a:n[1]});
+    CARDS.push({key:'cl|'+bare,type:'cloze',day:dy,q:n[3].replace(bare,'_____')+'\n('+n[2]+')',a:n[3]});
+    CARDS.push({key:'au|'+bare,type:'audio',day:dy,q:'🔊 Listen — what did you hear?',a:n[0]+', '+n[1]+' — '+n[2],sp:n[0]+'. '+n[3]});
+  });
+  SENTCARDS.forEach((s,i)=>CARDS.push({key:'sx|'+s[1].slice(0,40),type:'sentence',day:SENT_DAY[i]||14,q:'Say it in German:\n“'+s[0]+'”',a:s[1]}));
+  return CARDS;
+};
+CARDS=null; // rebuild with day info
+if(X.settings.preview===undefined)X.settings.preview=false;
+function unlockedDay(){return currentDay();} // completed days + the day you're studying
+srsDueCount=function(){
+  const t=todayISO(),u=unlockedDay();
+  return cardPool().filter(c=>c.day<=u&&X.srs2[c.key]&&X.srs2[c.key].due<=t).length;
+};
+function cardStatus(k){
+  const st=X.srs2[k];
+  if(!st)return'new';
+  if(st.iv>=7&&!st.miss)return'mastered';
+  if(st.iv>=3)return'review';
+  return'learning';
+}
+// deck tabs
+let rvTab='due';
+const rvTabs=document.createElement('div');rvTabs.className='tabs';
+document.getElementById('rvMeta').insertAdjacentElement('beforebegin',rvTabs);
+const RVTABS=[['due','📆 Due + new'],['today','⭐ Today’s cards'],['weakc','📕 Hard cards'],['learned','✅ All learned'],['preview','🔮 Preview']];
+RVTABS.forEach(t=>{
+  const b=document.createElement('button');b.textContent=t[1];b.dataset.tab=t[0];
+  b.classList.toggle('on',t[0]===rvTab);
+  b.addEventListener('click',()=>{
+    if(t[0]==='preview'&&!X.settings.preview){
+      if(!confirm('Preview shows cards from lessons you haven’t reached yet. It is OFF by default so reviews stay fair. Turn it on?'))return;
+      X.settings.preview=true;saveX();
+    }
+    rvTab=t[0];
+    [...rvTabs.children].forEach(x=>x.classList.toggle('on',x===b));
+    rvStart();
+  });
+  rvTabs.appendChild(b);
+});
+document.querySelector('#review .goal').innerHTML='🎯 <b>Review only includes what you have already learned.</b> Grade honestly: Again = later today · Hard = tomorrow · Good = 3 days · Easy = 7 days. Preview is optional and off by default.';
+rvStart=function(){
+  const pool=cardPool(),t=todayISO(),u=unlockedDay();
+  const un=pool.filter(c=>c.day<=u);
+  let deck=[];
+  if(rvTab==='due'){
+    const due=un.filter(c=>X.srs2[c.key]&&X.srs2[c.key].due<=t);
+    const fresh=shuffleArr(un.filter(c=>!X.srs2[c.key])).slice(0,15);
+    shuffleArr(due);due.sort((a,b)=>((X.srs2[b.key]||{}).miss||0)-((X.srs2[a.key]||{}).miss||0));
+    deck=due.concat(fresh);
+    if(!deck.length)deck=shuffleArr(un.slice()).slice(0,20); // cram fallback
+  }
+  else if(rvTab==='today')deck=shuffleArr(un.filter(c=>c.day===u));
+  else if(rvTab==='weakc')deck=shuffleArr(un.filter(c=>(X.srs2[c.key]||{}).miss>0));
+  else if(rvTab==='learned')deck=shuffleArr(un.slice());
+  else if(rvTab==='preview')deck=shuffleArr(pool.filter(c=>c.day>u)).slice(0,25);
+  rvDeck=deck;
+  if(!rvDeck.length){
+    rvCur=null;rvBtns.style.display='none';
+    rvCard.innerHTML='<span>'+(rvTab==='weakc'?'💪 No hard cards — great sign!':rvTab==='today'?'⭐ No cards for Day '+u+' yet — finish more lessons!':'🎉 Nothing here right now.')+'</span>';
+    rvMeta.textContent='0 cards';
+    return;
+  }
+  rvNext();
+};
+// richer meta line with card status
+rvNext=function(){
+  rvBtns.style.display='none';rvFlipped=false;
+  if(!rvDeck.length){
+    rvCur=null;
+    rvCard.innerHTML='<span>🎉 Session complete! Your next reviews are scheduled.</span>';
+    rvMeta.textContent='0 cards left';
+    if(typeof renderMissionTasks==='function')renderMissionTasks();
+    return;
+  }
+  rvCur=rvDeck[0];
+  rvCard.textContent='';
+  const s=document.createElement('span');s.style.whiteSpace='pre-line';s.textContent=rvCur.q;
+  if(/[äöüß]|^(der|die|das|ich|du|wo|was)/i.test(rvCur.q))s.setAttribute('lang','de');
+  rvCard.appendChild(s);
+  if(rvCur.type==='audio'&&rvCur.sp)rvCard.appendChild(sayBtn(rvCur.sp));
+  const st=X.srs2[rvCur.key];
+  rvMeta.textContent=rvDeck.length+' left · Day '+rvCur.day+' · '+rvCur.type+' · '+cardStatus(rvCur.key)+(st&&st.miss?' · missed '+st.miss+'×':'');
+};
 </script>
 </body>
 </html>
