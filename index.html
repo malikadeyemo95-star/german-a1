@@ -207,6 +207,12 @@ details[data-skill="vocab"]>summary{color:var(--acc2)}
 details[data-skill="listen"]>summary{color:#c9a6ff}
 details[data-skill="speak"]>summary{color:var(--txt)}
 details[data-skill="write"]>summary{color:#ff9ec2}
+/* Phase 2 — dashboard disclosures */
+.moretools,.moreset{margin:12px 0}
+.moretools>summary,.moreset>summary{font-weight:650;font-size:.95em}
+.moreset>.dcard{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;margin:0;padding:14px 0}
+.moreset>.dcard:first-of-type{border-top:0}
+.moretools .dgrid{margin:8px 0 6px}
 /* ===== print ===== */
 @media print{
 header,.bnav,.sos,.sospanel,.sov,.star,.toolbar,.stepbar,.nav2,.bigbtn,.say,.shuf,.done,.fb,.mission .wild input,#nav{display:none!important}
@@ -5050,7 +5056,7 @@ function renderDash(){
   // today card
   h+='<div class="dcard"><div class="dhead">Today</div>'+
      '<h3>Day '+cd+' — '+esc(title)+'</h3>'+
-     '<p style="margin:4px 0;color:var(--acc2);font-size:14px">'+esc(goal.replace(/^🎯\s*/,''))+'</p>'+
+     '<p style="margin:4px 0;color:var(--mut);font-size:.9em">'+esc(goal.replace(/^🎯\s*/,''))+'</p>'+
      '<div class="modeBtns">'+Object.keys(MODES).map(m=>'<button data-mode="'+m+'" class="'+(m===X.settings.mode?'on':'')+'">'+MODES[m].name+'<br><small>'+MODES[m].min+' min</small></button>').join('')+'</div>'+
      '<div>'+mode.tasks.map(x=>'<span class="tbadge req">'+esc(x)+'</span>').join('')+'</div>'+
      '<button class="bigbtn" id="goToday">▶ Continue — Day '+cd+'</button>'+
@@ -6043,16 +6049,26 @@ renderDash=function(){
     line.innerHTML='📖 Day '+cd+' sections: <b>'+doneN+'/'+N+'</b> — you’ll continue at step '+(st.i+1)+'.';
     today.querySelector('.modeBtns').insertAdjacentElement('beforebegin',line);
   }
-  // recommended next action
+  // fold "recommended next action" INTO the hero's single smart button (no duplicate card)
+  today&&today.classList.add('hero');
   const wk=weakDue().length,due=srsDueCount();
-  const rec=document.createElement('div');rec.className='dcard';
   let act,go;
-  if(wk>0){act='📕 Clear your '+wk+' weak items first — 5 minutes, biggest payoff.';go='weak';}
-  else if(due>0){act='🃏 '+due+' flashcards are due — do them before new content.';go='review';}
-  else{act='▶ Continue with Day '+cd+' — nothing overdue. Perfect.';go='d'+cd;}
-  rec.innerHTML='<div class="dhead">Recommended next action</div><p style="margin:4px 0">'+act+'</p><button class="bigbtn sec" data-go="'+go+'">Do it →</button>';
-  body.insertBefore(rec,body.children[1]);
-  rec.querySelector('[data-go]').addEventListener('click',()=>show(go));
+  if(wk>0){act='Clear '+wk+' weak item'+(wk>1?'s':'')+' first →';go='weak';}
+  else if(due>0){act='Review '+due+' due card'+(due>1?'s':'')+' →';go='review';}
+  else{act='▶ Continue — Day '+cd;go='d'+cd;}
+  const heroBtn=body.querySelector('#goToday');
+  if(heroBtn){
+    const fresh=heroBtn.cloneNode(false); // drop old handler, keep id/classes
+    fresh.textContent=act;
+    fresh.addEventListener('click',()=>show(go));
+    heroBtn.replaceWith(fresh);
+    if(go!=='d'+cd){
+      const ghost=document.createElement('button');ghost.className='bigbtn sec';ghost.style.marginTop='8px';
+      ghost.textContent='Continue Day '+cd+' →';
+      ghost.addEventListener('click',()=>show('d'+cd));
+      fresh.insertAdjacentElement('afterend',ghost);
+    }
+  }
 };
 const __show7=show;
 show=function(id){
@@ -6393,6 +6409,31 @@ renderDash=function(){
     out.style.display='block';out.value=p;
     if(navigator.clipboard)navigator.clipboard.writeText(p).then(()=>{tc.querySelector('#tCopy').textContent='✔ Copied — paste it into any AI chat';}).catch(()=>{});
   });
+};
+// ---- Phase 2: collapse secondary cards + trim practice grid (post-render, keeps listeners) ----
+const __rd3=renderDash;
+renderDash=function(){
+  __rd3();
+  const body=document.getElementById('dashBody');
+  // trim practice grid to 8 visible + "More tools"
+  const grid=body.querySelector('.dgrid');
+  if(grid&&grid.children.length>8){
+    const more=document.createElement('details');more.className='moretools';
+    more.innerHTML='<summary>More tools</summary>';
+    const mg=document.createElement('div');mg.className='dgrid';more.appendChild(mg);
+    while(grid.children.length>8)mg.appendChild(grid.children[8]);
+    grid.closest('.dcard').appendChild(more);
+  }
+  // collapse secondary cards (bookmarks, settings, achievements, profile, tutor) behind one disclosure
+  const keys=['bookmark','settings','achievements','profile','tutor'];
+  const secondary=[...body.children].filter(c=>c.classList&&c.classList.contains('dcard')&&!c.classList.contains('hero'))
+    .filter(c=>{const h=c.querySelector('.dhead');return h&&keys.some(k=>h.textContent.toLowerCase().includes(k));});
+  if(secondary.length){
+    const wrap=document.createElement('details');wrap.className='moreset';
+    wrap.innerHTML='<summary>⚙️ Profile, achievements &amp; settings</summary>';
+    body.appendChild(wrap);
+    secondary.forEach(c=>wrap.appendChild(c));
+  }
 };
 // ---- lazy renders + land on dashboard with everything wired ----
 const __show8=show;
