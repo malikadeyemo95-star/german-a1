@@ -5267,12 +5267,14 @@ rvCard.addEventListener('click',()=>{
 rvBtns.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
   if(!rvCur)return;
   const g=b.dataset.g,k=rvCur.key;
+  const wasNew=!X.srs2[k]; // count how many brand-new cards we introduce today
   const st=X.srs2[k]||{due:todayISO(),iv:0,miss:0};
   if(g==='again'){st.miss++;st.iv=0;st.due=todayISO();}
   if(g==='hard'){st.iv=1;st.due=plusDays(1);}
   if(g==='good'){st.iv=3;st.due=plusDays(3);}
   if(g==='easy'){st.iv=7;st.due=plusDays(7);}
   X.srs2[k]=st;
+  if(wasNew){const t=todayISO();if(!X.srsDay||X.srsDay.date!==t)X.srsDay={date:t,newCount:0};X.srsDay.newCount++;}
   addSkill('vocab',1);markActivity();
   const c=rvDeck.shift();
   if(g==='again')rvDeck.splice(Math.min(5,rvDeck.length),0,c); // later this session too
@@ -5573,6 +5575,41 @@ function makeRecorder(){
   stop.addEventListener('click',()=>{if(mr&&mr.state!=='inactive')mr.stop();go.disabled=false;stop.disabled=true;go.textContent='● Record me';});
   return el;
 }
+// word-overlap score (order-insensitive) for a rough A1 speaking check
+function speechOverlap(said,target){
+  const A=normDE(said).split(' ').filter(Boolean),B=normDE(target).split(' ').filter(Boolean);
+  if(!B.length)return 0;let hit=0;const used=[...A];
+  B.forEach(w=>{const i=used.indexOf(w);if(i>=0){hit++;used.splice(i,1);}});
+  return hit/B.length;
+}
+// LIVE speech recognition: actually speak German and get it checked (Chrome/Android; limited on iOS)
+function makeSpeechCheck(target){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const el=document.createElement('div');el.className='rec';
+  if(!SR){el.innerHTML='<span style="color:var(--mut);font-size:12.5px">🎙 Auto speech-check works in Chrome (Android/desktop). On iPhone use the recorder above and compare with the model by ear.</span>';return el;}
+  el.innerHTML='<button type="button" class="go">🎙 Speak &amp; check</button><span class="scout" style="font-size:13.5px;flex:1"></span>';
+  const btn=el.querySelector('.go'),out=el.querySelector('.scout');
+  btn.addEventListener('click',()=>{
+    let rec;try{rec=new SR();}catch(e){out.textContent=' Mic unavailable here.';return;}
+    rec.lang='de-DE';rec.interimResults=false;rec.maxAlternatives=3;
+    btn.textContent='🎙 Listening…';btn.disabled=true;out.textContent=' Speak now…';
+    rec.onresult=e=>{
+      const alts=[...e.results[0]].map(r=>r.transcript);
+      const best=alts.map(a=>({a,s:speechOverlap(a,target)})).sort((x,y)=>y.s-x.s)[0];
+      const pct=Math.round(best.s*100);
+      out.innerHTML=' Heard: “<span lang="de">'+esc(best.a)+'</span>” — '+
+        (pct>=80?'<span style="color:var(--acc2)">✔ '+pct+'% match — nice!</span>':
+         pct>=50?'<span style="color:var(--acc)">≈ '+pct+'% — close, try once more</span>':
+         '<span style="color:var(--red)">✘ '+pct+'% — play the model, then retry</span>');
+      if(pct>=80){addSkill('pron',2);addSkill('speaking',1);markActivity();}
+      else if(pct<50)weakAdd('Speaking: “'+target.slice(0,50)+'”',target,'Speaking');
+    };
+    rec.onerror=ev=>{out.innerHTML=ev.error==='not-allowed'?' <span style="color:var(--red)">Microphone blocked — allow mic access for this site in your browser settings.</span>':' Error: '+esc(ev.error);};
+    rec.onend=()=>{btn.textContent='🎙 Speak & check';btn.disabled=false;};
+    try{rec.start();}catch(e){out.textContent=' Already listening…';}
+  });
+  return el;
+}
 // ---- speaking studio ----
 const SPEAK=[
 {id:'intro',t:'Introduce yourself',p:'Say who you are, where you’re from, where you live, and what you speak.',m:'Hallo, ich heiße Malik. Ich komme aus Nigeria. Ich wohne in Berlin. Ich spreche Englisch und ein bisschen Deutsch.'},
@@ -5586,7 +5623,9 @@ const SPKCHECKS=['I spoke without reading','My pronunciation was clear','I used 
 let speakInit=false;
 function renderSpeak(){
   const body=document.getElementById('speakBody');
+  const SRok=!!(window.SpeechRecognition||window.webkitSpeechRecognition);
   body.innerHTML=ttsWarn()+
+    '<div class="tip">🎙 <b>Two ways to speak:</b> <b>Speak &amp; check</b> listens and scores your German live (Chrome/Android — tap <b>Allow</b> when the mic prompt appears). <b>Record me</b> saves audio so you can play it back. On iPhone, the recorder works best in Safari.'+(SRok?'':' <br>⚠️ Your browser can’t auto-check speech — use the recorder and compare by ear.')+'</div>'+
     '<div class="tip">👄 Watch these sounds: <b lang="de">ich</b> (soft “ch”), <b lang="de">Deutsch</b> (“DOYtch”), <b lang="de">wohne</b> (W = English V!), <b lang="de">Berlin</b> (“bare-LEEN”), and German <b>J</b> = English Y (<span lang="de">ja</span> = “yah”).</div>'+
     SPEAK.map((S,i)=>{
       const st=X.speakDone[S.id]||{checks:[]};
@@ -5599,6 +5638,7 @@ function renderSpeak(){
     }).join('');
   SPEAK.forEach((S,i)=>{
     const card=body.querySelector('[data-s="'+i+'"]');
+    card.querySelector('[data-rec]').appendChild(makeSpeechCheck(S.m));
     card.querySelector('[data-rec]').appendChild(makeRecorder());
     const mdl=card.querySelector('[data-model]');
     card.querySelector('[data-mdl]').addEventListener('click',e=>{
@@ -5640,7 +5680,7 @@ function renderPron(){
     '<div data-rec></div><button class="ghost" data-done="'+i+'">✓ I drilled this sound</button></div>').join('');
   body.querySelectorAll('[data-w]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.w,0.85)}));
   body.querySelectorAll('[data-slow]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();speakR(b.dataset.slow,0.6)}));
-  body.querySelectorAll('[data-rec]').forEach(d=>d.appendChild(makeRecorder()));
+  body.querySelectorAll('[data-rec]').forEach((d,i)=>{d.appendChild(makeSpeechCheck(PRON[i].w.join(' ')));d.appendChild(makeRecorder());});
   body.querySelectorAll('[data-done]').forEach(b=>b.addEventListener('click',()=>{addSkill('pron',2);b.textContent='✓ Drilled — nice!';}));
 }
 // ---- everyday German (life in Germany) ----
@@ -6060,29 +6100,42 @@ RVTABS.forEach(t=>{
   rvTabs.appendChild(b);
 });
 document.querySelector('#review .goal').innerHTML='🎯 <b>Review only includes what you have already learned.</b> Grade honestly: Again = later today · Hard = tomorrow · Good = 3 days · Easy = 7 days. Preview is optional and off by default.';
+const NEW_PER_DAY=15; // daily cap so the "Due + new" deck actually finishes
 rvStart=function(){
   const pool=cardPool(),t=todayISO(),u=unlockedDay();
   const un=pool.filter(c=>c.day<=u);
+  if(!X.srsDay||X.srsDay.date!==t)X.srsDay={date:t,newCount:0};
   let deck=[];
   if(rvTab==='due'){
+    const allowance=Math.max(0,NEW_PER_DAY-X.srsDay.newCount); // stop pouring in new cards once today's limit is hit
     const due=un.filter(c=>X.srs2[c.key]&&X.srs2[c.key].due<=t);
-    const fresh=shuffleArr(un.filter(c=>!X.srs2[c.key])).slice(0,15);
+    const fresh=shuffleArr(un.filter(c=>!X.srs2[c.key])).slice(0,allowance);
     shuffleArr(due);due.sort((a,b)=>((X.srs2[b.key]||{}).miss||0)-((X.srs2[a.key]||{}).miss||0));
-    deck=due.concat(fresh);
-    if(!deck.length)deck=shuffleArr(un.slice()).slice(0,20); // cram fallback
+    deck=due.concat(fresh); // empty = genuinely done for today (no endless refill)
   }
   else if(rvTab==='today')deck=shuffleArr(un.filter(c=>c.day===u));
   else if(rvTab==='weakc')deck=shuffleArr(un.filter(c=>(X.srs2[c.key]||{}).miss>0));
   else if(rvTab==='learned')deck=shuffleArr(un.slice());
   else if(rvTab==='preview')deck=shuffleArr(pool.filter(c=>c.day>u)).slice(0,25);
   rvDeck=deck;
+  const learned=un.filter(c=>X.srs2[c.key]).length;
   if(!rvDeck.length){
     rvCur=null;rvBtns.style.display='none';
-    rvCard.innerHTML='<span>'+(rvTab==='weakc'?'💪 No hard cards — great sign!':rvTab==='today'?'⭐ No cards for Day '+u+' yet — finish more lessons!':'🎉 Nothing here right now.')+'</span>';
-    rvMeta.textContent='0 cards';
+    let msg;
+    if(rvTab==='due')msg='✅ <b>Done for today!</b> You’ve cleared every due review and today’s '+NEW_PER_DAY+' new cards.<br><br>Come back tomorrow for the next batch — or tap <b>✅ All learned</b> above to keep drilling (this won’t change your schedule).';
+    else if(rvTab==='weakc')msg='💪 No hard cards right now — great sign!';
+    else if(rvTab==='today')msg='⭐ No cards for Day '+u+' yet — finish more of today’s lesson to unlock them.';
+    else msg='🎉 Nothing here right now.';
+    rvCard.innerHTML='<span>'+msg+'</span>';
+    rvMeta.textContent='📊 Learned '+learned+' / '+un.length+' unlocked cards';
     return;
   }
   rvNext();
+  // on entry, show the finish line for today alongside the current card
+  if(rvTab==='due'){
+    const dueN=un.filter(c=>X.srs2[c.key]&&X.srs2[c.key].due<=t).length;
+    rvMeta.textContent=rvDeck.length+' this session · '+dueN+' due + '+Math.max(0,NEW_PER_DAY-X.srsDay.newCount)+' new left · learned '+learned+'/'+un.length;
+  }
 };
 // richer meta line with card status
 rvNext=function(){
