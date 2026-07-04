@@ -4738,8 +4738,9 @@ document.querySelectorAll('section.day details').forEach(d=>{
   const qs=[...qol.children],ks=[...kol.children];
   if(!qs.length||qs.length!==ks.length)return;
   const answers=ks.map(li=>cleanAns(li.textContent));
+  const full=ks.map(li=>li.textContent.trim());
   answers.forEach(a=>{if(a.length<60)quizPool.push(a)});
-  quizzes.push({day:d.closest('section.day').id.slice(1),sum,qol,qs,answers});
+  quizzes.push({day:d.closest('section.day').id.slice(1),sum,qol,qs,answers,full});
 });
 function bestLabel(sum,best,n){
   let sp=sum.querySelector('.best');
@@ -4750,6 +4751,44 @@ function bestLabel(sum,best,n){
 function normDE(s){return String(s).toLowerCase().trim()
   .replace(/[.,!?;:"'’‘„“”()]/g,'').replace(/\s+/g,' ')
   .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss');}
+// confusion groups: distractors are realistic A1 mistakes, never random noise
+const CONF=[
+[['Guten Morgen','Guten Tag','Guten Abend','Gute Nacht','Auf Wiedersehen','Tschüss','Hallo'],'Greetings differ by time: Morgen (morning), Tag (daytime), Abend (evening), Nacht (only before sleeping); Auf Wiedersehen/Tschüss say goodbye.'],
+[['bin','bist','ist','sind','seid'],'sein: ich bin, du bist, er/sie ist, wir sind, ihr seid, sie/Sie sind.'],
+[['war','warst','waren','wart'],'Past of sein: ich/er war, du warst, wir/sie waren, ihr wart.'],
+[['habe','hast','hat','haben','habt'],'haben: ich habe, du hast, er/sie hat, wir/sie haben, ihr habt.'],
+[['hatte','hattest','hatten','hattet'],'Past of haben: ich/er hatte, du hattest, wir/sie hatten, ihr hattet.'],
+[['werde','wirst','wird','werden','werdet'],'werden: ich werde, du wirst, er wird, wir/sie werden, ihr werdet.'],
+[['der','die','das','den','dem'],'der = masculine, die = feminine/plural, das = neuter; den = masculine ACCUSATIVE (Ich kaufe den Tisch).'],
+[['ein','eine','einen','einem','einer'],'ein (m/n), eine (f) — accusative masculine becomes einen.'],
+[['kein','keine','keinen'],'kein mirrors ein: kein (m/n), keine (f + plural), keinen (m accusative).'],
+[['nicht','kein','keine','keinen'],'kein negates nouns with ein/no article; nicht negates verbs, adjectives and der/die/das-nouns.'],
+[['mein','meine','dein','deine','sein','seine','ihr','ihre','ihrem','unser','unsere','euer','eure','Ihr','Ihre'],'The OWNER picks the word (sein = his, ihr = her); the NOUN’s gender picks the ending (-e for feminine/plural).'],
+[['am','um','im'],'um + clock time (um 8 Uhr), am + day/date (am Montag), im + month/season (im Mai).'],
+[['nach','zu','zum','zur','in','ins','bei','aus','von','mit','für','ohne','seit'],'nach + cities/countries/Hause · zum/zur + places in town · ins Kino · bei = at someone’s/at work · aus = origin · mit = with/by.'],
+[['kann','kannst','können','muss','musst','müssen','will','willst','wollen','darf','darfst','dürfen','soll','sollst','sollen','möchte','möchtest','möchten'],'Modals: kann=can, muss=must, will=WANTS (not future!), darf=may, soll=should, möchte=would like. ich/er forms are identical.'],
+[['heute','morgen','gestern','jetzt','später'],'heute=today, morgen=tomorrow, gestern=yesterday, jetzt=now.'],
+[['Wer','Was','Wo','Woher','Wohin','Wie','Wann','Warum'],'Wer=who, Was=what, Wo=where, Woher=where FROM, Wohin=where TO, Wie=how, Wann=when, Warum=why.'],
+[['auf','an','mit','fern','ab','ein'],'Separable prefixes fly to the end: stehe … auf, fängt … an, kaufe … ein, sehe … fern.'],
+[['gemacht','gegessen','getrunken','gesehen','gelesen','geschrieben','gesprochen','genommen','gefahren','gegangen','gekommen','eingekauft','bestellt','gearbeitet','gelernt','gekauft','geschlafen','getroffen','gefunden','studiert'],'Participles: regular ge…t (gemacht); strong ge…en (gegessen); -ieren and be-/ver- verbs take NO ge-.'],
+[['die Bücher','die Stühle','die Tische','die Frauen','die Männer','die Kinder','die Äpfel','die Lampen','die Autos','die Handys','die Brüder','die Mütter','Bücher','Stühle','Frauen','Kinder','Äpfel'],'Plurals: feminine mostly -(e)n; masculine often -e (+umlaut); short neuter -er (+umlaut); foreign words -s.'],
+[['halb drei','halb acht','halb sechs','Viertel nach zwei','Viertel vor drei','Viertel nach neun','Viertel vor fünf','fünf nach zwei','fünf vor drei','fünf vor neun'],'⚠️ halb X = 30 min BEFORE X: halb drei = 2:30! Viertel nach = :15, Viertel vor = :45.'],
+[['wohnst','wohnt','wohne','wohnen','lernst','lernt','lerne','arbeitest','arbeitet','sprichst','spricht','isst','esst','fährst','fährt','liest','nimmst','nimmt','schläfst','schläft','findest'],'Endings: ich -e, du -st, er/sie/es -t, wir/sie -en, ihr -t. Stem changes (e→i, a→ä) only hit du and er/sie/es.'],
+[['Woher kommst du?','Wo wohnst du?','Wie heißt du?','Wie alt bist du?','Wie heißen Sie?','Hast du Geschwister?','Wie geht’s?'],'Match the question to the answer: Woher→origin, Wo→place, Wie heißt→name, Wie alt→age.']];
+function confusables(correct,sameQuiz){
+  const nc=normDE(correct);
+  if(/^\d+([.,]\d+)?$/.test(correct.trim())){ // digit answers: swapped/adjacent numbers
+    const d=correct.trim(),outs=new Set();
+    if(d.length>=2)outs.add(d.split('').reverse().join(''));
+    outs.add(String(+d+10));outs.add(String(Math.max(1,+d-10)));outs.delete(d);
+    return{opts:[...outs].slice(0,3),x:'Careful: German says units first — vierundzwanzig = 24, not 42.'};
+  }
+  for(const[g,x]of CONF){
+    if(g.some(w=>normDE(w)===nc))
+      return{opts:shuffleArr(g.filter(w=>normDE(w)!==nc)).slice(0,3),x};
+  }
+  return{opts:shuffleArr([...new Set(sameQuiz.filter(a=>normDE(a)!==nc))]).slice(0,3),x:null};
+}
 quizzes.forEach(qz=>{
   const n=qz.qs.length;
   const wrap=document.createElement('div');wrap.className='quizI';
@@ -4770,16 +4809,18 @@ quizzes.forEach(qz=>{
     const correct=qz.answers[i];
     const qq=document.createElement('div');qq.className='qq';qq.innerHTML=(i+1)+'. '+li.innerHTML;
     wrap.appendChild(qq);
-    // distractors: same quiz first, global pool as backup
-    let opts=[correct];
-    shuffleArr(qz.answers.filter(a=>a!==correct)).slice(0,2).forEach(a=>opts.push(a));
-    let guard=0;
-    while(opts.length<3&&quizPool.length&&guard++<25){
-      const c=quizPool[Math.floor(Math.random()*quizPool.length)];
-      if(!opts.includes(c))opts.push(c);
-    }
+    // distractors: realistic confusion sets, same-quiz answers as fallback — never random noise
+    const cf=confusables(correct,qz.answers);
+    let opts=[correct,...cf.opts];
     opts=[...new Set(opts)];shuffleArr(opts);
     const box=document.createElement('div');
+    const xp=document.createElement('div');xp.className='xpl';xp.style.display='none';
+    function explain(wasWrong){
+      if(wasWrong){xp.style.display='block';
+        xp.innerHTML='✘ Correct: <b lang="de">'+esc(correct)+'</b>. '+(cf.x?esc(cf.x)+' ':'')+
+          (qz.full[i]&&normDE(qz.full[i])!==normDE(correct)?'<br><i>Key: '+esc(qz.full[i])+'</i>':'');}
+      else if(cf.x){xp.style.display='block';xp.innerHTML='✔ '+esc(cf.x);}
+    }
     let settled=false;
     opts.forEach(o=>{
       const b=document.createElement('button');b.className='opt';b.type='button';b.textContent=o;
@@ -4788,6 +4829,7 @@ quizzes.forEach(qz=>{
         settled=true;
         if(o===correct){b.classList.add('ok');}
         else{b.classList.add('bad');[...box.children].forEach(x=>{if(x.textContent===correct)x.classList.add('ok')});}
+        explain(o!==correct);
         finishQ(o===correct);
       });
       box.appendChild(b);
@@ -4801,10 +4843,10 @@ quizzes.forEach(qz=>{
       const checkTyped=()=>{
         if(!inp.value.trim())return;
         const right=normDE(inp.value)===normDE(correct);
-        if(right){fb.className='fb ok';fb.innerHTML='✔ Richtig! — <b>'+correct+'</b>';}
+        if(right){fb.className='fb ok';fb.innerHTML='✔ Richtig! — <b>'+correct+'</b>';if(!settled)explain(false);}
         else{
           fb.className='fb bad';fb.innerHTML='✘ Correct: <b>'+correct+'</b>. Type it once more to lock it in — it’s saved to your 📕 Weak List.';
-          if(!settled&&typeof weakAdd==='function')weakAdd(qq.textContent.slice(0,80),correct,'Day '+qz.day+' quiz');
+          if(!settled){explain(true);if(typeof weakAdd==='function')weakAdd(qq.textContent.slice(0,80),correct,'Day '+qz.day+' quiz');}
         }
         if(!settled){settled=true;finishQ(right);if(right&&typeof addSkill==='function')addSkill('grammar',1);}
       };
@@ -4814,6 +4856,7 @@ quizzes.forEach(qz=>{
       wrap.appendChild(trow);
     }
     wrap.appendChild(box);
+    wrap.appendChild(xp);
   });
   wrap.appendChild(scoreEl);
   qz.qol.style.display='none'; // original questions hidden; answer-key box stays as fallback
