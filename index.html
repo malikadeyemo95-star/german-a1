@@ -15,12 +15,13 @@
 :root{--bg:#0f1220;--card:#171b2e;--raise:#222741;--inset:#10132a;--txt:#e8eaf6;--mut:#a3aacb;--acc:#ffd166;--focus:rgba(255,209,102,.28);--acc2:#6ee7b7;--red:#ff6b6b;--de:#bfe3d0;--line:#262b4a;--shadow:0 8px 24px rgba(0,0,0,.35)}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);font-size:16px;line-height:1.55}
-header{position:sticky;top:0;background:rgba(15,18,32,.97);border-bottom:1px solid var(--line);z-index:10;padding:10px 14px 6px}
-h1{font-size:17px;margin:0 0 8px}
-#nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
-#nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:20px;padding:6px 12px;font-size:14px}
-#nav button.on{background:var(--acc);color:#111;font-weight:700;border-color:var(--acc)}
-#nav button.dn{border-color:var(--acc2);color:var(--acc2)}
+header{position:sticky;top:0;background:rgba(15,18,32,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10;padding:calc(8px + env(safe-area-inset-top)) 14px 4px}
+h1{font-size:1.0625em;font-weight:700;margin:0 0 8px}
+#nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;padding:9px 14px;font-size:.85em;min-height:40px;transition:background .14s,border-color .14s,color .14s}
+#nav button.on{background:var(--acc);color:#14161f;font-weight:700;border-color:var(--acc)}
+#nav button.dn{border-color:var(--acc2);color:var(--txt)}
 main{max-width:760px;margin:0 auto;padding:14px 14px 40px}
 section.day{display:none}
 section.day.active{display:block}
@@ -65,8 +66,8 @@ body.no-tts .say{display:none}
 .shuf{background:var(--card);border:1px solid var(--acc2);color:var(--acc2);border-radius:8px;padding:6px 12px;font-size:14px;margin:6px 0;cursor:pointer}
 /* --- header progress + streak --- */
 #pwrap{display:flex;align-items:center;gap:8px;margin:0 0 7px;font-size:12.5px;color:var(--mut)}
-#pbar{flex:1;height:5px;background:var(--card);border-radius:3px;overflow:hidden}
-#pfill{height:100%;width:0;background:var(--acc2);border-radius:3px;transition:width .3s}
+#pbar{flex:1;height:4px;background:var(--inset);border-radius:3px;overflow:hidden}
+#pfill{height:100%;width:0;background:var(--acc);border-radius:3px;transition:width .3s}
 #streak{color:var(--acc);font-weight:700;float:right}
 /* --- interactive quizzes --- */
 .quizI .qq{margin:12px 0 6px;font-weight:600}
@@ -85,11 +86,11 @@ body.no-tts .say{display:none}
 .rvBtns .got{border-color:var(--acc2);color:var(--acc2)}
 .rvMeta{color:var(--mut);font-size:13px;margin:6px 0}
 /* ===== trainer layer ===== */
-body{padding-bottom:70px}
-.bnav{position:fixed;bottom:0;left:0;right:0;background:rgba(15,18,32,.97);border-top:1px solid var(--line);display:flex;z-index:20}
-.bnav button{flex:1;background:none;border:none;color:var(--mut);font-size:11px;padding:8px 2px 10px;cursor:pointer;line-height:1.3}
-.bnav button span{display:block;font-size:20px}
-.bnav button.on{color:var(--acc)}
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+.bnav{position:fixed;bottom:0;left:0;right:0;background:rgba(15,18,32,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:var(--shadow);display:flex;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
+.bnav button{flex:1;background:none;border:none;color:var(--mut);font-size:.7em;font-weight:600;padding:8px 2px 10px;cursor:pointer;line-height:1.3;transition:color .14s}
+.bnav button span{display:block;font-size:22px}
+.bnav button.on{color:var(--acc);font-weight:700}
 .dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
 .dcard h3{margin:0 0 8px}
 .dhead{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;margin:0 0 6px}
@@ -153,7 +154,7 @@ body.challenge .tr.peek{filter:none}
 .tri button{flex:1;background:var(--raise);border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:7px 4px;font-size:13px;cursor:pointer}
 .tri button.on{border-color:var(--acc);color:var(--acc)}
 body.light{--bg:#f3f4fa;--card:#ffffff;--raise:#e9ecf6;--inset:#eef0f8;--txt:#191d33;--mut:#5d6485;--acc:#9a6a00;--focus:rgba(154,106,0,.22);--acc2:#0a7d55;--red:#c22945;--de:#1d6e4f;--line:#dde1f0;--shadow:0 8px 24px rgba(25,29,51,.12)}
-body.light header,body.light .bnav{background:rgba(255,255,255,.97)}
+body.light header,body.light .bnav{background:rgba(255,255,255,.9)}
 body.light .fc,body.light th,body.light .quizI .opt,body.light #rvCard,body.light .modeBtns button,body.light .dgrid button,body.light .bchip,body.light .toolbar button,body.light .rec button,body.light .tri button,body.light .tbadge,body.light .skillrow .bar,body.light .say{background:var(--raise);color:var(--txt)}
 body.light .tip{background:#e2f3ec;color:#14432f}
 body.light .warn{background:#fbe6ea;color:#6b1f30}
@@ -213,6 +214,12 @@ details[data-skill="write"]>summary{color:#ff9ec2}
 .moreset>.dcard{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;margin:0;padding:14px 0}
 .moreset>.dcard:first-of-type{border-top:0}
 .moretools .dgrid{margin:8px 0 6px}
+/* Phase 3 — motion */
+.bigbtn,.chkbtn,.opt,.modeBtns button,.dgrid button,.stepnav button{transition:transform .08s ease,filter .14s ease,background .14s ease,border-color .14s ease,color .14s ease}
+.bigbtn:active,.chkbtn:active,.opt:active,.dgrid button:active,.stepnav button:active{transform:scale(.98)}
+body.steps .day details.step.cur{animation:stepin .14s ease-out}
+@keyframes stepin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important;animation-iteration-count:1!important}}
 /* ===== print ===== */
 @media print{
 header,.bnav,.sos,.sospanel,.sov,.star,.toolbar,.stepbar,.nav2,.bigbtn,.say,.shuf,.done,.fb,.mission .wild input,#nav{display:none!important}
