@@ -5093,7 +5093,7 @@ document.addEventListener('click',e=>{
   }
 });
 // ---- bottom navigation ----
-const BNAV=[['dash','🏠','Home'],['today','📅','Today'],['review','🃏','Cards'],['weak','📕','Weak'],['exam','🎓','Exam']];
+const BNAV=[['dash','🏠','Home'],['today','📅','Today'],['review','🃏','Cards'],['speak','🎤','Speak'],['weak','📕','Weak'],['exam','🎓','Exam']];
 const bnav=document.getElementById('bnav');
 BNAV.forEach(t=>{
   const b=document.createElement('button');b.innerHTML='<span>'+t[1]+'</span>'+t[2];b.dataset.bt=t[0];
@@ -6389,6 +6389,27 @@ show=function(id){
   if(id==='place'&&!placeInit){placeInit=true;renderPlace();}
 };
 if(document.querySelector('section.day.active').id==='dash')show('dash');
+</script>
+<script>
+/* ================================================================
+   Put a recorder right inside each day's Speaking-practice section,
+   so "record me" is where the learner actually looks for it.
+   ================================================================ */
+'use strict';
+document.querySelectorAll('section.day details').forEach(det=>{
+  const sum=det.querySelector(':scope>summary');
+  if(!sum||!/Speaking practice/.test(sum.textContent))return;
+  const box=document.createElement('div');
+  box.className='dcard';box.style.margin='10px 0 2px';
+  box.innerHTML='<div class="dhead">🎙 Record yourself doing this out loud</div>'+
+    '<p style="font-size:13px;color:var(--mut);margin:2px 0 8px">Tap <b>Allow</b> when your phone asks for the microphone. Then play it back and compare with the audio 🔊 buttons above.</p>';
+  det.appendChild(box);
+  box.appendChild(makeRecorder());
+  const b=document.createElement('button');b.className='ghost';b.style.marginTop='8px';
+  b.textContent='🎤 Speaking Studio — guided tasks with model answers & live scoring →';
+  b.addEventListener('click',()=>show('speak'));
+  box.appendChild(b);
+});
 </script>
 </body>
 </html>
