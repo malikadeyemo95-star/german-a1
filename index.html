@@ -187,6 +187,21 @@ body.steps .day details.step.cur{display:block}
 .vrow small{color:var(--mut)}
 /* ===== quiz explanations ===== */
 .xpl{background:#20304a;border-left:3px solid var(--acc);border-radius:6px;padding:7px 9px;margin:6px 0;font-size:13.5px}
+/* ===== lesson-integrated speaking coach ===== */
+.scoach{margin:12px 0;border:1px solid #ffb47e;border-radius:14px;background:linear-gradient(145deg,var(--card),#211d31);padding:14px}
+.scoach h3{margin:0 0 5px}.scoach .sgoal{color:var(--mut);font-size:13.5px;margin:0 0 12px}
+.stasks{display:flex;gap:6px;overflow-x:auto;margin:8px 0 12px}
+.stasks button{flex:0 0 auto;border:1px solid var(--line);background:#232849;color:var(--txt);border-radius:16px;padding:7px 11px;cursor:pointer}
+.stasks button.on{border-color:#ffb47e;color:#ffb47e}
+.sprompt{font-size:16px;font-weight:700;margin:8px 0}.smodel{background:#20304a;border-radius:9px;padding:10px;margin:7px 0}
+.slive{min-height:48px;border:1px dashed var(--line);border-radius:9px;padding:10px;margin:9px 0;color:var(--mut)}
+.slive.heard{color:var(--txt);border-style:solid}.sresults{display:grid;gap:8px;margin-top:10px}
+.sresult{background:#171a2c;border-radius:9px;padding:10px;font-size:13.5px}
+.sscores{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.sscore{text-align:center;background:#232849;border-radius:9px;padding:8px 3px;font-size:12px}
+.sscore b{display:block;font-size:19px;color:var(--acc)}.scheck{display:flex;gap:7px;align-items:center;padding:3px 0}
+.scheck.yes{color:var(--acc2)}.scheck.no{color:var(--red)}.sactions{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.sactions button{margin:0}.sstatus{font-size:13px;color:var(--mut);margin-top:8px}
+body.light .scoach{background:linear-gradient(145deg,#fff,#fff4ec)}body.light .sresult{background:#f3f5fb}
 /* ===== skill color accents ===== */
 details[data-skill="grammar"]>summary{color:#7eb8ff}
 details[data-skill="vocab"]>summary{color:var(--acc2)}
@@ -4480,9 +4495,9 @@ th{background:#eee;color:#000}
 <div id="listenBody"></div>
 </section>
 
-<section id="speak" class="day" data-nonav="1" data-title="Speaking Studio — Record Yourself">
-<h2>🎤 Speaking Studio</h2>
-<p class="goal">🎯 Say it out loud, record yourself, compare with the model. Your mouth needs training, not just your eyes.</p>
+<section id="speak" class="day" data-nonav="1" data-title="Speaking Review — Lesson Mistakes">
+<h2>🎤 Speaking Review</h2>
+<p class="goal">🎯 Secondary review for speaking tasks from lessons you have already reached. Your main speaking practice now lives inside each daily lesson.</p>
 <div id="speakBody"></div>
 </section>
 
@@ -5093,7 +5108,7 @@ document.addEventListener('click',e=>{
   }
 });
 // ---- bottom navigation ----
-const BNAV=[['dash','🏠','Home'],['today','📅','Today'],['review','🃏','Cards'],['speak','🎤','Speak'],['weak','📕','Weak'],['exam','🎓','Exam']];
+const BNAV=[['dash','🏠','Home'],['today','📅','Today'],['review','🃏','Cards'],['speak','🎤','Review'],['weak','📕','Weak'],['exam','🎓','Exam']];
 const bnav=document.getElementById('bnav');
 BNAV.forEach(t=>{
   const b=document.createElement('button');b.innerHTML='<span>'+t[1]+'</span>'+t[2];b.dataset.bt=t[0];
@@ -6392,24 +6407,170 @@ if(document.querySelector('section.day.active').id==='dash')show('dash');
 </script>
 <script>
 /* ================================================================
-   Put a recorder right inside each day's Speaking-practice section,
-   so "record me" is where the learner actually looks for it.
+   LESSON-INTEGRATED SPEAKING COACH
+   Every task is scoped to its own day. The separate page is review only.
    ================================================================ */
 'use strict';
+X.speakingLessons=X.speakingLessons||{};
+const SD={
+1:{g:'Use greetings and give your name.',p:'Say hello and introduce yourself.',m:'Hallo, ich heiße Malik.',c:[['Greeting','hallo|guten morgen|guten tag|guten abend'],['Name','ich heiße|mein name ist']],r:[['\\bich bin ([A-ZÄÖÜa-zäöüß]+)\\b','For a name, prefer „Ich heiße …“ or „Mein Name ist …“.','Ich heiße Malik.']]},
+2:{g:'Introduce yourself with sein and a name pattern.',p:'Greet someone, say your name, and ask their name.',m:'Guten Tag, ich heiße Malik. Wie heißen Sie?',c:[['Greeting','guten tag|hallo'],['Your name','ich heiße|mein name ist'],['Question','wie heißen sie|wie heißt du']]},
+3:{g:'Use haben for age, hunger and thirst.',p:'Say your age, then say that you are hungry and thirsty.',m:'Ich bin dreißig Jahre alt. Ich habe Hunger und Durst.',c:[['Age','jahre alt|ich bin dreißig'],['Hunger with haben','ich habe hunger'],['Thirst','durst']],r:[['ich bin hunger','Say „Ich habe Hunger“, not „Ich bin Hunger“. Hunger uses haben.','Ich habe Hunger.'],['ich bin durst','Say „Ich habe Durst“, not „Ich bin Durst“. Thirst uses haben.','Ich habe Durst.']]},
+4:{g:'Say where you come from, live, and which languages you speak.',p:'Introduce your country, city, and languages.',m:'Ich komme aus Nigeria. Ich wohne in Berlin. Ich spreche Englisch und ein bisschen Deutsch.',c:[['Country','ich komme aus'],['City','ich wohne in'],['Language','ich spreche']],r:[['ich wohnen','With ich, use „wohne“, not „wohnen“.','Ich wohne in Berlin.'],['ich kommen','With ich, use „komme“, not „kommen“.','Ich komme aus Nigeria.']]},
+5:{g:'Talk about your job and ask a yes/no question.',p:'Say what you do for work and ask if the other person works in Berlin.',m:'Ich arbeite als Techniker. Arbeiten Sie in Berlin?',c:[['Job','ich arbeite als|ich bin'],['Work question','arbeiten sie|arbeitest du']]},
+6:{g:'Describe family with possessives.',p:'Introduce two family members.',m:'Meine Mutter heißt Amina. Mein Bruder ist zwanzig Jahre alt.',c:[['Possessive','meine mutter|mein vater|mein bruder|meine schwester'],['Name or age','heißt|jahre alt']]},
+8:{g:'Name objects with der, die and das.',p:'Name three things around you with their articles.',m:'Das ist der Tisch, die Lampe und das Bett.',c:[['der noun','der '],['die noun','die '],['das noun','das ']]},
+9:{g:'Use singular and plural forms.',p:'Say that you have one chair and two tables.',m:'Ich habe einen Stuhl und zwei Tische.',c:[['One item','einen stuhl|ein stuhl'],['Plural','zwei tische']]},
+10:{g:'Use the accusative for things you need.',p:'Say that you need an appointment, a bag, and a book.',m:'Ich brauche einen Termin, eine Tasche und ein Buch.',c:[['Masculine einen','einen termin'],['Feminine eine','eine tasche'],['Neuter ein','ein buch']],r:[['ich brauche ein termin','Termin is masculine in the accusative: „einen Termin“.','Ich brauche einen Termin.']]},
+11:{g:'Talk about food with essen, trinken, kein and nicht.',p:'Say what you eat, drink, and do not eat.',m:'Ich esse Brot und trinke Wasser. Ich esse kein Fleisch.',c:[['Food','ich esse'],['Drink','ich trinke'],['Negation','kein|keine|nicht']]},
+12:{g:'Order food and drinks politely.',p:'You are at a café. Order one coffee and one sandwich.',m:'Ich möchte einen Kaffee und ein Sandwich, bitte.',c:[['Polite order','ich möchte|ich hätte gern'],['Drink','kaffee'],['Food','sandwich|brötchen'],['Politeness','bitte']]},
+13:{g:'Ask prices and speak in a shop.',p:'Ask how much the apples cost and say you will take one kilo.',m:'Was kosten die Äpfel? Ich nehme ein Kilo, bitte.',c:[['Price question','was kosten|wie viel kostet'],['Quantity','ein kilo'],['Shop phrase','ich nehme']]},
+15:{g:'Say the day, date and time.',p:'Say that your appointment is on Monday at half past two.',m:'Mein Termin ist am Montag um halb drei.',c:[['Day with am','am montag'],['Time with um','um halb drei'],['Appointment','termin']]},
+16:{g:'Describe a daily routine with separable verbs.',p:'Describe your morning in three steps.',m:'Ich stehe um sechs Uhr auf. Dann frühstücke ich. Um sieben Uhr fahre ich zur Arbeit.',c:[['Separable verb','stehe|auf'],['Sequence','dann'],['Time','uhr']]},
+17:{g:'Use modal verbs with the infinitive at the end.',p:'Say what you must do and what you want to do tomorrow.',m:'Ich muss morgen arbeiten. Ich will am Abend Deutsch lernen.',c:[['Must','ich muss'],['Want','ich will|ich möchte'],['Final infinitive','arbeiten|lernen']]},
+18:{g:'Make a formal appointment.',p:'Call and ask for an appointment on Friday at nine.',m:'Guten Tag, ich möchte einen Termin machen. Geht es am Freitag um neun Uhr?',c:[['Formal opening','guten tag'],['Appointment request','ich möchte einen termin'],['Day','am freitag'],['Time','um neun uhr']]},
+19:{g:'Ask for and give directions.',p:'Ask where the station is and give one direction.',m:'Entschuldigung, wo ist der Bahnhof? Gehen Sie geradeaus und dann links.',c:[['Polite opening','entschuldigung'],['Place question','wo ist der bahnhof'],['Direction','geradeaus|links|rechts']]},
+20:{g:'Use practical preposition chunks.',p:'Say how you travel to work and who you travel with.',m:'Ich fahre mit dem Bus zur Arbeit. Ich fahre mit meiner Kollegin.',c:[['Transport chunk','mit dem bus|mit der bahn'],['Destination','zur arbeit|zum kurs'],['Person chunk','mit meiner|mit meinem']]},
+22:{g:'Talk about hobbies with verb-second word order.',p:'Say what you do on Sunday and in the evening.',m:'Am Sonntag spiele ich Fußball. Abends höre ich Musik.',c:[['Time first','am sonntag|abends'],['Verb second','spiele ich|höre ich|lese ich|gehe ich']]},
+23:{g:'Describe your home.',p:'Describe your flat and name two rooms.',m:'Meine Wohnung ist klein und hell. Sie hat ein Wohnzimmer und eine Küche.',c:[['Description','meine wohnung ist'],['First room','wohnzimmer'],['Second room','küche|schlafzimmer|bad']]},
+24:{g:'Talk about weather and seasons.',p:'Say today’s weather and your favourite season.',m:'Heute ist es kalt, aber sonnig. Im Sommer ist es warm.',c:[['Today weather','heute ist es'],['Weather word','kalt|warm|sonnig|regnerisch|windig'],['Season','im sommer|im winter|im frühling|im herbst']]},
+25:{g:'Explain symptoms at the doctor.',p:'Tell the doctor that you have a headache and fever.',m:'Guten Tag. Ich habe Kopfschmerzen und Fieber.',c:[['Greeting','guten tag|hallo'],['Pain with haben','ich habe kopfschmerzen'],['Second symptom','fieber']],r:[['ich bin kopfschmerzen','Symptoms use haben: „Ich habe Kopfschmerzen“.','Ich habe Kopfschmerzen.']]},
+26:{g:'Talk about the past with war and hatte.',p:'Say how your weekend was and what you had.',m:'Mein Wochenende war schön. Ich hatte viel Zeit, aber ich war müde.',c:[['war','war schön|war gut|war stressig'],['hatte','ich hatte'],['Past state','ich war']]},
+27:{g:'Use the perfect tense with haben.',p:'Say two things you did yesterday.',m:'Gestern habe ich gearbeitet und am Abend habe ich gekocht.',c:[['Past time','gestern'],['Perfect helper','habe ich|ich habe'],['Participle','gearbeitet|gekocht|gelernt|gesehen']]},
+29:{g:'Use formal German for an office or course.',p:'Formally ask when the German course starts and what it costs.',m:'Guten Tag. Wann beginnt der Deutschkurs und was kostet er? Vielen Dank.',c:[['Formal greeting','guten tag|sehr geehrte'],['When question','wann beginnt'],['Cost question','was kostet'],['Polite close','vielen dank']]},
+30:{g:'Practise the A1 speaking exam format.',p:'Introduce yourself with name, country, city, job, and languages.',m:'Ich heiße Malik. Ich komme aus Nigeria. Ich wohne in Berlin. Ich arbeite als Techniker. Ich spreche Englisch und Deutsch.',c:[['Name','ich heiße|mein name ist'],['Country','ich komme aus'],['City','ich wohne in'],['Job','ich arbeite als|ich bin'],['Languages','ich spreche']]}
+};
+const SRClass=window.SpeechRecognition||window.webkitSpeechRecognition;
+function sNorm(s){return normDE(String(s||'')).replace(/[.,!?;:]/g,' ').replace(/\s+/g,' ').trim();}
+function hasPattern(text,pattern){return pattern.split('|').some(p=>sNorm(text).includes(sNorm(p)));}
+function speakingRules(said,D){
+  const out=[];
+  (D.r||[]).forEach(r=>{if(new RegExp(r[0],'i').test(sNorm(said)))out.push({msg:r[1],fix:r[2],cat:'Grammar speaking mistake'});});
+  if(/\bich wohnen\b/i.test(sNorm(said)))out.push({msg:'Use „wohne“ with ich, not „wohnen“.',fix:'Ich wohne …',cat:'Grammar speaking mistake'});
+  if(/\bich (kommen|sprechen|arbeiten|heißen)\b/i.test(sNorm(said)))out.push({msg:'After ich, the verb normally ends in -e.',fix:'ich komme / spreche / arbeite / heiße',cat:'Grammar speaking mistake'});
+  return out;
+}
+function lessonTask(D,type){
+  if(type===0)return{n:'1 · Repeat',p:'Repeat the model sentence clearly.',m:D.m,c:D.c};
+  if(type===1)return{n:'2 · Answer',p:D.p,m:D.m,c:D.c};
+  if(type===2)return{n:'3 · Build',p:'Build your own answer using today’s grammar and vocabulary. Include every checklist item.',m:D.m,c:D.c};
+  return{n:'4 · Roleplay',p:'Mini roleplay: '+D.p+' Respond naturally as if this were a real conversation.',m:D.m,c:D.c};
+}
+function scoreSpeaking(said,confidence,D,T){
+  const checks=T.c.map(x=>({label:x[0],yes:hasPattern(said,x[1])}));
+  const content=Math.round(checks.filter(x=>x.yes).length/Math.max(1,checks.length)*100);
+  const rules=speakingRules(said,D);
+  const overlap=Math.round(speechOverlap(said,T.m)*100);
+  const clarity=Math.max(0,Math.min(100,confidence>0?Math.round(confidence*100):Math.min(95,45+Math.round(overlap*.5))));
+  return{checks,content,grammar:Math.max(20,100-rules.length*25),clarity,rules,overall:Math.round((content*2+(100-rules.length*25)+clarity)/4)};
+}
+function renderSpeakingResult(card,day,D,T,said,confidence){
+  const R=scoreSpeaking(said,confidence,D,T),res=card.querySelector('.sresults');
+  const missing=R.checks.filter(x=>!x.yes);
+  const corrected=R.rules.length?R.rules.map(x=>x.fix).join(' '):T.m;
+  res.innerHTML='<div class="sscores"><div class="sscore"><b>'+R.content+'%</b>Task</div><div class="sscore"><b>'+R.grammar+'%</b>Grammar</div><div class="sscore"><b>'+R.clarity+'%</b>Clarity</div></div>'+
+    '<div class="sresult"><b>Correction / stronger answer</b><div class="de" lang="de">'+esc(corrected)+'</div></div>'+
+    '<div class="sresult"><b>Feedback</b>'+(R.rules.length?R.rules.map(x=>'<div>⚠️ '+esc(x.msg)+'</div>').join(''):'<div class="fb ok">✓ No target grammar mistake detected.</div>')+
+    (R.clarity<65?'<div>👄 Speak a little more slowly and separate each word clearly.</div>':'<div class="fb ok">✓ Your speech was clear enough for the recognizer.</div>')+'</div>'+
+    '<div class="sresult"><b>Missing content checklist</b>'+R.checks.map(x=>'<div class="scheck '+(x.yes?'yes':'no')+'">'+(x.yes?'✓':'○')+' '+esc(x.label)+'</div>').join('')+'</div>'+
+    '<div class="sactions"><button class="ghost" data-again>↻ Try again</button><button class="chkbtn" data-save>★ Save best attempt</button><button class="ghost" data-weak>📕 Add mistakes to Weak List</button></div>';
+  card.dataset.said=said;card._lastResult=R;
+  res.querySelector('[data-again]').addEventListener('click',()=>startLessonRecognition(card,day,D,T));
+  res.querySelector('[data-save]').addEventListener('click',e=>{
+    const st=X.speakingLessons[day]=X.speakingLessons[day]||{tasks:{}};
+    const ti=+card.dataset.task,old=st.tasks[ti];
+    if(!old||R.overall>old.score)st.tasks[ti]={score:R.overall,said,date:todayISO()};
+    st.complete=Object.keys(st.tasks).length>0;saveX();completeSpeakingStep(day);
+    e.target.textContent='★ Best saved ('+(st.tasks[ti]||{}).score+'%)';card.querySelector('.sstatus').textContent='Speaking practice completed — your lesson progress has been updated.';
+  });
+  res.querySelector('[data-weak]').addEventListener('click',e=>{
+    R.rules.forEach(x=>weakAdd(x.msg,x.fix,x.cat));
+    missing.forEach(x=>weakAdd('Day '+day+' speaking — missing: '+x.label,T.m,'Speaking task'));
+    if(R.clarity<65&&/\b(ich|nicht|spreche|möchte)\b/i.test(T.m))
+      weakAdd('Pronunciation: practise the soft ich-Laut','ich, nicht, sprechen, möchte','Pronunciation');
+    else if(!R.rules.length&&!missing.length)weakAdd('Day '+day+' speaking clarity',T.m,'Pronunciation');
+    e.target.textContent='✓ Added to Weak List';
+  });
+}
+function startLessonRecognition(card,day,D,T){
+  const live=card.querySelector('.slive'),btn=card.querySelector('[data-start]');
+  if(!SRClass){live.className='slive heard';live.innerHTML='Automatic transcription is unavailable in this browser. Use Chrome/Android, or practise with the model audio and recorder.';return;}
+  let rec;try{rec=new SRClass();}catch(e){live.textContent='Microphone unavailable.';return;}
+  rec.lang='de-DE';rec.interimResults=true;rec.continuous=false;rec.maxAlternatives=3;
+  btn.disabled=true;btn.textContent='🎙 Listening…';live.className='slive';live.textContent='Speak now…';
+  let finalText='',confidence=0;
+  rec.onresult=e=>{
+    let interim='';
+    for(let i=e.resultIndex;i<e.results.length;i++){
+      const r=e.results[i],t=r[0].transcript;
+      if(r.isFinal){finalText+=(finalText?' ':'')+t;confidence=Math.max(confidence,r[0].confidence||0);}else interim+=t;
+    }
+    live.className='slive heard';live.innerHTML='<b>What I heard:</b> <span lang="de">'+esc(finalText||interim)+'</span>';
+  };
+  rec.onerror=e=>{live.innerHTML=e.error==='not-allowed'?'Microphone blocked. Allow microphone access in browser settings.':'Speech recognition error: '+esc(e.error);};
+  rec.onend=()=>{
+    btn.disabled=false;btn.textContent='🎙 Start speaking';
+    if(finalText){live.innerHTML='<b>What I heard:</b> <span lang="de">'+esc(finalText)+'</span>';renderSpeakingResult(card,day,D,T,finalText,confidence);}
+  };
+  try{rec.start();}catch(e){live.textContent='The microphone is already listening.';}
+}
+function completeSpeakingStep(day){
+  const det=document.querySelector('#d'+day+' details[data-speaking-coach]');
+  if(!det)return;
+  const steps=[...document.querySelectorAll('#d'+day+' details.step')],i=steps.indexOf(det);
+  if(i>=0){X.steps[day]=X.steps[day]||{i,done:{}};X.steps[day].done[i]=1;saveX();if(STEPPERS[day])STEPPERS[day]();}
+  addSkill('speaking',3);markActivity();
+}
+function buildLessonCoach(det,day,D){
+  det.dataset.speakingCoach='1';
+  const card=document.createElement('div');card.className='scoach';card.dataset.task='0';
+  card.innerHTML='<h3>🎤 Speaking Practice</h3><p class="sgoal"><b>Goal:</b> '+esc(D.g)+'</p>'+
+    '<div class="stasks"><button class="on" data-task="0">1 · Repeat</button><button data-task="1">2 · Answer</button><button data-task="2">3 · Build</button><button data-task="3">4 · Roleplay</button></div>'+
+    '<div class="sprompt"></div><div class="smodel"><b>Model:</b> <span class="de" lang="de"></span> <button class="say" data-model>🔊</button></div>'+
+    '<button class="bigbtn" data-start>🎙 Start speaking</button><div class="slive">Your live transcript will appear here.</div><div class="sresults"></div>'+
+    '<div class="sstatus">'+((X.speakingLessons[day]||{}).complete?'✓ Speaking practice completed.':'Speaking practice not completed yet.')+'</div>';
+  det.insertBefore(card,det.firstElementChild&&det.firstElementChild.tagName==='SUMMARY'?det.firstElementChild.nextSibling:det.firstChild);
+  function select(i){
+    const T=lessonTask(D,i);card.dataset.task=i;
+    card.querySelectorAll('[data-task]').forEach(b=>b.classList.toggle('on',+b.dataset.task===i));
+    card.querySelector('.sprompt').textContent=T.p;card.querySelector('.smodel .de').textContent=T.m;
+    card.querySelector('.slive').className='slive';card.querySelector('.slive').textContent='Your live transcript will appear here.';
+    card.querySelector('.sresults').innerHTML='';
+  }
+  card.querySelectorAll('[data-task]').forEach(b=>b.addEventListener('click',()=>select(+b.dataset.task)));
+  card.querySelector('[data-model]').addEventListener('click',()=>speakR(lessonTask(D,+card.dataset.task).m,.85));
+  card.querySelector('[data-start]').addEventListener('click',()=>{const T=lessonTask(D,+card.dataset.task);startLessonRecognition(card,day,D,T);});
+  select(0);
+}
 document.querySelectorAll('section.day details').forEach(det=>{
-  const sum=det.querySelector(':scope>summary');
-  if(!sum||!/Speaking practice/.test(sum.textContent))return;
-  const box=document.createElement('div');
-  box.className='dcard';box.style.margin='10px 0 2px';
-  box.innerHTML='<div class="dhead">🎙 Record yourself doing this out loud</div>'+
-    '<p style="font-size:13px;color:var(--mut);margin:2px 0 8px">Tap <b>Allow</b> when your phone asks for the microphone. Then play it back and compare with the audio 🔊 buttons above.</p>';
-  det.appendChild(box);
-  box.appendChild(makeRecorder());
-  const b=document.createElement('button');b.className='ghost';b.style.marginTop='8px';
-  b.textContent='🎤 Speaking Studio — guided tasks with model answers & live scoring →';
-  b.addEventListener('click',()=>show('speak'));
-  box.appendChild(b);
+  const sum=det.querySelector(':scope>summary'),sec=det.closest('section[id^="d"]');
+  if(!sum||!sec||!/Speaking practice/i.test(sum.textContent))return;
+  const day=+sec.id.slice(1),D=SD[day];
+  if(D)buildLessonCoach(det,day,D);
 });
+// Do not let the generic stepper silently mark skipped speaking as complete.
+document.addEventListener('click',e=>{
+  const nx=e.target.closest('.stepnav .nx');if(!nx)return;
+  const sec=nx.closest('section[id^="d"]');if(!sec)return;
+  const day=+sec.id.slice(1),st=X.steps[day],steps=[...sec.querySelectorAll('details.step')],cur=steps[st&&st.i||0];
+  if(cur&&cur.dataset.speakingCoach&&!(X.speakingLessons[day]||{}).complete){
+    e.preventDefault();e.stopImmediatePropagation();
+    const status=cur.querySelector('.sstatus');if(status)status.innerHTML='<span style="color:var(--red)">Speaking practice not completed yet. Make one attempt and save it, or go back if you are not ready.</span>';
+  }
+},true);
+// Keep the secondary page limited to lessons the learner has reached.
+const oldRenderSpeak=renderSpeak;
+renderSpeak=function(){
+  oldRenderSpeak();
+  const body=document.getElementById('speakBody'),u=unlockedDay();
+  body.querySelectorAll('[data-s]').forEach((card,i)=>{
+    const map=[2,1,12,18,5,16,27];
+    if(map[i]>u)card.remove();
+  });
+  const tip=document.createElement('div');tip.className='tip';
+  tip.innerHTML='This is a <b>secondary review</b>. New speaking tasks and lesson completion happen inside each day’s Speaking Practice step.';
+  body.insertBefore(tip,body.firstChild);
+};
 </script>
 </body>
 </html>

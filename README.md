@@ -29,8 +29,10 @@ This is no longer just a textbook — it's an interactive A1 trainer:
   umlaut-tolerant checking (ae/oe/ue/ss accepted).
 - **🧩 Sentence builder** — tap scrambled words into verb-second order, with explanations.
 - **🎧 Listening trainer** — built-in German TTS, transcripts locked until you answer.
-- **🎤 Speaking studio** — record yourself (MediaRecorder), compare with slow/normal
-  model audio, self-check pronunciation.
+- **🎤 Lesson-integrated speaking coach** — every daily Speaking section now contains
+  lesson-scoped Repeat, Answer, Build and Roleplay tasks with live German transcription,
+  corrections, grammar/clarity scoring, content checklists, saved best attempts and
+  Weak List integration. A small Speaking Review area revisits completed lesson topics.
 - **👄 Pronunciation trainer** — the 11 sounds that give English speakers away.
 - **🇩🇪 Everyday German + 🆘 Survival panel** — work, gym, REWE/Lidl, Bürgeramt,
   transport phrases with audio, one tap away.
