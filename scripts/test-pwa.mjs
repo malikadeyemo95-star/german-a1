@@ -11,13 +11,13 @@ assert.ok(manifest.icons.some((icon) => icon.sizes === '512x512'));
 
 const shell = [
   'index.html','manifest.json','icon.png','icon512.png',
-  'assets/app.css','assets/app.js','assets/state.js','assets/audio.js','assets/srs.js',
+  'assets/app.css','assets/app.js','assets/state.js','assets/audio.js','assets/srs.js','assets/speaking.js',
   'content/manifest.json','content/cards.json','content/quizzes.json','content/tests.json','content/reference.json',
   ...Array.from({ length:30 },(_,index)=>`content/day-${String(index + 1).padStart(2,'0')}.json`),
 ];
 await Promise.all(shell.map((file) => access(resolve(root, file))));
 const worker = await readFile(resolve(root, 'sw.js'), 'utf8');
-assert.match(worker, /deutschweg-v12/);
+assert.match(worker, /deutschweg-v13/);
 assert.match(worker, /cache\.addAll\(APP_FILES\)/);
 assert.match(worker, /event\.request\.mode === 'navigate'/);
 console.log(`PWA manifest and ${shell.length} offline shell/course files verified.`);

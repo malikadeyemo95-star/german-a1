@@ -1,6 +1,4 @@
 import { STATE_KEY, calculateStreak, migrateLegacyState, shiftedDateKey, validateImportedState } from './state.js';
-import { loadGermanVoice, speakGerman, stopGermanSpeech } from './audio.js';
-import { buildQueue, cardStatus, hardestCards, scheduleCard } from './srs.js';
 
 const CONTENT_ROOT = './content/';
 const TEST_DAYS = new Set([7, 14, 21, 28, 30]);
@@ -33,6 +31,31 @@ let pendingSectionId;
 let reviewQueue = [];
 let reviewIndex = 0;
 let installPrompt;
+let audioApi;
+let srsApi;
+let speakingApi;
+
+async function loadAudioApi() {
+  audioApi ||= await import('./audio.js');
+  return audioApi;
+}
+
+async function loadSrsApi() {
+  srsApi ||= await import('./srs.js');
+  return srsApi;
+}
+
+async function speakGerman(text, rate = 1) {
+  return (await loadAudioApi()).speakGerman(text, rate);
+}
+
+async function loadGermanVoice() {
+  return (await loadAudioApi()).loadGermanVoice();
+}
+
+function stopGermanSpeech() {
+  audioApi?.stopGermanSpeech();
+}
 
 function saveState(activity = false) {
   if (activity) {
@@ -93,7 +116,12 @@ function setView(name) {
 }
 
 async function loadCards() {
-  if (allCards) return allCards;
+  if (allCards) {
+    (state.customCards || []).forEach((card) => {
+      if (!allCards.some((item) => item.id === card.id)) allCards.push(card);
+    });
+    return allCards;
+  }
   const response = await fetch(`${CONTENT_ROOT}cards.json`);
   if (!response.ok) throw new Error('Flashcard deck unavailable');
   allCards = [...(await response.json()).cards, ...(state.customCards || [])];
@@ -129,7 +157,7 @@ function normalizeAnswer(value) {
 }
 
 function renderHardest() {
-  const cards = hardestCards(allCards || [], state.srs || {});
+  const cards = srsApi.hardestCards(allCards || [], state.srs || {});
   document.querySelector('#hardestCards').innerHTML = cards.length
     ? cards.map((card) => `<div class="hard-card"><strong>${escapeHtml(card.german)}</strong><span>${state.srs[card.id].lapses || 0} misses</span></div>`).join('')
     : '<p class="lede">No difficult cards yet.</p>';
@@ -147,7 +175,7 @@ function paintReviewCard() {
   document.querySelector('#reviewPrompt').textContent = card.prompt;
   document.querySelector('#reviewAnswer').textContent = card.answer;
   document.querySelector('#reviewAnswer').hidden = true;
-  document.querySelector('#reviewStatus').textContent = cardStatus(record);
+  document.querySelector('#reviewStatus').textContent = srsApi.cardStatus(record);
   document.querySelector('#gradeButtons').hidden = true;
   document.querySelector('#revealAnswer').hidden = document.querySelector('#typeMode').checked;
   document.querySelector('#typeAnswerArea').hidden = !document.querySelector('#typeMode').checked;
@@ -167,9 +195,9 @@ function revealReviewCard() {
 }
 
 async function renderFlashcards() {
-  await loadCards();
+  await Promise.all([loadCards(), loadSrsApi()]);
   state.srs ||= {};
-  reviewQueue = buildQueue(allCards, state.srs, nextDay(), Date.now(), 15);
+  reviewQueue = srsApi.buildQueue(allCards, state.srs, nextDay(), Date.now(), 15);
   reviewIndex = 0;
   elements.title.textContent = 'Flashcards';
   elements.eyebrow.textContent = `${reviewQueue.length} due today`;
@@ -181,7 +209,7 @@ async function renderFlashcards() {
 function gradeCurrent(grade) {
   const card = reviewQueue[reviewIndex];
   if (!card) return;
-  state.srs[card.id] = scheduleCard(state.srs[card.id], grade);
+  state.srs[card.id] = srsApi.scheduleCard(state.srs[card.id], grade);
   state.cardsReviewed = (state.cardsReviewed || 0) + 1;
   if (grade === 'again') reviewQueue.push(card);
   reviewIndex += 1;
@@ -201,7 +229,8 @@ function addQuizMistakeCard(quiz, question) {
 function renderQuiz(quiz) {
   const body = document.querySelector('#quizBody');
   const answers = new Map();
-  body.innerHTML = quiz.questions.map((question, index) => {
+  body.dataset.day = quiz.day;
+  body.innerHTML = renderMatchingWarmup(quiz) + quiz.questions.map((question, index) => {
     const control = question.type === 'choice'
       ? `<div class="choice-grid">${question.choices.map((choice) => `<button type="button" class="choice-option" data-choice="${escapeHtml(choice)}">${escapeHtml(choice)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check</button>`
       : question.type === 'reorder'
@@ -209,6 +238,7 @@ function renderQuiz(quiz) {
       : `<div class="quiz-input-row"><input type="text" lang="de" autocapitalize="off" aria-label="Answer question ${index + 1}"><button type="button" class="quiz-check" data-check>Check</button></div>`;
     return `<article class="quiz-question" data-question="${question.id}"><h2>${index + 1}. ${escapeHtml(question.prompt)}</h2>${control}<div class="quiz-feedback" aria-live="polite"></div></article>`;
   }).join('') + '<button type="button" class="primary-button" id="finishQuiz">Finish quiz <span>→</span></button><div id="quizResult"></div>';
+  wireMatchingWarmup(body);
   quiz.questions.forEach((question) => {
     const card = body.querySelector(`[data-question="${question.id}"]`);
     card.querySelectorAll('[data-choice]').forEach((button) => button.addEventListener('click', () => {
@@ -251,8 +281,57 @@ function renderQuiz(quiz) {
   });
 }
 
+function matchingCardsForDay(day) {
+  return (allCards || [])
+    .filter((card) => card.day === day && card.direction === 'en-de')
+    .filter((card, index, cards) => cards.findIndex((item) => item.sourceId === card.sourceId) === index)
+    .slice(0, 4);
+}
+
+function renderMatchingWarmup(quiz) {
+  const cards = matchingCardsForDay(quiz.day);
+  if (cards.length < 2) return '';
+  const right = [...cards.slice(1), cards[0]];
+  return `<article class="quiz-question matching-question" data-matching>
+    <p class="eyebrow">Vocabulary warm-up</p>
+    <h2>Match the German and English</h2>
+    <div class="matching-grid">
+      <div class="matching-column" aria-label="German words">${cards.map((card) => `<button type="button" class="match-option" data-match-side="left" data-pair="${card.sourceId}">${escapeHtml(card.german)}</button>`).join('')}</div>
+      <div class="matching-column" aria-label="English meanings">${right.map((card) => `<button type="button" class="match-option" data-match-side="right" data-pair="${card.sourceId}">${escapeHtml(card.english)}</button>`).join('')}</div>
+    </div>
+    <div class="quiz-feedback" aria-live="polite">Choose one item from each column.</div>
+  </article>`;
+}
+
+function wireMatchingWarmup(body) {
+  const warmup = body.querySelector('[data-matching]');
+  if (!warmup) return;
+  let left;
+  let right;
+  const feedback = warmup.querySelector('.quiz-feedback');
+  const totalPairs = matchingCardsForDay(Number(body.dataset.day)).length;
+  warmup.querySelectorAll('.match-option').forEach((button) => button.addEventListener('click', () => {
+    const side = button.dataset.matchSide;
+    warmup.querySelectorAll(`[data-match-side="${side}"]:not(.matched)`).forEach((item) => item.classList.remove('selected'));
+    button.classList.add('selected');
+    if (side === 'left') left = button; else right = button;
+    if (!left || !right) return;
+    if (left.dataset.pair === right.dataset.pair) {
+      left.classList.add('matched'); right.classList.add('matched');
+      left.disabled = true; right.disabled = true;
+      feedback.className = 'quiz-feedback good';
+      feedback.textContent = warmup.querySelectorAll('.matched').length === totalPairs * 2 ? 'All pairs matched.' : 'Correct pair.';
+    } else {
+      feedback.className = 'quiz-feedback bad';
+      feedback.textContent = 'Not a match. Try those two again.';
+    }
+    left.classList.remove('selected'); right.classList.remove('selected');
+    left = undefined; right = undefined;
+  }));
+}
+
 async function renderQuizHub() {
-  await Promise.all([loadQuizzes(), loadTests()]);
+  await Promise.all([loadQuizzes(), loadTests(), loadCards()]);
   const unlocked = allQuizzes.filter((quiz) => quiz.day <= nextDay());
   const unlockedTests = allTests.filter((test) => test.day <= nextDay());
   const picker = document.querySelector('#quizPicker');
@@ -313,8 +392,8 @@ function renderHome() {
   document.querySelector('#coursePercent').textContent = `${Math.round(state.completedDays.length / 30 * 100)}%`;
   document.querySelector('#studyDays').textContent = state.activityDays.length;
   document.querySelector('#dueToday').textContent = '…';
-  loadCards().then((cards) => {
-    document.querySelector('#dueToday').textContent = buildQueue(cards, state.srs || {}, day, Date.now(), 15).length;
+  Promise.all([loadCards(), loadSrsApi()]).then(([cards, srs]) => {
+    document.querySelector('#dueToday').textContent = srs.buildQueue(cards, state.srs || {}, day, Date.now(), 15).length;
   }).catch(() => { document.querySelector('#dueToday').textContent = '—'; });
   document.querySelector('#continueButton').onclick = () => navigate(`day/${day}`);
   updateChrome();
@@ -330,7 +409,10 @@ function weakTopicEntries() {
   const counts = new Map();
   const add = (topic, amount = 1) => counts.set(topic, (counts.get(topic) || 0) + amount);
   (state.listeningMistakes || []).forEach((mistake) => add(`Day ${mistake.day} listening`));
-  (state.customCards || []).forEach((card) => add(`Day ${card.day} quiz`));
+  (state.customCards || []).forEach((card) => {
+    if (!String(card.id).startsWith('speaking-')) add(`Day ${card.day} quiz`);
+  });
+  (state.speakingWeakList || []).forEach((item) => add(`${item.category} · Day ${item.day}`));
   Object.entries(state.srs || {}).forEach(([id, record]) => {
     if (!(record.lapses > 0)) return;
     const card = allCards?.find((item) => item.id === id);
@@ -592,6 +674,29 @@ async function enhanceAudio(root, day) {
   if (!voice && !('speechSynthesis' in window)) root.querySelectorAll('.speak-button,.audio-toolbar').forEach((control) => { control.hidden = true; });
 }
 
+async function enhanceSpeaking(root, day) {
+  speakingApi ||= await import('./speaking.js');
+  speakingApi.mountSpeakingCoach({
+    root,
+    day,
+    state,
+    saveState,
+    speakGerman,
+    markSectionComplete(sectionId) {
+      state.sectionProgress[day] ||= {};
+      state.sectionProgress[day][sectionId] = true;
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.querySelector('.section-status').textContent = '✓';
+        const complete = section.querySelector('.section-complete');
+        complete.textContent = 'Completed ✓';
+        complete.classList.add('done');
+      }
+      updateChrome(day);
+    },
+  });
+}
+
 function showCelebration(day, goal) {
   const overlay = document.querySelector('#celebration');
   document.querySelector('#celebrationCopy').textContent = goal.replace(/^🎯\s*/, '') || `Day ${day} is complete.`;
@@ -634,7 +739,7 @@ async function renderDay(day) {
     dayNav.querySelector('[data-next]').addEventListener('click', () => navigate(`day/${activeDay + 1}`));
     article.appendChild(dayNav);
     elements.content.appendChild(article);
-    enhanceAudio(elements.content, activeDay);
+    await Promise.all([enhanceAudio(elements.content, activeDay), enhanceSpeaking(elements.content, activeDay)]);
     if (pendingSectionId) {
       const target = document.getElementById(pendingSectionId);
       if (target) { target.open = true;target.scrollIntoView({behavior:'smooth',block:'start'}); }
