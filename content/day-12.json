@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 12,
+  "title": "Day 12 — Restaurant · möchten",
+  "goal": "🎯 Today you can order food, ask for the bill, and be politely German about it.",
+  "sourceHash": "5120b9a4ae41de64c5ba3edb214674cc0c9c1950e57b008c5b4bdba54902aa02",
+  "introHtml": "<h2>Day 12 · At the Restaurant — <i>möchten</i> &amp; Polite Ordering</h2>\n<p class=\"goal\">🎯 Today you can order food, ask for the bill, and be politely German about it.</p>",
+  "sections": [
+    {
+      "id": "d12-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. möchten = would like (your politeness superpower)</h3>\n<table>\n<tr><td class=\"de\">ich möchte</td><td>I would like</td><td class=\"de\">wir möchten</td><td>we would like</td></tr>\n<tr><td class=\"de\">du möchtest</td><td>you would like</td><td class=\"de\">ihr möchtet</td><td>you all would like</td></tr>\n<tr><td class=\"de\">er/sie möchte</td><td>he/she would like</td><td class=\"de\">sie/Sie möchten</td><td>they/you would like</td></tr>\n</table>\n<p>möchten takes the accusative: <span class=\"de\">Ich möchte <b>einen</b> Kaffee.</span> With a second verb, that verb goes to the END: <span class=\"de\">Ich möchte einen Kaffee <b>trinken</b>.</span> (This \"verb bracket\" returns with all modal verbs on Day 17!)</p>\n<h3>2. Even more polite: Ich hätte gern ...</h3>\n<p><span class=\"de\">Ich hätte gern ein Wasser.</span> = I'd like a water, please. Learn it as a fixed chunk — waiters hear it 100 times a day.</p>\n<h3>3. Restaurant survival grammar</h3>\n<ul>\n<li><span class=\"de\">Was möchten Sie bestellen?</span> — What would you like to order?</li>\n<li><span class=\"de\">Ich nehme ...</span> — I'll take/have ... (nehmen: du nimmst, er nimmt)</li>\n<li><span class=\"de\">Zahlen, bitte! / Die Rechnung, bitte!</span> — The bill, please!</li>\n<li><span class=\"de\">Zusammen oder getrennt?</span> — Together or separately? (Splitting bills is VERY German.)</li>\n<li><span class=\"de\">Stimmt so!</span> — Keep the change!</li>\n</ul>\n</details>",
+      "sourceHash": "1cc3abd777587363d8f8b637ac15031896a8f762fa3b8e9aa57119f39dd93858"
+    },
+    {
+      "id": "d12-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 items)",
+      "html": "<details><summary>📚 Vocabulary (16 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">das Restaurant</td><td>restaurant</td></tr>\n<tr><td class=\"de\">die Speisekarte</td><td>menu</td></tr>\n<tr><td class=\"de\">bestellen</td><td>to order</td></tr>\n<tr><td class=\"de\">zahlen / bezahlen</td><td>to pay</td></tr>\n<tr><td class=\"de\">die Rechnung</td><td>bill</td></tr>\n<tr><td class=\"de\">der Kellner / die Kellnerin</td><td>waiter / waitress</td></tr>\n<tr><td class=\"de\">das Frühstück</td><td>breakfast</td></tr>\n<tr><td class=\"de\">das Mittagessen</td><td>lunch</td></tr>\n<tr><td class=\"de\">das Abendessen</td><td>dinner</td></tr>\n<tr><td class=\"de\">die Vorspeise / der Nachtisch</td><td>starter / dessert</td></tr>\n<tr><td class=\"de\">die Suppe</td><td>soup</td></tr>\n<tr><td class=\"de\">der Salat</td><td>salad</td></tr>\n<tr><td class=\"de\">die Pommes (pl.)</td><td>fries</td></tr>\n<tr><td class=\"de\">das Schnitzel</td><td>schnitzel</td></tr>\n<tr><td class=\"de\">die Cola / das Mineralwasser</td><td>cola / sparkling water</td></tr>\n<tr><td class=\"de\">Guten Appetit!</td><td>Enjoy your meal!</td></tr>\n</table>\n</details>",
+      "sourceHash": "f7532fe9c7403637c3963d6e28f10dfb112c275a01738c013c0b16df32cb924b"
+    },
+    {
+      "id": "d12-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Die Speisekarte, bitte!</span> <span class=\"tr\">The menu, please!</span></li>\n<li><span class=\"de\">Ich möchte bestellen.</span> <span class=\"tr\">I'd like to order.</span></li>\n<li><span class=\"de\">Ich hätte gern das Schnitzel mit Pommes.</span> <span class=\"tr\">I'd like the schnitzel with fries.</span></li>\n<li><span class=\"de\">Ich nehme die Suppe als Vorspeise.</span> <span class=\"tr\">I'll have the soup as a starter.</span></li>\n<li><span class=\"de\">Möchten Sie einen Nachtisch? — Nein danke, die Rechnung bitte.</span> <span class=\"tr\">Would you like a dessert? — No thanks, the bill please.</span></li>\n<li><span class=\"de\">Zusammen oder getrennt? — Getrennt, bitte.</span> <span class=\"tr\">Together or separate? — Separate, please.</span></li>\n</ol>\n</details>",
+      "sourceHash": "fd5b157def887d5ca9b1a5d692683b1f37cbbdc3fa309dd9a85e6dbffffb0152"
+    },
+    {
+      "id": "d12-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Im Restaurant",
+      "html": "<details><summary>🗣 Dialogue: Im Restaurant</summary>\n<div class=\"dlg\">\n<p><b>Kellner:</b> <span class=\"de\">Guten Abend! Was möchten Sie trinken?</span> <span class=\"tr\">(Good evening! What would you like to drink?)</span></p>\n<p><b>Gast:</b> <span class=\"de\">Ich hätte gern ein Mineralwasser und einen Wein, bitte.</span> <span class=\"tr\">(I'd like a sparkling water and a wine, please.)</span></p>\n<p><b>Kellner:</b> <span class=\"de\">Gern. Und zu essen?</span> <span class=\"tr\">(Gladly. And to eat?)</span></p>\n<p><b>Gast:</b> <span class=\"de\">Ich nehme das Schnitzel mit Pommes. Und als Vorspeise eine Suppe.</span> <span class=\"tr\">(I'll have the schnitzel with fries. And a soup as starter.)</span></p>\n<p><b>Kellner:</b> <span class=\"de\">Sehr gern. ... Guten Appetit!</span> <span class=\"tr\">(Very well. ... Enjoy your meal!)</span></p>\n<p><b>Gast:</b> <span class=\"de\">Danke! ... Entschuldigung, zahlen bitte!</span> <span class=\"tr\">(Thanks! ... Excuse me, the bill please!)</span></p>\n<p><b>Kellner:</b> <span class=\"de\">Das macht 24 Euro 50.</span> <span class=\"tr\">(That's €24.50.)</span></p>\n<p><b>Gast:</b> <span class=\"de\">26, bitte. Stimmt so!</span> <span class=\"tr\">(26, please. Keep the change!)</span></p>\n</div>\n<div class=\"tip\">💡 Tipping in Germany: round up ~5–10% and SAY the total you're paying (\"26, bitte\") — you don't leave coins on the table.</div>\n</details>",
+      "sourceHash": "2db3ff3678b5291e121b1df9b8532d0fff5fe7196b710487ade495aa2b440ba9"
+    },
+    {
+      "id": "d12-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Role-play the whole dialogue alone — both roles, aloud, twice.</li>\n<li>Order 5 different things: <span class=\"de\">Ich hätte gern ... / Ich nehme ...</span> — remember: einen Salat (m!), eine Suppe, ein Wasser.</li>\n<li>Practice the bill: <span class=\"de\">Zahlen bitte! Getrennt, bitte. Stimmt so!</span></li>\n</ol>\n</details>",
+      "sourceHash": "50ac63b6b61d125c97c616f1c7a63dbd22bd9871b1188cd7ca1b3e9af53172b6"
+    },
+    {
+      "id": "d12-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"ordering food in German restaurant dialogue\"</b> — listen to 2–3 versions.</li>\n<li><b>Nicos Weg A1</b> — the restaurant/café episodes.</li>\n<li>Coffee Break German has an episode on ordering — great pronunciation drills.</li>\n</ul>\n</details>",
+      "sourceHash": "9e555786ad89d8c460de2e4588429f28a6a3e5a38569685c7813930ebf63cd24"
+    },
+    {
+      "id": "d12-s7",
+      "type": "reading",
+      "title": "📰 Reading practice — die Speisekarte",
+      "html": "<details><summary>📰 Reading practice — die Speisekarte</summary>\n<table>\n<tr><th colspan=\"2\" style=\"text-align:center\">🍴 Gasthaus Sonne — Speisekarte</th></tr>\n<tr><td class=\"de\">Tomatensuppe</td><td>4,50 €</td></tr>\n<tr><td class=\"de\">Salat mit Ei</td><td>6,90 €</td></tr>\n<tr><td class=\"de\">Schnitzel mit Pommes</td><td>13,50 €</td></tr>\n<tr><td class=\"de\">Fisch mit Kartoffeln</td><td>15,00 €</td></tr>\n<tr><td class=\"de\">Nudeln mit Gemüse (vegetarisch)</td><td>10,90 €</td></tr>\n<tr><td class=\"de\">Eis mit Obst (Nachtisch)</td><td>5,50 €</td></tr>\n</table>\n<ol>\n<li>What can a vegetarian eat as a main course?</li>\n<li>You order soup, fish and dessert. What do you pay?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Nudeln mit Gemüse (also Salat mit Ei, Tomatensuppe). 2. 4,50 + 15,00 + 5,50 = 25,00 € — say it: fünfundzwanzig Euro.</p></details>\n</details>",
+      "sourceHash": "65ee2322063fef1019d2ee3c00c048347e3fd735cc9646bbdf5a92ac981b7c09"
+    },
+    {
+      "id": "d12-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write your own restaurant dialogue (8–10 lines): greeting, drink order, food order, Guten Appetit, bill, tip. Use möchten, hätte gern and nehmen at least once each.</p>\n</details>",
+      "sourceHash": "f8461a5bff3472f49f56b2e313390a7fa04c77a2f25a422630dfeb74cc19ff46"
+    },
+    {
+      "id": "d12-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">ich ___ , du ___ (möchten)</span></li>\n<li>Politely order a coffee (two different ways).</li>\n<li>Ask for the bill (two ways).</li>\n<li>What does <span class=\"de\">Zusammen oder getrennt?</span> mean?</li>\n<li>Word order: rearrange \"möchte / Suppe / ich / eine / essen\".</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>möchte, möchtest</li><li>Ich möchte einen Kaffee(, bitte). / Ich hätte gern einen Kaffee.</li><li>Die Rechnung, bitte! / Zahlen, bitte!</li><li>Are you paying together or separately?</li><li>Ich möchte eine Suppe essen. (second verb at the end)</li></ol>\n</details>\n</details>",
+      "sourceHash": "b61273b36ae488ea67f5b04c373be21b841cb3d540895644b91b9612fc82c9fa"
+    },
+    {
+      "id": "d12-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">menu</span><span class=\"a\">die Speisekarte</span></div>\n<div class=\"fc\"><span class=\"q\">to order</span><span class=\"a\">bestellen</span></div>\n<div class=\"fc\"><span class=\"q\">the bill</span><span class=\"a\">die Rechnung</span></div>\n<div class=\"fc\"><span class=\"q\">I would like...</span><span class=\"a\">Ich möchte... / Ich hätte gern...</span></div>\n<div class=\"fc\"><span class=\"q\">I'll have the soup</span><span class=\"a\">Ich nehme die Suppe</span></div>\n<div class=\"fc\"><span class=\"q\">Enjoy your meal!</span><span class=\"a\">Guten Appetit!</span></div>\n<div class=\"fc\"><span class=\"q\">Keep the change!</span><span class=\"a\">Stimmt so!</span></div>\n<div class=\"fc\"><span class=\"q\">dinner</span><span class=\"a\">das Abendessen</span></div>\n</div>\n</details>",
+      "sourceHash": "6c8b8dc30c598cd2eb4c871b804e400fb764c32e8cbc8b8a4e9c08c5216f73e1"
+    },
+    {
+      "id": "d12-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Find a real German restaurant menu online (search \"Speisekarte Berlin\"). Read it; note 5 new dishes.</li>\n<li>Perform your written dialogue aloud from memory.</li>\n</ol>\n</details>",
+      "sourceHash": "ad281ca51dbaada7a0c9ed529f2b8d5eb300bf87f603b9c6ce4caa589241a699"
+    },
+    {
+      "id": "d12-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 10–11)",
+      "html": "<details><summary>🔄 Revision (Days 10–11)</summary>\n<ul>\n<li>kein vs nicht: negate \"Ich habe Hunger\", \"Das ist gut\", \"Ich trinke Wein\".</li>\n<li>Accusative: ich möchte ein__ Salat (m), ein__ Suppe (f), ein__ Eis (n). (einen, eine, ein)</li>\n</ul>\n</details>",
+      "sourceHash": "be15214bc0b5bab3ae658f0c45dc8645f649ed4ff63c81ecea2b8828d366b3b2"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"12\"> ✅ Mark Day 12 complete</label>"
+}

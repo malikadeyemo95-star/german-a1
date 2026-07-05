@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "day": 7,
+  "title": "Day 7 — Week 1 Review + Test 1",
+  "goal": "🎯 Consolidate everything from Days 1–6, then take Test 1. Target: 80% or higher.",
+  "sourceHash": "96f7b31aa6289f42bc6c706a3047f0ba894f3f94cf04641ba7a7c79a34c59e88",
+  "introHtml": "<h2>Day 7 · Week 1 Review &amp; Test 1 🏁</h2>\n<p class=\"goal\">🎯 Consolidate everything from Days 1–6, then take Test 1. Target: 80% or higher.</p>",
+  "sections": [
+    {
+      "id": "d7-s1",
+      "type": "lesson",
+      "title": "🔄 Week 1 summary — what you should now know",
+      "html": "<details open><summary>🔄 Week 1 summary — what you should now know</summary>\n<ul>\n<li><b>Pronunciation:</b> W=v, V=f, J=y, Z=ts, ei=\"eye\", ie=\"ee\", eu=\"oy\", sch=\"sh\", ch (soft/hard), ä ö ü ß.</li>\n<li><b>Verbs:</b> sein, haben, werden (irregular) + the regular pattern e/st/t/en/t/en + arbeiten (-est/-et) + sprechen (du sprichst).</li>\n<li><b>Pronouns:</b> ich, du, er/sie/es, wir, ihr, sie/Sie + possessives mein/dein/sein/ihr/unser/euer/Ihr.</li>\n<li><b>Questions:</b> W-questions (wer, was, wo, woher, wie, wann, warum) and yes/no questions (verb first).</li>\n<li><b>Topics:</b> greetings, introductions, numbers 0–100, age, phone numbers, countries, languages, jobs, family.</li>\n</ul>\n<p>Spend 45–60 minutes reviewing before the test: re-read grammar boxes from Days 2–6, and run through ALL flashcards from the week.</p>\n</details>",
+      "sourceHash": "2c38fdcad93952aa023559e1fbba3d3cf2d1b5724fcec222aab2abc528787e26"
+    },
+    {
+      "id": "d7-s2",
+      "type": "writing",
+      "title": "📝 TEST 1 (40 points — do it in writing, no peeking!)",
+      "html": "<details><summary>📝 TEST 1 (40 points — do it in writing, no peeking!)</summary>\n<h3>Part A: Verbs (10 pts)</h3>\n<p>Fill in the correct form:</p>\n<ol>\n<li><span class=\"de\">Ich ___ (sein) müde.</span></li>\n<li><span class=\"de\">Du ___ (haben) Hunger.</span></li>\n<li><span class=\"de\">Er ___ (werden) Arzt.</span></li>\n<li><span class=\"de\">Wir ___ (wohnen) in Berlin.</span></li>\n<li><span class=\"de\">Ihr ___ (sein) nett.</span></li>\n<li><span class=\"de\">Sie (they) ___ (kommen) aus Spanien.</span></li>\n<li><span class=\"de\">Du ___ (arbeiten) viel.</span></li>\n<li><span class=\"de\">Sie (she) ___ (sprechen) Englisch.</span></li>\n<li><span class=\"de\">Ich ___ (lernen) Deutsch.</span></li>\n<li><span class=\"de\">Ihr ___ (haben) Zeit.</span></li>\n</ol>\n<h3>Part B: Numbers (5 pts)</h3>\n<p>Write in words: 14 · 40 · 26 · 73 · 100</p>\n<h3>Part C: Questions (5 pts)</h3>\n<p>Write the question for each answer:</p>\n<ol>\n<li>___? — Ich heiße Anna.</li>\n<li>___? — Ich komme aus Italien.</li>\n<li>___? — Ich bin 30 Jahre alt.</li>\n<li>___? — Ich wohne in Hamburg.</li>\n<li>___? — Ja, ich habe eine Schwester.</li>\n</ol>\n<h3>Part D: Possessives (5 pts)</h3>\n<ol>\n<li>my father = ___</li>\n<li>her mother = ___</li>\n<li>his sister = ___</li>\n<li>our children = ___</li>\n<li>your (formal) name = ___</li>\n</ol>\n<h3>Part E: Reading (5 pts)</h3>\n<p class=\"de\">Hallo! Ich bin David. Ich komme aus England, aber ich wohne jetzt in Frankfurt. Ich bin 34 Jahre alt und ich arbeite als Ingenieur bei einer Firma. Meine Frau heißt Claudia. Sie ist Lehrerin. Wir haben zwei Kinder.</p>\n<ol>\n<li>Where does David live now?</li>\n<li>How old is he?</li>\n<li>What is his job?</li>\n<li>What is his wife's job?</li>\n<li>How many children do they have?</li>\n</ol>\n<h3>Part F: Writing (10 pts)</h3>\n<p>Write 8–10 sentences introducing yourself: name, age, country, city, languages, job, family. Use sein, haben, and at least two possessives.</p>\n</details>",
+      "sourceHash": "2ffde3fc81dc4244f71386a1af629850c9f4ba32ed1fdfc36d61e2a0b4526ec9"
+    },
+    {
+      "id": "d7-s3",
+      "type": "quiz",
+      "title": "🔑 TEST 1 — Answer key",
+      "html": "<details class=\"key\"><summary>🔑 TEST 1 — Answer key</summary>\n<h3>Part A</h3><p class=\"de\">1. bin · 2. hast · 3. wird · 4. wohnen · 5. seid · 6. kommen · 7. arbeitest · 8. spricht · 9. lerne · 10. habt</p>\n<h3>Part B</h3><p class=\"de\">vierzehn · vierzig · sechsundzwanzig · dreiundsiebzig · (ein)hundert</p>\n<h3>Part C</h3><p class=\"de\">1. Wie heißt du? / Wie heißen Sie? · 2. Woher kommst du? · 3. Wie alt bist du? · 4. Wo wohnst du? · 5. Hast du Geschwister? (or: Hast du eine Schwester?)</p>\n<h3>Part D</h3><p class=\"de\">1. mein Vater · 2. ihre Mutter · 3. seine Schwester · 4. unsere Kinder · 5. Ihr Name</p>\n<h3>Part E</h3><p>1. Frankfurt · 2. 34 · 3. Engineer · 4. Teacher · 5. Two</p>\n<h3>Part F</h3><p>Self-check: every verb matches its subject? Nouns capitalized? Verb in position 2 of each statement? Award 1 pt per correct sentence, max 10.</p>\n<h3>Scoring</h3><p>36–40: Excellent! · 30–35: Good, review your weak part · Below 30: repeat the grammar boxes of Days 2–6 today, retake the test tomorrow morning before Day 8.</p>\n</details>",
+      "sourceHash": "b1aa78ecc914e77a9a5bd2bf142700e22657c138826274963bfac48337478317"
+    },
+    {
+      "id": "d7-s4",
+      "type": "speaking",
+      "title": "🎤 Speaking + 🎧 Listening today",
+      "html": "<details><summary>🎤 Speaking + 🎧 Listening today</summary>\n<ul>\n<li><b>Speaking:</b> record a 60-second self-introduction on your phone. Listen back. Re-record until you're happy.</li>\n<li><b>Listening:</b> rewatch Nicos Weg episodes 1–6 WITHOUT subtitles. Notice how much more you catch now.</li>\n</ul>\n</details>",
+      "sourceHash": "4e2ddd973a6a80082cea98d6c436d0e999fbca62482e549055e3349f8b6c5803"
+    },
+    {
+      "id": "d7-s5",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Make a \"problem list\": every word or form you got wrong today goes on it. Review it tomorrow morning.</li>\n<li>Reward yourself — one week of German done! 🎉</li>\n</ol>\n</details>",
+      "sourceHash": "d0312ff48f5f7dce73d6c195918961c5cd8f8816a295463227bf09038de00993"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"7\"> ✅ Mark Day 7 complete</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 3,
+  "title": "Day 3 — Numbers 0–100 · haben",
+  "goal": "🎯 Today you can count to 100, say your age and phone number, and use haben (to have).",
+  "sourceHash": "aaab19406898ca614cda1b9aae4c9f7197273067baf902138a16b6593d53496f",
+  "introHtml": "<h2>Day 3 · Numbers 0–100 &amp; the Verb <i>haben</i></h2>\n<p class=\"goal\">🎯 Today you can count to 100, say your age and phone number, and use <b>haben</b> (to have).</p>",
+  "sections": [
+    {
+      "id": "d3-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The verb <i>haben</i> (to have) — the 2nd most important verb</h3>\n<table>\n<tr><td class=\"de\">ich habe</td><td>I have</td><td class=\"de\">wir haben</td><td>we have</td></tr>\n<tr><td class=\"de\">du hast</td><td>you have</td><td class=\"de\">ihr habt</td><td>you all have</td></tr>\n<tr><td class=\"de\">er/sie/es hat</td><td>he/she/it has</td><td class=\"de\">sie/Sie haben</td><td>they/you(formal) have</td></tr>\n</table>\n<div class=\"tip\">💡 Germans <b>have</b> hunger, thirst and time: <span class=\"de\">Ich habe Hunger / Durst / Zeit</span>. But age uses <b>sein</b>: <span class=\"de\">Ich bin 30 (Jahre alt)</span>.</div>\n<h3>2. Numbers 0–20 (memorize these)</h3>\n<table>\n<tr><td class=\"de\">0 null</td><td class=\"de\">1 eins</td><td class=\"de\">2 zwei</td><td class=\"de\">3 drei</td></tr>\n<tr><td class=\"de\">4 vier</td><td class=\"de\">5 fünf</td><td class=\"de\">6 sechs</td><td class=\"de\">7 sieben</td></tr>\n<tr><td class=\"de\">8 acht</td><td class=\"de\">9 neun</td><td class=\"de\">10 zehn</td><td class=\"de\">11 elf</td></tr>\n<tr><td class=\"de\">12 zwölf</td><td class=\"de\">13 dreizehn</td><td class=\"de\">14 vierzehn</td><td class=\"de\">15 fünfzehn</td></tr>\n<tr><td class=\"de\">16 sechzehn</td><td class=\"de\">17 siebzehn</td><td class=\"de\">18 achtzehn</td><td class=\"de\">19 neunzehn</td></tr>\n<tr><td class=\"de\">20 zwanzig</td><td colspan=\"3\">⚠️ note: sech<b>zehn</b> (no -s), sieb<b>zehn</b> (no -en)</td></tr>\n</table>\n<h3>3. Tens + the famous \"backwards\" rule</h3>\n<table>\n<tr><td class=\"de\">30 dreißig</td><td class=\"de\">40 vierzig</td><td class=\"de\">50 fünfzig</td><td class=\"de\">60 sechzig</td></tr>\n<tr><td class=\"de\">70 siebzig</td><td class=\"de\">80 achtzig</td><td class=\"de\">90 neunzig</td><td class=\"de\">100 (ein)hundert</td></tr>\n</table>\n<p>Two-digit numbers say the <b>unit first</b>, joined by <i>und</i>:</p>\n<ul>\n<li>21 = <span class=\"de\">einundzwanzig</span> (\"one-and-twenty\")</li>\n<li>35 = <span class=\"de\">fünfunddreißig</span> (\"five-and-thirty\")</li>\n<li>99 = <span class=\"de\">neunundneunzig</span> (\"nine-and-ninety\")</li>\n</ul>\n<div class=\"warn\">⚠️ English speakers hear \"vierundzwanzig\" and write 42. Wrong — it's 24! Unit first, always.</div>\n</details>",
+      "sourceHash": "86dda43fcf1fd3f2af4678e3921b7d1c0a77efaf9f7f0083825d560993dc8940"
+    },
+    {
+      "id": "d3-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (12 items)",
+      "html": "<details><summary>📚 Vocabulary (12 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">die Nummer</td><td>number</td></tr>\n<tr><td class=\"de\">die Telefonnummer</td><td>phone number</td></tr>\n<tr><td class=\"de\">die Handynummer</td><td>mobile number</td></tr>\n<tr><td class=\"de\">Wie alt bist du? / Wie alt sind Sie?</td><td>How old are you?</td></tr>\n<tr><td class=\"de\">Ich bin ... Jahre alt.</td><td>I am ... years old.</td></tr>\n<tr><td class=\"de\">das Jahr</td><td>year</td></tr>\n<tr><td class=\"de\">alt</td><td>old</td></tr>\n<tr><td class=\"de\">jung</td><td>young</td></tr>\n<tr><td class=\"de\">der Hunger / der Durst</td><td>hunger / thirst</td></tr>\n<tr><td class=\"de\">die Zeit</td><td>time</td></tr>\n<tr><td class=\"de\">viel / wenig</td><td>much, a lot / little</td></tr>\n<tr><td class=\"de\">oder</td><td>or</td></tr>\n</table>\n</details>",
+      "sourceHash": "c6ca180a6bf196935e19874334674197eaa7d145fc2266b5c13a897e268e4b26"
+    },
+    {
+      "id": "d3-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich bin dreißig Jahre alt.</span> <span class=\"tr\">I am 30 years old.</span></li>\n<li><span class=\"de\">Wie alt bist du? — Ich bin einundzwanzig.</span> <span class=\"tr\">How old are you? — I'm 21.</span></li>\n<li><span class=\"de\">Meine Telefonnummer ist null-eins-sieben-zwei...</span> <span class=\"tr\">My phone number is 0172...</span></li>\n<li><span class=\"de\">Ich habe Hunger und Durst.</span> <span class=\"tr\">I'm hungry and thirsty.</span></li>\n<li><span class=\"de\">Hast du Zeit? — Nein, ich habe wenig Zeit.</span> <span class=\"tr\">Do you have time? — No, I have little time.</span></li>\n<li><span class=\"de\">Er hat zwei Handys.</span> <span class=\"tr\">He has two mobile phones.</span></li>\n</ol>\n</details>",
+      "sourceHash": "9737cbee0afff28c01193ed06326c33400158b4568d29b77ebefd73c060523e1"
+    },
+    {
+      "id": "d3-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Die Handynummer",
+      "html": "<details><summary>🗣 Dialogue: Die Handynummer</summary>\n<div class=\"dlg\">\n<p><b>Lena:</b> <span class=\"de\">Tom, hast du ein Handy?</span> <span class=\"tr\">(Tom, do you have a mobile?)</span></p>\n<p><b>Tom:</b> <span class=\"de\">Ja, klar.</span> <span class=\"tr\">(Yes, of course.)</span></p>\n<p><b>Lena:</b> <span class=\"de\">Wie ist deine Handynummer?</span> <span class=\"tr\">(What's your mobile number?)</span></p>\n<p><b>Tom:</b> <span class=\"de\">Null-eins-fünf-sieben, drei-acht, zwei-neun, vier-sechs.</span> <span class=\"tr\">(0157 38 29 46)</span></p>\n<p><b>Lena:</b> <span class=\"de\">Danke! Und wie alt bist du?</span> <span class=\"tr\">(Thanks! And how old are you?)</span></p>\n<p><b>Tom:</b> <span class=\"de\">Ich bin fünfundzwanzig. Und du?</span> <span class=\"tr\">(I'm 25. And you?)</span></p>\n<p><b>Lena:</b> <span class=\"de\">Ich bin dreiundzwanzig.</span> <span class=\"tr\">(I'm 23.)</span></p>\n</div>\n</details>",
+      "sourceHash": "530d1a39ab1872019ddef9de871ef88333ccfa49abf65796ff304c602ca676e4"
+    },
+    {
+      "id": "d3-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Count aloud 1–20, then by tens to 100 (zehn, zwanzig, dreißig...).</li>\n<li>Say your real phone number in German, digit by digit. Three times, faster each time.</li>\n<li>Say the ages of 5 people you know: <span class=\"de\">Meine Mutter ist ...</span></li>\n<li>Conjugate <b>haben</b> aloud from memory, 3 rounds.</li>\n<li>Random drill: say these aloud: 17, 24, 42, 66, 89, 31, 55, 98.</li>\n</ol>\n</details>",
+      "sourceHash": "abc1d0c3507f491be6a0fb2a2866be07db75365fa29c5ecac4f07d3322cebbab"
+    },
+    {
+      "id": "d3-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"German numbers 1-100\"</b> — listen and repeat.</li>\n<li>Have a translator app speak random numbers; write down the digits you hear. Especially practice pairs like 24/42, 67/76.</li>\n<li><b>Nicos Weg A1</b> — continue with the next 2 episodes.</li>\n</ul>\n</details>",
+      "sourceHash": "99ccfc08e5f2f0fbe78bb6aba2af45fe40ea95819c34311962317cbe59fe6f64"
+    },
+    {
+      "id": "d3-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Das ist Emma. Sie ist achtundzwanzig Jahre alt. Ihre Telefonnummer ist null-drei-null, zwölf, fünfundvierzig, achtundsechzig. Emma hat viel Zeit, aber sie hat Hunger.</p>\n<ol>\n<li>How old is Emma? (write the digits)</li>\n<li>Write her phone number in digits.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. 28. 2. 030 12 45 68. Bonus: she has lots of time but is hungry.</p></details>\n</details>",
+      "sourceHash": "32625903902c8ac8b69e80a2138a4aea2fd4d68e6f16b51e146393b7700155e0"
+    },
+    {
+      "id": "d3-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<ol>\n<li>Write out in words: 3, 7, 12, 16, 21, 34, 58, 77, 92, 100.</li>\n<li>Write 3 sentences about yourself using <b>haben</b> and your age using <b>sein</b>.</li>\n</ol>\n</details>",
+      "sourceHash": "063ce55b168182f4d4e0a9c41cabbd613dac13811a641493fb87588b3afbe34a"
+    },
+    {
+      "id": "d3-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li><span class=\"de\">siebenundsechzig</span> = ? (digits)</li>\n<li>Write 48 in German words.</li>\n<li>Fill in: <span class=\"de\">du ___ (haben) Hunger.</span></li>\n<li>Fill in: <span class=\"de\">er ___ (haben) kein Handy.</span></li>\n<li>\"I am 25 years old\" — sein or haben? Write the sentence.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>67</li><li>achtundvierzig</li><li>hast</li><li>hat</li><li>sein: Ich bin fünfundzwanzig Jahre alt.</li></ol>\n</details>\n</details>",
+      "sourceHash": "62289adb94cb8bc97f10d649de29d70e4a2b366841910ec859415c138943cf45"
+    },
+    {
+      "id": "d3-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I have</span><span class=\"a\">ich habe</span></div>\n<div class=\"fc\"><span class=\"q\">you have</span><span class=\"a\">du hast</span></div>\n<div class=\"fc\"><span class=\"q\">she has</span><span class=\"a\">sie hat</span></div>\n<div class=\"fc\"><span class=\"q\">21</span><span class=\"a\">einundzwanzig</span></div>\n<div class=\"fc\"><span class=\"q\">17</span><span class=\"a\">siebzehn</span></div>\n<div class=\"fc\"><span class=\"q\">100</span><span class=\"a\">(ein)hundert</span></div>\n<div class=\"fc\"><span class=\"q\">How old are you?</span><span class=\"a\">Wie alt bist du?</span></div>\n<div class=\"fc\"><span class=\"q\">I'm hungry</span><span class=\"a\">Ich habe Hunger</span></div>\n</div>\n</details>",
+      "sourceHash": "89efe30c8fd158603aa3b232ff599642c4c0f9d307e9dd85c686b5598f9a123a"
+    },
+    {
+      "id": "d3-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Whenever you see a number today (prices, clock, license plates), say it in German.</li>\n<li>Write the haben table by hand twice from memory.</li>\n<li>Learn numbers 13–19 vs 30–90 until you never confuse <i>vierzehn</i> (14) and <i>vierzig</i> (40).</li>\n</ol>\n</details>",
+      "sourceHash": "ba4b4392bed0eea3fa05bff8150cca5d8ebd79394354766b95615364d893fcec"
+    },
+    {
+      "id": "d3-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 1–2)",
+      "html": "<details><summary>🔄 Revision (Days 1–2)</summary>\n<ul>\n<li>Conjugate <b>sein</b> aloud without looking.</li>\n<li>Do all Day 1 + Day 2 flashcards. Any card you miss: say it in a full sentence.</li>\n<li>Greet yourself appropriately for the current time of day. 😄</li>\n</ul>\n</details>",
+      "sourceHash": "7e9deb22ab6b73c069a28887271b72b472babbc3e18d940b0c80dce1807380b7"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"3\"> ✅ Mark Day 3 complete</label>"
+}

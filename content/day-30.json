@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "day": 30,
+  "title": "Day 30 — Final A1 Mock Exam",
+  "goal": "🎯 A full exam simulation. Take it seriously: quiet room, timer on, no dictionary. Pass mark: 60%.",
+  "sourceHash": "8016a91d064407a3caa37cc76bf8dcfd53c8a1903d69bdc452285b8c34cc512c",
+  "introHtml": "<h2>Day 30 · 🏆 Final A1 Mock Exam</h2>\n<p class=\"goal\">🎯 A full exam simulation. Take it seriously: quiet room, timer on, no dictionary. Pass mark: 60%.</p>",
+  "sections": [
+    {
+      "id": "d30-s1",
+      "type": "quiz",
+      "title": "📋 How to run your mock exam",
+      "html": "<details open><summary>📋 How to run your mock exam</summary>\n<ol>\n<li><b>Hören</b> (20 min): the audio scripts are below. Have your phone's text-to-speech or a translator app read each script aloud twice (or a friend read them). Don't peek at the script while listening!</li>\n<li><b>Lesen</b> (25 min), <b>Schreiben</b> (20 min): work on paper, with a timer.</li>\n<li><b>Sprechen</b> (15 min): record yourself on your phone.</li>\n<li>Then open the answer key, mark yourself, and read \"What's next\".</li>\n</ol>\n</details>",
+      "sourceHash": "e5e998bd126542260925a74cdcf2e3765a47cca3151eb50a8d970cdee60b3d0a"
+    },
+    {
+      "id": "d30-s2",
+      "type": "listening",
+      "title": "🎧 TEIL 1: HÖREN (15 points)",
+      "html": "<details><summary>🎧 TEIL 1: HÖREN (15 points)</summary>\n<h3>Script A (play twice, then answer)</h3>\n<p class=\"de\" style=\"background:var(--raise);padding:10px;border-radius:8px\">„Guten Tag, hier ist die Praxis Dr. Winter. Ihr Termin am Donnerstag um 14:30 Uhr ist leider nicht möglich. Können Sie am Freitag um 9 Uhr kommen? Bitte rufen Sie uns an: 030 – 44 55 82. Danke und auf Wiederhören!\"</p>\n<ol>\n<li>Who is calling? a) a school b) a doctor's office c) a restaurant</li>\n<li>The Thursday appointment is... a) confirmed b) cancelled/not possible c) earlier</li>\n<li>The new suggested time is: a) Fri 9:00 b) Fri 14:30 c) Thu 9:00</li>\n<li>Write the phone number: ___</li>\n</ol>\n<h3>Script B</h3>\n<p class=\"de\" style=\"background:var(--raise);padding:10px;border-radius:8px\">„Information für alle Reisenden: Der Zug nach Frankfurt, Abfahrt 16:20 Uhr, fährt heute von Gleis 7 ab, nicht von Gleis 3. Ich wiederhole: Gleis 7.\"</p>\n<ol start=\"5\">\n<li>The train goes to: ___</li>\n<li>Which platform today? a) 3 b) 7 c) 16</li>\n</ol>\n<h3>Script C</h3>\n<p class=\"de\" style=\"background:var(--raise);padding:10px;border-radius:8px\">„Hallo Marco, hier ist Tina! Wir gehen am Samstag ins Kino. Der Film beginnt um halb neun. Wir treffen uns um acht Uhr vor dem Kino. Kommst du mit? Ruf mich an!\"</p>\n<ol start=\"7\">\n<li>What's the plan? a) restaurant b) cinema c) concert</li>\n<li>The film starts at: a) 8:00 b) 8:30 c) 9:30</li>\n<li>They meet: a) at 8 in front of the cinema b) at 8:30 inside c) at 9 at Tina's</li>\n</ol>\n<p>(Scoring: Q1–3, 5–9 = 1.5 pts each; Q4 = 3 pts)</p>\n</details>",
+      "sourceHash": "fc6eb86ee55490e5f54590cb59170b8de21b3b01d1fb9089b7bbfb1fb2cabf24"
+    },
+    {
+      "id": "d30-s3",
+      "type": "reading",
+      "title": "📖 TEIL 2: LESEN (15 points)",
+      "html": "<details><summary>📖 TEIL 2: LESEN (15 points)</summary>\n<h3>Text A — Richtig (true) oder Falsch (false)? (6 pts)</h3>\n<p class=\"de\">Hallo Ceyda, am Samstag mache ich eine Party — ich werde 30! Die Party beginnt um 19 Uhr bei mir zu Hause (Gartenstraße 12). Du musst nichts mitbringen, ich koche für alle. Aber sag mir bitte bis Donnerstag: Kommst du? Liebe Grüße, Selma</p>\n<ol>\n<li>Selma hat am Samstag Geburtstag. (R/F)</li>\n<li>Die Party ist in einem Restaurant. (R/F)</li>\n<li>Ceyda soll Essen mitbringen. (R/F)</li>\n<li>Ceyda soll bis Donnerstag antworten. (R/F)</li>\n</ol>\n<h3>Text B — Ads: which fits? (5 pts)</h3>\n<p><b>Situation:</b> You look for a flat for 2 people, max €800 warm, in the centre.</p>\n<p class=\"de\">Anzeige 1: 1-Zi.-Whg., 30 m², zentral, 550 € warm. — Anzeige 2: 3-Zi.-Whg., 80 m², Zentrum, 790 € warm. — Anzeige 3: 2-Zi.-Whg., ruhig, am Stadtrand, 700 € warm.</p>\n<ol start=\"5\">\n<li>Which ad fits best — 1, 2 or 3? Why (one sentence)?</li>\n</ol>\n<h3>Text C — Signs (4 pts): what does each mean?</h3>\n<ol start=\"6\">\n<li class=\"de\">Geöffnet Mo–Sa 9–20 Uhr, Sonntag geschlossen.</li>\n<li class=\"de\">Kasse 2 bitte — Kasse 1 ist heute geschlossen.</li>\n<li class=\"de\">Bitte hier warten. Nummer ziehen!</li>\n<li class=\"de\">Notausgang — Tür nur im Notfall öffnen!</li>\n</ol>\n</details>",
+      "sourceHash": "b86601ddf5ad76e7e677e2aabc9d7c3fa451a0ecf3c8d2fe1965ba7c05c3baa9"
+    },
+    {
+      "id": "d30-s4",
+      "type": "writing",
+      "title": "✍️ TEIL 3: SCHREIBEN (15 points)",
+      "html": "<details><summary>✍️ TEIL 3: SCHREIBEN (15 points)</summary>\n<h3>Task 1 (5 pts): Fill in the form for your friend</h3>\n<p class=\"de\">Ihre Freundin: Ana Silva aus Portugal, geboren am 14.03.1995 in Porto, wohnt in der Hauptstraße 8, 80331 München, ledig, Telefonnummer 0176 5544332.</p>\n<table>\n<tr><td class=\"de\">Nachname:</td><td>___</td><td class=\"de\">Vorname:</td><td>___</td></tr>\n<tr><td class=\"de\">Geburtsdatum:</td><td>___</td><td class=\"de\">Geburtsort:</td><td>___</td></tr>\n<tr><td class=\"de\">Staatsangehörigkeit:</td><td>___</td><td class=\"de\">Familienstand:</td><td>___</td></tr>\n<tr><td class=\"de\">Adresse:</td><td colspan=\"3\">___</td></tr>\n</table>\n<h3>Task 2 (10 pts): Write ~30 words to your friend Jonas</h3>\n<p>Cover ALL three points: 1) thank him for the invitation to his party, 2) say you're coming and when you arrive, 3) ask if you can bring something.</p>\n</details>",
+      "sourceHash": "2218e97a12ce3af8d16446d9bba1a1580dcb0acf4c02dd13948bc7c4d82845ff"
+    },
+    {
+      "id": "d30-s5",
+      "type": "speaking",
+      "title": "🗣 TEIL 4: SPRECHEN (15 points) — record yourself!",
+      "html": "<details><summary>🗣 TEIL 4: SPRECHEN (15 points) — record yourself!</summary>\n<ol>\n<li><b>Sich vorstellen (5 pts):</b> introduce yourself — Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby. Then spell your surname and say your phone number.</li>\n<li><b>Fragen und Antworten (5 pts):</b> topic \"Tagesablauf\" (daily routine). Ask 3 questions AND answer them yourself (e.g. Wann stehst du auf? — Ich stehe um ... auf).</li>\n<li><b>Bitten formulieren (5 pts):</b> make these requests politely in German: a) ask someone to close the window, b) ask for a glass of water, c) ask someone to speak more slowly.</li>\n</ol>\n</details>",
+      "sourceHash": "84d2f9106271528b9665d88a6f0372a2ff28bf3532eee7f9a83d87a65b300cfa"
+    },
+    {
+      "id": "d30-s6",
+      "type": "quiz",
+      "title": "🔑 MOCK EXAM — Complete answer key",
+      "html": "<details class=\"key\"><summary>🔑 MOCK EXAM — Complete answer key</summary>\n<h3>Hören</h3>\n<p>1. b · 2. b · 3. a · 4. 030 445582 · 5. Frankfurt · 6. b · 7. b · 8. b (halb neun = 8:30!) · 9. a</p>\n<h3>Lesen</h3>\n<p>1. R (sie wird 30 — her birthday party; accept R; the party is Saturday) · 2. F (bei ihr zu Hause) · 3. F (sie muss nichts mitbringen) · 4. R · 5. Anzeige 2 — im Zentrum, groß genug für 2, unter 800 € (Anzeige 3 is not central; Anzeige 1 too small) · 6. Open Mon–Sat 9–20, closed Sunday · 7. Use checkout 2; checkout 1 closed today · 8. Wait here, take a queue number · 9. Emergency exit — open only in an emergency</p>\n<h3>Schreiben Task 1</h3>\n<p class=\"de\">Silva · Ana · 14.03.1995 · Porto · portugiesisch · ledig · Hauptstraße 8, 80331 München</p>\n<h3>Schreiben Task 2 — model answer</h3>\n<p class=\"de\">Lieber Jonas, vielen Dank für die Einladung zu deiner Party! Ich komme gern und bin um 19 Uhr da. Soll ich etwas mitbringen — vielleicht einen Salat oder Getränke? Viele Grüße, [Name]</p>\n<p>Marking: 3 pts per bullet point covered + 1 pt greeting/sign-off. Small grammar errors don't fail you if the message is clear!</p>\n<h3>Sprechen self-check</h3>\n<p>Listen to your recording: Did you cover all 7 intro points? Verb always second? Requests with \"Können Sie / Kannst du bitte...\"? 5 pts each part, minus 1 per missing element.</p>\n<h3>Your result</h3>\n<table>\n<tr><td>54–60 pts (90%+)</td><td>🥇 Outstanding — book a real A1 exam this month!</td></tr>\n<tr><td>42–53 pts (70–89%)</td><td>🥈 Clear pass — polish weak spots for a week, then book the exam.</td></tr>\n<tr><td>36–41 pts (60–69%)</td><td>🥉 You'd pass A1. Two more weeks of review will make it comfortable.</td></tr>\n<tr><td>Below 36</td><td>Repeat Weeks 3–4 material (modals, perfect, exam formats), retake this mock in 10 days.</td></tr>\n</table>\n</details>",
+      "sourceHash": "dde02fd89a13b04858d3ca4b21cf4afce71c21199da6e941469b35d6e339e626"
+    },
+    {
+      "id": "d30-s7",
+      "type": "lesson",
+      "title": "🎓 Congratulations — and what's next?",
+      "html": "<details open><summary>🎓 Congratulations — and what's next?</summary>\n<p><b>Herzlichen Glückwunsch! Du hast es geschafft!</b> 🎉 In 30 days you went from zero to: introducing yourself, shopping, ordering, making appointments, asking directions, describing your day, your home, your health — and talking about the past. That IS the A1 level.</p>\n<ul>\n<li><b>Book the real exam</b> (Goethe-Institut or telc) if you want the certificate — you're ready.</li>\n<li><b>Keep the streak:</b> 30 minutes daily beats 3 hours weekly. Review this course's flashcards weekly for a month.</li>\n<li><b>Move to A2:</b> Nicos Weg A2 (free), dative case, more connectors (weil, dass), and adjective endings await.</li>\n<li><b>Get real input:</b> one Easy German video a day + change one app or podcast into German.</li>\n<li><b>Speak:</b> find a tandem partner (Tandem/HelloTalk apps) — 15 minutes of real conversation a week changes everything.</li>\n</ul>\n<p class=\"de\" style=\"font-size:18px\">Viel Erfolg auf deinem Weg — du kannst das! 🇩🇪</p>\n</details>",
+      "sourceHash": "5d319a262ef34469d0d90c3dc26c6ede2e2ad43b3e00a5374e218441f34bae0a"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"30\"> ✅ Mark Day 30 complete — COURSE FINISHED! 🏆</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 18,
+  "title": "Day 18 — dürfen, sollen, möchten · Appointments",
+  "goal": "🎯 Today you complete all six modal verbs and can make, move and cancel appointments like a pro.",
+  "sourceHash": "f5f8a1ff0753b345c9541c4ae921cfd1a65a15455a60810c49b5d8f82ab2d48d",
+  "introHtml": "<h2>Day 18 · Modal Verbs II: <i>dürfen, sollen, möchten</i> — Appointments</h2>\n<p class=\"goal\">🎯 Today you complete all six modal verbs and can make, move and cancel appointments like a pro.</p>",
+  "sections": [
+    {
+      "id": "d18-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The other three modals</h3>\n<table>\n<tr><th></th><th class=\"de\">dürfen (may/be allowed)</th><th class=\"de\">sollen (should)</th><th class=\"de\">möchten (would like)</th></tr>\n<tr><td>ich</td><td class=\"de\">darf</td><td class=\"de\">soll</td><td class=\"de\">möchte</td></tr>\n<tr><td>du</td><td class=\"de\">darfst</td><td class=\"de\">sollst</td><td class=\"de\">möchtest</td></tr>\n<tr><td>er/sie/es</td><td class=\"de\">darf</td><td class=\"de\">soll</td><td class=\"de\">möchte</td></tr>\n<tr><td>wir</td><td class=\"de\">dürfen</td><td class=\"de\">sollen</td><td class=\"de\">möchten</td></tr>\n<tr><td>ihr</td><td class=\"de\">dürft</td><td class=\"de\">sollt</td><td class=\"de\">möchtet</td></tr>\n<tr><td>sie/Sie</td><td class=\"de\">dürfen</td><td class=\"de\">sollen</td><td class=\"de\">möchten</td></tr>\n</table>\n<ul>\n<li><b>dürfen</b> = permission: <span class=\"de\">Hier darf man nicht rauchen.</span> (Smoking is not allowed here.) <span class=\"de\">Darf ich...?</span> (May I...?)</li>\n<li><b>sollen</b> = should / is supposed to: <span class=\"de\">Du sollst mehr schlafen.</span> Also for offers: <span class=\"de\">Soll ich helfen?</span> (Shall I help?)</li>\n<li><b>möchten</b> — you know it from Day 12; it's officially a modal too.</li>\n</ul>\n<h3>2. Meet <span class=\"de\">man</span></h3>\n<p><span class=\"de\">man</span> = \"one / people / you (in general)\" — takes er/sie/es forms: <span class=\"de\">Hier darf man parken. In Deutschland spricht man Deutsch.</span> Super common!</p>\n<h3>3. Appointment language (der Termin)</h3>\n<ul>\n<li><span class=\"de\">Ich möchte einen Termin machen/vereinbaren.</span> — I'd like to make an appointment.</li>\n<li><span class=\"de\">Haben Sie am Montag Zeit? / Passt es um 10 Uhr?</span> — Do you have time Monday? / Does 10 work?</li>\n<li><span class=\"de\">Ich muss den Termin leider absagen/verschieben.</span> — I have to cancel/postpone.</li>\n</ul>\n</details>",
+      "sourceHash": "5d82aca15602928dabdd2dfd2ff178bf02571a556500dafa85dc07c2823cabfc"
+    },
+    {
+      "id": "d18-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (12 items)",
+      "html": "<details><summary>📚 Vocabulary (12 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">der Termin, -e</td><td>appointment</td></tr>\n<tr><td class=\"de\">vereinbaren</td><td>to arrange, agree on</td></tr>\n<tr><td class=\"de\">absagen (sep.)</td><td>to cancel</td></tr>\n<tr><td class=\"de\">verschieben</td><td>to postpone</td></tr>\n<tr><td class=\"de\">passen</td><td>to suit, fit (Passt es dir?)</td></tr>\n<tr><td class=\"de\">frei</td><td>free, available</td></tr>\n<tr><td class=\"de\">besetzt</td><td>occupied, taken</td></tr>\n<tr><td class=\"de\">der Kalender</td><td>calendar</td></tr>\n<tr><td class=\"de\">rauchen</td><td>to smoke</td></tr>\n<tr><td class=\"de\">parken</td><td>to park</td></tr>\n<tr><td class=\"de\">der Moment / Einen Moment, bitte</td><td>moment / One moment, please</td></tr>\n<tr><td class=\"de\">Bis dann! / Bis Montag!</td><td>See you then! / See you Monday!</td></tr>\n</table>\n</details>",
+      "sourceHash": "8a89df060ad1e273d507ea4119c348e7f19bb94d631f8ca7e10a8e46a7a212f3"
+    },
+    {
+      "id": "d18-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Darf ich hier parken? — Nein, hier dürfen Sie nicht parken.</span> <span class=\"tr\">May I park here? — No, you may not park here.</span></li>\n<li><span class=\"de\">Man darf hier nicht rauchen.</span> <span class=\"tr\">Smoking isn't allowed here.</span></li>\n<li><span class=\"de\">Soll ich dich anrufen? — Ja, gern!</span> <span class=\"tr\">Shall I call you? — Yes, please!</span></li>\n<li><span class=\"de\">Ich möchte einen Termin vereinbaren.</span> <span class=\"tr\">I'd like to make an appointment.</span></li>\n<li><span class=\"de\">Passt es am Donnerstag um halb drei? — Ja, das passt gut.</span> <span class=\"tr\">Does Thursday at 2:30 work? — Yes, that works well.</span></li>\n<li><span class=\"de\">Ich muss den Termin leider verschieben.</span> <span class=\"tr\">Unfortunately I have to postpone the appointment.</span></li>\n</ol>\n</details>",
+      "sourceHash": "fa7f5c08fd3b54ec5526410c3e4a5c6182fbad5af0c1f0d9de5a184c0b755a02"
+    },
+    {
+      "id": "d18-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Ein Termin beim Zahnarzt (dentist)",
+      "html": "<details><summary>🗣 Dialogue: Ein Termin beim Zahnarzt (dentist)</summary>\n<div class=\"dlg\">\n<p><b>Praxis:</b> <span class=\"de\">Zahnarztpraxis Dr. Roth, guten Tag!</span> <span class=\"tr\">(Dr Roth's dental practice, hello!)</span></p>\n<p><b>Herr Adam:</b> <span class=\"de\">Guten Tag, hier ist Adam. Ich möchte einen Termin vereinbaren.</span> <span class=\"tr\">(Hello, this is Adam. I'd like to make an appointment.)</span></p>\n<p><b>Praxis:</b> <span class=\"de\">Einen Moment, bitte... Können Sie am Mittwoch um 14 Uhr?</span> <span class=\"tr\">(One moment please... Can you do Wednesday at 2pm?)</span></p>\n<p><b>Herr Adam:</b> <span class=\"de\">Am Mittwoch muss ich leider arbeiten. Geht auch Freitag?</span> <span class=\"tr\">(On Wednesday I have to work unfortunately. Does Friday work too?)</span></p>\n<p><b>Praxis:</b> <span class=\"de\">Freitag um 9 Uhr ist frei. Passt das?</span> <span class=\"tr\">(Friday at 9 is free. Does that suit?)</span></p>\n<p><b>Herr Adam:</b> <span class=\"de\">Ja, das passt. Vielen Dank!</span> <span class=\"tr\">(Yes, that works. Many thanks!)</span></p>\n<p><b>Praxis:</b> <span class=\"de\">Gern. Bis Freitag, Herr Adam!</span> <span class=\"tr\">(You're welcome. See you Friday, Mr Adam!)</span></p>\n</div>\n</details>",
+      "sourceHash": "7ecbf17cecca235ce07bb4f5dc5ba0cfdea73b42accb2ce7faef255e15e86858"
+    },
+    {
+      "id": "d18-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Role-play the dentist call — both roles, aloud. Then again with a different day/time.</li>\n<li>Rules of your home with man: <span class=\"de\">Hier darf man (nicht) ...</span> — 4 sentences.</li>\n<li>All six modals in one drill: say one true sentence each with kann, muss, will, darf, soll, möchte.</li>\n</ol>\n</details>",
+      "sourceHash": "e77651337190513cb75446cef05e7983371131b803b17676c1e8ec6c2cdfe076"
+    },
+    {
+      "id": "d18-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Termin vereinbaren Dialog A1\"</b> — phone-call dialogues.</li>\n<li><b>Nicos Weg A1</b> — continue; note every modal verb you hear.</li>\n<li>Listen to the dentist dialogue with eyes closed (have your phone read it aloud); how much do you catch?</li>\n</ul>\n</details>",
+      "sourceHash": "d27c88510eaa8344a0dba692585c8834c314ce4440665eced3ea9a6390c60351"
+    },
+    {
+      "id": "d18-s7",
+      "type": "reading",
+      "title": "📰 Reading practice — signs!",
+      "html": "<details><summary>📰 Reading practice — signs!</summary>\n<p>What do these real German signs mean?</p>\n<ol>\n<li class=\"de\">Rauchen verboten!</li>\n<li class=\"de\">Hier dürfen Sie parken. Mo–Fr 8–18 Uhr.</li>\n<li class=\"de\">Praxis geschlossen. Termine nur mit Anmeldung.</li>\n<li class=\"de\">Bitte pünktlich kommen! Bei Verspätung müssen Sie einen neuen Termin machen.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Smoking forbidden. 2. You may park here, Mon–Fri 8:00–18:00. 3. Practice closed. Appointments only with registration. 4. Please come on time! If late, you must make a new appointment.</p></details>\n</details>",
+      "sourceHash": "e20acc7a17fff391b0566ee4c77d02bd213d4594ce5ad99f7fbf5c2abb03bdf7"
+    },
+    {
+      "id": "d18-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write a short message cancelling an appointment politely: greeting, <span class=\"de\">ich muss den Termin am ... leider absagen</span>, suggest a new day (<span class=\"de\">Passt es am ...?</span>), sign off with <span class=\"de\">Viele Grüße</span> + name.</p>\n</details>",
+      "sourceHash": "de54903e8430e36f372df1f80fc73f65550cd0bf6ea287aa153b3e63aa330872"
+    },
+    {
+      "id": "d18-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">___ ich hier rauchen? (may)</span></li>\n<li>Fill in: <span class=\"de\">du ___ mehr schlafen. (should)</span></li>\n<li>Fill in: <span class=\"de\">Hier ___ man nicht parken. (may)</span></li>\n<li>\"I'd like to make an appointment\" = ?</li>\n<li>\"Does Friday at 9 suit you?\" = ?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Darf</li><li>sollst</li><li>darf</li><li>Ich möchte einen Termin vereinbaren/machen.</li><li>Passt es am Freitag um 9 Uhr?</li></ol>\n</details>\n</details>",
+      "sourceHash": "283bb8655ab464c7609636fd0ae9a8d28147d728a2b0a65166aac6c8774be65b"
+    },
+    {
+      "id": "d18-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">May I...?</span><span class=\"a\">Darf ich...?</span></div>\n<div class=\"fc\"><span class=\"q\">Shall I help?</span><span class=\"a\">Soll ich helfen?</span></div>\n<div class=\"fc\"><span class=\"q\">one/people (general)</span><span class=\"a\">man (+ er/sie/es form)</span></div>\n<div class=\"fc\"><span class=\"q\">appointment</span><span class=\"a\">der Termin</span></div>\n<div class=\"fc\"><span class=\"q\">to cancel</span><span class=\"a\">absagen</span></div>\n<div class=\"fc\"><span class=\"q\">to postpone</span><span class=\"a\">verschieben</span></div>\n<div class=\"fc\"><span class=\"q\">Does that suit?</span><span class=\"a\">Passt das?</span></div>\n<div class=\"fc\"><span class=\"q\">See you then!</span><span class=\"a\">Bis dann!</span></div>\n</div>\n</details>",
+      "sourceHash": "b924828d2fcbbedefa1680c5e7df96c8d73c5de06bb9490fec57163c2cc0ddfb"
+    },
+    {
+      "id": "d18-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Make a table of all 6 modals × 6 persons from memory — your modal masterpiece.</li>\n<li>Say your next real appointment in German: day, time, and one modal sentence about it.</li>\n</ol>\n</details>",
+      "sourceHash": "ecb969cf268b4bd9cc6b8b2b37a054f34fe902b7730176dbfcdf5cd600539ee1"
+    },
+    {
+      "id": "d18-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 16–17)",
+      "html": "<details><summary>🔄 Revision (Days 16–17)</summary>\n<ul>\n<li>Combine everything: <span class=\"de\">Ich muss morgen um 7 Uhr aufstehen, aber ich will schlafen!</span> Make your own version.</li>\n<li>Times: your 3 next appointments/plans with day + time.</li>\n</ul>\n</details>",
+      "sourceHash": "a71cc9d1872ad5891aed5d30080910a5dc576f592ccc6a6a30831df7991814e9"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"18\"> ✅ Mark Day 18 complete</label>"
+}

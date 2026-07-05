@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 5,
+  "title": "Day 5 — Jobs · Yes/No Questions · werden",
+  "goal": "🎯 Today you can talk about your job, ask yes/no questions, and use the third key verb: werden (to become).",
+  "sourceHash": "f6afadd78a076950fdc232d3bf125011dc747bba33a95cd5f82d0c646339bf84",
+  "introHtml": "<h2>Day 5 · Jobs &amp; Work — Yes/No Questions &amp; <i>werden</i></h2>\n<p class=\"goal\">🎯 Today you can talk about your job, ask yes/no questions, and use the third key verb: <b>werden</b> (to become).</p>",
+  "sections": [
+    {
+      "id": "d5-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Yes/No questions: put the verb FIRST</h3>\n<table>\n<tr><th>Statement</th><th>Question</th></tr>\n<tr><td class=\"de\">Du bist Lehrer.</td><td class=\"de\"><b>Bist</b> du Lehrer?</td></tr>\n<tr><td class=\"de\">Sie kommt aus Berlin.</td><td class=\"de\"><b>Kommt</b> sie aus Berlin?</td></tr>\n<tr><td class=\"de\">Ihr habt Zeit.</td><td class=\"de\"><b>Habt</b> ihr Zeit?</td></tr>\n</table>\n<p>No \"do/does\" needed — German just flips verb and subject. Answer with <span class=\"de\">Ja, ... / Nein, ...</span></p>\n<div class=\"tip\">💡 Bonus word: <span class=\"de\">doch</span> = \"yes I do!\" after a negative question. <span class=\"de\">Sprichst du kein Deutsch? — Doch!</span> (Yes I do!)</div>\n<h3>2. Talking about jobs — no article!</h3>\n<p><span class=\"de\">Ich bin Lehrer.</span> (I am <b>a</b> teacher — German drops the \"a\" with professions.) Also: <span class=\"de\">Ich arbeite als Lehrer.</span> / <span class=\"de\">Was bist du von Beruf?</span> (What do you do for a living?)</p>\n<p>Female forms usually add <b>-in</b>: <span class=\"de\">Lehrer → Lehrerin, Arzt → Ärztin, Verkäufer → Verkäuferin</span>.</p>\n<h3>3. The verb <i>werden</i> (to become) — the 3rd pillar verb</h3>\n<table>\n<tr><td class=\"de\">ich werde</td><td>I become</td><td class=\"de\">wir werden</td><td>we become</td></tr>\n<tr><td class=\"de\">du wirst</td><td>you become</td><td class=\"de\">ihr werdet</td><td>you all become</td></tr>\n<tr><td class=\"de\">er/sie/es wird</td><td>he/she/it becomes</td><td class=\"de\">sie/Sie werden</td><td>they/you become</td></tr>\n</table>\n<p><span class=\"de\">Ich werde Ingenieur.</span> (I'm going to be / becoming an engineer.) <span class=\"de\">Es wird kalt.</span> (It's getting cold.) Later, werden also builds the future tense — for A1, just know its forms.</p>\n<h3>4. arbeiten — a small spelling note</h3>\n<p>Stems ending in -t or -d insert an <b>e</b>: <span class=\"de\">du arbeit<b>e</b>st, er arbeit<b>e</b>t</span>. Same for <span class=\"de\">finden → du findest</span>.</p>\n</details>",
+      "sourceHash": "7d62ba76525889a39d52101d93f8cf3c02ef36aeaa99c3ce6dd600d89c5e7d77"
+    },
+    {
+      "id": "d5-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 items)",
+      "html": "<details><summary>📚 Vocabulary (16 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">der Beruf</td><td>profession, job</td></tr>\n<tr><td class=\"de\">arbeiten (als)</td><td>to work (as)</td></tr>\n<tr><td class=\"de\">der Lehrer / die Lehrerin</td><td>teacher (m/f)</td></tr>\n<tr><td class=\"de\">der Arzt / die Ärztin</td><td>doctor (m/f)</td></tr>\n<tr><td class=\"de\">der Ingenieur / die Ingenieurin</td><td>engineer (m/f)</td></tr>\n<tr><td class=\"de\">der Verkäufer / die Verkäuferin</td><td>salesperson (m/f)</td></tr>\n<tr><td class=\"de\">der Kellner / die Kellnerin</td><td>waiter / waitress</td></tr>\n<tr><td class=\"de\">der Student / die Studentin</td><td>university student (m/f)</td></tr>\n<tr><td class=\"de\">der Koch / die Köchin</td><td>cook, chef (m/f)</td></tr>\n<tr><td class=\"de\">die Firma</td><td>company</td></tr>\n<tr><td class=\"de\">das Büro</td><td>office</td></tr>\n<tr><td class=\"de\">der Kollege / die Kollegin</td><td>colleague (m/f)</td></tr>\n<tr><td class=\"de\">der Chef / die Chefin</td><td>boss (m/f)</td></tr>\n<tr><td class=\"de\">arbeitslos</td><td>unemployed</td></tr>\n<tr><td class=\"de\">studieren</td><td>to study (at university)</td></tr>\n<tr><td class=\"de\">machen</td><td>to do, to make</td></tr>\n</table>\n</details>",
+      "sourceHash": "3fda1e1b7d903f5b3b0693292cef6a8e7b1173d66b3c13e6fa666806f920689a"
+    },
+    {
+      "id": "d5-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was bist du von Beruf? — Ich bin Ingenieurin.</span> <span class=\"tr\">What's your job? — I'm an engineer.</span></li>\n<li><span class=\"de\">Ich arbeite als Kellner in einem Café.</span> <span class=\"tr\">I work as a waiter in a café.</span></li>\n<li><span class=\"de\">Arbeitest du heute? — Nein, heute nicht.</span> <span class=\"tr\">Are you working today? — No, not today.</span></li>\n<li><span class=\"de\">Sie studiert Medizin. Sie wird Ärztin.</span> <span class=\"tr\">She studies medicine. She's going to be a doctor.</span></li>\n<li><span class=\"de\">Mein Chef ist sehr gut.</span> <span class=\"tr\">My boss is very good.</span></li>\n<li><span class=\"de\">Bist du Student? — Ja, ich studiere in Köln.</span> <span class=\"tr\">Are you a student? — Yes, I study in Cologne.</span></li>\n</ol>\n</details>",
+      "sourceHash": "7d3c04160afb64ea6b755b44f32044d501fabf4f16cd474f7933dcce6b2d2f66"
+    },
+    {
+      "id": "d5-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Was machst du beruflich?",
+      "html": "<details><summary>🗣 Dialogue: Was machst du beruflich?</summary>\n<div class=\"dlg\">\n<p><b>Nina:</b> <span class=\"de\">Und was machst du beruflich, Omar?</span> <span class=\"tr\">(And what do you do for a living, Omar?)</span></p>\n<p><b>Omar:</b> <span class=\"de\">Ich bin Koch. Ich arbeite in einem Restaurant. Und du?</span> <span class=\"tr\">(I'm a chef. I work in a restaurant. And you?)</span></p>\n<p><b>Nina:</b> <span class=\"de\">Ich bin Studentin. Ich studiere Informatik.</span> <span class=\"tr\">(I'm a student. I study computer science.)</span></p>\n<p><b>Omar:</b> <span class=\"de\">Interessant! Was wirst du später?</span> <span class=\"tr\">(Interesting! What will you become later?)</span></p>\n<p><b>Nina:</b> <span class=\"de\">Ich werde Ingenieurin.</span> <span class=\"tr\">(I'm going to be an engineer.)</span></p>\n<p><b>Omar:</b> <span class=\"de\">Super! Arbeitest du auch?</span> <span class=\"tr\">(Great! Do you work too?)</span></p>\n<p><b>Nina:</b> <span class=\"de\">Ja, ich arbeite als Verkäuferin am Wochenende.</span> <span class=\"tr\">(Yes, I work as a salesperson on weekends.)</span></p>\n</div>\n</details>",
+      "sourceHash": "70f134ab91497c93b3be6cd8893dd2c7f98739a0e3de3e6d03dce686782ec944"
+    },
+    {
+      "id": "d5-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Answer aloud: <span class=\"de\">Was bist du von Beruf? Wo arbeitest du? Arbeitest du viel?</span></li>\n<li>Turn these into questions aloud: <span class=\"de\">Du bist müde. / Sie kommt aus Spanien. / Ihr habt Hunger. / Er arbeitet im Büro.</span></li>\n<li>Say the jobs of 5 people you know: <span class=\"de\">Mein Freund ist ... / Meine Schwester arbeitet als ...</span></li>\n</ol>\n</details>",
+      "sourceHash": "d4ff82561612ecb66cb795b2ce78c20800e653d3025a32ec1fdcf77d3f8faf28"
+    },
+    {
+      "id": "d5-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b>, the \"Beruf\" episodes (\"Was machst du?\").</li>\n<li>YouTube: <b>\"Easy German what do you do for a living\"</b> — real street answers.</li>\n<li>🔊 Listen to all 16 job words; note that <b>-in</b> endings are stressed clearly: Lehrer<b>in</b>.</li>\n</ul>\n</details>",
+      "sourceHash": "8616a2de5da4b34b2b326e9e5cc7d1d1a68025bfe8e0a7fd16265950b56db8ce"
+    },
+    {
+      "id": "d5-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Herr Yilmaz ist Verkäufer. Er arbeitet bei einer Firma in Hamburg. Seine Kollegin Frau Weber ist sehr nett. Der Chef heißt Herr Krause. Herr Yilmaz arbeitet viel, aber die Arbeit macht Spaß.</p>\n<ol>\n<li>What is Mr Yilmaz's job and where does he work?</li>\n<li>Who is Frau Weber?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. He is a salesperson at a company in Hamburg. 2. His (nice) colleague. Bonus: \"die Arbeit macht Spaß\" = the work is fun.</p></details>\n</details>",
+      "sourceHash": "4cceb3500cc92a9b641db3086d4b753967a5de7acfee3fcb7742c42b639c3ea1"
+    },
+    {
+      "id": "d5-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 5 sentences about work — yours or an imaginary job: what you are, where you work, whether you work a lot, what your boss/colleagues are like, and what you want to become (<span class=\"de\">Ich werde ...</span>).</p>\n</details>",
+      "sourceHash": "6831206fa4cdbbf64ab9a70e759152825f4d170c0b7c26fa81eafb5d883054b9"
+    },
+    {
+      "id": "d5-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Make it a question: <span class=\"de\">Du arbeitest heute.</span></li>\n<li>Fill in: <span class=\"de\">du ___ (werden) Arzt.</span></li>\n<li>Female form of <span class=\"de\">der Lehrer</span>?</li>\n<li>Translate: \"I am a student and I work as a waitress.\"</li>\n<li>Fill in: <span class=\"de\">er arbeit___ im Büro.</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Arbeitest du heute?</li><li>wirst</li><li>die Lehrerin</li><li>Ich bin Studentin und ich arbeite als Kellnerin.</li><li>arbeitet (extra e because the stem ends in -t)</li></ol>\n</details>\n</details>",
+      "sourceHash": "f31de6c459e89182ffc4bb2366d826efe278c4928b7519f0e4445b5e5bfffaa7"
+    },
+    {
+      "id": "d5-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">profession</span><span class=\"a\">der Beruf</span></div>\n<div class=\"fc\"><span class=\"q\">to work</span><span class=\"a\">arbeiten</span></div>\n<div class=\"fc\"><span class=\"q\">doctor (f)</span><span class=\"a\">die Ärztin</span></div>\n<div class=\"fc\"><span class=\"q\">company</span><span class=\"a\">die Firma</span></div>\n<div class=\"fc\"><span class=\"q\">office</span><span class=\"a\">das Büro</span></div>\n<div class=\"fc\"><span class=\"q\">boss</span><span class=\"a\">der Chef / die Chefin</span></div>\n<div class=\"fc\"><span class=\"q\">I become / will be</span><span class=\"a\">ich werde</span></div>\n<div class=\"fc\"><span class=\"q\">he becomes</span><span class=\"a\">er wird</span></div>\n</div>\n</details>",
+      "sourceHash": "d0b37ac7b26df46799c3fa874d147aa1f2be452ac50209a3c66c438eefce15f0"
+    },
+    {
+      "id": "d5-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Look up your own job (or dream job) in German and learn both m/f forms.</li>\n<li>Write the werden table by hand twice.</li>\n<li>Ask your reflection 5 yes/no questions and answer them. 😄</li>\n</ol>\n</details>",
+      "sourceHash": "f40c07e5d22cb151875f83003ef01b8a897ce32c77ec8afe86fe137ee3845358"
+    },
+    {
+      "id": "d5-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 1–4)",
+      "html": "<details><summary>🔄 Revision (Days 1–4)</summary>\n<ul>\n<li>The big three so far: conjugate <b>sein, haben, werden</b> aloud, back to back.</li>\n<li>Say: your name, age, country, city, languages — one flowing self-introduction.</li>\n<li>Numbers drill: 33, 47, 71, 88, 16, 60.</li>\n</ul>\n</details>",
+      "sourceHash": "e42c849f8949bd64eba692904b7fec6246d128da00e76d42250d0dc825bc785b"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"5\"> ✅ Mark Day 5 complete</label>"
+}

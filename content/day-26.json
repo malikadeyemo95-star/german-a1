@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 26,
+  "title": "Day 26 — Past Tense: war & hatte",
+  "goal": "🎯 Today you unlock the past! The simple past of sein and haben covers half of all past-tense talk.",
+  "sourceHash": "9ff60f73557591028a42649a2f12afade159e2bab10c0ed4e92f8c823da91652",
+  "introHtml": "<h2>Day 26 · Talking About Yesterday: <i>war</i> &amp; <i>hatte</i></h2>\n<p class=\"goal\">🎯 Today you unlock the past! The simple past of sein and haben covers half of all past-tense talk.</p>",
+  "sections": [
+    {
+      "id": "d26-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. sein in the past: war</h3>\n<table>\n<tr><td class=\"de\">ich war</td><td>I was</td><td class=\"de\">wir waren</td><td>we were</td></tr>\n<tr><td class=\"de\">du warst</td><td>you were</td><td class=\"de\">ihr wart</td><td>you all were</td></tr>\n<tr><td class=\"de\">er/sie/es war</td><td>he/she/it was</td><td class=\"de\">sie/Sie waren</td><td>they/you were</td></tr>\n</table>\n<h3>2. haben in the past: hatte</h3>\n<table>\n<tr><td class=\"de\">ich hatte</td><td>I had</td><td class=\"de\">wir hatten</td><td>we had</td></tr>\n<tr><td class=\"de\">du hattest</td><td>you had</td><td class=\"de\">ihr hattet</td><td>you all had</td></tr>\n<tr><td class=\"de\">er/sie/es hatte</td><td>he/she/it had</td><td class=\"de\">sie/Sie hatten</td><td>they/you had</td></tr>\n</table>\n<div class=\"tip\">💡 Germans use war/hatte constantly in speech — for everything else they use the perfect tense (tomorrow!). Master these two tables and you can already tell simple stories.</div>\n<h3>3. Past time expressions</h3>\n<p class=\"de\">gestern (yesterday), vorgestern (day before), letzte Woche (last week), letzten Monat, letztes Jahr, früher (in the past, back then), am Montag (last Monday, from context)</p>\n<h3>4. Example transformation</h3>\n<table>\n<tr><th>Today</th><th>Yesterday</th></tr>\n<tr><td class=\"de\">Ich bin müde.</td><td class=\"de\">Ich war müde.</td></tr>\n<tr><td class=\"de\">Wir haben keine Zeit.</td><td class=\"de\">Wir hatten keine Zeit.</td></tr>\n<tr><td class=\"de\">Das Wetter ist schön.</td><td class=\"de\">Das Wetter war schön.</td></tr>\n</table>\n</details>",
+      "sourceHash": "2151bf87eae88307d157e040b7b497faf5fab3797eec910c7f3ab5817459f5f5"
+    },
+    {
+      "id": "d26-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (12 items)",
+      "html": "<details><summary>📚 Vocabulary (12 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">gestern / vorgestern</td><td>yesterday / day before yesterday</td></tr>\n<tr><td class=\"de\">letzte Woche / letztes Jahr</td><td>last week / last year</td></tr>\n<tr><td class=\"de\">früher</td><td>earlier, in the old days</td></tr>\n<tr><td class=\"de\">der Urlaub</td><td>holiday, vacation</td></tr>\n<tr><td class=\"de\">die Party, -s</td><td>party</td></tr>\n<tr><td class=\"de\">das Konzert, -e</td><td>concert</td></tr>\n<tr><td class=\"de\">der Spaß / Spaß machen</td><td>fun / to be fun</td></tr>\n<tr><td class=\"de\">toll / super / schrecklich</td><td>great / super / terrible</td></tr>\n<tr><td class=\"de\">das Glück / Glück haben</td><td>luck / to be lucky</td></tr>\n<tr><td class=\"de\">allein</td><td>alone</td></tr>\n<tr><td class=\"de\">der Gast, ¨-e</td><td>guest</td></tr>\n<tr><td class=\"de\">das Wochenende</td><td>weekend (review)</td></tr>\n</table>\n</details>",
+      "sourceHash": "a11789039385cea75fd0c52937ce611b12e8d3e0bb7f7cc94e8f3ac4cb315807"
+    },
+    {
+      "id": "d26-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wo warst du gestern? — Ich war zu Hause.</span> <span class=\"tr\">Where were you yesterday? — I was at home.</span></li>\n<li><span class=\"de\">Die Party war toll! Wir hatten viel Spaß.</span> <span class=\"tr\">The party was great! We had a lot of fun.</span></li>\n<li><span class=\"de\">Letztes Jahr waren wir im Urlaub in Italien.</span> <span class=\"tr\">Last year we were on holiday in Italy.</span></li>\n<li><span class=\"de\">Ich hatte gestern Kopfschmerzen.</span> <span class=\"tr\">I had a headache yesterday.</span></li>\n<li><span class=\"de\">Das Wetter war schrecklich — es war kalt und windig.</span> <span class=\"tr\">The weather was terrible — cold and windy.</span></li>\n<li><span class=\"de\">Früher hatte ich keine Zeit für Hobbys.</span> <span class=\"tr\">In the past I had no time for hobbies.</span></li>\n</ol>\n</details>",
+      "sourceHash": "9be3b34c8a015ed8e0bb122934b1dd4ce047ad709a1fdc313ddec61c3438d0d9"
+    },
+    {
+      "id": "d26-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Wie war dein Wochenende?",
+      "html": "<details><summary>🗣 Dialogue: Wie war dein Wochenende?</summary>\n<div class=\"dlg\">\n<p><b>Sam:</b> <span class=\"de\">Hi Julia! Wie war dein Wochenende?</span> <span class=\"tr\">(Hi Julia! How was your weekend?)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Super! Ich war auf einem Konzert.</span> <span class=\"tr\">(Great! I was at a concert.)</span></p>\n<p><b>Sam:</b> <span class=\"de\">Toll! Wie war die Musik?</span> <span class=\"tr\">(Cool! How was the music?)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Fantastisch! Aber es waren so viele Leute da. Und du? Wo warst du?</span> <span class=\"tr\">(Fantastic! But there were so many people. And you? Where were you?)</span></p>\n<p><b>Sam:</b> <span class=\"de\">Ich war leider krank. Ich hatte Fieber und war nur im Bett.</span> <span class=\"tr\">(I was sick unfortunately. I had a fever and was just in bed.)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Oh nein! Und jetzt?</span> <span class=\"tr\">(Oh no! And now?)</span></p>\n<p><b>Sam:</b> <span class=\"de\">Jetzt geht es mir wieder gut, danke!</span> <span class=\"tr\">(Now I'm well again, thanks!)</span></p>\n</div>\n</details>",
+      "sourceHash": "a6eaf2ccf7c96273c3f1e5c76523b3854ecd12ebb5dcc495cf9f4f7f6a176ef0"
+    },
+    {
+      "id": "d26-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Tell yesterday's story aloud: where you were (3 places), what you had, how it was. Only war/hatte needed!</li>\n<li>Transform aloud to the past: Ich bin müde / Wir haben Hunger / Das Essen ist lecker / Sie sind im Kino / Ich habe keine Zeit.</li>\n<li>Interview yourself: <span class=\"de\">Wie war dein Tag? Wo warst du? Hattest du Spaß?</span></li>\n</ol>\n</details>",
+      "sourceHash": "bac5378d12e4d76a043dd13879cd8a9d19da58339a293abe3679ebf95b3defd4"
+    },
+    {
+      "id": "d26-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — later episodes use war/hatte constantly; watch 2.</li>\n<li>YouTube: <b>\"Wie war dein Wochenende German\"</b> — Easy German has street interviews on this.</li>\n<li>Listen for \"war\" in any German audio today — it's everywhere once you hear it.</li>\n</ul>\n</details>",
+      "sourceHash": "f40329dbc18f70987f871705a117bbbe0e35d3e3b1e567d93508d12e261eac40"
+    },
+    {
+      "id": "d26-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Liebe Oma, wir waren letzte Woche im Urlaub an der Ostsee. Das Wetter war fast immer schön, nur am Mittwoch hatten wir Regen. Das Hotel war klein, aber die Zimmer waren sauber und das Frühstück war lecker. Die Kinder hatten so viel Spaß am Strand! Nur einmal war Max krank — er hatte Bauchschmerzen. Zu viel Eis! Viele Grüße, Deine Petra</p>\n<ol>\n<li>Where were they on holiday?</li>\n<li>How was the weather?</li>\n<li>Why was Max sick?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. At the Baltic Sea (Ostsee). 2. Almost always nice, rain only on Wednesday. 3. Stomach ache from too much ice cream.</p></details>\n</details>",
+      "sourceHash": "5335c56b9b91f9505ce32302a9941b26281e312061dd89a9e8ed1451e730fd17"
+    },
+    {
+      "id": "d26-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write about your last weekend or holiday: 8 sentences, ONLY with war/hatte + past time expressions. (This is a classic A1 exam writing topic!)</p>\n</details>",
+      "sourceHash": "24cb3b39362b59fcd9c10d3f7d1cc590a7664daac81d0e3ddeab57ed5db576a7"
+    },
+    {
+      "id": "d26-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">Wo ___ du gestern? (sein)</span></li>\n<li>Fill in: <span class=\"de\">Wir ___ viel Spaß. (haben)</span></li>\n<li>Fill in: <span class=\"de\">Ihr ___ im Kino. (sein)</span></li>\n<li>Fill in: <span class=\"de\">Sie (she) ___ keine Zeit. (haben)</span></li>\n<li>Translate: \"The weather was nice and we were at the beach.\"</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>warst</li><li>hatten</li><li>wart</li><li>hatte</li><li>Das Wetter war schön und wir waren am Strand.</li></ol>\n</details>\n</details>",
+      "sourceHash": "7fdc7ecd400ebd1c936f0a19ac5363e53e70dff6c9a696fa8744d315a782096e"
+    },
+    {
+      "id": "d26-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I was</span><span class=\"a\">ich war</span></div>\n<div class=\"fc\"><span class=\"q\">you were</span><span class=\"a\">du warst</span></div>\n<div class=\"fc\"><span class=\"q\">we were</span><span class=\"a\">wir waren</span></div>\n<div class=\"fc\"><span class=\"q\">I had</span><span class=\"a\">ich hatte</span></div>\n<div class=\"fc\"><span class=\"q\">she had</span><span class=\"a\">sie hatte</span></div>\n<div class=\"fc\"><span class=\"q\">yesterday</span><span class=\"a\">gestern</span></div>\n<div class=\"fc\"><span class=\"q\">last week</span><span class=\"a\">letzte Woche</span></div>\n<div class=\"fc\"><span class=\"q\">We had fun</span><span class=\"a\">Wir hatten Spaß</span></div>\n</div>\n</details>",
+      "sourceHash": "934c346bef714a76af8d793dc654ac671a49cd4204a77d5e4ae4626b147b514c"
+    },
+    {
+      "id": "d26-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write both past tables from memory. Twice.</li>\n<li>Tonight before sleeping: summarize your day in 3 war/hatte sentences.</li>\n</ol>\n</details>",
+      "sourceHash": "d9214256fdc2dd69c3badccc6637945df6d0c4e179c69825dc252d9323677a11"
+    },
+    {
+      "id": "d26-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 25)",
+      "html": "<details><summary>🔄 Revision (Day 25)</summary>\n<ul>\n<li>Combine: <span class=\"de\">Gestern war ich krank. Ich hatte Halsschmerzen.</span> — make your own health-past sentence.</li>\n<li>Body parts: point and name 6, fast.</li>\n</ul>\n</details>",
+      "sourceHash": "ef4c098e89b1505c25119c93326c8120782fca8ac99fa98693472032dd5a8cfb"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"26\"> ✅ Mark Day 26 complete</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 27,
+  "title": "Day 27 — Perfect Tense with haben",
+  "goal": "🎯 Today you learn how Germans actually talk about the past in conversation.",
+  "sourceHash": "e628185994d53fab8718b6445949623b25589ea021d44e2c3bd9733e64baadf7",
+  "introHtml": "<h2>Day 27 · The Perfect Tense I: <i>haben</i> + Participle</h2>\n<p class=\"goal\">🎯 Today you learn how Germans actually talk about the past in conversation.</p>",
+  "sections": [
+    {
+      "id": "d27-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The formula</h3>\n<p style=\"font-size:18px\" class=\"de\"><b>haben</b> (position 2) + ... + <b>Partizip II</b> (at the end)</p>\n<p><span class=\"de\">Ich <b>habe</b> gestern Pizza <b>gegessen</b>.</span> — I ate pizza yesterday. Sound familiar? It's the same verb bracket as the modals!</p>\n<h3>2. Building the participle — regular verbs: ge + stem + t</h3>\n<table>\n<tr><td class=\"de\">machen → <b>gemacht</b></td><td class=\"de\">kaufen → <b>gekauft</b></td></tr>\n<tr><td class=\"de\">spielen → <b>gespielt</b></td><td class=\"de\">lernen → <b>gelernt</b></td></tr>\n<tr><td class=\"de\">arbeiten → <b>gearbeitet</b></td><td class=\"de\">kochen → <b>gekocht</b></td></tr>\n</table>\n<h3>3. Irregular participles — ge + stem(change) + en. Learn these 10 today:</h3>\n<table>\n<tr><td class=\"de\">essen → gegessen</td><td class=\"de\">trinken → getrunken</td></tr>\n<tr><td class=\"de\">sehen → gesehen</td><td class=\"de\">lesen → gelesen</td></tr>\n<tr><td class=\"de\">schreiben → geschrieben</td><td class=\"de\">sprechen → gesprochen</td></tr>\n<tr><td class=\"de\">nehmen → genommen</td><td class=\"de\">treffen → getroffen</td></tr>\n<tr><td class=\"de\">schlafen → geschlafen</td><td class=\"de\">finden → gefunden</td></tr>\n</table>\n<h3>4. Two special groups (no ge-!)</h3>\n<ul>\n<li>Verbs in <b>-ieren</b>: <span class=\"de\">studieren → studiert, fotografieren → fotografiert</span></li>\n<li>Verbs starting with <b>be-, ver-, ent-</b>: <span class=\"de\">bestellen → bestellt, verstehen → verstanden, bezahlen → bezahlt</span></li>\n<li>Separable verbs squeeze ge inside: <span class=\"de\">einkaufen → ein<b>ge</b>kauft, aufräumen → auf<b>ge</b>räumt</span></li>\n</ul>\n</details>",
+      "sourceHash": "e7bc249db860e8a5c53af440343e8f7b2100e21c3f2380ca5d6be5cc007b51dc"
+    },
+    {
+      "id": "d27-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary — today's vocabulary IS the participle list above. Plus:",
+      "html": "<details><summary>📚 Vocabulary — today's vocabulary IS the participle list above. Plus:</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">schon</td><td>already</td></tr>\n<tr><td class=\"de\">noch nicht</td><td>not yet</td></tr>\n<tr><td class=\"de\">den ganzen Tag</td><td>the whole day</td></tr>\n<tr><td class=\"de\">zweimal / dreimal</td><td>twice / three times</td></tr>\n<tr><td class=\"de\">der Film, -e</td><td>film, movie</td></tr>\n<tr><td class=\"de\">die Hausaufgaben (pl.)</td><td>homework</td></tr>\n</table>\n</details>",
+      "sourceHash": "d855c6c9bc2a2cfa5f2daa0fcc347220cbf410afd79f2acddff4e37f9b23829a"
+    },
+    {
+      "id": "d27-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was hast du gestern gemacht?</span> <span class=\"tr\">What did you do yesterday?</span></li>\n<li><span class=\"de\">Ich habe Deutsch gelernt und einen Film gesehen.</span> <span class=\"tr\">I studied German and watched a film.</span></li>\n<li><span class=\"de\">Wir haben Pizza gegessen und Cola getrunken.</span> <span class=\"tr\">We ate pizza and drank cola.</span></li>\n<li><span class=\"de\">Hast du schon eingekauft? — Nein, noch nicht.</span> <span class=\"tr\">Have you shopped yet? — No, not yet.</span></li>\n<li><span class=\"de\">Er hat den ganzen Tag gearbeitet.</span> <span class=\"tr\">He worked the whole day.</span></li>\n<li><span class=\"de\">Ich habe meine Freunde getroffen.</span> <span class=\"tr\">I met my friends.</span></li>\n</ol>\n</details>",
+      "sourceHash": "5a21b506ba11cee07db8e0458ae94e09fd8ffccb96ee1df77a393894e99be9fd"
+    },
+    {
+      "id": "d27-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Was hast du gemacht?",
+      "html": "<details><summary>🗣 Dialogue: Was hast du gemacht?</summary>\n<div class=\"dlg\">\n<p><b>Ola:</b> <span class=\"de\">Hallo Finn! Was hast du am Wochenende gemacht?</span> <span class=\"tr\">(Hi Finn! What did you do on the weekend?)</span></p>\n<p><b>Finn:</b> <span class=\"de\">Ich habe lange geschlafen und dann Fußball gespielt. Und du?</span> <span class=\"tr\">(I slept in, then played football. You?)</span></p>\n<p><b>Ola:</b> <span class=\"de\">Ich habe meine Wohnung aufgeräumt und dann Freunde getroffen.</span> <span class=\"tr\">(I tidied my flat, then met friends.)</span></p>\n<p><b>Finn:</b> <span class=\"de\">Habt ihr etwas gegessen?</span> <span class=\"tr\">(Did you eat something?)</span></p>\n<p><b>Ola:</b> <span class=\"de\">Ja! Wir haben zusammen gekocht — und zu viel gegessen!</span> <span class=\"tr\">(Yes! We cooked together — and ate too much!)</span></p>\n<p><b>Finn:</b> <span class=\"de\">Haha, das kenne ich!</span> <span class=\"tr\">(Haha, I know that feeling!)</span></p>\n</div>\n</details>",
+      "sourceHash": "609d8a98ad9adc03c9623ee7cbacb31739c3e5c98f1764688f6574f5ee23351e"
+    },
+    {
+      "id": "d27-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Answer aloud in 6 sentences: <span class=\"de\">Was hast du gestern gemacht?</span> — bracket check: haben second, participle LAST.</li>\n<li>Participle ping-pong: say the infinitive, then participle, for all 16 verbs of today.</li>\n<li>schon/noch nicht: <span class=\"de\">Hast du schon gefrühstückt / Deutsch gelernt / eingekauft?</span> Answer truthfully.</li>\n</ol>\n</details>",
+      "sourceHash": "f3135803da77457cc7bb03f6e2069a943f4e43754f5b8e9a8e2ce9bd7a75a94b"
+    },
+    {
+      "id": "d27-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — perfect tense episodes near the end of the course.</li>\n<li>YouTube: <b>\"Perfekt German A1\"</b> — one grammar video with examples.</li>\n<li>Easy German: <b>\"What did you do yesterday?\"</b> street interviews — count the participles!</li>\n</ul>\n</details>",
+      "sourceHash": "687fdd82ce785c922cc83696f22323f401163a4a573820b44e7c8e97914621b1"
+    },
+    {
+      "id": "d27-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Mein Samstag: Ich habe bis zehn Uhr geschlafen. Dann habe ich gefrühstückt und die Wohnung aufgeräumt. Am Nachmittag habe ich meine Schwester getroffen. Wir haben einen Film gesehen und danach in einem Restaurant gegessen. Ich habe Schnitzel bestellt — es war lecker! Am Abend habe ich noch ein bisschen Deutsch gelernt. Ein guter Tag!</p>\n<ol>\n<li>Until when did the writer sleep?</li>\n<li>What did they do with the sister?</li>\n<li>Find two participles without \"ge-\" at the front — why don't they have it?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Until 10. 2. Watched a film, then ate at a restaurant. 3. \"bestellt\" (be- verb) — and \"aufgeräumt/gefrühstückt\" DO have ge (inside/normal). The only no-ge one here is bestellt; be-/ver-/-ieren verbs never take ge-.</p></details>\n</details>",
+      "sourceHash": "8ae04b359c57d8d92712a0570d386d312f1a388c38326296a8618dbc71b697cb"
+    },
+    {
+      "id": "d27-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write \"Mein gestriger Tag\" (my yesterday): 8–10 sentences in the perfect tense. Use at least 2 irregular participles, 1 separable verb, and 1 be-/ver- verb.</p>\n</details>",
+      "sourceHash": "50caa34f5a26f2d8da5cc7472f8b5b16670bfd49cfdc071999b8cd448630c4fe"
+    },
+    {
+      "id": "d27-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Participle of: machen, essen, trinken, einkaufen, bestellen?</li>\n<li>Build: ich / gestern / Deutsch / lernen (perfect).</li>\n<li>Build: du / schon / essen / ? (perfect question)</li>\n<li>Why is it \"studiert\" and not \"gestudiert\"?</li>\n<li>Where does the participle always go?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>gemacht, gegessen, getrunken, eingekauft, bestellt</li><li>Ich habe gestern Deutsch gelernt.</li><li>Hast du schon gegessen?</li><li>Verbs ending in -ieren never take ge-.</li><li>At the very end of the sentence.</li></ol>\n</details>\n</details>",
+      "sourceHash": "5c3572d449a1fd8db78ac58ce9de3916f0da792512367d594e1714114a390a17"
+    },
+    {
+      "id": "d27-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">made/done</span><span class=\"a\">gemacht</span></div>\n<div class=\"fc\"><span class=\"q\">eaten</span><span class=\"a\">gegessen</span></div>\n<div class=\"fc\"><span class=\"q\">drunk</span><span class=\"a\">getrunken</span></div>\n<div class=\"fc\"><span class=\"q\">seen</span><span class=\"a\">gesehen</span></div>\n<div class=\"fc\"><span class=\"q\">written</span><span class=\"a\">geschrieben</span></div>\n<div class=\"fc\"><span class=\"q\">bought</span><span class=\"a\">gekauft</span></div>\n<div class=\"fc\"><span class=\"q\">shopped (sep.)</span><span class=\"a\">eingekauft</span></div>\n<div class=\"fc\"><span class=\"q\">ordered (be-)</span><span class=\"a\">bestellt</span></div>\n</div>\n</details>",
+      "sourceHash": "aa86ba24c30a5de0f63bf4185017c572d2a3e08d1d5854eea0c927ca72788f44"
+    },
+    {
+      "id": "d27-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Make participle cards for all 16 verbs from today. These ARE the A1 exam.</li>\n<li>Tonight: say 3 perfect-tense sentences about your day.</li>\n</ol>\n</details>",
+      "sourceHash": "a5abd2d4d02f6d8f499cda18268cbf0a77f92246be56d71aadb8a92299f4c1d7"
+    },
+    {
+      "id": "d27-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 26)",
+      "html": "<details><summary>🔄 Revision (Day 26)</summary>\n<ul>\n<li>war/hatte tables aloud — 30 seconds max.</li>\n<li>Mix: <span class=\"de\">Gestern war ich im Kino. Ich habe einen Film gesehen.</span> — that's how Germans really combine both pasts!</li>\n</ul>\n</details>",
+      "sourceHash": "a9ba85375856683ae3bad74a63dedbe31838f212d06ed3ea74f0479bcfb74a93"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"27\"> ✅ Mark Day 27 complete</label>"
+}

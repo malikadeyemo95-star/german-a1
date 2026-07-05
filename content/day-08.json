@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 8,
+  "title": "Day 8 — der, die, das · ein, eine",
+  "goal": "🎯 Today you master German's famous three genders and the nominative case.",
+  "sourceHash": "9d2f3a8003df7db94c8cba002c2a4c1e2638a0bcbde9f581cc881621b99fee66",
+  "introHtml": "<h2>Day 8 · Articles: der, die, das &amp; ein, eine (Nominative)</h2>\n<p class=\"goal\">🎯 Today you master German's famous three genders and the nominative case.</p>",
+  "sections": [
+    {
+      "id": "d8-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Every noun has a gender</h3>\n<table>\n<tr><th>Gender</th><th>\"the\"</th><th>\"a/an\"</th><th>Example</th></tr>\n<tr><td>masculine</td><td class=\"de\">der</td><td class=\"de\">ein</td><td class=\"de\">der Tisch / ein Tisch (table)</td></tr>\n<tr><td>feminine</td><td class=\"de\">die</td><td class=\"de\">eine</td><td class=\"de\">die Lampe / eine Lampe (lamp)</td></tr>\n<tr><td>neuter</td><td class=\"de\">das</td><td class=\"de\">ein</td><td class=\"de\">das Buch / ein Buch (book)</td></tr>\n<tr><td>plural</td><td class=\"de\">die</td><td>—</td><td class=\"de\">die Bücher (books)</td></tr>\n</table>\n<p>Gender is grammatical, not logical (<span class=\"de\">das Mädchen</span> = the girl is neuter!). <b>Always learn noun + article together.</b></p>\n<h3>2. Ending clues (right ~80% of the time)</h3>\n<table>\n<tr><th>Usually DIE (feminine)</th><td>-ung, -heit, -keit, -schaft, -ion, -e<br><span class=\"de\">die Zeitung, die Freiheit, die Lektion, die Lampe</span></td></tr>\n<tr><th>Usually DER (masculine)</th><td>-er (people/devices), -ling, -or; days, months, seasons<br><span class=\"de\">der Lehrer, der Computer, der Montag, der Sommer</span></td></tr>\n<tr><th>Usually DAS (neuter)</th><td>-chen, -lein, -um, -ment; infinitives as nouns<br><span class=\"de\">das Mädchen, das Zentrum, das Dokument, das Essen</span></td></tr>\n</table>\n<h3>3. What is \"nominative\"?</h3>\n<p>The nominative is the form for the <b>subject</b> — the person or thing doing the verb: <span class=\"de\"><b>Der Mann</b> trinkt Kaffee.</span> It's also used after <b>sein</b>: <span class=\"de\">Das ist <b>ein Tisch</b>.</span> The table above IS the nominative. (Tomorrow: plurals. Day 10: the accusative.)</p>\n<div class=\"tip\">💡 Color trick: write der-words in blue, die-words in red, das-words in green in your notes. Your visual memory will store the color with the word.</div>\n</details>",
+      "sourceHash": "7b0488041f6410f9d04c486b3105ea518705f79b71db4f0acbf45806d37eb27d"
+    },
+    {
+      "id": "d8-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 everyday objects — WITH articles!)",
+      "html": "<details><summary>📚 Vocabulary (16 everyday objects — WITH articles!)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">der Tisch</td><td>table</td></tr>\n<tr><td class=\"de\">der Stuhl</td><td>chair</td></tr>\n<tr><td class=\"de\">der Schlüssel</td><td>key</td></tr>\n<tr><td class=\"de\">der Computer</td><td>computer</td></tr>\n<tr><td class=\"de\">die Lampe</td><td>lamp</td></tr>\n<tr><td class=\"de\">die Tasche</td><td>bag</td></tr>\n<tr><td class=\"de\">die Tür</td><td>door</td></tr>\n<tr><td class=\"de\">die Uhr</td><td>clock, watch</td></tr>\n<tr><td class=\"de\">das Buch</td><td>book</td></tr>\n<tr><td class=\"de\">das Handy</td><td>mobile phone</td></tr>\n<tr><td class=\"de\">das Fenster</td><td>window</td></tr>\n<tr><td class=\"de\">das Bett</td><td>bed</td></tr>\n<tr><td class=\"de\">der Fernseher</td><td>TV set</td></tr>\n<tr><td class=\"de\">die Flasche</td><td>bottle</td></tr>\n<tr><td class=\"de\">das Bild</td><td>picture</td></tr>\n<tr><td class=\"de\">neu / kaputt</td><td>new / broken</td></tr>\n</table>\n</details>",
+      "sourceHash": "86758a5961acfa34fd9e18be76ed61af92b4afa73d9b1e219f729d320558567b"
+    },
+    {
+      "id": "d8-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was ist das? — Das ist eine Lampe.</span> <span class=\"tr\">What is that? — That's a lamp.</span></li>\n<li><span class=\"de\">Der Tisch ist neu.</span> <span class=\"tr\">The table is new.</span></li>\n<li><span class=\"de\">Das Handy ist kaputt.</span> <span class=\"tr\">The phone is broken.</span></li>\n<li><span class=\"de\">Ist das ein Buch? — Nein, das ist eine Tasche.</span> <span class=\"tr\">Is that a book? — No, that's a bag.</span></li>\n<li><span class=\"de\">Die Tür ist alt, aber das Fenster ist neu.</span> <span class=\"tr\">The door is old but the window is new.</span></li>\n<li><span class=\"de\">Wo ist der Schlüssel?</span> <span class=\"tr\">Where is the key?</span></li>\n</ol>\n</details>",
+      "sourceHash": "499b5110291b88123e926828cc4cd74eaf27b070703b55b61bf967fd3a6fddf5"
+    },
+    {
+      "id": "d8-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Was ist das?",
+      "html": "<details><summary>🗣 Dialogue: Was ist das?</summary>\n<div class=\"dlg\">\n<p><b>Mia:</b> <span class=\"de\">Du, was ist das?</span> <span class=\"tr\">(Hey, what's that?)</span></p>\n<p><b>Leo:</b> <span class=\"de\">Das ist eine Lampe. Sie ist neu.</span> <span class=\"tr\">(That's a lamp. It's new.)</span></p>\n<p><b>Mia:</b> <span class=\"de\">Schön! Und wo ist mein Schlüssel?</span> <span class=\"tr\">(Nice! And where is my key?)</span></p>\n<p><b>Leo:</b> <span class=\"de\">Keine Ahnung. Ist er in der Tasche?</span> <span class=\"tr\">(No idea. Is it in the bag?)</span></p>\n<p><b>Mia:</b> <span class=\"de\">Ja! Hier ist er. Danke!</span> <span class=\"tr\">(Yes! Here it is. Thanks!)</span></p>\n<p><b>Leo:</b> <span class=\"de\">Übrigens — der Fernseher ist kaputt.</span> <span class=\"tr\">(By the way — the TV is broken.)</span></p>\n<p><b>Mia:</b> <span class=\"de\">Oh nein!</span> <span class=\"tr\">(Oh no!)</span></p>\n</div>\n<div class=\"tip\">💡 Notice: things get personal pronouns matching their gender — der Schlüssel → <b>er</b> (it/he), die Lampe → <b>sie</b>, das Buch → <b>es</b>.</div>\n</details>",
+      "sourceHash": "8739de1cc9869136c481f4b1f7cc0886cce6f45ca88fca09dac3992bcf7f2888"
+    },
+    {
+      "id": "d8-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Walk around your home. Point at 15 objects and say: <span class=\"de\">Das ist ein/eine ...</span> (look up unknowns).</li>\n<li>Drill: say each vocab noun 3× WITH its article, in the gender color if you can visualize it.</li>\n<li>Q&amp;A with yourself: <span class=\"de\">Ist das ein Tisch? — Ja/Nein, das ist ...</span></li>\n</ol>\n</details>",
+      "sourceHash": "026351eda91c06af14b80b306e724ed54240afdcd2e3404ae61a36a95cfe88fc"
+    },
+    {
+      "id": "d8-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"German articles der die das song\"</b> — yes, it's silly; yes, it works.</li>\n<li><b>Nicos Weg A1</b>, next 2 episodes.</li>\n<li>🔊 Listen to today's 16 nouns; repeat each with article, twice.</li>\n</ul>\n</details>",
+      "sourceHash": "5783667750ab93c76a543fb31e33e236ae9481bbef2b5acb31f46c12829cbae1"
+    },
+    {
+      "id": "d8-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Mein Zimmer ist klein, aber schön. Das Bett ist neu. Der Tisch ist alt und der Stuhl ist auch alt. Die Lampe ist super — sie kommt aus Italien. Das Fenster ist groß. Und der Fernseher? Er ist kaputt!</p>\n<ol>\n<li>Which things are old?</li>\n<li>Where is the lamp from?</li>\n<li>What does \"sie\" refer to in \"sie kommt aus Italien\"?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. The table and the chair. 2. Italy. 3. Die Lampe — feminine nouns are referred to as \"sie\".</p></details>\n</details>",
+      "sourceHash": "60e3b21946f18df791885d32712a0062ca31dcc5c708ad2fa483ecfbaf649334"
+    },
+    {
+      "id": "d8-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Describe your room in 6 sentences. Pattern: <span class=\"de\">Das ist mein Zimmer. Der/Die/Das ... ist neu/alt/groß/klein/schön/kaputt.</span></p>\n</details>",
+      "sourceHash": "186b2667553c1e30deb403548316569b9aed2d32ee5bf6f1899e6cb4178561de"
+    },
+    {
+      "id": "d8-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>___ Lampe (article?)</li>\n<li>___ Buch (article?)</li>\n<li>___ Schlüssel (article?)</li>\n<li><span class=\"de\">die Zeitung</span> — how could you have guessed \"die\"?</li>\n<li>Fill in: <span class=\"de\">Ist das ___ Uhr? (a)</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>die</li><li>das</li><li>der</li><li>Nouns ending in -ung are feminine</li><li>eine</li></ol>\n</details>\n</details>",
+      "sourceHash": "cc3c19de64d607ffa2096a0b2356004017098c6c1f80087b92e1ff9fdd71a2ae"
+    },
+    {
+      "id": "d8-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">table</span><span class=\"a\">der Tisch</span></div>\n<div class=\"fc\"><span class=\"q\">lamp</span><span class=\"a\">die Lampe</span></div>\n<div class=\"fc\"><span class=\"q\">book</span><span class=\"a\">das Buch</span></div>\n<div class=\"fc\"><span class=\"q\">key</span><span class=\"a\">der Schlüssel</span></div>\n<div class=\"fc\"><span class=\"q\">bag</span><span class=\"a\">die Tasche</span></div>\n<div class=\"fc\"><span class=\"q\">window</span><span class=\"a\">das Fenster</span></div>\n<div class=\"fc\"><span class=\"q\">door</span><span class=\"a\">die Tür</span></div>\n<div class=\"fc\"><span class=\"q\">broken</span><span class=\"a\">kaputt</span></div>\n</div>\n</details>",
+      "sourceHash": "e554403fc3525f1d37b0e9495a322a0b5577e3985b33b84b6ab7b25f29c403f0"
+    },
+    {
+      "id": "d8-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Sticky-note time! Label 10 objects at home with article + noun. Say them every time you pass.</li>\n<li>Memorize the ending clues table (-ung/-heit → die, -chen → das, etc.).</li>\n<li>Go through your Week 1 problem list from Day 7.</li>\n</ol>\n</details>",
+      "sourceHash": "dadf8cd42448b4d8609c0ea630e485bc5a75329d94d88142d8bea6f871e40dc4"
+    },
+    {
+      "id": "d8-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Week 1)",
+      "html": "<details><summary>🔄 Revision (Week 1)</summary>\n<ul>\n<li>Conjugate sein, haben, werden — should be automatic by now.</li>\n<li>5 random flashcards each from Days 2, 4 and 6.</li>\n</ul>\n</details>",
+      "sourceHash": "8af823eff7670c3b333be599b6bab793c2890fcb92334f760d4236296a396749"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"8\"> ✅ Mark Day 8 complete</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 15,
+  "title": "Day 15 — Time, Days, Months & Dates",
+  "goal": "🎯 Today you can say the time two ways, name every day and month, and give dates.",
+  "sourceHash": "1d8fb43638f83a259bfeac23fe4dd1ae3bce4aa6f4f047b4d7e6b731aa83c140",
+  "introHtml": "<h2>Day 15 · Telling Time, Days, Months &amp; Dates</h2>\n<p class=\"goal\">🎯 Today you can say the time two ways, name every day and month, and give dates.</p>",
+  "sections": [
+    {
+      "id": "d15-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Wie spät ist es? (What time is it?)</h3>\n<table>\n<tr><th>Clock</th><th>Official (announcements)</th><th>Everyday German</th></tr>\n<tr><td>14:00</td><td class=\"de\">vierzehn Uhr</td><td class=\"de\">zwei (Uhr)</td></tr>\n<tr><td>14:05</td><td class=\"de\">vierzehn Uhr fünf</td><td class=\"de\">fünf nach zwei</td></tr>\n<tr><td>14:15</td><td class=\"de\">vierzehn Uhr fünfzehn</td><td class=\"de\">Viertel nach zwei</td></tr>\n<tr><td>14:30</td><td class=\"de\">vierzehn Uhr dreißig</td><td class=\"de\"><b>halb drei</b> ⚠️</td></tr>\n<tr><td>14:45</td><td class=\"de\">vierzehn Uhr fünfundvierzig</td><td class=\"de\">Viertel vor drei</td></tr>\n<tr><td>14:55</td><td class=\"de\">vierzehn Uhr fünfundfünfzig</td><td class=\"de\">fünf vor drei</td></tr>\n</table>\n<div class=\"warn\">⚠️ THE classic trap: <span class=\"de\">halb drei</span> = 2:30, NOT 3:30! Germans think \"half OF the way TO three\". Drill this until it's automatic.</div>\n<h3>2. Days &amp; months (all masculine → der, and use am/im)</h3>\n<p class=\"de\">Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag</p>\n<p class=\"de\">Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember</p>\n<h3>3. The three time prepositions</h3>\n<ul>\n<li><b>um</b> + clock time: <span class=\"de\">um 8 Uhr</span> (at 8)</li>\n<li><b>am</b> + day/date: <span class=\"de\">am Montag, am Wochenende, am 3. Mai</span></li>\n<li><b>im</b> + month/season: <span class=\"de\">im Januar, im Sommer</span></li>\n</ul>\n<h3>4. Dates (basics)</h3>\n<p><span class=\"de\">Der Wievielte ist heute? — Heute ist der dritte Mai (3.5.).</span> Ordinals 1–19 add <b>-te</b>: der zweite, der vierte... (irregular: <span class=\"de\">der erste, der dritte, der siebte</span>); from 20 add <b>-ste</b>: der zwanzigste. \"On the...\" = <span class=\"de\">am dritten Mai</span>.</p>\n</details>",
+      "sourceHash": "369716598363d65943bb7c8a6418e037cb4a82742b657a95aa11bd8e927a41f8"
+    },
+    {
+      "id": "d15-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (14 items)",
+      "html": "<details><summary>📚 Vocabulary (14 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">die Uhr / die Uhrzeit</td><td>clock / time (of day)</td></tr>\n<tr><td class=\"de\">Wie spät ist es?</td><td>What time is it?</td></tr>\n<tr><td class=\"de\">die Minute / die Stunde</td><td>minute / hour</td></tr>\n<tr><td class=\"de\">der Tag / die Woche / der Monat / das Jahr</td><td>day / week / month / year</td></tr>\n<tr><td class=\"de\">das Wochenende</td><td>weekend</td></tr>\n<tr><td class=\"de\">heute / morgen / gestern</td><td>today / tomorrow / yesterday</td></tr>\n<tr><td class=\"de\">jetzt / später / früh / spät</td><td>now / later / early / late</td></tr>\n<tr><td class=\"de\">der Morgen / der Vormittag</td><td>morning / late morning</td></tr>\n<tr><td class=\"de\">der Mittag / der Nachmittag</td><td>noon / afternoon</td></tr>\n<tr><td class=\"de\">der Abend / die Nacht</td><td>evening / night</td></tr>\n<tr><td class=\"de\">der Frühling / der Sommer</td><td>spring / summer</td></tr>\n<tr><td class=\"de\">der Herbst / der Winter</td><td>autumn / winter</td></tr>\n<tr><td class=\"de\">der Geburtstag</td><td>birthday</td></tr>\n<tr><td class=\"de\">pünktlich</td><td>punctual, on time</td></tr>\n</table>\n</details>",
+      "sourceHash": "c5ca4b19186b12c3f852cf0b0298bc0ec27d52b192d500229ce059602a59f1f7"
+    },
+    {
+      "id": "d15-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wie spät ist es? — Es ist halb acht.</span> <span class=\"tr\">What time is it? — It's 7:30.</span></li>\n<li><span class=\"de\">Der Kurs beginnt um neun Uhr.</span> <span class=\"tr\">The course starts at 9.</span></li>\n<li><span class=\"de\">Am Samstag arbeite ich nicht.</span> <span class=\"tr\">On Saturday I don't work.</span></li>\n<li><span class=\"de\">Mein Geburtstag ist im Oktober — am zwölften Oktober.</span> <span class=\"tr\">My birthday is in October — on October 12th.</span></li>\n<li><span class=\"de\">Im Winter ist es kalt.</span> <span class=\"tr\">In winter it's cold.</span></li>\n<li><span class=\"de\">Bitte sei pünktlich!</span> <span class=\"tr\">Please be on time!</span></li>\n</ol>\n</details>",
+      "sourceHash": "bf2d4f6ad09ed0596b8dbf83061f981919e2719416fb8b001526df71c6a1e198"
+    },
+    {
+      "id": "d15-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Wann hast du Zeit?",
+      "html": "<details><summary>🗣 Dialogue: Wann hast du Zeit?</summary>\n<div class=\"dlg\">\n<p><b>Elif:</b> <span class=\"de\">Gehen wir am Wochenende ins Kino?</span> <span class=\"tr\">(Shall we go to the cinema this weekend?)</span></p>\n<p><b>Jan:</b> <span class=\"de\">Gute Idee! Am Samstag oder am Sonntag?</span> <span class=\"tr\">(Good idea! Saturday or Sunday?)</span></p>\n<p><b>Elif:</b> <span class=\"de\">Am Samstag. Der Film beginnt um Viertel nach acht.</span> <span class=\"tr\">(Saturday. The film starts at quarter past eight.)</span></p>\n<p><b>Jan:</b> <span class=\"de\">Okay. Treffen wir uns um halb acht?</span> <span class=\"tr\">(OK. Shall we meet at 7:30?)</span></p>\n<p><b>Elif:</b> <span class=\"de\">Perfekt. Und bitte sei pünktlich!</span> <span class=\"tr\">(Perfect. And please be on time!)</span></p>\n<p><b>Jan:</b> <span class=\"de\">Ich bin immer pünktlich!</span> <span class=\"tr\">(I'm always on time!)</span></p>\n</div>\n</details>",
+      "sourceHash": "5fd9f4a8a96c341175c8843f67eaacb4bbe681d6405adb5f37bf35ab024bd51f"
+    },
+    {
+      "id": "d15-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Say these times BOTH ways: 9:15, 13:30, 17:45, 20:50, 11:05.</li>\n<li>Recite the days and months aloud — twice, from memory.</li>\n<li>Answer: <span class=\"de\">Wann ist dein Geburtstag? Was machst du am Wochenende? Wie spät ist es jetzt?</span></li>\n<li>Every time you check your phone clock today: say the time in German, everyday style.</li>\n</ol>\n</details>",
+      "sourceHash": "5057b5dd5e474e8fc4a7da987f5ed3b262cc0149668a8a7c9b362a87421b02d1"
+    },
+    {
+      "id": "d15-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Uhrzeit Deutsch A1\"</b> — do a listen-and-write-the-time exercise.</li>\n<li><b>Nicos Weg A1</b> — time/appointment episodes.</li>\n<li>Listen to a German train announcement on YouTube (\"Deutsche Bahn Ansage\") — catch the departure time.</li>\n</ul>\n</details>",
+      "sourceHash": "39fd6282cbc742e74c09b8e576243bbcba4511184d5da755f32a00f73d709a2d"
+    },
+    {
+      "id": "d15-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Das Deutschkurs-Programm: Der Kurs ist von Montag bis Freitag. Er beginnt um 9 Uhr und endet um halb eins. Am Mittwoch gibt es einen Test. Am Wochenende ist kein Kurs. Im August ist der Kurs zu Ende — dann beginnen die Ferien!</p>\n<ol>\n<li>What time does the course end?</li>\n<li>When is the test?</li>\n<li>What happens in August?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. 12:30 (halb eins!). 2. On Wednesday. 3. The course ends and holidays (Ferien) begin.</p></details>\n</details>",
+      "sourceHash": "592e7667bef7e158950a001b5e7cb5bb05c8922f30d07527fe7c5b68a8f89a0a"
+    },
+    {
+      "id": "d15-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write your weekly schedule: one sentence per day. <span class=\"de\">Am Montag lerne ich Deutsch um 8 Uhr. Am Dienstag ...</span> Notice: when the day comes first, the verb comes SECOND, then the subject (more on this Day 22).</p>\n</details>",
+      "sourceHash": "1654f40f4c5da3048e4bc8928b392b3ce783d27e8898388ff0b2f291b7dc5504"
+    },
+    {
+      "id": "d15-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li><span class=\"de\">halb sechs</span> = what time?</li>\n<li>Say 16:45 in everyday German.</li>\n<li>um, am or im: ___ Montag / ___ 9 Uhr / ___ Sommer.</li>\n<li>\"My birthday is on May 3rd\" = ?</li>\n<li>The day after <span class=\"de\">Mittwoch</span>?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>5:30</li><li>Viertel vor fünf</li><li>am Montag, um 9 Uhr, im Sommer</li><li>Mein Geburtstag ist am dritten Mai.</li><li>Donnerstag</li></ol>\n</details>\n</details>",
+      "sourceHash": "04f3bde18451c671bef9d583298340d940f2f55aa9c0f0dd95b5112df11060b2"
+    },
+    {
+      "id": "d15-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">7:30</span><span class=\"a\">halb acht</span></div>\n<div class=\"fc\"><span class=\"q\">quarter past two</span><span class=\"a\">Viertel nach zwei</span></div>\n<div class=\"fc\"><span class=\"q\">at 8 o'clock</span><span class=\"a\">um 8 Uhr</span></div>\n<div class=\"fc\"><span class=\"q\">on Monday</span><span class=\"a\">am Montag</span></div>\n<div class=\"fc\"><span class=\"q\">in July</span><span class=\"a\">im Juli</span></div>\n<div class=\"fc\"><span class=\"q\">weekend</span><span class=\"a\">das Wochenende</span></div>\n<div class=\"fc\"><span class=\"q\">today/tomorrow/yesterday</span><span class=\"a\">heute / morgen / gestern</span></div>\n<div class=\"fc\"><span class=\"q\">on time</span><span class=\"a\">pünktlich</span></div>\n</div>\n</details>",
+      "sourceHash": "ae151a5660224a617e63d9bf6ef58bbb683401d8c20b5c40f2037323543b8dce"
+    },
+    {
+      "id": "d15-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Switch your phone's language to German for the rest of the course (you can survive — really!).</li>\n<li>Write the birthdays of 3 people: <span class=\"de\">... hat am ... Geburtstag.</span></li>\n<li>halb-drill: 2:30, 6:30, 11:30, 12:30 — instant answers required.</li>\n</ol>\n</details>",
+      "sourceHash": "c2fffc9faff680e7a5899310bc723480a7f3030c234e3fc73b5df41201b2b927"
+    },
+    {
+      "id": "d15-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Week 2)",
+      "html": "<details><summary>🔄 Revision (Week 2)</summary>\n<ul>\n<li>Accusative 10-second check: Ich nehme ___ Apfel / ___ Banane / ___ Brot. (einen/eine/ein)</li>\n<li>Any Test 2 mistakes? Redo those exact questions now.</li>\n</ul>\n</details>",
+      "sourceHash": "b08db1ed863ecb0502615ed5009b38c2ce09150be35d2e734d0bded6252c4d49"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"15\"> ✅ Mark Day 15 complete</label>"
+}

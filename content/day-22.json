@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 22,
+  "title": "Day 22 — Hobbies · gern · Word Order",
+  "goal": "🎯 Today you talk about what you love doing — and nail the #1 German word-order rule for good.",
+  "sourceHash": "812c948f7d99c7901d643c7304f78f1b42c752751899f917790416d0af0a8ba6",
+  "introHtml": "<h2>Day 22 · Hobbies &amp; Free Time — <i>gern</i> &amp; Word Order Mastery</h2>\n<p class=\"goal\">🎯 Today you talk about what you love doing — and nail the #1 German word-order rule for good.</p>",
+  "sections": [
+    {
+      "id": "d22-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. gern / lieber / am liebsten</h3>\n<ul>\n<li><span class=\"de\">Ich spiele <b>gern</b> Fußball.</span> — I like playing football.</li>\n<li><span class=\"de\">Ich schwimme <b>lieber</b>.</span> — I prefer swimming.</li>\n<li><span class=\"de\">Ich lese <b>am liebsten</b>.</span> — I like reading best of all.</li>\n<li>Negative: <span class=\"de\">Ich koche <b>nicht gern</b>.</span></li>\n</ul>\n<h3>2. THE rule: the verb is ALWAYS second</h3>\n<p>Position 1 can be anything — subject, time, place. The conjugated verb never moves from position 2:</p>\n<table>\n<tr><th>Position 1</th><th>Verb (2)</th><th>Rest</th></tr>\n<tr><td class=\"de\">Ich</td><td class=\"de\">spiele</td><td class=\"de\">am Sonntag Tennis.</td></tr>\n<tr><td class=\"de\">Am Sonntag</td><td class=\"de\">spiele</td><td class=\"de\"><b>ich</b> Tennis.</td></tr>\n<tr><td class=\"de\">Tennis</td><td class=\"de\">spiele</td><td class=\"de\">ich am Sonntag.</td></tr>\n</table>\n<div class=\"warn\">⚠️ English speakers write \"Am Sonntag ich spiele...\" — WRONG. When anything other than the subject starts the sentence, subject and verb swap (\"inversion\"). Drill this today until it hurts, then until it doesn't.</div>\n<h3>3. Time before place</h3>\n<p>When both appear, time usually comes first: <span class=\"de\">Ich gehe <b>am Samstag</b> <b>ins Kino</b>.</span></p>\n<h3>4. Frequency words</h3>\n<p class=\"de\">immer (always), oft (often), manchmal (sometimes), selten (rarely), nie (never)</p>\n<p><span class=\"de\">Ich gehe <b>oft</b> schwimmen. <b>Manchmal</b> spiele ich Schach.</span> (See? Verb still second.)</p>\n</details>",
+      "sourceHash": "d7aac2e692c6ee84eac71d7cd56d74064dd48d5fef6ef90cae83c8db489b2a1f"
+    },
+    {
+      "id": "d22-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 items)",
+      "html": "<details><summary>📚 Vocabulary (16 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">das Hobby, -s</td><td>hobby</td></tr>\n<tr><td class=\"de\">die Freizeit</td><td>free time</td></tr>\n<tr><td class=\"de\">Fußball spielen</td><td>to play football</td></tr>\n<tr><td class=\"de\">Musik hören</td><td>to listen to music</td></tr>\n<tr><td class=\"de\">lesen (er liest)</td><td>to read</td></tr>\n<tr><td class=\"de\">kochen / backen</td><td>to cook / to bake</td></tr>\n<tr><td class=\"de\">tanzen</td><td>to dance</td></tr>\n<tr><td class=\"de\">wandern</td><td>to hike</td></tr>\n<tr><td class=\"de\">reisen</td><td>to travel</td></tr>\n<tr><td class=\"de\">malen / fotografieren</td><td>to paint / to photograph</td></tr>\n<tr><td class=\"de\">Rad fahren</td><td>to cycle</td></tr>\n<tr><td class=\"de\">Freunde treffen (er trifft)</td><td>to meet friends</td></tr>\n<tr><td class=\"de\">Sport machen</td><td>to do sport</td></tr>\n<tr><td class=\"de\">das Spiel, -e</td><td>game, match</td></tr>\n<tr><td class=\"de\">die Musik / die Band</td><td>music / band</td></tr>\n<tr><td class=\"de\">langweilig / interessant</td><td>boring / interesting</td></tr>\n</table>\n</details>",
+      "sourceHash": "91e8a02f7e220535d8f1b4bfd796e1315a7405bd97a1b482f3b4dbf054e65186"
+    },
+    {
+      "id": "d22-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was machst du in deiner Freizeit?</span> <span class=\"tr\">What do you do in your free time?</span></li>\n<li><span class=\"de\">Ich höre gern Musik und ich koche sehr gern.</span> <span class=\"tr\">I like listening to music and I really like cooking.</span></li>\n<li><span class=\"de\">Am Wochenende treffe ich oft Freunde.</span> <span class=\"tr\">On weekends I often meet friends.</span></li>\n<li><span class=\"de\">Er spielt lieber Fußball als Tennis.</span> <span class=\"tr\">He prefers football to tennis.</span></li>\n<li><span class=\"de\">Am liebsten reise ich.</span> <span class=\"tr\">Most of all, I like travelling.</span></li>\n<li><span class=\"de\">Schach finde ich langweilig.</span> <span class=\"tr\">I find chess boring.</span></li>\n</ol>\n</details>",
+      "sourceHash": "68a3d2329fa50dfdf7aaffde9b21cbe9e6610873b275608313d7fdf68d67a144"
+    },
+    {
+      "id": "d22-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Hobbys",
+      "html": "<details><summary>🗣 Dialogue: Hobbys</summary>\n<div class=\"dlg\">\n<p><b>Katja:</b> <span class=\"de\">Was machst du gern in deiner Freizeit?</span> <span class=\"tr\">(What do you like doing in your free time?)</span></p>\n<p><b>Bruno:</b> <span class=\"de\">Ich fahre gern Rad und ich fotografiere. Und du?</span> <span class=\"tr\">(I like cycling and I take photos. You?)</span></p>\n<p><b>Katja:</b> <span class=\"de\">Ich tanze gern. Am liebsten höre ich aber Musik.</span> <span class=\"tr\">(I like dancing. But most of all I listen to music.)</span></p>\n<p><b>Bruno:</b> <span class=\"de\">Welche Musik hörst du?</span> <span class=\"tr\">(What music do you listen to?)</span></p>\n<p><b>Katja:</b> <span class=\"de\">Rock! Am Freitag spielt meine Lieblingsband. Kommst du mit?</span> <span class=\"tr\">(Rock! On Friday my favourite band is playing. Coming along?)</span></p>\n<p><b>Bruno:</b> <span class=\"de\">Klar, gern!</span> <span class=\"tr\">(Sure, gladly!)</span></p>\n</div>\n<div class=\"tip\">💡 <span class=\"de\">Lieblings-</span> sticks onto anything: Lieblingsband, Lieblingsfilm, Lieblingsessen = favourite band/film/food.</div>\n</details>",
+      "sourceHash": "8685b3904ebff96dc54fb4c0e8bf0a6ee6ff50fbfd278f422eb9eabf3dbf38f8"
+    },
+    {
+      "id": "d22-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Your hobby ranking aloud: <span class=\"de\">Ich ... gern. Ich ... lieber. Am liebsten ...</span></li>\n<li>Inversion drill — start each sentence with the time: <span class=\"de\">Am Montag..., Am Wochenende..., Abends..., Manchmal...</span> + verb + ich. Five sentences.</li>\n<li>Frequency ladder: one true sentence each with immer, oft, manchmal, selten, nie.</li>\n</ol>\n</details>",
+      "sourceHash": "c2291b7299dc535ae200ac2d2144c6ad0a230acc704a6b83434df4eb294977d9"
+    },
+    {
+      "id": "d22-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Easy German hobbies\"</b> — what do real Germans do in their free time?</li>\n<li><b>Nicos Weg A1</b> — free time episodes.</li>\n<li>Listen to one German song and find the lyrics (\"Songtext\"); highlight words you know.</li>\n</ul>\n</details>",
+      "sourceHash": "7aae9bbe6a80ac42cfc7019a0d3bfeff12754d759145fc229d6beb7803d8457e"
+    },
+    {
+      "id": "d22-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Familie Novak hat viele Hobbys. Der Vater kocht gern — am liebsten italienisch. Die Mutter fährt oft Rad, manchmal 50 Kilometer! Die Tochter malt gern und fotografiert. Der Sohn? Er spielt immer Computerspiele. „Das ist kein Hobby!\", sagt der Vater. „Doch!\", sagt der Sohn.</p>\n<ol>\n<li>What does each family member like doing?</li>\n<li>What's the disagreement at the end?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Father: cooking (Italian best of all); mother: cycling; daughter: painting and photography; son: computer games. 2. Whether computer games count as a hobby — the son insists \"Doch!\" (yes they do!).</p></details>\n</details>",
+      "sourceHash": "f9d48b38c0f6a60659d5b5bcf236a2bea44c7d051692e3367f7e463955df556b"
+    },
+    {
+      "id": "d22-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 8 sentences about your free time. Rules: at least 3 sentences must NOT start with \"Ich\" (start with a time or frequency word instead), and use gern/lieber/am liebsten once each.</p>\n</details>",
+      "sourceHash": "8e4f70359d2a51b0d06198c6bb036f30371ba971cd12f4b8c1cfbdcabdcceef5"
+    },
+    {
+      "id": "d22-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fix: <span class=\"de\">Am Samstag ich spiele Fußball.</span></li>\n<li>Rank it: gern → ? → ?</li>\n<li>Translate: \"Sometimes I read in the evening.\" (start with Manchmal)</li>\n<li>\"never\" = ?</li>\n<li>Time or place first: \"Ich fahre ___ ___\" (am Sonntag / nach Bonn)?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Am Samstag spiele ich Fußball.</li><li>gern → lieber → am liebsten</li><li>Manchmal lese ich am Abend. / Manchmal lese ich abends.</li><li>nie</li><li>Ich fahre am Sonntag nach Bonn. (time before place)</li></ol>\n</details>\n</details>",
+      "sourceHash": "3cb867077baee9b2f9b93202e3424b209e64221b6ed8d47a7f3b4907666cdb15"
+    },
+    {
+      "id": "d22-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I like cooking</span><span class=\"a\">Ich koche gern</span></div>\n<div class=\"fc\"><span class=\"q\">I prefer...</span><span class=\"a\">lieber</span></div>\n<div class=\"fc\"><span class=\"q\">most of all</span><span class=\"a\">am liebsten</span></div>\n<div class=\"fc\"><span class=\"q\">often / sometimes</span><span class=\"a\">oft / manchmal</span></div>\n<div class=\"fc\"><span class=\"q\">never</span><span class=\"a\">nie</span></div>\n<div class=\"fc\"><span class=\"q\">to meet friends</span><span class=\"a\">Freunde treffen</span></div>\n<div class=\"fc\"><span class=\"q\">to hike</span><span class=\"a\">wandern</span></div>\n<div class=\"fc\"><span class=\"q\">boring</span><span class=\"a\">langweilig</span></div>\n</div>\n</details>",
+      "sourceHash": "7225fa8fb9dd9a4dc9d7c0ee07f8d031d90c93fd406bf72a035890e8736684ea"
+    },
+    {
+      "id": "d22-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write your Lieblings-list: Lieblingsessen, Lieblingsfilm, Lieblingsstadt + one gern-sentence about each.</li>\n<li>Inversion patrol: today, every German sentence you speak or write that starts with a time word gets a word-order check.</li>\n</ol>\n</details>",
+      "sourceHash": "77d6d3956378d6a1d4e2e42100c21e5131fcf69dd0ee1367f65bfe111fc039ba"
+    },
+    {
+      "id": "d22-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Week 3)",
+      "html": "<details><summary>🔄 Revision (Week 3)</summary>\n<ul>\n<li>Test 3 mistakes — redo them now.</li>\n<li>Modals + hobbies combo: <span class=\"de\">Ich kann gut ... / Ich will ... lernen.</span></li>\n</ul>\n</details>",
+      "sourceHash": "dabe81bc7a9f99d3e6f9fd00daa28aee2ad275d3b0296f9c6573d8ade2a15bec"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"22\"> ✅ Mark Day 22 complete</label>"
+}

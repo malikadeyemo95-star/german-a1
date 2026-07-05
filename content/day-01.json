@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 1,
+  "title": "Day 1 — Alphabet & Pronunciation",
+  "goal": "🎯 Today you learn to read German aloud, spell your name, and say your first 16 words.",
+  "sourceHash": "7e07ad7b755f3c272f08784776ba509eda875891a6670ceab3960aea01210ce9",
+  "introHtml": "<h2>Day 1 · The Alphabet, Pronunciation &amp; First Words</h2>\n<p class=\"goal\">🎯 Today you learn to read German aloud, spell your name, and say your first 16 words.</p>",
+  "sections": [
+    {
+      "id": "d1-s1",
+      "type": "grammar",
+      "title": "📖 Grammar & pronunciation lesson",
+      "html": "<details open><summary>📖 Grammar &amp; pronunciation lesson</summary>\n<h3>1. The German alphabet (das Alphabet)</h3>\n<p>Same 26 letters as English, plus <b>ä ö ü ß</b>. The letter <b>names</b> matter — Germans spell names on the phone constantly.</p>\n<table>\n<tr><td>A \"ah\"</td><td>B \"bay\"</td><td>C \"tsay\"</td><td>D \"day\"</td></tr>\n<tr><td>E \"ay\"</td><td>F \"eff\"</td><td>G \"gay\"</td><td>H \"hah\"</td></tr>\n<tr><td>I \"ee\"</td><td>J \"yot\"</td><td>K \"kah\"</td><td>L \"ell\"</td></tr>\n<tr><td>M \"emm\"</td><td>N \"enn\"</td><td>O \"oh\"</td><td>P \"pay\"</td></tr>\n<tr><td>Q \"koo\"</td><td>R \"err\"</td><td>S \"ess\"</td><td>T \"tay\"</td></tr>\n<tr><td>U \"oo\"</td><td>V \"fow\"</td><td>W \"vay\"</td><td>X \"iks\"</td></tr>\n<tr><td>Y \"üpsilon\"</td><td>Z \"tsett\"</td><td>ß \"ess-tsett\"</td><td>ä/ö/ü = a/o/u + Umlaut</td></tr>\n</table>\n<h3>2. Three golden rules</h3>\n<ul>\n<li><b>German is phonetic.</b> Words sound how they're written, once you know the rules (see the crash course on the Start page — read it now if you skipped it!).</li>\n<li><b>Stress the first syllable</b> of most German words: <span class=\"de\">AR-beiten, MOR-gen</span>.</li>\n<li><b>All nouns get a capital letter:</b> <span class=\"de\">der Morgen, die Nacht</span>.</li>\n</ul>\n<div class=\"tip\">💡 Practice pairs aloud: <span class=\"de\">Wein</span> (\"vine\" = wine) vs <span class=\"de\">Wien</span> (\"veen\" = Vienna). ei = \"eye\", ie = \"ee\".</div>\n</details>",
+      "sourceHash": "42a4d5390d1d6e9b8332393c7235ea76448cb235aae4b6c9f757bc7e104a6272"
+    },
+    {
+      "id": "d1-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 words)",
+      "html": "<details><summary>📚 Vocabulary (16 words)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">Hallo</td><td>hello</td></tr>\n<tr><td class=\"de\">Guten Morgen</td><td>good morning</td></tr>\n<tr><td class=\"de\">Guten Tag</td><td>good day / hello (daytime)</td></tr>\n<tr><td class=\"de\">Guten Abend</td><td>good evening</td></tr>\n<tr><td class=\"de\">Gute Nacht</td><td>good night (before sleeping)</td></tr>\n<tr><td class=\"de\">Tschüss</td><td>bye (informal)</td></tr>\n<tr><td class=\"de\">Auf Wiedersehen</td><td>goodbye (formal)</td></tr>\n<tr><td class=\"de\">ja</td><td>yes</td></tr>\n<tr><td class=\"de\">nein</td><td>no</td></tr>\n<tr><td class=\"de\">danke (schön)</td><td>thank you (very much)</td></tr>\n<tr><td class=\"de\">bitte</td><td>please / you're welcome</td></tr>\n<tr><td class=\"de\">Entschuldigung</td><td>excuse me / sorry</td></tr>\n<tr><td class=\"de\">Wie bitte?</td><td>pardon? / say that again?</td></tr>\n<tr><td class=\"de\">und</td><td>and</td></tr>\n<tr><td class=\"de\">oder</td><td>or</td></tr>\n<tr><td class=\"de\">Alles klar</td><td>all right / got it</td></tr>\n</table>\n<div class=\"tip\">💡 <b>bitte</b> is the Swiss Army knife of German: \"please\", \"you're welcome\", \"here you go\", and \"pardon?\" (Wie bitte?).</div>\n</details>",
+      "sourceHash": "138bb456273f4108f9bde279745289512629292adb3da2d836ce5d35d451c6d9"
+    },
+    {
+      "id": "d1-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Guten Morgen!</span> <span class=\"tr\">Good morning!</span></li>\n<li><span class=\"de\">Hallo, alles klar?</span> <span class=\"tr\">Hi, everything OK?</span></li>\n<li><span class=\"de\">Danke schön! — Bitte!</span> <span class=\"tr\">Thanks a lot! — You're welcome!</span></li>\n<li><span class=\"de\">Entschuldigung, wie bitte?</span> <span class=\"tr\">Sorry, could you say that again?</span></li>\n<li><span class=\"de\">Ja oder nein?</span> <span class=\"tr\">Yes or no?</span></li>\n<li><span class=\"de\">Tschüss, gute Nacht!</span> <span class=\"tr\">Bye, good night!</span></li>\n</ol>\n</details>",
+      "sourceHash": "12662c58469a701d01d4fdb9f0f86601ddd0f28d081758def234a4c89422a0b1"
+    },
+    {
+      "id": "d1-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Im Café (at the café)",
+      "html": "<details><summary>🗣 Dialogue: Im Café (at the café)</summary>\n<div class=\"dlg\">\n<p><b>Anna:</b> <span class=\"de\">Guten Tag!</span> <span class=\"tr\">(Good day!)</span></p>\n<p><b>Ben:</b> <span class=\"de\">Guten Tag! Kaffee?</span> <span class=\"tr\">(Good day! Coffee?)</span></p>\n<p><b>Anna:</b> <span class=\"de\">Ja, bitte.</span> <span class=\"tr\">(Yes, please.)</span></p>\n<p><b>Ben:</b> <span class=\"de\">Bitte schön.</span> <span class=\"tr\">(Here you go.)</span></p>\n<p><b>Anna:</b> <span class=\"de\">Danke schön!</span> <span class=\"tr\">(Thank you very much!)</span></p>\n<p><b>Ben:</b> <span class=\"de\">Bitte. Auf Wiedersehen!</span> <span class=\"tr\">(You're welcome. Goodbye!)</span></p>\n<p><b>Anna:</b> <span class=\"de\">Tschüss!</span> <span class=\"tr\">(Bye!)</span></p>\n</div>\n<p>Read it aloud 3 times. Then swap roles and read it again.</p>\n</details>",
+      "sourceHash": "5bbdf729cf7c7a4ba4cc17493fe6eee59afdf8c0bcb3d9be2f6f35cb929bfd78"
+    },
+    {
+      "id": "d1-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Spell your full name aloud using the German letter names. Do it 3 times, faster each time.</li>\n<li>Say each greeting matched to the right time of day: it's 8:00 → <span class=\"de\">Guten Morgen!</span>; 14:00 → ?; 20:00 → ?; going to bed → ?</li>\n<li>Read these aloud using the rules: <span class=\"de\">Wasser, Vater, ja, zehn, Sie, nein, wie, neun, Haus, Schule, Straße, ich, Buch, schön, fünf</span>.</li>\n<li>Record yourself on your phone saying all 16 vocabulary words. Listen back — does your W sound like a V?</li>\n</ol>\n</details>",
+      "sourceHash": "c649a47b4a55e9cb473279eed124f8f6a0e3db8d754fc72b75cc05ba8c00e2fc"
+    },
+    {
+      "id": "d1-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>Search YouTube for <b>\"German alphabet song\"</b> — listen twice, sing along once.</li>\n<li>Start <b>Nicos Weg A1, Episode 1 (\"Hallo!\")</b> on the DW Learn German site or YouTube. Watch once with subtitles, once without.</li>\n<li>Type today's 16 words into Google Translate or DeepL and tap 🔊 to hear each one. Repeat aloud after each.</li>\n</ul>\n</details>",
+      "sourceHash": "fdd791c9a162c53c1dc23a9064f74855925f50253c544c2631a2c2818688a7e8"
+    },
+    {
+      "id": "d1-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p>Read this aloud, then answer the questions:</p>\n<p class=\"de\">Guten Morgen! Kaffee oder Tee? — Kaffee, bitte. — Alles klar. Bitte schön! — Danke! — Bitte!</p>\n<ol>\n<li>What time of day is it (roughly)?</li>\n<li>What does the person order?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Morning (Guten Morgen). 2. Coffee (Kaffee, bitte).</p></details>\n</details>",
+      "sourceHash": "345c735a43f11bcacfeef4128482dbe8fd24ff49643c8bb22afefbc1833a9514"
+    },
+    {
+      "id": "d1-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<ol>\n<li>Copy all 16 vocabulary words by hand, once each. Handwriting builds memory.</li>\n<li>Write a 4-line mini dialogue: greeting → offer (Kaffee? / Tee?) → answer with ja/nein + bitte/danke → goodbye.</li>\n</ol>\n</details>",
+      "sourceHash": "c481ddbadb1c16a86f8feffc53cc69c17e60ea72f57e7bba27a48fbf47fa3d3a"
+    },
+    {
+      "id": "d1-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>How do you say goodbye <b>formally</b>?</li>\n<li><span class=\"de\">Wein</span> is pronounced: a) \"veen\" b) \"vine\" c) \"wine\"</li>\n<li>Which greeting fits at 21:00? a) Guten Morgen b) Guten Abend c) Gute Nacht</li>\n<li>Someone says <span class=\"de\">Danke!</span> — what do you reply?</li>\n<li>True or false: German nouns are always capitalized.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Auf Wiedersehen</li><li>b — W sounds like V, ei sounds like \"eye\"</li><li>b (Gute Nacht is only for bedtime)</li><li>Bitte!</li><li>True</li></ol>\n</details>\n</details>",
+      "sourceHash": "a69afecd9522872cd7c5345df55db8455201508470f5a382059831c20f242e6f"
+    },
+    {
+      "id": "d1-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards (tap to flip)",
+      "html": "<details><summary>🃏 Flashcards (tap to flip)</summary>\n<p class=\"fchint\">Say the answer out loud, then tap to check.</p>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">hello</span><span class=\"a\">Hallo</span></div>\n<div class=\"fc\"><span class=\"q\">good morning</span><span class=\"a\">Guten Morgen</span></div>\n<div class=\"fc\"><span class=\"q\">goodbye (formal)</span><span class=\"a\">Auf Wiedersehen</span></div>\n<div class=\"fc\"><span class=\"q\">bye (informal)</span><span class=\"a\">Tschüss</span></div>\n<div class=\"fc\"><span class=\"q\">thank you</span><span class=\"a\">danke</span></div>\n<div class=\"fc\"><span class=\"q\">please / you're welcome</span><span class=\"a\">bitte</span></div>\n<div class=\"fc\"><span class=\"q\">excuse me / sorry</span><span class=\"a\">Entschuldigung</span></div>\n<div class=\"fc\"><span class=\"q\">pardon?</span><span class=\"a\">Wie bitte?</span></div>\n</div>\n</details>",
+      "sourceHash": "58377b0d7211da87eb8f10ea91169f02b549ba2950166fc59ece1524c54b5b04"
+    },
+    {
+      "id": "d1-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Put sticky notes with <span class=\"de\">Hallo / Tschüss</span> on your front door — say them every time you pass.</li>\n<li>Spell 3 more names aloud (a friend, your city, your street).</li>\n<li>Re-read the pronunciation crash course on the Start page.</li>\n</ol>\n</details>",
+      "sourceHash": "b409da433572d6a7ced3439482f4abf81c7eb839f05e30a0c7f9b1573f57769b"
+    },
+    {
+      "id": "d1-s12",
+      "type": "revision",
+      "title": "🔄 Revision",
+      "html": "<details><summary>🔄 Revision</summary>\n<p>First day — nothing to revise yet! Instead, read the \"Top mistakes\" list on the Start page so you avoid them from Day 2 on.</p>\n</details>",
+      "sourceHash": "d6f5abf31dccf6d0a099214197084a80223bc7beb9dfa67ba375ccd0a9488b7d"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"1\"> ✅ Mark Day 1 complete</label>"
+}

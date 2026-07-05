@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 23,
+  "title": "Day 23 — Housing · es gibt",
+  "goal": "🎯 Today you can describe a flat, understand a housing ad, and talk about renting.",
+  "sourceHash": "7a480e0e6250bfa6d0270d9ef28820f3d214685bf4649d39a90dd9f4fd42da5d",
+  "introHtml": "<h2>Day 23 · Housing &amp; Home — <i>es gibt</i> in Action</h2>\n<p class=\"goal\">🎯 Today you can describe a flat, understand a housing ad, and talk about renting.</p>",
+  "sections": [
+    {
+      "id": "d23-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. es gibt + accusative (there is/are)</h3>\n<ul>\n<li><span class=\"de\">Es gibt <b>einen</b> Balkon.</span> — There's a balcony. (m → einen!)</li>\n<li><span class=\"de\">Es gibt <b>eine</b> Küche und <b>ein</b> Bad.</span></li>\n<li><span class=\"de\">Es gibt <b>keinen</b> Aufzug.</span> — There's no lift.</li>\n<li>Question: <span class=\"de\">Gibt es einen Garten?</span></li>\n</ul>\n<h3>2. Describing with adjectives (after sein — no endings needed!)</h3>\n<p><span class=\"de\">Die Wohnung ist <b>hell, groß und zentral</b>.</span> Adjectives after sein/finden never change — enjoy it while it lasts (endings before nouns are A2 material).</p>\n<h3>3. Reading housing ads — the abbreviations</h3>\n<table>\n<tr><td class=\"de\">2-Zi.-Whg.</td><td>2-room flat (zwei-Zimmer-Wohnung)</td></tr>\n<tr><td class=\"de\">60 m²</td><td>60 square metres (Quadratmeter)</td></tr>\n<tr><td class=\"de\">KM / WM</td><td>Kaltmiete / Warmmiete (rent without / with heating &amp; costs)</td></tr>\n<tr><td class=\"de\">NK</td><td>Nebenkosten (utility costs)</td></tr>\n<tr><td class=\"de\">EBK</td><td>Einbauküche (fitted kitchen)</td></tr>\n</table>\n</details>",
+      "sourceHash": "c306dba76ccf6b4e57f23be05cf59941500b4eeece5434b08b5e8ba51fd7d8d2"
+    },
+    {
+      "id": "d23-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (18 items)",
+      "html": "<details><summary>📚 Vocabulary (18 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">die Wohnung, -en</td><td>flat, apartment</td></tr>\n<tr><td class=\"de\">das Haus, ¨-er</td><td>house</td></tr>\n<tr><td class=\"de\">das Zimmer, -</td><td>room</td></tr>\n<tr><td class=\"de\">das Wohnzimmer</td><td>living room</td></tr>\n<tr><td class=\"de\">das Schlafzimmer</td><td>bedroom</td></tr>\n<tr><td class=\"de\">die Küche</td><td>kitchen</td></tr>\n<tr><td class=\"de\">das Bad / die Toilette</td><td>bathroom / toilet</td></tr>\n<tr><td class=\"de\">der Balkon / der Garten</td><td>balcony / garden</td></tr>\n<tr><td class=\"de\">der Aufzug</td><td>lift, elevator</td></tr>\n<tr><td class=\"de\">die Miete / mieten</td><td>rent / to rent</td></tr>\n<tr><td class=\"de\">der Vermieter</td><td>landlord</td></tr>\n<tr><td class=\"de\">der Schrank, ¨-e</td><td>wardrobe, cupboard</td></tr>\n<tr><td class=\"de\">das Sofa, -s</td><td>sofa</td></tr>\n<tr><td class=\"de\">hell / dunkel</td><td>bright / dark</td></tr>\n<tr><td class=\"de\">groß / klein</td><td>big / small</td></tr>\n<tr><td class=\"de\">zentral / ruhig / laut</td><td>central / quiet / loud</td></tr>\n<tr><td class=\"de\">umziehen (sep.)</td><td>to move (house)</td></tr>\n<tr><td class=\"de\">der Stock / im ersten Stock</td><td>floor / on the first floor</td></tr>\n</table>\n</details>",
+      "sourceHash": "eb1b748566a64a9ed838e2f1099fc089438a0653ce117df15ae0de8a5c00477c"
+    },
+    {
+      "id": "d23-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Meine Wohnung hat drei Zimmer, eine Küche und ein Bad.</span> <span class=\"tr\">My flat has three rooms, a kitchen and a bathroom.</span></li>\n<li><span class=\"de\">Es gibt einen Balkon, aber keinen Garten.</span> <span class=\"tr\">There's a balcony but no garden.</span></li>\n<li><span class=\"de\">Die Miete ist 700 Euro warm.</span> <span class=\"tr\">The rent is €700 including costs.</span></li>\n<li><span class=\"de\">Das Wohnzimmer ist hell und ruhig.</span> <span class=\"tr\">The living room is bright and quiet.</span></li>\n<li><span class=\"de\">Wir ziehen im August um.</span> <span class=\"tr\">We're moving in August.</span></li>\n<li><span class=\"de\">Die Wohnung liegt im dritten Stock — ohne Aufzug!</span> <span class=\"tr\">The flat is on the third floor — no lift!</span></li>\n</ol>\n</details>",
+      "sourceHash": "636e1674b078190f9ef3597ad42d5921ed49ee505945daad0f1e01671b260f83"
+    },
+    {
+      "id": "d23-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Die Wohnungsbesichtigung (flat viewing)",
+      "html": "<details><summary>🗣 Dialogue: Die Wohnungsbesichtigung (flat viewing)</summary>\n<div class=\"dlg\">\n<p><b>Vermieter:</b> <span class=\"de\">Kommen Sie rein! Hier ist das Wohnzimmer.</span> <span class=\"tr\">(Come in! Here's the living room.)</span></p>\n<p><b>Frau Ito:</b> <span class=\"de\">Oh, schön hell! Wie groß ist die Wohnung?</span> <span class=\"tr\">(Oh, nice and bright! How big is the flat?)</span></p>\n<p><b>Vermieter:</b> <span class=\"de\">65 Quadratmeter. Zwei Zimmer, Küche, Bad.</span> <span class=\"tr\">(65 m². Two rooms, kitchen, bath.)</span></p>\n<p><b>Frau Ito:</b> <span class=\"de\">Gibt es einen Balkon?</span> <span class=\"tr\">(Is there a balcony?)</span></p>\n<p><b>Vermieter:</b> <span class=\"de\">Ja, hier. Und die Küche ist neu.</span> <span class=\"tr\">(Yes, here. And the kitchen is new.)</span></p>\n<p><b>Frau Ito:</b> <span class=\"de\">Was kostet die Miete?</span> <span class=\"tr\">(What's the rent?)</span></p>\n<p><b>Vermieter:</b> <span class=\"de\">850 Euro warm.</span> <span class=\"tr\">(€850 including costs.)</span></p>\n<p><b>Frau Ito:</b> <span class=\"de\">Gut. Ich nehme sie!</span> <span class=\"tr\">(Good. I'll take it!)</span></p>\n</div>\n</details>",
+      "sourceHash": "9c3471c76ef81ac5f78a3801384c08b9140b0bb3c2ccddb656376d0e66c05adf"
+    },
+    {
+      "id": "d23-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Give a room-by-room tour of your home aloud: <span class=\"de\">Hier ist ... Es gibt ... Das Zimmer ist ...</span></li>\n<li>es-gibt drill about your street: <span class=\"de\">Es gibt einen Supermarkt / eine Bäckerei / kein Kino ...</span> (5 sentences).</li>\n<li>Role-play the viewing dialogue — you're the landlord this time.</li>\n</ol>\n</details>",
+      "sourceHash": "0332974b3f3e0c01cdc6acaaeb9ff79255da1a5051c610313397279017facb13"
+    },
+    {
+      "id": "d23-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — the flat-hunting episodes (\"Die Wohnungssuche\").</li>\n<li>YouTube: <b>\"Wohnungsbesichtigung Dialog Deutsch A1\"</b>.</li>\n<li>🔊 today's 18 words; the room names are daily-life essentials.</li>\n</ul>\n</details>",
+      "sourceHash": "f83c4c989baa334619ee387909fa5bc25ff2646dcea5348aff19512e9ed94248"
+    },
+    {
+      "id": "d23-s7",
+      "type": "reading",
+      "title": "📰 Reading practice — die Anzeige (the ad)",
+      "html": "<details><summary>📰 Reading practice — die Anzeige (the ad)</summary>\n<p class=\"de\">Schöne 2-Zi.-Whg., 55 m², im zweiten Stock, hell und ruhig, EBK, Balkon, kein Aufzug. Zentral — 5 Minuten zum Bahnhof. KM 600 € + NK 150 €. Ab 1. September frei. Tel. 0171 2345678.</p>\n<ol>\n<li>How many rooms and how big?</li>\n<li>What is the total (warm) rent?</li>\n<li>What is NOT in the building?</li>\n<li>From when is it available?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Two rooms, 55 m². 2. 600 + 150 = €750. 3. A lift (kein Aufzug). 4. From September 1st.</p></details>\n</details>",
+      "sourceHash": "94eb917f98b521ba19951ab9939f867fb5ebefe965f77212736a8581f2320cca"
+    },
+    {
+      "id": "d23-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write your own housing ad for your (real or dream) home, using the abbreviations. Then write 5 full sentences describing it with es gibt + adjectives.</p>\n</details>",
+      "sourceHash": "9318070a74160d7e3b901499514df4ab4359ae7b59bc5222932f7ce261200666"
+    },
+    {
+      "id": "d23-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">Es gibt ___ Balkon. (a, m)</span></li>\n<li>Fill in: <span class=\"de\">Es gibt ___ Aufzug. (no, m)</span></li>\n<li>What's the difference between Kaltmiete and Warmmiete?</li>\n<li>Translate: \"The bedroom is small but bright.\"</li>\n<li>\"We're moving on Saturday\" (umziehen) = ?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>einen</li><li>keinen</li><li>Kaltmiete = rent only; Warmmiete = rent including heating/utilities</li><li>Das Schlafzimmer ist klein, aber hell.</li><li>Wir ziehen am Samstag um.</li></ol>\n</details>\n</details>",
+      "sourceHash": "7888227de7cd62b77712188676d744267d80274bc774f9e61e967b6a013f8470"
+    },
+    {
+      "id": "d23-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">flat</span><span class=\"a\">die Wohnung</span></div>\n<div class=\"fc\"><span class=\"q\">kitchen</span><span class=\"a\">die Küche</span></div>\n<div class=\"fc\"><span class=\"q\">bedroom</span><span class=\"a\">das Schlafzimmer</span></div>\n<div class=\"fc\"><span class=\"q\">rent</span><span class=\"a\">die Miete</span></div>\n<div class=\"fc\"><span class=\"q\">There's a balcony</span><span class=\"a\">Es gibt einen Balkon</span></div>\n<div class=\"fc\"><span class=\"q\">bright / dark</span><span class=\"a\">hell / dunkel</span></div>\n<div class=\"fc\"><span class=\"q\">quiet / loud</span><span class=\"a\">ruhig / laut</span></div>\n<div class=\"fc\"><span class=\"q\">to move (house)</span><span class=\"a\">umziehen</span></div>\n</div>\n</details>",
+      "sourceHash": "e04e4b1543f5b952824bb92d15b03c63e6b3c8ec5528961cbd621e228c503b45"
+    },
+    {
+      "id": "d23-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Browse a German housing site (immobilienscout24.de) for 10 minutes. Decode 3 real ads.</li>\n<li>Label your rooms mentally on tonight's walk to bed: Küche, Bad, Schlafzimmer...</li>\n</ol>\n</details>",
+      "sourceHash": "40b9816e80e6c60a6ce8dc2cd1d868859e89a42fb9bfd715f70c800cfcc0f152"
+    },
+    {
+      "id": "d23-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 22)",
+      "html": "<details><summary>🔄 Revision (Day 22)</summary>\n<ul>\n<li>Word order: start 3 sentences with \"In meiner Wohnung...\" — verb second!</li>\n<li>gern/lieber/am liebsten — one round about rooms: <span class=\"de\">Am liebsten bin ich in der Küche.</span></li>\n</ul>\n</details>",
+      "sourceHash": "a0e12e04f3614e631cd852442d37e4615f525588886941dca512e273033410cf"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"23\"> ✅ Mark Day 23 complete</label>"
+}

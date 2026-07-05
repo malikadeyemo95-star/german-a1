@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 19,
+  "title": "Day 19 — Transport & Directions · Imperative",
+  "goal": "🎯 Today you can buy a ticket, ask for directions, understand the answer — and give commands.",
+  "sourceHash": "e527f318951f577f8c68fcb79b6b6ca03078a2d7a898caaf36949796c9138ebc",
+  "introHtml": "<h2>Day 19 · Transport, Directions &amp; the Imperative</h2>\n<p class=\"goal\">🎯 Today you can buy a ticket, ask for directions, understand the answer — and give commands.</p>",
+  "sections": [
+    {
+      "id": "d19-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The imperative (commands &amp; instructions)</h3>\n<table>\n<tr><th>To</th><th>How to build</th><th>gehen</th><th>nehmen</th><th>sein</th></tr>\n<tr><td>du</td><td>du-form minus -st (and no \"du\")</td><td class=\"de\">Geh!</td><td class=\"de\">Nimm!</td><td class=\"de\">Sei!</td></tr>\n<tr><td>ihr</td><td>ihr-form, no \"ihr\"</td><td class=\"de\">Geht!</td><td class=\"de\">Nehmt!</td><td class=\"de\">Seid!</td></tr>\n<tr><td>Sie</td><td>verb + Sie (inverted)</td><td class=\"de\">Gehen Sie!</td><td class=\"de\">Nehmen Sie!</td><td class=\"de\">Seien Sie!</td></tr>\n</table>\n<p>Soften with bitte: <span class=\"de\">Nehmen Sie bitte die U-Bahn.</span> Separable prefixes go to the end: <span class=\"de\">Steigen Sie am Dom aus!</span> (Get off at the cathedral!)</p>\n<h3>2. Direction phrases (learn as chunks)</h3>\n<ul>\n<li><span class=\"de\">Entschuldigung, wo ist der Bahnhof?</span> — Excuse me, where is the station?</li>\n<li><span class=\"de\">Wie komme ich zum Bahnhof / zur Post?</span> — How do I get to...? (zum = m/n, zur = f)</li>\n<li><span class=\"de\">Gehen Sie geradeaus / links / rechts.</span> — Go straight / left / right.</li>\n<li><span class=\"de\">Die erste Straße links, dann rechts.</span> — First street left, then right.</li>\n<li><span class=\"de\">Es ist weit / in der Nähe / neben der Bank.</span> — far / nearby / next to the bank.</li>\n</ul>\n<h3>3. Getting around: mit + transport</h3>\n<p><span class=\"de\">Ich fahre <b>mit dem</b> Bus / <b>mit der</b> U-Bahn / <b>mit dem</b> Auto.</span> On foot: <span class=\"de\">Ich gehe <b>zu Fuß</b>.</span> (mit takes the dative — learn these as chunks; more tomorrow.)</p>\n</details>",
+      "sourceHash": "23b346da2e971cf2be74f5fb8f6e7c4779e1efb8fc964ec6ec2f3289a235803d"
+    },
+    {
+      "id": "d19-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (16 items)",
+      "html": "<details><summary>📚 Vocabulary (16 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">der Bus / der Zug</td><td>bus / train</td></tr>\n<tr><td class=\"de\">die U-Bahn / die Straßenbahn</td><td>subway / tram</td></tr>\n<tr><td class=\"de\">das Taxi / das Fahrrad</td><td>taxi / bicycle</td></tr>\n<tr><td class=\"de\">der Bahnhof</td><td>train station</td></tr>\n<tr><td class=\"de\">die Haltestelle</td><td>(bus/tram) stop</td></tr>\n<tr><td class=\"de\">das Ticket / die Fahrkarte</td><td>ticket</td></tr>\n<tr><td class=\"de\">einsteigen / aussteigen / umsteigen</td><td>get on / get off / change (all separable)</td></tr>\n<tr><td class=\"de\">die Straße</td><td>street</td></tr>\n<tr><td class=\"de\">die Ampel</td><td>traffic light</td></tr>\n<tr><td class=\"de\">die Kreuzung</td><td>crossroads</td></tr>\n<tr><td class=\"de\">geradeaus / links / rechts</td><td>straight / left / right</td></tr>\n<tr><td class=\"de\">weit / in der Nähe</td><td>far / nearby</td></tr>\n<tr><td class=\"de\">der Flughafen</td><td>airport</td></tr>\n<tr><td class=\"de\">abfahren / ankommen</td><td>to depart / to arrive (sep.)</td></tr>\n<tr><td class=\"de\">das Gleis</td><td>platform, track</td></tr>\n<tr><td class=\"de\">die Richtung</td><td>direction</td></tr>\n</table>\n</details>",
+      "sourceHash": "a1fa84289d37e818cf0266dbf79f651170666988502bd114ada5761dad7175c6"
+    },
+    {
+      "id": "d19-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Entschuldigung, wie komme ich zum Bahnhof?</span> <span class=\"tr\">Excuse me, how do I get to the station?</span></li>\n<li><span class=\"de\">Gehen Sie geradeaus und dann die zweite Straße links.</span> <span class=\"tr\">Go straight, then take the second street left.</span></li>\n<li><span class=\"de\">Nehmen Sie den Bus Nummer 12, Richtung Zentrum.</span> <span class=\"tr\">Take bus 12, direction city centre.</span></li>\n<li><span class=\"de\">Steigen Sie an der Haltestelle „Rathaus\" aus.</span> <span class=\"tr\">Get off at the \"Rathaus\" stop.</span></li>\n<li><span class=\"de\">Der Zug fährt um 14:32 von Gleis 5 ab.</span> <span class=\"tr\">The train departs at 14:32 from platform 5.</span></li>\n<li><span class=\"de\">Ist es weit? — Nein, nur fünf Minuten zu Fuß.</span> <span class=\"tr\">Is it far? — No, only 5 minutes on foot.</span></li>\n</ol>\n</details>",
+      "sourceHash": "ceba7ef84f1c2e1cb7fc457cf8ae4c8c308c9e6d2d3f321846dca941de2a115f"
+    },
+    {
+      "id": "d19-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Nach dem Weg fragen",
+      "html": "<details><summary>🗣 Dialogue: Nach dem Weg fragen</summary>\n<div class=\"dlg\">\n<p><b>Tourist:</b> <span class=\"de\">Entschuldigung, ich suche das Museum.</span> <span class=\"tr\">(Excuse me, I'm looking for the museum.)</span></p>\n<p><b>Frau:</b> <span class=\"de\">Das Museum? Das ist nicht weit. Gehen Sie hier geradeaus bis zur Ampel.</span> <span class=\"tr\">(The museum? It's not far. Go straight to the traffic light.)</span></p>\n<p><b>Tourist:</b> <span class=\"de\">Bis zur Ampel, okay.</span> <span class=\"tr\">(To the light, OK.)</span></p>\n<p><b>Frau:</b> <span class=\"de\">Dann links. Das Museum ist neben der Kirche.</span> <span class=\"tr\">(Then left. The museum is next to the church.)</span></p>\n<p><b>Tourist:</b> <span class=\"de\">Kann ich auch mit dem Bus fahren?</span> <span class=\"tr\">(Can I also take the bus?)</span></p>\n<p><b>Frau:</b> <span class=\"de\">Ja, nehmen Sie die Linie 8 und steigen Sie am Markt aus.</span> <span class=\"tr\">(Yes, take line 8 and get off at the market.)</span></p>\n<p><b>Tourist:</b> <span class=\"de\">Vielen Dank! — Gern geschehen!</span> <span class=\"tr\">(Many thanks! — My pleasure!)</span></p>\n</div>\n</details>",
+      "sourceHash": "9bb0bfb21a736fbb06f48620525fae07e927e82f3486ff5eb010d238cb6dbcae"
+    },
+    {
+      "id": "d19-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Describe the way from your home to the nearest shop, aloud, using geradeaus/links/rechts.</li>\n<li>Imperative drill — command someone (du, then Sie): kommen, warten, die U-Bahn nehmen, hier aussteigen.</li>\n<li>Say how you get to work/school: <span class=\"de\">Ich fahre mit dem/der ... / Ich gehe zu Fuß.</span></li>\n</ol>\n</details>",
+      "sourceHash": "fabb6aa241687d1a10be92001785dc041d545f1ca1c7d78cf2eed81db6545a64"
+    },
+    {
+      "id": "d19-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Deutsche Bahn Durchsage\"</b> (train announcements) — catch: which platform? what time?</li>\n<li><b>Nicos Weg A1</b> — the city/directions episodes.</li>\n<li>YouTube: <b>\"nach dem Weg fragen A1\"</b> — direction dialogues; draw the route as you listen.</li>\n</ul>\n</details>",
+      "sourceHash": "38cd44e067b6d922deeef0f3c0b9198b9f54ed89a7a3d3b3f9d1bf17b729d5d4"
+    },
+    {
+      "id": "d19-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Durchsage am Bahnhof: „Der ICE 571 nach München, Abfahrt 15:47, fährt heute von Gleis 9 ab. Reisende nach Nürnberg: bitte in Würzburg umsteigen. Der Zug hat circa zehn Minuten Verspätung.\"</p>\n<ol>\n<li>Where is the train going and from which platform?</li>\n<li>What must travellers to Nürnberg do?</li>\n<li>What's the bad news?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. To Munich, platform 9. 2. Change trains in Würzburg. 3. The train is about 10 minutes late (Verspätung).</p></details>\n</details>",
+      "sourceHash": "0c5e97360e392577326f88d7142a113efbbbed69dc99c9ac4790b5b6e1bd664b"
+    },
+    {
+      "id": "d19-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>A friend is visiting. Write directions (6 sentences) from the station to your home: which transport, which line, where to get off, then the walking route. Use at least 2 imperatives and 2 separable verbs.</p>\n</details>",
+      "sourceHash": "419d5a26789ee6bbab7f5527642c3fca8c8a6c1fe591d5d9e4801c0a117f793d"
+    },
+    {
+      "id": "d19-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Imperative (Sie): \"Take the bus!\"</li>\n<li>Imperative (du): \"Go straight!\"</li>\n<li>What's the difference between einsteigen, aussteigen, umsteigen?</li>\n<li>\"How do I get to the airport?\" = ?</li>\n<li>Fill in: <span class=\"de\">Ich fahre ___ ___ Zug. (by train)</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Nehmen Sie den Bus!</li><li>Geh geradeaus!</li><li>get on / get off / change (vehicles)</li><li>Wie komme ich zum Flughafen?</li><li>mit dem</li></ol>\n</details>\n</details>",
+      "sourceHash": "42027f339c417e5b4619b02efed5110c1d0109efbab0e2971ad26bd8a4ac9754"
+    },
+    {
+      "id": "d19-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">train station</span><span class=\"a\">der Bahnhof</span></div>\n<div class=\"fc\"><span class=\"q\">stop (bus/tram)</span><span class=\"a\">die Haltestelle</span></div>\n<div class=\"fc\"><span class=\"q\">straight ahead</span><span class=\"a\">geradeaus</span></div>\n<div class=\"fc\"><span class=\"q\">left / right</span><span class=\"a\">links / rechts</span></div>\n<div class=\"fc\"><span class=\"q\">to change (trains)</span><span class=\"a\">umsteigen</span></div>\n<div class=\"fc\"><span class=\"q\">to get off</span><span class=\"a\">aussteigen</span></div>\n<div class=\"fc\"><span class=\"q\">How do I get to...? (m)</span><span class=\"a\">Wie komme ich zum...?</span></div>\n<div class=\"fc\"><span class=\"q\">by bus</span><span class=\"a\">mit dem Bus</span></div>\n</div>\n</details>",
+      "sourceHash": "1a9f0f9324d35174e926fd38e75ff914aa62960abaf2274bd0c54277d17f7341"
+    },
+    {
+      "id": "d19-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Open a map app, pick two points in Berlin, and narrate the route in German.</li>\n<li>Write the du/ihr/Sie imperatives for: kommen, gehen, nehmen, sein.</li>\n</ol>\n</details>",
+      "sourceHash": "8e8c9e919e40d149baff28ebdd2752a830d4ebba665a8b57b5364f5757f41982"
+    },
+    {
+      "id": "d19-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 17–18)",
+      "html": "<details><summary>🔄 Revision (Days 17–18)</summary>\n<ul>\n<li>All 6 modals, ich + er forms, rapid fire: kann/kann, muss/muss, will/will, darf/darf, soll/soll, möchte/möchte.</li>\n<li>Make an appointment aloud from memory (Day 18 dialogue).</li>\n</ul>\n</details>",
+      "sourceHash": "60e7eea5b73b37c89520b8fc532828827e6e9c86ec510021d0ab8f037849ab01"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"19\"> ✅ Mark Day 19 complete</label>"
+}

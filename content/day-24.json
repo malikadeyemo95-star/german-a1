@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 24,
+  "title": "Day 24 — Weather & Seasons",
+  "goal": "🎯 Today you can make small talk about German's favourite topic: das Wetter.",
+  "sourceHash": "01bb81c82d6c2faaca5d3e386b16896013e0041b58cd25692a129990ba3821f2",
+  "introHtml": "<h2>Day 24 · Weather &amp; Seasons</h2>\n<p class=\"goal\">🎯 Today you can make small talk about German's favourite topic: das Wetter.</p>",
+  "sections": [
+    {
+      "id": "d24-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Weather runs on \"es\"</h3>\n<ul>\n<li><span class=\"de\">Es regnet.</span> — It's raining. · <span class=\"de\">Es schneit.</span> — It's snowing.</li>\n<li><span class=\"de\">Es ist sonnig / windig / bewölkt / neblig.</span> — sunny / windy / cloudy / foggy.</li>\n<li><span class=\"de\">Es ist warm / kalt / heiß / kühl.</span></li>\n<li><span class=\"de\">Die Sonne scheint.</span> — The sun is shining.</li>\n</ul>\n<div class=\"warn\">⚠️ \"I am cold\" = <span class=\"de\"><b>Mir</b> ist kalt</span> — NOT \"Ich bin kalt\" (that means you're a cold-hearted person!).</div>\n<h3>2. Degrees</h3>\n<p><span class=\"de\">Es sind 25 Grad. / Es sind minus 5 Grad.</span> — It's 25° / −5°. Question: <span class=\"de\">Wie viel Grad sind es?</span></p>\n<h3>3. Talking about tomorrow — no future tense needed!</h3>\n<p>German uses the present + a time word: <span class=\"de\"><b>Morgen</b> regnet es. <b>Am Wochenende</b> wird es warm.</span> (wird = werden — \"it's getting/going to be\"!)</p>\n<h3>4. Connecting with denn (because)</h3>\n<p><span class=\"de\">Ich bleibe zu Hause, <b>denn</b> es regnet.</span> — denn doesn't change word order. Easy and exam-friendly.</p>\n</details>",
+      "sourceHash": "84a66820aeb87b2bb677398bde45982d38de98909d0bb11daed821e52e4ba9c7"
+    },
+    {
+      "id": "d24-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (15 items)",
+      "html": "<details><summary>📚 Vocabulary (15 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">das Wetter</td><td>weather</td></tr>\n<tr><td class=\"de\">die Sonne / scheinen</td><td>sun / to shine</td></tr>\n<tr><td class=\"de\">der Regen / regnen</td><td>rain / to rain</td></tr>\n<tr><td class=\"de\">der Schnee / schneien</td><td>snow / to snow</td></tr>\n<tr><td class=\"de\">der Wind / windig</td><td>wind / windy</td></tr>\n<tr><td class=\"de\">die Wolke, -n / bewölkt</td><td>cloud / cloudy</td></tr>\n<tr><td class=\"de\">der Nebel / neblig</td><td>fog / foggy</td></tr>\n<tr><td class=\"de\">das Gewitter</td><td>thunderstorm</td></tr>\n<tr><td class=\"de\">der Grad</td><td>degree</td></tr>\n<tr><td class=\"de\">warm / heiß / kühl / kalt</td><td>warm / hot / cool / cold</td></tr>\n<tr><td class=\"de\">sonnig</td><td>sunny</td></tr>\n<tr><td class=\"de\">der Regenschirm</td><td>umbrella</td></tr>\n<tr><td class=\"de\">die Jacke</td><td>jacket</td></tr>\n<tr><td class=\"de\">bleiben</td><td>to stay</td></tr>\n<tr><td class=\"de\">Was für ein Wetter!</td><td>What weather!</td></tr>\n</table>\n</details>",
+      "sourceHash": "27f593b48b006b82eaa84476ee7dde2e2cfc49c06826aa219751d4fad582a784"
+    },
+    {
+      "id": "d24-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wie ist das Wetter heute? — Es ist sonnig und warm.</span> <span class=\"tr\">How's the weather? — Sunny and warm.</span></li>\n<li><span class=\"de\">Es regnet. Nimm einen Regenschirm mit!</span> <span class=\"tr\">It's raining. Take an umbrella!</span></li>\n<li><span class=\"de\">Im Winter schneit es oft in München.</span> <span class=\"tr\">In winter it often snows in Munich.</span></li>\n<li><span class=\"de\">Es sind heute 30 Grad — viel zu heiß!</span> <span class=\"tr\">It's 30 degrees today — way too hot!</span></li>\n<li><span class=\"de\">Morgen wird es kalt, denn der Wind kommt aus dem Norden.</span> <span class=\"tr\">Tomorrow it'll get cold because the wind is from the north.</span></li>\n<li><span class=\"de\">Mir ist kalt. Ich brauche eine Jacke.</span> <span class=\"tr\">I'm cold. I need a jacket.</span></li>\n</ol>\n</details>",
+      "sourceHash": "1634fae5fe67f7d5aba41015f91641b992022d1b0a76ad7fae41044036598fde"
+    },
+    {
+      "id": "d24-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Smalltalk im Aufzug",
+      "html": "<details><summary>🗣 Dialogue: Smalltalk im Aufzug</summary>\n<div class=\"dlg\">\n<p><b>Frau Roth:</b> <span class=\"de\">Was für ein Wetter heute!</span> <span class=\"tr\">(What weather today!)</span></p>\n<p><b>Herr Kaya:</b> <span class=\"de\">Ja, es regnet schon den ganzen Tag.</span> <span class=\"tr\">(Yes, it's been raining all day.)</span></p>\n<p><b>Frau Roth:</b> <span class=\"de\">Und morgen soll es schneien!</span> <span class=\"tr\">(And tomorrow it's supposed to snow!)</span></p>\n<p><b>Herr Kaya:</b> <span class=\"de\">Wirklich? Im April?</span> <span class=\"tr\">(Really? In April?)</span></p>\n<p><b>Frau Roth:</b> <span class=\"de\">Ja! Aber am Wochenende wird es wieder warm — 20 Grad.</span> <span class=\"tr\">(Yes! But on the weekend it'll be warm again — 20 degrees.)</span></p>\n<p><b>Herr Kaya:</b> <span class=\"de\">Na, hoffentlich! Schönen Tag noch!</span> <span class=\"tr\">(Well, hopefully! Have a nice day!)</span></p>\n</div>\n<div class=\"tip\">💡 <span class=\"de\">Schönen Tag noch!</span> = \"Have a nice rest-of-the-day\" — you'll hear it in every shop in Germany.</div>\n</details>",
+      "sourceHash": "f30b55df246f7363fe91a7eaa8fc776270aef4f7f8919230e74547f6bfda1281"
+    },
+    {
+      "id": "d24-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Look out the window and report the weather in 4 sentences, like a TV forecaster.</li>\n<li>Describe all four seasons: <span class=\"de\">Im Frühling ... Im Sommer ... Im Herbst ... Im Winter ...</span> (Verb second after each!)</li>\n<li>denn-drill: <span class=\"de\">Ich bleibe zu Hause, denn ... / Ich nehme eine Jacke, denn ...</span></li>\n</ol>\n</details>",
+      "sourceHash": "44b484e84780c55e0b7d58ad5971226856333e8e428676a67b25f1bf6ed0da18"
+    },
+    {
+      "id": "d24-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Wettervorhersage Deutschland\"</b> — a real German weather forecast. Catch 3 temperatures and 2 weather words.</li>\n<li><b>Nicos Weg A1</b> — weather episode.</li>\n<li>Tomorrow morning: check wetter.de and read the forecast aloud.</li>\n</ul>\n</details>",
+      "sourceHash": "7556ce6971faf404246c18be0deac65f1e65171e44607d6d83c8b7272e586b48"
+    },
+    {
+      "id": "d24-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Der Wetterbericht: Heute ist es im Norden bewölkt und windig, maximal 12 Grad. Im Süden scheint die Sonne — bis 22 Grad! Morgen kommt Regen aus dem Westen, und am Donnerstag gibt es Gewitter. Das Wochenende wird aber schön: sonnig und trocken.</p>\n<ol>\n<li>Where is it warmer today — north or south?</li>\n<li>What happens on Thursday?</li>\n<li>Is the weekend forecast good or bad?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. South (sunny, up to 22°; north only 12° and windy). 2. Thunderstorms (Gewitter). 3. Good — sunny and dry.</p></details>\n</details>",
+      "sourceHash": "7ece715f40072b6c430c4d22e9d83b6af547ac385bf78273794f0ac4092e4fc1"
+    },
+    {
+      "id": "d24-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write tomorrow's forecast for your city (5 sentences) + 2 sentences on what you'll do because of it (denn). Remember: present tense + morgen does the future for you.</p>\n</details>",
+      "sourceHash": "bc09ab5b011193e585a21401619666fc78b196620713038331326ea0e6c84c4a"
+    },
+    {
+      "id": "d24-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>\"It's raining\" = ?</li>\n<li>\"I'm cold\" = ? (careful!)</li>\n<li>Fill in: <span class=\"de\">Im Winter ___ es oft. (snow)</span></li>\n<li>Say: \"It's 18 degrees.\"</li>\n<li>Join with denn: <span class=\"de\">Ich nehme den Regenschirm. Es regnet.</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Es regnet.</li><li>Mir ist kalt.</li><li>schneit</li><li>Es sind achtzehn Grad.</li><li>Ich nehme den Regenschirm, denn es regnet.</li></ol>\n</details>\n</details>",
+      "sourceHash": "b445beb15c48c310763d0dbf02a18922ce8549369d12b6e53efe2a2f38b7769f"
+    },
+    {
+      "id": "d24-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">It's raining</span><span class=\"a\">Es regnet</span></div>\n<div class=\"fc\"><span class=\"q\">The sun is shining</span><span class=\"a\">Die Sonne scheint</span></div>\n<div class=\"fc\"><span class=\"q\">cloudy</span><span class=\"a\">bewölkt</span></div>\n<div class=\"fc\"><span class=\"q\">thunderstorm</span><span class=\"a\">das Gewitter</span></div>\n<div class=\"fc\"><span class=\"q\">I'm cold</span><span class=\"a\">Mir ist kalt</span></div>\n<div class=\"fc\"><span class=\"q\">umbrella</span><span class=\"a\">der Regenschirm</span></div>\n<div class=\"fc\"><span class=\"q\">to stay</span><span class=\"a\">bleiben</span></div>\n<div class=\"fc\"><span class=\"q\">Have a nice day!</span><span class=\"a\">Schönen Tag noch!</span></div>\n</div>\n</details>",
+      "sourceHash": "91222926f8dc4d0a84ee2ae16bf095b5e190cb3e22925e26ccc186c478b8e70f"
+    },
+    {
+      "id": "d24-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Check the weather in 3 German cities online; say each forecast aloud.</li>\n<li>Weather small talk with yourself at breakfast tomorrow. It's practice, not madness.</li>\n</ol>\n</details>",
+      "sourceHash": "4a170aa402548085c6f9a7a5b9d082da36e065e860a82c4f2b0e347e46244fd2"
+    },
+    {
+      "id": "d24-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 22–23)",
+      "html": "<details><summary>🔄 Revision (Days 22–23)</summary>\n<ul>\n<li>es gibt drill: 3 things about your city's weather infrastructure 😄 (Es gibt viele Wolken...).</li>\n<li>Inversion: Im Sommer..., Im Winter... — 2 sentences each, verb second.</li>\n</ul>\n</details>",
+      "sourceHash": "d255cbb1c44327f89df8bb578831f206894e4111dc465e3d97248f742d2a3be5"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"24\"> ✅ Mark Day 24 complete</label>"
+}

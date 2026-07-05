@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 9,
+  "title": "Day 9 — Plural Forms",
+  "goal": "🎯 Today you learn the 5 plural patterns — and the good news: in the plural, \"the\" is always die .",
+  "sourceHash": "33bee5eb5c56fea79336af88673dd5f76f535fb1c2c50776e3dfc33f9b5ec25b",
+  "introHtml": "<h2>Day 9 · Plural Forms</h2>\n<p class=\"goal\">🎯 Today you learn the 5 plural patterns — and the good news: in the plural, \"the\" is always <b>die</b>.</p>",
+  "sections": [
+    {
+      "id": "d9-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>The 5 plural patterns</h3>\n<table>\n<tr><th>Pattern</th><th>Typical for</th><th>Examples</th></tr>\n<tr><td><b>-e</b> (often + umlaut)</td><td>many masculine nouns</td><td class=\"de\">der Tisch → die Tische<br>der Stuhl → die Stühle</td></tr>\n<tr><td><b>-(e)n</b></td><td>most feminine nouns</td><td class=\"de\">die Lampe → die Lampen<br>die Frau → die Frauen<br>die Freundin → die Freundinnen</td></tr>\n<tr><td><b>-er</b> (often + umlaut)</td><td>many short neuter nouns</td><td class=\"de\">das Kind → die Kinder<br>das Buch → die Bücher</td></tr>\n<tr><td><b>-s</b></td><td>foreign/modern words</td><td class=\"de\">das Handy → die Handys<br>das Auto → die Autos</td></tr>\n<tr><td><b>— (no ending)</b>, maybe umlaut</td><td>nouns in -er, -el, -chen</td><td class=\"de\">der Lehrer → die Lehrer<br>die Mutter → die Mütter</td></tr>\n</table>\n<div class=\"tip\">💡 From now on, learn every noun as a trio: <b>die Lampe, -n</b> · <b>das Buch, ¨-er</b>. Dictionaries show plurals this way.</div>\n<h3>Useful plural words</h3>\n<p><span class=\"de\">viele</span> (many), <span class=\"de\">einige</span> (some), <span class=\"de\">zwei/drei/... </span> + plural noun: <span class=\"de\">Ich habe zwei Brüder.</span></p>\n<div class=\"warn\">⚠️ There is no plural \"ein\". \"Books\" = just <span class=\"de\">Bücher</span>; \"the books\" = <span class=\"de\">die Bücher</span>; \"no books\" = <span class=\"de\">keine Bücher</span> (tomorrow!).</div>\n</details>",
+      "sourceHash": "6baf7a299af04367d5d79a0392017445fd5599d9a1763ad09044053b17a8def1"
+    },
+    {
+      "id": "d9-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (14 plural pairs)",
+      "html": "<details><summary>📚 Vocabulary (14 plural pairs)</summary>\n<table>\n<tr><th>Singular</th><th>Plural</th><th>English</th></tr>\n<tr><td class=\"de\">der Mann</td><td class=\"de\">die Männer</td><td>man / men</td></tr>\n<tr><td class=\"de\">die Frau</td><td class=\"de\">die Frauen</td><td>woman / women</td></tr>\n<tr><td class=\"de\">das Kind</td><td class=\"de\">die Kinder</td><td>child / children</td></tr>\n<tr><td class=\"de\">der Bruder</td><td class=\"de\">die Brüder</td><td>brother(s)</td></tr>\n<tr><td class=\"de\">die Schwester</td><td class=\"de\">die Schwestern</td><td>sister(s)</td></tr>\n<tr><td class=\"de\">das Buch</td><td class=\"de\">die Bücher</td><td>book(s)</td></tr>\n<tr><td class=\"de\">der Tisch</td><td class=\"de\">die Tische</td><td>table(s)</td></tr>\n<tr><td class=\"de\">der Stuhl</td><td class=\"de\">die Stühle</td><td>chair(s)</td></tr>\n<tr><td class=\"de\">die Lampe</td><td class=\"de\">die Lampen</td><td>lamp(s)</td></tr>\n<tr><td class=\"de\">das Auto</td><td class=\"de\">die Autos</td><td>car(s)</td></tr>\n<tr><td class=\"de\">das Handy</td><td class=\"de\">die Handys</td><td>phone(s)</td></tr>\n<tr><td class=\"de\">der Lehrer</td><td class=\"de\">die Lehrer</td><td>teacher(s)</td></tr>\n<tr><td class=\"de\">die Mutter</td><td class=\"de\">die Mütter</td><td>mother(s)</td></tr>\n<tr><td class=\"de\">der Apfel</td><td class=\"de\">die Äpfel</td><td>apple(s)</td></tr>\n</table>\n</details>",
+      "sourceHash": "889c533a27cc7127fef253ae0fc293665fb56ec3110860896f081661ad16b21f"
+    },
+    {
+      "id": "d9-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich habe zwei Brüder und eine Schwester.</span> <span class=\"tr\">I have two brothers and one sister.</span></li>\n<li><span class=\"de\">Die Kinder sind müde.</span> <span class=\"tr\">The children are tired.</span></li>\n<li><span class=\"de\">Viele Frauen arbeiten hier.</span> <span class=\"tr\">Many women work here.</span></li>\n<li><span class=\"de\">Die Bücher sind neu.</span> <span class=\"tr\">The books are new.</span></li>\n<li><span class=\"de\">Wir haben drei Lampen, aber nur einen Tisch.</span> <span class=\"tr\">We have three lamps but only one table.</span></li>\n<li><span class=\"de\">Die Äpfel sind lecker.</span> <span class=\"tr\">The apples are tasty.</span></li>\n</ol>\n</details>",
+      "sourceHash": "457b357874ec332e5b048c3d0567561b5386f06c247c0996e9428d24740a14f1"
+    },
+    {
+      "id": "d9-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Im Möbelgeschäft (furniture shop)",
+      "html": "<details><summary>🗣 Dialogue: Im Möbelgeschäft (furniture shop)</summary>\n<div class=\"dlg\">\n<p><b>Verkäufer:</b> <span class=\"de\">Guten Tag! Was suchen Sie?</span> <span class=\"tr\">(Hello! What are you looking for?)</span></p>\n<p><b>Kundin:</b> <span class=\"de\">Ich brauche Stühle. Vier Stühle.</span> <span class=\"tr\">(I need chairs. Four chairs.)</span></p>\n<p><b>Verkäufer:</b> <span class=\"de\">Wir haben viele Stühle. Hier, bitte.</span> <span class=\"tr\">(We have many chairs. Here you go.)</span></p>\n<p><b>Kundin:</b> <span class=\"de\">Schön! Und haben Sie auch Lampen?</span> <span class=\"tr\">(Nice! And do you have lamps too?)</span></p>\n<p><b>Verkäufer:</b> <span class=\"de\">Ja, die Lampen sind dort.</span> <span class=\"tr\">(Yes, the lamps are over there.)</span></p>\n<p><b>Kundin:</b> <span class=\"de\">Super, danke!</span> <span class=\"tr\">(Great, thanks!)</span></p>\n</div>\n</details>",
+      "sourceHash": "ce29a0cdf17d79d71fc4b7f14e40dbda6ec26497f2e824cdc0881088c58978c4"
+    },
+    {
+      "id": "d9-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Ping-pong drill (aloud): say the singular, then plural, for all 14 vocab pairs. Then reverse: plural → singular.</li>\n<li>Count objects around you: <span class=\"de\">ein Stuhl, zwei Stühle, drei Stühle...</span></li>\n<li>Say 3 true sentences with plurals about your family or home.</li>\n</ol>\n</details>",
+      "sourceHash": "e75e28b0b2e29987f4f637ddebc2f20b4c6047f9b7f2091a47ce7a76a8c0da8f"
+    },
+    {
+      "id": "d9-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>🔊 Listen to each plural pair; umlaut changes (Bruder→Brüder) are the key sound difference. Can you HEAR u vs ü?</li>\n<li><b>Nicos Weg A1</b> — next 2 episodes.</li>\n<li>YouTube: <b>\"German plural rules\"</b> for a 10-minute visual summary.</li>\n</ul>\n</details>",
+      "sourceHash": "6da220abeae4d3e3c053999273de8adf1fe10dec0e58c6e00316bcd84f69478a"
+    },
+    {
+      "id": "d9-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Familie Berger hat zwei Kinder, einen Hund und zwei Autos. Die Kinder heißen Max und Lisa. Max hat viele Bücher — er liest gern. Lisa hat zwei Handys! Die Eltern sagen: „Ein Handy ist genug!\"</p>\n<ol>\n<li>How many children, dogs and cars does the family have?</li>\n<li>What does Max like?</li>\n<li>What do the parents say?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Two children, one dog, two cars. 2. He likes reading (his many books). 3. \"One phone is enough!\"</p></details>\n</details>",
+      "sourceHash": "174e9cfd7673934582dd79bac71f43ecc4fd15e914541296a608780e8f61ace1"
+    },
+    {
+      "id": "d9-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 6 sentences with plurals about what you have or see: <span class=\"de\">Ich habe zwei ... / Hier sind viele ... / Die ... sind ...</span></p>\n</details>",
+      "sourceHash": "3427b5ce93d7a2d76b88e05a38a1119dff1b66bd246bb89a58aeb99356a2c8ef"
+    },
+    {
+      "id": "d9-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Plural of <span class=\"de\">das Buch</span>?</li>\n<li>Plural of <span class=\"de\">die Frau</span>?</li>\n<li>Plural of <span class=\"de\">der Lehrer</span>?</li>\n<li>Which article do ALL plurals take?</li>\n<li>Translate: \"The children have many books.\"</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>die Bücher</li><li>die Frauen</li><li>die Lehrer (unchanged)</li><li>die</li><li>Die Kinder haben viele Bücher.</li></ol>\n</details>\n</details>",
+      "sourceHash": "9f00c957d7a1738a62337d0eeb367e360ac9c2adddad66247fde191e2095059d"
+    },
+    {
+      "id": "d9-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">books</span><span class=\"a\">die Bücher</span></div>\n<div class=\"fc\"><span class=\"q\">men</span><span class=\"a\">die Männer</span></div>\n<div class=\"fc\"><span class=\"q\">women</span><span class=\"a\">die Frauen</span></div>\n<div class=\"fc\"><span class=\"q\">chairs</span><span class=\"a\">die Stühle</span></div>\n<div class=\"fc\"><span class=\"q\">cars</span><span class=\"a\">die Autos</span></div>\n<div class=\"fc\"><span class=\"q\">apples</span><span class=\"a\">die Äpfel</span></div>\n<div class=\"fc\"><span class=\"q\">mothers</span><span class=\"a\">die Mütter</span></div>\n<div class=\"fc\"><span class=\"q\">many</span><span class=\"a\">viele</span></div>\n</div>\n</details>",
+      "sourceHash": "3866ace0c40eada06908e7ddc092d6a57b1bb12e5d82020bf730bdc5a445e28a"
+    },
+    {
+      "id": "d9-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Add the plural to each of your 10 sticky notes from yesterday.</li>\n<li>Learn the trio format: pick 5 new nouns from a dictionary and write them as \"die Lampe, -n\" style.</li>\n</ol>\n</details>",
+      "sourceHash": "332b8b65f928af1c2dcb7b56e4ed591c064cd1936889157d59fc30248634dc60"
+    },
+    {
+      "id": "d9-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 7–8)",
+      "html": "<details><summary>🔄 Revision (Days 7–8)</summary>\n<ul>\n<li>Say the gender clues from memory: -ung → ? · -chen → ? · -er (device) → ?</li>\n<li>Do all Day 8 flashcards; add the plural aloud for each noun.</li>\n</ul>\n</details>",
+      "sourceHash": "24a508968d2ca766fd68ff556af6fcc78d363c88dd11e45e0795717419dec10c"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"9\"> ✅ Mark Day 9 complete</label>"
+}

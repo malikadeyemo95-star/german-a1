@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "day": 21,
+  "title": "Day 21 — Week 3 Review + Test 3",
+  "goal": "🎯 Three weeks in! Consolidate Days 15–20, then take Test 3.",
+  "sourceHash": "a11e5873b967c453103c990604ee385e8754f8085d3fc1304f8a205b06bb5092",
+  "introHtml": "<h2>Day 21 · Week 3 Review &amp; Test 3 🏁</h2>\n<p class=\"goal\">🎯 Three weeks in! Consolidate Days 15–20, then take Test 3.</p>",
+  "sections": [
+    {
+      "id": "d21-s1",
+      "type": "lesson",
+      "title": "🔄 Week 3 summary",
+      "html": "<details open><summary>🔄 Week 3 summary</summary>\n<ul>\n<li><b>Time:</b> official + everyday clock (halb drei = 2:30!), days, months, um/am/im, dates.</li>\n<li><b>Separable verbs:</b> prefix flies to the end — steht...auf, fängt...an, kauft...ein.</li>\n<li><b>All 6 modals:</b> kann, muss, will, darf, soll, möchte + infinitive at the end (verb bracket).</li>\n<li><b>Appointments:</b> Termin vereinbaren/absagen/verschieben, Passt das?</li>\n<li><b>Imperative:</b> Geh! / Geht! / Gehen Sie!</li>\n<li><b>Prepositions:</b> nach/zum/ins (whereto), in/an/auf/bei (where), mit/ohne/für/aus/von/seit.</li>\n</ul>\n</details>",
+      "sourceHash": "0a872f7ad18148e8ef4135b1e494fd6c589fdc848851b774a845d2b6b1728456"
+    },
+    {
+      "id": "d21-s2",
+      "type": "quiz",
+      "title": "📝 TEST 3 (40 points)",
+      "html": "<details><summary>📝 TEST 3 (40 points)</summary>\n<h3>Part A: Times (5 pts) — write in everyday German</h3>\n<p>1. 7:30 · 2. 10:15 · 3. 16:45 · 4. 12:00 · 5. 8:55</p>\n<h3>Part B: Separable verbs (5 pts) — build sentences</h3>\n<ol>\n<li>ich / aufstehen / um 6 Uhr</li>\n<li>der Kurs / anfangen / um 9 Uhr</li>\n<li>wir / einkaufen / am Samstag</li>\n<li>er / fernsehen / abends</li>\n<li>du / mitkommen / ? (question!)</li>\n</ol>\n<h3>Part C: Modal verbs (10 pts)</h3>\n<ol>\n<li><span class=\"de\">Ich ___ (können) gut schwimmen.</span></li>\n<li><span class=\"de\">Du ___ (müssen) den Termin absagen.</span></li>\n<li><span class=\"de\">Er ___ (wollen) Pilot werden.</span></li>\n<li><span class=\"de\">___ (dürfen) ich hier parken?</span></li>\n<li><span class=\"de\">Ihr ___ (sollen) mehr Deutsch sprechen.</span></li>\n<li><span class=\"de\">Wir ___ (möchten) bestellen.</span></li>\n<li>Rearrange: muss / heute / arbeiten / sie / lange</li>\n<li>Rearrange: kannst / helfen / du / mir / ?</li>\n<li>Translate: \"One may not smoke here.\" (man)</li>\n<li>Translate: \"I want to go to the cinema.\"</li>\n</ol>\n<h3>Part D: Prepositions (10 pts) — fill in</h3>\n<ol>\n<li>Ich fahre ___ Hause. (home)</li>\n<li>Ich bin ___ Hause. (at home)</li>\n<li>Wir fahren ___ Österreich.</li>\n<li>Sie geht ___ Zahnarzt. (to the, m)</li>\n<li>Das Buch liegt ___ dem Tisch. (on)</li>\n<li>Er ist ___ der Arbeit. (at)</li>\n<li>Der Kurs geht ___ 9 ___ 12 Uhr. (from...to)</li>\n<li>___ Sonntag schlafe ich lange. (on)</li>\n<li>Kaffee ___ Milch, bitte. (with)</li>\n<li>Das ist ___ meine Mutter. (for)</li>\n</ol>\n<h3>Part E: Reading (5 pts)</h3>\n<p class=\"de\">Herr Weber hat einen Termin beim Arzt — am Dienstag um Viertel nach zehn. Er muss mit dem Bus fahren, denn sein Auto ist kaputt. Er will pünktlich sein, also steht er früh auf. An der Haltestelle sieht er: Der Bus kommt heute nicht! Er darf den Termin nicht verpassen, deshalb nimmt er ein Taxi.</p>\n<ol>\n<li>When exactly is the appointment?</li>\n<li>Why can't he take his car?</li>\n<li>What goes wrong, and how does he solve it?</li>\n</ol>\n<h3>Part F: Writing (5 pts)</h3>\n<p>Describe your ideal Saturday in 6–8 sentences: times, at least 2 separable verbs, 2 modals, 3 preposition chunks.</p>\n</details>",
+      "sourceHash": "7f8a9a3f924020f8265b8b51611abf2f278626d79de6cba8f43b1b19a2218017"
+    },
+    {
+      "id": "d21-s3",
+      "type": "quiz",
+      "title": "🔑 TEST 3 — Answer key",
+      "html": "<details class=\"key\"><summary>🔑 TEST 3 — Answer key</summary>\n<h3>Part A</h3><p class=\"de\">1. halb acht · 2. Viertel nach zehn · 3. Viertel vor fünf · 4. zwölf (Uhr) / Mittag · 5. fünf vor neun</p>\n<h3>Part B</h3><p class=\"de\">1. Ich stehe um 6 Uhr auf. · 2. Der Kurs fängt um 9 Uhr an. · 3. Wir kaufen am Samstag ein. · 4. Er sieht abends fern. · 5. Kommst du mit?</p>\n<h3>Part C</h3><p class=\"de\">1. kann · 2. musst · 3. will · 4. Darf · 5. sollt · 6. möchten · 7. Sie muss heute lange arbeiten. · 8. Kannst du mir helfen? · 9. Man darf hier nicht rauchen. · 10. Ich will ins Kino gehen.</p>\n<h3>Part D</h3><p class=\"de\">1. nach · 2. zu · 3. nach · 4. zum · 5. auf · 6. bei · 7. von ... bis · 8. Am · 9. mit · 10. für</p>\n<h3>Part E</h3><p>1. Tuesday at 10:15. 2. His car is broken. 3. The bus doesn't come; he takes a taxi so he won't miss the appointment.</p>\n<h3>Part F</h3><p>Check the verb bracket: modal position 2, infinitive last; separable prefixes at the end. 1 pt per requirement met.</p>\n<h3>Scoring</h3><p>36–40: Fantastisch! · 30–35: Gut — polish the weak part · Below 30: modals and separable verbs are THE core of German; redo Days 16–17 before continuing.</p>\n</details>",
+      "sourceHash": "8e44c2518a89af096f71c5f4cccc67ed4abd6daf79ad6779211358c119112a91"
+    },
+    {
+      "id": "d21-s4",
+      "type": "speaking",
+      "title": "🎤 Speaking + 🎧 Listening today",
+      "html": "<details><summary>🎤 Speaking + 🎧 Listening today</summary>\n<ul>\n<li><b>Speaking:</b> record 2 minutes: your daily routine + what you can/must/want to do this week.</li>\n<li><b>Listening:</b> first try of <b>DW \"Langsam gesprochene Nachrichten\"</b> (slowly spoken news). You won't get everything — count the words you DO catch.</li>\n</ul>\n</details>",
+      "sourceHash": "d7c839e6b5cb49730281446a3ccf69a83cd623fbd6eae1ef11d6e0ce85e1eea9"
+    },
+    {
+      "id": "d21-s5",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Update the problem list; drill anything that survived from Weeks 1–2.</li>\n<li>Rest well — Week 4 brings the past tense!</li>\n</ol>\n</details>",
+      "sourceHash": "fa899772fd076f543617d36020c9d28dff2475291c8e0bade58f0d3571bd698c"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"21\"> ✅ Mark Day 21 complete</label>"
+}

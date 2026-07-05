@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 13,
+  "title": "Day 13 — Shopping & Prices · Irregular Verbs",
+  "goal": "🎯 Today you can shop, ask prices, pay — and handle the most common irregular verbs.",
+  "sourceHash": "5c3ebaf1e42813b8e54abf32a59303a66c4e30ad882a6d1d69c1eb31b76f71a4",
+  "introHtml": "<h2>Day 13 · Shopping &amp; Prices — Stem-Changing (Irregular) Verbs</h2>\n<p class=\"goal\">🎯 Today you can shop, ask prices, pay — and handle the most common irregular verbs.</p>",
+  "sections": [
+    {
+      "id": "d13-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Stem-changing verbs — only du and er/sie/es change</h3>\n<table>\n<tr><th>Change</th><th>Verb</th><th>du</th><th>er/sie/es</th></tr>\n<tr><td rowspan=\"4\"><b>e → i</b></td><td class=\"de\">essen (eat)</td><td class=\"de\">isst</td><td class=\"de\">isst</td></tr>\n<tr><td class=\"de\">nehmen (take)</td><td class=\"de\">nimmst</td><td class=\"de\">nimmt</td></tr>\n<tr><td class=\"de\">sprechen (speak)</td><td class=\"de\">sprichst</td><td class=\"de\">spricht</td></tr>\n<tr><td class=\"de\">geben (give)</td><td class=\"de\">gibst</td><td class=\"de\">gibt</td></tr>\n<tr><td rowspan=\"2\"><b>e → ie</b></td><td class=\"de\">sehen (see)</td><td class=\"de\">siehst</td><td class=\"de\">sieht</td></tr>\n<tr><td class=\"de\">lesen (read)</td><td class=\"de\">liest</td><td class=\"de\">liest</td></tr>\n<tr><td rowspan=\"3\"><b>a → ä</b></td><td class=\"de\">fahren (drive/go)</td><td class=\"de\">fährst</td><td class=\"de\">fährt</td></tr>\n<tr><td class=\"de\">schlafen (sleep)</td><td class=\"de\">schläfst</td><td class=\"de\">schläft</td></tr>\n<tr><td class=\"de\">tragen (carry/wear)</td><td class=\"de\">trägst</td><td class=\"de\">trägt</td></tr>\n</table>\n<p>ich/wir/ihr/sie forms are 100% regular: <span class=\"de\">ich esse, wir essen, ihr esst</span>.</p>\n<h3>2. Prices</h3>\n<ul>\n<li><span class=\"de\">Was kostet das? / Wie viel kostet der Käse?</span> — What does it cost?</li>\n<li>3,50 € = <span class=\"de\">drei Euro fünfzig</span> (comma, not point!)</li>\n<li><span class=\"de\">Das ist (zu) teuer / billig / günstig.</span> — too expensive / cheap / good value</li>\n<li><span class=\"de\">Zahlen Sie bar oder mit Karte?</span> — Cash or card? (Germany loves cash!)</li>\n</ul>\n<h3>3. es gibt = there is / there are (+ accusative)</h3>\n<p><span class=\"de\">Es gibt einen Supermarkt hier.</span> — There's a supermarket here. <span class=\"de\">Gibt es Brot?</span> — Is there bread?</p>\n</details>",
+      "sourceHash": "1cbc9fc029356ad3ef36b844fa1ef07bed62c11dca0d7ca4cccd0beb44f49a69"
+    },
+    {
+      "id": "d13-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (15 items)",
+      "html": "<details><summary>📚 Vocabulary (15 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">einkaufen</td><td>to shop (for groceries)</td></tr>\n<tr><td class=\"de\">das Geschäft, -e / der Laden, ¨-</td><td>shop, store</td></tr>\n<tr><td class=\"de\">der Supermarkt, ¨-e</td><td>supermarket</td></tr>\n<tr><td class=\"de\">die Bäckerei</td><td>bakery</td></tr>\n<tr><td class=\"de\">der Markt</td><td>market</td></tr>\n<tr><td class=\"de\">kosten</td><td>to cost</td></tr>\n<tr><td class=\"de\">der Preis, -e</td><td>price</td></tr>\n<tr><td class=\"de\">das Geld</td><td>money</td></tr>\n<tr><td class=\"de\">teuer / billig / günstig</td><td>expensive / cheap / good value</td></tr>\n<tr><td class=\"de\">bar / mit Karte</td><td>in cash / by card</td></tr>\n<tr><td class=\"de\">der Euro / der Cent</td><td>euro / cent</td></tr>\n<tr><td class=\"de\">das Kilo / das Gramm</td><td>kilo / gram</td></tr>\n<tr><td class=\"de\">die Kasse</td><td>checkout, till</td></tr>\n<tr><td class=\"de\">die Tüte</td><td>(shopping) bag</td></tr>\n<tr><td class=\"de\">Sonst noch etwas?</td><td>Anything else?</td></tr>\n</table>\n</details>",
+      "sourceHash": "f6437adbdd3ea1f5576fac4320c29858870dffee89dd90a5dcc889feeddae541"
+    },
+    {
+      "id": "d13-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was kostet ein Kilo Äpfel? — Zwei Euro neunzig.</span> <span class=\"tr\">What does a kilo of apples cost? — €2.90.</span></li>\n<li><span class=\"de\">Das ist zu teuer!</span> <span class=\"tr\">That's too expensive!</span></li>\n<li><span class=\"de\">Er fährt zum Supermarkt und kauft Brot.</span> <span class=\"tr\">He drives to the supermarket and buys bread.</span></li>\n<li><span class=\"de\">Sie liest die Preise und nimmt den Käse.</span> <span class=\"tr\">She reads the prices and takes the cheese.</span></li>\n<li><span class=\"de\">Zahlen Sie bar oder mit Karte? — Bar, bitte.</span> <span class=\"tr\">Cash or card? — Cash, please.</span></li>\n<li><span class=\"de\">Gibt es hier eine Bäckerei? — Ja, es gibt eine am Markt.</span> <span class=\"tr\">Is there a bakery here? — Yes, there's one at the market.</span></li>\n</ol>\n</details>",
+      "sourceHash": "9246adf623349327f9eda97ac86291c9aa4624d3c449eb31f187d9d3b3937553"
+    },
+    {
+      "id": "d13-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Auf dem Markt",
+      "html": "<details><summary>🗣 Dialogue: Auf dem Markt</summary>\n<div class=\"dlg\">\n<p><b>Verkäuferin:</b> <span class=\"de\">Guten Morgen! Was darf es sein?</span> <span class=\"tr\">(Good morning! What can I get you?)</span></p>\n<p><b>Kunde:</b> <span class=\"de\">Ich hätte gern ein Kilo Kartoffeln und 200 Gramm Käse.</span> <span class=\"tr\">(I'd like a kilo of potatoes and 200g of cheese.)</span></p>\n<p><b>Verkäuferin:</b> <span class=\"de\">Gern. Sonst noch etwas?</span> <span class=\"tr\">(Sure. Anything else?)</span></p>\n<p><b>Kunde:</b> <span class=\"de\">Was kosten die Äpfel?</span> <span class=\"tr\">(How much are the apples?)</span></p>\n<p><b>Verkäuferin:</b> <span class=\"de\">Drei Euro das Kilo.</span> <span class=\"tr\">(Three euros per kilo.)</span></p>\n<p><b>Kunde:</b> <span class=\"de\">Dann nehme ich zwei Kilo. Das ist alles.</span> <span class=\"tr\">(Then I'll take two kilos. That's all.)</span></p>\n<p><b>Verkäuferin:</b> <span class=\"de\">Das macht zusammen elf Euro fünfzig.</span> <span class=\"tr\">(That's €11.50 altogether.)</span></p>\n<p><b>Kunde:</b> <span class=\"de\">Hier, bitte. — Danke, tschüss!</span> <span class=\"tr\">(Here you go. — Thanks, bye!)</span></p>\n</div>\n</details>",
+      "sourceHash": "969f2813fa32e948c9fc32d3f1bbfa576c364998f8c4f75ccb4d7704a37a2b50"
+    },
+    {
+      "id": "d13-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Drill the stem changes aloud: ich esse – du isst – er isst; ich fahre – du fährst – er fährt; ich lese – du liest – sie liest. All 9 verbs.</li>\n<li>Say these prices: 0,99 € · 2,50 € · 13,80 € · 99,99 €.</li>\n<li>Role-play the market dialogue, both roles.</li>\n</ol>\n</details>",
+      "sourceHash": "8eb29363f41438b089ac55e3f562bcc0d13155117834b095eb07f05ad8b02d9b"
+    },
+    {
+      "id": "d13-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Einkaufen im Supermarkt German dialogue A1\"</b>.</li>\n<li><b>Nicos Weg A1</b> — shopping episodes; listen for prices and write down the numbers.</li>\n<li>🔊 the 9 irregular verbs in all three key forms.</li>\n</ul>\n</details>",
+      "sourceHash": "50bd28ebab8d191e516603de263e7fe1da909d6727a0ee20769d4b66836c909c"
+    },
+    {
+      "id": "d13-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Samstag ist Markttag. Frau Otto fährt zum Markt. Sie kauft Obst und Gemüse — auf dem Markt ist alles frisch und günstig. Der Supermarkt ist billiger, aber das Obst dort schmeckt nicht so gut. Heute kosten die Erdbeeren nur zwei Euro. Frau Otto nimmt drei Kilo!</p>\n<ol>\n<li>Why does Frau Otto prefer the market?</li>\n<li>What's cheaper — market or supermarket?</li>\n<li>What does she buy a lot of today?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Everything is fresh (and good value); supermarket fruit doesn't taste as good. 2. The supermarket. 3. Strawberries (Erdbeeren) — 3 kilos at €2.</p></details>\n</details>",
+      "sourceHash": "ea11f3f6ac9cabed5561d053e1b173b2fe9922187137a21bee954a4ee3b564fa"
+    },
+    {
+      "id": "d13-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write a market dialogue (8 lines) buying 3 items, asking one price, and paying. Use <span class=\"de\">nehmen</span> correctly (ich nehme / nimmst du...?).</p>\n</details>",
+      "sourceHash": "1adbad00683fbceef150002c3b887c9a88a2af0437eaeb235d076660e54a5893"
+    },
+    {
+      "id": "d13-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">du ___ (essen) viel.</span></li>\n<li>Fill in: <span class=\"de\">er ___ (fahren) nach Berlin.</span></li>\n<li>Fill in: <span class=\"de\">sie ___ (lesen) ein Buch.</span></li>\n<li>Say 4,75 € in words.</li>\n<li>\"Is there a supermarket here?\" = ?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>isst</li><li>fährt</li><li>liest</li><li>vier Euro fünfundsiebzig</li><li>Gibt es hier einen Supermarkt?</li></ol>\n</details>\n</details>",
+      "sourceHash": "7df788ef1f2da05085d2d47e0d17173d9f248be0ca8a316bc78a03f0cf90d06b"
+    },
+    {
+      "id": "d13-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">he eats</span><span class=\"a\">er isst</span></div>\n<div class=\"fc\"><span class=\"q\">you drive/go</span><span class=\"a\">du fährst</span></div>\n<div class=\"fc\"><span class=\"q\">she reads</span><span class=\"a\">sie liest</span></div>\n<div class=\"fc\"><span class=\"q\">he sleeps</span><span class=\"a\">er schläft</span></div>\n<div class=\"fc\"><span class=\"q\">What does that cost?</span><span class=\"a\">Was kostet das?</span></div>\n<div class=\"fc\"><span class=\"q\">expensive / cheap</span><span class=\"a\">teuer / billig</span></div>\n<div class=\"fc\"><span class=\"q\">cash or card?</span><span class=\"a\">bar oder mit Karte?</span></div>\n<div class=\"fc\"><span class=\"q\">there is/are</span><span class=\"a\">es gibt (+ acc.)</span></div>\n</div>\n</details>",
+      "sourceHash": "017c4c74ff070fdbe9d863398b9764ec4d76cb0139befc077b2bbfe74c88ed6a"
+    },
+    {
+      "id": "d13-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Convert your last real shopping receipt into German: item names + prices spoken aloud.</li>\n<li>Write the 9 stem-changing verbs with their du/er forms from memory.</li>\n<li>Prepare for tomorrow's Test 2: skim Days 8–13 grammar boxes.</li>\n</ol>\n</details>",
+      "sourceHash": "a8fdc91a68a34fc6ab7b959616a247511cee961b961e4b965951852f7aa76f65"
+    },
+    {
+      "id": "d13-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 11–12)",
+      "html": "<details><summary>🔄 Revision (Days 11–12)</summary>\n<ul>\n<li>Order a meal aloud from memory: drink, starter, main, bill.</li>\n<li>kein/nicht spot check: negate \"Ich esse Fleisch\" and \"Der Käse ist gut\".</li>\n</ul>\n</details>",
+      "sourceHash": "09b65632bc22d57e42dc9648c841a3c27c097e6bc1e1949bb06eaa09973ff10b"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"13\"> ✅ Mark Day 13 complete</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 2,
+  "title": "Day 2 — Introducing Yourself · sein · Pronouns",
+  "goal": "🎯 Today you can say who you are, ask someone's name, and use the most important German verb: sein (to be).",
+  "sourceHash": "d85269277bd1a27cc71a9c5be265afb2bcc09e1dd18884e65797871904c06dbd",
+  "introHtml": "<h2>Day 2 · Introducing Yourself — <i>sein</i> &amp; Personal Pronouns</h2>\n<p class=\"goal\">🎯 Today you can say who you are, ask someone's name, and use the most important German verb: <b>sein</b> (to be).</p>",
+  "sections": [
+    {
+      "id": "d2-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Personal pronouns</h3>\n<table>\n<tr><th>German</th><th>English</th><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">ich</td><td>I</td><td class=\"de\">wir</td><td>we</td></tr>\n<tr><td class=\"de\">du</td><td>you (informal)</td><td class=\"de\">ihr</td><td>you all (informal)</td></tr>\n<tr><td class=\"de\">er / sie / es</td><td>he / she / it</td><td class=\"de\">sie</td><td>they</td></tr>\n<tr><td class=\"de\">Sie</td><td colspan=\"3\">you (FORMAL, singular &amp; plural — always capitalized)</td></tr>\n</table>\n<div class=\"warn\">⚠️ Three different \"sie\"! <b>sie</b> = she, <b>sie</b> = they, <b>Sie</b> (capital) = formal you. The verb ending and context tell you which: <span class=\"de\">sie ist</span> (she is), <span class=\"de\">sie sind</span> (they are), <span class=\"de\">Sie sind</span> (you are, formal).</div>\n<h3>2. The verb <i>sein</i> (to be) — completely irregular, memorize it today</h3>\n<table>\n<tr><td class=\"de\">ich bin</td><td>I am</td><td class=\"de\">wir sind</td><td>we are</td></tr>\n<tr><td class=\"de\">du bist</td><td>you are</td><td class=\"de\">ihr seid</td><td>you all are</td></tr>\n<tr><td class=\"de\">er/sie/es ist</td><td>he/she/it is</td><td class=\"de\">sie/Sie sind</td><td>they/you(formal) are</td></tr>\n</table>\n<h3>3. du or Sie?</h3>\n<ul>\n<li><span class=\"de\">du</span> → friends, family, children, students among each other</li>\n<li><span class=\"de\">Sie</span> → strangers, officials, shops, work (until offered \"du\")</li>\n</ul>\n<div class=\"tip\">💡 When unsure, use <b>Sie</b>. Nobody is offended by too much politeness.</div>\n</details>",
+      "sourceHash": "d2bc9c652d8d9dde8ba1a9718e594156362f0326ec548f3de8476ffa92695448"
+    },
+    {
+      "id": "d2-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (15 words)",
+      "html": "<details><summary>📚 Vocabulary (15 words)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">heißen</td><td>to be called</td></tr>\n<tr><td class=\"de\">Ich heiße ...</td><td>My name is ...</td></tr>\n<tr><td class=\"de\">Wie heißt du? / Wie heißen Sie?</td><td>What's your name? (informal / formal)</td></tr>\n<tr><td class=\"de\">der Name</td><td>name</td></tr>\n<tr><td class=\"de\">Wer ist das?</td><td>Who is that?</td></tr>\n<tr><td class=\"de\">Das ist ...</td><td>This/That is ...</td></tr>\n<tr><td class=\"de\">Herr / Frau</td><td>Mr / Mrs-Ms</td></tr>\n<tr><td class=\"de\">Freut mich!</td><td>Nice to meet you!</td></tr>\n<tr><td class=\"de\">Wie geht's? / Wie geht es Ihnen?</td><td>How are you? (informal / formal)</td></tr>\n<tr><td class=\"de\">(sehr) gut</td><td>(very) good/well</td></tr>\n<tr><td class=\"de\">es geht</td><td>so-so</td></tr>\n<tr><td class=\"de\">schlecht</td><td>bad</td></tr>\n<tr><td class=\"de\">auch</td><td>also, too</td></tr>\n<tr><td class=\"de\">Und dir? / Und Ihnen?</td><td>And you? (informal / formal)</td></tr>\n<tr><td class=\"de\">müde</td><td>tired</td></tr>\n</table>\n</details>",
+      "sourceHash": "99f7f69274ccef8624c79c51582709a5b9cf86ec4e025935f2577ec05a2a8489"
+    },
+    {
+      "id": "d2-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich heiße Martin. Und du?</span> <span class=\"tr\">My name is Martin. And you?</span></li>\n<li><span class=\"de\">Ich bin Anna. Freut mich!</span> <span class=\"tr\">I'm Anna. Nice to meet you!</span></li>\n<li><span class=\"de\">Wer ist das? — Das ist Herr Schmidt.</span> <span class=\"tr\">Who is that? — That's Mr Schmidt.</span></li>\n<li><span class=\"de\">Wie geht's? — Sehr gut, danke. Und dir?</span> <span class=\"tr\">How are you? — Very well, thanks. And you?</span></li>\n<li><span class=\"de\">Wir sind müde.</span> <span class=\"tr\">We are tired.</span></li>\n<li><span class=\"de\">Sie ist Anna und sie sind Ben und Tom.</span> <span class=\"tr\">She is Anna and they are Ben and Tom.</span></li>\n</ol>\n</details>",
+      "sourceHash": "fb1bb75702bfbe21c28accf4424b3d7bd807099b63b6ac0e9211a8fcd317d380"
+    },
+    {
+      "id": "d2-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Erste Begegnung (first meeting)",
+      "html": "<details><summary>🗣 Dialogue: Erste Begegnung (first meeting)</summary>\n<div class=\"dlg\">\n<p><b>Herr Braun:</b> <span class=\"de\">Guten Tag! Ich heiße Peter Braun. Wie heißen Sie?</span> <span class=\"tr\">(Good day! My name is Peter Braun. What's your name?)</span></p>\n<p><b>Frau Klein:</b> <span class=\"de\">Guten Tag, Herr Braun. Ich bin Maria Klein. Freut mich!</span> <span class=\"tr\">(Good day, Mr Braun. I'm Maria Klein. Nice to meet you!)</span></p>\n<p><b>Herr Braun:</b> <span class=\"de\">Freut mich auch! Wie geht es Ihnen?</span> <span class=\"tr\">(Nice to meet you too! How are you?)</span></p>\n<p><b>Frau Klein:</b> <span class=\"de\">Gut, danke. Und Ihnen?</span> <span class=\"tr\">(Well, thanks. And you?)</span></p>\n<p><b>Herr Braun:</b> <span class=\"de\">Auch gut, danke!</span> <span class=\"tr\">(Also well, thanks!)</span></p>\n</div>\n<p>Now read it again replacing the names with <b>your own name</b>.</p>\n</details>",
+      "sourceHash": "15351a14cb9d9724944882ca3b8a79eaa75a055542aac82edb98e00bae0f1edb"
+    },
+    {
+      "id": "d2-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Introduce yourself aloud 5 times: <span class=\"de\">Hallo! Ich heiße ... / Ich bin ...</span></li>\n<li>Conjugate <b>sein</b> aloud from memory: ich bin, du bist... Do it 3 times without looking.</li>\n<li>Point at photos on your phone and say: <span class=\"de\">Das ist ... / Sie ist müde / Er ist gut</span> etc.</li>\n<li>Practice both registers: ask \"What's your name?\" formally AND informally.</li>\n</ol>\n</details>",
+      "sourceHash": "f45afaf44c26d0ea0ee27dad862e5805428c8aa55b4905a01ce67f4831a6929f"
+    },
+    {
+      "id": "d2-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1, Episodes 2–3</b> — introductions are exactly this topic.</li>\n<li>YouTube: search <b>\"Easy German introduce yourself\"</b> — hear real Germans say their names.</li>\n<li>Listen to the Day 2 dialogue words in DeepL/Google Translate 🔊, repeat each line.</li>\n</ul>\n</details>",
+      "sourceHash": "1bc64edd85cf0f3843d0b2f6b659b826d535592ad3c3282150adab5d3c670a73"
+    },
+    {
+      "id": "d2-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Hallo! Ich heiße Lena. Das ist Tom. Er ist müde. Wir sind aus Berlin. Und wer bist du?</p>\n<ol>\n<li>Who is tired?</li>\n<li>How many people introduce themselves or are introduced?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Tom (Er ist müde). 2. Two — Lena and Tom.</p></details>\n</details>",
+      "sourceHash": "0db13612e1136770fc3a8fb407e8bea65760bf9813c187eea03e376c7d4f6bbd"
+    },
+    {
+      "id": "d2-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write your first German text (3–4 sentences):</p>\n<p class=\"de\">Hallo! Ich heiße ... . Ich bin ... . Und wie heißt du?</p>\n<p>Then write the formal version, as if to a stranger (Sie).</p>\n</details>",
+      "sourceHash": "21979e62f6b0b1f87496d36f09a675b9e560870ac3ab61da14b05fde32f25b35"
+    },
+    {
+      "id": "d2-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">du ___ (sein)</span></li>\n<li>Fill in: <span class=\"de\">wir ___ (sein)</span></li>\n<li>Formal \"What is your name?\" = ?</li>\n<li><span class=\"de\">Sie sind</span> can mean: a) she is b) you are (formal) c) I am</li>\n<li>Translate: \"That is Mrs Klein.\"</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>bist</li><li>sind</li><li>Wie heißen Sie?</li><li>b (it can also mean \"they are\" — but never \"she is\", that's <i>sie ist</i>)</li><li>Das ist Frau Klein.</li></ol>\n</details>\n</details>",
+      "sourceHash": "2d6ee35c7d9b732d05a7516c2c925c604109bdb011dd3fc72c9afedf98bf012d"
+    },
+    {
+      "id": "d2-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I am</span><span class=\"a\">ich bin</span></div>\n<div class=\"fc\"><span class=\"q\">you are (informal)</span><span class=\"a\">du bist</span></div>\n<div class=\"fc\"><span class=\"q\">he/she is</span><span class=\"a\">er/sie ist</span></div>\n<div class=\"fc\"><span class=\"q\">we are</span><span class=\"a\">wir sind</span></div>\n<div class=\"fc\"><span class=\"q\">My name is...</span><span class=\"a\">Ich heiße...</span></div>\n<div class=\"fc\"><span class=\"q\">Nice to meet you!</span><span class=\"a\">Freut mich!</span></div>\n<div class=\"fc\"><span class=\"q\">How are you? (informal)</span><span class=\"a\">Wie geht's?</span></div>\n<div class=\"fc\"><span class=\"q\">also / too</span><span class=\"a\">auch</span></div>\n</div>\n</details>",
+      "sourceHash": "03ee24dc48790c0ea046025e9ec24af54a1fa1b05df718c14deb6652ad3590e6"
+    },
+    {
+      "id": "d2-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write out the full <b>sein</b> table by hand twice, from memory.</li>\n<li>Introduce yourself in German to your mirror — formally and informally.</li>\n<li>Review all Day 1 flashcards.</li>\n</ol>\n</details>",
+      "sourceHash": "05e580bfbccf6fd81b4a9bd82eb9db5c77b9121e9255931bfe823ba63a8b419c"
+    },
+    {
+      "id": "d2-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 1)",
+      "html": "<details><summary>🔄 Revision (Day 1)</summary>\n<ul>\n<li>Say all 5 greetings + 2 goodbyes without looking.</li>\n<li>Read aloud: <span class=\"de\">Straße, schön, zwischen, Wiedersehen</span> — check with a translator's 🔊 if unsure.</li>\n</ul>\n</details>",
+      "sourceHash": "859377460dd55e0234e264daec3f839e7698c39b1e4ef46bfd6eee30d9a14f8e"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"2\"> ✅ Mark Day 2 complete</label>"
+}

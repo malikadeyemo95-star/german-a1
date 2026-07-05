@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 16,
+  "title": "Day 16 — Daily Routine · Separable Verbs",
+  "goal": "🎯 Today you describe your whole day — and meet German's split-personality verbs.",
+  "sourceHash": "6556eb4f5ddbf407ba0759a7d0f9a71f6b9b3fc21a9f6711ccc94211d20c5203",
+  "introHtml": "<h2>Day 16 · Daily Routine &amp; Separable Verbs</h2>\n<p class=\"goal\">🎯 Today you describe your whole day — and meet German's split-personality verbs.</p>",
+  "sections": [
+    {
+      "id": "d16-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Separable verbs (trennbare Verben)</h3>\n<p>Many verbs have a prefix that <b>breaks off and flies to the end</b> of the sentence:</p>\n<table>\n<tr><th>Infinitive</th><th>In a sentence</th></tr>\n<tr><td class=\"de\"><b>auf</b>stehen (get up)</td><td class=\"de\">Ich stehe um 7 Uhr <b>auf</b>.</td></tr>\n<tr><td class=\"de\"><b>an</b>fangen (begin)</td><td class=\"de\">Der Kurs fängt um 9 <b>an</b>. (a→ä!)</td></tr>\n<tr><td class=\"de\"><b>ein</b>kaufen (shop)</td><td class=\"de\">Wir kaufen am Samstag <b>ein</b>.</td></tr>\n<tr><td class=\"de\"><b>fern</b>sehen (watch TV)</td><td class=\"de\">Er sieht abends <b>fern</b>.</td></tr>\n<tr><td class=\"de\"><b>an</b>rufen (call up)</td><td class=\"de\">Ich rufe dich morgen <b>an</b>.</td></tr>\n<tr><td class=\"de\"><b>mit</b>kommen (come along)</td><td class=\"de\">Kommst du <b>mit</b>?</td></tr>\n<tr><td class=\"de\"><b>auf</b>räumen (tidy up)</td><td class=\"de\">Sie räumt das Zimmer <b>auf</b>.</td></tr>\n<tr><td class=\"de\"><b>aus</b>gehen (go out)</td><td class=\"de\">Wir gehen heute Abend <b>aus</b>.</td></tr>\n</table>\n<div class=\"tip\">💡 In the infinitive, the stress is on the prefix: <b>AUF</b>stehen. Hear the stress → it's separable. With möchten etc. the verb stays whole at the end: <span class=\"de\">Ich möchte früh <b>aufstehen</b>.</span></div>\n<h3>2. Reflexive preview (as chunks)</h3>\n<p>Learn these two as fixed phrases: <span class=\"de\">Ich dusche (mich)</span> — I shower; <span class=\"de\">Ich ziehe mich an</span> — I get dressed.</p>\n<h3>3. Sequencing words</h3>\n<p class=\"de\">zuerst (first), dann (then), danach (after that), am Ende (at the end)</p>\n<p>After these, verb comes SECOND: <span class=\"de\">Dann <b>trinke ich</b> Kaffee.</span></p>\n</details>",
+      "sourceHash": "2ba022817eb869698a76341566f855752c35909c2e4ea470e74bf15a1d8754c0"
+    },
+    {
+      "id": "d16-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (14 items)",
+      "html": "<details><summary>📚 Vocabulary (14 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">aufstehen</td><td>to get up</td></tr>\n<tr><td class=\"de\">aufwachen</td><td>to wake up</td></tr>\n<tr><td class=\"de\">duschen</td><td>to shower</td></tr>\n<tr><td class=\"de\">frühstücken</td><td>to have breakfast</td></tr>\n<tr><td class=\"de\">zur Arbeit gehen/fahren</td><td>to go/drive to work</td></tr>\n<tr><td class=\"de\">anfangen</td><td>to start, begin</td></tr>\n<tr><td class=\"de\">die Pause</td><td>break</td></tr>\n<tr><td class=\"de\">nach Hause kommen</td><td>to come home</td></tr>\n<tr><td class=\"de\">kochen</td><td>to cook</td></tr>\n<tr><td class=\"de\">aufräumen</td><td>to tidy up</td></tr>\n<tr><td class=\"de\">fernsehen</td><td>to watch TV</td></tr>\n<tr><td class=\"de\">anrufen</td><td>to call (phone)</td></tr>\n<tr><td class=\"de\">ins Bett gehen</td><td>to go to bed</td></tr>\n<tr><td class=\"de\">schlafen</td><td>to sleep (er schläft)</td></tr>\n</table>\n</details>",
+      "sourceHash": "8907b6db49f2f6594273dce51fbe1750fc0c1b28bdeb30d555017b131664f255"
+    },
+    {
+      "id": "d16-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich stehe um halb sieben auf.</span> <span class=\"tr\">I get up at 6:30.</span></li>\n<li><span class=\"de\">Zuerst dusche ich, dann frühstücke ich.</span> <span class=\"tr\">First I shower, then I have breakfast.</span></li>\n<li><span class=\"de\">Die Arbeit fängt um acht an.</span> <span class=\"tr\">Work starts at eight.</span></li>\n<li><span class=\"de\">Um zwölf mache ich eine Pause.</span> <span class=\"tr\">At twelve I take a break.</span></li>\n<li><span class=\"de\">Abends sehe ich fern oder ich rufe meine Mutter an.</span> <span class=\"tr\">In the evening I watch TV or call my mother.</span></li>\n<li><span class=\"de\">Ich gehe um elf ins Bett.</span> <span class=\"tr\">I go to bed at eleven.</span></li>\n</ol>\n</details>",
+      "sourceHash": "0d9cdbfd0d9271ec338413cb46a404942c5c41cba80c2567f12356ef0a1a60f7"
+    },
+    {
+      "id": "d16-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Ein normaler Tag",
+      "html": "<details><summary>🗣 Dialogue: Ein normaler Tag</summary>\n<div class=\"dlg\">\n<p><b>Reporter:</b> <span class=\"de\">Frau Kim, wann stehen Sie auf?</span> <span class=\"tr\">(Ms Kim, when do you get up?)</span></p>\n<p><b>Frau Kim:</b> <span class=\"de\">Um sechs Uhr. Ich dusche, frühstücke und fahre zur Arbeit.</span> <span class=\"tr\">(At six. I shower, have breakfast and drive to work.)</span></p>\n<p><b>Reporter:</b> <span class=\"de\">Wann fängt Ihre Arbeit an?</span> <span class=\"tr\">(When does your work start?)</span></p>\n<p><b>Frau Kim:</b> <span class=\"de\">Um halb acht. Um eins mache ich Pause.</span> <span class=\"tr\">(At 7:30. At one I take a break.)</span></p>\n<p><b>Reporter:</b> <span class=\"de\">Und am Abend?</span> <span class=\"tr\">(And in the evening?)</span></p>\n<p><b>Frau Kim:</b> <span class=\"de\">Ich komme um sechs nach Hause, koche und räume auf. Danach sehe ich ein bisschen fern.</span> <span class=\"tr\">(I come home at six, cook and tidy up. Then I watch a bit of TV.)</span></p>\n</div>\n</details>",
+      "sourceHash": "a9e7e83ecc992577c65dbda06a86c71899e036e6c3d1cbac66694123e58b0164"
+    },
+    {
+      "id": "d16-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Narrate your real morning aloud, step by step, with times: <span class=\"de\">Ich wache um ... auf. Ich stehe um ... auf. Zuerst ..., dann ...</span></li>\n<li>Separable drill — make sentences aloud: aufstehen/7 Uhr; einkaufen/Samstag; fernsehen/abends; anrufen/meine Schwester.</li>\n<li>Ask and answer: <span class=\"de\">Wann stehst du auf? Wann fängt dein Tag an? Wann gehst du ins Bett?</span></li>\n</ol>\n</details>",
+      "sourceHash": "9ef5a36295a15a4f05127d7e987f72d24a0d724b352f57d5b0765f179bda36e0"
+    },
+    {
+      "id": "d16-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>YouTube: <b>\"Mein Tagesablauf Deutsch A1\"</b> — several channels have exactly this video. Watch two.</li>\n<li><b>Nicos Weg A1</b> — daily routine episodes.</li>\n<li>Listen and note the times you hear; check against subtitles.</li>\n</ul>\n</details>",
+      "sourceHash": "acfc7b53bf3ae91d280292448eda059a745108488fe93f7390ed8155766cb667"
+    },
+    {
+      "id": "d16-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Herr Böhm ist Bäcker. Sein Tag beginnt früh: Er steht um drei Uhr auf! Er duscht schnell und fährt zur Bäckerei. Die Arbeit fängt um vier an. Er macht Brot und Brötchen. Um zwölf ist er fertig und kauft ein. Nachmittags schläft er zwei Stunden. Abends sieht er nicht fern — er geht um acht Uhr ins Bett.</p>\n<ol>\n<li>Why does Herr Böhm get up at 3am?</li>\n<li>What does he do in the afternoon?</li>\n<li>Find three separable verbs in the text.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. He's a baker; work starts at 4. 2. He sleeps for two hours. 3. steht ... auf, fängt ... an, kauft ... ein (also: sieht ... fern).</p></details>\n</details>",
+      "sourceHash": "a77d7686da5a0016ccb950ac90a45681e586dd0f366551b70fcdcb36b550ee1a"
+    },
+    {
+      "id": "d16-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write your full daily routine (10 sentences) with times and sequencing words (zuerst, dann, danach). Use at least 4 separable verbs — and check every prefix landed at the end!</p>\n</details>",
+      "sourceHash": "2f0d24e28f14e4081ae54118bafa08ea130ee342ef1ef6f25cb4140bd150b472"
+    },
+    {
+      "id": "d16-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Build a sentence: ich / aufstehen / um 7 Uhr.</li>\n<li>Build a question: du / mitkommen?</li>\n<li>Fill in: <span class=\"de\">Der Film ___ um acht ___. (anfangen)</span></li>\n<li>Fix the error: <span class=\"de\">Ich aufstehe um sechs.</span></li>\n<li>Where does the verb go with möchten: \"Ich möchte am Samstag ___\" (einkaufen)?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Ich stehe um 7 Uhr auf.</li><li>Kommst du mit?</li><li>fängt ... an</li><li>Ich stehe um sechs auf.</li><li>Ich möchte am Samstag einkaufen. (whole verb at the end)</li></ol>\n</details>\n</details>",
+      "sourceHash": "1622b12e00dc1f729e5aeecd985672578a5da4322c8d39dc2bbf4a12018c409c"
+    },
+    {
+      "id": "d16-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">to get up</span><span class=\"a\">aufstehen — ich stehe ... auf</span></div>\n<div class=\"fc\"><span class=\"q\">to begin</span><span class=\"a\">anfangen — es fängt ... an</span></div>\n<div class=\"fc\"><span class=\"q\">to go shopping</span><span class=\"a\">einkaufen — ich kaufe ... ein</span></div>\n<div class=\"fc\"><span class=\"q\">to watch TV</span><span class=\"a\">fernsehen — ich sehe ... fern</span></div>\n<div class=\"fc\"><span class=\"q\">to call (phone)</span><span class=\"a\">anrufen — ich rufe ... an</span></div>\n<div class=\"fc\"><span class=\"q\">to tidy up</span><span class=\"a\">aufräumen</span></div>\n<div class=\"fc\"><span class=\"q\">first / then / after that</span><span class=\"a\">zuerst / dann / danach</span></div>\n<div class=\"fc\"><span class=\"q\">to go to bed</span><span class=\"a\">ins Bett gehen</span></div>\n</div>\n</details>",
+      "sourceHash": "c7f4abd1cb68d26493805fdaf627629cbf33223db8e442e2058b18611d500a71"
+    },
+    {
+      "id": "d16-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>All day today: mentally narrate what you do in German (\"Ich koche jetzt...\").</li>\n<li>Find 3 more separable verbs in a dictionary (hint: try ab-, aus-, zu- prefixes) and write a sentence with each.</li>\n</ol>\n</details>",
+      "sourceHash": "9303f46c05e4345bcbba2053d902175afb15f938eba624a784e1dd0b31ce86bd"
+    },
+    {
+      "id": "d16-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 15)",
+      "html": "<details><summary>🔄 Revision (Day 15)</summary>\n<ul>\n<li>Times quick-fire: 8:30, 9:45, 14:15, 18:50 — everyday style.</li>\n<li>um/am/im: ___ Freitag, ___ Winter, ___ halb neun.</li>\n</ul>\n</details>",
+      "sourceHash": "707674d5795308656564ea8506664d7b138016f4f23983464c70e8d7a9faf9df"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"16\"> ✅ Mark Day 16 complete</label>"
+}

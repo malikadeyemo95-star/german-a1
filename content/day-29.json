@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "day": 29,
+  "title": "Day 29 — Formal German · Exam Prep",
+  "goal": "🎯 Today you handle forms, formal letters and offices — and learn exactly how the A1 exam works.",
+  "sourceHash": "e6ff47136a140a386393451d15c08b7be3c63ce08dfdddb535282aa34e08c16a",
+  "introHtml": "<h2>Day 29 · Official &amp; Formal German + A1 Exam Strategy</h2>\n<p class=\"goal\">🎯 Today you handle forms, formal letters and offices — and learn exactly how the A1 exam works.</p>",
+  "sections": [
+    {
+      "id": "d29-s1",
+      "type": "grammar",
+      "title": "📖 Grammar & formal language lesson",
+      "html": "<details open><summary>📖 Grammar &amp; formal language lesson</summary>\n<h3>1. The form (das Formular) — decode these fields</h3>\n<table>\n<tr><td class=\"de\">der Vorname / der Nachname (Familienname)</td><td>first name / surname</td></tr>\n<tr><td class=\"de\">das Geburtsdatum / der Geburtsort</td><td>date / place of birth</td></tr>\n<tr><td class=\"de\">die Staatsangehörigkeit</td><td>nationality</td></tr>\n<tr><td class=\"de\">die Adresse: Straße, Hausnummer, PLZ (Postleitzahl), Ort</td><td>street, number, postcode, town</td></tr>\n<tr><td class=\"de\">der Familienstand: ledig / verheiratet / geschieden</td><td>marital status</td></tr>\n<tr><td class=\"de\">die Unterschrift / unterschreiben</td><td>signature / to sign</td></tr>\n<tr><td class=\"de\">ankreuzen / ausfüllen</td><td>to tick / to fill in</td></tr>\n</table>\n<h3>2. Formal letters &amp; emails — the frame</h3>\n<table>\n<tr><th>Formal (Sie)</th><th>Informal (du)</th></tr>\n<tr><td class=\"de\">Sehr geehrte Frau Müller, / Sehr geehrter Herr Kim, / Sehr geehrte Damen und Herren,</td><td class=\"de\">Liebe Anna, / Lieber Tom,</td></tr>\n<tr><td class=\"de\">Mit freundlichen Grüßen<br>[full name]</td><td class=\"de\">Viele Grüße / Liebe Grüße<br>[first name]</td></tr>\n</table>\n<p>Useful formal middles: <span class=\"de\">Ich möchte Sie fragen, ... / Können Sie mir bitte helfen? / Vielen Dank im Voraus.</span> (Thanks in advance.)</p>\n<h3>3. Amt survival (government offices)</h3>\n<ul>\n<li><span class=\"de\">die Anmeldung</span> — registration (you must register your address in Germany!)</li>\n<li><span class=\"de\">der Termin, das Dokument, der Pass, das Visum, die Nummer ziehen</span> (take a queue number)</li>\n<li><span class=\"de\">Ich spreche nur ein bisschen Deutsch. Können Sie bitte langsam sprechen?</span> — your legal right to say!</li>\n</ul>\n<h3>4. The A1 exam format (Goethe-Zertifikat A1 / telc A1 — same structure)</h3>\n<table>\n<tr><th>Part</th><th>What happens</th><th>Time</th></tr>\n<tr><td><b>Hören</b> (listening)</td><td>3 parts: short dialogues, announcements, phone messages. Each plays twice (part 2 once).</td><td>~20 min</td></tr>\n<tr><td><b>Lesen</b> (reading)</td><td>3 parts: short texts, ads, signs/notices. True-false and multiple choice.</td><td>~25 min</td></tr>\n<tr><td><b>Schreiben</b> (writing)</td><td>Fill in a form + write a short message (~30 words) covering 3 given points.</td><td>~20 min</td></tr>\n<tr><td><b>Sprechen</b> (speaking)</td><td>In a group: 1) introduce yourself, 2) ask/answer questions on a topic card, 3) make/respond to requests.</td><td>~15 min</td></tr>\n</table>\n<div class=\"tip\">💡 Strategy gold: In Schreiben, cover ALL THREE bullet points — that's most of the marks. In Sprechen part 1, your self-introduction follows a fixed menu: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby — you've practiced it since Day 4! You'll also be asked to SPELL something (Day 1!) and say a number (Day 3!).</div>\n</details>",
+      "sourceHash": "586f0abf4906ba863e9a54a7351fbd73cf536e66fabd8442a6f54e0c1377b4d1"
+    },
+    {
+      "id": "d29-s2",
+      "type": "sentences",
+      "title": "💬 Example: a complete formal email",
+      "html": "<details><summary>💬 Example: a complete formal email</summary>\n<p class=\"de\">Sehr geehrte Damen und Herren,<br><br>ich möchte einen Deutschkurs machen. Ich habe eine Frage: Wann beginnt der Kurs und was kostet er? Ich arbeite bis 16 Uhr — gibt es einen Abendkurs?<br><br>Vielen Dank im Voraus.<br><br>Mit freundlichen Grüßen<br>Martin Adeyemo</p>\n<p class=\"tr\">(Dear Sir or Madam, I would like to take a German course. I have a question: when does the course start and what does it cost? I work until 4pm — is there an evening course? Many thanks in advance. Kind regards, ...)</p>\n</details>",
+      "sourceHash": "bf01e2a505c8b20d1bf6e238d84fb11e1f69fbc597843603d982f7c00acc692b"
+    },
+    {
+      "id": "d29-s3",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Bei der Anmeldung (registering at the Bürgeramt)",
+      "html": "<details><summary>🗣 Dialogue: Bei der Anmeldung (registering at the Bürgeramt)</summary>\n<div class=\"dlg\">\n<p><b>Beamtin:</b> <span class=\"de\">Guten Tag, Ihre Nummer bitte. ... Wie kann ich Ihnen helfen?</span> <span class=\"tr\">(Hello, your number please. ... How can I help you?)</span></p>\n<p><b>Herr Malik:</b> <span class=\"de\">Guten Tag. Ich möchte mich anmelden. Ich bin neu in Berlin.</span> <span class=\"tr\">(Hello. I'd like to register. I'm new in Berlin.)</span></p>\n<p><b>Beamtin:</b> <span class=\"de\">Haben Sie das Formular ausgefüllt?</span> <span class=\"tr\">(Have you filled in the form?)</span></p>\n<p><b>Herr Malik:</b> <span class=\"de\">Ja, hier bitte. Und hier ist mein Pass.</span> <span class=\"tr\">(Yes, here you go. And here is my passport.)</span></p>\n<p><b>Beamtin:</b> <span class=\"de\">Danke. ... Unterschreiben Sie bitte hier.</span> <span class=\"tr\">(Thanks. ... Please sign here.)</span></p>\n<p><b>Herr Malik:</b> <span class=\"de\">Entschuldigung, können Sie bitte langsam sprechen?</span> <span class=\"tr\">(Sorry, could you speak slowly please?)</span></p>\n<p><b>Beamtin:</b> <span class=\"de\">Natürlich. Ihre – Unterschrift – bitte – hier.</span> <span class=\"tr\">(Of course. Your – signature – please – here.)</span></p>\n<p><b>Herr Malik:</b> <span class=\"de\">Ah, danke! ... Fertig. Schönen Tag noch!</span> <span class=\"tr\">(Ah, thanks! ... Done. Have a nice day!)</span></p>\n</div>\n</details>",
+      "sourceHash": "d62f2bf06472ec65c3267dc69cb7076820fad8cf57bb25013c1b5b43af63f385"
+    },
+    {
+      "id": "d29-s4",
+      "type": "reading",
+      "title": "📰 Reading practice — a real-style form",
+      "html": "<details><summary>📰 Reading practice — a real-style form</summary>\n<p>Fill this in (in writing) with YOUR data:</p>\n<table>\n<tr><td class=\"de\">Nachname:</td><td>__________</td></tr>\n<tr><td class=\"de\">Vorname:</td><td>__________</td></tr>\n<tr><td class=\"de\">Geburtsdatum:</td><td>__________</td></tr>\n<tr><td class=\"de\">Geburtsort:</td><td>__________</td></tr>\n<tr><td class=\"de\">Staatsangehörigkeit:</td><td>__________</td></tr>\n<tr><td class=\"de\">Straße, Hausnummer:</td><td>__________</td></tr>\n<tr><td class=\"de\">PLZ, Ort:</td><td>__________</td></tr>\n<tr><td class=\"de\">Familienstand:</td><td>☐ ledig ☐ verheiratet ☐ geschieden</td></tr>\n<tr><td class=\"de\">Telefonnummer:</td><td>__________</td></tr>\n<tr><td class=\"de\">Unterschrift:</td><td>__________</td></tr>\n</table>\n<p>The exam's form task looks EXACTLY like this. Practice until it takes you under 2 minutes.</p>\n</details>",
+      "sourceHash": "110bbda286c77ccea5646a7f3d55e4b020af64fbb4dd1b409bb1a7202cb84ab9"
+    },
+    {
+      "id": "d29-s5",
+      "type": "writing",
+      "title": "✍️ Writing task (exam format!)",
+      "html": "<details><summary>✍️ Writing task (exam format!)</summary>\n<p>Write a ~30-word message to your German teacher, Frau Schneider. Cover all 3 points: 1) you are sick, 2) you cannot come to class tomorrow, 3) ask for the homework. Formal frame!</p>\n<details class=\"key\"><summary>Model answer</summary>\n<p class=\"de\">Sehr geehrte Frau Schneider,<br>ich bin leider krank und habe Fieber. Ich kann morgen nicht zum Kurs kommen. Können Sie mir bitte die Hausaufgaben schicken?<br>Mit freundlichen Grüßen<br>[Name]</p>\n</details>\n</details>",
+      "sourceHash": "94af7d9560572ae04ea0441ba5e7fc7bdcd638be0808ab7d568072bf1fc8628d"
+    },
+    {
+      "id": "d29-s6",
+      "type": "speaking",
+      "title": "🎤 Speaking practice (exam format!)",
+      "html": "<details><summary>🎤 Speaking practice (exam format!)</summary>\n<ol>\n<li><b>Part 1 rehearsal:</b> deliver your self-introduction: <span class=\"de\">Ich heiße ... Ich bin ... Jahre alt. Ich komme aus ... Ich wohne in ... Ich spreche ... Ich bin ... von Beruf. Mein Hobby ist ...</span> Then SPELL your surname and say your phone number.</li>\n<li><b>Part 2 rehearsal:</b> topic \"Essen\" — form 3 questions with W-words (Was isst du gern? ...) and answer them.</li>\n<li><b>Part 3 rehearsal:</b> make 3 polite requests: <span class=\"de\">Können Sie bitte ...? / Gib mir bitte ... / Machen Sie bitte ...</span></li>\n</ol>\n</details>",
+      "sourceHash": "80ef0c414f53fb2c212de32fd105b6f6c37a2cb43979e539dff9fa91e6689263"
+    },
+    {
+      "id": "d29-s7",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li>Search YouTube: <b>\"Goethe Zertifikat A1 Hören Modelltest\"</b> — do one full real listening test today. This is your dress rehearsal.</li>\n<li>Note your score; the pass mark is 60%.</li>\n</ul>\n</details>",
+      "sourceHash": "0645690d59f15051b040dc898bbe980e769c03085bbf0fb95e208429a5eb63ed"
+    },
+    {
+      "id": "d29-s8",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>What goes in the field \"Staatsangehörigkeit\"?</li>\n<li>Formal letter opening to an unknown company?</li>\n<li>Formal sign-off?</li>\n<li>\"Please sign here\" (formal) = ?</li>\n<li>What are the 4 parts of the A1 exam?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Your nationality (e.g. nigerianisch, britisch)</li><li>Sehr geehrte Damen und Herren,</li><li>Mit freundlichen Grüßen</li><li>Unterschreiben Sie bitte hier.</li><li>Hören, Lesen, Schreiben, Sprechen</li></ol>\n</details>\n</details>",
+      "sourceHash": "633b651515f3d9e6c9447234e70f87895c74699c36809c78d94fb6f37c84a907"
+    },
+    {
+      "id": "d29-s9",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">surname</span><span class=\"a\">der Nachname</span></div>\n<div class=\"fc\"><span class=\"q\">date of birth</span><span class=\"a\">das Geburtsdatum</span></div>\n<div class=\"fc\"><span class=\"q\">nationality</span><span class=\"a\">die Staatsangehörigkeit</span></div>\n<div class=\"fc\"><span class=\"q\">signature</span><span class=\"a\">die Unterschrift</span></div>\n<div class=\"fc\"><span class=\"q\">to fill in</span><span class=\"a\">ausfüllen</span></div>\n<div class=\"fc\"><span class=\"q\">Dear Sir or Madam,</span><span class=\"a\">Sehr geehrte Damen und Herren,</span></div>\n<div class=\"fc\"><span class=\"q\">Kind regards</span><span class=\"a\">Mit freundlichen Grüßen</span></div>\n<div class=\"fc\"><span class=\"q\">Thanks in advance</span><span class=\"a\">Vielen Dank im Voraus</span></div>\n</div>\n</details>",
+      "sourceHash": "c5fe26151398f092a2d2e6cd8b56aa120e540a78c84358ade7e1cb79795c1c4a"
+    },
+    {
+      "id": "d29-s10",
+      "type": "homework",
+      "title": "📌 Homework + 🔄 Revision",
+      "html": "<details><summary>📌 Homework + 🔄 Revision</summary>\n<ol>\n<li>Time yourself: form fill-in under 2 minutes, 30-word message under 10 minutes.</li>\n<li>Run your problem list one final time. Tomorrow: THE MOCK EXAM. Sleep well!</li>\n</ol>\n</details>",
+      "sourceHash": "472d9fb368fde13fcb4e628976bcb2992d5aa932e257f8dbf72bb5a29a169bea"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"29\"> ✅ Mark Day 29 complete</label>"
+}

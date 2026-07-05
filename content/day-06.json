@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 6,
+  "title": "Day 6 — Family · Possessive Pronouns",
+  "goal": "🎯 Today you can describe your family and say \"my\", \"your\", \"his\", \"her\" correctly.",
+  "sourceHash": "8681a2862d8afa808c113d62d67b8f1ca4a70825ae786a56d3d64bb41c48c0eb",
+  "introHtml": "<h2>Day 6 · Family &amp; Possessive Pronouns (mein, dein, ...)</h2>\n<p class=\"goal\">🎯 Today you can describe your family and say \"my\", \"your\", \"his\", \"her\" correctly.</p>",
+  "sections": [
+    {
+      "id": "d6-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Possessive pronouns</h3>\n<table>\n<tr><th>Owner</th><th>Possessive</th><th>English</th></tr>\n<tr><td>ich</td><td class=\"de\">mein</td><td>my</td></tr>\n<tr><td>du</td><td class=\"de\">dein</td><td>your (informal)</td></tr>\n<tr><td>er/es</td><td class=\"de\">sein</td><td>his / its</td></tr>\n<tr><td>sie (she)</td><td class=\"de\">ihr</td><td>her</td></tr>\n<tr><td>wir</td><td class=\"de\">unser</td><td>our</td></tr>\n<tr><td>ihr</td><td class=\"de\">euer</td><td>your (plural)</td></tr>\n<tr><td>sie (they)</td><td class=\"de\">ihr</td><td>their</td></tr>\n<tr><td>Sie</td><td class=\"de\">Ihr</td><td>your (formal)</td></tr>\n</table>\n<h3>2. The ending matches the NEXT word's gender</h3>\n<p>Possessives behave like <span class=\"de\">ein</span>: no ending for masculine and neuter, <b>-e</b> for feminine and plural (in the nominative — more cases later):</p>\n<table>\n<tr><td class=\"de\">mein Vater</td><td>my father (m)</td></tr>\n<tr><td class=\"de\">mein<b>e</b> Mutter</td><td>my mother (f)</td></tr>\n<tr><td class=\"de\">mein Kind</td><td>my child (n)</td></tr>\n<tr><td class=\"de\">mein<b>e</b> Eltern</td><td>my parents (pl)</td></tr>\n</table>\n<div class=\"warn\">⚠️ The most common A1 mistake: <b>sein</b> vs <b>ihr</b>. <span class=\"de\">sein Bruder</span> = HIS brother; <span class=\"de\">ihr Bruder</span> = HER brother. The choice depends on the OWNER, the ending on the thing owned: <span class=\"de\">seine Schwester</span> (his sister — -e because Schwester is feminine).</div>\n<div class=\"tip\">💡 <span class=\"de\">euer</span> drops an e with endings: <span class=\"de\">eure Mutter</span> (not \"euere\").</div>\n</details>",
+      "sourceHash": "6c256ecdd2f74306822a08ad0911e8709bd90aae387a0274fae9ea1a744d1dd5"
+    },
+    {
+      "id": "d6-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (18 items)",
+      "html": "<details><summary>📚 Vocabulary (18 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">die Familie</td><td>family</td></tr>\n<tr><td class=\"de\">die Eltern (pl.)</td><td>parents</td></tr>\n<tr><td class=\"de\">die Mutter / der Vater</td><td>mother / father</td></tr>\n<tr><td class=\"de\">der Bruder / die Schwester</td><td>brother / sister</td></tr>\n<tr><td class=\"de\">die Geschwister (pl.)</td><td>siblings</td></tr>\n<tr><td class=\"de\">das Kind / die Kinder</td><td>child / children</td></tr>\n<tr><td class=\"de\">der Sohn / die Tochter</td><td>son / daughter</td></tr>\n<tr><td class=\"de\">die Großeltern (pl.)</td><td>grandparents</td></tr>\n<tr><td class=\"de\">die Oma / der Opa</td><td>grandma / grandpa</td></tr>\n<tr><td class=\"de\">der Mann / die Frau</td><td>husband, man / wife, woman</td></tr>\n<tr><td class=\"de\">der Freund / die Freundin</td><td>(boy)friend / (girl)friend</td></tr>\n<tr><td class=\"de\">verheiratet</td><td>married</td></tr>\n<tr><td class=\"de\">ledig</td><td>single</td></tr>\n<tr><td class=\"de\">geschieden</td><td>divorced</td></tr>\n<tr><td class=\"de\">zusammen</td><td>together</td></tr>\n<tr><td class=\"de\">nett</td><td>nice, kind</td></tr>\n<tr><td class=\"de\">lieben</td><td>to love</td></tr>\n<tr><td class=\"de\">haben + Geschwister</td><td>Hast du Geschwister? = Do you have siblings?</td></tr>\n</table>\n</details>",
+      "sourceHash": "ed35bc17c750949cbf1216e06f3cb37e2afb03a475521e06af0a4abecde3b46f"
+    },
+    {
+      "id": "d6-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Meine Familie ist groß.</span> <span class=\"tr\">My family is big.</span></li>\n<li><span class=\"de\">Hast du Geschwister? — Ja, einen Bruder und eine Schwester.</span> <span class=\"tr\">Do you have siblings? — Yes, a brother and a sister.</span></li>\n<li><span class=\"de\">Mein Bruder heißt Daniel. Er ist verheiratet.</span> <span class=\"tr\">My brother's name is Daniel. He's married.</span></li>\n<li><span class=\"de\">Seine Frau kommt aus Polen.</span> <span class=\"tr\">His wife is from Poland.</span></li>\n<li><span class=\"de\">Ihre Kinder sind sehr nett.</span> <span class=\"tr\">Her/Their children are very nice.</span></li>\n<li><span class=\"de\">Unsere Oma ist achtzig Jahre alt.</span> <span class=\"tr\">Our grandma is 80 years old.</span></li>\n</ol>\n</details>",
+      "sourceHash": "770d4052a556858e9a6af346824baa6dcc92ab07ee5d463c7aacb56361e4b1b7"
+    },
+    {
+      "id": "d6-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Familienfotos",
+      "html": "<details><summary>🗣 Dialogue: Familienfotos</summary>\n<div class=\"dlg\">\n<p><b>Julia:</b> <span class=\"de\">Ist das deine Familie?</span> <span class=\"tr\">(Is that your family?)</span></p>\n<p><b>Marco:</b> <span class=\"de\">Ja! Das ist meine Mutter, und das ist mein Vater.</span> <span class=\"tr\">(Yes! That's my mother, and that's my father.)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Und wer ist das?</span> <span class=\"tr\">(And who is that?)</span></p>\n<p><b>Marco:</b> <span class=\"de\">Das ist meine Schwester Laura und ihr Mann. Sie sind verheiratet.</span> <span class=\"tr\">(That's my sister Laura and her husband. They're married.)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Haben sie Kinder?</span> <span class=\"tr\">(Do they have children?)</span></p>\n<p><b>Marco:</b> <span class=\"de\">Ja, eine Tochter. Und du? Hast du Geschwister?</span> <span class=\"tr\">(Yes, a daughter. And you? Do you have siblings?)</span></p>\n<p><b>Julia:</b> <span class=\"de\">Nein, ich bin Einzelkind.</span> <span class=\"tr\">(No, I'm an only child.)</span></p>\n</div>\n</details>",
+      "sourceHash": "806238f6cb53bee6a5b00086d07b2b5871154eb5f809b493d1facb03bf2ec030"
+    },
+    {
+      "id": "d6-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Open family photos on your phone. For each person say: <span class=\"de\">Das ist mein/meine ... Er/Sie heißt ... Er/Sie ist ... Jahre alt.</span></li>\n<li>Drill sein vs ihr: \"his mother\" → <span class=\"de\">seine Mutter</span>; \"her father\" → ?; \"his sister\" → ?; \"her brother\" → ? (Answers: ihr Vater, seine Schwester, ihr Bruder.)</li>\n<li>Answer aloud: <span class=\"de\">Hast du Geschwister? Bist du verheiratet? Wie heißt deine Mutter?</span></li>\n</ol>\n</details>",
+      "sourceHash": "9de1382b9efa4719a9a1bc4df77c47fca7e1e3ec0c4e53b953c4f2da59735978"
+    },
+    {
+      "id": "d6-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — the \"Familie\" episodes.</li>\n<li>YouTube: <b>\"Easy German family\"</b> — Germans describing their families.</li>\n<li>🔊 today's 18 vocabulary items; pay attention to the ü in <span class=\"de\">Mütter/Brüder</span> when you meet plurals later.</li>\n</ul>\n</details>",
+      "sourceHash": "617b6bd319d35f2ae485c93c9d90d64df9979f5074af23457476498318fcb459"
+    },
+    {
+      "id": "d6-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Ich heiße Sofia und meine Familie ist klein. Mein Mann heißt Jan. Wir haben einen Sohn. Er heißt Felix und ist fünf Jahre alt. Meine Eltern wohnen in Dresden. Mein Bruder ist ledig, aber er hat eine Freundin. Seine Freundin ist sehr nett.</p>\n<ol>\n<li>Who is Felix and how old is he?</li>\n<li>Is Sofia's brother married?</li>\n<li>Whose girlfriend is very nice — his or hers?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Sofia's son, 5 years old. 2. No, he's single (ledig) but has a girlfriend. 3. His (seine Freundin = the brother's girlfriend).</p></details>\n</details>",
+      "sourceHash": "fedb35da2600bc36da37d2416c92f745f05cd012751f4816df296e2b3ace22e8"
+    },
+    {
+      "id": "d6-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 6–8 sentences about your family: who they are, their names and ages, where they live, whether they're married. Use at least 4 different possessives (mein, meine, sein, ihr, unser...).</p>\n</details>",
+      "sourceHash": "b77ff1f628f900941dd9c7483e4f8940efa84b587c0b8ad95b5cfe3289a9be39"
+    },
+    {
+      "id": "d6-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>\"her husband\" = ?</li>\n<li>\"his wife\" = ?</li>\n<li>Fill in: <span class=\"de\">Das ist ___ Mutter. (my)</span></li>\n<li>Fill in: <span class=\"de\">___ Kinder sind nett. (our)</span></li>\n<li>Translate: \"Do you have siblings? — Yes, two brothers.\"</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>ihr Mann</li><li>seine Frau</li><li>meine (Mutter is feminine)</li><li>Unsere (plural → -e)</li><li>Hast du Geschwister? — Ja, zwei Brüder.</li></ol>\n</details>\n</details>",
+      "sourceHash": "940df28325a9adc0ae05b56b919a387bb14f7fc3f14f397366659064fd094750"
+    },
+    {
+      "id": "d6-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">family</span><span class=\"a\">die Familie</span></div>\n<div class=\"fc\"><span class=\"q\">parents</span><span class=\"a\">die Eltern</span></div>\n<div class=\"fc\"><span class=\"q\">siblings</span><span class=\"a\">die Geschwister</span></div>\n<div class=\"fc\"><span class=\"q\">daughter</span><span class=\"a\">die Tochter</span></div>\n<div class=\"fc\"><span class=\"q\">married</span><span class=\"a\">verheiratet</span></div>\n<div class=\"fc\"><span class=\"q\">single</span><span class=\"a\">ledig</span></div>\n<div class=\"fc\"><span class=\"q\">his sister</span><span class=\"a\">seine Schwester</span></div>\n<div class=\"fc\"><span class=\"q\">her brother</span><span class=\"a\">ihr Bruder</span></div>\n</div>\n</details>",
+      "sourceHash": "080f8745ca75d2b4d5a8404ef2cf81e2808ec47c74eb8e6a8ff576515fdd8d6f"
+    },
+    {
+      "id": "d6-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Draw a small family tree and label everyone in German with a possessive: <span class=\"de\">meine Oma, mein Onkel...</span> (look up Onkel/Tante if you need them: uncle/aunt).</li>\n<li>Write 3 sentence pairs contrasting sein/ihr.</li>\n<li>Prepare for tomorrow's test: skim Days 1–6 grammar boxes.</li>\n</ol>\n</details>",
+      "sourceHash": "6cde7cfd51de45495a6d401106c9989764e092cc143111d3f236cb235f12a8e8"
+    },
+    {
+      "id": "d6-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 1–5)",
+      "html": "<details><summary>🔄 Revision (Days 1–5)</summary>\n<ul>\n<li>Conjugate a regular verb (spielen) + sein + haben + werden aloud.</li>\n<li>Ask and answer: Woher? Wo? Was von Beruf? Wie alt?</li>\n<li>Flashcards Days 3–5 (numbers, countries, jobs).</li>\n</ul>\n</details>",
+      "sourceHash": "5d951885c391efecdbad1e57788467510b0398bd5e9a7ae09ad69548aad098fa"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"6\"> ✅ Mark Day 6 complete</label>"
+}

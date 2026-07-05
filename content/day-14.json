@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "day": 14,
+  "title": "Day 14 — Week 2 Review + Test 2",
+  "goal": "🎯 Halfway hero! Consolidate Days 8–13, then take Test 2.",
+  "sourceHash": "824bd977635357ca6c3264c40868a35f1751e0942d4c996d20917aa48f6f8cf9",
+  "introHtml": "<h2>Day 14 · Week 2 Review &amp; Test 2 🏁</h2>\n<p class=\"goal\">🎯 Halfway hero! Consolidate Days 8–13, then take Test 2.</p>",
+  "sections": [
+    {
+      "id": "d14-s1",
+      "type": "lesson",
+      "title": "🔄 Week 2 summary",
+      "html": "<details open><summary>🔄 Week 2 summary</summary>\n<ul>\n<li><b>Genders &amp; articles:</b> der/die/das, ein/eine + ending clues (-ung → die, -chen → das...).</li>\n<li><b>Plurals:</b> 5 patterns; plural article is always die.</li>\n<li><b>Accusative:</b> only masculine changes — der→den, ein→einen, kein→keinen.</li>\n<li><b>Negation:</b> kein for (in)definite-less nouns, nicht for everything else.</li>\n<li><b>möchten / hätte gern</b> + second verb at the end.</li>\n<li><b>Stem-changers:</b> essen→isst, fahren→fährt, lesen→liest (du + er/sie/es only).</li>\n<li><b>Topics:</b> household objects, food &amp; drink, restaurant, shopping &amp; prices.</li>\n</ul>\n</details>",
+      "sourceHash": "8a3ea88eccc83f4827483d66f3a10fa1f5496a9ed299b2527ae5b7625db130db"
+    },
+    {
+      "id": "d14-s2",
+      "type": "quiz",
+      "title": "📝 TEST 2 (40 points)",
+      "html": "<details><summary>📝 TEST 2 (40 points)</summary>\n<h3>Part A: Articles (8 pts)</h3>\n<p>Write der/die/das AND the plural:</p>\n<p class=\"de\">1. ___ Buch, ___ · 2. ___ Lampe, ___ · 3. ___ Stuhl, ___ · 4. ___ Kind, ___</p>\n<h3>Part B: Accusative (8 pts)</h3>\n<ol>\n<li><span class=\"de\">Ich kaufe ___ Computer. (a)</span></li>\n<li><span class=\"de\">Sie sucht ___ Schlüssel. (the)</span></li>\n<li><span class=\"de\">Wir möchten ___ Suppe. (a)</span></li>\n<li><span class=\"de\">Er hat ___ Auto. (no)</span></li>\n<li><span class=\"de\">Nimmst du ___ Salat? (the, m)</span></li>\n<li><span class=\"de\">Ich sehe ___ Frau. (the)</span></li>\n<li><span class=\"de\">Ich esse ___ Apfel. (an, m)</span></li>\n<li><span class=\"de\">Haben Sie ___ Kinder? (no)</span></li>\n</ol>\n<h3>Part C: nicht or kein? (6 pts)</h3>\n<ol>\n<li>Ich trinke ___ Milch.</li>\n<li>Das Brot ist ___ frisch.</li>\n<li>Er arbeitet heute ___ .</li>\n<li>Wir haben ___ Zeit.</li>\n<li>Das ist ___ mein Handy.</li>\n<li>Sie isst ___ Fleisch.</li>\n</ol>\n<h3>Part D: Irregular verbs (6 pts)</h3>\n<p class=\"de\">1. du ___ (essen) · 2. er ___ (nehmen) · 3. sie ___ (lesen) · 4. du ___ (fahren) · 5. er ___ (sprechen) · 6. sie ___ (schlafen)</p>\n<h3>Part E: Reading (5 pts)</h3>\n<p class=\"de\">Lea geht einkaufen. Sie braucht Brot, Käse und Obst. In der Bäckerei kauft sie zwei Brötchen — sie kosten nur einen Euro. Im Supermarkt kauft sie den Käse und ein Kilo Äpfel. Das macht 6,50 Euro. Sie zahlt mit Karte. Milch kauft sie nicht — sie hat noch Milch zu Hause.</p>\n<ol>\n<li>What three things does Lea need?</li>\n<li>What does she buy at the bakery, and for how much?</li>\n<li>How does she pay at the supermarket?</li>\n<li>Why doesn't she buy milk?</li>\n<li>Find one accusative-masculine form in the text.</li>\n</ol>\n<h3>Part F: Writing (7 pts)</h3>\n<p>Write a restaurant dialogue, 7+ lines: greet, order a drink and a meal (möchten/hätte gern/nehmen), ask for the bill, pay with tip.</p>\n</details>",
+      "sourceHash": "a9002c79d7dbf82c998960f0edc294ce34d4e955c104b354edbe534c6eede0d8"
+    },
+    {
+      "id": "d14-s3",
+      "type": "quiz",
+      "title": "🔑 TEST 2 — Answer key",
+      "html": "<details class=\"key\"><summary>🔑 TEST 2 — Answer key</summary>\n<h3>Part A</h3><p class=\"de\">1. das Buch, die Bücher · 2. die Lampe, die Lampen · 3. der Stuhl, die Stühle · 4. das Kind, die Kinder</p>\n<h3>Part B</h3><p class=\"de\">1. einen · 2. den · 3. eine · 4. kein · 5. den · 6. die · 7. einen · 8. keine</p>\n<h3>Part C</h3><p class=\"de\">1. keine · 2. nicht · 3. nicht · 4. keine · 5. nicht · 6. kein</p>\n<h3>Part D</h3><p class=\"de\">1. isst · 2. nimmt · 3. liest · 4. fährst · 5. spricht · 6. schläft</p>\n<h3>Part E</h3><p>1. Bread, cheese, fruit. 2. Two rolls for €1. 3. By card. 4. She still has milk at home. 5. \"einen Euro\" or \"den Käse\" (also \"ein Kilo\" is neuter — not this one).</p>\n<h3>Part F</h3><p>Check: möchten conjugated right? Accusative after ordering (einen Kaffee)? Verb second? 1 pt per correct line, max 7.</p>\n<h3>Scoring</h3><p>36–40: Sehr gut! · 30–35: Solid — redo your weakest part · Below 30: review Days 10–11 (accusative + negation are the core), retest tomorrow.</p>\n</details>",
+      "sourceHash": "ad390daf9db5bd5def14b2d9466c72292c97309c771d7ac4349f02c9a0681762"
+    },
+    {
+      "id": "d14-s4",
+      "type": "speaking",
+      "title": "🎤 Speaking + 🎧 Listening today",
+      "html": "<details><summary>🎤 Speaking + 🎧 Listening today</summary>\n<ul>\n<li><b>Speaking:</b> record 90 seconds: introduce yourself AND describe what you eat on a normal day.</li>\n<li><b>Listening:</b> one full <b>Easy German</b> video with German subtitles ON. Count how many words you recognize.</li>\n</ul>\n</details>",
+      "sourceHash": "2535ad62b2c577e91e014e434a2a7b92fe85925d63eba78f18348ffbc21a8ccb"
+    },
+    {
+      "id": "d14-s5",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Update your problem list. Anything from Week 1 still on it? Drill it today.</li>\n<li>Halfway celebration: watch any German music video and enjoy not understanding all of it — yet. 🎶</li>\n</ol>\n</details>",
+      "sourceHash": "724045be74d1d0f8405b34c6b96d6a8ed36f8cbf0fcdf244391476df1814085f"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"14\"> ✅ Mark Day 14 complete</label>"
+}

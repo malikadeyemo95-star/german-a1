@@ -1,0 +1,629 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "course-source.html",
+  "days": [
+    {
+      "day": 1,
+      "title": "Day 1 — Alphabet & Pronunciation",
+      "goal": "🎯 Today you learn to read German aloud, spell your name, and say your first 16 words.",
+      "file": "day-01.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "7e07ad7b755f3c272f08784776ba509eda875891a6670ceab3960aea01210ce9"
+    },
+    {
+      "day": 2,
+      "title": "Day 2 — Introducing Yourself · sein · Pronouns",
+      "goal": "🎯 Today you can say who you are, ask someone's name, and use the most important German verb: sein (to be).",
+      "file": "day-02.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "d85269277bd1a27cc71a9c5be265afb2bcc09e1dd18884e65797871904c06dbd"
+    },
+    {
+      "day": 3,
+      "title": "Day 3 — Numbers 0–100 · haben",
+      "goal": "🎯 Today you can count to 100, say your age and phone number, and use haben (to have).",
+      "file": "day-03.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "aaab19406898ca614cda1b9aae4c9f7197273067baf902138a16b6593d53496f"
+    },
+    {
+      "day": 4,
+      "title": "Day 4 — Countries & Languages · Regular Verbs",
+      "goal": "🎯 Today you can say where you're from, what languages you speak — and conjugate almost every German verb.",
+      "file": "day-04.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "7b71950346b791f6c4314e1be1765e4311f0e059ddb5bdb4f493f7932f5cb1cd"
+    },
+    {
+      "day": 5,
+      "title": "Day 5 — Jobs · Yes/No Questions · werden",
+      "goal": "🎯 Today you can talk about your job, ask yes/no questions, and use the third key verb: werden (to become).",
+      "file": "day-05.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "f6afadd78a076950fdc232d3bf125011dc747bba33a95cd5f82d0c646339bf84"
+    },
+    {
+      "day": 6,
+      "title": "Day 6 — Family · Possessive Pronouns",
+      "goal": "🎯 Today you can describe your family and say \"my\", \"your\", \"his\", \"her\" correctly.",
+      "file": "day-06.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "8681a2862d8afa808c113d62d67b8f1ca4a70825ae786a56d3d64bb41c48c0eb"
+    },
+    {
+      "day": 7,
+      "title": "Day 7 — Week 1 Review + Test 1",
+      "goal": "🎯 Consolidate everything from Days 1–6, then take Test 1. Target: 80% or higher.",
+      "file": "day-07.json",
+      "sectionCount": 5,
+      "types": [
+        "lesson",
+        "writing",
+        "quiz",
+        "speaking",
+        "homework"
+      ],
+      "sourceHash": "96f7b31aa6289f42bc6c706a3047f0ba894f3f94cf04641ba7a7c79a34c59e88"
+    },
+    {
+      "day": 8,
+      "title": "Day 8 — der, die, das · ein, eine",
+      "goal": "🎯 Today you master German's famous three genders and the nominative case.",
+      "file": "day-08.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "9d2f3a8003df7db94c8cba002c2a4c1e2638a0bcbde9f581cc881621b99fee66"
+    },
+    {
+      "day": 9,
+      "title": "Day 9 — Plural Forms",
+      "goal": "🎯 Today you learn the 5 plural patterns — and the good news: in the plural, \"the\" is always die .",
+      "file": "day-09.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "33bee5eb5c56fea79336af88673dd5f76f535fb1c2c50776e3dfc33f9b5ec25b"
+    },
+    {
+      "day": 10,
+      "title": "Day 10 — Accusative Case · kein",
+      "goal": "🎯 Today you learn the case for direct objects — only ONE thing actually changes.",
+      "file": "day-10.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "03152963fa5cf4d273e8a5a216306b0fb1694eb4a1d3ab59f6f0a830189b0778"
+    },
+    {
+      "day": 11,
+      "title": "Day 11 — nicht vs kein · Food & Drinks",
+      "goal": "🎯 Today you learn to say \"no/not\" correctly — plus the food vocabulary you'll use every single day in Germany.",
+      "file": "day-11.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "ef0f782bb297d99065a85889a5a7ea856bcd6553a450133e9db8bf46dff7ccfa"
+    },
+    {
+      "day": 12,
+      "title": "Day 12 — Restaurant · möchten",
+      "goal": "🎯 Today you can order food, ask for the bill, and be politely German about it.",
+      "file": "day-12.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "5120b9a4ae41de64c5ba3edb214674cc0c9c1950e57b008c5b4bdba54902aa02"
+    },
+    {
+      "day": 13,
+      "title": "Day 13 — Shopping & Prices · Irregular Verbs",
+      "goal": "🎯 Today you can shop, ask prices, pay — and handle the most common irregular verbs.",
+      "file": "day-13.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "5c3ebaf1e42813b8e54abf32a59303a66c4e30ad882a6d1d69c1eb31b76f71a4"
+    },
+    {
+      "day": 14,
+      "title": "Day 14 — Week 2 Review + Test 2",
+      "goal": "🎯 Halfway hero! Consolidate Days 8–13, then take Test 2.",
+      "file": "day-14.json",
+      "sectionCount": 5,
+      "types": [
+        "lesson",
+        "quiz",
+        "speaking",
+        "homework"
+      ],
+      "sourceHash": "824bd977635357ca6c3264c40868a35f1751e0942d4c996d20917aa48f6f8cf9"
+    },
+    {
+      "day": 15,
+      "title": "Day 15 — Time, Days, Months & Dates",
+      "goal": "🎯 Today you can say the time two ways, name every day and month, and give dates.",
+      "file": "day-15.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "1d8fb43638f83a259bfeac23fe4dd1ae3bce4aa6f4f047b4d7e6b731aa83c140"
+    },
+    {
+      "day": 16,
+      "title": "Day 16 — Daily Routine · Separable Verbs",
+      "goal": "🎯 Today you describe your whole day — and meet German's split-personality verbs.",
+      "file": "day-16.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "6556eb4f5ddbf407ba0759a7d0f9a71f6b9b3fc21a9f6711ccc94211d20c5203"
+    },
+    {
+      "day": 17,
+      "title": "Day 17 — Modal Verbs: können, müssen, wollen",
+      "goal": "🎯 Today you can say what you CAN, MUST and WANT to do — with the famous German \"verb bracket\".",
+      "file": "day-17.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "5fd1df6ede08f9423ab063895d6bb7976bb24c7125c56992b655cce3f5522fb4"
+    },
+    {
+      "day": 18,
+      "title": "Day 18 — dürfen, sollen, möchten · Appointments",
+      "goal": "🎯 Today you complete all six modal verbs and can make, move and cancel appointments like a pro.",
+      "file": "day-18.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "f5f8a1ff0753b345c9541c4ae921cfd1a65a15455a60810c49b5d8f82ab2d48d"
+    },
+    {
+      "day": 19,
+      "title": "Day 19 — Transport & Directions · Imperative",
+      "goal": "🎯 Today you can buy a ticket, ask for directions, understand the answer — and give commands.",
+      "file": "day-19.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "e527f318951f577f8c68fcb79b6b6ca03078a2d7a898caaf36949796c9138ebc"
+    },
+    {
+      "day": 20,
+      "title": "Day 20 — Prepositions for A1",
+      "goal": "🎯 Today you organize the little words that glue German together — as ready-to-use chunks.",
+      "file": "day-20.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "de698fcc9c91cf02a6beec5f5f10548aaabf3802088467bd3d914d2fccf80729"
+    },
+    {
+      "day": 21,
+      "title": "Day 21 — Week 3 Review + Test 3",
+      "goal": "🎯 Three weeks in! Consolidate Days 15–20, then take Test 3.",
+      "file": "day-21.json",
+      "sectionCount": 5,
+      "types": [
+        "lesson",
+        "quiz",
+        "speaking",
+        "homework"
+      ],
+      "sourceHash": "a11e5873b967c453103c990604ee385e8754f8085d3fc1304f8a205b06bb5092"
+    },
+    {
+      "day": 22,
+      "title": "Day 22 — Hobbies · gern · Word Order",
+      "goal": "🎯 Today you talk about what you love doing — and nail the #1 German word-order rule for good.",
+      "file": "day-22.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "812c948f7d99c7901d643c7304f78f1b42c752751899f917790416d0af0a8ba6"
+    },
+    {
+      "day": 23,
+      "title": "Day 23 — Housing · es gibt",
+      "goal": "🎯 Today you can describe a flat, understand a housing ad, and talk about renting.",
+      "file": "day-23.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "7a480e0e6250bfa6d0270d9ef28820f3d214685bf4649d39a90dd9f4fd42da5d"
+    },
+    {
+      "day": 24,
+      "title": "Day 24 — Weather & Seasons",
+      "goal": "🎯 Today you can make small talk about German's favourite topic: das Wetter.",
+      "file": "day-24.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "01bb81c82d6c2faaca5d3e386b16896013e0041b58cd25692a129990ba3821f2"
+    },
+    {
+      "day": 25,
+      "title": "Day 25 — Health, Body & Pharmacy",
+      "goal": "🎯 Today you can say what hurts, visit a doctor, and buy medicine — essential survival German.",
+      "file": "day-25.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "697a9769159c83410bb0370940968a0b501a4487ec68770a8f100d58829a0c37"
+    },
+    {
+      "day": 26,
+      "title": "Day 26 — Past Tense: war & hatte",
+      "goal": "🎯 Today you unlock the past! The simple past of sein and haben covers half of all past-tense talk.",
+      "file": "day-26.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "9ff60f73557591028a42649a2f12afade159e2bab10c0ed4e92f8c823da91652"
+    },
+    {
+      "day": 27,
+      "title": "Day 27 — Perfect Tense with haben",
+      "goal": "🎯 Today you learn how Germans actually talk about the past in conversation.",
+      "file": "day-27.json",
+      "sectionCount": 12,
+      "types": [
+        "grammar",
+        "vocab",
+        "sentences",
+        "dialogue",
+        "speaking",
+        "listening",
+        "reading",
+        "writing",
+        "quiz",
+        "flashcards",
+        "homework",
+        "revision"
+      ],
+      "sourceHash": "e628185994d53fab8718b6445949623b25589ea021d44e2c3bd9733e64baadf7"
+    },
+    {
+      "day": 28,
+      "title": "Day 28 — Perfect with sein + Week 4 Test",
+      "goal": "🎯 Complete the perfect tense, then prove yourself in Test 4 — the last one before the mock exam.",
+      "file": "day-28.json",
+      "sectionCount": 7,
+      "types": [
+        "grammar",
+        "sentences",
+        "speaking",
+        "quiz",
+        "flashcards",
+        "homework"
+      ],
+      "sourceHash": "145ef421dac735653ed3b355d26760804a2acdae331a3388a8a8a9de71158926"
+    },
+    {
+      "day": 29,
+      "title": "Day 29 — Formal German · Exam Prep",
+      "goal": "🎯 Today you handle forms, formal letters and offices — and learn exactly how the A1 exam works.",
+      "file": "day-29.json",
+      "sectionCount": 10,
+      "types": [
+        "grammar",
+        "sentences",
+        "dialogue",
+        "reading",
+        "writing",
+        "speaking",
+        "listening",
+        "quiz",
+        "flashcards",
+        "homework"
+      ],
+      "sourceHash": "e6ff47136a140a386393451d15c08b7be3c63ce08dfdddb535282aa34e08c16a"
+    },
+    {
+      "day": 30,
+      "title": "Day 30 — Final A1 Mock Exam",
+      "goal": "🎯 A full exam simulation. Take it seriously: quiet room, timer on, no dictionary. Pass mark: 60%.",
+      "file": "day-30.json",
+      "sectionCount": 7,
+      "types": [
+        "quiz",
+        "listening",
+        "reading",
+        "writing",
+        "speaking",
+        "lesson"
+      ],
+      "sourceHash": "8016a91d064407a3caa37cc76bf8dcfd53c8a1903d69bdc452285b8c34cc512c"
+    }
+  ]
+}

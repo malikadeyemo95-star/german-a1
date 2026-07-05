@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 20,
+  "title": "Day 20 — Prepositions for A1",
+  "goal": "🎯 Today you organize the little words that glue German together — as ready-to-use chunks.",
+  "sourceHash": "de698fcc9c91cf02a6beec5f5f10548aaabf3802088467bd3d914d2fccf80729",
+  "introHtml": "<h2>Day 20 · Prepositions for A1 (the practical way)</h2>\n<p class=\"goal\">🎯 Today you organize the little words that glue German together — as ready-to-use chunks.</p>",
+  "sections": [
+    {
+      "id": "d20-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Time prepositions (review + complete)</h3>\n<table>\n<tr><td class=\"de\"><b>um</b> 8 Uhr</td><td>at 8 (clock times)</td></tr>\n<tr><td class=\"de\"><b>am</b> Montag / am Abend</td><td>on Monday / in the evening</td></tr>\n<tr><td class=\"de\"><b>im</b> Mai / im Winter</td><td>in May / in winter</td></tr>\n<tr><td class=\"de\"><b>von</b> 9 <b>bis</b> 17 Uhr</td><td>from 9 to 5</td></tr>\n<tr><td class=\"de\"><b>seit</b> einem Monat</td><td>for/since a month (Ich lerne seit einem Monat Deutsch)</td></tr>\n</table>\n<h3>2. Place: where TO? (movement)</h3>\n<table>\n<tr><td class=\"de\"><b>nach</b> Berlin / nach Hause</td><td>to cities &amp; countries / home(ward)</td></tr>\n<tr><td class=\"de\"><b>zum</b> Arzt, zum Bahnhof / <b>zur</b> Schule</td><td>to places &amp; people in town (zu + dem = zum, zu + der = zur)</td></tr>\n<tr><td class=\"de\"><b>in</b> die Stadt / ins Kino</td><td>into (in + das = ins)</td></tr>\n</table>\n<h3>3. Place: WHERE? (position)</h3>\n<table>\n<tr><td class=\"de\"><b>in</b> der Küche / im Büro</td><td>in the kitchen / in the office (in + dem = im)</td></tr>\n<tr><td class=\"de\"><b>an</b> der Haltestelle / am Bahnhof</td><td>at the stop / at the station (an + dem = am)</td></tr>\n<tr><td class=\"de\"><b>auf</b> dem Tisch</td><td>on the table</td></tr>\n<tr><td class=\"de\"><b>bei</b> der Arbeit / beim Arzt / bei Anna</td><td>at work / at the doctor's / at Anna's</td></tr>\n<tr><td class=\"de\"><b>neben</b> der Bank</td><td>next to the bank</td></tr>\n</table>\n<h3>4. People &amp; things</h3>\n<table>\n<tr><td class=\"de\"><b>mit</b> dem Bus / mit Milch / mit Anna</td><td>with, by (transport)</td></tr>\n<tr><td class=\"de\"><b>ohne</b> Zucker</td><td>without (+ accusative)</td></tr>\n<tr><td class=\"de\"><b>für</b> dich / für meinen Bruder</td><td>for (+ accusative!)</td></tr>\n<tr><td class=\"de\"><b>aus</b> Nigeria / aus der Schweiz</td><td>from (origin)</td></tr>\n<tr><td class=\"de\"><b>von</b> meiner Mutter</td><td>from (a person/sender)</td></tr>\n</table>\n<div class=\"tip\">💡 A1 strategy: don't memorize case tables for prepositions — memorize the CHUNKS above exactly as written. They cover 90% of what the exam and real life need. (The pattern behind them — dative after mit/zu/bei/von, accusative after für/ohne — clicks naturally at A2.)</div>\n</details>",
+      "sourceHash": "a98706eb485e0fec386a741e45560714259a9b343db32d6542bd9809ca9f1706"
+    },
+    {
+      "id": "d20-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary — today it's the 18 chunks above, plus:",
+      "html": "<details><summary>📚 Vocabulary — today it's the 18 chunks above, plus:</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">das Kino</td><td>cinema</td></tr>\n<tr><td class=\"de\">die Kirche</td><td>church</td></tr>\n<tr><td class=\"de\">die Bank</td><td>bank</td></tr>\n<tr><td class=\"de\">die Post</td><td>post office</td></tr>\n<tr><td class=\"de\">die Schule</td><td>school</td></tr>\n<tr><td class=\"de\">die Küche</td><td>kitchen</td></tr>\n<tr><td class=\"de\">zu Hause / nach Hause</td><td>at home / (going) home ⚠️ different!</td></tr>\n<tr><td class=\"de\">das Geschenk</td><td>present, gift</td></tr>\n</table>\n</details>",
+      "sourceHash": "0fae4c35dfcab4fad2d0fc1fcabeea999966349e1f42bc0042e6be115a83d96e"
+    },
+    {
+      "id": "d20-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich fahre am Samstag nach Hamburg.</span> <span class=\"tr\">I'm going to Hamburg on Saturday.</span></li>\n<li><span class=\"de\">Um 15 Uhr muss ich zum Arzt.</span> <span class=\"tr\">At 3pm I have to go to the doctor.</span></li>\n<li><span class=\"de\">Gehen wir heute Abend ins Kino?</span> <span class=\"tr\">Shall we go to the cinema tonight?</span></li>\n<li><span class=\"de\">Das Handy liegt auf dem Tisch in der Küche.</span> <span class=\"tr\">The phone is on the table in the kitchen.</span></li>\n<li><span class=\"de\">Das Geschenk ist für meinen Bruder — von mir und meiner Schwester.</span> <span class=\"tr\">The present is for my brother — from me and my sister.</span></li>\n<li><span class=\"de\">Ich lerne seit drei Wochen Deutsch — ohne Pause!</span> <span class=\"tr\">I've been learning German for three weeks — without a break!</span></li>\n</ol>\n</details>",
+      "sourceHash": "1913931732223e4d95106c608d04e7ba912d33d0d52ed4434a0a7b9428549910"
+    },
+    {
+      "id": "d20-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Wo bist du?",
+      "html": "<details><summary>🗣 Dialogue: Wo bist du?</summary>\n<div class=\"dlg\">\n<p><b>Max (am Telefon):</b> <span class=\"de\">Hallo Lisa, wo bist du?</span> <span class=\"tr\">(Hi Lisa, where are you?)</span></p>\n<p><b>Lisa:</b> <span class=\"de\">Ich bin noch bei der Arbeit. Warum?</span> <span class=\"tr\">(I'm still at work. Why?)</span></p>\n<p><b>Max:</b> <span class=\"de\">Wir gehen ins Kino. Kommst du mit?</span> <span class=\"tr\">(We're going to the cinema. Coming along?)</span></p>\n<p><b>Lisa:</b> <span class=\"de\">Gern! Aber ich muss zuerst nach Hause.</span> <span class=\"tr\">(Sure! But I have to go home first.)</span></p>\n<p><b>Max:</b> <span class=\"de\">Okay. Wir treffen uns um acht am Kino. Es ist neben der Post.</span> <span class=\"tr\">(OK. We'll meet at eight at the cinema. It's next to the post office.)</span></p>\n<p><b>Lisa:</b> <span class=\"de\">Super, bis dann!</span> <span class=\"tr\">(Great, see you then!)</span></p>\n</div>\n</details>",
+      "sourceHash": "aacb999c9c8a34504f79e3032542b97403744e9cc3763b3e05648a8fd782286e"
+    },
+    {
+      "id": "d20-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Answer aloud: <span class=\"de\">Wo bist du jetzt? Wohin gehst du morgen? Woher kommst du?</span> (in/im — nach/zum/ins — aus!)</li>\n<li>Describe where 5 objects are: <span class=\"de\">Das Buch liegt auf dem Tisch. Die Tasche ist neben ...</span></li>\n<li>Your week with time prepositions: <span class=\"de\">Am Montag..., um..., von... bis..., im...</span></li>\n</ol>\n</details>",
+      "sourceHash": "f0a108ac5e30cb597901d69b45a67c4306e098642e8e74b81697e13a055b2afa"
+    },
+    {
+      "id": "d20-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — 2 episodes; write down every preposition chunk you hear.</li>\n<li>YouTube: <b>\"German prepositions A1\"</b> — one overview video.</li>\n<li>Re-listen to yesterday's direction dialogues — now you'll hear an/am/bei/zur everywhere.</li>\n</ul>\n</details>",
+      "sourceHash": "1c26661eb391c814de63f63d0b636cd34371147295bbb1bad05ba15732942d13"
+    },
+    {
+      "id": "d20-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Liebe Carla, ich bin jetzt in München! Ich wohne bei meiner Tante. Ihre Wohnung ist im Zentrum, neben einer Kirche. Am Morgen gehe ich zur Sprachschule — von neun bis eins. Danach esse ich mit Freunden oder gehe ins Museum. Am Samstag fahren wir nach Salzburg! Viele Grüße, Dein Pavel</p>\n<ol>\n<li>Where does Pavel live in Munich?</li>\n<li>When is his language school?</li>\n<li>What's the weekend plan?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. At his aunt's, in a flat in the centre next to a church. 2. Mornings, 9 to 1. 3. Going to Salzburg on Saturday.</p></details>\n</details>",
+      "sourceHash": "5549c361495a1586b217eedd098f116744314522e8638b4c81d198d2658a5437"
+    },
+    {
+      "id": "d20-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write a postcard like Pavel's (6–8 sentences): where you are, where you're staying (bei...), what you do daily (zur/ins/mit...), one plan (nach...). Start with <span class=\"de\">Liebe/Lieber ...</span>, end with <span class=\"de\">Viele Grüße</span>.</p>\n</details>",
+      "sourceHash": "3df0f93be8e2ae2a82b905fc89a7638ea412cb1a5021a7bee71839294d3ac26c"
+    },
+    {
+      "id": "d20-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>nach or zum: Ich fahre ___ Berlin. / Ich gehe ___ Arzt.</li>\n<li>Fill in: <span class=\"de\">Wir gehen ___ Kino. (into the)</span></li>\n<li>Fill in: <span class=\"de\">Das Geschenk ist ___ dich. (for)</span></li>\n<li>zu Hause or nach Hause: Ich bin ___ . / Ich gehe ___ .</li>\n<li>Fill in: <span class=\"de\">Ich lerne ___ einem Monat Deutsch. (for/since)</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>nach Berlin, zum Arzt</li><li>ins</li><li>für</li><li>zu Hause (position), nach Hause (movement)</li><li>seit</li></ol>\n</details>\n</details>",
+      "sourceHash": "27d708858165bc6a169cb6043f5a4a36a9bbe147e4d5b0affaf655d217d50829"
+    },
+    {
+      "id": "d20-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">to Berlin</span><span class=\"a\">nach Berlin</span></div>\n<div class=\"fc\"><span class=\"q\">to the doctor</span><span class=\"a\">zum Arzt</span></div>\n<div class=\"fc\"><span class=\"q\">to the cinema</span><span class=\"a\">ins Kino</span></div>\n<div class=\"fc\"><span class=\"q\">at home / going home</span><span class=\"a\">zu Hause / nach Hause</span></div>\n<div class=\"fc\"><span class=\"q\">at work</span><span class=\"a\">bei der Arbeit</span></div>\n<div class=\"fc\"><span class=\"q\">on the table</span><span class=\"a\">auf dem Tisch</span></div>\n<div class=\"fc\"><span class=\"q\">without sugar</span><span class=\"a\">ohne Zucker</span></div>\n<div class=\"fc\"><span class=\"q\">for you</span><span class=\"a\">für dich</span></div>\n</div>\n</details>",
+      "sourceHash": "83364694feff30cb176dbfef3892ae8cab3ebfcb91623131ad0bc29ccecf99f5"
+    },
+    {
+      "id": "d20-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write 10 chunk cards (paper or app): one preposition chunk each, from today's tables.</li>\n<li>Tomorrow is Test 3 — skim Days 15–20 grammar boxes tonight.</li>\n</ol>\n</details>",
+      "sourceHash": "1af70a5e9cad73e42babc75f8005b12b178c3531e6991f910b79069c09c5a407"
+    },
+    {
+      "id": "d20-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 15–19)",
+      "html": "<details><summary>🔄 Revision (Days 15–19)</summary>\n<ul>\n<li>One sentence each: a time (halb...), a separable verb, a modal, an imperative, a direction.</li>\n<li>Weakest topic of the week? Reopen that day and redo its quiz.</li>\n</ul>\n</details>",
+      "sourceHash": "47e0f8b336c9de7dfca33d9337502cd09504fc315e66628fc1c1b8a68819a69f"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"20\"> ✅ Mark Day 20 complete</label>"
+}

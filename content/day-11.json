@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 11,
+  "title": "Day 11 — nicht vs kein · Food & Drinks",
+  "goal": "🎯 Today you learn to say \"no/not\" correctly — plus the food vocabulary you'll use every single day in Germany.",
+  "sourceHash": "ef0f782bb297d99065a85889a5a7ea856bcd6553a450133e9db8bf46dff7ccfa",
+  "introHtml": "<h2>Day 11 · Negation: <i>nicht</i> vs <i>kein</i> — Food &amp; Drinks</h2>\n<p class=\"goal\">🎯 Today you learn to say \"no/not\" correctly — plus the food vocabulary you'll use every single day in Germany.</p>",
+  "sections": [
+    {
+      "id": "d11-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>The golden rule</h3>\n<table>\n<tr><th>Use <span class=\"de\">kein</span></th><th>Use <span class=\"de\">nicht</span></th></tr>\n<tr><td>to negate a NOUN that has <i>ein</i> or no article<br><span class=\"de\">Ich habe <b>kein</b> Auto.<br>Ich trinke <b>keinen</b> Kaffee.<br>Das ist <b>keine</b> Lampe.</span></td><td>to negate verbs, adjectives, names, and nouns with <i>der/die/das</i> or possessives<br><span class=\"de\">Ich arbeite <b>nicht</b>.<br>Das Auto ist <b>nicht</b> neu.<br>Das ist <b>nicht</b> mein Auto.<br>Ich kaufe den Tisch <b>nicht</b>.</span></td></tr>\n</table>\n<h3>Where does nicht go?</h3>\n<ul>\n<li>End of a simple sentence: <span class=\"de\">Er kommt <b>nicht</b>.</span></li>\n<li>Before an adjective: <span class=\"de\">Das ist <b>nicht</b> gut.</span></li>\n<li>Before a place/phrase it negates: <span class=\"de\">Ich wohne <b>nicht</b> in Berlin.</span></li>\n</ul>\n<div class=\"tip\">💡 Quick test: could the sentence contain \"a/an\" or no article before the noun? → kein. Otherwise → nicht.</div>\n<h3>gern = to like doing</h3>\n<p><span class=\"de\">Ich trinke <b>gern</b> Kaffee.</span> = I like drinking coffee. Negative: <span class=\"de\">Ich trinke <b>nicht gern</b> Tee.</span> (More on gern on Day 22.)</p>\n</details>",
+      "sourceHash": "874afe8f1f0f3feb03ce5d0aec575304cc4d576db8694d1123d1ddea79ba0c44"
+    },
+    {
+      "id": "d11-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (18 food items)",
+      "html": "<details><summary>📚 Vocabulary (18 food items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">das Brot / das Brötchen</td><td>bread / bread roll</td></tr>\n<tr><td class=\"de\">der Käse</td><td>cheese</td></tr>\n<tr><td class=\"de\">die Butter</td><td>butter</td></tr>\n<tr><td class=\"de\">das Ei, die Eier</td><td>egg(s)</td></tr>\n<tr><td class=\"de\">die Milch</td><td>milk</td></tr>\n<tr><td class=\"de\">das Fleisch</td><td>meat</td></tr>\n<tr><td class=\"de\">der Fisch</td><td>fish</td></tr>\n<tr><td class=\"de\">das Gemüse</td><td>vegetables</td></tr>\n<tr><td class=\"de\">das Obst</td><td>fruit</td></tr>\n<tr><td class=\"de\">die Kartoffel, -n</td><td>potato</td></tr>\n<tr><td class=\"de\">der Reis</td><td>rice</td></tr>\n<tr><td class=\"de\">die Nudeln (pl.)</td><td>pasta, noodles</td></tr>\n<tr><td class=\"de\">der Zucker / das Salz</td><td>sugar / salt</td></tr>\n<tr><td class=\"de\">der Saft</td><td>juice</td></tr>\n<tr><td class=\"de\">das Bier / der Wein</td><td>beer / wine</td></tr>\n<tr><td class=\"de\">lecker</td><td>tasty, delicious</td></tr>\n<tr><td class=\"de\">der Hunger / der Durst</td><td>hunger / thirst (review)</td></tr>\n<tr><td class=\"de\">frühstücken</td><td>to have breakfast</td></tr>\n</table>\n</details>",
+      "sourceHash": "26e8e5e9ecf35db8c64b6ceb308b7c491afa391872f077708d64e8319acc6ab0"
+    },
+    {
+      "id": "d11-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich esse gern Käse, aber ich esse kein Fleisch.</span> <span class=\"tr\">I like cheese, but I don't eat meat.</span></li>\n<li><span class=\"de\">Trinkst du Milch? — Nein, ich trinke keine Milch.</span> <span class=\"tr\">Do you drink milk? — No, I don't drink milk.</span></li>\n<li><span class=\"de\">Das Brot ist nicht frisch.</span> <span class=\"tr\">The bread is not fresh.</span></li>\n<li><span class=\"de\">Wir frühstücken heute nicht.</span> <span class=\"tr\">We're not having breakfast today.</span></li>\n<li><span class=\"de\">Der Fisch ist lecker!</span> <span class=\"tr\">The fish is delicious!</span></li>\n<li><span class=\"de\">Ich habe keinen Hunger, aber Durst.</span> <span class=\"tr\">I'm not hungry, but thirsty.</span></li>\n</ol>\n</details>",
+      "sourceHash": "62769013f9156f49f17afbed8eef5613b9ed76081b1f96017e51cd3ea0ab5007"
+    },
+    {
+      "id": "d11-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Beim Frühstück",
+      "html": "<details><summary>🗣 Dialogue: Beim Frühstück</summary>\n<div class=\"dlg\">\n<p><b>Vera:</b> <span class=\"de\">Guten Morgen! Isst du ein Brötchen?</span> <span class=\"tr\">(Good morning! Will you eat a roll?)</span></p>\n<p><b>Ali:</b> <span class=\"de\">Ja, gern. Mit Käse, bitte.</span> <span class=\"tr\">(Yes, gladly. With cheese, please.)</span></p>\n<p><b>Vera:</b> <span class=\"de\">Wir haben leider keinen Käse. Aber wir haben Butter und Eier.</span> <span class=\"tr\">(Unfortunately we have no cheese. But we have butter and eggs.)</span></p>\n<p><b>Ali:</b> <span class=\"de\">Kein Problem. Ein Ei ist super. Und einen Kaffee, bitte.</span> <span class=\"tr\">(No problem. An egg is great. And a coffee, please.)</span></p>\n<p><b>Vera:</b> <span class=\"de\">Mit Milch und Zucker?</span> <span class=\"tr\">(With milk and sugar?)</span></p>\n<p><b>Ali:</b> <span class=\"de\">Mit Milch, aber ohne Zucker. Zucker ist nicht gesund!</span> <span class=\"tr\">(With milk, but without sugar. Sugar isn't healthy!)</span></p>\n</div>\n<div class=\"tip\">💡 Real-life chunks: <span class=\"de\">mit/ohne</span> (with/without), <span class=\"de\">leider</span> (unfortunately), <span class=\"de\">Kein Problem!</span></div>\n</details>",
+      "sourceHash": "ba4d7af67ddbeaa6158a8bbda8c76f5a653d8f4adae712f8ef5f38f999511b0c"
+    },
+    {
+      "id": "d11-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Say 5 foods you like and 3 you don't: <span class=\"de\">Ich esse gern ... / Ich esse kein(en/e) ...</span></li>\n<li>Negation drill — negate aloud: <span class=\"de\">Ich habe ein Auto. / Das ist gut. / Ich wohne in Berlin. / Ich trinke Bier. / Das ist mein Buch.</span></li>\n<li>Describe your typical breakfast in 3 sentences.</li>\n</ol>\n</details>",
+      "sourceHash": "164a660ecf0916a71e34cd41bd1ece75375bd52ba773864f03beef3e992a3a4c"
+    },
+    {
+      "id": "d11-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — the food/supermarket episodes.</li>\n<li>YouTube: <b>\"Easy German what do you eat for breakfast\"</b>.</li>\n<li>🔊 today's 18 food words. Bonus: say each with \"Ich esse gern...\" or \"Ich trinke gern...\"</li>\n</ul>\n</details>",
+      "sourceHash": "46e2243ff7422cc95226ce83ba76a66a83d081bec7dcf445fbd14f5de197c840"
+    },
+    {
+      "id": "d11-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Timo isst kein Fleisch und keinen Fisch — er ist Vegetarier. Er isst viel Gemüse, Reis und Nudeln. Zum Frühstück isst er Brot mit Butter und trinkt Saft. Er trinkt keinen Kaffee und keine Milch. Aber Schokolade? Die isst er sehr gern!</p>\n<ol>\n<li>Why doesn't Timo eat meat?</li>\n<li>What does he have for breakfast?</li>\n<li>What's his weakness?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. He's a vegetarian. 2. Bread with butter and juice. 3. Chocolate — he loves eating it.</p></details>\n</details>",
+      "sourceHash": "ffae0124ae2e8172d549c16f85239bae3c70d6de85c3bc47648fe1114bbe9941"
+    },
+    {
+      "id": "d11-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 8 sentences about your eating habits: what you like, don't eat/drink (use kein AND nicht at least twice each), and what's delicious.</p>\n</details>",
+      "sourceHash": "66935b1506df6497d4020345246132710b67c630219d5e5ec88137f568f0afd4"
+    },
+    {
+      "id": "d11-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Negate: <span class=\"de\">Ich habe Zeit.</span></li>\n<li>Negate: <span class=\"de\">Das Brot ist frisch.</span></li>\n<li>Negate: <span class=\"de\">Er trinkt einen Kaffee.</span></li>\n<li>Negate: <span class=\"de\">Das ist meine Tasche.</span></li>\n<li>nicht or kein: <span class=\"de\">Ich esse ___ Fleisch.</span></li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Ich habe keine Zeit.</li><li>Das Brot ist nicht frisch.</li><li>Er trinkt keinen Kaffee.</li><li>Das ist nicht meine Tasche. (possessive → nicht)</li><li>kein (no article → kein)</li></ol>\n</details>\n</details>",
+      "sourceHash": "d14439bee0da93ad632a7af45050880925fd581c352024e687fe62358874b438"
+    },
+    {
+      "id": "d11-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">bread</span><span class=\"a\">das Brot</span></div>\n<div class=\"fc\"><span class=\"q\">cheese</span><span class=\"a\">der Käse</span></div>\n<div class=\"fc\"><span class=\"q\">vegetables</span><span class=\"a\">das Gemüse</span></div>\n<div class=\"fc\"><span class=\"q\">fruit</span><span class=\"a\">das Obst</span></div>\n<div class=\"fc\"><span class=\"q\">tasty</span><span class=\"a\">lecker</span></div>\n<div class=\"fc\"><span class=\"q\">I don't drink coffee</span><span class=\"a\">Ich trinke keinen Kaffee</span></div>\n<div class=\"fc\"><span class=\"q\">The bread isn't fresh</span><span class=\"a\">Das Brot ist nicht frisch</span></div>\n<div class=\"fc\"><span class=\"q\">with / without</span><span class=\"a\">mit / ohne</span></div>\n</div>\n</details>",
+      "sourceHash": "d21b868e75fdbd5fa8a4bc5f09408d5d1b8e02ca2057820f677c2c9015717cc3"
+    },
+    {
+      "id": "d11-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Open your fridge and name 8 things in German (article included!). Look up 2 you don't know.</li>\n<li>Write the kein-vs-nicht rule in your own words, in one sentence.</li>\n</ol>\n</details>",
+      "sourceHash": "609f45d9bffbf3bb1e97bc2db9f4103d9e943aa31d6b889a647189225affb40f"
+    },
+    {
+      "id": "d11-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 9–10)",
+      "html": "<details><summary>🔄 Revision (Days 9–10)</summary>\n<ul>\n<li>Accusative check: Ich kaufe ___ Tisch (den), ___ Lampe (die), ___ Buch (das).</li>\n<li>Plurals of: Apfel, Ei, Kartoffel. (Äpfel, Eier, Kartoffeln)</li>\n</ul>\n</details>",
+      "sourceHash": "dc7f75e9fff8f3f0be0a2dd1d5bd93bd8b6345f8f7fd6f14cae9daed1295a292"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"11\"> ✅ Mark Day 11 complete</label>"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 10,
+  "title": "Day 10 — Accusative Case · kein",
+  "goal": "🎯 Today you learn the case for direct objects — only ONE thing actually changes.",
+  "sourceHash": "03152963fa5cf4d273e8a5a216306b0fb1694eb4a1d3ab59f6f0a830189b0778",
+  "introHtml": "<h2>Day 10 · The Accusative Case &amp; <i>kein</i></h2>\n<p class=\"goal\">🎯 Today you learn the case for direct objects — only ONE thing actually changes.</p>",
+  "sections": [
+    {
+      "id": "d10-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Subject vs object</h3>\n<p>In <span class=\"de\">Der Mann kauft <b>den Tisch</b></span> (The man buys the table), \"der Mann\" does the action (subject = nominative) and \"den Tisch\" receives it (direct object = <b>accusative</b>).</p>\n<h3>2. The accusative table — only masculine changes!</h3>\n<table>\n<tr><th></th><th>Nominative</th><th>Accusative</th></tr>\n<tr><td>masculine</td><td class=\"de\">der / ein / kein</td><td class=\"de\"><b>den / einen / keinen</b></td></tr>\n<tr><td>feminine</td><td class=\"de\">die / eine / keine</td><td class=\"de\">die / eine / keine (same!)</td></tr>\n<tr><td>neuter</td><td class=\"de\">das / ein / kein</td><td class=\"de\">das / ein / kein (same!)</td></tr>\n<tr><td>plural</td><td class=\"de\">die / — / keine</td><td class=\"de\">die / — / keine (same!)</td></tr>\n</table>\n<div class=\"tip\">💡 Remember one rhyme: <b>\"der → den, ein → einen — only for masculine ones!\"</b> Everything else stays the same.</div>\n<h3>3. Verbs that always take accusative</h3>\n<p class=\"de\">haben, brauchen (need), kaufen (buy), suchen (look for), finden (find), sehen (see), essen (eat), trinken (drink), nehmen (take), möchten (would like), es gibt (there is)</p>\n<p><span class=\"de\">Ich brauche <b>einen</b> Stuhl. / Sie hat <b>einen</b> Bruder. / Er sucht <b>den</b> Schlüssel.</span></p>\n<h3>4. kein = \"not a / no\"</h3>\n<p><span class=\"de\">kein</span> negates nouns. It takes the same endings as ein — plus a plural form:</p>\n<ul>\n<li><span class=\"de\">Ich habe <b>keinen</b> Stuhl.</span> (m, acc) — I don't have a chair.</li>\n<li><span class=\"de\">Ich habe <b>keine</b> Zeit.</span> (f) — I have no time.</li>\n<li><span class=\"de\">Ich habe <b>kein</b> Auto.</span> (n) — I don't have a car.</li>\n<li><span class=\"de\">Wir haben <b>keine</b> Kinder.</span> (pl) — We have no children.</li>\n</ul>\n<p>Also: possessives take the same accusative endings: <span class=\"de\">Ich sehe mein<b>en</b> Bruder / mein<b>e</b> Schwester / mein Kind.</span></p>\n</details>",
+      "sourceHash": "de8c1da95dee16bc582727af68b233d63edaa109ac8f709ece0eb5a1fbcfd444"
+    },
+    {
+      "id": "d10-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (12 items)",
+      "html": "<details><summary>📚 Vocabulary (12 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">brauchen</td><td>to need</td></tr>\n<tr><td class=\"de\">kaufen</td><td>to buy</td></tr>\n<tr><td class=\"de\">suchen</td><td>to look for</td></tr>\n<tr><td class=\"de\">finden</td><td>to find</td></tr>\n<tr><td class=\"de\">sehen</td><td>to see (du siehst, er sieht)</td></tr>\n<tr><td class=\"de\">nehmen</td><td>to take (du nimmst, er nimmt)</td></tr>\n<tr><td class=\"de\">trinken</td><td>to drink</td></tr>\n<tr><td class=\"de\">essen</td><td>to eat (du isst, er isst)</td></tr>\n<tr><td class=\"de\">der Hund / die Katze</td><td>dog / cat</td></tr>\n<tr><td class=\"de\">der Kaffee / der Tee</td><td>coffee / tea</td></tr>\n<tr><td class=\"de\">das Wasser</td><td>water</td></tr>\n<tr><td class=\"de\">natürlich</td><td>of course</td></tr>\n</table>\n</details>",
+      "sourceHash": "991e24412cb74e2d7c6dc8c9b608d5e434a863ed48d4c06612422131edc542fb"
+    },
+    {
+      "id": "d10-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich brauche einen Kaffee!</span> <span class=\"tr\">I need a coffee!</span></li>\n<li><span class=\"de\">Er kauft den Tisch und die Lampe.</span> <span class=\"tr\">He buys the table and the lamp.</span></li>\n<li><span class=\"de\">Wir suchen den Schlüssel.</span> <span class=\"tr\">We're looking for the key.</span></li>\n<li><span class=\"de\">Siehst du das Auto? — Ja, natürlich.</span> <span class=\"tr\">Do you see the car? — Yes, of course.</span></li>\n<li><span class=\"de\">Sie hat keinen Hund, aber eine Katze.</span> <span class=\"tr\">She has no dog, but a cat.</span></li>\n<li><span class=\"de\">Ich trinke Wasser, er trinkt Tee.</span> <span class=\"tr\">I drink water, he drinks tea.</span></li>\n</ol>\n</details>",
+      "sourceHash": "8699574c683f1614e22d8064e54a787e427acef09b3c2c67b2f180fd95282d3d"
+    },
+    {
+      "id": "d10-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Was brauchst du?",
+      "html": "<details><summary>🗣 Dialogue: Was brauchst du?</summary>\n<div class=\"dlg\">\n<p><b>Paul:</b> <span class=\"de\">Ich gehe einkaufen. Was brauchst du?</span> <span class=\"tr\">(I'm going shopping. What do you need?)</span></p>\n<p><b>Emma:</b> <span class=\"de\">Ich brauche einen Apfel... nein, viele Äpfel!</span> <span class=\"tr\">(I need an apple... no, many apples!)</span></p>\n<p><b>Paul:</b> <span class=\"de\">Okay. Brauchst du auch Kaffee?</span> <span class=\"tr\">(OK. Do you need coffee too?)</span></p>\n<p><b>Emma:</b> <span class=\"de\">Nein, wir haben Kaffee. Aber wir haben keinen Tee.</span> <span class=\"tr\">(No, we have coffee. But we have no tea.)</span></p>\n<p><b>Paul:</b> <span class=\"de\">Alles klar. Einen Tee, viele Äpfel. Hast du den Schlüssel?</span> <span class=\"tr\">(Got it. One tea, many apples. Do you have the key?)</span></p>\n<p><b>Emma:</b> <span class=\"de\">Ja, hier!</span> <span class=\"tr\">(Yes, here!)</span></p>\n</div>\n</details>",
+      "sourceHash": "e5b6fdc2fa0e1f1c8a4c052c024f1053f8dc77cf499177bbe6d68f659488232c"
+    },
+    {
+      "id": "d10-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Drill masculine accusative aloud: <span class=\"de\">Ich brauche einen Tisch / einen Stuhl / einen Computer / einen Schlüssel.</span></li>\n<li>Say what you see right now: <span class=\"de\">Ich sehe einen ... / eine ... / ein ...</span> (5 objects).</li>\n<li>Negate aloud: \"Ich habe ein Auto\" → <span class=\"de\">Ich habe kein Auto.</span> Do the same for: einen Hund, eine Katze, Zeit, Kinder.</li>\n</ol>\n</details>",
+      "sourceHash": "7d31024af6905beb04965f666ae063e3af21c72b54373ac96e346ea26777dc3d"
+    },
+    {
+      "id": "d10-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — next 2 episodes; listen specifically for \"einen\".</li>\n<li>YouTube: <b>\"German accusative case explained\"</b> (pick a short one, ~10 min).</li>\n<li>🔊 Shadow today's example sentences twice each.</li>\n</ul>\n</details>",
+      "sourceHash": "9ca3417d1d6cc720310e95d5ce0bd561f805e3a80de1c336d0cf82b467bb121f"
+    },
+    {
+      "id": "d10-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Jonas braucht einen Computer. Er sucht online und findet einen Computer für 300 Euro. Aber er hat kein Geld! Sein Bruder sagt: „Kein Problem, ich kaufe den Computer. Du zahlst später.\" Jonas findet seinen Bruder super.</p>\n<ol>\n<li>What does Jonas need and what does it cost?</li>\n<li>What is Jonas's problem?</li>\n<li>Find three accusative forms in the text.</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. A computer, 300 euros. 2. He has no money (kein Geld). 3. einen Computer, den Computer, seinen Bruder (also: kein Geld).</p></details>\n</details>",
+      "sourceHash": "3adab32e5f381898cdac6887c57124dcad8dcf0a73548327feaefa78f9c8d799"
+    },
+    {
+      "id": "d10-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write a shopping list of 8 items as full sentences: <span class=\"de\">Ich brauche einen/eine/ein ...</span> Then write 3 things you DON'T have using kein.</p>\n</details>",
+      "sourceHash": "b92e8a0e777667e1de5acb55eda10ed524b652636548dc32e9df8298e132b32d"
+    },
+    {
+      "id": "d10-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">Ich kaufe ___ Tisch. (the)</span></li>\n<li>Fill in: <span class=\"de\">Sie braucht ___ Lampe. (a)</span></li>\n<li>Fill in: <span class=\"de\">Wir haben ___ Auto. (no)</span></li>\n<li>Fill in: <span class=\"de\">Er hat ___ Bruder. (a)</span></li>\n<li>Why does only Q1/Q4 change the article but not Q2?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>den</li><li>eine</li><li>kein</li><li>einen</li><li>Only masculine changes in the accusative (der→den, ein→einen); feminine and neuter stay the same.</li></ol>\n</details>\n</details>",
+      "sourceHash": "5cb4937cf183817afe24e730cc262d69104667a13d3d60421664e341dc27cb1a"
+    },
+    {
+      "id": "d10-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">to need</span><span class=\"a\">brauchen</span></div>\n<div class=\"fc\"><span class=\"q\">to buy</span><span class=\"a\">kaufen</span></div>\n<div class=\"fc\"><span class=\"q\">to look for</span><span class=\"a\">suchen</span></div>\n<div class=\"fc\"><span class=\"q\">I buy the table (m)</span><span class=\"a\">Ich kaufe <b>den</b> Tisch</span></div>\n<div class=\"fc\"><span class=\"q\">I need a coffee (m)</span><span class=\"a\">Ich brauche <b>einen</b> Kaffee</span></div>\n<div class=\"fc\"><span class=\"q\">I have no time</span><span class=\"a\">Ich habe keine Zeit</span></div>\n<div class=\"fc\"><span class=\"q\">no car</span><span class=\"a\">kein Auto</span></div>\n<div class=\"fc\"><span class=\"q\">of course</span><span class=\"a\">natürlich</span></div>\n</div>\n</details>",
+      "sourceHash": "4551a49883ed18e23ff4895cde10708fca541c2be0e5de3d20e7169aa2ba3c0e"
+    },
+    {
+      "id": "d10-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write the nominative/accusative table from memory. Check. Repeat until perfect.</li>\n<li>Make 5 sentences: subject + verb + accusative object, one per gender + one plural + one with kein.</li>\n</ol>\n</details>",
+      "sourceHash": "d85b7c06db21fba8a215448f1b15bc8545f3b3db6714de3070d1c7c096cb4fd4"
+    },
+    {
+      "id": "d10-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 8–9)",
+      "html": "<details><summary>🔄 Revision (Days 8–9)</summary>\n<ul>\n<li>Quiz yourself on 10 nouns: article + plural. E.g. Buch → das Buch, die Bücher.</li>\n<li>Check your sticky notes are still up. Read them aloud on your next walk through the house.</li>\n</ul>\n</details>",
+      "sourceHash": "12612ad23f5ee9da1a121deb1d5a727a51cc27a03963a92f9a906bcb0bbccbb8"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"10\"> ✅ Mark Day 10 complete</label>"
+}

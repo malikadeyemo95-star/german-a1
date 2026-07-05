@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 25,
+  "title": "Day 25 — Health, Body & Pharmacy",
+  "goal": "🎯 Today you can say what hurts, visit a doctor, and buy medicine — essential survival German.",
+  "sourceHash": "697a9769159c83410bb0370940968a0b501a4487ec68770a8f100d58829a0c37",
+  "introHtml": "<h2>Day 25 · Health, Body, Doctor &amp; Pharmacy</h2>\n<p class=\"goal\">🎯 Today you can say what hurts, visit a doctor, and buy medicine — essential survival German.</p>",
+  "sections": [
+    {
+      "id": "d25-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Saying what hurts — three ready-made patterns</h3>\n<ul>\n<li><span class=\"de\">Ich habe <b>Kopfschmerzen</b>.</span> — I have a headache. (Schmerzen = pains: Bauchschmerzen, Rückenschmerzen, Halsschmerzen, Zahnschmerzen)</li>\n<li><span class=\"de\"><b>Mein Kopf tut weh.</b> / Meine Beine tun weh.</span> — My head hurts / my legs hurt. (tut/tun weh)</li>\n<li><span class=\"de\"><b>Mir geht es nicht gut.</b> / Mir ist schlecht.</span> — I'm not well / I feel sick.</li>\n</ul>\n<h3>2. sollen for doctor's advice (Day 18 pays off)</h3>\n<p><span class=\"de\">Sie sollen viel Wasser trinken und im Bett bleiben.</span> — You should drink lots of water and stay in bed.</p>\n<h3>3. Doctor-visit phrases</h3>\n<ul>\n<li><span class=\"de\">Was fehlt Ihnen?</span> — What's wrong? (lit. \"what is missing to you\")</li>\n<li><span class=\"de\">Ich bin krank. / Ich habe Fieber.</span> — I'm sick / I have a fever.</li>\n<li><span class=\"de\">Ich brauche eine Krankschreibung.</span> — I need a sick note (very important for German employers!).</li>\n<li><span class=\"de\">Gute Besserung!</span> — Get well soon!</li>\n</ul>\n</details>",
+      "sourceHash": "7ccfd7f16c2acfe5c9ec42adc3f9ab8d758576b15c04027a5ef078e15e416bf8"
+    },
+    {
+      "id": "d25-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (18 items)",
+      "html": "<details><summary>📚 Vocabulary (18 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">der Kopf</td><td>head</td></tr>\n<tr><td class=\"de\">der Bauch</td><td>belly, stomach</td></tr>\n<tr><td class=\"de\">der Rücken</td><td>back</td></tr>\n<tr><td class=\"de\">der Hals</td><td>throat, neck</td></tr>\n<tr><td class=\"de\">der Arm, -e / das Bein, -e</td><td>arm(s) / leg(s)</td></tr>\n<tr><td class=\"de\">die Hand, ¨-e / der Fuß, ¨-e</td><td>hand(s) / foot (feet)</td></tr>\n<tr><td class=\"de\">das Auge, -n / das Ohr, -en</td><td>eye(s) / ear(s)</td></tr>\n<tr><td class=\"de\">der Zahn, ¨-e</td><td>tooth (teeth)</td></tr>\n<tr><td class=\"de\">krank / gesund</td><td>sick / healthy</td></tr>\n<tr><td class=\"de\">das Fieber</td><td>fever</td></tr>\n<tr><td class=\"de\">die Erkältung / der Husten / der Schnupfen</td><td>cold / cough / runny nose</td></tr>\n<tr><td class=\"de\">die Schmerzen (pl.)</td><td>pain(s)</td></tr>\n<tr><td class=\"de\">weh tun</td><td>to hurt</td></tr>\n<tr><td class=\"de\">die Apotheke</td><td>pharmacy</td></tr>\n<tr><td class=\"de\">das Medikament, -e / die Tablette, -n</td><td>medicine / tablet</td></tr>\n<tr><td class=\"de\">das Rezept</td><td>prescription (also: recipe!)</td></tr>\n<tr><td class=\"de\">der Termin beim Arzt</td><td>doctor's appointment</td></tr>\n<tr><td class=\"de\">Gute Besserung!</td><td>Get well soon!</td></tr>\n</table>\n</details>",
+      "sourceHash": "efe4f7e7fdfa4d3bfc58fa746e08d28ee77e2ce7167586c07ad7a4059e31fca1"
+    },
+    {
+      "id": "d25-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Mir geht es nicht gut. Ich habe Kopfschmerzen und Fieber.</span> <span class=\"tr\">I'm not well. I have a headache and fever.</span></li>\n<li><span class=\"de\">Mein Hals tut weh.</span> <span class=\"tr\">My throat hurts.</span></li>\n<li><span class=\"de\">Ich habe eine Erkältung — Husten und Schnupfen.</span> <span class=\"tr\">I have a cold — cough and runny nose.</span></li>\n<li><span class=\"de\">Sie sollen drei Tage im Bett bleiben.</span> <span class=\"tr\">You should stay in bed for three days.</span></li>\n<li><span class=\"de\">Gibt es hier eine Apotheke? Ich brauche Tabletten.</span> <span class=\"tr\">Is there a pharmacy here? I need tablets.</span></li>\n<li><span class=\"de\">Nehmen Sie das Medikament zweimal am Tag.</span> <span class=\"tr\">Take the medicine twice a day.</span></li>\n</ol>\n</details>",
+      "sourceHash": "ed4e5c2b91ac78c143f3ba915ad2a64ed7a6f462cf002140811a5f67b306687d"
+    },
+    {
+      "id": "d25-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Beim Arzt",
+      "html": "<details><summary>🗣 Dialogue: Beim Arzt</summary>\n<div class=\"dlg\">\n<p><b>Ärztin:</b> <span class=\"de\">Guten Tag, Herr Bello. Was fehlt Ihnen?</span> <span class=\"tr\">(Hello, Mr Bello. What's wrong?)</span></p>\n<p><b>Herr Bello:</b> <span class=\"de\">Mir geht es nicht gut. Ich habe Halsschmerzen und Husten.</span> <span class=\"tr\">(I'm not well. Sore throat and a cough.)</span></p>\n<p><b>Ärztin:</b> <span class=\"de\">Haben Sie auch Fieber?</span> <span class=\"tr\">(Do you have a fever too?)</span></p>\n<p><b>Herr Bello:</b> <span class=\"de\">Ja, 38,5.</span> <span class=\"tr\">(Yes, 38.5.)</span></p>\n<p><b>Ärztin:</b> <span class=\"de\">Sie haben eine Erkältung. Sie sollen viel trinken und zu Hause bleiben. Hier ist ein Rezept.</span> <span class=\"tr\">(You have a cold. Drink a lot and stay home. Here's a prescription.)</span></p>\n<p><b>Herr Bello:</b> <span class=\"de\">Kann ich eine Krankschreibung bekommen?</span> <span class=\"tr\">(Can I get a sick note?)</span></p>\n<p><b>Ärztin:</b> <span class=\"de\">Natürlich — für drei Tage. Gute Besserung!</span> <span class=\"tr\">(Of course — for three days. Get well soon!)</span></p>\n</div>\n</details>",
+      "sourceHash": "dd3e471bdef03936a03a4c2ad70797e38a410c510448f48204aa43aa6f083b31"
+    },
+    {
+      "id": "d25-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Point at 8 body parts and name them with articles.</li>\n<li>Imaginary symptoms, three patterns each: <span class=\"de\">Ich habe ...schmerzen / Mein ... tut weh / Mir ist schlecht.</span></li>\n<li>Role-play the doctor dialogue, both roles. Swap the symptoms (Bauchschmerzen, Zahnschmerzen...).</li>\n</ol>\n</details>",
+      "sourceHash": "8e7f4164ffec11b6ea82c849b3a690ef7966a6099f0f56243ac6863cbc1ef86d"
+    },
+    {
+      "id": "d25-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — the doctor/health episodes.</li>\n<li>YouTube: <b>\"beim Arzt Dialog A1\"</b> — listen to 2 versions; note the symptoms you hear.</li>\n<li>Song trick: search \"Kopf Schulter Knie und Fuß\" (German \"Head, Shoulders, Knees and Toes\") — silly but effective body-part drilling.</li>\n</ul>\n</details>",
+      "sourceHash": "bc78b44201ced877c6225963cff6da189c101925cdf858a3d75feb06bebdd595"
+    },
+    {
+      "id": "d25-s7",
+      "type": "reading",
+      "title": "📰 Reading practice — der Beipackzettel (medicine label)",
+      "html": "<details><summary>📰 Reading practice — der Beipackzettel (medicine label)</summary>\n<p class=\"de\">Hustensaft „HustenStopp\": Erwachsene nehmen dreimal täglich einen Löffel. Kinder unter 12 Jahren: nur einmal täglich. Nehmen Sie das Medikament nach dem Essen. Nicht mit Alkohol trinken! Bei Fieber über 39 Grad: Gehen Sie zum Arzt.</p>\n<ol>\n<li>How often do adults take it?</li>\n<li>When should you take it — before or after eating?</li>\n<li>When must you see a doctor?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. Three times daily, one spoonful. 2. After eating (nach dem Essen). 3. With a fever over 39°.</p></details>\n</details>",
+      "sourceHash": "d6d0e7eb95d303f07bdeb7c5c7064ecefd75d9ccd88190fe2d35cf0a7cb49143"
+    },
+    {
+      "id": "d25-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write a message to your boss (4–5 sentences): you're sick, what symptoms, you're staying home, you have a doctor's appointment, sick note follows. Formal tone (Sie)! Start: <span class=\"de\">Sehr geehrte Frau .../Sehr geehrter Herr ...,</span> end: <span class=\"de\">Mit freundlichen Grüßen</span>.</p>\n</details>",
+      "sourceHash": "c7611aea5df787475bd4e11d5617a124b1ef4e0a0f4323c9fe32561d6443129a"
+    },
+    {
+      "id": "d25-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>\"My back hurts\" = ? (two ways)</li>\n<li>\"Get well soon!\" = ?</li>\n<li>What is a Krankschreibung?</li>\n<li>Doctor's advice with sollen: \"You should drink a lot of tea.\"</li>\n<li>Rezept has two meanings — which?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>Mein Rücken tut weh. / Ich habe Rückenschmerzen.</li><li>Gute Besserung!</li><li>A sick note from the doctor for your employer.</li><li>Sie sollen viel Tee trinken.</li><li>Prescription AND recipe.</li></ol>\n</details>\n</details>",
+      "sourceHash": "096a3708b5525d57507ae04d1ec7b390d3a22e3f5d96bd7c2d3d21e27d73dc5d"
+    },
+    {
+      "id": "d25-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">head / belly</span><span class=\"a\">der Kopf / der Bauch</span></div>\n<div class=\"fc\"><span class=\"q\">I have a headache</span><span class=\"a\">Ich habe Kopfschmerzen</span></div>\n<div class=\"fc\"><span class=\"q\">it hurts</span><span class=\"a\">es tut weh</span></div>\n<div class=\"fc\"><span class=\"q\">sick / healthy</span><span class=\"a\">krank / gesund</span></div>\n<div class=\"fc\"><span class=\"q\">fever</span><span class=\"a\">das Fieber</span></div>\n<div class=\"fc\"><span class=\"q\">pharmacy</span><span class=\"a\">die Apotheke</span></div>\n<div class=\"fc\"><span class=\"q\">tablet</span><span class=\"a\">die Tablette</span></div>\n<div class=\"fc\"><span class=\"q\">Get well soon!</span><span class=\"a\">Gute Besserung!</span></div>\n</div>\n</details>",
+      "sourceHash": "b847a19202aed4bf0ab2f4a27c8b9481223c4825361297bb2a6fe937bbc1d9f7"
+    },
+    {
+      "id": "d25-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Learn 4 more body parts of your choice (dictionary) with articles.</li>\n<li>Say the doctor dialogue from memory — patient side only is fine.</li>\n</ol>\n</details>",
+      "sourceHash": "5ec90dafc64a95e6b9d87f72ab41aeeac45c5bbf3b7797df7ad56e585d6b3a61"
+    },
+    {
+      "id": "d25-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Days 23–24)",
+      "html": "<details><summary>🔄 Revision (Days 23–24)</summary>\n<ul>\n<li>Weather + health combo: <span class=\"de\">Es ist kalt und ich habe eine Erkältung.</span> Make 2 of your own.</li>\n<li>es gibt: 3 sentences about your neighbourhood.</li>\n</ul>\n</details>",
+      "sourceHash": "158e1e89fffbde69b4cd2bfc69a6a93a4846aaa53ddfd809633a087bb900e2c9"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"25\"> ✅ Mark Day 25 complete</label>"
+}

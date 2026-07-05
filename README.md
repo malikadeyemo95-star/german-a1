@@ -69,14 +69,52 @@ This is no longer just a textbook — it's an interactive A1 trainer:
 
 ## Tech
 
-Vanilla HTML/CSS/JS in a single `index.html` (~5k lines). The only companions are
-`sw.js` (offline cache), `manifest.json` and two generated PNG icons. Progress
-lives in `localStorage` (`ga1done`, `ga1last`, `ga1srs`, `ga1quiz`, `ga1streak`).
+The new app shell is dependency-free vanilla HTML/CSS/JS. The exact original
+course is preserved in `course-source.html`; `scripts/build-content.mjs` extracts
+all 30 days into typed, hash-verified files under `content/`. The browser loads
+only the active day and preloads the next day during idle time.
+
+Progress now lives under the versioned `ga1:v2` localStorage key. On first load,
+the app migrates completed days and preferences from the original `ga1done` and
+`ga1x` keys without deleting the legacy data.
+
+Architecture:
+
+- `index.html` — lightweight static app shell.
+- `assets/app.js` — routing, lazy lesson loading and client interactions.
+- `assets/state.js` — versioned state and legacy migration.
+- `assets/app.css` — mobile-first design system.
+- `content/day-01.json` … `day-30.json` — typed lesson payloads.
+- `course-source.html` — canonical preserved course source.
+- `scripts/build-content.mjs` — repeatable content extraction.
+- `scripts/verify-content.mjs` — content hash/integrity verification.
 
 Deploying an update? Bump the `CACHE` version string in `sw.js` so installed
 users receive the new version.
 
 ## Run locally
 
-Open `index.html` in any browser — that's it. (For the offline/PWA features you
-need any static server, e.g. `python3 -m http.server`.)
+Run a static server from the repository root:
+
+```sh
+python3 -m http.server 8765
+```
+
+Then open `http://localhost:8765/`.
+
+Rebuild and verify lesson data after editing `course-source.html`:
+
+```sh
+node scripts/build-content.mjs
+node scripts/verify-content.mjs
+node scripts/test-state.mjs
+```
+
+### Performance baseline
+
+Mobile Lighthouse (2026-07-05):
+
+| Version | Performance | Accessibility | Best Practices | SEO | Transfer |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Deployed monolith | 99 | 100 | 100 | 90 | 131 KiB |
+| Lazy-loading shell | 100 | 100 | 100 | 100 | 39 KiB |

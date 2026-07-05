@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "day": 17,
+  "title": "Day 17 — Modal Verbs: können, müssen, wollen",
+  "goal": "🎯 Today you can say what you CAN, MUST and WANT to do — with the famous German \"verb bracket\".",
+  "sourceHash": "5fd1df6ede08f9423ab063895d6bb7976bb24c7125c56992b655cce3f5522fb4",
+  "introHtml": "<h2>Day 17 · Modal Verbs I: <i>können, müssen, wollen</i></h2>\n<p class=\"goal\">🎯 Today you can say what you CAN, MUST and WANT to do — with the famous German \"verb bracket\".</p>",
+  "sections": [
+    {
+      "id": "d17-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The three modals</h3>\n<table>\n<tr><th></th><th class=\"de\">können (can)</th><th class=\"de\">müssen (must)</th><th class=\"de\">wollen (want)</th></tr>\n<tr><td>ich</td><td class=\"de\">kann</td><td class=\"de\">muss</td><td class=\"de\">will</td></tr>\n<tr><td>du</td><td class=\"de\">kannst</td><td class=\"de\">musst</td><td class=\"de\">willst</td></tr>\n<tr><td>er/sie/es</td><td class=\"de\">kann</td><td class=\"de\">muss</td><td class=\"de\">will</td></tr>\n<tr><td>wir</td><td class=\"de\">können</td><td class=\"de\">müssen</td><td class=\"de\">wollen</td></tr>\n<tr><td>ihr</td><td class=\"de\">könnt</td><td class=\"de\">müsst</td><td class=\"de\">wollt</td></tr>\n<tr><td>sie/Sie</td><td class=\"de\">können</td><td class=\"de\">müssen</td><td class=\"de\">wollen</td></tr>\n</table>\n<p>Notice: ich and er/sie/es are IDENTICAL, and there's no -t on er/sie/es. That's the modal signature.</p>\n<div class=\"warn\">⚠️ <span class=\"de\">ich will</span> = I WANT — it does NOT mean \"I will\"! (Future \"will\" is expressed with the present tense or werden.)</div>\n<h3>2. The verb bracket (Satzklammer)</h3>\n<p>Modal in position 2 + infinitive at the very END. Everything else sits in between:</p>\n<ul>\n<li><span class=\"de\">Ich <b>kann</b> gut <u>kochen</u>.</span> — I can cook well.</li>\n<li><span class=\"de\">Er <b>muss</b> heute lange <u>arbeiten</u>.</span> — He has to work late today.</li>\n<li><span class=\"de\">Wir <b>wollen</b> am Sommer nach Deutschland <u>fahren</u>.</span> — We want to go to Germany in summer.</li>\n<li>Question: <span class=\"de\"><b>Kannst</b> du mir <u>helfen</u>?</span> — Can you help me?</li>\n</ul>\n<div class=\"tip\">💡 Separable verbs stay glued together at the end: <span class=\"de\">Ich muss früh <u>aufstehen</u>.</span></div>\n<h3>3. können for ability AND polite requests</h3>\n<p><span class=\"de\">Ich kann schwimmen.</span> (ability) · <span class=\"de\">Können Sie das bitte wiederholen?</span> (Could you repeat that, please? — essential classroom phrase!)</p>\n</details>",
+      "sourceHash": "f9aab870692d607b3e4d7f02a10c7ee720b2f36b3dfb43c50d44bf345767c63b"
+    },
+    {
+      "id": "d17-s2",
+      "type": "vocab",
+      "title": "📚 Vocabulary (12 items)",
+      "html": "<details><summary>📚 Vocabulary (12 items)</summary>\n<table>\n<tr><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">helfen</td><td>to help (du hilfst, er hilft)</td></tr>\n<tr><td class=\"de\">schwimmen</td><td>to swim</td></tr>\n<tr><td class=\"de\">tanzen</td><td>to dance</td></tr>\n<tr><td class=\"de\">singen</td><td>to sing</td></tr>\n<tr><td class=\"de\">Auto fahren</td><td>to drive a car</td></tr>\n<tr><td class=\"de\">warten</td><td>to wait</td></tr>\n<tr><td class=\"de\">wiederholen</td><td>to repeat</td></tr>\n<tr><td class=\"de\">verstehen</td><td>to understand</td></tr>\n<tr><td class=\"de\">langsam / schnell</td><td>slow(ly) / fast</td></tr>\n<tr><td class=\"de\">leider</td><td>unfortunately</td></tr>\n<tr><td class=\"de\">unbedingt</td><td>absolutely, really (want)</td></tr>\n<tr><td class=\"de\">Kein Problem!</td><td>No problem!</td></tr>\n</table>\n</details>",
+      "sourceHash": "cf29f0f64f7afdfdd31c5431d9236242a1e7f8c1ca254fff5936a851dd9e4d6e"
+    },
+    {
+      "id": "d17-s3",
+      "type": "sentences",
+      "title": "💬 Example sentences",
+      "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich kann ein bisschen Deutsch sprechen.</span> <span class=\"tr\">I can speak a little German.</span></li>\n<li><span class=\"de\">Kannst du langsam sprechen, bitte?</span> <span class=\"tr\">Can you speak slowly, please?</span></li>\n<li><span class=\"de\">Ich verstehe das nicht. Können Sie das wiederholen?</span> <span class=\"tr\">I don't understand. Could you repeat that?</span></li>\n<li><span class=\"de\">Ich muss morgen früh aufstehen.</span> <span class=\"tr\">I have to get up early tomorrow.</span></li>\n<li><span class=\"de\">Wir wollen unbedingt nach Berlin fahren.</span> <span class=\"tr\">We really want to go to Berlin.</span></li>\n<li><span class=\"de\">Er kann leider nicht kommen — er muss arbeiten.</span> <span class=\"tr\">Unfortunately he can't come — he has to work.</span></li>\n</ol>\n</details>",
+      "sourceHash": "93d8c34203c3f51c3390f6076095d12f6e6bd811900a6b3afc78e3fbddc94213"
+    },
+    {
+      "id": "d17-s4",
+      "type": "dialogue",
+      "title": "🗣 Dialogue: Kannst du mir helfen?",
+      "html": "<details><summary>🗣 Dialogue: Kannst du mir helfen?</summary>\n<div class=\"dlg\">\n<p><b>Selin:</b> <span class=\"de\">David, kannst du mir helfen? Ich muss den Tisch tragen.</span> <span class=\"tr\">(David, can you help me? I have to carry the table.)</span></p>\n<p><b>David:</b> <span class=\"de\">Klar, kein Problem! ... Puh, der ist schwer!</span> <span class=\"tr\">(Sure, no problem! ... Phew, it's heavy!)</span></p>\n<p><b>Selin:</b> <span class=\"de\">Danke! Willst du einen Kaffee trinken?</span> <span class=\"tr\">(Thanks! Do you want to drink a coffee?)</span></p>\n<p><b>David:</b> <span class=\"de\">Ich will schon, aber ich kann nicht. Ich muss zur Arbeit.</span> <span class=\"tr\">(I want to, but I can't. I have to go to work.)</span></p>\n<p><b>Selin:</b> <span class=\"de\">Schade! Dann morgen?</span> <span class=\"tr\">(Pity! Tomorrow then?)</span></p>\n<p><b>David:</b> <span class=\"de\">Morgen kann ich. Bis dann!</span> <span class=\"tr\">(Tomorrow I can. See you then!)</span></p>\n</div>\n</details>",
+      "sourceHash": "b0838d73d5b0dc615db57278dd3ca45a8d676cd702b4cc2c7fe2a969d4afde18"
+    },
+    {
+      "id": "d17-s5",
+      "type": "speaking",
+      "title": "🎤 Speaking practice",
+      "html": "<details><summary>🎤 Speaking practice</summary>\n<ol>\n<li>Say 3 things you CAN do, 3 you MUST do this week, 3 you WANT to do: <span class=\"de\">Ich kann ... / Ich muss ... / Ich will ...</span> — infinitive at the end!</li>\n<li>Chant all three conjugations aloud twice.</li>\n<li>Learn by heart (your classroom lifesavers): <span class=\"de\">Können Sie das wiederholen? Können Sie langsam sprechen? Ich verstehe das nicht.</span></li>\n</ol>\n</details>",
+      "sourceHash": "08d471d7c355c78da549b7673b49d97a081eaab04847dd83948257bdb7e68738"
+    },
+    {
+      "id": "d17-s6",
+      "type": "listening",
+      "title": "🎧 Listening practice",
+      "html": "<details><summary>🎧 Listening practice</summary>\n<ul>\n<li><b>Nicos Weg A1</b> — modal verb episodes (\"Was kannst du?\").</li>\n<li>YouTube: <b>\"German modal verbs A1\"</b> — one short grammar video.</li>\n<li>Easy German street videos: count how often you hear kann/muss/will in 5 minutes.</li>\n</ul>\n</details>",
+      "sourceHash": "4d991eff24a62379d18d43baab0b04fd57dbc3c61efe5ae95d174dfb5d1c4605"
+    },
+    {
+      "id": "d17-s7",
+      "type": "reading",
+      "title": "📰 Reading practice",
+      "html": "<details><summary>📰 Reading practice</summary>\n<p class=\"de\">Nina will Ärztin werden. Sie muss viel lernen — sechs Jahre! Sie kann jetzt schon gut Biologie und Chemie. Am Wochenende will sie nicht lernen, sie will tanzen gehen. Aber sie kann nicht: Am Montag ist eine Prüfung, also muss sie zu Hause bleiben.</p>\n<ol>\n<li>What does Nina want to become, and what must she do for it?</li>\n<li>What does she want to do this weekend — and why can't she?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary><p>1. A doctor; she must study a lot (six years). 2. Go dancing; she can't because there's an exam on Monday, so she has to stay home.</p></details>\n</details>",
+      "sourceHash": "be84ede29ab0578edbf822f9e25b5605abd24be8b2c3c656433686134781e560"
+    },
+    {
+      "id": "d17-s8",
+      "type": "writing",
+      "title": "✍️ Writing task",
+      "html": "<details><summary>✍️ Writing task</summary>\n<p>Write 9 sentences: 3 with kann, 3 with muss, 3 with will — about your real life. Underline the infinitive at the end of each; if it's not at the end, fix it.</p>\n</details>",
+      "sourceHash": "ab7b3e024366b183beb040fad74ebcce8dafe9ad6e966c8b9e108c1fddcd6cb3"
+    },
+    {
+      "id": "d17-s9",
+      "type": "quiz",
+      "title": "❓ Mini quiz",
+      "html": "<details><summary>❓ Mini quiz</summary>\n<ol>\n<li>Fill in: <span class=\"de\">er ___ (können) gut singen.</span></li>\n<li>Fill in: <span class=\"de\">ich ___ (müssen) einkaufen.</span></li>\n<li>Fill in: <span class=\"de\">ihr ___ (wollen) fernsehen.</span></li>\n<li>Rearrange: kann / heute / nicht / kommen / sie.</li>\n<li>What does <span class=\"de\">Ich will</span> NOT mean?</li>\n</ol>\n<details class=\"key\"><summary>Answer key</summary>\n<ol><li>kann</li><li>muss</li><li>wollt</li><li>Sie kann heute nicht kommen.</li><li>It does NOT mean \"I will (future)\" — it means \"I want\".</li></ol>\n</details>\n</details>",
+      "sourceHash": "e84929d1f18cd88723366c970b8fc317bdb67ca552f37b668dcbc7309e853e40"
+    },
+    {
+      "id": "d17-s10",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I can</span><span class=\"a\">ich kann</span></div>\n<div class=\"fc\"><span class=\"q\">you must</span><span class=\"a\">du musst</span></div>\n<div class=\"fc\"><span class=\"q\">he wants</span><span class=\"a\">er will</span></div>\n<div class=\"fc\"><span class=\"q\">we can</span><span class=\"a\">wir können</span></div>\n<div class=\"fc\"><span class=\"q\">Can you repeat that?</span><span class=\"a\">Können Sie das wiederholen?</span></div>\n<div class=\"fc\"><span class=\"q\">I don't understand</span><span class=\"a\">Ich verstehe das nicht</span></div>\n<div class=\"fc\"><span class=\"q\">to help</span><span class=\"a\">helfen (er hilft)</span></div>\n<div class=\"fc\"><span class=\"q\">unfortunately</span><span class=\"a\">leider</span></div>\n</div>\n</details>",
+      "sourceHash": "0ae27b923b8e2a75c5c7ebae701fae72b52b81780b3e5f70cd8b458f1a7680ba"
+    },
+    {
+      "id": "d17-s11",
+      "type": "homework",
+      "title": "📌 Homework",
+      "html": "<details><summary>📌 Homework</summary>\n<ol>\n<li>Write the 3 modal tables from memory. Check, correct, repeat.</li>\n<li>Translate mentally through your to-do list: everything becomes \"Ich muss ...\"</li>\n</ol>\n</details>",
+      "sourceHash": "c7c1e1e318ace2c5d3fd79fb4242bb2411b024ccacf3c8ab02311b35ebc025be"
+    },
+    {
+      "id": "d17-s12",
+      "type": "revision",
+      "title": "🔄 Revision (Day 16)",
+      "html": "<details><summary>🔄 Revision (Day 16)</summary>\n<ul>\n<li>Separable check: aufstehen and anrufen in full sentences.</li>\n<li>Now combine both lessons: <span class=\"de\">Ich muss um 6 Uhr aufstehen.</span> Make 2 more like it.</li>\n</ul>\n</details>",
+      "sourceHash": "6e78c9ca2f31755fc82e612feb84dce747c5c77c12eba02b18bc8f5873c7bf28"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"17\"> ✅ Mark Day 17 complete</label>"
+}

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "day": 28,
+  "title": "Day 28 — Perfect with sein + Week 4 Test",
+  "goal": "🎯 Complete the perfect tense, then prove yourself in Test 4 — the last one before the mock exam.",
+  "sourceHash": "145ef421dac735653ed3b355d26760804a2acdae331a3388a8a8a9de71158926",
+  "introHtml": "<h2>Day 28 · Perfect Tense II: <i>sein</i>-Verbs + Week 4 Test 🏁</h2>\n<p class=\"goal\">🎯 Complete the perfect tense, then prove yourself in Test 4 — the last one before the mock exam.</p>",
+  "sections": [
+    {
+      "id": "d28-s1",
+      "type": "grammar",
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Movement &amp; change verbs use sein, not haben</h3>\n<p>If the verb means going from A to B (or a change of state), the helper is <b>sein</b>:</p>\n<table>\n<tr><th>Infinitive</th><th>Perfect</th><th>English</th></tr>\n<tr><td class=\"de\">gehen</td><td class=\"de\">ich <b>bin</b> gegangen</td><td>went</td></tr>\n<tr><td class=\"de\">fahren</td><td class=\"de\">ich <b>bin</b> gefahren</td><td>drove/went</td></tr>\n<tr><td class=\"de\">kommen</td><td class=\"de\">ich <b>bin</b> gekommen</td><td>came</td></tr>\n<tr><td class=\"de\">fliegen</td><td class=\"de\">ich <b>bin</b> geflogen</td><td>flew</td></tr>\n<tr><td class=\"de\">aufstehen</td><td class=\"de\">ich <b>bin</b> aufgestanden</td><td>got up</td></tr>\n<tr><td class=\"de\">bleiben ⚠️</td><td class=\"de\">ich <b>bin</b> geblieben</td><td>stayed (no movement, but still sein!)</td></tr>\n</table>\n<p><span class=\"de\">Ich <b>bin</b> gestern nach Berlin <b>gefahren</b>. Er <b>ist</b> um sechs <b>aufgestanden</b>. Wir <b>sind</b> zu Hause <b>geblieben</b>.</span></p>\n<div class=\"tip\">💡 Quick check: can you ask \"wohin?\" (where to?) about the verb? Then it's probably sein. Exceptions to memorize: bleiben and passieren (to happen) also take sein.</div>\n<h3>2. Your complete past-tense toolkit</h3>\n<ul>\n<li>sein → <span class=\"de\">war</span> · haben → <span class=\"de\">hatte</span> (simple past, Day 26)</li>\n<li>Movement/change verbs → <span class=\"de\">sein + Partizip</span></li>\n<li>Everything else → <span class=\"de\">haben + Partizip</span></li>\n</ul>\n<p>That's ALL the past tense A1 requires. 🎉</p>\n</details>",
+      "sourceHash": "d40d65ba86d16a3768786ac02bfe319ac3aa5f93f07152438fa537a181cce3a2"
+    },
+    {
+      "id": "d28-s2",
+      "type": "sentences",
+      "title": "💬 Example sentences & mini-dialogue",
+      "html": "<details><summary>💬 Example sentences &amp; mini-dialogue</summary>\n<ol>\n<li><span class=\"de\">Wann bist du gekommen? — Ich bin um acht gekommen.</span> <span class=\"tr\">When did you come? — At eight.</span></li>\n<li><span class=\"de\">Wir sind ans Meer gefahren.</span> <span class=\"tr\">We drove to the sea.</span></li>\n<li><span class=\"de\">Sie ist nach New York geflogen.</span> <span class=\"tr\">She flew to New York.</span></li>\n<li><span class=\"de\">Ich bin heute früh aufgestanden und habe Sport gemacht.</span> <span class=\"tr\">I got up early and did sport. (sein + haben mixed!)</span></li>\n<li><span class=\"de\">Warum bist du zu Hause geblieben? — Ich war krank.</span> <span class=\"tr\">Why did you stay home? — I was sick.</span></li>\n</ol>\n<div class=\"dlg\">\n<p><b>Ben:</b> <span class=\"de\">Du warst nicht auf der Party! Wo bist du gewesen?</span> <span class=\"tr\">(You weren't at the party! Where were you?)</span></p>\n<p><b>Ada:</b> <span class=\"de\">Ich bin nach Köln gefahren. Meine Oma hatte Geburtstag.</span> <span class=\"tr\">(I went to Cologne. It was my grandma's birthday.)</span></p>\n<p><b>Ben:</b> <span class=\"de\">Ah, schön! Wie bist du gefahren — mit dem Zug?</span> <span class=\"tr\">(Ah, nice! How did you travel — by train?)</span></p>\n<p><b>Ada:</b> <span class=\"de\">Ja, und ich bin erst um Mitternacht nach Hause gekommen!</span> <span class=\"tr\">(Yes, and I only got home at midnight!)</span></p>\n</div>\n</details>",
+      "sourceHash": "4e6e44d266d2016354e6586bedc1135d3101578f9128237a1614896a9ac65217"
+    },
+    {
+      "id": "d28-s3",
+      "type": "speaking",
+      "title": "🎤 Speaking + 🎧 Listening",
+      "html": "<details><summary>🎤 Speaking + 🎧 Listening</summary>\n<ol>\n<li>Tell your morning so far in the perfect: aufgestanden (sein!), geduscht, gefrühstückt, gefahren/gegangen...</li>\n<li>haben-or-sein drill, answer instantly: gegessen? (haben) gefahren? (sein) gekauft? (haben) geblieben? (sein) gelernt? (haben) geflogen? (sein).</li>\n<li><b>Listening:</b> Nicos Weg A1 final episodes; Easy German \"What did you do on the weekend?\" — now you understand the sein-verbs too!</li>\n</ol>\n</details>",
+      "sourceHash": "9d3cae6216c873777793df7fe9a2ff16ea47de2beb676227e2422c8038dcad06"
+    },
+    {
+      "id": "d28-s4",
+      "type": "quiz",
+      "title": "📝 TEST 4 (40 points)",
+      "html": "<details><summary>📝 TEST 4 (40 points)</summary>\n<h3>Part A: war/hatte (8 pts)</h3>\n<ol>\n<li>Gestern ___ ich krank. (sein)</li>\n<li>Wir ___ keine Zeit. (haben)</li>\n<li>___ du auf der Party? (sein)</li>\n<li>Das Essen ___ lecker. (sein)</li>\n<li>Ihr ___ viel Spaß. (haben)</li>\n<li>Sie (they) ___ im Urlaub. (sein)</li>\n<li>Er ___ Fieber. (haben)</li>\n<li>Ich ___ müde. (sein)</li>\n</ol>\n<h3>Part B: Participles (8 pts)</h3>\n<p>machen · essen · lesen · arbeiten · einkaufen · bestellen · sprechen · studieren</p>\n<h3>Part C: haben or sein? Complete (8 pts)</h3>\n<ol>\n<li>Ich ___ nach Rom geflogen.</li>\n<li>Er ___ eine Pizza gegessen.</li>\n<li>Wir ___ ins Kino gegangen.</li>\n<li>Sie ___ ein Buch gelesen.</li>\n<li>Du ___ zu Hause geblieben.</li>\n<li>Ihr ___ Deutsch gelernt.</li>\n<li>Ich ___ um sieben aufgestanden.</li>\n<li>Sie (pl.) ___ Freunde getroffen.</li>\n</ol>\n<h3>Part D: Build perfect sentences (6 pts)</h3>\n<ol>\n<li>ich / gestern / einen Film / sehen</li>\n<li>wir / am Samstag / nach Hamburg / fahren</li>\n<li>du / schon / die Hausaufgaben / machen / ?</li>\n</ol>\n<h3>Part E: Reading (5 pts)</h3>\n<p class=\"de\">Hallo Leon, ich bin am Freitag nach Wien geflogen! Am Samstag habe ich die Stadt gesehen — ich bin sechs Stunden zu Fuß gegangen! Ich habe auch eine Sachertorte gegessen, sie war fantastisch. Am Abend habe ich Freunde getroffen und wir haben viel gesprochen. Am Sonntag hat es geregnet, deshalb bin ich im Hotel geblieben und habe gelesen. Bis bald, Marta</p>\n<ol>\n<li>How did Marta get to Vienna, and when?</li>\n<li>What did she eat and how was it?</li>\n<li>Why did she stay in the hotel on Sunday?</li>\n</ol>\n<h3>Part F: Writing (5 pts)</h3>\n<p>Write \"Mein letztes Wochenende\" — 7+ sentences mixing war/hatte, haben-perfect and at least two sein-perfect verbs.</p>\n</details>",
+      "sourceHash": "0a8b7ea9a1d06547b5a467407b955b7dfc8d1ba6e62c12d4efbbed93f86bc39a"
+    },
+    {
+      "id": "d28-s5",
+      "type": "quiz",
+      "title": "🔑 TEST 4 — Answer key",
+      "html": "<details class=\"key\"><summary>🔑 TEST 4 — Answer key</summary>\n<h3>Part A</h3><p class=\"de\">1. war · 2. hatten · 3. Warst · 4. war · 5. hattet · 6. waren · 7. hatte · 8. war</p>\n<h3>Part B</h3><p class=\"de\">gemacht · gegessen · gelesen · gearbeitet · eingekauft · bestellt · gesprochen · studiert</p>\n<h3>Part C</h3><p class=\"de\">1. bin · 2. hat · 3. sind · 4. hat · 5. bist · 6. habt · 7. bin · 8. haben</p>\n<h3>Part D</h3><p class=\"de\">1. Ich habe gestern einen Film gesehen. · 2. Wir sind am Samstag nach Hamburg gefahren. · 3. Hast du schon die Hausaufgaben gemacht?</p>\n<h3>Part E</h3><p>1. She flew, on Friday. 2. A Sachertorte (chocolate cake) — fantastic. 3. It rained, so she stayed in and read.</p>\n<h3>Part F</h3><p>Check: helper verb in position 2, participle at the end, sein with movement/bleiben. 36–40 = exam-ready; below 30 → redo Days 26–28 grammar before Day 30.</p>\n</details>",
+      "sourceHash": "793f85de32650564b05eece95d7d45b534482ffa59ff2aee482a2d7482d7f636"
+    },
+    {
+      "id": "d28-s6",
+      "type": "flashcards",
+      "title": "🃏 Flashcards",
+      "html": "<details><summary>🃏 Flashcards</summary>\n<div class=\"fcgrid\">\n<div class=\"fc\"><span class=\"q\">I went (on foot)</span><span class=\"a\">ich bin gegangen</span></div>\n<div class=\"fc\"><span class=\"q\">I drove/travelled</span><span class=\"a\">ich bin gefahren</span></div>\n<div class=\"fc\"><span class=\"q\">she came</span><span class=\"a\">sie ist gekommen</span></div>\n<div class=\"fc\"><span class=\"q\">we flew</span><span class=\"a\">wir sind geflogen</span></div>\n<div class=\"fc\"><span class=\"q\">I got up</span><span class=\"a\">ich bin aufgestanden</span></div>\n<div class=\"fc\"><span class=\"q\">he stayed</span><span class=\"a\">er ist geblieben</span></div>\n<div class=\"fc\"><span class=\"q\">I ate (helper?)</span><span class=\"a\">ich habe gegessen</span></div>\n<div class=\"fc\"><span class=\"q\">it happened</span><span class=\"a\">es ist passiert</span></div>\n</div>\n</details>",
+      "sourceHash": "0aa658bc5be0e9e1a46f4f58d452e5c8da7cb07dd9b6d23e2a1c50c2b5e5c842"
+    },
+    {
+      "id": "d28-s7",
+      "type": "homework",
+      "title": "📌 Homework + 🔄 Revision",
+      "html": "<details><summary>📌 Homework + 🔄 Revision</summary>\n<ol>\n<li>Problem list final update — everything left on it gets drilled tomorrow.</li>\n<li>Read the Day 29 exam-format section tonight so you know what's coming.</li>\n<li>Revision: tell the story of your whole German month so far — in the past tense, aloud. You can do this now. That's remarkable.</li>\n</ol>\n</details>",
+      "sourceHash": "e3255e5184baaeda0e2d5bed9fd246794a8bf7b1da6098d753a9a14236052b87"
+    }
+  ],
+  "footerHtml": "<label class=\"done\"><input type=\"checkbox\" data-day=\"28\"> ✅ Mark Day 28 complete</label>"
+}
