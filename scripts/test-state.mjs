@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { STATE_KEY, calculateStreak, migrateLegacyState, shiftedDateKey, validateImportedState } from '../assets/state.js';
+import { STATE_KEY, calculateStreak, migrateLegacyState, normalizeImportedState, shiftedDateKey, validateImportedState } from '../assets/state.js';
 
 class MemoryStorage {
   #values = new Map();
@@ -24,5 +24,15 @@ assert.equal(shiftedDateKey(new Date('2026-07-05T02:00:00+02:00')), '2026-07-04'
 assert.equal(calculateStreak(['2026-07-02','2026-07-03','2026-07-04'], new Date('2026-07-05T02:00:00+02:00')), 3);
 assert.equal(validateImportedState(migrated), true);
 assert.equal(validateImportedState({ schemaVersion:2,completedDays:[99],activityDays:[],sectionProgress:{} }), false);
+assert.equal(validateImportedState({ schemaVersion:2,completedDays:[],activityDays:[42],sectionProgress:{} }), false);
+assert.equal(validateImportedState({ schemaVersion:2,completedDays:[],activityDays:[],sectionProgress:{ 99:{ x:true } } }), false);
+assert.equal(validateImportedState({ schemaVersion:2,completedDays:[],activityDays:[],sectionProgress:{},quizResults:[{day:1,score:6,total:5,percent:120}] }), false);
+assert.equal(validateImportedState(JSON.parse('{"schemaVersion":2,"completedDays":[],"activityDays":[],"sectionProgress":{},"__proto__":{"polluted":true}}')), false);
+const normalized = normalizeImportedState({ schemaVersion:2,completedDays:[2,1,2],activityDays:['2026-07-02','2026-07-02'],activityLog:['2026-07-02T12:00:00.000Z'],sectionProgress:{ 1:{ 'd1-s1':true } },speakingLessons:{ 1:{ complete:true,tasks:{} } },theme:'light',unknown:'discard me' });
+assert.deepEqual(normalized.completedDays,[1,2]);
+assert.deepEqual(normalized.activityDays,['2026-07-02']);
+assert.equal(normalized.theme,'light');
+assert.deepEqual(normalized.activityLog,['2026-07-02T12:00:00.000Z']);
+assert.equal('unknown' in normalized,false);
 
-console.log('Legacy migration, shift-day streaks and import validation verified.');
+console.log('Legacy migration, shift-day streaks, strict import validation and normalization verified.');

@@ -56,6 +56,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - Day and section completion, cards reviewed, scores over time, weak topics, and total study days.
 - Shift-friendly study-day calculation uses a 4 a.m. rollover.
 - Validated JSON export/import covers the complete local state.
+- Backup imports are size-limited, recursively checked, normalized to known state fields, previewed before confirmation, and reversible through an automatically swapped recovery point.
 
 ## Workstream 7 — PWA and offline
 

@@ -28,6 +28,7 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - Every lesson surfaces its exact quiz or test inside the daily journey; passing updates the lesson checklist and offers a one-tap return to that day.
 - Stats for streaks, section and day completion, cards reviewed, scores, study days, and weak topics.
 - JSON progress export/import and automatic migration from the original `ga1done` and `ga1x` localStorage keys.
+- Imported backups receive strict schema and size validation plus a human-readable preview; the app saves a reversible pre-import recovery point before replacing anything.
 - Global course search, a 345-entry glossary, and a 26-section grammar reference.
 - Dark and light themes, keyboard support, reduced-motion support, responsive tables, swipe lesson navigation, and no horizontal page overflow.
 - Installable PWA with all 30 lessons cached for offline study.

@@ -1,4 +1,4 @@
-import { STATE_KEY, calculateStreak, migrateLegacyState, shiftedDateKey, validateImportedState } from './state.js';
+import { RECOVERY_KEY, STATE_KEY, calculateStreak, migrateLegacyState, normalizeImportedState, shiftedDateKey, validateImportedState } from './state.js';
 
 const CONTENT_ROOT = './content/';
 const TEST_DAYS = new Set([7, 14, 21, 28, 30]);
@@ -36,6 +36,7 @@ let audioApi;
 let srsApi;
 let speakingApi;
 let refreshingForUpdate = false;
+let pendingImportState;
 
 async function loadAudioApi() {
   audioApi ||= await import('./audio.js');
@@ -650,6 +651,7 @@ async function renderStats() {
     ? weak.map(([topic,count]) => `<div class="weak-row"><strong>${escapeHtml(topic)}</strong><span>${count} misses</span></div>`).join('')
     : '<p class="lede">No weak topics recorded yet.</p>';
   renderSpeakingMistakes();
+  renderRecoveryOption();
   elements.title.textContent = 'Stats';
   elements.eyebrow.textContent = `${calculateStreak(state.activityDays)} day streak`;
   setView('stats');
@@ -714,7 +716,7 @@ function runGlobalSearch(value) {
 }
 
 function exportProgress() {
-  const payload = { app:'Deutschweg A1',exportedAt:new Date().toISOString(),state };
+  const payload = { app:'Deutschweg A1',schemaVersion:2,exportedAt:new Date().toISOString(),state };
   const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
@@ -723,20 +725,83 @@ function exportProgress() {
   setTimeout(() => URL.revokeObjectURL(url),1000);
 }
 
+function progressSummary(value) {
+  const sections = Object.values(value.sectionProgress || {}).reduce((sum, items) => sum + Object.keys(items || {}).length, 0);
+  const attempts = (value.quizResults || []).length + (value.testResults || []).length;
+  return `${value.completedDays.length} days · ${sections} sections · ${attempts} assessment attempts`;
+}
+
+function readRecovery() {
+  try {
+    const payload = JSON.parse(localStorage.getItem(RECOVERY_KEY) || 'null');
+    return payload?.state && validateImportedState(payload.state) ? payload : null;
+  } catch {
+    return null;
+  }
+}
+
+function renderRecoveryOption() {
+  const payload = readRecovery();
+  const button = document.querySelector('#recoverImport');
+  const info = document.querySelector('#recoveryInfo');
+  button.hidden = !payload;
+  info.textContent = payload ? `Recovery point: ${progressSummary(payload.state)}` : '';
+}
+
 async function importProgress(file) {
   const feedback = document.querySelector('#importFeedback');
+  const preview = document.querySelector('#importPreview');
   try {
+    if (file.size > 5_000_000) throw new Error('This backup is too large to be a Deutschweg progress file.');
     const payload = JSON.parse(await file.text());
     const imported = payload.state || payload;
     if (!validateImportedState(imported)) throw new Error('This is not a valid Deutschweg progress file.');
-    state = imported;
-    saveState();
-    feedback.className = 'quiz-feedback good';
-    feedback.textContent = 'Progress restored. Reloading…';
-    setTimeout(() => location.reload(),500);
+    pendingImportState = normalizeImportedState(imported);
+    document.querySelector('#importSummary').textContent = `${file.name} · ${progressSummary(pendingImportState)}`;
+    preview.hidden = false;
+    feedback.className = 'quiz-feedback';
+    feedback.textContent = 'Nothing has changed yet. Check the summary, then confirm the restore.';
   } catch (error) {
+    pendingImportState = undefined;
+    preview.hidden = true;
     feedback.className = 'quiz-feedback bad';
     feedback.textContent = error.message;
+  }
+}
+
+function confirmImport() {
+  if (!pendingImportState) return;
+  const feedback = document.querySelector('#importFeedback');
+  try {
+    localStorage.setItem(RECOVERY_KEY, JSON.stringify({ savedAt:new Date().toISOString(),state }));
+    localStorage.setItem(STATE_KEY, JSON.stringify(pendingImportState));
+    state = pendingImportState;
+    pendingImportState = undefined;
+    feedback.className = 'quiz-feedback good';
+    feedback.textContent = 'Progress restored. A recovery copy of your previous progress was saved.';
+    setTimeout(() => location.reload(),500);
+  } catch {
+    feedback.className = 'quiz-feedback bad';
+    feedback.textContent = 'The browser could not save this restore. Your current progress was not changed.';
+  }
+}
+
+function recoverPreviousProgress() {
+  const payload = readRecovery();
+  if (!payload) return;
+  const feedback = document.querySelector('#importFeedback');
+  try {
+    const current = state;
+    const recovered = normalizeImportedState(payload.state);
+    localStorage.setItem(RECOVERY_KEY, JSON.stringify({ savedAt:new Date().toISOString(),state:current }));
+    localStorage.setItem(STATE_KEY, JSON.stringify(recovered));
+    state = recovered;
+    feedback.className = 'quiz-feedback good';
+    feedback.textContent = 'Previous progress recovered. Reloading…';
+    setTimeout(() => location.reload(),500);
+  } catch {
+    feedback.className = 'quiz-feedback bad';
+    feedback.textContent = 'The recovery copy could not be restored. Your current progress is unchanged.';
   }
 }
 
@@ -1094,6 +1159,15 @@ document.querySelector('#checkTypedAnswer').addEventListener('click', () => {
 document.querySelectorAll('#gradeButtons [data-grade]').forEach((button) => button.addEventListener('click', () => gradeCurrent(button.dataset.grade)));
 document.querySelector('#exportProgress').addEventListener('click', exportProgress);
 document.querySelector('#importProgress').addEventListener('change', (event) => { const [file] = event.target.files;if (file) importProgress(file); });
+document.querySelector('#confirmImport').addEventListener('click', confirmImport);
+document.querySelector('#cancelImport').addEventListener('click', () => {
+  pendingImportState = undefined;
+  document.querySelector('#importPreview').hidden = true;
+  document.querySelector('#importProgress').value = '';
+  document.querySelector('#importFeedback').className = 'quiz-feedback';
+  document.querySelector('#importFeedback').textContent = 'Import cancelled. Your progress was not changed.';
+});
+document.querySelector('#recoverImport').addEventListener('click', recoverPreviousProgress);
 document.querySelector('#searchButton').addEventListener('click', openGlobalSearch);
 document.querySelector('#closeSearch').addEventListener('click', () => { document.querySelector('#searchOverlay').hidden = true; });
 document.querySelector('#searchOverlay').addEventListener('click', (event) => { if (event.target.id === 'searchOverlay') event.currentTarget.hidden = true; });
