@@ -14,6 +14,7 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - Typed, collapsible lesson sections with independent completion tracking.
 - Lesson-integrated speaking coaches for all 30 days. Each coach offers Repeat, Answer, Build, and Roleplay tasks using only that lesson or earlier material.
 - Microphone transcription where the browser supports German speech recognition, plus lesson-aware corrections, grammar and clarity scores, content checklists, saved best attempts, and Weak List cards.
+- The microphone control has a clear listening state and a Stop-and-check action; an in-card privacy note explains when transcripts are stored.
 - Speaking and the day’s assessment are real completion gates: the app guides the learner to whichever step is still missing instead of silently marking a skipped lesson complete.
 - An actionable Speaking Mistakes review in Stats lets learners reveal and hear corrections, reopen the source lesson, and archive resolved mistakes.
 - A typed fallback for browsers without speech recognition; model-answer audio remains available through German text-to-speech.

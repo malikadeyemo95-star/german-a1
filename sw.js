@@ -1,4 +1,4 @@
-const CACHE = 'deutschweg-v16';
+const CACHE = 'deutschweg-v17';
 const DAY_FILES = Array.from({ length: 30 }, (_, index) => `./content/day-${String(index + 1).padStart(2, '0')}.json`);
 const APP_FILES = [
   './','./index.html','./manifest.json','./icon.png','./icon512.png',

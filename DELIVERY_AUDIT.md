@@ -81,6 +81,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 
 - Every day has a lesson-scoped coach with Repeat, Answer, Build, and Roleplay.
 - Each coach includes a goal, model, microphone action, live transcript, correction, grammar and clarity feedback, checklist, retry, best-attempt save, and Weak List action.
+- The microphone visibly enters a listening state, can be stopped for immediate checking, and explains that only explicitly saved transcripts are kept locally.
 - Saving an attempt marks the lesson’s speaking section complete.
 - A day cannot be finished until its speaking attempt is saved and its quiz or test is passed; the completion control opens and focuses the next missing requirement.
 - Day 3 explicitly catches “Ich bin Hunger” and corrects it to “Ich habe Hunger.”

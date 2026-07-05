@@ -170,8 +170,11 @@ function startRecognition(card, context) {
   recognition.maxAlternatives = 3;
   let finalText = '';
   let confidence = 0;
-  start.disabled = true;
-  start.textContent = 'Listening…';
+  card._recognition = recognition;
+  start.disabled = false;
+  start.classList.add('listening');
+  start.setAttribute('aria-pressed','true');
+  start.textContent = 'Stop and check';
   live.textContent = 'Speak now…';
   recognition.onresult = (event) => {
     let interim = '';
@@ -190,11 +193,20 @@ function startRecognition(card, context) {
       : `Speech recognition error: ${event.error}.`;
   };
   recognition.onend = () => {
+    card._recognition = null;
     start.disabled = false;
+    start.classList.remove('listening');
+    start.setAttribute('aria-pressed','false');
     start.textContent = 'Start speaking';
     if (finalText) renderResult(card, finalText, confidence, context);
   };
-  try { recognition.start(); } catch { live.textContent = 'The microphone is already listening.'; }
+  try { recognition.start(); } catch {
+    card._recognition = null;
+    start.classList.remove('listening');
+    start.setAttribute('aria-pressed','false');
+    start.textContent = 'Start speaking';
+    live.textContent = 'The microphone is already listening.';
+  }
 }
 
 function createSpeakingSection(root, day) {
@@ -228,8 +240,9 @@ export function mountSpeakingCoach(context) {
     </div>
     <div class="speaking-prompt"></div>
     <div class="speaking-model"><strong>Model:</strong> <span lang="de"></span><button type="button" class="speak-button" data-model aria-label="Hear model answer">▶</button></div>
-    <button type="button" class="primary-button microphone-button" data-start>Start speaking</button>
+    <button type="button" class="primary-button microphone-button" data-start aria-pressed="false">Start speaking</button>
     <div class="speaking-live" aria-live="polite">Your live transcript will appear here.</div>
+    <p class="speaking-privacy">Your audio is handled by your browser’s speech service. Deutschweg stores only a transcript you explicitly save.</p>
     <div class="speaking-manual" hidden><label>What you said<textarea lang="de" rows="3"></textarea></label><button type="button" class="secondary-button" data-manual-check>Check transcript</button></div>
     <div class="speaking-results" aria-live="polite"></div>
     <p class="speaking-status">${complete ? 'Speaking practice completed ✓' : 'Speaking practice not completed yet.'}</p>`;
@@ -250,7 +263,10 @@ export function mountSpeakingCoach(context) {
   };
   card.querySelectorAll('[data-task]').forEach((button) => button.addEventListener('click', () => selectTask(Number(button.dataset.task))));
   card.querySelector('[data-model]').addEventListener('click', () => context.speakGerman(taskFor(lesson, Number(card.dataset.task)).model, .85));
-  card.querySelector('[data-start]').addEventListener('click', () => startRecognition(card, { ...context, lesson }));
+  card.querySelector('[data-start]').addEventListener('click', () => {
+    if (card._recognition) card._recognition.stop();
+    else startRecognition(card, { ...context, lesson });
+  });
   card.querySelector('[data-manual-check]').addEventListener('click', () => {
     const value = card.querySelector('textarea').value.trim();
     if (value) renderResult(card, value, 0, { ...context, lesson });

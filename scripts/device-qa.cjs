@@ -36,10 +36,14 @@ const { chromium, devices, webkit } = require('playwright');
     sections:document.querySelectorAll('.section-card').length,
     speakingCoaches:document.querySelectorAll('.speaking-coach').length,
     manualFallbackVisible:!document.querySelector('.speaking-manual').hidden,
+    privacyNote:document.querySelector('.speaking-privacy')?.textContent.includes('stores only a transcript'),
+    microphoneState:document.querySelector('.microphone-button')?.getAttribute('aria-pressed'),
   }));
   assert.equal(webkitResult.overflow,false);
   assert.equal(webkitResult.sections,12);
   assert.equal(webkitResult.speakingCoaches,1);
+  assert.equal(webkitResult.privacyNote,true);
+  assert.ok(['true','false'].includes(webkitResult.microphoneState));
   assert.ok(webkitResult.recognitionApi || webkitResult.manualFallbackVisible);
   assert.ok(webkitResult.speechApi ? webkitResult.visibleSpeakers > 0 : webkitResult.visibleSpeakers === 0);
   assert.deepEqual(errors,[]);
