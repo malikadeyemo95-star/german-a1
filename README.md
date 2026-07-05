@@ -113,6 +113,7 @@ node scripts/verify-content.mjs
 node scripts/test-state.mjs
 node scripts/test-srs.mjs
 node scripts/test-quizzes.mjs
+node scripts/test-pwa.mjs
 ```
 
 ### Performance baseline

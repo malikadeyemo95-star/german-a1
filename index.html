@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0b1020">
   <meta name="description" content="A guided, interactive 30-day German A1 course that works offline.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Deutschweg">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./icon.png" type="image/png">
   <link rel="apple-touch-icon" href="./icon.png">
@@ -20,6 +23,7 @@
       <strong id="topbarTitle">Your 30-day journey</strong>
     </div>
     <button class="icon-button" id="themeButton" type="button" aria-label="Switch to light mode">☼</button>
+    <span class="connection-status" id="connectionStatus" role="status" hidden>Offline</span>
     <div class="topbar-progress" aria-hidden="true"><i id="topbarProgress"></i></div>
   </header>
 
@@ -42,6 +46,7 @@
         <div><strong id="studyDays">0</strong><span>study days</span></div>
         <div><strong id="dueToday">0</strong><span>cards due</span></div>
       </div>
+      <button class="secondary-button install-button" id="installButton" type="button" hidden>Install Deutschweg</button>
     </section>
 
     <section id="daysView" class="view" hidden aria-labelledby="daysTitle">

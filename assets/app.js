@@ -29,6 +29,7 @@ let allQuizzes;
 let allTests;
 let reviewQueue = [];
 let reviewIndex = 0;
+let installPrompt;
 
 function saveState(activity = false) {
   if (activity) {
@@ -633,6 +634,25 @@ document.querySelector('#checkTypedAnswer').addEventListener('click', () => {
 document.querySelectorAll('#gradeButtons [data-grade]').forEach((button) => button.addEventListener('click', () => gradeCurrent(button.dataset.grade)));
 document.querySelector('#exportProgress').addEventListener('click', exportProgress);
 document.querySelector('#importProgress').addEventListener('change', (event) => { const [file] = event.target.files;if (file) importProgress(file); });
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  document.querySelector('#installButton').hidden = false;
+});
+document.querySelector('#installButton').addEventListener('click', async () => {
+  if (!installPrompt) return;
+  await installPrompt.prompt();
+  await installPrompt.userChoice;
+  installPrompt = null;
+  document.querySelector('#installButton').hidden = true;
+});
+function updateConnection() {
+  document.querySelector('#connectionStatus').hidden = navigator.onLine;
+}
+window.addEventListener('online', updateConnection);
+window.addEventListener('offline', updateConnection);
+updateConnection();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
 document.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive:true });
 document.addEventListener('touchend', (event) => {
   if (elements.day.hidden) return;

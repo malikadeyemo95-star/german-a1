@@ -1,35 +1,45 @@
-// German A1 in 30 Days — offline service worker.
-// Bump CACHE version whenever index.html changes to push updates to installed users.
-const CACHE = 'ga1-v11';
-const ASSETS = ['./', './index.html', './manifest.json', './icon.png', './icon512.png'];
+const CACHE = 'deutschweg-v12';
+const DAY_FILES = Array.from({ length: 30 }, (_, index) => `./content/day-${String(index + 1).padStart(2, '0')}.json`);
+const APP_FILES = [
+  './','./index.html','./manifest.json','./icon.png','./icon512.png',
+  './assets/app.css','./assets/app.js','./assets/state.js','./assets/audio.js','./assets/srs.js',
+  './content/manifest.json','./content/cards.json','./content/quizzes.json','./content/tests.json',
+  ...DAY_FILES,
+];
 
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())
-  );
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(APP_FILES)).then(() => self.skipWaiting()));
 });
 
-self.addEventListener('activate', e => {
-  e.waitUntil(
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
+      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
+      .then(() => self.clients.claim()),
   );
 });
 
-// Stale-while-revalidate: serve from cache instantly, refresh the cache in the
-// background so the next visit gets updates — and everything works fully offline.
-self.addEventListener('fetch', e => {
-  // dev: never serve from cache on localhost
-  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
-  if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
-  e.respondWith(
-    caches.open(CACHE).then(async cache => {
-      const hit = await cache.match(e.request, { ignoreSearch: true });
-      const net = fetch(e.request)
-        .then(res => { if (res && res.ok) cache.put(e.request, res.clone()); return res; })
-        .catch(() => null);
-      return hit || net.then(r => r || new Response('Offline', { status: 503 }));
-    })
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET' || new URL(event.request.url).origin !== location.origin) return;
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE).then((cache) => cache.put('./index.html', copy));
+          return response;
+        })
+        .catch(() => caches.match('./index.html')),
+    );
+    return;
+  }
+  event.respondWith(
+    caches.match(event.request, { ignoreSearch: true }).then((cached) => {
+      if (cached) return cached;
+      return fetch(event.request).then((response) => {
+        if (response.ok) caches.open(CACHE).then((cache) => cache.put(event.request, response.clone()));
+        return response;
+      });
+    }),
   );
 });
