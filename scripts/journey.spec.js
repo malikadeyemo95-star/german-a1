@@ -224,3 +224,24 @@ test('search modal traps focus, closes with Escape, and returns focus to its tri
   await expect(page.locator('#searchOverlay')).toBeHidden();
   await expect(page.locator('#searchButton')).toBeFocused();
 });
+
+test('a revealed flashcard automatically advances after its reading window', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('ga1:v2', JSON.stringify({
+      schemaVersion:2,
+      completedDays:[],
+      sectionProgress:{},
+      lastDay:1,
+      theme:'dark',
+      activityDays:[],
+    }));
+  });
+  await page.goto('http://127.0.0.1:8765/?flashcard-auto-test=1#flashcards');
+  await expect(page.locator('#reviewPrompt')).not.toHaveText('');
+  const firstPrompt = await page.locator('#reviewPrompt').textContent();
+  await page.locator('#reviewCard').click();
+  await expect(page.locator('#reviewAnswer')).toBeVisible();
+  await expect(page.locator('#autoAdvanceStatus')).toContainText('Next card in 5s (Good)');
+  await expect.poll(() => page.locator('#reviewPrompt').textContent(), { timeout:7000 }).not.toBe(firstPrompt);
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('ga1:v2')).cardsReviewed)).toBe(1);
+});
