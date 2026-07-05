@@ -109,11 +109,13 @@ node scripts/build-content.mjs
 node scripts/build-cards.mjs
 node scripts/build-quizzes.mjs
 node scripts/build-tests.mjs
+node scripts/build-reference.mjs
 node scripts/verify-content.mjs
 node scripts/test-state.mjs
 node scripts/test-srs.mjs
 node scripts/test-quizzes.mjs
 node scripts/test-pwa.mjs
+node scripts/test-reference.mjs
 ```
 
 ### Performance baseline

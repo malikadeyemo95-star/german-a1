@@ -11,7 +11,7 @@ const SECTION_ICONS = {
 
 const elements = {
   home:document.querySelector('#homeView'),days:document.querySelector('#daysView'),
-  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),quiz:document.querySelector('#quizView'),stats:document.querySelector('#statsView'),placeholder:document.querySelector('#placeholderView'),
+  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),quiz:document.querySelector('#quizView'),stats:document.querySelector('#statsView'),reference:document.querySelector('#referenceView'),placeholder:document.querySelector('#placeholderView'),
   content:document.querySelector('#dayContent'),loading:document.querySelector('#dayLoading'),
   title:document.querySelector('#topbarTitle'),eyebrow:document.querySelector('#topbarEyebrow'),
   progress:document.querySelector('#topbarProgress'),back:document.querySelector('#backButton'),
@@ -27,6 +27,9 @@ let touchStartX = 0;
 let allCards;
 let allQuizzes;
 let allTests;
+let referenceData;
+let referenceTab = 'glossary';
+let pendingSectionId;
 let reviewQueue = [];
 let reviewIndex = 0;
 let installPrompt;
@@ -78,7 +81,7 @@ function setTheme(theme) {
 }
 
 function setView(name) {
-  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,stats:elements.stats,placeholder:elements.placeholder})
+  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,stats:elements.stats,reference:elements.reference,placeholder:elements.placeholder})
     .forEach((view) => { view.hidden = true; });
   elements[name].hidden = false;
   elements.back.hidden = name === 'home';
@@ -111,6 +114,14 @@ async function loadTests() {
   if (!response.ok) throw new Error('Test data unavailable');
   allTests = (await response.json()).tests;
   return allTests;
+}
+
+async function loadReference() {
+  if (referenceData) return referenceData;
+  const response = await fetch(`${CONTENT_ROOT}reference.json`);
+  if (!response.ok) throw new Error('Reference data unavailable');
+  referenceData = await response.json();
+  return referenceData;
 }
 
 function normalizeAnswer(value) {
@@ -353,6 +364,64 @@ async function renderStats() {
   setView('stats');
 }
 
+function paintGlossary() {
+  const query = normalizeAnswer(document.querySelector('#glossaryQuery').value);
+  const article = document.querySelector('#articleFilter').value;
+  const day = Number(document.querySelector('#dayFilter').value) || 0;
+  const sort = document.querySelector('#glossarySort').value;
+  let rows = referenceData.glossary.filter((entry) =>
+    (!query || normalizeAnswer(`${entry.german} ${entry.english}`).includes(query)) &&
+    (!article || entry.article === article) && (!day || entry.day === day));
+  rows = rows.sort((a,b) => sort === 'german' ? a.german.localeCompare(b.german,'de') : sort === 'english' ? a.english.localeCompare(b.english) : a.day - b.day);
+  document.querySelector('#referenceBody').innerHTML = rows.map((entry) => `<div class="glossary-row" data-article="${entry.article}"><strong lang="de">${escapeHtml(entry.german)}</strong><span>${escapeHtml(entry.english)}</span><small>Day ${entry.day} <button type="button" class="speak-button" data-say="${escapeHtml(entry.german)}" aria-label="Hear ${escapeHtml(entry.german)}">▶</button></small></div>`).join('') || '<p class="lede">No matching words.</p>';
+  document.querySelectorAll('#referenceBody [data-say]').forEach((button) => button.addEventListener('click', () => speakGerman(button.dataset.say,1)));
+}
+
+function paintGrammarReference() {
+  document.querySelector('#referenceBody').innerHTML = referenceData.grammar.map((entry) => `<details class="grammar-ref"><summary>Day ${entry.day} · ${escapeHtml(entry.title.replace(/^[^A-Za-zÄÖÜ]+/,''))}</summary><div class="grammar-ref-body">${cleanSectionHtml(entry.html)}</div></details>`).join('');
+}
+
+function setReferenceTab(tab) {
+  referenceTab = tab;
+  document.querySelector('#referenceTitle').textContent = tab === 'glossary' ? 'Glossary' : 'Grammar';
+  document.querySelector('#glossaryControls').hidden = tab !== 'glossary';
+  document.querySelectorAll('[data-reference-tab]').forEach((button) => button.classList.toggle('active',button.dataset.referenceTab===tab));
+  if (tab === 'glossary') paintGlossary(); else paintGrammarReference();
+}
+
+async function renderReference(tab = 'glossary') {
+  await loadReference();
+  const dayFilter = document.querySelector('#dayFilter');
+  if (dayFilter.options.length === 1) dayFilter.innerHTML += Array.from({length:30},(_,index)=>`<option value="${index+1}">Day ${index+1}</option>`).join('');
+  elements.title.textContent = tab === 'grammar' ? 'Grammar reference' : 'Glossary';
+  elements.eyebrow.textContent = `${referenceData.glossary.length} words`;
+  setView('reference');
+  setReferenceTab(tab);
+}
+
+async function openGlobalSearch() {
+  await loadReference();
+  const overlay = document.querySelector('#searchOverlay');
+  overlay.hidden = false;
+  const input = document.querySelector('#globalSearch');
+  input.value = '';
+  document.querySelector('#searchResults').innerHTML = '<p class="lede">Search vocabulary and grammar from all 30 days.</p>';
+  input.focus();
+}
+
+function runGlobalSearch(value) {
+  const query = normalizeAnswer(value);
+  const results = query.length < 2 ? [] : referenceData.search.filter((entry) => normalizeAnswer(`${entry.title} ${entry.text}`).includes(query)).slice(0,30);
+  document.querySelector('#searchResults').innerHTML = results.length
+    ? results.map((entry) => `<button type="button" class="search-result" data-day="${entry.day}" data-section="${entry.sectionId}"><span>${escapeHtml(entry.title)}</span><small>${entry.kind} · Day ${entry.day} · ${escapeHtml(entry.text.slice(0,100))}</small></button>`).join('')
+    : '<p class="lede">No matches yet.</p>';
+  document.querySelectorAll('.search-result').forEach((button) => button.addEventListener('click', () => {
+    pendingSectionId = button.dataset.section;
+    document.querySelector('#searchOverlay').hidden = true;
+    navigate(`day/${button.dataset.day}`);
+  }));
+}
+
 function exportProgress() {
   const payload = { app:'Deutschweg A1',exportedAt:new Date().toISOString(),state };
   const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
@@ -404,6 +473,7 @@ function renderSection(section, day, open = false) {
   const done = Boolean(state.sectionProgress[day]?.[section.id]);
   const wrapper = document.createElement('details');
   wrapper.className = 'section-card';
+  wrapper.id = section.id;
   wrapper.dataset.type = section.type;
   wrapper.open = open;
   wrapper.innerHTML = `<summary><span class="section-icon" aria-hidden="true">${SECTION_ICONS[section.type] || '·'}</span><span class="section-title">${escapeHtml(section.title)}</span><span class="section-status">${done ? '✓' : ''}</span></summary><div class="section-body">${cleanSectionHtml(section.html)}<button type="button" class="section-complete ${done ? 'done' : ''}">${done ? 'Completed ✓' : 'Mark section complete'}</button></div>`;
@@ -565,6 +635,11 @@ async function renderDay(day) {
     article.appendChild(dayNav);
     elements.content.appendChild(article);
     enhanceAudio(elements.content, activeDay);
+    if (pendingSectionId) {
+      const target = document.getElementById(pendingSectionId);
+      if (target) { target.open = true;target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      pendingSectionId = null;
+    }
     elements.loading.hidden = true;
     state.lastDay = activeDay;
     saveState();
@@ -606,6 +681,7 @@ function routeFromHash() {
   else if (route === 'flashcards') renderFlashcards();
   else if (route === 'quiz') renderQuizHub();
   else if (route === 'stats') renderStats();
+  else if (/^reference\/(glossary|grammar)$/.test(route)) renderReference(route.split('/')[1]);
   else renderHome();
 }
 
@@ -634,6 +710,13 @@ document.querySelector('#checkTypedAnswer').addEventListener('click', () => {
 document.querySelectorAll('#gradeButtons [data-grade]').forEach((button) => button.addEventListener('click', () => gradeCurrent(button.dataset.grade)));
 document.querySelector('#exportProgress').addEventListener('click', exportProgress);
 document.querySelector('#importProgress').addEventListener('change', (event) => { const [file] = event.target.files;if (file) importProgress(file); });
+document.querySelector('#searchButton').addEventListener('click', openGlobalSearch);
+document.querySelector('#closeSearch').addEventListener('click', () => { document.querySelector('#searchOverlay').hidden = true; });
+document.querySelector('#searchOverlay').addEventListener('click', (event) => { if (event.target.id === 'searchOverlay') event.currentTarget.hidden = true; });
+document.querySelector('#globalSearch').addEventListener('input', (event) => runGlobalSearch(event.target.value));
+document.querySelectorAll('[data-reference]').forEach((button) => button.addEventListener('click', () => navigate(`reference/${button.dataset.reference}`)));
+document.querySelectorAll('[data-reference-tab]').forEach((button) => button.addEventListener('click', () => setReferenceTab(button.dataset.referenceTab)));
+['glossaryQuery','articleFilter','dayFilter','glossarySort'].forEach((id) => document.querySelector(`#${id}`).addEventListener(id==='glossaryQuery'?'input':'change',paintGlossary));
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   installPrompt = event;

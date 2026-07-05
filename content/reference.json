@@ -1,0 +1,5893 @@
+{
+  "schemaVersion": 1,
+  "glossary": [
+    {
+      "id": "vocab-d1-1",
+      "day": 1,
+      "german": "Hallo",
+      "english": "hello",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-2",
+      "day": 1,
+      "german": "Guten Morgen",
+      "english": "good morning",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-3",
+      "day": 1,
+      "german": "Guten Tag",
+      "english": "good day / hello (daytime)",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-4",
+      "day": 1,
+      "german": "Guten Abend",
+      "english": "good evening",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-5",
+      "day": 1,
+      "german": "Gute Nacht",
+      "english": "good night (before sleeping)",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-6",
+      "day": 1,
+      "german": "Tschüss",
+      "english": "bye (informal)",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-7",
+      "day": 1,
+      "german": "Auf Wiedersehen",
+      "english": "goodbye (formal)",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-8",
+      "day": 1,
+      "german": "ja",
+      "english": "yes",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-9",
+      "day": 1,
+      "german": "nein",
+      "english": "no",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-10",
+      "day": 1,
+      "german": "danke (schön)",
+      "english": "thank you (very much)",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-11",
+      "day": 1,
+      "german": "bitte",
+      "english": "please / you're welcome",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-12",
+      "day": 1,
+      "german": "Entschuldigung",
+      "english": "excuse me / sorry",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-13",
+      "day": 1,
+      "german": "Wie bitte?",
+      "english": "pardon? / say that again?",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-14",
+      "day": 1,
+      "german": "und",
+      "english": "and",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-15",
+      "day": 1,
+      "german": "oder",
+      "english": "or",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-16",
+      "day": 1,
+      "german": "Alles klar",
+      "english": "all right / got it",
+      "article": "",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d2-17",
+      "day": 2,
+      "german": "heißen",
+      "english": "to be called",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-18",
+      "day": 2,
+      "german": "Ich heiße ...",
+      "english": "My name is ...",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-19",
+      "day": 2,
+      "german": "Wie heißt du? / Wie heißen Sie?",
+      "english": "What's your name? (informal / formal)",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-20",
+      "day": 2,
+      "german": "der Name",
+      "english": "name",
+      "article": "der",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-21",
+      "day": 2,
+      "german": "Wer ist das?",
+      "english": "Who is that?",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-22",
+      "day": 2,
+      "german": "Das ist ...",
+      "english": "This/That is ...",
+      "article": "das",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-23",
+      "day": 2,
+      "german": "Herr / Frau",
+      "english": "Mr / Mrs-Ms",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-24",
+      "day": 2,
+      "german": "Freut mich!",
+      "english": "Nice to meet you!",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-25",
+      "day": 2,
+      "german": "Wie geht's? / Wie geht es Ihnen?",
+      "english": "How are you? (informal / formal)",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-26",
+      "day": 2,
+      "german": "(sehr) gut",
+      "english": "(very) good/well",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-27",
+      "day": 2,
+      "german": "es geht",
+      "english": "so-so",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-28",
+      "day": 2,
+      "german": "schlecht",
+      "english": "bad",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-29",
+      "day": 2,
+      "german": "auch",
+      "english": "also, too",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-30",
+      "day": 2,
+      "german": "Und dir? / Und Ihnen?",
+      "english": "And you? (informal / formal)",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-31",
+      "day": 2,
+      "german": "müde",
+      "english": "tired",
+      "article": "",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d3-32",
+      "day": 3,
+      "german": "die Nummer",
+      "english": "number",
+      "article": "die",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-33",
+      "day": 3,
+      "german": "die Telefonnummer",
+      "english": "phone number",
+      "article": "die",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-34",
+      "day": 3,
+      "german": "die Handynummer",
+      "english": "mobile number",
+      "article": "die",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-35",
+      "day": 3,
+      "german": "Wie alt bist du? / Wie alt sind Sie?",
+      "english": "How old are you?",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-36",
+      "day": 3,
+      "german": "Ich bin ... Jahre alt.",
+      "english": "I am ... years old.",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-37",
+      "day": 3,
+      "german": "das Jahr",
+      "english": "year",
+      "article": "das",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-38",
+      "day": 3,
+      "german": "alt",
+      "english": "old",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-39",
+      "day": 3,
+      "german": "jung",
+      "english": "young",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-40",
+      "day": 3,
+      "german": "der Hunger / der Durst",
+      "english": "hunger / thirst",
+      "article": "der",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-41",
+      "day": 3,
+      "german": "die Zeit",
+      "english": "time",
+      "article": "die",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-42",
+      "day": 3,
+      "german": "viel / wenig",
+      "english": "much, a lot / little",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-43",
+      "day": 3,
+      "german": "oder",
+      "english": "or",
+      "article": "",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d4-44",
+      "day": 4,
+      "german": "Deutschland / Deutsch",
+      "english": "Germany / German",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-45",
+      "day": 4,
+      "german": "England / Englisch",
+      "english": "England / English",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-46",
+      "day": 4,
+      "german": "Österreich",
+      "english": "Austria",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-47",
+      "day": 4,
+      "german": "die Schweiz",
+      "english": "Switzerland",
+      "article": "die",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-48",
+      "day": 4,
+      "german": "Frankreich / Französisch",
+      "english": "France / French",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-49",
+      "day": 4,
+      "german": "Spanien / Spanisch",
+      "english": "Spain / Spanish",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-50",
+      "day": 4,
+      "german": "die USA / Amerika",
+      "english": "the USA / America",
+      "article": "die",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-51",
+      "day": 4,
+      "german": "Nigeria",
+      "english": "Nigeria",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-52",
+      "day": 4,
+      "german": "das Land",
+      "english": "country",
+      "article": "das",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-53",
+      "day": 4,
+      "german": "die Stadt",
+      "english": "city",
+      "article": "die",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-54",
+      "day": 4,
+      "german": "die Sprache",
+      "english": "language",
+      "article": "die",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-55",
+      "day": 4,
+      "german": "sprechen",
+      "english": "to speak",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-56",
+      "day": 4,
+      "german": "wohnen",
+      "english": "to live (reside)",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-57",
+      "day": 4,
+      "german": "lernen",
+      "english": "to learn",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-58",
+      "day": 4,
+      "german": "ein bisschen",
+      "english": "a little bit",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-59",
+      "day": 4,
+      "german": "aber",
+      "english": "but",
+      "article": "",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d5-60",
+      "day": 5,
+      "german": "der Beruf",
+      "english": "profession, job",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-61",
+      "day": 5,
+      "german": "arbeiten (als)",
+      "english": "to work (as)",
+      "article": "",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-62",
+      "day": 5,
+      "german": "der Lehrer / die Lehrerin",
+      "english": "teacher (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-63",
+      "day": 5,
+      "german": "der Arzt / die Ärztin",
+      "english": "doctor (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-64",
+      "day": 5,
+      "german": "der Ingenieur / die Ingenieurin",
+      "english": "engineer (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-65",
+      "day": 5,
+      "german": "der Verkäufer / die Verkäuferin",
+      "english": "salesperson (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-66",
+      "day": 5,
+      "german": "der Kellner / die Kellnerin",
+      "english": "waiter / waitress",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-67",
+      "day": 5,
+      "german": "der Student / die Studentin",
+      "english": "university student (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-68",
+      "day": 5,
+      "german": "der Koch / die Köchin",
+      "english": "cook, chef (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-69",
+      "day": 5,
+      "german": "die Firma",
+      "english": "company",
+      "article": "die",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-70",
+      "day": 5,
+      "german": "das Büro",
+      "english": "office",
+      "article": "das",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-71",
+      "day": 5,
+      "german": "der Kollege / die Kollegin",
+      "english": "colleague (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-72",
+      "day": 5,
+      "german": "der Chef / die Chefin",
+      "english": "boss (m/f)",
+      "article": "der",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-73",
+      "day": 5,
+      "german": "arbeitslos",
+      "english": "unemployed",
+      "article": "",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-74",
+      "day": 5,
+      "german": "studieren",
+      "english": "to study (at university)",
+      "article": "",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-75",
+      "day": 5,
+      "german": "machen",
+      "english": "to do, to make",
+      "article": "",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d6-76",
+      "day": 6,
+      "german": "die Familie",
+      "english": "family",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-77",
+      "day": 6,
+      "german": "die Eltern (pl.)",
+      "english": "parents",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-78",
+      "day": 6,
+      "german": "die Mutter / der Vater",
+      "english": "mother / father",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-79",
+      "day": 6,
+      "german": "der Bruder / die Schwester",
+      "english": "brother / sister",
+      "article": "der",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-80",
+      "day": 6,
+      "german": "die Geschwister (pl.)",
+      "english": "siblings",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-81",
+      "day": 6,
+      "german": "das Kind / die Kinder",
+      "english": "child / children",
+      "article": "das",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-82",
+      "day": 6,
+      "german": "der Sohn / die Tochter",
+      "english": "son / daughter",
+      "article": "der",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-83",
+      "day": 6,
+      "german": "die Großeltern (pl.)",
+      "english": "grandparents",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-84",
+      "day": 6,
+      "german": "die Oma / der Opa",
+      "english": "grandma / grandpa",
+      "article": "die",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-85",
+      "day": 6,
+      "german": "der Mann / die Frau",
+      "english": "husband, man / wife, woman",
+      "article": "der",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-86",
+      "day": 6,
+      "german": "der Freund / die Freundin",
+      "english": "(boy)friend / (girl)friend",
+      "article": "der",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-87",
+      "day": 6,
+      "german": "verheiratet",
+      "english": "married",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-88",
+      "day": 6,
+      "german": "ledig",
+      "english": "single",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-89",
+      "day": 6,
+      "german": "geschieden",
+      "english": "divorced",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-90",
+      "day": 6,
+      "german": "zusammen",
+      "english": "together",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-91",
+      "day": 6,
+      "german": "nett",
+      "english": "nice, kind",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-92",
+      "day": 6,
+      "german": "lieben",
+      "english": "to love",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-93",
+      "day": 6,
+      "german": "haben + Geschwister",
+      "english": "Hast du Geschwister? = Do you have siblings?",
+      "article": "",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d8-94",
+      "day": 8,
+      "german": "der Tisch",
+      "english": "table",
+      "article": "der",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-95",
+      "day": 8,
+      "german": "der Stuhl",
+      "english": "chair",
+      "article": "der",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-96",
+      "day": 8,
+      "german": "der Schlüssel",
+      "english": "key",
+      "article": "der",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-97",
+      "day": 8,
+      "german": "der Computer",
+      "english": "computer",
+      "article": "der",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-98",
+      "day": 8,
+      "german": "die Lampe",
+      "english": "lamp",
+      "article": "die",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-99",
+      "day": 8,
+      "german": "die Tasche",
+      "english": "bag",
+      "article": "die",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-100",
+      "day": 8,
+      "german": "die Tür",
+      "english": "door",
+      "article": "die",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-101",
+      "day": 8,
+      "german": "die Uhr",
+      "english": "clock, watch",
+      "article": "die",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-102",
+      "day": 8,
+      "german": "das Buch",
+      "english": "book",
+      "article": "das",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-103",
+      "day": 8,
+      "german": "das Handy",
+      "english": "mobile phone",
+      "article": "das",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-104",
+      "day": 8,
+      "german": "das Fenster",
+      "english": "window",
+      "article": "das",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-105",
+      "day": 8,
+      "german": "das Bett",
+      "english": "bed",
+      "article": "das",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-106",
+      "day": 8,
+      "german": "der Fernseher",
+      "english": "TV set",
+      "article": "der",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-107",
+      "day": 8,
+      "german": "die Flasche",
+      "english": "bottle",
+      "article": "die",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-108",
+      "day": 8,
+      "german": "das Bild",
+      "english": "picture",
+      "article": "das",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-109",
+      "day": 8,
+      "german": "neu / kaputt",
+      "english": "new / broken",
+      "article": "",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d9-110",
+      "day": 9,
+      "german": "der Mann",
+      "english": "die Männer",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-111",
+      "day": 9,
+      "german": "die Frau",
+      "english": "die Frauen",
+      "article": "die",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-112",
+      "day": 9,
+      "german": "das Kind",
+      "english": "die Kinder",
+      "article": "das",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-113",
+      "day": 9,
+      "german": "der Bruder",
+      "english": "die Brüder",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-114",
+      "day": 9,
+      "german": "die Schwester",
+      "english": "die Schwestern",
+      "article": "die",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-115",
+      "day": 9,
+      "german": "das Buch",
+      "english": "die Bücher",
+      "article": "das",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-116",
+      "day": 9,
+      "german": "der Tisch",
+      "english": "die Tische",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-117",
+      "day": 9,
+      "german": "der Stuhl",
+      "english": "die Stühle",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-118",
+      "day": 9,
+      "german": "die Lampe",
+      "english": "die Lampen",
+      "article": "die",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-119",
+      "day": 9,
+      "german": "das Auto",
+      "english": "die Autos",
+      "article": "das",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-120",
+      "day": 9,
+      "german": "das Handy",
+      "english": "die Handys",
+      "article": "das",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-121",
+      "day": 9,
+      "german": "der Lehrer",
+      "english": "die Lehrer",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-122",
+      "day": 9,
+      "german": "die Mutter",
+      "english": "die Mütter",
+      "article": "die",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-123",
+      "day": 9,
+      "german": "der Apfel",
+      "english": "die Äpfel",
+      "article": "der",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d10-124",
+      "day": 10,
+      "german": "brauchen",
+      "english": "to need",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-125",
+      "day": 10,
+      "german": "kaufen",
+      "english": "to buy",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-126",
+      "day": 10,
+      "german": "suchen",
+      "english": "to look for",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-127",
+      "day": 10,
+      "german": "finden",
+      "english": "to find",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-128",
+      "day": 10,
+      "german": "sehen",
+      "english": "to see (du siehst, er sieht)",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-129",
+      "day": 10,
+      "german": "nehmen",
+      "english": "to take (du nimmst, er nimmt)",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-130",
+      "day": 10,
+      "german": "trinken",
+      "english": "to drink",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-131",
+      "day": 10,
+      "german": "essen",
+      "english": "to eat (du isst, er isst)",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-132",
+      "day": 10,
+      "german": "der Hund / die Katze",
+      "english": "dog / cat",
+      "article": "der",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-133",
+      "day": 10,
+      "german": "der Kaffee / der Tee",
+      "english": "coffee / tea",
+      "article": "der",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-134",
+      "day": 10,
+      "german": "das Wasser",
+      "english": "water",
+      "article": "das",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-135",
+      "day": 10,
+      "german": "natürlich",
+      "english": "of course",
+      "article": "",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d11-136",
+      "day": 11,
+      "german": "das Brot / das Brötchen",
+      "english": "bread / bread roll",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-137",
+      "day": 11,
+      "german": "der Käse",
+      "english": "cheese",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-138",
+      "day": 11,
+      "german": "die Butter",
+      "english": "butter",
+      "article": "die",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-139",
+      "day": 11,
+      "german": "das Ei, die Eier",
+      "english": "egg(s)",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-140",
+      "day": 11,
+      "german": "die Milch",
+      "english": "milk",
+      "article": "die",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-141",
+      "day": 11,
+      "german": "das Fleisch",
+      "english": "meat",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-142",
+      "day": 11,
+      "german": "der Fisch",
+      "english": "fish",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-143",
+      "day": 11,
+      "german": "das Gemüse",
+      "english": "vegetables",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-144",
+      "day": 11,
+      "german": "das Obst",
+      "english": "fruit",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-145",
+      "day": 11,
+      "german": "die Kartoffel, -n",
+      "english": "potato",
+      "article": "die",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-146",
+      "day": 11,
+      "german": "der Reis",
+      "english": "rice",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-147",
+      "day": 11,
+      "german": "die Nudeln (pl.)",
+      "english": "pasta, noodles",
+      "article": "die",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-148",
+      "day": 11,
+      "german": "der Zucker / das Salz",
+      "english": "sugar / salt",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-149",
+      "day": 11,
+      "german": "der Saft",
+      "english": "juice",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-150",
+      "day": 11,
+      "german": "das Bier / der Wein",
+      "english": "beer / wine",
+      "article": "das",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-151",
+      "day": 11,
+      "german": "lecker",
+      "english": "tasty, delicious",
+      "article": "",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-152",
+      "day": 11,
+      "german": "der Hunger / der Durst",
+      "english": "hunger / thirst (review)",
+      "article": "der",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-153",
+      "day": 11,
+      "german": "frühstücken",
+      "english": "to have breakfast",
+      "article": "",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d12-154",
+      "day": 12,
+      "german": "das Restaurant",
+      "english": "restaurant",
+      "article": "das",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-155",
+      "day": 12,
+      "german": "die Speisekarte",
+      "english": "menu",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-156",
+      "day": 12,
+      "german": "bestellen",
+      "english": "to order",
+      "article": "",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-157",
+      "day": 12,
+      "german": "zahlen / bezahlen",
+      "english": "to pay",
+      "article": "",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-158",
+      "day": 12,
+      "german": "die Rechnung",
+      "english": "bill",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-159",
+      "day": 12,
+      "german": "der Kellner / die Kellnerin",
+      "english": "waiter / waitress",
+      "article": "der",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-160",
+      "day": 12,
+      "german": "das Frühstück",
+      "english": "breakfast",
+      "article": "das",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-161",
+      "day": 12,
+      "german": "das Mittagessen",
+      "english": "lunch",
+      "article": "das",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-162",
+      "day": 12,
+      "german": "das Abendessen",
+      "english": "dinner",
+      "article": "das",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-163",
+      "day": 12,
+      "german": "die Vorspeise / der Nachtisch",
+      "english": "starter / dessert",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-164",
+      "day": 12,
+      "german": "die Suppe",
+      "english": "soup",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-165",
+      "day": 12,
+      "german": "der Salat",
+      "english": "salad",
+      "article": "der",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-166",
+      "day": 12,
+      "german": "die Pommes (pl.)",
+      "english": "fries",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-167",
+      "day": 12,
+      "german": "das Schnitzel",
+      "english": "schnitzel",
+      "article": "das",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-168",
+      "day": 12,
+      "german": "die Cola / das Mineralwasser",
+      "english": "cola / sparkling water",
+      "article": "die",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-169",
+      "day": 12,
+      "german": "Guten Appetit!",
+      "english": "Enjoy your meal!",
+      "article": "",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d13-170",
+      "day": 13,
+      "german": "einkaufen",
+      "english": "to shop (for groceries)",
+      "article": "",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-171",
+      "day": 13,
+      "german": "das Geschäft, -e / der Laden, ¨-",
+      "english": "shop, store",
+      "article": "das",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-172",
+      "day": 13,
+      "german": "der Supermarkt, ¨-e",
+      "english": "supermarket",
+      "article": "der",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-173",
+      "day": 13,
+      "german": "die Bäckerei",
+      "english": "bakery",
+      "article": "die",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-174",
+      "day": 13,
+      "german": "der Markt",
+      "english": "market",
+      "article": "der",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-175",
+      "day": 13,
+      "german": "kosten",
+      "english": "to cost",
+      "article": "",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-176",
+      "day": 13,
+      "german": "der Preis, -e",
+      "english": "price",
+      "article": "der",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-177",
+      "day": 13,
+      "german": "das Geld",
+      "english": "money",
+      "article": "das",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-178",
+      "day": 13,
+      "german": "teuer / billig / günstig",
+      "english": "expensive / cheap / good value",
+      "article": "",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-179",
+      "day": 13,
+      "german": "bar / mit Karte",
+      "english": "in cash / by card",
+      "article": "",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-180",
+      "day": 13,
+      "german": "der Euro / der Cent",
+      "english": "euro / cent",
+      "article": "der",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-181",
+      "day": 13,
+      "german": "das Kilo / das Gramm",
+      "english": "kilo / gram",
+      "article": "das",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-182",
+      "day": 13,
+      "german": "die Kasse",
+      "english": "checkout, till",
+      "article": "die",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-183",
+      "day": 13,
+      "german": "die Tüte",
+      "english": "(shopping) bag",
+      "article": "die",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-184",
+      "day": 13,
+      "german": "Sonst noch etwas?",
+      "english": "Anything else?",
+      "article": "",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d15-185",
+      "day": 15,
+      "german": "die Uhr / die Uhrzeit",
+      "english": "clock / time (of day)",
+      "article": "die",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-186",
+      "day": 15,
+      "german": "Wie spät ist es?",
+      "english": "What time is it?",
+      "article": "",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-187",
+      "day": 15,
+      "german": "die Minute / die Stunde",
+      "english": "minute / hour",
+      "article": "die",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-188",
+      "day": 15,
+      "german": "der Tag / die Woche / der Monat / das Jahr",
+      "english": "day / week / month / year",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-189",
+      "day": 15,
+      "german": "das Wochenende",
+      "english": "weekend",
+      "article": "das",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-190",
+      "day": 15,
+      "german": "heute / morgen / gestern",
+      "english": "today / tomorrow / yesterday",
+      "article": "",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-191",
+      "day": 15,
+      "german": "jetzt / später / früh / spät",
+      "english": "now / later / early / late",
+      "article": "",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-192",
+      "day": 15,
+      "german": "der Morgen / der Vormittag",
+      "english": "morning / late morning",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-193",
+      "day": 15,
+      "german": "der Mittag / der Nachmittag",
+      "english": "noon / afternoon",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-194",
+      "day": 15,
+      "german": "der Abend / die Nacht",
+      "english": "evening / night",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-195",
+      "day": 15,
+      "german": "der Frühling / der Sommer",
+      "english": "spring / summer",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-196",
+      "day": 15,
+      "german": "der Herbst / der Winter",
+      "english": "autumn / winter",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-197",
+      "day": 15,
+      "german": "der Geburtstag",
+      "english": "birthday",
+      "article": "der",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-198",
+      "day": 15,
+      "german": "pünktlich",
+      "english": "punctual, on time",
+      "article": "",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d16-199",
+      "day": 16,
+      "german": "aufstehen",
+      "english": "to get up",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-200",
+      "day": 16,
+      "german": "aufwachen",
+      "english": "to wake up",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-201",
+      "day": 16,
+      "german": "duschen",
+      "english": "to shower",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-202",
+      "day": 16,
+      "german": "frühstücken",
+      "english": "to have breakfast",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-203",
+      "day": 16,
+      "german": "zur Arbeit gehen/fahren",
+      "english": "to go/drive to work",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-204",
+      "day": 16,
+      "german": "anfangen",
+      "english": "to start, begin",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-205",
+      "day": 16,
+      "german": "die Pause",
+      "english": "break",
+      "article": "die",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-206",
+      "day": 16,
+      "german": "nach Hause kommen",
+      "english": "to come home",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-207",
+      "day": 16,
+      "german": "kochen",
+      "english": "to cook",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-208",
+      "day": 16,
+      "german": "aufräumen",
+      "english": "to tidy up",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-209",
+      "day": 16,
+      "german": "fernsehen",
+      "english": "to watch TV",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-210",
+      "day": 16,
+      "german": "anrufen",
+      "english": "to call (phone)",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-211",
+      "day": 16,
+      "german": "ins Bett gehen",
+      "english": "to go to bed",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-212",
+      "day": 16,
+      "german": "schlafen",
+      "english": "to sleep (er schläft)",
+      "article": "",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d17-213",
+      "day": 17,
+      "german": "helfen",
+      "english": "to help (du hilfst, er hilft)",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-214",
+      "day": 17,
+      "german": "schwimmen",
+      "english": "to swim",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-215",
+      "day": 17,
+      "german": "tanzen",
+      "english": "to dance",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-216",
+      "day": 17,
+      "german": "singen",
+      "english": "to sing",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-217",
+      "day": 17,
+      "german": "Auto fahren",
+      "english": "to drive a car",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-218",
+      "day": 17,
+      "german": "warten",
+      "english": "to wait",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-219",
+      "day": 17,
+      "german": "wiederholen",
+      "english": "to repeat",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-220",
+      "day": 17,
+      "german": "verstehen",
+      "english": "to understand",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-221",
+      "day": 17,
+      "german": "langsam / schnell",
+      "english": "slow(ly) / fast",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-222",
+      "day": 17,
+      "german": "leider",
+      "english": "unfortunately",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-223",
+      "day": 17,
+      "german": "unbedingt",
+      "english": "absolutely, really (want)",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-224",
+      "day": 17,
+      "german": "Kein Problem!",
+      "english": "No problem!",
+      "article": "",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d18-225",
+      "day": 18,
+      "german": "der Termin, -e",
+      "english": "appointment",
+      "article": "der",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-226",
+      "day": 18,
+      "german": "vereinbaren",
+      "english": "to arrange, agree on",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-227",
+      "day": 18,
+      "german": "absagen (sep.)",
+      "english": "to cancel",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-228",
+      "day": 18,
+      "german": "verschieben",
+      "english": "to postpone",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-229",
+      "day": 18,
+      "german": "passen",
+      "english": "to suit, fit (Passt es dir?)",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-230",
+      "day": 18,
+      "german": "frei",
+      "english": "free, available",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-231",
+      "day": 18,
+      "german": "besetzt",
+      "english": "occupied, taken",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-232",
+      "day": 18,
+      "german": "der Kalender",
+      "english": "calendar",
+      "article": "der",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-233",
+      "day": 18,
+      "german": "rauchen",
+      "english": "to smoke",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-234",
+      "day": 18,
+      "german": "parken",
+      "english": "to park",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-235",
+      "day": 18,
+      "german": "der Moment / Einen Moment, bitte",
+      "english": "moment / One moment, please",
+      "article": "der",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-236",
+      "day": 18,
+      "german": "Bis dann! / Bis Montag!",
+      "english": "See you then! / See you Monday!",
+      "article": "",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d19-237",
+      "day": 19,
+      "german": "der Bus / der Zug",
+      "english": "bus / train",
+      "article": "der",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-238",
+      "day": 19,
+      "german": "die U-Bahn / die Straßenbahn",
+      "english": "subway / tram",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-239",
+      "day": 19,
+      "german": "das Taxi / das Fahrrad",
+      "english": "taxi / bicycle",
+      "article": "das",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-240",
+      "day": 19,
+      "german": "der Bahnhof",
+      "english": "train station",
+      "article": "der",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-241",
+      "day": 19,
+      "german": "die Haltestelle",
+      "english": "(bus/tram) stop",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-242",
+      "day": 19,
+      "german": "das Ticket / die Fahrkarte",
+      "english": "ticket",
+      "article": "das",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-243",
+      "day": 19,
+      "german": "einsteigen / aussteigen / umsteigen",
+      "english": "get on / get off / change (all separable)",
+      "article": "",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-244",
+      "day": 19,
+      "german": "die Straße",
+      "english": "street",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-245",
+      "day": 19,
+      "german": "die Ampel",
+      "english": "traffic light",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-246",
+      "day": 19,
+      "german": "die Kreuzung",
+      "english": "crossroads",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-247",
+      "day": 19,
+      "german": "geradeaus / links / rechts",
+      "english": "straight / left / right",
+      "article": "",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-248",
+      "day": 19,
+      "german": "weit / in der Nähe",
+      "english": "far / nearby",
+      "article": "",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-249",
+      "day": 19,
+      "german": "der Flughafen",
+      "english": "airport",
+      "article": "der",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-250",
+      "day": 19,
+      "german": "abfahren / ankommen",
+      "english": "to depart / to arrive (sep.)",
+      "article": "",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-251",
+      "day": 19,
+      "german": "das Gleis",
+      "english": "platform, track",
+      "article": "das",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-252",
+      "day": 19,
+      "german": "die Richtung",
+      "english": "direction",
+      "article": "die",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d20-253",
+      "day": 20,
+      "german": "das Kino",
+      "english": "cinema",
+      "article": "das",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-254",
+      "day": 20,
+      "german": "die Kirche",
+      "english": "church",
+      "article": "die",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-255",
+      "day": 20,
+      "german": "die Bank",
+      "english": "bank",
+      "article": "die",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-256",
+      "day": 20,
+      "german": "die Post",
+      "english": "post office",
+      "article": "die",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-257",
+      "day": 20,
+      "german": "die Schule",
+      "english": "school",
+      "article": "die",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-258",
+      "day": 20,
+      "german": "die Küche",
+      "english": "kitchen",
+      "article": "die",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-259",
+      "day": 20,
+      "german": "zu Hause / nach Hause",
+      "english": "at home / (going) home ⚠️ different!",
+      "article": "",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-260",
+      "day": 20,
+      "german": "das Geschenk",
+      "english": "present, gift",
+      "article": "das",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d22-261",
+      "day": 22,
+      "german": "das Hobby, -s",
+      "english": "hobby",
+      "article": "das",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-262",
+      "day": 22,
+      "german": "die Freizeit",
+      "english": "free time",
+      "article": "die",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-263",
+      "day": 22,
+      "german": "Fußball spielen",
+      "english": "to play football",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-264",
+      "day": 22,
+      "german": "Musik hören",
+      "english": "to listen to music",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-265",
+      "day": 22,
+      "german": "lesen (er liest)",
+      "english": "to read",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-266",
+      "day": 22,
+      "german": "kochen / backen",
+      "english": "to cook / to bake",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-267",
+      "day": 22,
+      "german": "tanzen",
+      "english": "to dance",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-268",
+      "day": 22,
+      "german": "wandern",
+      "english": "to hike",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-269",
+      "day": 22,
+      "german": "reisen",
+      "english": "to travel",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-270",
+      "day": 22,
+      "german": "malen / fotografieren",
+      "english": "to paint / to photograph",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-271",
+      "day": 22,
+      "german": "Rad fahren",
+      "english": "to cycle",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-272",
+      "day": 22,
+      "german": "Freunde treffen (er trifft)",
+      "english": "to meet friends",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-273",
+      "day": 22,
+      "german": "Sport machen",
+      "english": "to do sport",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-274",
+      "day": 22,
+      "german": "das Spiel, -e",
+      "english": "game, match",
+      "article": "das",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-275",
+      "day": 22,
+      "german": "die Musik / die Band",
+      "english": "music / band",
+      "article": "die",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-276",
+      "day": 22,
+      "german": "langweilig / interessant",
+      "english": "boring / interesting",
+      "article": "",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d23-277",
+      "day": 23,
+      "german": "die Wohnung, -en",
+      "english": "flat, apartment",
+      "article": "die",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-278",
+      "day": 23,
+      "german": "das Haus, ¨-er",
+      "english": "house",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-279",
+      "day": 23,
+      "german": "das Zimmer, -",
+      "english": "room",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-280",
+      "day": 23,
+      "german": "das Wohnzimmer",
+      "english": "living room",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-281",
+      "day": 23,
+      "german": "das Schlafzimmer",
+      "english": "bedroom",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-282",
+      "day": 23,
+      "german": "die Küche",
+      "english": "kitchen",
+      "article": "die",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-283",
+      "day": 23,
+      "german": "das Bad / die Toilette",
+      "english": "bathroom / toilet",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-284",
+      "day": 23,
+      "german": "der Balkon / der Garten",
+      "english": "balcony / garden",
+      "article": "der",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-285",
+      "day": 23,
+      "german": "der Aufzug",
+      "english": "lift, elevator",
+      "article": "der",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-286",
+      "day": 23,
+      "german": "die Miete / mieten",
+      "english": "rent / to rent",
+      "article": "die",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-287",
+      "day": 23,
+      "german": "der Vermieter",
+      "english": "landlord",
+      "article": "der",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-288",
+      "day": 23,
+      "german": "der Schrank, ¨-e",
+      "english": "wardrobe, cupboard",
+      "article": "der",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-289",
+      "day": 23,
+      "german": "das Sofa, -s",
+      "english": "sofa",
+      "article": "das",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-290",
+      "day": 23,
+      "german": "hell / dunkel",
+      "english": "bright / dark",
+      "article": "",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-291",
+      "day": 23,
+      "german": "groß / klein",
+      "english": "big / small",
+      "article": "",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-292",
+      "day": 23,
+      "german": "zentral / ruhig / laut",
+      "english": "central / quiet / loud",
+      "article": "",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-293",
+      "day": 23,
+      "german": "umziehen (sep.)",
+      "english": "to move (house)",
+      "article": "",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-294",
+      "day": 23,
+      "german": "der Stock / im ersten Stock",
+      "english": "floor / on the first floor",
+      "article": "der",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d24-295",
+      "day": 24,
+      "german": "das Wetter",
+      "english": "weather",
+      "article": "das",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-296",
+      "day": 24,
+      "german": "die Sonne / scheinen",
+      "english": "sun / to shine",
+      "article": "die",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-297",
+      "day": 24,
+      "german": "der Regen / regnen",
+      "english": "rain / to rain",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-298",
+      "day": 24,
+      "german": "der Schnee / schneien",
+      "english": "snow / to snow",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-299",
+      "day": 24,
+      "german": "der Wind / windig",
+      "english": "wind / windy",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-300",
+      "day": 24,
+      "german": "die Wolke, -n / bewölkt",
+      "english": "cloud / cloudy",
+      "article": "die",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-301",
+      "day": 24,
+      "german": "der Nebel / neblig",
+      "english": "fog / foggy",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-302",
+      "day": 24,
+      "german": "das Gewitter",
+      "english": "thunderstorm",
+      "article": "das",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-303",
+      "day": 24,
+      "german": "der Grad",
+      "english": "degree",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-304",
+      "day": 24,
+      "german": "warm / heiß / kühl / kalt",
+      "english": "warm / hot / cool / cold",
+      "article": "",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-305",
+      "day": 24,
+      "german": "sonnig",
+      "english": "sunny",
+      "article": "",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-306",
+      "day": 24,
+      "german": "der Regenschirm",
+      "english": "umbrella",
+      "article": "der",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-307",
+      "day": 24,
+      "german": "die Jacke",
+      "english": "jacket",
+      "article": "die",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-308",
+      "day": 24,
+      "german": "bleiben",
+      "english": "to stay",
+      "article": "",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-309",
+      "day": 24,
+      "german": "Was für ein Wetter!",
+      "english": "What weather!",
+      "article": "",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d25-310",
+      "day": 25,
+      "german": "der Kopf",
+      "english": "head",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-311",
+      "day": 25,
+      "german": "der Bauch",
+      "english": "belly, stomach",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-312",
+      "day": 25,
+      "german": "der Rücken",
+      "english": "back",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-313",
+      "day": 25,
+      "german": "der Hals",
+      "english": "throat, neck",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-314",
+      "day": 25,
+      "german": "der Arm, -e / das Bein, -e",
+      "english": "arm(s) / leg(s)",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-315",
+      "day": 25,
+      "german": "die Hand, ¨-e / der Fuß, ¨-e",
+      "english": "hand(s) / foot (feet)",
+      "article": "die",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-316",
+      "day": 25,
+      "german": "das Auge, -n / das Ohr, -en",
+      "english": "eye(s) / ear(s)",
+      "article": "das",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-317",
+      "day": 25,
+      "german": "der Zahn, ¨-e",
+      "english": "tooth (teeth)",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-318",
+      "day": 25,
+      "german": "krank / gesund",
+      "english": "sick / healthy",
+      "article": "",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-319",
+      "day": 25,
+      "german": "das Fieber",
+      "english": "fever",
+      "article": "das",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-320",
+      "day": 25,
+      "german": "die Erkältung / der Husten / der Schnupfen",
+      "english": "cold / cough / runny nose",
+      "article": "die",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-321",
+      "day": 25,
+      "german": "die Schmerzen (pl.)",
+      "english": "pain(s)",
+      "article": "die",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-322",
+      "day": 25,
+      "german": "weh tun",
+      "english": "to hurt",
+      "article": "",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-323",
+      "day": 25,
+      "german": "die Apotheke",
+      "english": "pharmacy",
+      "article": "die",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-324",
+      "day": 25,
+      "german": "das Medikament, -e / die Tablette, -n",
+      "english": "medicine / tablet",
+      "article": "das",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-325",
+      "day": 25,
+      "german": "das Rezept",
+      "english": "prescription (also: recipe!)",
+      "article": "das",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-326",
+      "day": 25,
+      "german": "der Termin beim Arzt",
+      "english": "doctor's appointment",
+      "article": "der",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-327",
+      "day": 25,
+      "german": "Gute Besserung!",
+      "english": "Get well soon!",
+      "article": "",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d26-328",
+      "day": 26,
+      "german": "gestern / vorgestern",
+      "english": "yesterday / day before yesterday",
+      "article": "",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-329",
+      "day": 26,
+      "german": "letzte Woche / letztes Jahr",
+      "english": "last week / last year",
+      "article": "",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-330",
+      "day": 26,
+      "german": "früher",
+      "english": "earlier, in the old days",
+      "article": "",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-331",
+      "day": 26,
+      "german": "der Urlaub",
+      "english": "holiday, vacation",
+      "article": "der",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-332",
+      "day": 26,
+      "german": "die Party, -s",
+      "english": "party",
+      "article": "die",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-333",
+      "day": 26,
+      "german": "das Konzert, -e",
+      "english": "concert",
+      "article": "das",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-334",
+      "day": 26,
+      "german": "der Spaß / Spaß machen",
+      "english": "fun / to be fun",
+      "article": "der",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-335",
+      "day": 26,
+      "german": "toll / super / schrecklich",
+      "english": "great / super / terrible",
+      "article": "",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-336",
+      "day": 26,
+      "german": "das Glück / Glück haben",
+      "english": "luck / to be lucky",
+      "article": "das",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-337",
+      "day": 26,
+      "german": "allein",
+      "english": "alone",
+      "article": "",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-338",
+      "day": 26,
+      "german": "der Gast, ¨-e",
+      "english": "guest",
+      "article": "der",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-339",
+      "day": 26,
+      "german": "das Wochenende",
+      "english": "weekend (review)",
+      "article": "das",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d27-340",
+      "day": 27,
+      "german": "schon",
+      "english": "already",
+      "article": "",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-341",
+      "day": 27,
+      "german": "noch nicht",
+      "english": "not yet",
+      "article": "",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-342",
+      "day": 27,
+      "german": "den ganzen Tag",
+      "english": "the whole day",
+      "article": "",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-343",
+      "day": 27,
+      "german": "zweimal / dreimal",
+      "english": "twice / three times",
+      "article": "",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-344",
+      "day": 27,
+      "german": "der Film, -e",
+      "english": "film, movie",
+      "article": "der",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-345",
+      "day": 27,
+      "german": "die Hausaufgaben (pl.)",
+      "english": "homework",
+      "article": "die",
+      "sectionId": "d27-s2"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "d1-s1",
+      "day": 1,
+      "title": "📖 Grammar & pronunciation lesson",
+      "html": "<details open><summary>📖 Grammar &amp; pronunciation lesson</summary>\n<h3>1. The German alphabet (das Alphabet)</h3>\n<p>Same 26 letters as English, plus <b>ä ö ü ß</b>. The letter <b>names</b> matter — Germans spell names on the phone constantly.</p>\n<table>\n<tr><td>A \"ah\"</td><td>B \"bay\"</td><td>C \"tsay\"</td><td>D \"day\"</td></tr>\n<tr><td>E \"ay\"</td><td>F \"eff\"</td><td>G \"gay\"</td><td>H \"hah\"</td></tr>\n<tr><td>I \"ee\"</td><td>J \"yot\"</td><td>K \"kah\"</td><td>L \"ell\"</td></tr>\n<tr><td>M \"emm\"</td><td>N \"enn\"</td><td>O \"oh\"</td><td>P \"pay\"</td></tr>\n<tr><td>Q \"koo\"</td><td>R \"err\"</td><td>S \"ess\"</td><td>T \"tay\"</td></tr>\n<tr><td>U \"oo\"</td><td>V \"fow\"</td><td>W \"vay\"</td><td>X \"iks\"</td></tr>\n<tr><td>Y \"üpsilon\"</td><td>Z \"tsett\"</td><td>ß \"ess-tsett\"</td><td>ä/ö/ü = a/o/u + Umlaut</td></tr>\n</table>\n<h3>2. Three golden rules</h3>\n<ul>\n<li><b>German is phonetic.</b> Words sound how they're written, once you know the rules (see the crash course on the Start page — read it now if you skipped it!).</li>\n<li><b>Stress the first syllable</b> of most German words: <span class=\"de\">AR-beiten, MOR-gen</span>.</li>\n<li><b>All nouns get a capital letter:</b> <span class=\"de\">der Morgen, die Nacht</span>.</li>\n</ul>\n<div class=\"tip\">💡 Practice pairs aloud: <span class=\"de\">Wein</span> (\"vine\" = wine) vs <span class=\"de\">Wien</span> (\"veen\" = Vienna). ei = \"eye\", ie = \"ee\".</div>\n</details>"
+    },
+    {
+      "id": "d2-s1",
+      "day": 2,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Personal pronouns</h3>\n<table>\n<tr><th>German</th><th>English</th><th>German</th><th>English</th></tr>\n<tr><td class=\"de\">ich</td><td>I</td><td class=\"de\">wir</td><td>we</td></tr>\n<tr><td class=\"de\">du</td><td>you (informal)</td><td class=\"de\">ihr</td><td>you all (informal)</td></tr>\n<tr><td class=\"de\">er / sie / es</td><td>he / she / it</td><td class=\"de\">sie</td><td>they</td></tr>\n<tr><td class=\"de\">Sie</td><td colspan=\"3\">you (FORMAL, singular &amp; plural — always capitalized)</td></tr>\n</table>\n<div class=\"warn\">⚠️ Three different \"sie\"! <b>sie</b> = she, <b>sie</b> = they, <b>Sie</b> (capital) = formal you. The verb ending and context tell you which: <span class=\"de\">sie ist</span> (she is), <span class=\"de\">sie sind</span> (they are), <span class=\"de\">Sie sind</span> (you are, formal).</div>\n<h3>2. The verb <i>sein</i> (to be) — completely irregular, memorize it today</h3>\n<table>\n<tr><td class=\"de\">ich bin</td><td>I am</td><td class=\"de\">wir sind</td><td>we are</td></tr>\n<tr><td class=\"de\">du bist</td><td>you are</td><td class=\"de\">ihr seid</td><td>you all are</td></tr>\n<tr><td class=\"de\">er/sie/es ist</td><td>he/she/it is</td><td class=\"de\">sie/Sie sind</td><td>they/you(formal) are</td></tr>\n</table>\n<h3>3. du or Sie?</h3>\n<ul>\n<li><span class=\"de\">du</span> → friends, family, children, students among each other</li>\n<li><span class=\"de\">Sie</span> → strangers, officials, shops, work (until offered \"du\")</li>\n</ul>\n<div class=\"tip\">💡 When unsure, use <b>Sie</b>. Nobody is offended by too much politeness.</div>\n</details>"
+    },
+    {
+      "id": "d3-s1",
+      "day": 3,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The verb <i>haben</i> (to have) — the 2nd most important verb</h3>\n<table>\n<tr><td class=\"de\">ich habe</td><td>I have</td><td class=\"de\">wir haben</td><td>we have</td></tr>\n<tr><td class=\"de\">du hast</td><td>you have</td><td class=\"de\">ihr habt</td><td>you all have</td></tr>\n<tr><td class=\"de\">er/sie/es hat</td><td>he/she/it has</td><td class=\"de\">sie/Sie haben</td><td>they/you(formal) have</td></tr>\n</table>\n<div class=\"tip\">💡 Germans <b>have</b> hunger, thirst and time: <span class=\"de\">Ich habe Hunger / Durst / Zeit</span>. But age uses <b>sein</b>: <span class=\"de\">Ich bin 30 (Jahre alt)</span>.</div>\n<h3>2. Numbers 0–20 (memorize these)</h3>\n<table>\n<tr><td class=\"de\">0 null</td><td class=\"de\">1 eins</td><td class=\"de\">2 zwei</td><td class=\"de\">3 drei</td></tr>\n<tr><td class=\"de\">4 vier</td><td class=\"de\">5 fünf</td><td class=\"de\">6 sechs</td><td class=\"de\">7 sieben</td></tr>\n<tr><td class=\"de\">8 acht</td><td class=\"de\">9 neun</td><td class=\"de\">10 zehn</td><td class=\"de\">11 elf</td></tr>\n<tr><td class=\"de\">12 zwölf</td><td class=\"de\">13 dreizehn</td><td class=\"de\">14 vierzehn</td><td class=\"de\">15 fünfzehn</td></tr>\n<tr><td class=\"de\">16 sechzehn</td><td class=\"de\">17 siebzehn</td><td class=\"de\">18 achtzehn</td><td class=\"de\">19 neunzehn</td></tr>\n<tr><td class=\"de\">20 zwanzig</td><td colspan=\"3\">⚠️ note: sech<b>zehn</b> (no -s), sieb<b>zehn</b> (no -en)</td></tr>\n</table>\n<h3>3. Tens + the famous \"backwards\" rule</h3>\n<table>\n<tr><td class=\"de\">30 dreißig</td><td class=\"de\">40 vierzig</td><td class=\"de\">50 fünfzig</td><td class=\"de\">60 sechzig</td></tr>\n<tr><td class=\"de\">70 siebzig</td><td class=\"de\">80 achtzig</td><td class=\"de\">90 neunzig</td><td class=\"de\">100 (ein)hundert</td></tr>\n</table>\n<p>Two-digit numbers say the <b>unit first</b>, joined by <i>und</i>:</p>\n<ul>\n<li>21 = <span class=\"de\">einundzwanzig</span> (\"one-and-twenty\")</li>\n<li>35 = <span class=\"de\">fünfunddreißig</span> (\"five-and-thirty\")</li>\n<li>99 = <span class=\"de\">neunundneunzig</span> (\"nine-and-ninety\")</li>\n</ul>\n<div class=\"warn\">⚠️ English speakers hear \"vierundzwanzig\" and write 42. Wrong — it's 24! Unit first, always.</div>\n</details>"
+    },
+    {
+      "id": "d4-s1",
+      "day": 4,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Regular verbs — one pattern, thousands of verbs</h3>\n<p>Take the infinitive (e.g. <span class=\"de\">kommen</span> = to come), remove <b>-en</b> to get the stem (<span class=\"de\">komm-</span>), add these endings:</p>\n<table>\n<tr><th>Pronoun</th><th>Ending</th><th>kommen</th><th>wohnen (live)</th><th>lernen (learn)</th></tr>\n<tr><td>ich</td><td><b>-e</b></td><td class=\"de\">komme</td><td class=\"de\">wohne</td><td class=\"de\">lerne</td></tr>\n<tr><td>du</td><td><b>-st</b></td><td class=\"de\">kommst</td><td class=\"de\">wohnst</td><td class=\"de\">lernst</td></tr>\n<tr><td>er/sie/es</td><td><b>-t</b></td><td class=\"de\">kommt</td><td class=\"de\">wohnt</td><td class=\"de\">lernt</td></tr>\n<tr><td>wir</td><td><b>-en</b></td><td class=\"de\">kommen</td><td class=\"de\">wohnen</td><td class=\"de\">lernen</td></tr>\n<tr><td>ihr</td><td><b>-t</b></td><td class=\"de\">kommt</td><td class=\"de\">wohnt</td><td class=\"de\">lernt</td></tr>\n<tr><td>sie/Sie</td><td><b>-en</b></td><td class=\"de\">kommen</td><td class=\"de\">wohnen</td><td class=\"de\">lernen</td></tr>\n</table>\n<div class=\"tip\">💡 Memory trick: the endings spell <b>\"e-st-t-en-t-en\"</b>. Chant it like a rhythm: <i>e, st, t, en, t, en!</i></div>\n<h3>2. One useful irregular: sprechen (to speak)</h3>\n<p><span class=\"de\">ich spreche, <b>du sprichst, er/sie spricht</b>, wir sprechen, ihr sprecht, sie sprechen</span> — the e→i change only happens with du and er/sie/es. More of these on Day 13.</p>\n<h3>3. Key patterns</h3>\n<ul>\n<li><span class=\"de\">Ich komme <b>aus</b> England.</span> — I come from England. (aus + country)</li>\n<li><span class=\"de\">Ich wohne <b>in</b> London.</span> — I live in London. (in + city)</li>\n<li>Most countries have no article. Exceptions: <span class=\"de\">die Schweiz, die Türkei, die USA, der Iran</span> → <span class=\"de\">aus der Schweiz, aus den USA</span> (learn as chunks).</li>\n</ul>\n<h3>4. Question words (W-Fragen)</h3>\n<table>\n<tr><td class=\"de\">Wer?</td><td>who?</td><td class=\"de\">Was?</td><td>what?</td></tr>\n<tr><td class=\"de\">Wo?</td><td>where?</td><td class=\"de\">Woher?</td><td>where from?</td></tr>\n<tr><td class=\"de\">Wie?</td><td>how?</td><td class=\"de\">Wann?</td><td>when?</td></tr>\n<tr><td class=\"de\">Warum?</td><td>why?</td><td class=\"de\">Wohin?</td><td>where to?</td></tr>\n</table>\n<p>Pattern: <b>question word + verb + subject</b>: <span class=\"de\">Woher kommst du? Wo wohnen Sie?</span></p>\n</details>"
+    },
+    {
+      "id": "d5-s1",
+      "day": 5,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Yes/No questions: put the verb FIRST</h3>\n<table>\n<tr><th>Statement</th><th>Question</th></tr>\n<tr><td class=\"de\">Du bist Lehrer.</td><td class=\"de\"><b>Bist</b> du Lehrer?</td></tr>\n<tr><td class=\"de\">Sie kommt aus Berlin.</td><td class=\"de\"><b>Kommt</b> sie aus Berlin?</td></tr>\n<tr><td class=\"de\">Ihr habt Zeit.</td><td class=\"de\"><b>Habt</b> ihr Zeit?</td></tr>\n</table>\n<p>No \"do/does\" needed — German just flips verb and subject. Answer with <span class=\"de\">Ja, ... / Nein, ...</span></p>\n<div class=\"tip\">💡 Bonus word: <span class=\"de\">doch</span> = \"yes I do!\" after a negative question. <span class=\"de\">Sprichst du kein Deutsch? — Doch!</span> (Yes I do!)</div>\n<h3>2. Talking about jobs — no article!</h3>\n<p><span class=\"de\">Ich bin Lehrer.</span> (I am <b>a</b> teacher — German drops the \"a\" with professions.) Also: <span class=\"de\">Ich arbeite als Lehrer.</span> / <span class=\"de\">Was bist du von Beruf?</span> (What do you do for a living?)</p>\n<p>Female forms usually add <b>-in</b>: <span class=\"de\">Lehrer → Lehrerin, Arzt → Ärztin, Verkäufer → Verkäuferin</span>.</p>\n<h3>3. The verb <i>werden</i> (to become) — the 3rd pillar verb</h3>\n<table>\n<tr><td class=\"de\">ich werde</td><td>I become</td><td class=\"de\">wir werden</td><td>we become</td></tr>\n<tr><td class=\"de\">du wirst</td><td>you become</td><td class=\"de\">ihr werdet</td><td>you all become</td></tr>\n<tr><td class=\"de\">er/sie/es wird</td><td>he/she/it becomes</td><td class=\"de\">sie/Sie werden</td><td>they/you become</td></tr>\n</table>\n<p><span class=\"de\">Ich werde Ingenieur.</span> (I'm going to be / becoming an engineer.) <span class=\"de\">Es wird kalt.</span> (It's getting cold.) Later, werden also builds the future tense — for A1, just know its forms.</p>\n<h3>4. arbeiten — a small spelling note</h3>\n<p>Stems ending in -t or -d insert an <b>e</b>: <span class=\"de\">du arbeit<b>e</b>st, er arbeit<b>e</b>t</span>. Same for <span class=\"de\">finden → du findest</span>.</p>\n</details>"
+    },
+    {
+      "id": "d6-s1",
+      "day": 6,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Possessive pronouns</h3>\n<table>\n<tr><th>Owner</th><th>Possessive</th><th>English</th></tr>\n<tr><td>ich</td><td class=\"de\">mein</td><td>my</td></tr>\n<tr><td>du</td><td class=\"de\">dein</td><td>your (informal)</td></tr>\n<tr><td>er/es</td><td class=\"de\">sein</td><td>his / its</td></tr>\n<tr><td>sie (she)</td><td class=\"de\">ihr</td><td>her</td></tr>\n<tr><td>wir</td><td class=\"de\">unser</td><td>our</td></tr>\n<tr><td>ihr</td><td class=\"de\">euer</td><td>your (plural)</td></tr>\n<tr><td>sie (they)</td><td class=\"de\">ihr</td><td>their</td></tr>\n<tr><td>Sie</td><td class=\"de\">Ihr</td><td>your (formal)</td></tr>\n</table>\n<h3>2. The ending matches the NEXT word's gender</h3>\n<p>Possessives behave like <span class=\"de\">ein</span>: no ending for masculine and neuter, <b>-e</b> for feminine and plural (in the nominative — more cases later):</p>\n<table>\n<tr><td class=\"de\">mein Vater</td><td>my father (m)</td></tr>\n<tr><td class=\"de\">mein<b>e</b> Mutter</td><td>my mother (f)</td></tr>\n<tr><td class=\"de\">mein Kind</td><td>my child (n)</td></tr>\n<tr><td class=\"de\">mein<b>e</b> Eltern</td><td>my parents (pl)</td></tr>\n</table>\n<div class=\"warn\">⚠️ The most common A1 mistake: <b>sein</b> vs <b>ihr</b>. <span class=\"de\">sein Bruder</span> = HIS brother; <span class=\"de\">ihr Bruder</span> = HER brother. The choice depends on the OWNER, the ending on the thing owned: <span class=\"de\">seine Schwester</span> (his sister — -e because Schwester is feminine).</div>\n<div class=\"tip\">💡 <span class=\"de\">euer</span> drops an e with endings: <span class=\"de\">eure Mutter</span> (not \"euere\").</div>\n</details>"
+    },
+    {
+      "id": "d8-s1",
+      "day": 8,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Every noun has a gender</h3>\n<table>\n<tr><th>Gender</th><th>\"the\"</th><th>\"a/an\"</th><th>Example</th></tr>\n<tr><td>masculine</td><td class=\"de\">der</td><td class=\"de\">ein</td><td class=\"de\">der Tisch / ein Tisch (table)</td></tr>\n<tr><td>feminine</td><td class=\"de\">die</td><td class=\"de\">eine</td><td class=\"de\">die Lampe / eine Lampe (lamp)</td></tr>\n<tr><td>neuter</td><td class=\"de\">das</td><td class=\"de\">ein</td><td class=\"de\">das Buch / ein Buch (book)</td></tr>\n<tr><td>plural</td><td class=\"de\">die</td><td>—</td><td class=\"de\">die Bücher (books)</td></tr>\n</table>\n<p>Gender is grammatical, not logical (<span class=\"de\">das Mädchen</span> = the girl is neuter!). <b>Always learn noun + article together.</b></p>\n<h3>2. Ending clues (right ~80% of the time)</h3>\n<table>\n<tr><th>Usually DIE (feminine)</th><td>-ung, -heit, -keit, -schaft, -ion, -e<br><span class=\"de\">die Zeitung, die Freiheit, die Lektion, die Lampe</span></td></tr>\n<tr><th>Usually DER (masculine)</th><td>-er (people/devices), -ling, -or; days, months, seasons<br><span class=\"de\">der Lehrer, der Computer, der Montag, der Sommer</span></td></tr>\n<tr><th>Usually DAS (neuter)</th><td>-chen, -lein, -um, -ment; infinitives as nouns<br><span class=\"de\">das Mädchen, das Zentrum, das Dokument, das Essen</span></td></tr>\n</table>\n<h3>3. What is \"nominative\"?</h3>\n<p>The nominative is the form for the <b>subject</b> — the person or thing doing the verb: <span class=\"de\"><b>Der Mann</b> trinkt Kaffee.</span> It's also used after <b>sein</b>: <span class=\"de\">Das ist <b>ein Tisch</b>.</span> The table above IS the nominative. (Tomorrow: plurals. Day 10: the accusative.)</p>\n<div class=\"tip\">💡 Color trick: write der-words in blue, die-words in red, das-words in green in your notes. Your visual memory will store the color with the word.</div>\n</details>"
+    },
+    {
+      "id": "d9-s1",
+      "day": 9,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>The 5 plural patterns</h3>\n<table>\n<tr><th>Pattern</th><th>Typical for</th><th>Examples</th></tr>\n<tr><td><b>-e</b> (often + umlaut)</td><td>many masculine nouns</td><td class=\"de\">der Tisch → die Tische<br>der Stuhl → die Stühle</td></tr>\n<tr><td><b>-(e)n</b></td><td>most feminine nouns</td><td class=\"de\">die Lampe → die Lampen<br>die Frau → die Frauen<br>die Freundin → die Freundinnen</td></tr>\n<tr><td><b>-er</b> (often + umlaut)</td><td>many short neuter nouns</td><td class=\"de\">das Kind → die Kinder<br>das Buch → die Bücher</td></tr>\n<tr><td><b>-s</b></td><td>foreign/modern words</td><td class=\"de\">das Handy → die Handys<br>das Auto → die Autos</td></tr>\n<tr><td><b>— (no ending)</b>, maybe umlaut</td><td>nouns in -er, -el, -chen</td><td class=\"de\">der Lehrer → die Lehrer<br>die Mutter → die Mütter</td></tr>\n</table>\n<div class=\"tip\">💡 From now on, learn every noun as a trio: <b>die Lampe, -n</b> · <b>das Buch, ¨-er</b>. Dictionaries show plurals this way.</div>\n<h3>Useful plural words</h3>\n<p><span class=\"de\">viele</span> (many), <span class=\"de\">einige</span> (some), <span class=\"de\">zwei/drei/... </span> + plural noun: <span class=\"de\">Ich habe zwei Brüder.</span></p>\n<div class=\"warn\">⚠️ There is no plural \"ein\". \"Books\" = just <span class=\"de\">Bücher</span>; \"the books\" = <span class=\"de\">die Bücher</span>; \"no books\" = <span class=\"de\">keine Bücher</span> (tomorrow!).</div>\n</details>"
+    },
+    {
+      "id": "d10-s1",
+      "day": 10,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Subject vs object</h3>\n<p>In <span class=\"de\">Der Mann kauft <b>den Tisch</b></span> (The man buys the table), \"der Mann\" does the action (subject = nominative) and \"den Tisch\" receives it (direct object = <b>accusative</b>).</p>\n<h3>2. The accusative table — only masculine changes!</h3>\n<table>\n<tr><th></th><th>Nominative</th><th>Accusative</th></tr>\n<tr><td>masculine</td><td class=\"de\">der / ein / kein</td><td class=\"de\"><b>den / einen / keinen</b></td></tr>\n<tr><td>feminine</td><td class=\"de\">die / eine / keine</td><td class=\"de\">die / eine / keine (same!)</td></tr>\n<tr><td>neuter</td><td class=\"de\">das / ein / kein</td><td class=\"de\">das / ein / kein (same!)</td></tr>\n<tr><td>plural</td><td class=\"de\">die / — / keine</td><td class=\"de\">die / — / keine (same!)</td></tr>\n</table>\n<div class=\"tip\">💡 Remember one rhyme: <b>\"der → den, ein → einen — only for masculine ones!\"</b> Everything else stays the same.</div>\n<h3>3. Verbs that always take accusative</h3>\n<p class=\"de\">haben, brauchen (need), kaufen (buy), suchen (look for), finden (find), sehen (see), essen (eat), trinken (drink), nehmen (take), möchten (would like), es gibt (there is)</p>\n<p><span class=\"de\">Ich brauche <b>einen</b> Stuhl. / Sie hat <b>einen</b> Bruder. / Er sucht <b>den</b> Schlüssel.</span></p>\n<h3>4. kein = \"not a / no\"</h3>\n<p><span class=\"de\">kein</span> negates nouns. It takes the same endings as ein — plus a plural form:</p>\n<ul>\n<li><span class=\"de\">Ich habe <b>keinen</b> Stuhl.</span> (m, acc) — I don't have a chair.</li>\n<li><span class=\"de\">Ich habe <b>keine</b> Zeit.</span> (f) — I have no time.</li>\n<li><span class=\"de\">Ich habe <b>kein</b> Auto.</span> (n) — I don't have a car.</li>\n<li><span class=\"de\">Wir haben <b>keine</b> Kinder.</span> (pl) — We have no children.</li>\n</ul>\n<p>Also: possessives take the same accusative endings: <span class=\"de\">Ich sehe mein<b>en</b> Bruder / mein<b>e</b> Schwester / mein Kind.</span></p>\n</details>"
+    },
+    {
+      "id": "d11-s1",
+      "day": 11,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>The golden rule</h3>\n<table>\n<tr><th>Use <span class=\"de\">kein</span></th><th>Use <span class=\"de\">nicht</span></th></tr>\n<tr><td>to negate a NOUN that has <i>ein</i> or no article<br><span class=\"de\">Ich habe <b>kein</b> Auto.<br>Ich trinke <b>keinen</b> Kaffee.<br>Das ist <b>keine</b> Lampe.</span></td><td>to negate verbs, adjectives, names, and nouns with <i>der/die/das</i> or possessives<br><span class=\"de\">Ich arbeite <b>nicht</b>.<br>Das Auto ist <b>nicht</b> neu.<br>Das ist <b>nicht</b> mein Auto.<br>Ich kaufe den Tisch <b>nicht</b>.</span></td></tr>\n</table>\n<h3>Where does nicht go?</h3>\n<ul>\n<li>End of a simple sentence: <span class=\"de\">Er kommt <b>nicht</b>.</span></li>\n<li>Before an adjective: <span class=\"de\">Das ist <b>nicht</b> gut.</span></li>\n<li>Before a place/phrase it negates: <span class=\"de\">Ich wohne <b>nicht</b> in Berlin.</span></li>\n</ul>\n<div class=\"tip\">💡 Quick test: could the sentence contain \"a/an\" or no article before the noun? → kein. Otherwise → nicht.</div>\n<h3>gern = to like doing</h3>\n<p><span class=\"de\">Ich trinke <b>gern</b> Kaffee.</span> = I like drinking coffee. Negative: <span class=\"de\">Ich trinke <b>nicht gern</b> Tee.</span> (More on gern on Day 22.)</p>\n</details>"
+    },
+    {
+      "id": "d12-s1",
+      "day": 12,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. möchten = would like (your politeness superpower)</h3>\n<table>\n<tr><td class=\"de\">ich möchte</td><td>I would like</td><td class=\"de\">wir möchten</td><td>we would like</td></tr>\n<tr><td class=\"de\">du möchtest</td><td>you would like</td><td class=\"de\">ihr möchtet</td><td>you all would like</td></tr>\n<tr><td class=\"de\">er/sie möchte</td><td>he/she would like</td><td class=\"de\">sie/Sie möchten</td><td>they/you would like</td></tr>\n</table>\n<p>möchten takes the accusative: <span class=\"de\">Ich möchte <b>einen</b> Kaffee.</span> With a second verb, that verb goes to the END: <span class=\"de\">Ich möchte einen Kaffee <b>trinken</b>.</span> (This \"verb bracket\" returns with all modal verbs on Day 17!)</p>\n<h3>2. Even more polite: Ich hätte gern ...</h3>\n<p><span class=\"de\">Ich hätte gern ein Wasser.</span> = I'd like a water, please. Learn it as a fixed chunk — waiters hear it 100 times a day.</p>\n<h3>3. Restaurant survival grammar</h3>\n<ul>\n<li><span class=\"de\">Was möchten Sie bestellen?</span> — What would you like to order?</li>\n<li><span class=\"de\">Ich nehme ...</span> — I'll take/have ... (nehmen: du nimmst, er nimmt)</li>\n<li><span class=\"de\">Zahlen, bitte! / Die Rechnung, bitte!</span> — The bill, please!</li>\n<li><span class=\"de\">Zusammen oder getrennt?</span> — Together or separately? (Splitting bills is VERY German.)</li>\n<li><span class=\"de\">Stimmt so!</span> — Keep the change!</li>\n</ul>\n</details>"
+    },
+    {
+      "id": "d13-s1",
+      "day": 13,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Stem-changing verbs — only du and er/sie/es change</h3>\n<table>\n<tr><th>Change</th><th>Verb</th><th>du</th><th>er/sie/es</th></tr>\n<tr><td rowspan=\"4\"><b>e → i</b></td><td class=\"de\">essen (eat)</td><td class=\"de\">isst</td><td class=\"de\">isst</td></tr>\n<tr><td class=\"de\">nehmen (take)</td><td class=\"de\">nimmst</td><td class=\"de\">nimmt</td></tr>\n<tr><td class=\"de\">sprechen (speak)</td><td class=\"de\">sprichst</td><td class=\"de\">spricht</td></tr>\n<tr><td class=\"de\">geben (give)</td><td class=\"de\">gibst</td><td class=\"de\">gibt</td></tr>\n<tr><td rowspan=\"2\"><b>e → ie</b></td><td class=\"de\">sehen (see)</td><td class=\"de\">siehst</td><td class=\"de\">sieht</td></tr>\n<tr><td class=\"de\">lesen (read)</td><td class=\"de\">liest</td><td class=\"de\">liest</td></tr>\n<tr><td rowspan=\"3\"><b>a → ä</b></td><td class=\"de\">fahren (drive/go)</td><td class=\"de\">fährst</td><td class=\"de\">fährt</td></tr>\n<tr><td class=\"de\">schlafen (sleep)</td><td class=\"de\">schläfst</td><td class=\"de\">schläft</td></tr>\n<tr><td class=\"de\">tragen (carry/wear)</td><td class=\"de\">trägst</td><td class=\"de\">trägt</td></tr>\n</table>\n<p>ich/wir/ihr/sie forms are 100% regular: <span class=\"de\">ich esse, wir essen, ihr esst</span>.</p>\n<h3>2. Prices</h3>\n<ul>\n<li><span class=\"de\">Was kostet das? / Wie viel kostet der Käse?</span> — What does it cost?</li>\n<li>3,50 € = <span class=\"de\">drei Euro fünfzig</span> (comma, not point!)</li>\n<li><span class=\"de\">Das ist (zu) teuer / billig / günstig.</span> — too expensive / cheap / good value</li>\n<li><span class=\"de\">Zahlen Sie bar oder mit Karte?</span> — Cash or card? (Germany loves cash!)</li>\n</ul>\n<h3>3. es gibt = there is / there are (+ accusative)</h3>\n<p><span class=\"de\">Es gibt einen Supermarkt hier.</span> — There's a supermarket here. <span class=\"de\">Gibt es Brot?</span> — Is there bread?</p>\n</details>"
+    },
+    {
+      "id": "d15-s1",
+      "day": 15,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Wie spät ist es? (What time is it?)</h3>\n<table>\n<tr><th>Clock</th><th>Official (announcements)</th><th>Everyday German</th></tr>\n<tr><td>14:00</td><td class=\"de\">vierzehn Uhr</td><td class=\"de\">zwei (Uhr)</td></tr>\n<tr><td>14:05</td><td class=\"de\">vierzehn Uhr fünf</td><td class=\"de\">fünf nach zwei</td></tr>\n<tr><td>14:15</td><td class=\"de\">vierzehn Uhr fünfzehn</td><td class=\"de\">Viertel nach zwei</td></tr>\n<tr><td>14:30</td><td class=\"de\">vierzehn Uhr dreißig</td><td class=\"de\"><b>halb drei</b> ⚠️</td></tr>\n<tr><td>14:45</td><td class=\"de\">vierzehn Uhr fünfundvierzig</td><td class=\"de\">Viertel vor drei</td></tr>\n<tr><td>14:55</td><td class=\"de\">vierzehn Uhr fünfundfünfzig</td><td class=\"de\">fünf vor drei</td></tr>\n</table>\n<div class=\"warn\">⚠️ THE classic trap: <span class=\"de\">halb drei</span> = 2:30, NOT 3:30! Germans think \"half OF the way TO three\". Drill this until it's automatic.</div>\n<h3>2. Days &amp; months (all masculine → der, and use am/im)</h3>\n<p class=\"de\">Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag</p>\n<p class=\"de\">Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember</p>\n<h3>3. The three time prepositions</h3>\n<ul>\n<li><b>um</b> + clock time: <span class=\"de\">um 8 Uhr</span> (at 8)</li>\n<li><b>am</b> + day/date: <span class=\"de\">am Montag, am Wochenende, am 3. Mai</span></li>\n<li><b>im</b> + month/season: <span class=\"de\">im Januar, im Sommer</span></li>\n</ul>\n<h3>4. Dates (basics)</h3>\n<p><span class=\"de\">Der Wievielte ist heute? — Heute ist der dritte Mai (3.5.).</span> Ordinals 1–19 add <b>-te</b>: der zweite, der vierte... (irregular: <span class=\"de\">der erste, der dritte, der siebte</span>); from 20 add <b>-ste</b>: der zwanzigste. \"On the...\" = <span class=\"de\">am dritten Mai</span>.</p>\n</details>"
+    },
+    {
+      "id": "d16-s1",
+      "day": 16,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Separable verbs (trennbare Verben)</h3>\n<p>Many verbs have a prefix that <b>breaks off and flies to the end</b> of the sentence:</p>\n<table>\n<tr><th>Infinitive</th><th>In a sentence</th></tr>\n<tr><td class=\"de\"><b>auf</b>stehen (get up)</td><td class=\"de\">Ich stehe um 7 Uhr <b>auf</b>.</td></tr>\n<tr><td class=\"de\"><b>an</b>fangen (begin)</td><td class=\"de\">Der Kurs fängt um 9 <b>an</b>. (a→ä!)</td></tr>\n<tr><td class=\"de\"><b>ein</b>kaufen (shop)</td><td class=\"de\">Wir kaufen am Samstag <b>ein</b>.</td></tr>\n<tr><td class=\"de\"><b>fern</b>sehen (watch TV)</td><td class=\"de\">Er sieht abends <b>fern</b>.</td></tr>\n<tr><td class=\"de\"><b>an</b>rufen (call up)</td><td class=\"de\">Ich rufe dich morgen <b>an</b>.</td></tr>\n<tr><td class=\"de\"><b>mit</b>kommen (come along)</td><td class=\"de\">Kommst du <b>mit</b>?</td></tr>\n<tr><td class=\"de\"><b>auf</b>räumen (tidy up)</td><td class=\"de\">Sie räumt das Zimmer <b>auf</b>.</td></tr>\n<tr><td class=\"de\"><b>aus</b>gehen (go out)</td><td class=\"de\">Wir gehen heute Abend <b>aus</b>.</td></tr>\n</table>\n<div class=\"tip\">💡 In the infinitive, the stress is on the prefix: <b>AUF</b>stehen. Hear the stress → it's separable. With möchten etc. the verb stays whole at the end: <span class=\"de\">Ich möchte früh <b>aufstehen</b>.</span></div>\n<h3>2. Reflexive preview (as chunks)</h3>\n<p>Learn these two as fixed phrases: <span class=\"de\">Ich dusche (mich)</span> — I shower; <span class=\"de\">Ich ziehe mich an</span> — I get dressed.</p>\n<h3>3. Sequencing words</h3>\n<p class=\"de\">zuerst (first), dann (then), danach (after that), am Ende (at the end)</p>\n<p>After these, verb comes SECOND: <span class=\"de\">Dann <b>trinke ich</b> Kaffee.</span></p>\n</details>"
+    },
+    {
+      "id": "d17-s1",
+      "day": 17,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The three modals</h3>\n<table>\n<tr><th></th><th class=\"de\">können (can)</th><th class=\"de\">müssen (must)</th><th class=\"de\">wollen (want)</th></tr>\n<tr><td>ich</td><td class=\"de\">kann</td><td class=\"de\">muss</td><td class=\"de\">will</td></tr>\n<tr><td>du</td><td class=\"de\">kannst</td><td class=\"de\">musst</td><td class=\"de\">willst</td></tr>\n<tr><td>er/sie/es</td><td class=\"de\">kann</td><td class=\"de\">muss</td><td class=\"de\">will</td></tr>\n<tr><td>wir</td><td class=\"de\">können</td><td class=\"de\">müssen</td><td class=\"de\">wollen</td></tr>\n<tr><td>ihr</td><td class=\"de\">könnt</td><td class=\"de\">müsst</td><td class=\"de\">wollt</td></tr>\n<tr><td>sie/Sie</td><td class=\"de\">können</td><td class=\"de\">müssen</td><td class=\"de\">wollen</td></tr>\n</table>\n<p>Notice: ich and er/sie/es are IDENTICAL, and there's no -t on er/sie/es. That's the modal signature.</p>\n<div class=\"warn\">⚠️ <span class=\"de\">ich will</span> = I WANT — it does NOT mean \"I will\"! (Future \"will\" is expressed with the present tense or werden.)</div>\n<h3>2. The verb bracket (Satzklammer)</h3>\n<p>Modal in position 2 + infinitive at the very END. Everything else sits in between:</p>\n<ul>\n<li><span class=\"de\">Ich <b>kann</b> gut <u>kochen</u>.</span> — I can cook well.</li>\n<li><span class=\"de\">Er <b>muss</b> heute lange <u>arbeiten</u>.</span> — He has to work late today.</li>\n<li><span class=\"de\">Wir <b>wollen</b> am Sommer nach Deutschland <u>fahren</u>.</span> — We want to go to Germany in summer.</li>\n<li>Question: <span class=\"de\"><b>Kannst</b> du mir <u>helfen</u>?</span> — Can you help me?</li>\n</ul>\n<div class=\"tip\">💡 Separable verbs stay glued together at the end: <span class=\"de\">Ich muss früh <u>aufstehen</u>.</span></div>\n<h3>3. können for ability AND polite requests</h3>\n<p><span class=\"de\">Ich kann schwimmen.</span> (ability) · <span class=\"de\">Können Sie das bitte wiederholen?</span> (Could you repeat that, please? — essential classroom phrase!)</p>\n</details>"
+    },
+    {
+      "id": "d18-s1",
+      "day": 18,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The other three modals</h3>\n<table>\n<tr><th></th><th class=\"de\">dürfen (may/be allowed)</th><th class=\"de\">sollen (should)</th><th class=\"de\">möchten (would like)</th></tr>\n<tr><td>ich</td><td class=\"de\">darf</td><td class=\"de\">soll</td><td class=\"de\">möchte</td></tr>\n<tr><td>du</td><td class=\"de\">darfst</td><td class=\"de\">sollst</td><td class=\"de\">möchtest</td></tr>\n<tr><td>er/sie/es</td><td class=\"de\">darf</td><td class=\"de\">soll</td><td class=\"de\">möchte</td></tr>\n<tr><td>wir</td><td class=\"de\">dürfen</td><td class=\"de\">sollen</td><td class=\"de\">möchten</td></tr>\n<tr><td>ihr</td><td class=\"de\">dürft</td><td class=\"de\">sollt</td><td class=\"de\">möchtet</td></tr>\n<tr><td>sie/Sie</td><td class=\"de\">dürfen</td><td class=\"de\">sollen</td><td class=\"de\">möchten</td></tr>\n</table>\n<ul>\n<li><b>dürfen</b> = permission: <span class=\"de\">Hier darf man nicht rauchen.</span> (Smoking is not allowed here.) <span class=\"de\">Darf ich...?</span> (May I...?)</li>\n<li><b>sollen</b> = should / is supposed to: <span class=\"de\">Du sollst mehr schlafen.</span> Also for offers: <span class=\"de\">Soll ich helfen?</span> (Shall I help?)</li>\n<li><b>möchten</b> — you know it from Day 12; it's officially a modal too.</li>\n</ul>\n<h3>2. Meet <span class=\"de\">man</span></h3>\n<p><span class=\"de\">man</span> = \"one / people / you (in general)\" — takes er/sie/es forms: <span class=\"de\">Hier darf man parken. In Deutschland spricht man Deutsch.</span> Super common!</p>\n<h3>3. Appointment language (der Termin)</h3>\n<ul>\n<li><span class=\"de\">Ich möchte einen Termin machen/vereinbaren.</span> — I'd like to make an appointment.</li>\n<li><span class=\"de\">Haben Sie am Montag Zeit? / Passt es um 10 Uhr?</span> — Do you have time Monday? / Does 10 work?</li>\n<li><span class=\"de\">Ich muss den Termin leider absagen/verschieben.</span> — I have to cancel/postpone.</li>\n</ul>\n</details>"
+    },
+    {
+      "id": "d19-s1",
+      "day": 19,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The imperative (commands &amp; instructions)</h3>\n<table>\n<tr><th>To</th><th>How to build</th><th>gehen</th><th>nehmen</th><th>sein</th></tr>\n<tr><td>du</td><td>du-form minus -st (and no \"du\")</td><td class=\"de\">Geh!</td><td class=\"de\">Nimm!</td><td class=\"de\">Sei!</td></tr>\n<tr><td>ihr</td><td>ihr-form, no \"ihr\"</td><td class=\"de\">Geht!</td><td class=\"de\">Nehmt!</td><td class=\"de\">Seid!</td></tr>\n<tr><td>Sie</td><td>verb + Sie (inverted)</td><td class=\"de\">Gehen Sie!</td><td class=\"de\">Nehmen Sie!</td><td class=\"de\">Seien Sie!</td></tr>\n</table>\n<p>Soften with bitte: <span class=\"de\">Nehmen Sie bitte die U-Bahn.</span> Separable prefixes go to the end: <span class=\"de\">Steigen Sie am Dom aus!</span> (Get off at the cathedral!)</p>\n<h3>2. Direction phrases (learn as chunks)</h3>\n<ul>\n<li><span class=\"de\">Entschuldigung, wo ist der Bahnhof?</span> — Excuse me, where is the station?</li>\n<li><span class=\"de\">Wie komme ich zum Bahnhof / zur Post?</span> — How do I get to...? (zum = m/n, zur = f)</li>\n<li><span class=\"de\">Gehen Sie geradeaus / links / rechts.</span> — Go straight / left / right.</li>\n<li><span class=\"de\">Die erste Straße links, dann rechts.</span> — First street left, then right.</li>\n<li><span class=\"de\">Es ist weit / in der Nähe / neben der Bank.</span> — far / nearby / next to the bank.</li>\n</ul>\n<h3>3. Getting around: mit + transport</h3>\n<p><span class=\"de\">Ich fahre <b>mit dem</b> Bus / <b>mit der</b> U-Bahn / <b>mit dem</b> Auto.</span> On foot: <span class=\"de\">Ich gehe <b>zu Fuß</b>.</span> (mit takes the dative — learn these as chunks; more tomorrow.)</p>\n</details>"
+    },
+    {
+      "id": "d20-s1",
+      "day": 20,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Time prepositions (review + complete)</h3>\n<table>\n<tr><td class=\"de\"><b>um</b> 8 Uhr</td><td>at 8 (clock times)</td></tr>\n<tr><td class=\"de\"><b>am</b> Montag / am Abend</td><td>on Monday / in the evening</td></tr>\n<tr><td class=\"de\"><b>im</b> Mai / im Winter</td><td>in May / in winter</td></tr>\n<tr><td class=\"de\"><b>von</b> 9 <b>bis</b> 17 Uhr</td><td>from 9 to 5</td></tr>\n<tr><td class=\"de\"><b>seit</b> einem Monat</td><td>for/since a month (Ich lerne seit einem Monat Deutsch)</td></tr>\n</table>\n<h3>2. Place: where TO? (movement)</h3>\n<table>\n<tr><td class=\"de\"><b>nach</b> Berlin / nach Hause</td><td>to cities &amp; countries / home(ward)</td></tr>\n<tr><td class=\"de\"><b>zum</b> Arzt, zum Bahnhof / <b>zur</b> Schule</td><td>to places &amp; people in town (zu + dem = zum, zu + der = zur)</td></tr>\n<tr><td class=\"de\"><b>in</b> die Stadt / ins Kino</td><td>into (in + das = ins)</td></tr>\n</table>\n<h3>3. Place: WHERE? (position)</h3>\n<table>\n<tr><td class=\"de\"><b>in</b> der Küche / im Büro</td><td>in the kitchen / in the office (in + dem = im)</td></tr>\n<tr><td class=\"de\"><b>an</b> der Haltestelle / am Bahnhof</td><td>at the stop / at the station (an + dem = am)</td></tr>\n<tr><td class=\"de\"><b>auf</b> dem Tisch</td><td>on the table</td></tr>\n<tr><td class=\"de\"><b>bei</b> der Arbeit / beim Arzt / bei Anna</td><td>at work / at the doctor's / at Anna's</td></tr>\n<tr><td class=\"de\"><b>neben</b> der Bank</td><td>next to the bank</td></tr>\n</table>\n<h3>4. People &amp; things</h3>\n<table>\n<tr><td class=\"de\"><b>mit</b> dem Bus / mit Milch / mit Anna</td><td>with, by (transport)</td></tr>\n<tr><td class=\"de\"><b>ohne</b> Zucker</td><td>without (+ accusative)</td></tr>\n<tr><td class=\"de\"><b>für</b> dich / für meinen Bruder</td><td>for (+ accusative!)</td></tr>\n<tr><td class=\"de\"><b>aus</b> Nigeria / aus der Schweiz</td><td>from (origin)</td></tr>\n<tr><td class=\"de\"><b>von</b> meiner Mutter</td><td>from (a person/sender)</td></tr>\n</table>\n<div class=\"tip\">💡 A1 strategy: don't memorize case tables for prepositions — memorize the CHUNKS above exactly as written. They cover 90% of what the exam and real life need. (The pattern behind them — dative after mit/zu/bei/von, accusative after für/ohne — clicks naturally at A2.)</div>\n</details>"
+    },
+    {
+      "id": "d22-s1",
+      "day": 22,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. gern / lieber / am liebsten</h3>\n<ul>\n<li><span class=\"de\">Ich spiele <b>gern</b> Fußball.</span> — I like playing football.</li>\n<li><span class=\"de\">Ich schwimme <b>lieber</b>.</span> — I prefer swimming.</li>\n<li><span class=\"de\">Ich lese <b>am liebsten</b>.</span> — I like reading best of all.</li>\n<li>Negative: <span class=\"de\">Ich koche <b>nicht gern</b>.</span></li>\n</ul>\n<h3>2. THE rule: the verb is ALWAYS second</h3>\n<p>Position 1 can be anything — subject, time, place. The conjugated verb never moves from position 2:</p>\n<table>\n<tr><th>Position 1</th><th>Verb (2)</th><th>Rest</th></tr>\n<tr><td class=\"de\">Ich</td><td class=\"de\">spiele</td><td class=\"de\">am Sonntag Tennis.</td></tr>\n<tr><td class=\"de\">Am Sonntag</td><td class=\"de\">spiele</td><td class=\"de\"><b>ich</b> Tennis.</td></tr>\n<tr><td class=\"de\">Tennis</td><td class=\"de\">spiele</td><td class=\"de\">ich am Sonntag.</td></tr>\n</table>\n<div class=\"warn\">⚠️ English speakers write \"Am Sonntag ich spiele...\" — WRONG. When anything other than the subject starts the sentence, subject and verb swap (\"inversion\"). Drill this today until it hurts, then until it doesn't.</div>\n<h3>3. Time before place</h3>\n<p>When both appear, time usually comes first: <span class=\"de\">Ich gehe <b>am Samstag</b> <b>ins Kino</b>.</span></p>\n<h3>4. Frequency words</h3>\n<p class=\"de\">immer (always), oft (often), manchmal (sometimes), selten (rarely), nie (never)</p>\n<p><span class=\"de\">Ich gehe <b>oft</b> schwimmen. <b>Manchmal</b> spiele ich Schach.</span> (See? Verb still second.)</p>\n</details>"
+    },
+    {
+      "id": "d23-s1",
+      "day": 23,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. es gibt + accusative (there is/are)</h3>\n<ul>\n<li><span class=\"de\">Es gibt <b>einen</b> Balkon.</span> — There's a balcony. (m → einen!)</li>\n<li><span class=\"de\">Es gibt <b>eine</b> Küche und <b>ein</b> Bad.</span></li>\n<li><span class=\"de\">Es gibt <b>keinen</b> Aufzug.</span> — There's no lift.</li>\n<li>Question: <span class=\"de\">Gibt es einen Garten?</span></li>\n</ul>\n<h3>2. Describing with adjectives (after sein — no endings needed!)</h3>\n<p><span class=\"de\">Die Wohnung ist <b>hell, groß und zentral</b>.</span> Adjectives after sein/finden never change — enjoy it while it lasts (endings before nouns are A2 material).</p>\n<h3>3. Reading housing ads — the abbreviations</h3>\n<table>\n<tr><td class=\"de\">2-Zi.-Whg.</td><td>2-room flat (zwei-Zimmer-Wohnung)</td></tr>\n<tr><td class=\"de\">60 m²</td><td>60 square metres (Quadratmeter)</td></tr>\n<tr><td class=\"de\">KM / WM</td><td>Kaltmiete / Warmmiete (rent without / with heating &amp; costs)</td></tr>\n<tr><td class=\"de\">NK</td><td>Nebenkosten (utility costs)</td></tr>\n<tr><td class=\"de\">EBK</td><td>Einbauküche (fitted kitchen)</td></tr>\n</table>\n</details>"
+    },
+    {
+      "id": "d24-s1",
+      "day": 24,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Weather runs on \"es\"</h3>\n<ul>\n<li><span class=\"de\">Es regnet.</span> — It's raining. · <span class=\"de\">Es schneit.</span> — It's snowing.</li>\n<li><span class=\"de\">Es ist sonnig / windig / bewölkt / neblig.</span> — sunny / windy / cloudy / foggy.</li>\n<li><span class=\"de\">Es ist warm / kalt / heiß / kühl.</span></li>\n<li><span class=\"de\">Die Sonne scheint.</span> — The sun is shining.</li>\n</ul>\n<div class=\"warn\">⚠️ \"I am cold\" = <span class=\"de\"><b>Mir</b> ist kalt</span> — NOT \"Ich bin kalt\" (that means you're a cold-hearted person!).</div>\n<h3>2. Degrees</h3>\n<p><span class=\"de\">Es sind 25 Grad. / Es sind minus 5 Grad.</span> — It's 25° / −5°. Question: <span class=\"de\">Wie viel Grad sind es?</span></p>\n<h3>3. Talking about tomorrow — no future tense needed!</h3>\n<p>German uses the present + a time word: <span class=\"de\"><b>Morgen</b> regnet es. <b>Am Wochenende</b> wird es warm.</span> (wird = werden — \"it's getting/going to be\"!)</p>\n<h3>4. Connecting with denn (because)</h3>\n<p><span class=\"de\">Ich bleibe zu Hause, <b>denn</b> es regnet.</span> — denn doesn't change word order. Easy and exam-friendly.</p>\n</details>"
+    },
+    {
+      "id": "d25-s1",
+      "day": 25,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Saying what hurts — three ready-made patterns</h3>\n<ul>\n<li><span class=\"de\">Ich habe <b>Kopfschmerzen</b>.</span> — I have a headache. (Schmerzen = pains: Bauchschmerzen, Rückenschmerzen, Halsschmerzen, Zahnschmerzen)</li>\n<li><span class=\"de\"><b>Mein Kopf tut weh.</b> / Meine Beine tun weh.</span> — My head hurts / my legs hurt. (tut/tun weh)</li>\n<li><span class=\"de\"><b>Mir geht es nicht gut.</b> / Mir ist schlecht.</span> — I'm not well / I feel sick.</li>\n</ul>\n<h3>2. sollen for doctor's advice (Day 18 pays off)</h3>\n<p><span class=\"de\">Sie sollen viel Wasser trinken und im Bett bleiben.</span> — You should drink lots of water and stay in bed.</p>\n<h3>3. Doctor-visit phrases</h3>\n<ul>\n<li><span class=\"de\">Was fehlt Ihnen?</span> — What's wrong? (lit. \"what is missing to you\")</li>\n<li><span class=\"de\">Ich bin krank. / Ich habe Fieber.</span> — I'm sick / I have a fever.</li>\n<li><span class=\"de\">Ich brauche eine Krankschreibung.</span> — I need a sick note (very important for German employers!).</li>\n<li><span class=\"de\">Gute Besserung!</span> — Get well soon!</li>\n</ul>\n</details>"
+    },
+    {
+      "id": "d26-s1",
+      "day": 26,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. sein in the past: war</h3>\n<table>\n<tr><td class=\"de\">ich war</td><td>I was</td><td class=\"de\">wir waren</td><td>we were</td></tr>\n<tr><td class=\"de\">du warst</td><td>you were</td><td class=\"de\">ihr wart</td><td>you all were</td></tr>\n<tr><td class=\"de\">er/sie/es war</td><td>he/she/it was</td><td class=\"de\">sie/Sie waren</td><td>they/you were</td></tr>\n</table>\n<h3>2. haben in the past: hatte</h3>\n<table>\n<tr><td class=\"de\">ich hatte</td><td>I had</td><td class=\"de\">wir hatten</td><td>we had</td></tr>\n<tr><td class=\"de\">du hattest</td><td>you had</td><td class=\"de\">ihr hattet</td><td>you all had</td></tr>\n<tr><td class=\"de\">er/sie/es hatte</td><td>he/she/it had</td><td class=\"de\">sie/Sie hatten</td><td>they/you had</td></tr>\n</table>\n<div class=\"tip\">💡 Germans use war/hatte constantly in speech — for everything else they use the perfect tense (tomorrow!). Master these two tables and you can already tell simple stories.</div>\n<h3>3. Past time expressions</h3>\n<p class=\"de\">gestern (yesterday), vorgestern (day before), letzte Woche (last week), letzten Monat, letztes Jahr, früher (in the past, back then), am Montag (last Monday, from context)</p>\n<h3>4. Example transformation</h3>\n<table>\n<tr><th>Today</th><th>Yesterday</th></tr>\n<tr><td class=\"de\">Ich bin müde.</td><td class=\"de\">Ich war müde.</td></tr>\n<tr><td class=\"de\">Wir haben keine Zeit.</td><td class=\"de\">Wir hatten keine Zeit.</td></tr>\n<tr><td class=\"de\">Das Wetter ist schön.</td><td class=\"de\">Das Wetter war schön.</td></tr>\n</table>\n</details>"
+    },
+    {
+      "id": "d27-s1",
+      "day": 27,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. The formula</h3>\n<p style=\"font-size:18px\" class=\"de\"><b>haben</b> (position 2) + ... + <b>Partizip II</b> (at the end)</p>\n<p><span class=\"de\">Ich <b>habe</b> gestern Pizza <b>gegessen</b>.</span> — I ate pizza yesterday. Sound familiar? It's the same verb bracket as the modals!</p>\n<h3>2. Building the participle — regular verbs: ge + stem + t</h3>\n<table>\n<tr><td class=\"de\">machen → <b>gemacht</b></td><td class=\"de\">kaufen → <b>gekauft</b></td></tr>\n<tr><td class=\"de\">spielen → <b>gespielt</b></td><td class=\"de\">lernen → <b>gelernt</b></td></tr>\n<tr><td class=\"de\">arbeiten → <b>gearbeitet</b></td><td class=\"de\">kochen → <b>gekocht</b></td></tr>\n</table>\n<h3>3. Irregular participles — ge + stem(change) + en. Learn these 10 today:</h3>\n<table>\n<tr><td class=\"de\">essen → gegessen</td><td class=\"de\">trinken → getrunken</td></tr>\n<tr><td class=\"de\">sehen → gesehen</td><td class=\"de\">lesen → gelesen</td></tr>\n<tr><td class=\"de\">schreiben → geschrieben</td><td class=\"de\">sprechen → gesprochen</td></tr>\n<tr><td class=\"de\">nehmen → genommen</td><td class=\"de\">treffen → getroffen</td></tr>\n<tr><td class=\"de\">schlafen → geschlafen</td><td class=\"de\">finden → gefunden</td></tr>\n</table>\n<h3>4. Two special groups (no ge-!)</h3>\n<ul>\n<li>Verbs in <b>-ieren</b>: <span class=\"de\">studieren → studiert, fotografieren → fotografiert</span></li>\n<li>Verbs starting with <b>be-, ver-, ent-</b>: <span class=\"de\">bestellen → bestellt, verstehen → verstanden, bezahlen → bezahlt</span></li>\n<li>Separable verbs squeeze ge inside: <span class=\"de\">einkaufen → ein<b>ge</b>kauft, aufräumen → auf<b>ge</b>räumt</span></li>\n</ul>\n</details>"
+    },
+    {
+      "id": "d28-s1",
+      "day": 28,
+      "title": "📖 Grammar lesson",
+      "html": "<details open><summary>📖 Grammar lesson</summary>\n<h3>1. Movement &amp; change verbs use sein, not haben</h3>\n<p>If the verb means going from A to B (or a change of state), the helper is <b>sein</b>:</p>\n<table>\n<tr><th>Infinitive</th><th>Perfect</th><th>English</th></tr>\n<tr><td class=\"de\">gehen</td><td class=\"de\">ich <b>bin</b> gegangen</td><td>went</td></tr>\n<tr><td class=\"de\">fahren</td><td class=\"de\">ich <b>bin</b> gefahren</td><td>drove/went</td></tr>\n<tr><td class=\"de\">kommen</td><td class=\"de\">ich <b>bin</b> gekommen</td><td>came</td></tr>\n<tr><td class=\"de\">fliegen</td><td class=\"de\">ich <b>bin</b> geflogen</td><td>flew</td></tr>\n<tr><td class=\"de\">aufstehen</td><td class=\"de\">ich <b>bin</b> aufgestanden</td><td>got up</td></tr>\n<tr><td class=\"de\">bleiben ⚠️</td><td class=\"de\">ich <b>bin</b> geblieben</td><td>stayed (no movement, but still sein!)</td></tr>\n</table>\n<p><span class=\"de\">Ich <b>bin</b> gestern nach Berlin <b>gefahren</b>. Er <b>ist</b> um sechs <b>aufgestanden</b>. Wir <b>sind</b> zu Hause <b>geblieben</b>.</span></p>\n<div class=\"tip\">💡 Quick check: can you ask \"wohin?\" (where to?) about the verb? Then it's probably sein. Exceptions to memorize: bleiben and passieren (to happen) also take sein.</div>\n<h3>2. Your complete past-tense toolkit</h3>\n<ul>\n<li>sein → <span class=\"de\">war</span> · haben → <span class=\"de\">hatte</span> (simple past, Day 26)</li>\n<li>Movement/change verbs → <span class=\"de\">sein + Partizip</span></li>\n<li>Everything else → <span class=\"de\">haben + Partizip</span></li>\n</ul>\n<p>That's ALL the past tense A1 requires. 🎉</p>\n</details>"
+    },
+    {
+      "id": "d29-s1",
+      "day": 29,
+      "title": "📖 Grammar & formal language lesson",
+      "html": "<details open><summary>📖 Grammar &amp; formal language lesson</summary>\n<h3>1. The form (das Formular) — decode these fields</h3>\n<table>\n<tr><td class=\"de\">der Vorname / der Nachname (Familienname)</td><td>first name / surname</td></tr>\n<tr><td class=\"de\">das Geburtsdatum / der Geburtsort</td><td>date / place of birth</td></tr>\n<tr><td class=\"de\">die Staatsangehörigkeit</td><td>nationality</td></tr>\n<tr><td class=\"de\">die Adresse: Straße, Hausnummer, PLZ (Postleitzahl), Ort</td><td>street, number, postcode, town</td></tr>\n<tr><td class=\"de\">der Familienstand: ledig / verheiratet / geschieden</td><td>marital status</td></tr>\n<tr><td class=\"de\">die Unterschrift / unterschreiben</td><td>signature / to sign</td></tr>\n<tr><td class=\"de\">ankreuzen / ausfüllen</td><td>to tick / to fill in</td></tr>\n</table>\n<h3>2. Formal letters &amp; emails — the frame</h3>\n<table>\n<tr><th>Formal (Sie)</th><th>Informal (du)</th></tr>\n<tr><td class=\"de\">Sehr geehrte Frau Müller, / Sehr geehrter Herr Kim, / Sehr geehrte Damen und Herren,</td><td class=\"de\">Liebe Anna, / Lieber Tom,</td></tr>\n<tr><td class=\"de\">Mit freundlichen Grüßen<br>[full name]</td><td class=\"de\">Viele Grüße / Liebe Grüße<br>[first name]</td></tr>\n</table>\n<p>Useful formal middles: <span class=\"de\">Ich möchte Sie fragen, ... / Können Sie mir bitte helfen? / Vielen Dank im Voraus.</span> (Thanks in advance.)</p>\n<h3>3. Amt survival (government offices)</h3>\n<ul>\n<li><span class=\"de\">die Anmeldung</span> — registration (you must register your address in Germany!)</li>\n<li><span class=\"de\">der Termin, das Dokument, der Pass, das Visum, die Nummer ziehen</span> (take a queue number)</li>\n<li><span class=\"de\">Ich spreche nur ein bisschen Deutsch. Können Sie bitte langsam sprechen?</span> — your legal right to say!</li>\n</ul>\n<h3>4. The A1 exam format (Goethe-Zertifikat A1 / telc A1 — same structure)</h3>\n<table>\n<tr><th>Part</th><th>What happens</th><th>Time</th></tr>\n<tr><td><b>Hören</b> (listening)</td><td>3 parts: short dialogues, announcements, phone messages. Each plays twice (part 2 once).</td><td>~20 min</td></tr>\n<tr><td><b>Lesen</b> (reading)</td><td>3 parts: short texts, ads, signs/notices. True-false and multiple choice.</td><td>~25 min</td></tr>\n<tr><td><b>Schreiben</b> (writing)</td><td>Fill in a form + write a short message (~30 words) covering 3 given points.</td><td>~20 min</td></tr>\n<tr><td><b>Sprechen</b> (speaking)</td><td>In a group: 1) introduce yourself, 2) ask/answer questions on a topic card, 3) make/respond to requests.</td><td>~15 min</td></tr>\n</table>\n<div class=\"tip\">💡 Strategy gold: In Schreiben, cover ALL THREE bullet points — that's most of the marks. In Sprechen part 1, your self-introduction follows a fixed menu: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby — you've practiced it since Day 4! You'll also be asked to SPELL something (Day 1!) and say a number (Day 3!).</div>\n</details>"
+    }
+  ],
+  "search": [
+    {
+      "id": "grammar-d1-s1",
+      "kind": "Grammar",
+      "day": 1,
+      "title": "📖 Grammar & pronunciation lesson",
+      "text": "📖 Grammar & pronunciation lesson 1. The German alphabet (das Alphabet) Same 26 letters as English, plus ä ö ü ß . The letter names matter — Germans spell names on the phone constantly. A \"ah\" B \"bay\" C \"tsay\" D \"day\" E \"ay\" F \"eff\" G \"gay\" H \"hah\" I \"ee\" J \"yot\" K \"kah\" L \"ell\" M \"emm\" N \"enn\" O \"oh\" P \"pay\" Q \"koo\" R \"err\" S \"ess\" T \"tay\" U \"oo\" V \"fow\" W \"vay\" X \"iks\" Y \"üpsilon\" Z \"tsett\" ß \"ess-tsett\" ä/ö/ü = a/o/u + Umlaut 2. Three golden rules German is phonetic. Words sound how they're w",
+      "sectionId": "d1-s1"
+    },
+    {
+      "id": "vocab-d1-1",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Hallo",
+      "text": "hello",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-2",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Guten Morgen",
+      "text": "good morning",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-3",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Guten Tag",
+      "text": "good day / hello (daytime)",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-4",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Guten Abend",
+      "text": "good evening",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-5",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Gute Nacht",
+      "text": "good night (before sleeping)",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-6",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Tschüss",
+      "text": "bye (informal)",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-7",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Auf Wiedersehen",
+      "text": "goodbye (formal)",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-8",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "ja",
+      "text": "yes",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-9",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "nein",
+      "text": "no",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-10",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "danke (schön)",
+      "text": "thank you (very much)",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-11",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "bitte",
+      "text": "please / you're welcome",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-12",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Entschuldigung",
+      "text": "excuse me / sorry",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-13",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Wie bitte?",
+      "text": "pardon? / say that again?",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-14",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "und",
+      "text": "and",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-15",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "oder",
+      "text": "or",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "vocab-d1-16",
+      "kind": "Vocabulary",
+      "day": 1,
+      "title": "Alles klar",
+      "text": "all right / got it",
+      "sectionId": "d1-s2"
+    },
+    {
+      "id": "grammar-d2-s1",
+      "kind": "Grammar",
+      "day": 2,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Personal pronouns German English German English ich I wir we du you (informal) ihr you all (informal) er / sie / es he / she / it sie they Sie you (FORMAL, singular & plural — always capitalized) ⚠️ Three different \"sie\"! sie = she, sie = they, Sie (capital) = formal you. The verb ending and context tell you which: sie ist (she is), sie sind (they are), Sie sind (you are, formal). 2. The verb sein (to be) — completely irregular, memorize it today ich bin I am wir sind we are",
+      "sectionId": "d2-s1"
+    },
+    {
+      "id": "vocab-d2-17",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "heißen",
+      "text": "to be called",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-18",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Ich heiße ...",
+      "text": "My name is ...",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-19",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Wie heißt du? / Wie heißen Sie?",
+      "text": "What's your name? (informal / formal)",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-20",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "der Name",
+      "text": "name",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-21",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Wer ist das?",
+      "text": "Who is that?",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-22",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Das ist ...",
+      "text": "This/That is ...",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-23",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Herr / Frau",
+      "text": "Mr / Mrs-Ms",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-24",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Freut mich!",
+      "text": "Nice to meet you!",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-25",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Wie geht's? / Wie geht es Ihnen?",
+      "text": "How are you? (informal / formal)",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-26",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "(sehr) gut",
+      "text": "(very) good/well",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-27",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "es geht",
+      "text": "so-so",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-28",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "schlecht",
+      "text": "bad",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-29",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "auch",
+      "text": "also, too",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-30",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "Und dir? / Und Ihnen?",
+      "text": "And you? (informal / formal)",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "vocab-d2-31",
+      "kind": "Vocabulary",
+      "day": 2,
+      "title": "müde",
+      "text": "tired",
+      "sectionId": "d2-s2"
+    },
+    {
+      "id": "grammar-d3-s1",
+      "kind": "Grammar",
+      "day": 3,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. The verb haben (to have) — the 2nd most important verb ich habe I have wir haben we have du hast you have ihr habt you all have er/sie/es hat he/she/it has sie/Sie haben they/you(formal) have 💡 Germans have hunger, thirst and time: Ich habe Hunger / Durst / Zeit . But age uses sein : Ich bin 30 (Jahre alt) . 2. Numbers 0–20 (memorize these) 0 null 1 eins 2 zwei 3 drei 4 vier 5 fünf 6 sechs 7 sieben 8 acht 9 neun 10 zehn 11 elf 12 zwölf 13 dreizehn 14 vierzehn 15 fünfzehn 16",
+      "sectionId": "d3-s1"
+    },
+    {
+      "id": "vocab-d3-32",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "die Nummer",
+      "text": "number",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-33",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "die Telefonnummer",
+      "text": "phone number",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-34",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "die Handynummer",
+      "text": "mobile number",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-35",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "Wie alt bist du? / Wie alt sind Sie?",
+      "text": "How old are you?",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-36",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "Ich bin ... Jahre alt.",
+      "text": "I am ... years old.",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-37",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "das Jahr",
+      "text": "year",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-38",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "alt",
+      "text": "old",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-39",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "jung",
+      "text": "young",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-40",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "der Hunger / der Durst",
+      "text": "hunger / thirst",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-41",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "die Zeit",
+      "text": "time",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-42",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "viel / wenig",
+      "text": "much, a lot / little",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "vocab-d3-43",
+      "kind": "Vocabulary",
+      "day": 3,
+      "title": "oder",
+      "text": "or",
+      "sectionId": "d3-s2"
+    },
+    {
+      "id": "grammar-d4-s1",
+      "kind": "Grammar",
+      "day": 4,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Regular verbs — one pattern, thousands of verbs Take the infinitive (e.g. kommen = to come), remove -en to get the stem ( komm- ), add these endings: Pronoun Ending kommen wohnen (live) lernen (learn) ich -e komme wohne lerne du -st kommst wohnst lernst er/sie/es -t kommt wohnt lernt wir -en kommen wohnen lernen ihr -t kommt wohnt lernt sie/Sie -en kommen wohnen lernen 💡 Memory trick: the endings spell \"e-st-t-en-t-en\" . Chant it like a rhythm: e, st, t, en, t, en! 2. One u",
+      "sectionId": "d4-s1"
+    },
+    {
+      "id": "vocab-d4-44",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "Deutschland / Deutsch",
+      "text": "Germany / German",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-45",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "England / Englisch",
+      "text": "England / English",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-46",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "Österreich",
+      "text": "Austria",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-47",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "die Schweiz",
+      "text": "Switzerland",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-48",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "Frankreich / Französisch",
+      "text": "France / French",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-49",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "Spanien / Spanisch",
+      "text": "Spain / Spanish",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-50",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "die USA / Amerika",
+      "text": "the USA / America",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-51",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "Nigeria",
+      "text": "Nigeria",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-52",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "das Land",
+      "text": "country",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-53",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "die Stadt",
+      "text": "city",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-54",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "die Sprache",
+      "text": "language",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-55",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "sprechen",
+      "text": "to speak",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-56",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "wohnen",
+      "text": "to live (reside)",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-57",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "lernen",
+      "text": "to learn",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-58",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "ein bisschen",
+      "text": "a little bit",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "vocab-d4-59",
+      "kind": "Vocabulary",
+      "day": 4,
+      "title": "aber",
+      "text": "but",
+      "sectionId": "d4-s2"
+    },
+    {
+      "id": "grammar-d5-s1",
+      "kind": "Grammar",
+      "day": 5,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Yes/No questions: put the verb FIRST Statement Question Du bist Lehrer. Bist du Lehrer? Sie kommt aus Berlin. Kommt sie aus Berlin? Ihr habt Zeit. Habt ihr Zeit? No \"do/does\" needed — German just flips verb and subject. Answer with Ja, ... / Nein, ... 💡 Bonus word: doch = \"yes I do!\" after a negative question. Sprichst du kein Deutsch? — Doch! (Yes I do!) 2. Talking about jobs — no article! Ich bin Lehrer. (I am a teacher — German drops the \"a\" with professions.) Also: Ich ",
+      "sectionId": "d5-s1"
+    },
+    {
+      "id": "vocab-d5-60",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Beruf",
+      "text": "profession, job",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-61",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "arbeiten (als)",
+      "text": "to work (as)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-62",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Lehrer / die Lehrerin",
+      "text": "teacher (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-63",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Arzt / die Ärztin",
+      "text": "doctor (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-64",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Ingenieur / die Ingenieurin",
+      "text": "engineer (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-65",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Verkäufer / die Verkäuferin",
+      "text": "salesperson (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-66",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Kellner / die Kellnerin",
+      "text": "waiter / waitress",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-67",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Student / die Studentin",
+      "text": "university student (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-68",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Koch / die Köchin",
+      "text": "cook, chef (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-69",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "die Firma",
+      "text": "company",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-70",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "das Büro",
+      "text": "office",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-71",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Kollege / die Kollegin",
+      "text": "colleague (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-72",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "der Chef / die Chefin",
+      "text": "boss (m/f)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-73",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "arbeitslos",
+      "text": "unemployed",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-74",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "studieren",
+      "text": "to study (at university)",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "vocab-d5-75",
+      "kind": "Vocabulary",
+      "day": 5,
+      "title": "machen",
+      "text": "to do, to make",
+      "sectionId": "d5-s2"
+    },
+    {
+      "id": "grammar-d6-s1",
+      "kind": "Grammar",
+      "day": 6,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Possessive pronouns Owner Possessive English ich mein my du dein your (informal) er/es sein his / its sie (she) ihr her wir unser our ihr euer your (plural) sie (they) ihr their Sie Ihr your (formal) 2. The ending matches the NEXT word's gender Possessives behave like ein : no ending for masculine and neuter, -e for feminine and plural (in the nominative — more cases later): mein Vater my father (m) mein e Mutter my mother (f) mein Kind my child (n) mein e Eltern my parents ",
+      "sectionId": "d6-s1"
+    },
+    {
+      "id": "vocab-d6-76",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Familie",
+      "text": "family",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-77",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Eltern (pl.)",
+      "text": "parents",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-78",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Mutter / der Vater",
+      "text": "mother / father",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-79",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "der Bruder / die Schwester",
+      "text": "brother / sister",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-80",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Geschwister (pl.)",
+      "text": "siblings",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-81",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "das Kind / die Kinder",
+      "text": "child / children",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-82",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "der Sohn / die Tochter",
+      "text": "son / daughter",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-83",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Großeltern (pl.)",
+      "text": "grandparents",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-84",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "die Oma / der Opa",
+      "text": "grandma / grandpa",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-85",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "der Mann / die Frau",
+      "text": "husband, man / wife, woman",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-86",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "der Freund / die Freundin",
+      "text": "(boy)friend / (girl)friend",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-87",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "verheiratet",
+      "text": "married",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-88",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "ledig",
+      "text": "single",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-89",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "geschieden",
+      "text": "divorced",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-90",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "zusammen",
+      "text": "together",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-91",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "nett",
+      "text": "nice, kind",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-92",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "lieben",
+      "text": "to love",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "vocab-d6-93",
+      "kind": "Vocabulary",
+      "day": 6,
+      "title": "haben + Geschwister",
+      "text": "Hast du Geschwister? = Do you have siblings?",
+      "sectionId": "d6-s2"
+    },
+    {
+      "id": "grammar-d8-s1",
+      "kind": "Grammar",
+      "day": 8,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Every noun has a gender Gender \"the\" \"a/an\" Example masculine der ein der Tisch / ein Tisch (table) feminine die eine die Lampe / eine Lampe (lamp) neuter das ein das Buch / ein Buch (book) plural die — die Bücher (books) Gender is grammatical, not logical ( das Mädchen = the girl is neuter!). Always learn noun + article together. 2. Ending clues (right ~80% of the time) Usually DIE (feminine) -ung, -heit, -keit, -schaft, -ion, -e die Zeitung, die Freiheit, die Lektion, die ",
+      "sectionId": "d8-s1"
+    },
+    {
+      "id": "vocab-d8-94",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "der Tisch",
+      "text": "table",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-95",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "der Stuhl",
+      "text": "chair",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-96",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "der Schlüssel",
+      "text": "key",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-97",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "der Computer",
+      "text": "computer",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-98",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "die Lampe",
+      "text": "lamp",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-99",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "die Tasche",
+      "text": "bag",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-100",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "die Tür",
+      "text": "door",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-101",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "die Uhr",
+      "text": "clock, watch",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-102",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "das Buch",
+      "text": "book",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-103",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "das Handy",
+      "text": "mobile phone",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-104",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "das Fenster",
+      "text": "window",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-105",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "das Bett",
+      "text": "bed",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-106",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "der Fernseher",
+      "text": "TV set",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-107",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "die Flasche",
+      "text": "bottle",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-108",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "das Bild",
+      "text": "picture",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "vocab-d8-109",
+      "kind": "Vocabulary",
+      "day": 8,
+      "title": "neu / kaputt",
+      "text": "new / broken",
+      "sectionId": "d8-s2"
+    },
+    {
+      "id": "grammar-d9-s1",
+      "kind": "Grammar",
+      "day": 9,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson The 5 plural patterns Pattern Typical for Examples -e (often + umlaut) many masculine nouns der Tisch → die Tische der Stuhl → die Stühle -(e)n most feminine nouns die Lampe → die Lampen die Frau → die Frauen die Freundin → die Freundinnen -er (often + umlaut) many short neuter nouns das Kind → die Kinder das Buch → die Bücher -s foreign/modern words das Handy → die Handys das Auto → die Autos — (no ending) , maybe umlaut nouns in -er, -el, -chen der Lehrer → die Lehrer die Mut",
+      "sectionId": "d9-s1"
+    },
+    {
+      "id": "vocab-d9-110",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Mann",
+      "text": "die Männer",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-111",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "die Frau",
+      "text": "die Frauen",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-112",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "das Kind",
+      "text": "die Kinder",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-113",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Bruder",
+      "text": "die Brüder",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-114",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "die Schwester",
+      "text": "die Schwestern",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-115",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "das Buch",
+      "text": "die Bücher",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-116",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Tisch",
+      "text": "die Tische",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-117",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Stuhl",
+      "text": "die Stühle",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-118",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "die Lampe",
+      "text": "die Lampen",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-119",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "das Auto",
+      "text": "die Autos",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-120",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "das Handy",
+      "text": "die Handys",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-121",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Lehrer",
+      "text": "die Lehrer",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-122",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "die Mutter",
+      "text": "die Mütter",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "vocab-d9-123",
+      "kind": "Vocabulary",
+      "day": 9,
+      "title": "der Apfel",
+      "text": "die Äpfel",
+      "sectionId": "d9-s2"
+    },
+    {
+      "id": "grammar-d10-s1",
+      "kind": "Grammar",
+      "day": 10,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Subject vs object In Der Mann kauft den Tisch (The man buys the table), \"der Mann\" does the action (subject = nominative) and \"den Tisch\" receives it (direct object = accusative ). 2. The accusative table — only masculine changes! Nominative Accusative masculine der / ein / kein den / einen / keinen feminine die / eine / keine die / eine / keine (same!) neuter das / ein / kein das / ein / kein (same!) plural die / — / keine die / — / keine (same!) 💡 Remember one rhyme: \"der",
+      "sectionId": "d10-s1"
+    },
+    {
+      "id": "vocab-d10-124",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "brauchen",
+      "text": "to need",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-125",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "kaufen",
+      "text": "to buy",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-126",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "suchen",
+      "text": "to look for",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-127",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "finden",
+      "text": "to find",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-128",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "sehen",
+      "text": "to see (du siehst, er sieht)",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-129",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "nehmen",
+      "text": "to take (du nimmst, er nimmt)",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-130",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "trinken",
+      "text": "to drink",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-131",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "essen",
+      "text": "to eat (du isst, er isst)",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-132",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "der Hund / die Katze",
+      "text": "dog / cat",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-133",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "der Kaffee / der Tee",
+      "text": "coffee / tea",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-134",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "das Wasser",
+      "text": "water",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "vocab-d10-135",
+      "kind": "Vocabulary",
+      "day": 10,
+      "title": "natürlich",
+      "text": "of course",
+      "sectionId": "d10-s2"
+    },
+    {
+      "id": "grammar-d11-s1",
+      "kind": "Grammar",
+      "day": 11,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson The golden rule Use kein Use nicht to negate a NOUN that has ein or no article Ich habe kein Auto. Ich trinke keinen Kaffee. Das ist keine Lampe. to negate verbs, adjectives, names, and nouns with der/die/das or possessives Ich arbeite nicht . Das Auto ist nicht neu. Das ist nicht mein Auto. Ich kaufe den Tisch nicht . Where does nicht go? End of a simple sentence: Er kommt nicht . Before an adjective: Das ist nicht gut. Before a place/phrase it negates: Ich wohne nicht in Berl",
+      "sectionId": "d11-s1"
+    },
+    {
+      "id": "vocab-d11-136",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Brot / das Brötchen",
+      "text": "bread / bread roll",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-137",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Käse",
+      "text": "cheese",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-138",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "die Butter",
+      "text": "butter",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-139",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Ei, die Eier",
+      "text": "egg(s)",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-140",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "die Milch",
+      "text": "milk",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-141",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Fleisch",
+      "text": "meat",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-142",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Fisch",
+      "text": "fish",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-143",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Gemüse",
+      "text": "vegetables",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-144",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Obst",
+      "text": "fruit",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-145",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "die Kartoffel, -n",
+      "text": "potato",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-146",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Reis",
+      "text": "rice",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-147",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "die Nudeln (pl.)",
+      "text": "pasta, noodles",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-148",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Zucker / das Salz",
+      "text": "sugar / salt",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-149",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Saft",
+      "text": "juice",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-150",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "das Bier / der Wein",
+      "text": "beer / wine",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-151",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "lecker",
+      "text": "tasty, delicious",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-152",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "der Hunger / der Durst",
+      "text": "hunger / thirst (review)",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "vocab-d11-153",
+      "kind": "Vocabulary",
+      "day": 11,
+      "title": "frühstücken",
+      "text": "to have breakfast",
+      "sectionId": "d11-s2"
+    },
+    {
+      "id": "grammar-d12-s1",
+      "kind": "Grammar",
+      "day": 12,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. möchten = would like (your politeness superpower) ich möchte I would like wir möchten we would like du möchtest you would like ihr möchtet you all would like er/sie möchte he/she would like sie/Sie möchten they/you would like möchten takes the accusative: Ich möchte einen Kaffee. With a second verb, that verb goes to the END: Ich möchte einen Kaffee trinken . (This \"verb bracket\" returns with all modal verbs on Day 17!) 2. Even more polite: Ich hätte gern ... Ich hätte gern ",
+      "sectionId": "d12-s1"
+    },
+    {
+      "id": "vocab-d12-154",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "das Restaurant",
+      "text": "restaurant",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-155",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Speisekarte",
+      "text": "menu",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-156",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "bestellen",
+      "text": "to order",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-157",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "zahlen / bezahlen",
+      "text": "to pay",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-158",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Rechnung",
+      "text": "bill",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-159",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "der Kellner / die Kellnerin",
+      "text": "waiter / waitress",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-160",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "das Frühstück",
+      "text": "breakfast",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-161",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "das Mittagessen",
+      "text": "lunch",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-162",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "das Abendessen",
+      "text": "dinner",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-163",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Vorspeise / der Nachtisch",
+      "text": "starter / dessert",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-164",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Suppe",
+      "text": "soup",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-165",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "der Salat",
+      "text": "salad",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-166",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Pommes (pl.)",
+      "text": "fries",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-167",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "das Schnitzel",
+      "text": "schnitzel",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-168",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "die Cola / das Mineralwasser",
+      "text": "cola / sparkling water",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "vocab-d12-169",
+      "kind": "Vocabulary",
+      "day": 12,
+      "title": "Guten Appetit!",
+      "text": "Enjoy your meal!",
+      "sectionId": "d12-s2"
+    },
+    {
+      "id": "grammar-d13-s1",
+      "kind": "Grammar",
+      "day": 13,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Stem-changing verbs — only du and er/sie/es change Change Verb du er/sie/es e → i essen (eat) isst isst nehmen (take) nimmst nimmt sprechen (speak) sprichst spricht geben (give) gibst gibt e → ie sehen (see) siehst sieht lesen (read) liest liest a → ä fahren (drive/go) fährst fährt schlafen (sleep) schläfst schläft tragen (carry/wear) trägst trägt ich/wir/ihr/sie forms are 100% regular: ich esse, wir essen, ihr esst . 2. Prices Was kostet das? / Wie viel kostet der Käse? — W",
+      "sectionId": "d13-s1"
+    },
+    {
+      "id": "vocab-d13-170",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "einkaufen",
+      "text": "to shop (for groceries)",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-171",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "das Geschäft, -e / der Laden, ¨-",
+      "text": "shop, store",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-172",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "der Supermarkt, ¨-e",
+      "text": "supermarket",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-173",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "die Bäckerei",
+      "text": "bakery",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-174",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "der Markt",
+      "text": "market",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-175",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "kosten",
+      "text": "to cost",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-176",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "der Preis, -e",
+      "text": "price",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-177",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "das Geld",
+      "text": "money",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-178",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "teuer / billig / günstig",
+      "text": "expensive / cheap / good value",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-179",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "bar / mit Karte",
+      "text": "in cash / by card",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-180",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "der Euro / der Cent",
+      "text": "euro / cent",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-181",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "das Kilo / das Gramm",
+      "text": "kilo / gram",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-182",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "die Kasse",
+      "text": "checkout, till",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-183",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "die Tüte",
+      "text": "(shopping) bag",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "vocab-d13-184",
+      "kind": "Vocabulary",
+      "day": 13,
+      "title": "Sonst noch etwas?",
+      "text": "Anything else?",
+      "sectionId": "d13-s2"
+    },
+    {
+      "id": "grammar-d15-s1",
+      "kind": "Grammar",
+      "day": 15,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Wie spät ist es? (What time is it?) Clock Official (announcements) Everyday German 14:00 vierzehn Uhr zwei (Uhr) 14:05 vierzehn Uhr fünf fünf nach zwei 14:15 vierzehn Uhr fünfzehn Viertel nach zwei 14:30 vierzehn Uhr dreißig halb drei ⚠️ 14:45 vierzehn Uhr fünfundvierzig Viertel vor drei 14:55 vierzehn Uhr fünfundfünfzig fünf vor drei ⚠️ THE classic trap: halb drei = 2:30, NOT 3:30! Germans think \"half OF the way TO three\". Drill this until it's automatic. 2. Days & months (",
+      "sectionId": "d15-s1"
+    },
+    {
+      "id": "vocab-d15-185",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "die Uhr / die Uhrzeit",
+      "text": "clock / time (of day)",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-186",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "Wie spät ist es?",
+      "text": "What time is it?",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-187",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "die Minute / die Stunde",
+      "text": "minute / hour",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-188",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Tag / die Woche / der Monat / das Jahr",
+      "text": "day / week / month / year",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-189",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "das Wochenende",
+      "text": "weekend",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-190",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "heute / morgen / gestern",
+      "text": "today / tomorrow / yesterday",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-191",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "jetzt / später / früh / spät",
+      "text": "now / later / early / late",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-192",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Morgen / der Vormittag",
+      "text": "morning / late morning",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-193",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Mittag / der Nachmittag",
+      "text": "noon / afternoon",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-194",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Abend / die Nacht",
+      "text": "evening / night",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-195",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Frühling / der Sommer",
+      "text": "spring / summer",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-196",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Herbst / der Winter",
+      "text": "autumn / winter",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-197",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "der Geburtstag",
+      "text": "birthday",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "vocab-d15-198",
+      "kind": "Vocabulary",
+      "day": 15,
+      "title": "pünktlich",
+      "text": "punctual, on time",
+      "sectionId": "d15-s2"
+    },
+    {
+      "id": "grammar-d16-s1",
+      "kind": "Grammar",
+      "day": 16,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Separable verbs (trennbare Verben) Many verbs have a prefix that breaks off and flies to the end of the sentence: Infinitive In a sentence auf stehen (get up) Ich stehe um 7 Uhr auf . an fangen (begin) Der Kurs fängt um 9 an . (a→ä!) ein kaufen (shop) Wir kaufen am Samstag ein . fern sehen (watch TV) Er sieht abends fern . an rufen (call up) Ich rufe dich morgen an . mit kommen (come along) Kommst du mit ? auf räumen (tidy up) Sie räumt das Zimmer auf . aus gehen (go out) Wi",
+      "sectionId": "d16-s1"
+    },
+    {
+      "id": "vocab-d16-199",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "aufstehen",
+      "text": "to get up",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-200",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "aufwachen",
+      "text": "to wake up",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-201",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "duschen",
+      "text": "to shower",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-202",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "frühstücken",
+      "text": "to have breakfast",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-203",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "zur Arbeit gehen/fahren",
+      "text": "to go/drive to work",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-204",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "anfangen",
+      "text": "to start, begin",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-205",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "die Pause",
+      "text": "break",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-206",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "nach Hause kommen",
+      "text": "to come home",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-207",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "kochen",
+      "text": "to cook",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-208",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "aufräumen",
+      "text": "to tidy up",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-209",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "fernsehen",
+      "text": "to watch TV",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-210",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "anrufen",
+      "text": "to call (phone)",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-211",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "ins Bett gehen",
+      "text": "to go to bed",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "vocab-d16-212",
+      "kind": "Vocabulary",
+      "day": 16,
+      "title": "schlafen",
+      "text": "to sleep (er schläft)",
+      "sectionId": "d16-s2"
+    },
+    {
+      "id": "grammar-d17-s1",
+      "kind": "Grammar",
+      "day": 17,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. The three modals können (can) müssen (must) wollen (want) ich kann muss will du kannst musst willst er/sie/es kann muss will wir können müssen wollen ihr könnt müsst wollt sie/Sie können müssen wollen Notice: ich and er/sie/es are IDENTICAL, and there's no -t on er/sie/es. That's the modal signature. ⚠️ ich will = I WANT — it does NOT mean \"I will\"! (Future \"will\" is expressed with the present tense or werden.) 2. The verb bracket (Satzklammer) Modal in position 2 + infiniti",
+      "sectionId": "d17-s1"
+    },
+    {
+      "id": "vocab-d17-213",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "helfen",
+      "text": "to help (du hilfst, er hilft)",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-214",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "schwimmen",
+      "text": "to swim",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-215",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "tanzen",
+      "text": "to dance",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-216",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "singen",
+      "text": "to sing",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-217",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "Auto fahren",
+      "text": "to drive a car",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-218",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "warten",
+      "text": "to wait",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-219",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "wiederholen",
+      "text": "to repeat",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-220",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "verstehen",
+      "text": "to understand",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-221",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "langsam / schnell",
+      "text": "slow(ly) / fast",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-222",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "leider",
+      "text": "unfortunately",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-223",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "unbedingt",
+      "text": "absolutely, really (want)",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "vocab-d17-224",
+      "kind": "Vocabulary",
+      "day": 17,
+      "title": "Kein Problem!",
+      "text": "No problem!",
+      "sectionId": "d17-s2"
+    },
+    {
+      "id": "grammar-d18-s1",
+      "kind": "Grammar",
+      "day": 18,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. The other three modals dürfen (may/be allowed) sollen (should) möchten (would like) ich darf soll möchte du darfst sollst möchtest er/sie/es darf soll möchte wir dürfen sollen möchten ihr dürft sollt möchtet sie/Sie dürfen sollen möchten dürfen = permission: Hier darf man nicht rauchen. (Smoking is not allowed here.) Darf ich...? (May I...?) sollen = should / is supposed to: Du sollst mehr schlafen. Also for offers: Soll ich helfen? (Shall I help?) möchten — you know it from",
+      "sectionId": "d18-s1"
+    },
+    {
+      "id": "vocab-d18-225",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "der Termin, -e",
+      "text": "appointment",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-226",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "vereinbaren",
+      "text": "to arrange, agree on",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-227",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "absagen (sep.)",
+      "text": "to cancel",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-228",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "verschieben",
+      "text": "to postpone",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-229",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "passen",
+      "text": "to suit, fit (Passt es dir?)",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-230",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "frei",
+      "text": "free, available",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-231",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "besetzt",
+      "text": "occupied, taken",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-232",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "der Kalender",
+      "text": "calendar",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-233",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "rauchen",
+      "text": "to smoke",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-234",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "parken",
+      "text": "to park",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-235",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "der Moment / Einen Moment, bitte",
+      "text": "moment / One moment, please",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "vocab-d18-236",
+      "kind": "Vocabulary",
+      "day": 18,
+      "title": "Bis dann! / Bis Montag!",
+      "text": "See you then! / See you Monday!",
+      "sectionId": "d18-s2"
+    },
+    {
+      "id": "grammar-d19-s1",
+      "kind": "Grammar",
+      "day": 19,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. The imperative (commands & instructions) To How to build gehen nehmen sein du du-form minus -st (and no \"du\") Geh! Nimm! Sei! ihr ihr-form, no \"ihr\" Geht! Nehmt! Seid! Sie verb + Sie (inverted) Gehen Sie! Nehmen Sie! Seien Sie! Soften with bitte: Nehmen Sie bitte die U-Bahn. Separable prefixes go to the end: Steigen Sie am Dom aus! (Get off at the cathedral!) 2. Direction phrases (learn as chunks) Entschuldigung, wo ist der Bahnhof? — Excuse me, where is the station? Wie kom",
+      "sectionId": "d19-s1"
+    },
+    {
+      "id": "vocab-d19-237",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "der Bus / der Zug",
+      "text": "bus / train",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-238",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die U-Bahn / die Straßenbahn",
+      "text": "subway / tram",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-239",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "das Taxi / das Fahrrad",
+      "text": "taxi / bicycle",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-240",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "der Bahnhof",
+      "text": "train station",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-241",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die Haltestelle",
+      "text": "(bus/tram) stop",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-242",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "das Ticket / die Fahrkarte",
+      "text": "ticket",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-243",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "einsteigen / aussteigen / umsteigen",
+      "text": "get on / get off / change (all separable)",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-244",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die Straße",
+      "text": "street",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-245",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die Ampel",
+      "text": "traffic light",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-246",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die Kreuzung",
+      "text": "crossroads",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-247",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "geradeaus / links / rechts",
+      "text": "straight / left / right",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-248",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "weit / in der Nähe",
+      "text": "far / nearby",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-249",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "der Flughafen",
+      "text": "airport",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-250",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "abfahren / ankommen",
+      "text": "to depart / to arrive (sep.)",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-251",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "das Gleis",
+      "text": "platform, track",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "vocab-d19-252",
+      "kind": "Vocabulary",
+      "day": 19,
+      "title": "die Richtung",
+      "text": "direction",
+      "sectionId": "d19-s2"
+    },
+    {
+      "id": "grammar-d20-s1",
+      "kind": "Grammar",
+      "day": 20,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Time prepositions (review + complete) um 8 Uhr at 8 (clock times) am Montag / am Abend on Monday / in the evening im Mai / im Winter in May / in winter von 9 bis 17 Uhr from 9 to 5 seit einem Monat for/since a month (Ich lerne seit einem Monat Deutsch) 2. Place: where TO? (movement) nach Berlin / nach Hause to cities & countries / home(ward) zum Arzt, zum Bahnhof / zur Schule to places & people in town (zu + dem = zum, zu + der = zur) in die Stadt / ins Kino into (in + das =",
+      "sectionId": "d20-s1"
+    },
+    {
+      "id": "vocab-d20-253",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "das Kino",
+      "text": "cinema",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-254",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "die Kirche",
+      "text": "church",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-255",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "die Bank",
+      "text": "bank",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-256",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "die Post",
+      "text": "post office",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-257",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "die Schule",
+      "text": "school",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-258",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "die Küche",
+      "text": "kitchen",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-259",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "zu Hause / nach Hause",
+      "text": "at home / (going) home ⚠️ different!",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "vocab-d20-260",
+      "kind": "Vocabulary",
+      "day": 20,
+      "title": "das Geschenk",
+      "text": "present, gift",
+      "sectionId": "d20-s2"
+    },
+    {
+      "id": "grammar-d22-s1",
+      "kind": "Grammar",
+      "day": 22,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. gern / lieber / am liebsten Ich spiele gern Fußball. — I like playing football. Ich schwimme lieber . — I prefer swimming. Ich lese am liebsten . — I like reading best of all. Negative: Ich koche nicht gern . 2. THE rule: the verb is ALWAYS second Position 1 can be anything — subject, time, place. The conjugated verb never moves from position 2: Position 1 Verb (2) Rest Ich spiele am Sonntag Tennis. Am Sonntag spiele ich Tennis. Tennis spiele ich am Sonntag. ⚠️ English speak",
+      "sectionId": "d22-s1"
+    },
+    {
+      "id": "vocab-d22-261",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "das Hobby, -s",
+      "text": "hobby",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-262",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "die Freizeit",
+      "text": "free time",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-263",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "Fußball spielen",
+      "text": "to play football",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-264",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "Musik hören",
+      "text": "to listen to music",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-265",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "lesen (er liest)",
+      "text": "to read",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-266",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "kochen / backen",
+      "text": "to cook / to bake",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-267",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "tanzen",
+      "text": "to dance",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-268",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "wandern",
+      "text": "to hike",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-269",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "reisen",
+      "text": "to travel",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-270",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "malen / fotografieren",
+      "text": "to paint / to photograph",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-271",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "Rad fahren",
+      "text": "to cycle",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-272",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "Freunde treffen (er trifft)",
+      "text": "to meet friends",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-273",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "Sport machen",
+      "text": "to do sport",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-274",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "das Spiel, -e",
+      "text": "game, match",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-275",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "die Musik / die Band",
+      "text": "music / band",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "vocab-d22-276",
+      "kind": "Vocabulary",
+      "day": 22,
+      "title": "langweilig / interessant",
+      "text": "boring / interesting",
+      "sectionId": "d22-s2"
+    },
+    {
+      "id": "grammar-d23-s1",
+      "kind": "Grammar",
+      "day": 23,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. es gibt + accusative (there is/are) Es gibt einen Balkon. — There's a balcony. (m → einen!) Es gibt eine Küche und ein Bad. Es gibt keinen Aufzug. — There's no lift. Question: Gibt es einen Garten? 2. Describing with adjectives (after sein — no endings needed!) Die Wohnung ist hell, groß und zentral . Adjectives after sein/finden never change — enjoy it while it lasts (endings before nouns are A2 material). 3. Reading housing ads — the abbreviations 2-Zi.-Whg. 2-room flat (z",
+      "sectionId": "d23-s1"
+    },
+    {
+      "id": "vocab-d23-277",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "die Wohnung, -en",
+      "text": "flat, apartment",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-278",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Haus, ¨-er",
+      "text": "house",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-279",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Zimmer, -",
+      "text": "room",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-280",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Wohnzimmer",
+      "text": "living room",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-281",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Schlafzimmer",
+      "text": "bedroom",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-282",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "die Küche",
+      "text": "kitchen",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-283",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Bad / die Toilette",
+      "text": "bathroom / toilet",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-284",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "der Balkon / der Garten",
+      "text": "balcony / garden",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-285",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "der Aufzug",
+      "text": "lift, elevator",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-286",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "die Miete / mieten",
+      "text": "rent / to rent",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-287",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "der Vermieter",
+      "text": "landlord",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-288",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "der Schrank, ¨-e",
+      "text": "wardrobe, cupboard",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-289",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "das Sofa, -s",
+      "text": "sofa",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-290",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "hell / dunkel",
+      "text": "bright / dark",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-291",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "groß / klein",
+      "text": "big / small",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-292",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "zentral / ruhig / laut",
+      "text": "central / quiet / loud",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-293",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "umziehen (sep.)",
+      "text": "to move (house)",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "vocab-d23-294",
+      "kind": "Vocabulary",
+      "day": 23,
+      "title": "der Stock / im ersten Stock",
+      "text": "floor / on the first floor",
+      "sectionId": "d23-s2"
+    },
+    {
+      "id": "grammar-d24-s1",
+      "kind": "Grammar",
+      "day": 24,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Weather runs on \"es\" Es regnet. — It's raining. · Es schneit. — It's snowing. Es ist sonnig / windig / bewölkt / neblig. — sunny / windy / cloudy / foggy. Es ist warm / kalt / heiß / kühl. Die Sonne scheint. — The sun is shining. ⚠️ \"I am cold\" = Mir ist kalt — NOT \"Ich bin kalt\" (that means you're a cold-hearted person!). 2. Degrees Es sind 25 Grad. / Es sind minus 5 Grad. — It's 25° / −5°. Question: Wie viel Grad sind es? 3. Talking about tomorrow — no future tense needed!",
+      "sectionId": "d24-s1"
+    },
+    {
+      "id": "vocab-d24-295",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "das Wetter",
+      "text": "weather",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-296",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "die Sonne / scheinen",
+      "text": "sun / to shine",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-297",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Regen / regnen",
+      "text": "rain / to rain",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-298",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Schnee / schneien",
+      "text": "snow / to snow",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-299",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Wind / windig",
+      "text": "wind / windy",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-300",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "die Wolke, -n / bewölkt",
+      "text": "cloud / cloudy",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-301",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Nebel / neblig",
+      "text": "fog / foggy",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-302",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "das Gewitter",
+      "text": "thunderstorm",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-303",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Grad",
+      "text": "degree",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-304",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "warm / heiß / kühl / kalt",
+      "text": "warm / hot / cool / cold",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-305",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "sonnig",
+      "text": "sunny",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-306",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "der Regenschirm",
+      "text": "umbrella",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-307",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "die Jacke",
+      "text": "jacket",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-308",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "bleiben",
+      "text": "to stay",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "vocab-d24-309",
+      "kind": "Vocabulary",
+      "day": 24,
+      "title": "Was für ein Wetter!",
+      "text": "What weather!",
+      "sectionId": "d24-s2"
+    },
+    {
+      "id": "grammar-d25-s1",
+      "kind": "Grammar",
+      "day": 25,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Saying what hurts — three ready-made patterns Ich habe Kopfschmerzen . — I have a headache. (Schmerzen = pains: Bauchschmerzen, Rückenschmerzen, Halsschmerzen, Zahnschmerzen) Mein Kopf tut weh. / Meine Beine tun weh. — My head hurts / my legs hurt. (tut/tun weh) Mir geht es nicht gut. / Mir ist schlecht. — I'm not well / I feel sick. 2. sollen for doctor's advice (Day 18 pays off) Sie sollen viel Wasser trinken und im Bett bleiben. — You should drink lots of water and stay i",
+      "sectionId": "d25-s1"
+    },
+    {
+      "id": "vocab-d25-310",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Kopf",
+      "text": "head",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-311",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Bauch",
+      "text": "belly, stomach",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-312",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Rücken",
+      "text": "back",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-313",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Hals",
+      "text": "throat, neck",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-314",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Arm, -e / das Bein, -e",
+      "text": "arm(s) / leg(s)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-315",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "die Hand, ¨-e / der Fuß, ¨-e",
+      "text": "hand(s) / foot (feet)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-316",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "das Auge, -n / das Ohr, -en",
+      "text": "eye(s) / ear(s)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-317",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Zahn, ¨-e",
+      "text": "tooth (teeth)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-318",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "krank / gesund",
+      "text": "sick / healthy",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-319",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "das Fieber",
+      "text": "fever",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-320",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "die Erkältung / der Husten / der Schnupfen",
+      "text": "cold / cough / runny nose",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-321",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "die Schmerzen (pl.)",
+      "text": "pain(s)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-322",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "weh tun",
+      "text": "to hurt",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-323",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "die Apotheke",
+      "text": "pharmacy",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-324",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "das Medikament, -e / die Tablette, -n",
+      "text": "medicine / tablet",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-325",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "das Rezept",
+      "text": "prescription (also: recipe!)",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-326",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "der Termin beim Arzt",
+      "text": "doctor's appointment",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "vocab-d25-327",
+      "kind": "Vocabulary",
+      "day": 25,
+      "title": "Gute Besserung!",
+      "text": "Get well soon!",
+      "sectionId": "d25-s2"
+    },
+    {
+      "id": "grammar-d26-s1",
+      "kind": "Grammar",
+      "day": 26,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. sein in the past: war ich war I was wir waren we were du warst you were ihr wart you all were er/sie/es war he/she/it was sie/Sie waren they/you were 2. haben in the past: hatte ich hatte I had wir hatten we had du hattest you had ihr hattet you all had er/sie/es hatte he/she/it had sie/Sie hatten they/you had 💡 Germans use war/hatte constantly in speech — for everything else they use the perfect tense (tomorrow!). Master these two tables and you can already tell simple sto",
+      "sectionId": "d26-s1"
+    },
+    {
+      "id": "vocab-d26-328",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "gestern / vorgestern",
+      "text": "yesterday / day before yesterday",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-329",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "letzte Woche / letztes Jahr",
+      "text": "last week / last year",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-330",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "früher",
+      "text": "earlier, in the old days",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-331",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "der Urlaub",
+      "text": "holiday, vacation",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-332",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "die Party, -s",
+      "text": "party",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-333",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "das Konzert, -e",
+      "text": "concert",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-334",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "der Spaß / Spaß machen",
+      "text": "fun / to be fun",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-335",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "toll / super / schrecklich",
+      "text": "great / super / terrible",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-336",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "das Glück / Glück haben",
+      "text": "luck / to be lucky",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-337",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "allein",
+      "text": "alone",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-338",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "der Gast, ¨-e",
+      "text": "guest",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "vocab-d26-339",
+      "kind": "Vocabulary",
+      "day": 26,
+      "title": "das Wochenende",
+      "text": "weekend (review)",
+      "sectionId": "d26-s2"
+    },
+    {
+      "id": "grammar-d27-s1",
+      "kind": "Grammar",
+      "day": 27,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. The formula haben (position 2) + ... + Partizip II (at the end) Ich habe gestern Pizza gegessen . — I ate pizza yesterday. Sound familiar? It's the same verb bracket as the modals! 2. Building the participle — regular verbs: ge + stem + t machen → gemacht kaufen → gekauft spielen → gespielt lernen → gelernt arbeiten → gearbeitet kochen → gekocht 3. Irregular participles — ge + stem(change) + en. Learn these 10 today: essen → gegessen trinken → getrunken sehen → gesehen lesen",
+      "sectionId": "d27-s1"
+    },
+    {
+      "id": "vocab-d27-340",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "schon",
+      "text": "already",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-341",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "noch nicht",
+      "text": "not yet",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-342",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "den ganzen Tag",
+      "text": "the whole day",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-343",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "zweimal / dreimal",
+      "text": "twice / three times",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-344",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "der Film, -e",
+      "text": "film, movie",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "vocab-d27-345",
+      "kind": "Vocabulary",
+      "day": 27,
+      "title": "die Hausaufgaben (pl.)",
+      "text": "homework",
+      "sectionId": "d27-s2"
+    },
+    {
+      "id": "grammar-d28-s1",
+      "kind": "Grammar",
+      "day": 28,
+      "title": "📖 Grammar lesson",
+      "text": "📖 Grammar lesson 1. Movement & change verbs use sein, not haben If the verb means going from A to B (or a change of state), the helper is sein : Infinitive Perfect English gehen ich bin gegangen went fahren ich bin gefahren drove/went kommen ich bin gekommen came fliegen ich bin geflogen flew aufstehen ich bin aufgestanden got up bleiben ⚠️ ich bin geblieben stayed (no movement, but still sein!) Ich bin gestern nach Berlin gefahren . Er ist um sechs aufgestanden . Wir sind zu Hause geblieben . ",
+      "sectionId": "d28-s1"
+    },
+    {
+      "id": "grammar-d29-s1",
+      "kind": "Grammar",
+      "day": 29,
+      "title": "📖 Grammar & formal language lesson",
+      "text": "📖 Grammar & formal language lesson 1. The form (das Formular) — decode these fields der Vorname / der Nachname (Familienname) first name / surname das Geburtsdatum / der Geburtsort date / place of birth die Staatsangehörigkeit nationality die Adresse: Straße, Hausnummer, PLZ (Postleitzahl), Ort street, number, postcode, town der Familienstand: ledig / verheiratet / geschieden marital status die Unterschrift / unterschreiben signature / to sign ankreuzen / ausfüllen to tick / to fill in 2. Forma",
+      "sectionId": "d29-s1"
+    }
+  ]
+}

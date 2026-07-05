@@ -22,6 +22,7 @@
       <span id="topbarEyebrow">Deutschweg · A1</span>
       <strong id="topbarTitle">Your 30-day journey</strong>
     </div>
+    <button class="icon-button" id="searchButton" type="button" aria-label="Search course">⌕</button>
     <button class="icon-button" id="themeButton" type="button" aria-label="Switch to light mode">☼</button>
     <span class="connection-status" id="connectionStatus" role="status" hidden>Offline</span>
     <div class="topbar-progress" aria-hidden="true"><i id="topbarProgress"></i></div>
@@ -47,6 +48,7 @@
         <div><strong id="dueToday">0</strong><span>cards due</span></div>
       </div>
       <button class="secondary-button install-button" id="installButton" type="button" hidden>Install Deutschweg</button>
+      <div class="reference-links"><button class="secondary-button" type="button" data-reference="glossary">Vocabulary glossary</button><button class="secondary-button" type="button" data-reference="grammar">Grammar reference</button></div>
     </section>
 
     <section id="daysView" class="view" hidden aria-labelledby="daysTitle">
@@ -108,6 +110,14 @@
       <section class="stats-section"><h2>Protect your progress</h2><p class="lede">Export a backup whenever you like. Importing restores the complete learning record on this device.</p><div class="data-actions"><button class="secondary-button" id="exportProgress" type="button">Export progress</button><label class="secondary-button import-label">Import progress<input type="file" id="importProgress" accept="application/json"></label></div><p id="importFeedback" aria-live="polite"></p></section>
     </section>
 
+    <section id="referenceView" class="view" hidden aria-labelledby="referenceTitle">
+      <p class="eyebrow">Exam-day reference</p>
+      <h1 id="referenceTitle">Glossary</h1>
+      <div class="reference-tabs"><button type="button" data-reference-tab="glossary">Vocabulary</button><button type="button" data-reference-tab="grammar">Grammar</button></div>
+      <div id="glossaryControls" class="reference-controls"><input type="search" id="glossaryQuery" placeholder="Filter words…" aria-label="Filter glossary"><select id="articleFilter" aria-label="Filter by article"><option value="">All articles</option><option value="der">der</option><option value="die">die</option><option value="das">das</option></select><select id="dayFilter" aria-label="Filter by day"><option value="">All days</option></select><select id="glossarySort" aria-label="Sort glossary"><option value="day">Course order</option><option value="german">German A–Z</option><option value="english">English A–Z</option></select></div>
+      <div id="referenceBody"></div>
+    </section>
+
     <section id="placeholderView" class="view" hidden>
       <p class="eyebrow">Coming in this rebuild</p>
       <h1 id="placeholderTitle">Flashcards</h1>
@@ -132,6 +142,13 @@
       <p id="celebrationCopy"></p>
       <button class="primary-button" id="celebrationNext" type="button">Continue <span>→</span></button>
       <button class="secondary-button" id="celebrationHome" type="button">Back home</button>
+    </div>
+  </div>
+  <div class="search-overlay" id="searchOverlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-head"><h2 id="searchTitle">Search the course</h2><button class="icon-button" id="closeSearch" type="button" aria-label="Close search">×</button></div>
+      <input type="search" id="globalSearch" placeholder="Try Termin, accusative, Bahnhof…" autocomplete="off">
+      <div id="searchResults" aria-live="polite"></div>
     </div>
   </div>
 
