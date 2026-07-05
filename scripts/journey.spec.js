@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test');
+const testData = require('../content/tests.json');
 
 test('speaking gates day completion and saved mistakes become actionable review', async ({ page }) => {
   await page.addInitScript(() => {
@@ -74,6 +75,9 @@ test('the lesson assessment opens the exact quiz and a pass returns to the day',
   await expect(page.locator('#quizPicker')).toHaveValue('day-1-mini');
 
   const q1 = page.locator('[data-question="d1-q1"]');
+  await q1.locator('input').fill('Auf');
+  await q1.locator('[data-check]').click();
+  await expect(q1.locator('.quiz-feedback')).toHaveClass(/bad/);
   await q1.locator('input').fill('Auf Wiedersehen');
   await q1.locator('[data-check]').click();
   const q2 = page.locator('[data-question="d1-q2"]');
@@ -100,6 +104,7 @@ test('the lesson assessment opens the exact quiz and a pass returns to the day',
 });
 
 test('weekly test days use their original threshold and return to the review day', async ({ page }) => {
+  await page.setViewportSize({ width:390,height:844 });
   await page.addInitScript(() => {
     localStorage.setItem('ga1:v2', JSON.stringify({
       schemaVersion:2,
@@ -118,9 +123,14 @@ test('weekly test days use their original threshold and return to the review day
   await page.locator('[data-open-assessment]').click();
   await expect(page.locator('#quizPicker')).toHaveValue('weekly-test-1');
   await expect(page.locator('.test-paper')).toContainText('Week 1 test');
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
-  await page.locator('[data-submit-test]').click();
-  await page.locator('.test-score input').fill('30');
+  const weeklyTest = testData.tests.find((item) => item.day === 7);
+  for (const question of weeklyTest.objectiveSections.flatMap((section) => section.questions)) {
+    await page.locator(`[data-auto-question="${question.id}"] input`).fill(question.answers[0]);
+  }
+  await page.locator('[data-grade-objective]').click();
+  await expect(page.locator('.objective-result')).toContainText('30/30');
   await page.locator('[data-save-test]').click();
   await expect(page.locator('.answer-panel .quiz-feedback')).toContainText('Passed — 30/40');
   await page.locator('[data-return-day="7"]').click();

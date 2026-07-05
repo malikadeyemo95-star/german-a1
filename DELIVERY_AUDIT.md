@@ -46,6 +46,8 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - 25 mini quizzes and 125 explained questions.
 - Typed, multiple-choice, tap-to-order, and matching-pair interactions.
 - Four weekly tests and the Day 30 mock retain their original tasks, keys, pass thresholds, scores, and retake flow.
+- Objective test items are auto-scored with per-answer corrections and mistake cards; only open writing and speaking sections use the original self-scoring rubrics.
+- Typed mini-quiz answers require a complete accepted answer rather than an arbitrary prefix of the explanation.
 - Every one of the 30 lesson journeys links to its exact quiz or test, records the original pass threshold, and returns to the source day with progress updated.
 - Wrong mini-quiz and speaking answers create persistent review cards.
 

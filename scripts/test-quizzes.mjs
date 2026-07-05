@@ -10,6 +10,9 @@ assert.ok(quizData.quizzes.flatMap((quiz) => quiz.questions).some((question) => 
 assert.ok(quizData.quizzes.flatMap((quiz) => quiz.questions).some((question) => question.type === 'reorder' && question.tokens.length > 1));
 assert.deepEqual(testData.tests.map((test) => test.day), [7, 14, 21, 28, 30]);
 assert.ok(testData.tests.every((test) => test.taskHtml.length && test.keyHtml && test.passScore < test.maxScore));
+assert.ok(testData.tests.every((test) => test.objectiveMax + test.selfMax === test.maxScore));
+assert.ok(testData.tests.every((test) => test.objectiveSections.flatMap((section) => section.questions).every((question) => question.id && question.prompt && question.answers.length && question.points > 0)));
+assert.deepEqual(testData.tests.map((test) => test.objectiveMax), [30,33,35,35,30]);
 const assessmentDays = new Set([...quizData.quizzes.map((quiz) => quiz.day), ...testData.tests.map((test) => test.day)]);
 assert.deepEqual([...assessmentDays].sort((a,b) => a - b), Array.from({ length:30 }, (_, index) => index + 1));
 for (const day of assessmentDays) {

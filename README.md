@@ -22,6 +22,8 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - A bidirectional FSRS-lite flashcard deck with Again / Hard / Good / Easy grading, typed answers, special-character keys, due counts, and hardest-card history.
 - Interactive mini quizzes with typed answers, multiple choice, tap-to-order sentences, matching pairs, explanations, saved results, and automatic mistake cards.
 - Four weekly tests and the Day 30 mock exam with locked answer keys, scoring, and retakes.
+- Weekly tests and the mock now auto-score objective grammar, vocabulary, listening, and reading answers; only authentic writing and speaking production remains rubric-based self-scoring.
+- Typed validation accepts complete alternatives and common umlaut substitutions without rewarding misleading answer fragments.
 - Every lesson surfaces its exact quiz or test inside the daily journey; passing updates the lesson checklist and offers a one-tap return to that day.
 - Stats for streaks, section and day completion, cards reviewed, scores, study days, and weak topics.
 - JSON progress export/import and automatic migration from the original `ga1done` and `ga1x` localStorage keys.

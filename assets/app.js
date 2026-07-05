@@ -155,11 +155,37 @@ async function loadReference() {
 }
 
 function normalizeAnswer(value) {
-  return value.toLowerCase().trim().replace(/[.,!?;:„“"']/g,'').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/\s+/g,' ');
+  return value.toLowerCase().trim().replace(/[.,!?;:„“"'()[\]]/g,'').replace(/[=/–—-]/g,' ').replace(/ä|ae/g,'a').replace(/ö|oe/g,'o').replace(/ü|ue/g,'u').replace(/ß/g,'ss').replace(/\s+/g,' ');
 }
 
 function preferredScrollBehavior() {
   return matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+}
+
+function quizAnswerVariants(question) {
+  const variants = [question.answer, question.answer.replace(/\([^)]*\)/g,'').trim()];
+  if (!/two|difference|what are|three|four|4 parts/i.test(question.prompt) && /\s\/\s/.test(question.answer)) {
+    variants.push(...question.answer.split(/\s\/\s/));
+  }
+  const inline = /^(.*)\b([^/\s]+)\/([^/\s]+)(.*)$/.exec(question.answer);
+  if (inline) variants.push(`${inline[1]}${inline[2]}${inline[4]}`,`${inline[1]}${inline[3]}${inline[4]}`);
+  return [...new Set(variants.map(normalizeAnswer).filter(Boolean))];
+}
+
+function quizAnswerCorrect(value, question) {
+  return quizAnswerVariants(question).includes(normalizeAnswer(value));
+}
+
+function acceptedAnswerCorrect(value, acceptedAnswers) {
+  const normalized = normalizeAnswer(value);
+  if (!normalized) return false;
+  return acceptedAnswers.some((answer) => {
+    const expected = normalizeAnswer(answer);
+    if (normalized === expected) return true;
+    if (expected.length < 12 || normalized.length < expected.length * .65) return false;
+    const tokens = expected.split(' ').filter((token) => token.length > 1);
+    return tokens.length > 1 && tokens.filter((token) => normalized.includes(token)).length / tokens.length >= .8;
+  });
 }
 
 function renderHardest() {
@@ -232,6 +258,16 @@ function addQuizMistakeCard(quiz, question) {
   if (allCards) allCards.push(card);
 }
 
+function addTestMistakeCard(test, question) {
+  state.customCards ||= [];
+  const id = `test-mistake-${test.id}-${question.id}`;
+  if (state.customCards.some((card) => card.id === id)) return;
+  const answer = question.answers.join(' / ');
+  const card = { id,sourceId:id,day:test.day,direction:'mistake',prompt:question.prompt,answer,german:answer,english:question.prompt };
+  state.customCards.push(card);
+  if (allCards) allCards.push(card);
+}
+
 function assessmentPassed(day) {
   if (state.completedDays.includes(day) || state.assessmentComplete?.[day]) return true;
   const quizPass = (state.quizResults || []).some((result) =>
@@ -293,8 +329,7 @@ function renderQuiz(quiz) {
       const value = question.type === 'choice' ? (typeof selected === 'string' ? selected : selected?.value || '')
         : question.type === 'reorder' ? [...card.querySelectorAll('.word-answer .word-chip')].map((chip) => chip.textContent).join(' ')
         : card.querySelector('input').value;
-      const normalizedValue = normalizeAnswer(value);
-      const correct = normalizedValue === normalizeAnswer(question.answer) || (normalizedValue.length > 1 && normalizeAnswer(question.explanation).startsWith(normalizedValue));
+      const correct = quizAnswerCorrect(value, question);
       answers.set(question.id, { value, correct });
       const feedback = card.querySelector('.quiz-feedback');
       feedback.className = `quiz-feedback ${correct ? 'good' : 'bad'}`;
@@ -396,29 +431,53 @@ async function renderQuizHub() {
 
 function renderTest(test) {
   const body = document.querySelector('#quizBody');
-  body.innerHTML = `<div class="test-paper"><span class="eyebrow">Day ${test.day} · ${test.maxScore} points</span><h2>${escapeHtml(test.title)}</h2>${test.taskHtml.map(cleanSectionHtml).join('')}<button type="button" class="primary-button" data-submit-test>Finish and unlock key <span>→</span></button><div class="answer-panel" hidden><h2>Answer key</h2>${cleanSectionHtml(test.keyHtml)}<label class="test-score">My score <input type="number" min="0" max="${test.maxScore}" inputmode="numeric"> / ${test.maxScore}</label><button type="button" class="primary-button" data-save-test>Save result <span>→</span></button><div class="quiz-feedback" aria-live="polite"></div></div></div>`;
-  body.querySelectorAll('.test-paper li').forEach((item, index) => {
-    if (item.closest('.answer-panel')) return;
-    const input = document.createElement('input');
-    input.className = 'test-response';input.type = 'text';input.setAttribute('aria-label',`Response ${index + 1}`);
-    item.appendChild(input);
-  });
+  const objectiveHtml = test.objectiveSections.map((section) => `<section class="auto-test-section"><h3>${escapeHtml(section.title)}</h3>${section.questions.map((question) => `<div class="auto-test-question" data-auto-question="${question.id}"><label><span>${escapeHtml(question.prompt)}</span><small>${question.points} ${question.points === 1 ? 'point' : 'points'}</small><input type="text" autocomplete="off" aria-label="${escapeHtml(question.prompt)}"></label><div class="quiz-feedback" aria-live="polite"></div></div>`).join('')}</section>`).join('');
+  const selfHtml = test.selfSections.map((section, index) => `<section class="self-test-section"><h3>${escapeHtml(section.title)}</h3><p>${escapeHtml(section.guide)}</p><label>Draft or notes<textarea rows="5" data-self-work="${index}" placeholder="Write your response or review notes here…"></textarea></label><label class="self-score">Self-score <input type="number" min="0" max="${section.maxScore}" value="0" inputmode="numeric" data-self-score="${index}"> / ${section.maxScore}</label></section>`).join('');
+  body.innerHTML = `<div class="test-paper"><span class="eyebrow">Day ${test.day} · ${test.maxScore} points</span><h2>${escapeHtml(test.title)}</h2><div class="test-score-split"><span>${test.objectiveMax} auto-scored</span><span>${test.selfMax} honestly self-scored</span></div><details class="original-test-paper"><summary>View the original test brief</summary>${test.taskHtml.map(cleanSectionHtml).join('')}</details><div class="auto-test"><h2>Auto-scored section</h2><p>Answer every objective item. Small punctuation and umlaut substitutions are accepted; fragments are not.</p>${objectiveHtml}<button type="button" class="primary-button" data-grade-objective>Check objective answers <span>→</span></button></div><div class="answer-panel" hidden><h2>Original answer key</h2>${cleanSectionHtml(test.keyHtml)}<div class="objective-result" aria-live="polite"></div><div class="self-test"><h2>Production tasks</h2><p>Only writing and speaking require your judgment. Use the original rubric, then enter an honest score.</p>${selfHtml}</div><div class="test-total" aria-live="polite"></div><button type="button" class="primary-button" data-save-test>Save final result <span>→</span></button><div class="quiz-feedback final-test-feedback" aria-live="polite"></div></div></div>`;
   const panel = body.querySelector('.answer-panel');
-  body.querySelector('[data-submit-test]').addEventListener('click', () => { panel.hidden = false;panel.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'}); });
-  body.querySelector('[data-save-test]').addEventListener('click', (event) => {
-    const score = Number(panel.querySelector('input').value);
-    if (!Number.isFinite(score) || score < 0 || score > test.maxScore) return;
-    state.testResults ||= [];
-    const pass = score >= test.passScore,feedback=panel.querySelector('.quiz-feedback');
+  let objectiveScore = 0;
+  const selfScore = () => [...panel.querySelectorAll('[data-self-score]')].reduce((sum, input) => {
+    const value = Math.max(0, Math.min(Number(input.max), Number(input.value) || 0));
+    input.value = value;
+    return sum + value;
+  }, 0);
+  const updateTestTotal = () => {
+    const total = objectiveScore + selfScore();
+    panel.querySelector('.test-total').innerHTML = `<span>Current total</span><strong>${total}/${test.maxScore}</strong><small>Pass mark: ${test.passScore}</small>`;
+  };
+  body.querySelector('[data-grade-objective]').addEventListener('click', (event) => {
+    objectiveScore = 0;
+    test.objectiveSections.flatMap((section) => section.questions).forEach((question) => {
+      const row = body.querySelector(`[data-auto-question="${question.id}"]`);
+      const correct = acceptedAnswerCorrect(row.querySelector('input').value, question.answers);
+      if (correct) objectiveScore += question.points;
+      else addTestMistakeCard(test, question);
+      const feedback = row.querySelector('.quiz-feedback');
+      feedback.className = `quiz-feedback ${correct ? 'good' : 'bad'}`;
+      feedback.textContent = correct ? `Correct · +${question.points}` : `Answer: ${question.answers.join(' / ')}`;
+    });
     event.currentTarget.disabled = true;
-    state.testResults.push({testId:test.id,day:test.day,score,total:test.maxScore,percent:Math.round(score/test.maxScore*100),passed:pass,at:new Date().toISOString()});
+    panel.hidden = false;
+    panel.querySelector('.objective-result').innerHTML = `<strong>${objectiveScore}/${test.objectiveMax}</strong><span>objective points</span>`;
+    updateTestTotal();
+    saveState(true);
+    panel.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'});
+  });
+  panel.querySelectorAll('[data-self-score]').forEach((input) => input.addEventListener('input', updateTestTotal));
+  body.querySelector('[data-save-test]').addEventListener('click', (event) => {
+    const score = objectiveScore + selfScore();
+    state.testResults ||= [];
+    const pass = score >= test.passScore,feedback=panel.querySelector('.final-test-feedback');
+    event.currentTarget.disabled = true;
+    state.testResults.push({testId:test.id,day:test.day,score,total:test.maxScore,objectiveScore,selfScore:selfScore(),percent:Math.round(score/test.maxScore*100),passed:pass,at:new Date().toISOString()});
     if (pass) markAssessmentPassed(test.day);
     saveState(true);
     feedback.className=`quiz-feedback ${pass?'good':'bad'}`;
     feedback.innerHTML=pass
       ? `Passed — ${score}/${test.maxScore}. Day ${test.day} progress is updated.${assessmentReturnButton(test.day)}`
-      : `${score}/${test.maxScore}. Review the key, then retake when ready.${assessmentReturnButton(test.day)}`;
+      : `${score}/${test.maxScore}. Review the corrections and retry the objective section.${assessmentReturnButton(test.day)}<button type="button" class="secondary-button" data-retest>Retake test</button>`;
     wireAssessmentReturn(body);
+    body.querySelector('[data-retest]')?.addEventListener('click', () => renderTest(test));
   });
 }
 
