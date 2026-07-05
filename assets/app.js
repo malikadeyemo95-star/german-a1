@@ -1,5 +1,6 @@
 import { STATE_KEY, migrateLegacyState } from './state.js';
 import { loadGermanVoice, speakGerman, stopGermanSpeech } from './audio.js';
+import { buildQueue, cardStatus, hardestCards, scheduleCard } from './srs.js';
 
 const CONTENT_ROOT = './content/';
 const TEST_DAYS = new Set([7, 14, 21, 28, 30]);
@@ -10,7 +11,7 @@ const SECTION_ICONS = {
 
 const elements = {
   home:document.querySelector('#homeView'),days:document.querySelector('#daysView'),
-  day:document.querySelector('#dayView'),placeholder:document.querySelector('#placeholderView'),
+  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),placeholder:document.querySelector('#placeholderView'),
   content:document.querySelector('#dayContent'),loading:document.querySelector('#dayLoading'),
   title:document.querySelector('#topbarTitle'),eyebrow:document.querySelector('#topbarEyebrow'),
   progress:document.querySelector('#topbarProgress'),back:document.querySelector('#backButton'),
@@ -20,6 +21,9 @@ let manifest;
 let state = migrateLegacyState(localStorage);
 let activeDay = state.lastDay || nextDay();
 let touchStartX = 0;
+let allCards;
+let reviewQueue = [];
+let reviewIndex = 0;
 
 function dateKey(date = new Date()) {
   const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
@@ -72,7 +76,7 @@ function setTheme(theme) {
 }
 
 function setView(name) {
-  Object.values({home:elements.home,days:elements.days,day:elements.day,placeholder:elements.placeholder})
+  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,placeholder:elements.placeholder})
     .forEach((view) => { view.hidden = true; });
   elements[name].hidden = false;
   elements.back.hidden = name === 'home';
@@ -81,6 +85,79 @@ function setView(name) {
     if (selected) button.setAttribute('aria-current', 'page'); else button.removeAttribute('aria-current');
   });
   window.scrollTo(0, 0);
+}
+
+async function loadCards() {
+  if (allCards) return allCards;
+  const response = await fetch(`${CONTENT_ROOT}cards.json`);
+  if (!response.ok) throw new Error('Flashcard deck unavailable');
+  allCards = (await response.json()).cards;
+  return allCards;
+}
+
+function normalizeAnswer(value) {
+  return value.toLowerCase().trim().replace(/[.,!?;:„“"']/g,'').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/\s+/g,' ');
+}
+
+function renderHardest() {
+  const cards = hardestCards(allCards || [], state.srs || {});
+  document.querySelector('#hardestCards').innerHTML = cards.length
+    ? cards.map((card) => `<div class="hard-card"><strong>${escapeHtml(card.german)}</strong><span>${state.srs[card.id].lapses || 0} misses</span></div>`).join('')
+    : '<p class="lede">No difficult cards yet.</p>';
+}
+
+function paintReviewCard() {
+  const session = document.querySelector('#reviewSession'),empty = document.querySelector('#reviewEmpty');
+  if (reviewIndex >= reviewQueue.length) {
+    session.hidden = true; empty.hidden = false; renderHardest(); return;
+  }
+  session.hidden = false; empty.hidden = true;
+  const card = reviewQueue[reviewIndex],record = state.srs[card.id] || {};
+  const reviewCard = document.querySelector('#reviewCard');
+  reviewCard.classList.remove('revealed');
+  document.querySelector('#reviewPrompt').textContent = card.prompt;
+  document.querySelector('#reviewAnswer').textContent = card.answer;
+  document.querySelector('#reviewAnswer').hidden = true;
+  document.querySelector('#reviewStatus').textContent = cardStatus(record);
+  document.querySelector('#gradeButtons').hidden = true;
+  document.querySelector('#revealAnswer').hidden = document.querySelector('#typeMode').checked;
+  document.querySelector('#typeAnswerArea').hidden = !document.querySelector('#typeMode').checked;
+  document.querySelector('#typedAnswer').value = '';
+  document.querySelector('#cardStats').textContent = record.reps ? `${record.reps} reviews · ${record.lapses || 0} misses · stability ${Math.round(record.stability || 0)} days` : 'First review';
+  document.querySelector('#flashcardsMeta').textContent = `${reviewIndex + 1} of ${reviewQueue.length} · Day ${card.day} · ${card.direction === 'en-de' ? 'English → German' : 'German → English'}`;
+}
+
+function revealReviewCard() {
+  if (reviewIndex >= reviewQueue.length) return;
+  const card = reviewQueue[reviewIndex];
+  document.querySelector('#reviewCard').classList.add('revealed');
+  document.querySelector('#reviewAnswer').hidden = false;
+  document.querySelector('#gradeButtons').hidden = false;
+  document.querySelector('#revealAnswer').hidden = true;
+  speakGerman(card.german, 1);
+}
+
+async function renderFlashcards() {
+  await loadCards();
+  state.srs ||= {};
+  reviewQueue = buildQueue(allCards, state.srs, nextDay(), Date.now(), 15);
+  reviewIndex = 0;
+  elements.title.textContent = 'Flashcards';
+  elements.eyebrow.textContent = `${reviewQueue.length} due today`;
+  setView('flashcards');
+  renderHardest();
+  paintReviewCard();
+}
+
+function gradeCurrent(grade) {
+  const card = reviewQueue[reviewIndex];
+  if (!card) return;
+  state.srs[card.id] = scheduleCard(state.srs[card.id], grade);
+  state.cardsReviewed = (state.cardsReviewed || 0) + 1;
+  if (grade === 'again') reviewQueue.push(card);
+  reviewIndex += 1;
+  saveState(true);
+  paintReviewCard();
 }
 
 function updateChrome(day = null) {
@@ -330,7 +407,8 @@ function routeFromHash() {
   if (route === 'home') renderHome();
   else if (route === 'days') renderDays();
   else if (/^day\/\d+$/.test(route)) renderDay(route.split('/')[1]);
-  else if (['flashcards','quiz','stats'].includes(route)) renderPlaceholder(route);
+  else if (route === 'flashcards') renderFlashcards();
+  else if (['quiz','stats'].includes(route)) renderPlaceholder(route);
   else renderHome();
 }
 
@@ -341,6 +419,22 @@ function escapeHtml(value) {
 document.querySelectorAll('[data-route]').forEach((button) => button.addEventListener('click', () => navigate(button.dataset.route)));
 elements.back.addEventListener('click', () => navigate('home'));
 document.querySelector('#themeButton').addEventListener('click', () => setTheme(state.theme === 'dark' ? 'light' : 'dark'));
+document.querySelector('#revealAnswer').addEventListener('click', revealReviewCard);
+document.querySelector('#reviewCard').addEventListener('click', revealReviewCard);
+document.querySelector('#reviewCard').addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); revealReviewCard(); } });
+document.querySelector('#typeMode').addEventListener('change', paintReviewCard);
+document.querySelectorAll('.special-keys button').forEach((button) => button.addEventListener('click', () => {
+  const input = document.querySelector('#typedAnswer');
+  input.setRangeText(button.textContent, input.selectionStart, input.selectionEnd, 'end');
+  input.focus();
+}));
+document.querySelector('#checkTypedAnswer').addEventListener('click', () => {
+  const card = reviewQueue[reviewIndex];if (!card) return;
+  const input = document.querySelector('#typedAnswer');
+  input.setAttribute('aria-invalid', String(normalizeAnswer(input.value) !== normalizeAnswer(card.answer)));
+  revealReviewCard();
+});
+document.querySelectorAll('#gradeButtons [data-grade]').forEach((button) => button.addEventListener('click', () => gradeCurrent(button.dataset.grade)));
 document.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive:true });
 document.addEventListener('touchend', (event) => {
   if (elements.day.hidden) return;

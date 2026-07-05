@@ -56,6 +56,36 @@
       <article id="dayContent"></article>
     </section>
 
+    <section id="flashcardsView" class="view" hidden aria-labelledby="flashcardsTitle">
+      <p class="eyebrow" id="flashcardsMeta">Your review queue</p>
+      <h1 id="flashcardsTitle">Flashcards</h1>
+      <div class="review-options">
+        <label><input type="checkbox" id="typeMode"> Type the answer</label>
+      </div>
+      <div id="reviewEmpty" class="empty-card" hidden><h2>You are caught up.</h2><p>Complete another lesson or return when reviews become due.</p></div>
+      <div id="reviewSession">
+        <article class="review-card" id="reviewCard" tabindex="0" role="button" aria-label="Reveal answer">
+          <span class="card-status" id="reviewStatus">New</span>
+          <div class="review-face" id="reviewPrompt"></div>
+          <div class="review-answer" id="reviewAnswer" hidden></div>
+        </article>
+        <div id="typeAnswerArea" hidden>
+          <input type="text" id="typedAnswer" lang="de" autocapitalize="off" placeholder="Type your answer…">
+          <div class="special-keys" aria-label="German special characters"><button type="button">ä</button><button type="button">ö</button><button type="button">ü</button><button type="button">ß</button></div>
+          <button class="primary-button" id="checkTypedAnswer" type="button">Check answer <span>→</span></button>
+        </div>
+        <button class="primary-button" id="revealAnswer" type="button">Show answer <span>→</span></button>
+        <div class="grade-buttons" id="gradeButtons" hidden>
+          <button type="button" data-grade="again">Again<small>10 min</small></button>
+          <button type="button" data-grade="hard">Hard<small>short</small></button>
+          <button type="button" data-grade="good">Good<small>normal</small></button>
+          <button type="button" data-grade="easy">Easy<small>long</small></button>
+        </div>
+        <p class="card-stats" id="cardStats"></p>
+      </div>
+      <section class="hardest-list"><h2>Hardest cards</h2><div id="hardestCards"></div></section>
+    </section>
+
     <section id="placeholderView" class="view" hidden>
       <p class="eyebrow">Coming in this rebuild</p>
       <h1 id="placeholderTitle">Flashcards</h1>

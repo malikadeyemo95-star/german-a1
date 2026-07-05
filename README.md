@@ -106,8 +106,10 @@ Rebuild and verify lesson data after editing `course-source.html`:
 
 ```sh
 node scripts/build-content.mjs
+node scripts/build-cards.mjs
 node scripts/verify-content.mjs
 node scripts/test-state.mjs
+node scripts/test-srs.mjs
 ```
 
 ### Performance baseline

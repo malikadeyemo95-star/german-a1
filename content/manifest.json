@@ -22,7 +22,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "7e07ad7b755f3c272f08784776ba509eda875891a6670ceab3960aea01210ce9"
+      "sourceHash": "7e07ad7b755f3c272f08784776ba509eda875891a6670ceab3960aea01210ce9",
+      "cardCount": 16
     },
     {
       "day": 2,
@@ -44,7 +45,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "d85269277bd1a27cc71a9c5be265afb2bcc09e1dd18884e65797871904c06dbd"
+      "sourceHash": "d85269277bd1a27cc71a9c5be265afb2bcc09e1dd18884e65797871904c06dbd",
+      "cardCount": 16
     },
     {
       "day": 3,
@@ -66,7 +68,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "aaab19406898ca614cda1b9aae4c9f7197273067baf902138a16b6593d53496f"
+      "sourceHash": "aaab19406898ca614cda1b9aae4c9f7197273067baf902138a16b6593d53496f",
+      "cardCount": 16
     },
     {
       "day": 4,
@@ -88,7 +91,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "7b71950346b791f6c4314e1be1765e4311f0e059ddb5bdb4f493f7932f5cb1cd"
+      "sourceHash": "7b71950346b791f6c4314e1be1765e4311f0e059ddb5bdb4f493f7932f5cb1cd",
+      "cardCount": 16
     },
     {
       "day": 5,
@@ -110,7 +114,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "f6afadd78a076950fdc232d3bf125011dc747bba33a95cd5f82d0c646339bf84"
+      "sourceHash": "f6afadd78a076950fdc232d3bf125011dc747bba33a95cd5f82d0c646339bf84",
+      "cardCount": 16
     },
     {
       "day": 6,
@@ -132,7 +137,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "8681a2862d8afa808c113d62d67b8f1ca4a70825ae786a56d3d64bb41c48c0eb"
+      "sourceHash": "8681a2862d8afa808c113d62d67b8f1ca4a70825ae786a56d3d64bb41c48c0eb",
+      "cardCount": 16
     },
     {
       "day": 7,
@@ -147,7 +153,8 @@
         "speaking",
         "homework"
       ],
-      "sourceHash": "96f7b31aa6289f42bc6c706a3047f0ba894f3f94cf04641ba7a7c79a34c59e88"
+      "sourceHash": "96f7b31aa6289f42bc6c706a3047f0ba894f3f94cf04641ba7a7c79a34c59e88",
+      "cardCount": 0
     },
     {
       "day": 8,
@@ -169,7 +176,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "9d2f3a8003df7db94c8cba002c2a4c1e2638a0bcbde9f581cc881621b99fee66"
+      "sourceHash": "9d2f3a8003df7db94c8cba002c2a4c1e2638a0bcbde9f581cc881621b99fee66",
+      "cardCount": 16
     },
     {
       "day": 9,
@@ -191,7 +199,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "33bee5eb5c56fea79336af88673dd5f76f535fb1c2c50776e3dfc33f9b5ec25b"
+      "sourceHash": "33bee5eb5c56fea79336af88673dd5f76f535fb1c2c50776e3dfc33f9b5ec25b",
+      "cardCount": 16
     },
     {
       "day": 10,
@@ -213,7 +222,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "03152963fa5cf4d273e8a5a216306b0fb1694eb4a1d3ab59f6f0a830189b0778"
+      "sourceHash": "03152963fa5cf4d273e8a5a216306b0fb1694eb4a1d3ab59f6f0a830189b0778",
+      "cardCount": 16
     },
     {
       "day": 11,
@@ -235,7 +245,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "ef0f782bb297d99065a85889a5a7ea856bcd6553a450133e9db8bf46dff7ccfa"
+      "sourceHash": "ef0f782bb297d99065a85889a5a7ea856bcd6553a450133e9db8bf46dff7ccfa",
+      "cardCount": 16
     },
     {
       "day": 12,
@@ -257,7 +268,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "5120b9a4ae41de64c5ba3edb214674cc0c9c1950e57b008c5b4bdba54902aa02"
+      "sourceHash": "5120b9a4ae41de64c5ba3edb214674cc0c9c1950e57b008c5b4bdba54902aa02",
+      "cardCount": 16
     },
     {
       "day": 13,
@@ -279,7 +291,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "5c3ebaf1e42813b8e54abf32a59303a66c4e30ad882a6d1d69c1eb31b76f71a4"
+      "sourceHash": "5c3ebaf1e42813b8e54abf32a59303a66c4e30ad882a6d1d69c1eb31b76f71a4",
+      "cardCount": 16
     },
     {
       "day": 14,
@@ -293,7 +306,8 @@
         "speaking",
         "homework"
       ],
-      "sourceHash": "824bd977635357ca6c3264c40868a35f1751e0942d4c996d20917aa48f6f8cf9"
+      "sourceHash": "824bd977635357ca6c3264c40868a35f1751e0942d4c996d20917aa48f6f8cf9",
+      "cardCount": 0
     },
     {
       "day": 15,
@@ -315,7 +329,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "1d8fb43638f83a259bfeac23fe4dd1ae3bce4aa6f4f047b4d7e6b731aa83c140"
+      "sourceHash": "1d8fb43638f83a259bfeac23fe4dd1ae3bce4aa6f4f047b4d7e6b731aa83c140",
+      "cardCount": 16
     },
     {
       "day": 16,
@@ -337,7 +352,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "6556eb4f5ddbf407ba0759a7d0f9a71f6b9b3fc21a9f6711ccc94211d20c5203"
+      "sourceHash": "6556eb4f5ddbf407ba0759a7d0f9a71f6b9b3fc21a9f6711ccc94211d20c5203",
+      "cardCount": 16
     },
     {
       "day": 17,
@@ -359,7 +375,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "5fd1df6ede08f9423ab063895d6bb7976bb24c7125c56992b655cce3f5522fb4"
+      "sourceHash": "5fd1df6ede08f9423ab063895d6bb7976bb24c7125c56992b655cce3f5522fb4",
+      "cardCount": 16
     },
     {
       "day": 18,
@@ -381,7 +398,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "f5f8a1ff0753b345c9541c4ae921cfd1a65a15455a60810c49b5d8f82ab2d48d"
+      "sourceHash": "f5f8a1ff0753b345c9541c4ae921cfd1a65a15455a60810c49b5d8f82ab2d48d",
+      "cardCount": 16
     },
     {
       "day": 19,
@@ -403,7 +421,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "e527f318951f577f8c68fcb79b6b6ca03078a2d7a898caaf36949796c9138ebc"
+      "sourceHash": "e527f318951f577f8c68fcb79b6b6ca03078a2d7a898caaf36949796c9138ebc",
+      "cardCount": 16
     },
     {
       "day": 20,
@@ -425,7 +444,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "de698fcc9c91cf02a6beec5f5f10548aaabf3802088467bd3d914d2fccf80729"
+      "sourceHash": "de698fcc9c91cf02a6beec5f5f10548aaabf3802088467bd3d914d2fccf80729",
+      "cardCount": 16
     },
     {
       "day": 21,
@@ -439,7 +459,8 @@
         "speaking",
         "homework"
       ],
-      "sourceHash": "a11e5873b967c453103c990604ee385e8754f8085d3fc1304f8a205b06bb5092"
+      "sourceHash": "a11e5873b967c453103c990604ee385e8754f8085d3fc1304f8a205b06bb5092",
+      "cardCount": 0
     },
     {
       "day": 22,
@@ -461,7 +482,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "812c948f7d99c7901d643c7304f78f1b42c752751899f917790416d0af0a8ba6"
+      "sourceHash": "812c948f7d99c7901d643c7304f78f1b42c752751899f917790416d0af0a8ba6",
+      "cardCount": 16
     },
     {
       "day": 23,
@@ -483,7 +505,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "7a480e0e6250bfa6d0270d9ef28820f3d214685bf4649d39a90dd9f4fd42da5d"
+      "sourceHash": "7a480e0e6250bfa6d0270d9ef28820f3d214685bf4649d39a90dd9f4fd42da5d",
+      "cardCount": 16
     },
     {
       "day": 24,
@@ -505,7 +528,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "01bb81c82d6c2faaca5d3e386b16896013e0041b58cd25692a129990ba3821f2"
+      "sourceHash": "01bb81c82d6c2faaca5d3e386b16896013e0041b58cd25692a129990ba3821f2",
+      "cardCount": 16
     },
     {
       "day": 25,
@@ -527,7 +551,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "697a9769159c83410bb0370940968a0b501a4487ec68770a8f100d58829a0c37"
+      "sourceHash": "697a9769159c83410bb0370940968a0b501a4487ec68770a8f100d58829a0c37",
+      "cardCount": 16
     },
     {
       "day": 26,
@@ -549,7 +574,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "9ff60f73557591028a42649a2f12afade159e2bab10c0ed4e92f8c823da91652"
+      "sourceHash": "9ff60f73557591028a42649a2f12afade159e2bab10c0ed4e92f8c823da91652",
+      "cardCount": 16
     },
     {
       "day": 27,
@@ -571,7 +597,8 @@
         "homework",
         "revision"
       ],
-      "sourceHash": "e628185994d53fab8718b6445949623b25589ea021d44e2c3bd9733e64baadf7"
+      "sourceHash": "e628185994d53fab8718b6445949623b25589ea021d44e2c3bd9733e64baadf7",
+      "cardCount": 16
     },
     {
       "day": 28,
@@ -587,7 +614,8 @@
         "flashcards",
         "homework"
       ],
-      "sourceHash": "145ef421dac735653ed3b355d26760804a2acdae331a3388a8a8a9de71158926"
+      "sourceHash": "145ef421dac735653ed3b355d26760804a2acdae331a3388a8a8a9de71158926",
+      "cardCount": 16
     },
     {
       "day": 29,
@@ -607,7 +635,8 @@
         "flashcards",
         "homework"
       ],
-      "sourceHash": "e6ff47136a140a386393451d15c08b7be3c63ce08dfdddb535282aa34e08c16a"
+      "sourceHash": "e6ff47136a140a386393451d15c08b7be3c63ce08dfdddb535282aa34e08c16a",
+      "cardCount": 16
     },
     {
       "day": 30,
@@ -623,7 +652,8 @@
         "speaking",
         "lesson"
       ],
-      "sourceHash": "8016a91d064407a3caa37cc76bf8dcfd53c8a1903d69bdc452285b8c34cc512c"
+      "sourceHash": "8016a91d064407a3caa37cc76bf8dcfd53c8a1903d69bdc452285b8c34cc512c",
+      "cardCount": 0
     }
   ]
 }

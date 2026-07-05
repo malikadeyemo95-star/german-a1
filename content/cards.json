@@ -1,0 +1,4165 @@
+{
+  "schemaVersion": 1,
+  "cards": [
+    {
+      "id": "d1-c1-en-de",
+      "sourceId": "d1-c1",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "hello",
+      "answer": "Hallo",
+      "german": "Hallo",
+      "english": "hello"
+    },
+    {
+      "id": "d1-c1-de-en",
+      "sourceId": "d1-c1",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Hallo",
+      "answer": "hello",
+      "german": "Hallo",
+      "english": "hello"
+    },
+    {
+      "id": "d1-c2-en-de",
+      "sourceId": "d1-c2",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "good morning",
+      "answer": "Guten Morgen",
+      "german": "Guten Morgen",
+      "english": "good morning"
+    },
+    {
+      "id": "d1-c2-de-en",
+      "sourceId": "d1-c2",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Guten Morgen",
+      "answer": "good morning",
+      "german": "Guten Morgen",
+      "english": "good morning"
+    },
+    {
+      "id": "d1-c3-en-de",
+      "sourceId": "d1-c3",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "goodbye (formal)",
+      "answer": "Auf Wiedersehen",
+      "german": "Auf Wiedersehen",
+      "english": "goodbye (formal)"
+    },
+    {
+      "id": "d1-c3-de-en",
+      "sourceId": "d1-c3",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Auf Wiedersehen",
+      "answer": "goodbye (formal)",
+      "german": "Auf Wiedersehen",
+      "english": "goodbye (formal)"
+    },
+    {
+      "id": "d1-c4-en-de",
+      "sourceId": "d1-c4",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "bye (informal)",
+      "answer": "Tschüss",
+      "german": "Tschüss",
+      "english": "bye (informal)"
+    },
+    {
+      "id": "d1-c4-de-en",
+      "sourceId": "d1-c4",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Tschüss",
+      "answer": "bye (informal)",
+      "german": "Tschüss",
+      "english": "bye (informal)"
+    },
+    {
+      "id": "d1-c5-en-de",
+      "sourceId": "d1-c5",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "thank you",
+      "answer": "danke",
+      "german": "danke",
+      "english": "thank you"
+    },
+    {
+      "id": "d1-c5-de-en",
+      "sourceId": "d1-c5",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "danke",
+      "answer": "thank you",
+      "german": "danke",
+      "english": "thank you"
+    },
+    {
+      "id": "d1-c6-en-de",
+      "sourceId": "d1-c6",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "please / you're welcome",
+      "answer": "bitte",
+      "german": "bitte",
+      "english": "please / you're welcome"
+    },
+    {
+      "id": "d1-c6-de-en",
+      "sourceId": "d1-c6",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "bitte",
+      "answer": "please / you're welcome",
+      "german": "bitte",
+      "english": "please / you're welcome"
+    },
+    {
+      "id": "d1-c7-en-de",
+      "sourceId": "d1-c7",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "excuse me / sorry",
+      "answer": "Entschuldigung",
+      "german": "Entschuldigung",
+      "english": "excuse me / sorry"
+    },
+    {
+      "id": "d1-c7-de-en",
+      "sourceId": "d1-c7",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Entschuldigung",
+      "answer": "excuse me / sorry",
+      "german": "Entschuldigung",
+      "english": "excuse me / sorry"
+    },
+    {
+      "id": "d1-c8-en-de",
+      "sourceId": "d1-c8",
+      "day": 1,
+      "direction": "en-de",
+      "prompt": "pardon?",
+      "answer": "Wie bitte?",
+      "german": "Wie bitte?",
+      "english": "pardon?"
+    },
+    {
+      "id": "d1-c8-de-en",
+      "sourceId": "d1-c8",
+      "day": 1,
+      "direction": "de-en",
+      "prompt": "Wie bitte?",
+      "answer": "pardon?",
+      "german": "Wie bitte?",
+      "english": "pardon?"
+    },
+    {
+      "id": "d2-c1-en-de",
+      "sourceId": "d2-c1",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "I am",
+      "answer": "ich bin",
+      "german": "ich bin",
+      "english": "I am"
+    },
+    {
+      "id": "d2-c1-de-en",
+      "sourceId": "d2-c1",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "ich bin",
+      "answer": "I am",
+      "german": "ich bin",
+      "english": "I am"
+    },
+    {
+      "id": "d2-c2-en-de",
+      "sourceId": "d2-c2",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "you are (informal)",
+      "answer": "du bist",
+      "german": "du bist",
+      "english": "you are (informal)"
+    },
+    {
+      "id": "d2-c2-de-en",
+      "sourceId": "d2-c2",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "du bist",
+      "answer": "you are (informal)",
+      "german": "du bist",
+      "english": "you are (informal)"
+    },
+    {
+      "id": "d2-c3-en-de",
+      "sourceId": "d2-c3",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "he/she is",
+      "answer": "er/sie ist",
+      "german": "er/sie ist",
+      "english": "he/she is"
+    },
+    {
+      "id": "d2-c3-de-en",
+      "sourceId": "d2-c3",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "er/sie ist",
+      "answer": "he/she is",
+      "german": "er/sie ist",
+      "english": "he/she is"
+    },
+    {
+      "id": "d2-c4-en-de",
+      "sourceId": "d2-c4",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "we are",
+      "answer": "wir sind",
+      "german": "wir sind",
+      "english": "we are"
+    },
+    {
+      "id": "d2-c4-de-en",
+      "sourceId": "d2-c4",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "wir sind",
+      "answer": "we are",
+      "german": "wir sind",
+      "english": "we are"
+    },
+    {
+      "id": "d2-c5-en-de",
+      "sourceId": "d2-c5",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "My name is...",
+      "answer": "Ich heiße...",
+      "german": "Ich heiße...",
+      "english": "My name is..."
+    },
+    {
+      "id": "d2-c5-de-en",
+      "sourceId": "d2-c5",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "Ich heiße...",
+      "answer": "My name is...",
+      "german": "Ich heiße...",
+      "english": "My name is..."
+    },
+    {
+      "id": "d2-c6-en-de",
+      "sourceId": "d2-c6",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "Nice to meet you!",
+      "answer": "Freut mich!",
+      "german": "Freut mich!",
+      "english": "Nice to meet you!"
+    },
+    {
+      "id": "d2-c6-de-en",
+      "sourceId": "d2-c6",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "Freut mich!",
+      "answer": "Nice to meet you!",
+      "german": "Freut mich!",
+      "english": "Nice to meet you!"
+    },
+    {
+      "id": "d2-c7-en-de",
+      "sourceId": "d2-c7",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "How are you? (informal)",
+      "answer": "Wie geht's?",
+      "german": "Wie geht's?",
+      "english": "How are you? (informal)"
+    },
+    {
+      "id": "d2-c7-de-en",
+      "sourceId": "d2-c7",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "Wie geht's?",
+      "answer": "How are you? (informal)",
+      "german": "Wie geht's?",
+      "english": "How are you? (informal)"
+    },
+    {
+      "id": "d2-c8-en-de",
+      "sourceId": "d2-c8",
+      "day": 2,
+      "direction": "en-de",
+      "prompt": "also / too",
+      "answer": "auch",
+      "german": "auch",
+      "english": "also / too"
+    },
+    {
+      "id": "d2-c8-de-en",
+      "sourceId": "d2-c8",
+      "day": 2,
+      "direction": "de-en",
+      "prompt": "auch",
+      "answer": "also / too",
+      "german": "auch",
+      "english": "also / too"
+    },
+    {
+      "id": "d3-c1-en-de",
+      "sourceId": "d3-c1",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "I have",
+      "answer": "ich habe",
+      "german": "ich habe",
+      "english": "I have"
+    },
+    {
+      "id": "d3-c1-de-en",
+      "sourceId": "d3-c1",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "ich habe",
+      "answer": "I have",
+      "german": "ich habe",
+      "english": "I have"
+    },
+    {
+      "id": "d3-c2-en-de",
+      "sourceId": "d3-c2",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "you have",
+      "answer": "du hast",
+      "german": "du hast",
+      "english": "you have"
+    },
+    {
+      "id": "d3-c2-de-en",
+      "sourceId": "d3-c2",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "du hast",
+      "answer": "you have",
+      "german": "du hast",
+      "english": "you have"
+    },
+    {
+      "id": "d3-c3-en-de",
+      "sourceId": "d3-c3",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "she has",
+      "answer": "sie hat",
+      "german": "sie hat",
+      "english": "she has"
+    },
+    {
+      "id": "d3-c3-de-en",
+      "sourceId": "d3-c3",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "sie hat",
+      "answer": "she has",
+      "german": "sie hat",
+      "english": "she has"
+    },
+    {
+      "id": "d3-c4-en-de",
+      "sourceId": "d3-c4",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "21",
+      "answer": "einundzwanzig",
+      "german": "einundzwanzig",
+      "english": "21"
+    },
+    {
+      "id": "d3-c4-de-en",
+      "sourceId": "d3-c4",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "einundzwanzig",
+      "answer": "21",
+      "german": "einundzwanzig",
+      "english": "21"
+    },
+    {
+      "id": "d3-c5-en-de",
+      "sourceId": "d3-c5",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "17",
+      "answer": "siebzehn",
+      "german": "siebzehn",
+      "english": "17"
+    },
+    {
+      "id": "d3-c5-de-en",
+      "sourceId": "d3-c5",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "siebzehn",
+      "answer": "17",
+      "german": "siebzehn",
+      "english": "17"
+    },
+    {
+      "id": "d3-c6-en-de",
+      "sourceId": "d3-c6",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "100",
+      "answer": "(ein)hundert",
+      "german": "(ein)hundert",
+      "english": "100"
+    },
+    {
+      "id": "d3-c6-de-en",
+      "sourceId": "d3-c6",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "(ein)hundert",
+      "answer": "100",
+      "german": "(ein)hundert",
+      "english": "100"
+    },
+    {
+      "id": "d3-c7-en-de",
+      "sourceId": "d3-c7",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "How old are you?",
+      "answer": "Wie alt bist du?",
+      "german": "Wie alt bist du?",
+      "english": "How old are you?"
+    },
+    {
+      "id": "d3-c7-de-en",
+      "sourceId": "d3-c7",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "Wie alt bist du?",
+      "answer": "How old are you?",
+      "german": "Wie alt bist du?",
+      "english": "How old are you?"
+    },
+    {
+      "id": "d3-c8-en-de",
+      "sourceId": "d3-c8",
+      "day": 3,
+      "direction": "en-de",
+      "prompt": "I'm hungry",
+      "answer": "Ich habe Hunger",
+      "german": "Ich habe Hunger",
+      "english": "I'm hungry"
+    },
+    {
+      "id": "d3-c8-de-en",
+      "sourceId": "d3-c8",
+      "day": 3,
+      "direction": "de-en",
+      "prompt": "Ich habe Hunger",
+      "answer": "I'm hungry",
+      "german": "Ich habe Hunger",
+      "english": "I'm hungry"
+    },
+    {
+      "id": "d4-c1-en-de",
+      "sourceId": "d4-c1",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "Where from?",
+      "answer": "Woher?",
+      "german": "Woher?",
+      "english": "Where from?"
+    },
+    {
+      "id": "d4-c1-de-en",
+      "sourceId": "d4-c1",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "Woher?",
+      "answer": "Where from?",
+      "german": "Woher?",
+      "english": "Where from?"
+    },
+    {
+      "id": "d4-c2-en-de",
+      "sourceId": "d4-c2",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "Where? (location)",
+      "answer": "Wo?",
+      "german": "Wo?",
+      "english": "Where? (location)"
+    },
+    {
+      "id": "d4-c2-de-en",
+      "sourceId": "d4-c2",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "Wo?",
+      "answer": "Where? (location)",
+      "german": "Wo?",
+      "english": "Where? (location)"
+    },
+    {
+      "id": "d4-c3-en-de",
+      "sourceId": "d4-c3",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "to live (reside)",
+      "answer": "wohnen",
+      "german": "wohnen",
+      "english": "to live (reside)"
+    },
+    {
+      "id": "d4-c3-de-en",
+      "sourceId": "d4-c3",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "wohnen",
+      "answer": "to live (reside)",
+      "german": "wohnen",
+      "english": "to live (reside)"
+    },
+    {
+      "id": "d4-c4-en-de",
+      "sourceId": "d4-c4",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "to speak",
+      "answer": "sprechen (du sprichst!)",
+      "german": "sprechen (du sprichst!)",
+      "english": "to speak"
+    },
+    {
+      "id": "d4-c4-de-en",
+      "sourceId": "d4-c4",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "sprechen (du sprichst!)",
+      "answer": "to speak",
+      "german": "sprechen (du sprichst!)",
+      "english": "to speak"
+    },
+    {
+      "id": "d4-c5-en-de",
+      "sourceId": "d4-c5",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "a little bit",
+      "answer": "ein bisschen",
+      "german": "ein bisschen",
+      "english": "a little bit"
+    },
+    {
+      "id": "d4-c5-de-en",
+      "sourceId": "d4-c5",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "ein bisschen",
+      "answer": "a little bit",
+      "german": "ein bisschen",
+      "english": "a little bit"
+    },
+    {
+      "id": "d4-c6-en-de",
+      "sourceId": "d4-c6",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "Germany",
+      "answer": "Deutschland",
+      "german": "Deutschland",
+      "english": "Germany"
+    },
+    {
+      "id": "d4-c6-de-en",
+      "sourceId": "d4-c6",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "Deutschland",
+      "answer": "Germany",
+      "german": "Deutschland",
+      "english": "Germany"
+    },
+    {
+      "id": "d4-c7-en-de",
+      "sourceId": "d4-c7",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "language",
+      "answer": "die Sprache",
+      "german": "die Sprache",
+      "english": "language"
+    },
+    {
+      "id": "d4-c7-de-en",
+      "sourceId": "d4-c7",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "die Sprache",
+      "answer": "language",
+      "german": "die Sprache",
+      "english": "language"
+    },
+    {
+      "id": "d4-c8-en-de",
+      "sourceId": "d4-c8",
+      "day": 4,
+      "direction": "en-de",
+      "prompt": "but",
+      "answer": "aber",
+      "german": "aber",
+      "english": "but"
+    },
+    {
+      "id": "d4-c8-de-en",
+      "sourceId": "d4-c8",
+      "day": 4,
+      "direction": "de-en",
+      "prompt": "aber",
+      "answer": "but",
+      "german": "aber",
+      "english": "but"
+    },
+    {
+      "id": "d5-c1-en-de",
+      "sourceId": "d5-c1",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "profession",
+      "answer": "der Beruf",
+      "german": "der Beruf",
+      "english": "profession"
+    },
+    {
+      "id": "d5-c1-de-en",
+      "sourceId": "d5-c1",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "der Beruf",
+      "answer": "profession",
+      "german": "der Beruf",
+      "english": "profession"
+    },
+    {
+      "id": "d5-c2-en-de",
+      "sourceId": "d5-c2",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "to work",
+      "answer": "arbeiten",
+      "german": "arbeiten",
+      "english": "to work"
+    },
+    {
+      "id": "d5-c2-de-en",
+      "sourceId": "d5-c2",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "arbeiten",
+      "answer": "to work",
+      "german": "arbeiten",
+      "english": "to work"
+    },
+    {
+      "id": "d5-c3-en-de",
+      "sourceId": "d5-c3",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "doctor (f)",
+      "answer": "die Ärztin",
+      "german": "die Ärztin",
+      "english": "doctor (f)"
+    },
+    {
+      "id": "d5-c3-de-en",
+      "sourceId": "d5-c3",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "die Ärztin",
+      "answer": "doctor (f)",
+      "german": "die Ärztin",
+      "english": "doctor (f)"
+    },
+    {
+      "id": "d5-c4-en-de",
+      "sourceId": "d5-c4",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "company",
+      "answer": "die Firma",
+      "german": "die Firma",
+      "english": "company"
+    },
+    {
+      "id": "d5-c4-de-en",
+      "sourceId": "d5-c4",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "die Firma",
+      "answer": "company",
+      "german": "die Firma",
+      "english": "company"
+    },
+    {
+      "id": "d5-c5-en-de",
+      "sourceId": "d5-c5",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "office",
+      "answer": "das Büro",
+      "german": "das Büro",
+      "english": "office"
+    },
+    {
+      "id": "d5-c5-de-en",
+      "sourceId": "d5-c5",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "das Büro",
+      "answer": "office",
+      "german": "das Büro",
+      "english": "office"
+    },
+    {
+      "id": "d5-c6-en-de",
+      "sourceId": "d5-c6",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "boss",
+      "answer": "der Chef / die Chefin",
+      "german": "der Chef / die Chefin",
+      "english": "boss"
+    },
+    {
+      "id": "d5-c6-de-en",
+      "sourceId": "d5-c6",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "der Chef / die Chefin",
+      "answer": "boss",
+      "german": "der Chef / die Chefin",
+      "english": "boss"
+    },
+    {
+      "id": "d5-c7-en-de",
+      "sourceId": "d5-c7",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "I become / will be",
+      "answer": "ich werde",
+      "german": "ich werde",
+      "english": "I become / will be"
+    },
+    {
+      "id": "d5-c7-de-en",
+      "sourceId": "d5-c7",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "ich werde",
+      "answer": "I become / will be",
+      "german": "ich werde",
+      "english": "I become / will be"
+    },
+    {
+      "id": "d5-c8-en-de",
+      "sourceId": "d5-c8",
+      "day": 5,
+      "direction": "en-de",
+      "prompt": "he becomes",
+      "answer": "er wird",
+      "german": "er wird",
+      "english": "he becomes"
+    },
+    {
+      "id": "d5-c8-de-en",
+      "sourceId": "d5-c8",
+      "day": 5,
+      "direction": "de-en",
+      "prompt": "er wird",
+      "answer": "he becomes",
+      "german": "er wird",
+      "english": "he becomes"
+    },
+    {
+      "id": "d6-c1-en-de",
+      "sourceId": "d6-c1",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "family",
+      "answer": "die Familie",
+      "german": "die Familie",
+      "english": "family"
+    },
+    {
+      "id": "d6-c1-de-en",
+      "sourceId": "d6-c1",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "die Familie",
+      "answer": "family",
+      "german": "die Familie",
+      "english": "family"
+    },
+    {
+      "id": "d6-c2-en-de",
+      "sourceId": "d6-c2",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "parents",
+      "answer": "die Eltern",
+      "german": "die Eltern",
+      "english": "parents"
+    },
+    {
+      "id": "d6-c2-de-en",
+      "sourceId": "d6-c2",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "die Eltern",
+      "answer": "parents",
+      "german": "die Eltern",
+      "english": "parents"
+    },
+    {
+      "id": "d6-c3-en-de",
+      "sourceId": "d6-c3",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "siblings",
+      "answer": "die Geschwister",
+      "german": "die Geschwister",
+      "english": "siblings"
+    },
+    {
+      "id": "d6-c3-de-en",
+      "sourceId": "d6-c3",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "die Geschwister",
+      "answer": "siblings",
+      "german": "die Geschwister",
+      "english": "siblings"
+    },
+    {
+      "id": "d6-c4-en-de",
+      "sourceId": "d6-c4",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "daughter",
+      "answer": "die Tochter",
+      "german": "die Tochter",
+      "english": "daughter"
+    },
+    {
+      "id": "d6-c4-de-en",
+      "sourceId": "d6-c4",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "die Tochter",
+      "answer": "daughter",
+      "german": "die Tochter",
+      "english": "daughter"
+    },
+    {
+      "id": "d6-c5-en-de",
+      "sourceId": "d6-c5",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "married",
+      "answer": "verheiratet",
+      "german": "verheiratet",
+      "english": "married"
+    },
+    {
+      "id": "d6-c5-de-en",
+      "sourceId": "d6-c5",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "verheiratet",
+      "answer": "married",
+      "german": "verheiratet",
+      "english": "married"
+    },
+    {
+      "id": "d6-c6-en-de",
+      "sourceId": "d6-c6",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "single",
+      "answer": "ledig",
+      "german": "ledig",
+      "english": "single"
+    },
+    {
+      "id": "d6-c6-de-en",
+      "sourceId": "d6-c6",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "ledig",
+      "answer": "single",
+      "german": "ledig",
+      "english": "single"
+    },
+    {
+      "id": "d6-c7-en-de",
+      "sourceId": "d6-c7",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "his sister",
+      "answer": "seine Schwester",
+      "german": "seine Schwester",
+      "english": "his sister"
+    },
+    {
+      "id": "d6-c7-de-en",
+      "sourceId": "d6-c7",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "seine Schwester",
+      "answer": "his sister",
+      "german": "seine Schwester",
+      "english": "his sister"
+    },
+    {
+      "id": "d6-c8-en-de",
+      "sourceId": "d6-c8",
+      "day": 6,
+      "direction": "en-de",
+      "prompt": "her brother",
+      "answer": "ihr Bruder",
+      "german": "ihr Bruder",
+      "english": "her brother"
+    },
+    {
+      "id": "d6-c8-de-en",
+      "sourceId": "d6-c8",
+      "day": 6,
+      "direction": "de-en",
+      "prompt": "ihr Bruder",
+      "answer": "her brother",
+      "german": "ihr Bruder",
+      "english": "her brother"
+    },
+    {
+      "id": "d8-c1-en-de",
+      "sourceId": "d8-c1",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "table",
+      "answer": "der Tisch",
+      "german": "der Tisch",
+      "english": "table"
+    },
+    {
+      "id": "d8-c1-de-en",
+      "sourceId": "d8-c1",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "der Tisch",
+      "answer": "table",
+      "german": "der Tisch",
+      "english": "table"
+    },
+    {
+      "id": "d8-c2-en-de",
+      "sourceId": "d8-c2",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "lamp",
+      "answer": "die Lampe",
+      "german": "die Lampe",
+      "english": "lamp"
+    },
+    {
+      "id": "d8-c2-de-en",
+      "sourceId": "d8-c2",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "die Lampe",
+      "answer": "lamp",
+      "german": "die Lampe",
+      "english": "lamp"
+    },
+    {
+      "id": "d8-c3-en-de",
+      "sourceId": "d8-c3",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "book",
+      "answer": "das Buch",
+      "german": "das Buch",
+      "english": "book"
+    },
+    {
+      "id": "d8-c3-de-en",
+      "sourceId": "d8-c3",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "das Buch",
+      "answer": "book",
+      "german": "das Buch",
+      "english": "book"
+    },
+    {
+      "id": "d8-c4-en-de",
+      "sourceId": "d8-c4",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "key",
+      "answer": "der Schlüssel",
+      "german": "der Schlüssel",
+      "english": "key"
+    },
+    {
+      "id": "d8-c4-de-en",
+      "sourceId": "d8-c4",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "der Schlüssel",
+      "answer": "key",
+      "german": "der Schlüssel",
+      "english": "key"
+    },
+    {
+      "id": "d8-c5-en-de",
+      "sourceId": "d8-c5",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "bag",
+      "answer": "die Tasche",
+      "german": "die Tasche",
+      "english": "bag"
+    },
+    {
+      "id": "d8-c5-de-en",
+      "sourceId": "d8-c5",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "die Tasche",
+      "answer": "bag",
+      "german": "die Tasche",
+      "english": "bag"
+    },
+    {
+      "id": "d8-c6-en-de",
+      "sourceId": "d8-c6",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "window",
+      "answer": "das Fenster",
+      "german": "das Fenster",
+      "english": "window"
+    },
+    {
+      "id": "d8-c6-de-en",
+      "sourceId": "d8-c6",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "das Fenster",
+      "answer": "window",
+      "german": "das Fenster",
+      "english": "window"
+    },
+    {
+      "id": "d8-c7-en-de",
+      "sourceId": "d8-c7",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "door",
+      "answer": "die Tür",
+      "german": "die Tür",
+      "english": "door"
+    },
+    {
+      "id": "d8-c7-de-en",
+      "sourceId": "d8-c7",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "die Tür",
+      "answer": "door",
+      "german": "die Tür",
+      "english": "door"
+    },
+    {
+      "id": "d8-c8-en-de",
+      "sourceId": "d8-c8",
+      "day": 8,
+      "direction": "en-de",
+      "prompt": "broken",
+      "answer": "kaputt",
+      "german": "kaputt",
+      "english": "broken"
+    },
+    {
+      "id": "d8-c8-de-en",
+      "sourceId": "d8-c8",
+      "day": 8,
+      "direction": "de-en",
+      "prompt": "kaputt",
+      "answer": "broken",
+      "german": "kaputt",
+      "english": "broken"
+    },
+    {
+      "id": "d9-c1-en-de",
+      "sourceId": "d9-c1",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "books",
+      "answer": "die Bücher",
+      "german": "die Bücher",
+      "english": "books"
+    },
+    {
+      "id": "d9-c1-de-en",
+      "sourceId": "d9-c1",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Bücher",
+      "answer": "books",
+      "german": "die Bücher",
+      "english": "books"
+    },
+    {
+      "id": "d9-c2-en-de",
+      "sourceId": "d9-c2",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "men",
+      "answer": "die Männer",
+      "german": "die Männer",
+      "english": "men"
+    },
+    {
+      "id": "d9-c2-de-en",
+      "sourceId": "d9-c2",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Männer",
+      "answer": "men",
+      "german": "die Männer",
+      "english": "men"
+    },
+    {
+      "id": "d9-c3-en-de",
+      "sourceId": "d9-c3",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "women",
+      "answer": "die Frauen",
+      "german": "die Frauen",
+      "english": "women"
+    },
+    {
+      "id": "d9-c3-de-en",
+      "sourceId": "d9-c3",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Frauen",
+      "answer": "women",
+      "german": "die Frauen",
+      "english": "women"
+    },
+    {
+      "id": "d9-c4-en-de",
+      "sourceId": "d9-c4",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "chairs",
+      "answer": "die Stühle",
+      "german": "die Stühle",
+      "english": "chairs"
+    },
+    {
+      "id": "d9-c4-de-en",
+      "sourceId": "d9-c4",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Stühle",
+      "answer": "chairs",
+      "german": "die Stühle",
+      "english": "chairs"
+    },
+    {
+      "id": "d9-c5-en-de",
+      "sourceId": "d9-c5",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "cars",
+      "answer": "die Autos",
+      "german": "die Autos",
+      "english": "cars"
+    },
+    {
+      "id": "d9-c5-de-en",
+      "sourceId": "d9-c5",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Autos",
+      "answer": "cars",
+      "german": "die Autos",
+      "english": "cars"
+    },
+    {
+      "id": "d9-c6-en-de",
+      "sourceId": "d9-c6",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "apples",
+      "answer": "die Äpfel",
+      "german": "die Äpfel",
+      "english": "apples"
+    },
+    {
+      "id": "d9-c6-de-en",
+      "sourceId": "d9-c6",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Äpfel",
+      "answer": "apples",
+      "german": "die Äpfel",
+      "english": "apples"
+    },
+    {
+      "id": "d9-c7-en-de",
+      "sourceId": "d9-c7",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "mothers",
+      "answer": "die Mütter",
+      "german": "die Mütter",
+      "english": "mothers"
+    },
+    {
+      "id": "d9-c7-de-en",
+      "sourceId": "d9-c7",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "die Mütter",
+      "answer": "mothers",
+      "german": "die Mütter",
+      "english": "mothers"
+    },
+    {
+      "id": "d9-c8-en-de",
+      "sourceId": "d9-c8",
+      "day": 9,
+      "direction": "en-de",
+      "prompt": "many",
+      "answer": "viele",
+      "german": "viele",
+      "english": "many"
+    },
+    {
+      "id": "d9-c8-de-en",
+      "sourceId": "d9-c8",
+      "day": 9,
+      "direction": "de-en",
+      "prompt": "viele",
+      "answer": "many",
+      "german": "viele",
+      "english": "many"
+    },
+    {
+      "id": "d10-c1-en-de",
+      "sourceId": "d10-c1",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "to need",
+      "answer": "brauchen",
+      "german": "brauchen",
+      "english": "to need"
+    },
+    {
+      "id": "d10-c1-de-en",
+      "sourceId": "d10-c1",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "brauchen",
+      "answer": "to need",
+      "german": "brauchen",
+      "english": "to need"
+    },
+    {
+      "id": "d10-c2-en-de",
+      "sourceId": "d10-c2",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "to buy",
+      "answer": "kaufen",
+      "german": "kaufen",
+      "english": "to buy"
+    },
+    {
+      "id": "d10-c2-de-en",
+      "sourceId": "d10-c2",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "kaufen",
+      "answer": "to buy",
+      "german": "kaufen",
+      "english": "to buy"
+    },
+    {
+      "id": "d10-c3-en-de",
+      "sourceId": "d10-c3",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "to look for",
+      "answer": "suchen",
+      "german": "suchen",
+      "english": "to look for"
+    },
+    {
+      "id": "d10-c3-de-en",
+      "sourceId": "d10-c3",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "suchen",
+      "answer": "to look for",
+      "german": "suchen",
+      "english": "to look for"
+    },
+    {
+      "id": "d10-c4-en-de",
+      "sourceId": "d10-c4",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "I buy the table (m)",
+      "answer": "Ich kaufe den Tisch",
+      "german": "Ich kaufe den Tisch",
+      "english": "I buy the table (m)"
+    },
+    {
+      "id": "d10-c4-de-en",
+      "sourceId": "d10-c4",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "Ich kaufe den Tisch",
+      "answer": "I buy the table (m)",
+      "german": "Ich kaufe den Tisch",
+      "english": "I buy the table (m)"
+    },
+    {
+      "id": "d10-c5-en-de",
+      "sourceId": "d10-c5",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "I need a coffee (m)",
+      "answer": "Ich brauche einen Kaffee",
+      "german": "Ich brauche einen Kaffee",
+      "english": "I need a coffee (m)"
+    },
+    {
+      "id": "d10-c5-de-en",
+      "sourceId": "d10-c5",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "Ich brauche einen Kaffee",
+      "answer": "I need a coffee (m)",
+      "german": "Ich brauche einen Kaffee",
+      "english": "I need a coffee (m)"
+    },
+    {
+      "id": "d10-c6-en-de",
+      "sourceId": "d10-c6",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "I have no time",
+      "answer": "Ich habe keine Zeit",
+      "german": "Ich habe keine Zeit",
+      "english": "I have no time"
+    },
+    {
+      "id": "d10-c6-de-en",
+      "sourceId": "d10-c6",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "Ich habe keine Zeit",
+      "answer": "I have no time",
+      "german": "Ich habe keine Zeit",
+      "english": "I have no time"
+    },
+    {
+      "id": "d10-c7-en-de",
+      "sourceId": "d10-c7",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "no car",
+      "answer": "kein Auto",
+      "german": "kein Auto",
+      "english": "no car"
+    },
+    {
+      "id": "d10-c7-de-en",
+      "sourceId": "d10-c7",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "kein Auto",
+      "answer": "no car",
+      "german": "kein Auto",
+      "english": "no car"
+    },
+    {
+      "id": "d10-c8-en-de",
+      "sourceId": "d10-c8",
+      "day": 10,
+      "direction": "en-de",
+      "prompt": "of course",
+      "answer": "natürlich",
+      "german": "natürlich",
+      "english": "of course"
+    },
+    {
+      "id": "d10-c8-de-en",
+      "sourceId": "d10-c8",
+      "day": 10,
+      "direction": "de-en",
+      "prompt": "natürlich",
+      "answer": "of course",
+      "german": "natürlich",
+      "english": "of course"
+    },
+    {
+      "id": "d11-c1-en-de",
+      "sourceId": "d11-c1",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "bread",
+      "answer": "das Brot",
+      "german": "das Brot",
+      "english": "bread"
+    },
+    {
+      "id": "d11-c1-de-en",
+      "sourceId": "d11-c1",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "das Brot",
+      "answer": "bread",
+      "german": "das Brot",
+      "english": "bread"
+    },
+    {
+      "id": "d11-c2-en-de",
+      "sourceId": "d11-c2",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "cheese",
+      "answer": "der Käse",
+      "german": "der Käse",
+      "english": "cheese"
+    },
+    {
+      "id": "d11-c2-de-en",
+      "sourceId": "d11-c2",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "der Käse",
+      "answer": "cheese",
+      "german": "der Käse",
+      "english": "cheese"
+    },
+    {
+      "id": "d11-c3-en-de",
+      "sourceId": "d11-c3",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "vegetables",
+      "answer": "das Gemüse",
+      "german": "das Gemüse",
+      "english": "vegetables"
+    },
+    {
+      "id": "d11-c3-de-en",
+      "sourceId": "d11-c3",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "das Gemüse",
+      "answer": "vegetables",
+      "german": "das Gemüse",
+      "english": "vegetables"
+    },
+    {
+      "id": "d11-c4-en-de",
+      "sourceId": "d11-c4",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "fruit",
+      "answer": "das Obst",
+      "german": "das Obst",
+      "english": "fruit"
+    },
+    {
+      "id": "d11-c4-de-en",
+      "sourceId": "d11-c4",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "das Obst",
+      "answer": "fruit",
+      "german": "das Obst",
+      "english": "fruit"
+    },
+    {
+      "id": "d11-c5-en-de",
+      "sourceId": "d11-c5",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "tasty",
+      "answer": "lecker",
+      "german": "lecker",
+      "english": "tasty"
+    },
+    {
+      "id": "d11-c5-de-en",
+      "sourceId": "d11-c5",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "lecker",
+      "answer": "tasty",
+      "german": "lecker",
+      "english": "tasty"
+    },
+    {
+      "id": "d11-c6-en-de",
+      "sourceId": "d11-c6",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "I don't drink coffee",
+      "answer": "Ich trinke keinen Kaffee",
+      "german": "Ich trinke keinen Kaffee",
+      "english": "I don't drink coffee"
+    },
+    {
+      "id": "d11-c6-de-en",
+      "sourceId": "d11-c6",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "Ich trinke keinen Kaffee",
+      "answer": "I don't drink coffee",
+      "german": "Ich trinke keinen Kaffee",
+      "english": "I don't drink coffee"
+    },
+    {
+      "id": "d11-c7-en-de",
+      "sourceId": "d11-c7",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "The bread isn't fresh",
+      "answer": "Das Brot ist nicht frisch",
+      "german": "Das Brot ist nicht frisch",
+      "english": "The bread isn't fresh"
+    },
+    {
+      "id": "d11-c7-de-en",
+      "sourceId": "d11-c7",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "Das Brot ist nicht frisch",
+      "answer": "The bread isn't fresh",
+      "german": "Das Brot ist nicht frisch",
+      "english": "The bread isn't fresh"
+    },
+    {
+      "id": "d11-c8-en-de",
+      "sourceId": "d11-c8",
+      "day": 11,
+      "direction": "en-de",
+      "prompt": "with / without",
+      "answer": "mit / ohne",
+      "german": "mit / ohne",
+      "english": "with / without"
+    },
+    {
+      "id": "d11-c8-de-en",
+      "sourceId": "d11-c8",
+      "day": 11,
+      "direction": "de-en",
+      "prompt": "mit / ohne",
+      "answer": "with / without",
+      "german": "mit / ohne",
+      "english": "with / without"
+    },
+    {
+      "id": "d12-c1-en-de",
+      "sourceId": "d12-c1",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "menu",
+      "answer": "die Speisekarte",
+      "german": "die Speisekarte",
+      "english": "menu"
+    },
+    {
+      "id": "d12-c1-de-en",
+      "sourceId": "d12-c1",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "die Speisekarte",
+      "answer": "menu",
+      "german": "die Speisekarte",
+      "english": "menu"
+    },
+    {
+      "id": "d12-c2-en-de",
+      "sourceId": "d12-c2",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "to order",
+      "answer": "bestellen",
+      "german": "bestellen",
+      "english": "to order"
+    },
+    {
+      "id": "d12-c2-de-en",
+      "sourceId": "d12-c2",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "bestellen",
+      "answer": "to order",
+      "german": "bestellen",
+      "english": "to order"
+    },
+    {
+      "id": "d12-c3-en-de",
+      "sourceId": "d12-c3",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "the bill",
+      "answer": "die Rechnung",
+      "german": "die Rechnung",
+      "english": "the bill"
+    },
+    {
+      "id": "d12-c3-de-en",
+      "sourceId": "d12-c3",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "die Rechnung",
+      "answer": "the bill",
+      "german": "die Rechnung",
+      "english": "the bill"
+    },
+    {
+      "id": "d12-c4-en-de",
+      "sourceId": "d12-c4",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "I would like...",
+      "answer": "Ich möchte... / Ich hätte gern...",
+      "german": "Ich möchte... / Ich hätte gern...",
+      "english": "I would like..."
+    },
+    {
+      "id": "d12-c4-de-en",
+      "sourceId": "d12-c4",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "Ich möchte... / Ich hätte gern...",
+      "answer": "I would like...",
+      "german": "Ich möchte... / Ich hätte gern...",
+      "english": "I would like..."
+    },
+    {
+      "id": "d12-c5-en-de",
+      "sourceId": "d12-c5",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "I'll have the soup",
+      "answer": "Ich nehme die Suppe",
+      "german": "Ich nehme die Suppe",
+      "english": "I'll have the soup"
+    },
+    {
+      "id": "d12-c5-de-en",
+      "sourceId": "d12-c5",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "Ich nehme die Suppe",
+      "answer": "I'll have the soup",
+      "german": "Ich nehme die Suppe",
+      "english": "I'll have the soup"
+    },
+    {
+      "id": "d12-c6-en-de",
+      "sourceId": "d12-c6",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "Enjoy your meal!",
+      "answer": "Guten Appetit!",
+      "german": "Guten Appetit!",
+      "english": "Enjoy your meal!"
+    },
+    {
+      "id": "d12-c6-de-en",
+      "sourceId": "d12-c6",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "Guten Appetit!",
+      "answer": "Enjoy your meal!",
+      "german": "Guten Appetit!",
+      "english": "Enjoy your meal!"
+    },
+    {
+      "id": "d12-c7-en-de",
+      "sourceId": "d12-c7",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "Keep the change!",
+      "answer": "Stimmt so!",
+      "german": "Stimmt so!",
+      "english": "Keep the change!"
+    },
+    {
+      "id": "d12-c7-de-en",
+      "sourceId": "d12-c7",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "Stimmt so!",
+      "answer": "Keep the change!",
+      "german": "Stimmt so!",
+      "english": "Keep the change!"
+    },
+    {
+      "id": "d12-c8-en-de",
+      "sourceId": "d12-c8",
+      "day": 12,
+      "direction": "en-de",
+      "prompt": "dinner",
+      "answer": "das Abendessen",
+      "german": "das Abendessen",
+      "english": "dinner"
+    },
+    {
+      "id": "d12-c8-de-en",
+      "sourceId": "d12-c8",
+      "day": 12,
+      "direction": "de-en",
+      "prompt": "das Abendessen",
+      "answer": "dinner",
+      "german": "das Abendessen",
+      "english": "dinner"
+    },
+    {
+      "id": "d13-c1-en-de",
+      "sourceId": "d13-c1",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "he eats",
+      "answer": "er isst",
+      "german": "er isst",
+      "english": "he eats"
+    },
+    {
+      "id": "d13-c1-de-en",
+      "sourceId": "d13-c1",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "er isst",
+      "answer": "he eats",
+      "german": "er isst",
+      "english": "he eats"
+    },
+    {
+      "id": "d13-c2-en-de",
+      "sourceId": "d13-c2",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "you drive/go",
+      "answer": "du fährst",
+      "german": "du fährst",
+      "english": "you drive/go"
+    },
+    {
+      "id": "d13-c2-de-en",
+      "sourceId": "d13-c2",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "du fährst",
+      "answer": "you drive/go",
+      "german": "du fährst",
+      "english": "you drive/go"
+    },
+    {
+      "id": "d13-c3-en-de",
+      "sourceId": "d13-c3",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "she reads",
+      "answer": "sie liest",
+      "german": "sie liest",
+      "english": "she reads"
+    },
+    {
+      "id": "d13-c3-de-en",
+      "sourceId": "d13-c3",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "sie liest",
+      "answer": "she reads",
+      "german": "sie liest",
+      "english": "she reads"
+    },
+    {
+      "id": "d13-c4-en-de",
+      "sourceId": "d13-c4",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "he sleeps",
+      "answer": "er schläft",
+      "german": "er schläft",
+      "english": "he sleeps"
+    },
+    {
+      "id": "d13-c4-de-en",
+      "sourceId": "d13-c4",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "er schläft",
+      "answer": "he sleeps",
+      "german": "er schläft",
+      "english": "he sleeps"
+    },
+    {
+      "id": "d13-c5-en-de",
+      "sourceId": "d13-c5",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "What does that cost?",
+      "answer": "Was kostet das?",
+      "german": "Was kostet das?",
+      "english": "What does that cost?"
+    },
+    {
+      "id": "d13-c5-de-en",
+      "sourceId": "d13-c5",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "Was kostet das?",
+      "answer": "What does that cost?",
+      "german": "Was kostet das?",
+      "english": "What does that cost?"
+    },
+    {
+      "id": "d13-c6-en-de",
+      "sourceId": "d13-c6",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "expensive / cheap",
+      "answer": "teuer / billig",
+      "german": "teuer / billig",
+      "english": "expensive / cheap"
+    },
+    {
+      "id": "d13-c6-de-en",
+      "sourceId": "d13-c6",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "teuer / billig",
+      "answer": "expensive / cheap",
+      "german": "teuer / billig",
+      "english": "expensive / cheap"
+    },
+    {
+      "id": "d13-c7-en-de",
+      "sourceId": "d13-c7",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "cash or card?",
+      "answer": "bar oder mit Karte?",
+      "german": "bar oder mit Karte?",
+      "english": "cash or card?"
+    },
+    {
+      "id": "d13-c7-de-en",
+      "sourceId": "d13-c7",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "bar oder mit Karte?",
+      "answer": "cash or card?",
+      "german": "bar oder mit Karte?",
+      "english": "cash or card?"
+    },
+    {
+      "id": "d13-c8-en-de",
+      "sourceId": "d13-c8",
+      "day": 13,
+      "direction": "en-de",
+      "prompt": "there is/are",
+      "answer": "es gibt (+ acc.)",
+      "german": "es gibt (+ acc.)",
+      "english": "there is/are"
+    },
+    {
+      "id": "d13-c8-de-en",
+      "sourceId": "d13-c8",
+      "day": 13,
+      "direction": "de-en",
+      "prompt": "es gibt (+ acc.)",
+      "answer": "there is/are",
+      "german": "es gibt (+ acc.)",
+      "english": "there is/are"
+    },
+    {
+      "id": "d15-c1-en-de",
+      "sourceId": "d15-c1",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "7:30",
+      "answer": "halb acht",
+      "german": "halb acht",
+      "english": "7:30"
+    },
+    {
+      "id": "d15-c1-de-en",
+      "sourceId": "d15-c1",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "halb acht",
+      "answer": "7:30",
+      "german": "halb acht",
+      "english": "7:30"
+    },
+    {
+      "id": "d15-c2-en-de",
+      "sourceId": "d15-c2",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "quarter past two",
+      "answer": "Viertel nach zwei",
+      "german": "Viertel nach zwei",
+      "english": "quarter past two"
+    },
+    {
+      "id": "d15-c2-de-en",
+      "sourceId": "d15-c2",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "Viertel nach zwei",
+      "answer": "quarter past two",
+      "german": "Viertel nach zwei",
+      "english": "quarter past two"
+    },
+    {
+      "id": "d15-c3-en-de",
+      "sourceId": "d15-c3",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "at 8 o'clock",
+      "answer": "um 8 Uhr",
+      "german": "um 8 Uhr",
+      "english": "at 8 o'clock"
+    },
+    {
+      "id": "d15-c3-de-en",
+      "sourceId": "d15-c3",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "um 8 Uhr",
+      "answer": "at 8 o'clock",
+      "german": "um 8 Uhr",
+      "english": "at 8 o'clock"
+    },
+    {
+      "id": "d15-c4-en-de",
+      "sourceId": "d15-c4",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "on Monday",
+      "answer": "am Montag",
+      "german": "am Montag",
+      "english": "on Monday"
+    },
+    {
+      "id": "d15-c4-de-en",
+      "sourceId": "d15-c4",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "am Montag",
+      "answer": "on Monday",
+      "german": "am Montag",
+      "english": "on Monday"
+    },
+    {
+      "id": "d15-c5-en-de",
+      "sourceId": "d15-c5",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "in July",
+      "answer": "im Juli",
+      "german": "im Juli",
+      "english": "in July"
+    },
+    {
+      "id": "d15-c5-de-en",
+      "sourceId": "d15-c5",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "im Juli",
+      "answer": "in July",
+      "german": "im Juli",
+      "english": "in July"
+    },
+    {
+      "id": "d15-c6-en-de",
+      "sourceId": "d15-c6",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "weekend",
+      "answer": "das Wochenende",
+      "german": "das Wochenende",
+      "english": "weekend"
+    },
+    {
+      "id": "d15-c6-de-en",
+      "sourceId": "d15-c6",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "das Wochenende",
+      "answer": "weekend",
+      "german": "das Wochenende",
+      "english": "weekend"
+    },
+    {
+      "id": "d15-c7-en-de",
+      "sourceId": "d15-c7",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "today/tomorrow/yesterday",
+      "answer": "heute / morgen / gestern",
+      "german": "heute / morgen / gestern",
+      "english": "today/tomorrow/yesterday"
+    },
+    {
+      "id": "d15-c7-de-en",
+      "sourceId": "d15-c7",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "heute / morgen / gestern",
+      "answer": "today/tomorrow/yesterday",
+      "german": "heute / morgen / gestern",
+      "english": "today/tomorrow/yesterday"
+    },
+    {
+      "id": "d15-c8-en-de",
+      "sourceId": "d15-c8",
+      "day": 15,
+      "direction": "en-de",
+      "prompt": "on time",
+      "answer": "pünktlich",
+      "german": "pünktlich",
+      "english": "on time"
+    },
+    {
+      "id": "d15-c8-de-en",
+      "sourceId": "d15-c8",
+      "day": 15,
+      "direction": "de-en",
+      "prompt": "pünktlich",
+      "answer": "on time",
+      "german": "pünktlich",
+      "english": "on time"
+    },
+    {
+      "id": "d16-c1-en-de",
+      "sourceId": "d16-c1",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to get up",
+      "answer": "aufstehen — ich stehe ... auf",
+      "german": "aufstehen — ich stehe ... auf",
+      "english": "to get up"
+    },
+    {
+      "id": "d16-c1-de-en",
+      "sourceId": "d16-c1",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "aufstehen — ich stehe ... auf",
+      "answer": "to get up",
+      "german": "aufstehen — ich stehe ... auf",
+      "english": "to get up"
+    },
+    {
+      "id": "d16-c2-en-de",
+      "sourceId": "d16-c2",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to begin",
+      "answer": "anfangen — es fängt ... an",
+      "german": "anfangen — es fängt ... an",
+      "english": "to begin"
+    },
+    {
+      "id": "d16-c2-de-en",
+      "sourceId": "d16-c2",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "anfangen — es fängt ... an",
+      "answer": "to begin",
+      "german": "anfangen — es fängt ... an",
+      "english": "to begin"
+    },
+    {
+      "id": "d16-c3-en-de",
+      "sourceId": "d16-c3",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to go shopping",
+      "answer": "einkaufen — ich kaufe ... ein",
+      "german": "einkaufen — ich kaufe ... ein",
+      "english": "to go shopping"
+    },
+    {
+      "id": "d16-c3-de-en",
+      "sourceId": "d16-c3",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "einkaufen — ich kaufe ... ein",
+      "answer": "to go shopping",
+      "german": "einkaufen — ich kaufe ... ein",
+      "english": "to go shopping"
+    },
+    {
+      "id": "d16-c4-en-de",
+      "sourceId": "d16-c4",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to watch TV",
+      "answer": "fernsehen — ich sehe ... fern",
+      "german": "fernsehen — ich sehe ... fern",
+      "english": "to watch TV"
+    },
+    {
+      "id": "d16-c4-de-en",
+      "sourceId": "d16-c4",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "fernsehen — ich sehe ... fern",
+      "answer": "to watch TV",
+      "german": "fernsehen — ich sehe ... fern",
+      "english": "to watch TV"
+    },
+    {
+      "id": "d16-c5-en-de",
+      "sourceId": "d16-c5",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to call (phone)",
+      "answer": "anrufen — ich rufe ... an",
+      "german": "anrufen — ich rufe ... an",
+      "english": "to call (phone)"
+    },
+    {
+      "id": "d16-c5-de-en",
+      "sourceId": "d16-c5",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "anrufen — ich rufe ... an",
+      "answer": "to call (phone)",
+      "german": "anrufen — ich rufe ... an",
+      "english": "to call (phone)"
+    },
+    {
+      "id": "d16-c6-en-de",
+      "sourceId": "d16-c6",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to tidy up",
+      "answer": "aufräumen",
+      "german": "aufräumen",
+      "english": "to tidy up"
+    },
+    {
+      "id": "d16-c6-de-en",
+      "sourceId": "d16-c6",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "aufräumen",
+      "answer": "to tidy up",
+      "german": "aufräumen",
+      "english": "to tidy up"
+    },
+    {
+      "id": "d16-c7-en-de",
+      "sourceId": "d16-c7",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "first / then / after that",
+      "answer": "zuerst / dann / danach",
+      "german": "zuerst / dann / danach",
+      "english": "first / then / after that"
+    },
+    {
+      "id": "d16-c7-de-en",
+      "sourceId": "d16-c7",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "zuerst / dann / danach",
+      "answer": "first / then / after that",
+      "german": "zuerst / dann / danach",
+      "english": "first / then / after that"
+    },
+    {
+      "id": "d16-c8-en-de",
+      "sourceId": "d16-c8",
+      "day": 16,
+      "direction": "en-de",
+      "prompt": "to go to bed",
+      "answer": "ins Bett gehen",
+      "german": "ins Bett gehen",
+      "english": "to go to bed"
+    },
+    {
+      "id": "d16-c8-de-en",
+      "sourceId": "d16-c8",
+      "day": 16,
+      "direction": "de-en",
+      "prompt": "ins Bett gehen",
+      "answer": "to go to bed",
+      "german": "ins Bett gehen",
+      "english": "to go to bed"
+    },
+    {
+      "id": "d17-c1-en-de",
+      "sourceId": "d17-c1",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "I can",
+      "answer": "ich kann",
+      "german": "ich kann",
+      "english": "I can"
+    },
+    {
+      "id": "d17-c1-de-en",
+      "sourceId": "d17-c1",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "ich kann",
+      "answer": "I can",
+      "german": "ich kann",
+      "english": "I can"
+    },
+    {
+      "id": "d17-c2-en-de",
+      "sourceId": "d17-c2",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "you must",
+      "answer": "du musst",
+      "german": "du musst",
+      "english": "you must"
+    },
+    {
+      "id": "d17-c2-de-en",
+      "sourceId": "d17-c2",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "du musst",
+      "answer": "you must",
+      "german": "du musst",
+      "english": "you must"
+    },
+    {
+      "id": "d17-c3-en-de",
+      "sourceId": "d17-c3",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "he wants",
+      "answer": "er will",
+      "german": "er will",
+      "english": "he wants"
+    },
+    {
+      "id": "d17-c3-de-en",
+      "sourceId": "d17-c3",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "er will",
+      "answer": "he wants",
+      "german": "er will",
+      "english": "he wants"
+    },
+    {
+      "id": "d17-c4-en-de",
+      "sourceId": "d17-c4",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "we can",
+      "answer": "wir können",
+      "german": "wir können",
+      "english": "we can"
+    },
+    {
+      "id": "d17-c4-de-en",
+      "sourceId": "d17-c4",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "wir können",
+      "answer": "we can",
+      "german": "wir können",
+      "english": "we can"
+    },
+    {
+      "id": "d17-c5-en-de",
+      "sourceId": "d17-c5",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "Can you repeat that?",
+      "answer": "Können Sie das wiederholen?",
+      "german": "Können Sie das wiederholen?",
+      "english": "Can you repeat that?"
+    },
+    {
+      "id": "d17-c5-de-en",
+      "sourceId": "d17-c5",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "Können Sie das wiederholen?",
+      "answer": "Can you repeat that?",
+      "german": "Können Sie das wiederholen?",
+      "english": "Can you repeat that?"
+    },
+    {
+      "id": "d17-c6-en-de",
+      "sourceId": "d17-c6",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "I don't understand",
+      "answer": "Ich verstehe das nicht",
+      "german": "Ich verstehe das nicht",
+      "english": "I don't understand"
+    },
+    {
+      "id": "d17-c6-de-en",
+      "sourceId": "d17-c6",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "Ich verstehe das nicht",
+      "answer": "I don't understand",
+      "german": "Ich verstehe das nicht",
+      "english": "I don't understand"
+    },
+    {
+      "id": "d17-c7-en-de",
+      "sourceId": "d17-c7",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "to help",
+      "answer": "helfen (er hilft)",
+      "german": "helfen (er hilft)",
+      "english": "to help"
+    },
+    {
+      "id": "d17-c7-de-en",
+      "sourceId": "d17-c7",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "helfen (er hilft)",
+      "answer": "to help",
+      "german": "helfen (er hilft)",
+      "english": "to help"
+    },
+    {
+      "id": "d17-c8-en-de",
+      "sourceId": "d17-c8",
+      "day": 17,
+      "direction": "en-de",
+      "prompt": "unfortunately",
+      "answer": "leider",
+      "german": "leider",
+      "english": "unfortunately"
+    },
+    {
+      "id": "d17-c8-de-en",
+      "sourceId": "d17-c8",
+      "day": 17,
+      "direction": "de-en",
+      "prompt": "leider",
+      "answer": "unfortunately",
+      "german": "leider",
+      "english": "unfortunately"
+    },
+    {
+      "id": "d18-c1-en-de",
+      "sourceId": "d18-c1",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "May I...?",
+      "answer": "Darf ich...?",
+      "german": "Darf ich...?",
+      "english": "May I...?"
+    },
+    {
+      "id": "d18-c1-de-en",
+      "sourceId": "d18-c1",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "Darf ich...?",
+      "answer": "May I...?",
+      "german": "Darf ich...?",
+      "english": "May I...?"
+    },
+    {
+      "id": "d18-c2-en-de",
+      "sourceId": "d18-c2",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "Shall I help?",
+      "answer": "Soll ich helfen?",
+      "german": "Soll ich helfen?",
+      "english": "Shall I help?"
+    },
+    {
+      "id": "d18-c2-de-en",
+      "sourceId": "d18-c2",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "Soll ich helfen?",
+      "answer": "Shall I help?",
+      "german": "Soll ich helfen?",
+      "english": "Shall I help?"
+    },
+    {
+      "id": "d18-c3-en-de",
+      "sourceId": "d18-c3",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "one/people (general)",
+      "answer": "man (+ er/sie/es form)",
+      "german": "man (+ er/sie/es form)",
+      "english": "one/people (general)"
+    },
+    {
+      "id": "d18-c3-de-en",
+      "sourceId": "d18-c3",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "man (+ er/sie/es form)",
+      "answer": "one/people (general)",
+      "german": "man (+ er/sie/es form)",
+      "english": "one/people (general)"
+    },
+    {
+      "id": "d18-c4-en-de",
+      "sourceId": "d18-c4",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "appointment",
+      "answer": "der Termin",
+      "german": "der Termin",
+      "english": "appointment"
+    },
+    {
+      "id": "d18-c4-de-en",
+      "sourceId": "d18-c4",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "der Termin",
+      "answer": "appointment",
+      "german": "der Termin",
+      "english": "appointment"
+    },
+    {
+      "id": "d18-c5-en-de",
+      "sourceId": "d18-c5",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "to cancel",
+      "answer": "absagen",
+      "german": "absagen",
+      "english": "to cancel"
+    },
+    {
+      "id": "d18-c5-de-en",
+      "sourceId": "d18-c5",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "absagen",
+      "answer": "to cancel",
+      "german": "absagen",
+      "english": "to cancel"
+    },
+    {
+      "id": "d18-c6-en-de",
+      "sourceId": "d18-c6",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "to postpone",
+      "answer": "verschieben",
+      "german": "verschieben",
+      "english": "to postpone"
+    },
+    {
+      "id": "d18-c6-de-en",
+      "sourceId": "d18-c6",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "verschieben",
+      "answer": "to postpone",
+      "german": "verschieben",
+      "english": "to postpone"
+    },
+    {
+      "id": "d18-c7-en-de",
+      "sourceId": "d18-c7",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "Does that suit?",
+      "answer": "Passt das?",
+      "german": "Passt das?",
+      "english": "Does that suit?"
+    },
+    {
+      "id": "d18-c7-de-en",
+      "sourceId": "d18-c7",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "Passt das?",
+      "answer": "Does that suit?",
+      "german": "Passt das?",
+      "english": "Does that suit?"
+    },
+    {
+      "id": "d18-c8-en-de",
+      "sourceId": "d18-c8",
+      "day": 18,
+      "direction": "en-de",
+      "prompt": "See you then!",
+      "answer": "Bis dann!",
+      "german": "Bis dann!",
+      "english": "See you then!"
+    },
+    {
+      "id": "d18-c8-de-en",
+      "sourceId": "d18-c8",
+      "day": 18,
+      "direction": "de-en",
+      "prompt": "Bis dann!",
+      "answer": "See you then!",
+      "german": "Bis dann!",
+      "english": "See you then!"
+    },
+    {
+      "id": "d19-c1-en-de",
+      "sourceId": "d19-c1",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "train station",
+      "answer": "der Bahnhof",
+      "german": "der Bahnhof",
+      "english": "train station"
+    },
+    {
+      "id": "d19-c1-de-en",
+      "sourceId": "d19-c1",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "der Bahnhof",
+      "answer": "train station",
+      "german": "der Bahnhof",
+      "english": "train station"
+    },
+    {
+      "id": "d19-c2-en-de",
+      "sourceId": "d19-c2",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "stop (bus/tram)",
+      "answer": "die Haltestelle",
+      "german": "die Haltestelle",
+      "english": "stop (bus/tram)"
+    },
+    {
+      "id": "d19-c2-de-en",
+      "sourceId": "d19-c2",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "die Haltestelle",
+      "answer": "stop (bus/tram)",
+      "german": "die Haltestelle",
+      "english": "stop (bus/tram)"
+    },
+    {
+      "id": "d19-c3-en-de",
+      "sourceId": "d19-c3",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "straight ahead",
+      "answer": "geradeaus",
+      "german": "geradeaus",
+      "english": "straight ahead"
+    },
+    {
+      "id": "d19-c3-de-en",
+      "sourceId": "d19-c3",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "geradeaus",
+      "answer": "straight ahead",
+      "german": "geradeaus",
+      "english": "straight ahead"
+    },
+    {
+      "id": "d19-c4-en-de",
+      "sourceId": "d19-c4",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "left / right",
+      "answer": "links / rechts",
+      "german": "links / rechts",
+      "english": "left / right"
+    },
+    {
+      "id": "d19-c4-de-en",
+      "sourceId": "d19-c4",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "links / rechts",
+      "answer": "left / right",
+      "german": "links / rechts",
+      "english": "left / right"
+    },
+    {
+      "id": "d19-c5-en-de",
+      "sourceId": "d19-c5",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "to change (trains)",
+      "answer": "umsteigen",
+      "german": "umsteigen",
+      "english": "to change (trains)"
+    },
+    {
+      "id": "d19-c5-de-en",
+      "sourceId": "d19-c5",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "umsteigen",
+      "answer": "to change (trains)",
+      "german": "umsteigen",
+      "english": "to change (trains)"
+    },
+    {
+      "id": "d19-c6-en-de",
+      "sourceId": "d19-c6",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "to get off",
+      "answer": "aussteigen",
+      "german": "aussteigen",
+      "english": "to get off"
+    },
+    {
+      "id": "d19-c6-de-en",
+      "sourceId": "d19-c6",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "aussteigen",
+      "answer": "to get off",
+      "german": "aussteigen",
+      "english": "to get off"
+    },
+    {
+      "id": "d19-c7-en-de",
+      "sourceId": "d19-c7",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "How do I get to...? (m)",
+      "answer": "Wie komme ich zum...?",
+      "german": "Wie komme ich zum...?",
+      "english": "How do I get to...? (m)"
+    },
+    {
+      "id": "d19-c7-de-en",
+      "sourceId": "d19-c7",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "Wie komme ich zum...?",
+      "answer": "How do I get to...? (m)",
+      "german": "Wie komme ich zum...?",
+      "english": "How do I get to...? (m)"
+    },
+    {
+      "id": "d19-c8-en-de",
+      "sourceId": "d19-c8",
+      "day": 19,
+      "direction": "en-de",
+      "prompt": "by bus",
+      "answer": "mit dem Bus",
+      "german": "mit dem Bus",
+      "english": "by bus"
+    },
+    {
+      "id": "d19-c8-de-en",
+      "sourceId": "d19-c8",
+      "day": 19,
+      "direction": "de-en",
+      "prompt": "mit dem Bus",
+      "answer": "by bus",
+      "german": "mit dem Bus",
+      "english": "by bus"
+    },
+    {
+      "id": "d20-c1-en-de",
+      "sourceId": "d20-c1",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "to Berlin",
+      "answer": "nach Berlin",
+      "german": "nach Berlin",
+      "english": "to Berlin"
+    },
+    {
+      "id": "d20-c1-de-en",
+      "sourceId": "d20-c1",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "nach Berlin",
+      "answer": "to Berlin",
+      "german": "nach Berlin",
+      "english": "to Berlin"
+    },
+    {
+      "id": "d20-c2-en-de",
+      "sourceId": "d20-c2",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "to the doctor",
+      "answer": "zum Arzt",
+      "german": "zum Arzt",
+      "english": "to the doctor"
+    },
+    {
+      "id": "d20-c2-de-en",
+      "sourceId": "d20-c2",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "zum Arzt",
+      "answer": "to the doctor",
+      "german": "zum Arzt",
+      "english": "to the doctor"
+    },
+    {
+      "id": "d20-c3-en-de",
+      "sourceId": "d20-c3",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "to the cinema",
+      "answer": "ins Kino",
+      "german": "ins Kino",
+      "english": "to the cinema"
+    },
+    {
+      "id": "d20-c3-de-en",
+      "sourceId": "d20-c3",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "ins Kino",
+      "answer": "to the cinema",
+      "german": "ins Kino",
+      "english": "to the cinema"
+    },
+    {
+      "id": "d20-c4-en-de",
+      "sourceId": "d20-c4",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "at home / going home",
+      "answer": "zu Hause / nach Hause",
+      "german": "zu Hause / nach Hause",
+      "english": "at home / going home"
+    },
+    {
+      "id": "d20-c4-de-en",
+      "sourceId": "d20-c4",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "zu Hause / nach Hause",
+      "answer": "at home / going home",
+      "german": "zu Hause / nach Hause",
+      "english": "at home / going home"
+    },
+    {
+      "id": "d20-c5-en-de",
+      "sourceId": "d20-c5",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "at work",
+      "answer": "bei der Arbeit",
+      "german": "bei der Arbeit",
+      "english": "at work"
+    },
+    {
+      "id": "d20-c5-de-en",
+      "sourceId": "d20-c5",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "bei der Arbeit",
+      "answer": "at work",
+      "german": "bei der Arbeit",
+      "english": "at work"
+    },
+    {
+      "id": "d20-c6-en-de",
+      "sourceId": "d20-c6",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "on the table",
+      "answer": "auf dem Tisch",
+      "german": "auf dem Tisch",
+      "english": "on the table"
+    },
+    {
+      "id": "d20-c6-de-en",
+      "sourceId": "d20-c6",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "auf dem Tisch",
+      "answer": "on the table",
+      "german": "auf dem Tisch",
+      "english": "on the table"
+    },
+    {
+      "id": "d20-c7-en-de",
+      "sourceId": "d20-c7",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "without sugar",
+      "answer": "ohne Zucker",
+      "german": "ohne Zucker",
+      "english": "without sugar"
+    },
+    {
+      "id": "d20-c7-de-en",
+      "sourceId": "d20-c7",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "ohne Zucker",
+      "answer": "without sugar",
+      "german": "ohne Zucker",
+      "english": "without sugar"
+    },
+    {
+      "id": "d20-c8-en-de",
+      "sourceId": "d20-c8",
+      "day": 20,
+      "direction": "en-de",
+      "prompt": "for you",
+      "answer": "für dich",
+      "german": "für dich",
+      "english": "for you"
+    },
+    {
+      "id": "d20-c8-de-en",
+      "sourceId": "d20-c8",
+      "day": 20,
+      "direction": "de-en",
+      "prompt": "für dich",
+      "answer": "for you",
+      "german": "für dich",
+      "english": "for you"
+    },
+    {
+      "id": "d22-c1-en-de",
+      "sourceId": "d22-c1",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "I like cooking",
+      "answer": "Ich koche gern",
+      "german": "Ich koche gern",
+      "english": "I like cooking"
+    },
+    {
+      "id": "d22-c1-de-en",
+      "sourceId": "d22-c1",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "Ich koche gern",
+      "answer": "I like cooking",
+      "german": "Ich koche gern",
+      "english": "I like cooking"
+    },
+    {
+      "id": "d22-c2-en-de",
+      "sourceId": "d22-c2",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "I prefer...",
+      "answer": "lieber",
+      "german": "lieber",
+      "english": "I prefer..."
+    },
+    {
+      "id": "d22-c2-de-en",
+      "sourceId": "d22-c2",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "lieber",
+      "answer": "I prefer...",
+      "german": "lieber",
+      "english": "I prefer..."
+    },
+    {
+      "id": "d22-c3-en-de",
+      "sourceId": "d22-c3",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "most of all",
+      "answer": "am liebsten",
+      "german": "am liebsten",
+      "english": "most of all"
+    },
+    {
+      "id": "d22-c3-de-en",
+      "sourceId": "d22-c3",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "am liebsten",
+      "answer": "most of all",
+      "german": "am liebsten",
+      "english": "most of all"
+    },
+    {
+      "id": "d22-c4-en-de",
+      "sourceId": "d22-c4",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "often / sometimes",
+      "answer": "oft / manchmal",
+      "german": "oft / manchmal",
+      "english": "often / sometimes"
+    },
+    {
+      "id": "d22-c4-de-en",
+      "sourceId": "d22-c4",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "oft / manchmal",
+      "answer": "often / sometimes",
+      "german": "oft / manchmal",
+      "english": "often / sometimes"
+    },
+    {
+      "id": "d22-c5-en-de",
+      "sourceId": "d22-c5",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "never",
+      "answer": "nie",
+      "german": "nie",
+      "english": "never"
+    },
+    {
+      "id": "d22-c5-de-en",
+      "sourceId": "d22-c5",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "nie",
+      "answer": "never",
+      "german": "nie",
+      "english": "never"
+    },
+    {
+      "id": "d22-c6-en-de",
+      "sourceId": "d22-c6",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "to meet friends",
+      "answer": "Freunde treffen",
+      "german": "Freunde treffen",
+      "english": "to meet friends"
+    },
+    {
+      "id": "d22-c6-de-en",
+      "sourceId": "d22-c6",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "Freunde treffen",
+      "answer": "to meet friends",
+      "german": "Freunde treffen",
+      "english": "to meet friends"
+    },
+    {
+      "id": "d22-c7-en-de",
+      "sourceId": "d22-c7",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "to hike",
+      "answer": "wandern",
+      "german": "wandern",
+      "english": "to hike"
+    },
+    {
+      "id": "d22-c7-de-en",
+      "sourceId": "d22-c7",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "wandern",
+      "answer": "to hike",
+      "german": "wandern",
+      "english": "to hike"
+    },
+    {
+      "id": "d22-c8-en-de",
+      "sourceId": "d22-c8",
+      "day": 22,
+      "direction": "en-de",
+      "prompt": "boring",
+      "answer": "langweilig",
+      "german": "langweilig",
+      "english": "boring"
+    },
+    {
+      "id": "d22-c8-de-en",
+      "sourceId": "d22-c8",
+      "day": 22,
+      "direction": "de-en",
+      "prompt": "langweilig",
+      "answer": "boring",
+      "german": "langweilig",
+      "english": "boring"
+    },
+    {
+      "id": "d23-c1-en-de",
+      "sourceId": "d23-c1",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "flat",
+      "answer": "die Wohnung",
+      "german": "die Wohnung",
+      "english": "flat"
+    },
+    {
+      "id": "d23-c1-de-en",
+      "sourceId": "d23-c1",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "die Wohnung",
+      "answer": "flat",
+      "german": "die Wohnung",
+      "english": "flat"
+    },
+    {
+      "id": "d23-c2-en-de",
+      "sourceId": "d23-c2",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "kitchen",
+      "answer": "die Küche",
+      "german": "die Küche",
+      "english": "kitchen"
+    },
+    {
+      "id": "d23-c2-de-en",
+      "sourceId": "d23-c2",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "die Küche",
+      "answer": "kitchen",
+      "german": "die Küche",
+      "english": "kitchen"
+    },
+    {
+      "id": "d23-c3-en-de",
+      "sourceId": "d23-c3",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "bedroom",
+      "answer": "das Schlafzimmer",
+      "german": "das Schlafzimmer",
+      "english": "bedroom"
+    },
+    {
+      "id": "d23-c3-de-en",
+      "sourceId": "d23-c3",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "das Schlafzimmer",
+      "answer": "bedroom",
+      "german": "das Schlafzimmer",
+      "english": "bedroom"
+    },
+    {
+      "id": "d23-c4-en-de",
+      "sourceId": "d23-c4",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "rent",
+      "answer": "die Miete",
+      "german": "die Miete",
+      "english": "rent"
+    },
+    {
+      "id": "d23-c4-de-en",
+      "sourceId": "d23-c4",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "die Miete",
+      "answer": "rent",
+      "german": "die Miete",
+      "english": "rent"
+    },
+    {
+      "id": "d23-c5-en-de",
+      "sourceId": "d23-c5",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "There's a balcony",
+      "answer": "Es gibt einen Balkon",
+      "german": "Es gibt einen Balkon",
+      "english": "There's a balcony"
+    },
+    {
+      "id": "d23-c5-de-en",
+      "sourceId": "d23-c5",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "Es gibt einen Balkon",
+      "answer": "There's a balcony",
+      "german": "Es gibt einen Balkon",
+      "english": "There's a balcony"
+    },
+    {
+      "id": "d23-c6-en-de",
+      "sourceId": "d23-c6",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "bright / dark",
+      "answer": "hell / dunkel",
+      "german": "hell / dunkel",
+      "english": "bright / dark"
+    },
+    {
+      "id": "d23-c6-de-en",
+      "sourceId": "d23-c6",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "hell / dunkel",
+      "answer": "bright / dark",
+      "german": "hell / dunkel",
+      "english": "bright / dark"
+    },
+    {
+      "id": "d23-c7-en-de",
+      "sourceId": "d23-c7",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "quiet / loud",
+      "answer": "ruhig / laut",
+      "german": "ruhig / laut",
+      "english": "quiet / loud"
+    },
+    {
+      "id": "d23-c7-de-en",
+      "sourceId": "d23-c7",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "ruhig / laut",
+      "answer": "quiet / loud",
+      "german": "ruhig / laut",
+      "english": "quiet / loud"
+    },
+    {
+      "id": "d23-c8-en-de",
+      "sourceId": "d23-c8",
+      "day": 23,
+      "direction": "en-de",
+      "prompt": "to move (house)",
+      "answer": "umziehen",
+      "german": "umziehen",
+      "english": "to move (house)"
+    },
+    {
+      "id": "d23-c8-de-en",
+      "sourceId": "d23-c8",
+      "day": 23,
+      "direction": "de-en",
+      "prompt": "umziehen",
+      "answer": "to move (house)",
+      "german": "umziehen",
+      "english": "to move (house)"
+    },
+    {
+      "id": "d24-c1-en-de",
+      "sourceId": "d24-c1",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "It's raining",
+      "answer": "Es regnet",
+      "german": "Es regnet",
+      "english": "It's raining"
+    },
+    {
+      "id": "d24-c1-de-en",
+      "sourceId": "d24-c1",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "Es regnet",
+      "answer": "It's raining",
+      "german": "Es regnet",
+      "english": "It's raining"
+    },
+    {
+      "id": "d24-c2-en-de",
+      "sourceId": "d24-c2",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "The sun is shining",
+      "answer": "Die Sonne scheint",
+      "german": "Die Sonne scheint",
+      "english": "The sun is shining"
+    },
+    {
+      "id": "d24-c2-de-en",
+      "sourceId": "d24-c2",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "Die Sonne scheint",
+      "answer": "The sun is shining",
+      "german": "Die Sonne scheint",
+      "english": "The sun is shining"
+    },
+    {
+      "id": "d24-c3-en-de",
+      "sourceId": "d24-c3",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "cloudy",
+      "answer": "bewölkt",
+      "german": "bewölkt",
+      "english": "cloudy"
+    },
+    {
+      "id": "d24-c3-de-en",
+      "sourceId": "d24-c3",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "bewölkt",
+      "answer": "cloudy",
+      "german": "bewölkt",
+      "english": "cloudy"
+    },
+    {
+      "id": "d24-c4-en-de",
+      "sourceId": "d24-c4",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "thunderstorm",
+      "answer": "das Gewitter",
+      "german": "das Gewitter",
+      "english": "thunderstorm"
+    },
+    {
+      "id": "d24-c4-de-en",
+      "sourceId": "d24-c4",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "das Gewitter",
+      "answer": "thunderstorm",
+      "german": "das Gewitter",
+      "english": "thunderstorm"
+    },
+    {
+      "id": "d24-c5-en-de",
+      "sourceId": "d24-c5",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "I'm cold",
+      "answer": "Mir ist kalt",
+      "german": "Mir ist kalt",
+      "english": "I'm cold"
+    },
+    {
+      "id": "d24-c5-de-en",
+      "sourceId": "d24-c5",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "Mir ist kalt",
+      "answer": "I'm cold",
+      "german": "Mir ist kalt",
+      "english": "I'm cold"
+    },
+    {
+      "id": "d24-c6-en-de",
+      "sourceId": "d24-c6",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "umbrella",
+      "answer": "der Regenschirm",
+      "german": "der Regenschirm",
+      "english": "umbrella"
+    },
+    {
+      "id": "d24-c6-de-en",
+      "sourceId": "d24-c6",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "der Regenschirm",
+      "answer": "umbrella",
+      "german": "der Regenschirm",
+      "english": "umbrella"
+    },
+    {
+      "id": "d24-c7-en-de",
+      "sourceId": "d24-c7",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "to stay",
+      "answer": "bleiben",
+      "german": "bleiben",
+      "english": "to stay"
+    },
+    {
+      "id": "d24-c7-de-en",
+      "sourceId": "d24-c7",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "bleiben",
+      "answer": "to stay",
+      "german": "bleiben",
+      "english": "to stay"
+    },
+    {
+      "id": "d24-c8-en-de",
+      "sourceId": "d24-c8",
+      "day": 24,
+      "direction": "en-de",
+      "prompt": "Have a nice day!",
+      "answer": "Schönen Tag noch!",
+      "german": "Schönen Tag noch!",
+      "english": "Have a nice day!"
+    },
+    {
+      "id": "d24-c8-de-en",
+      "sourceId": "d24-c8",
+      "day": 24,
+      "direction": "de-en",
+      "prompt": "Schönen Tag noch!",
+      "answer": "Have a nice day!",
+      "german": "Schönen Tag noch!",
+      "english": "Have a nice day!"
+    },
+    {
+      "id": "d25-c1-en-de",
+      "sourceId": "d25-c1",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "head / belly",
+      "answer": "der Kopf / der Bauch",
+      "german": "der Kopf / der Bauch",
+      "english": "head / belly"
+    },
+    {
+      "id": "d25-c1-de-en",
+      "sourceId": "d25-c1",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "der Kopf / der Bauch",
+      "answer": "head / belly",
+      "german": "der Kopf / der Bauch",
+      "english": "head / belly"
+    },
+    {
+      "id": "d25-c2-en-de",
+      "sourceId": "d25-c2",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "I have a headache",
+      "answer": "Ich habe Kopfschmerzen",
+      "german": "Ich habe Kopfschmerzen",
+      "english": "I have a headache"
+    },
+    {
+      "id": "d25-c2-de-en",
+      "sourceId": "d25-c2",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "Ich habe Kopfschmerzen",
+      "answer": "I have a headache",
+      "german": "Ich habe Kopfschmerzen",
+      "english": "I have a headache"
+    },
+    {
+      "id": "d25-c3-en-de",
+      "sourceId": "d25-c3",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "it hurts",
+      "answer": "es tut weh",
+      "german": "es tut weh",
+      "english": "it hurts"
+    },
+    {
+      "id": "d25-c3-de-en",
+      "sourceId": "d25-c3",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "es tut weh",
+      "answer": "it hurts",
+      "german": "es tut weh",
+      "english": "it hurts"
+    },
+    {
+      "id": "d25-c4-en-de",
+      "sourceId": "d25-c4",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "sick / healthy",
+      "answer": "krank / gesund",
+      "german": "krank / gesund",
+      "english": "sick / healthy"
+    },
+    {
+      "id": "d25-c4-de-en",
+      "sourceId": "d25-c4",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "krank / gesund",
+      "answer": "sick / healthy",
+      "german": "krank / gesund",
+      "english": "sick / healthy"
+    },
+    {
+      "id": "d25-c5-en-de",
+      "sourceId": "d25-c5",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "fever",
+      "answer": "das Fieber",
+      "german": "das Fieber",
+      "english": "fever"
+    },
+    {
+      "id": "d25-c5-de-en",
+      "sourceId": "d25-c5",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "das Fieber",
+      "answer": "fever",
+      "german": "das Fieber",
+      "english": "fever"
+    },
+    {
+      "id": "d25-c6-en-de",
+      "sourceId": "d25-c6",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "pharmacy",
+      "answer": "die Apotheke",
+      "german": "die Apotheke",
+      "english": "pharmacy"
+    },
+    {
+      "id": "d25-c6-de-en",
+      "sourceId": "d25-c6",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "die Apotheke",
+      "answer": "pharmacy",
+      "german": "die Apotheke",
+      "english": "pharmacy"
+    },
+    {
+      "id": "d25-c7-en-de",
+      "sourceId": "d25-c7",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "tablet",
+      "answer": "die Tablette",
+      "german": "die Tablette",
+      "english": "tablet"
+    },
+    {
+      "id": "d25-c7-de-en",
+      "sourceId": "d25-c7",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "die Tablette",
+      "answer": "tablet",
+      "german": "die Tablette",
+      "english": "tablet"
+    },
+    {
+      "id": "d25-c8-en-de",
+      "sourceId": "d25-c8",
+      "day": 25,
+      "direction": "en-de",
+      "prompt": "Get well soon!",
+      "answer": "Gute Besserung!",
+      "german": "Gute Besserung!",
+      "english": "Get well soon!"
+    },
+    {
+      "id": "d25-c8-de-en",
+      "sourceId": "d25-c8",
+      "day": 25,
+      "direction": "de-en",
+      "prompt": "Gute Besserung!",
+      "answer": "Get well soon!",
+      "german": "Gute Besserung!",
+      "english": "Get well soon!"
+    },
+    {
+      "id": "d26-c1-en-de",
+      "sourceId": "d26-c1",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "I was",
+      "answer": "ich war",
+      "german": "ich war",
+      "english": "I was"
+    },
+    {
+      "id": "d26-c1-de-en",
+      "sourceId": "d26-c1",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "ich war",
+      "answer": "I was",
+      "german": "ich war",
+      "english": "I was"
+    },
+    {
+      "id": "d26-c2-en-de",
+      "sourceId": "d26-c2",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "you were",
+      "answer": "du warst",
+      "german": "du warst",
+      "english": "you were"
+    },
+    {
+      "id": "d26-c2-de-en",
+      "sourceId": "d26-c2",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "du warst",
+      "answer": "you were",
+      "german": "du warst",
+      "english": "you were"
+    },
+    {
+      "id": "d26-c3-en-de",
+      "sourceId": "d26-c3",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "we were",
+      "answer": "wir waren",
+      "german": "wir waren",
+      "english": "we were"
+    },
+    {
+      "id": "d26-c3-de-en",
+      "sourceId": "d26-c3",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "wir waren",
+      "answer": "we were",
+      "german": "wir waren",
+      "english": "we were"
+    },
+    {
+      "id": "d26-c4-en-de",
+      "sourceId": "d26-c4",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "I had",
+      "answer": "ich hatte",
+      "german": "ich hatte",
+      "english": "I had"
+    },
+    {
+      "id": "d26-c4-de-en",
+      "sourceId": "d26-c4",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "ich hatte",
+      "answer": "I had",
+      "german": "ich hatte",
+      "english": "I had"
+    },
+    {
+      "id": "d26-c5-en-de",
+      "sourceId": "d26-c5",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "she had",
+      "answer": "sie hatte",
+      "german": "sie hatte",
+      "english": "she had"
+    },
+    {
+      "id": "d26-c5-de-en",
+      "sourceId": "d26-c5",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "sie hatte",
+      "answer": "she had",
+      "german": "sie hatte",
+      "english": "she had"
+    },
+    {
+      "id": "d26-c6-en-de",
+      "sourceId": "d26-c6",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "yesterday",
+      "answer": "gestern",
+      "german": "gestern",
+      "english": "yesterday"
+    },
+    {
+      "id": "d26-c6-de-en",
+      "sourceId": "d26-c6",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "gestern",
+      "answer": "yesterday",
+      "german": "gestern",
+      "english": "yesterday"
+    },
+    {
+      "id": "d26-c7-en-de",
+      "sourceId": "d26-c7",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "last week",
+      "answer": "letzte Woche",
+      "german": "letzte Woche",
+      "english": "last week"
+    },
+    {
+      "id": "d26-c7-de-en",
+      "sourceId": "d26-c7",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "letzte Woche",
+      "answer": "last week",
+      "german": "letzte Woche",
+      "english": "last week"
+    },
+    {
+      "id": "d26-c8-en-de",
+      "sourceId": "d26-c8",
+      "day": 26,
+      "direction": "en-de",
+      "prompt": "We had fun",
+      "answer": "Wir hatten Spaß",
+      "german": "Wir hatten Spaß",
+      "english": "We had fun"
+    },
+    {
+      "id": "d26-c8-de-en",
+      "sourceId": "d26-c8",
+      "day": 26,
+      "direction": "de-en",
+      "prompt": "Wir hatten Spaß",
+      "answer": "We had fun",
+      "german": "Wir hatten Spaß",
+      "english": "We had fun"
+    },
+    {
+      "id": "d27-c1-en-de",
+      "sourceId": "d27-c1",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "made/done",
+      "answer": "gemacht",
+      "german": "gemacht",
+      "english": "made/done"
+    },
+    {
+      "id": "d27-c1-de-en",
+      "sourceId": "d27-c1",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "gemacht",
+      "answer": "made/done",
+      "german": "gemacht",
+      "english": "made/done"
+    },
+    {
+      "id": "d27-c2-en-de",
+      "sourceId": "d27-c2",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "eaten",
+      "answer": "gegessen",
+      "german": "gegessen",
+      "english": "eaten"
+    },
+    {
+      "id": "d27-c2-de-en",
+      "sourceId": "d27-c2",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "gegessen",
+      "answer": "eaten",
+      "german": "gegessen",
+      "english": "eaten"
+    },
+    {
+      "id": "d27-c3-en-de",
+      "sourceId": "d27-c3",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "drunk",
+      "answer": "getrunken",
+      "german": "getrunken",
+      "english": "drunk"
+    },
+    {
+      "id": "d27-c3-de-en",
+      "sourceId": "d27-c3",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "getrunken",
+      "answer": "drunk",
+      "german": "getrunken",
+      "english": "drunk"
+    },
+    {
+      "id": "d27-c4-en-de",
+      "sourceId": "d27-c4",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "seen",
+      "answer": "gesehen",
+      "german": "gesehen",
+      "english": "seen"
+    },
+    {
+      "id": "d27-c4-de-en",
+      "sourceId": "d27-c4",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "gesehen",
+      "answer": "seen",
+      "german": "gesehen",
+      "english": "seen"
+    },
+    {
+      "id": "d27-c5-en-de",
+      "sourceId": "d27-c5",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "written",
+      "answer": "geschrieben",
+      "german": "geschrieben",
+      "english": "written"
+    },
+    {
+      "id": "d27-c5-de-en",
+      "sourceId": "d27-c5",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "geschrieben",
+      "answer": "written",
+      "german": "geschrieben",
+      "english": "written"
+    },
+    {
+      "id": "d27-c6-en-de",
+      "sourceId": "d27-c6",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "bought",
+      "answer": "gekauft",
+      "german": "gekauft",
+      "english": "bought"
+    },
+    {
+      "id": "d27-c6-de-en",
+      "sourceId": "d27-c6",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "gekauft",
+      "answer": "bought",
+      "german": "gekauft",
+      "english": "bought"
+    },
+    {
+      "id": "d27-c7-en-de",
+      "sourceId": "d27-c7",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "shopped (sep.)",
+      "answer": "eingekauft",
+      "german": "eingekauft",
+      "english": "shopped (sep.)"
+    },
+    {
+      "id": "d27-c7-de-en",
+      "sourceId": "d27-c7",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "eingekauft",
+      "answer": "shopped (sep.)",
+      "german": "eingekauft",
+      "english": "shopped (sep.)"
+    },
+    {
+      "id": "d27-c8-en-de",
+      "sourceId": "d27-c8",
+      "day": 27,
+      "direction": "en-de",
+      "prompt": "ordered (be-)",
+      "answer": "bestellt",
+      "german": "bestellt",
+      "english": "ordered (be-)"
+    },
+    {
+      "id": "d27-c8-de-en",
+      "sourceId": "d27-c8",
+      "day": 27,
+      "direction": "de-en",
+      "prompt": "bestellt",
+      "answer": "ordered (be-)",
+      "german": "bestellt",
+      "english": "ordered (be-)"
+    },
+    {
+      "id": "d28-c1-en-de",
+      "sourceId": "d28-c1",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "I went (on foot)",
+      "answer": "ich bin gegangen",
+      "german": "ich bin gegangen",
+      "english": "I went (on foot)"
+    },
+    {
+      "id": "d28-c1-de-en",
+      "sourceId": "d28-c1",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "ich bin gegangen",
+      "answer": "I went (on foot)",
+      "german": "ich bin gegangen",
+      "english": "I went (on foot)"
+    },
+    {
+      "id": "d28-c2-en-de",
+      "sourceId": "d28-c2",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "I drove/travelled",
+      "answer": "ich bin gefahren",
+      "german": "ich bin gefahren",
+      "english": "I drove/travelled"
+    },
+    {
+      "id": "d28-c2-de-en",
+      "sourceId": "d28-c2",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "ich bin gefahren",
+      "answer": "I drove/travelled",
+      "german": "ich bin gefahren",
+      "english": "I drove/travelled"
+    },
+    {
+      "id": "d28-c3-en-de",
+      "sourceId": "d28-c3",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "she came",
+      "answer": "sie ist gekommen",
+      "german": "sie ist gekommen",
+      "english": "she came"
+    },
+    {
+      "id": "d28-c3-de-en",
+      "sourceId": "d28-c3",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "sie ist gekommen",
+      "answer": "she came",
+      "german": "sie ist gekommen",
+      "english": "she came"
+    },
+    {
+      "id": "d28-c4-en-de",
+      "sourceId": "d28-c4",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "we flew",
+      "answer": "wir sind geflogen",
+      "german": "wir sind geflogen",
+      "english": "we flew"
+    },
+    {
+      "id": "d28-c4-de-en",
+      "sourceId": "d28-c4",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "wir sind geflogen",
+      "answer": "we flew",
+      "german": "wir sind geflogen",
+      "english": "we flew"
+    },
+    {
+      "id": "d28-c5-en-de",
+      "sourceId": "d28-c5",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "I got up",
+      "answer": "ich bin aufgestanden",
+      "german": "ich bin aufgestanden",
+      "english": "I got up"
+    },
+    {
+      "id": "d28-c5-de-en",
+      "sourceId": "d28-c5",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "ich bin aufgestanden",
+      "answer": "I got up",
+      "german": "ich bin aufgestanden",
+      "english": "I got up"
+    },
+    {
+      "id": "d28-c6-en-de",
+      "sourceId": "d28-c6",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "he stayed",
+      "answer": "er ist geblieben",
+      "german": "er ist geblieben",
+      "english": "he stayed"
+    },
+    {
+      "id": "d28-c6-de-en",
+      "sourceId": "d28-c6",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "er ist geblieben",
+      "answer": "he stayed",
+      "german": "er ist geblieben",
+      "english": "he stayed"
+    },
+    {
+      "id": "d28-c7-en-de",
+      "sourceId": "d28-c7",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "I ate (helper?)",
+      "answer": "ich habe gegessen",
+      "german": "ich habe gegessen",
+      "english": "I ate (helper?)"
+    },
+    {
+      "id": "d28-c7-de-en",
+      "sourceId": "d28-c7",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "ich habe gegessen",
+      "answer": "I ate (helper?)",
+      "german": "ich habe gegessen",
+      "english": "I ate (helper?)"
+    },
+    {
+      "id": "d28-c8-en-de",
+      "sourceId": "d28-c8",
+      "day": 28,
+      "direction": "en-de",
+      "prompt": "it happened",
+      "answer": "es ist passiert",
+      "german": "es ist passiert",
+      "english": "it happened"
+    },
+    {
+      "id": "d28-c8-de-en",
+      "sourceId": "d28-c8",
+      "day": 28,
+      "direction": "de-en",
+      "prompt": "es ist passiert",
+      "answer": "it happened",
+      "german": "es ist passiert",
+      "english": "it happened"
+    },
+    {
+      "id": "d29-c1-en-de",
+      "sourceId": "d29-c1",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "surname",
+      "answer": "der Nachname",
+      "german": "der Nachname",
+      "english": "surname"
+    },
+    {
+      "id": "d29-c1-de-en",
+      "sourceId": "d29-c1",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "der Nachname",
+      "answer": "surname",
+      "german": "der Nachname",
+      "english": "surname"
+    },
+    {
+      "id": "d29-c2-en-de",
+      "sourceId": "d29-c2",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "date of birth",
+      "answer": "das Geburtsdatum",
+      "german": "das Geburtsdatum",
+      "english": "date of birth"
+    },
+    {
+      "id": "d29-c2-de-en",
+      "sourceId": "d29-c2",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "das Geburtsdatum",
+      "answer": "date of birth",
+      "german": "das Geburtsdatum",
+      "english": "date of birth"
+    },
+    {
+      "id": "d29-c3-en-de",
+      "sourceId": "d29-c3",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "nationality",
+      "answer": "die Staatsangehörigkeit",
+      "german": "die Staatsangehörigkeit",
+      "english": "nationality"
+    },
+    {
+      "id": "d29-c3-de-en",
+      "sourceId": "d29-c3",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "die Staatsangehörigkeit",
+      "answer": "nationality",
+      "german": "die Staatsangehörigkeit",
+      "english": "nationality"
+    },
+    {
+      "id": "d29-c4-en-de",
+      "sourceId": "d29-c4",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "signature",
+      "answer": "die Unterschrift",
+      "german": "die Unterschrift",
+      "english": "signature"
+    },
+    {
+      "id": "d29-c4-de-en",
+      "sourceId": "d29-c4",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "die Unterschrift",
+      "answer": "signature",
+      "german": "die Unterschrift",
+      "english": "signature"
+    },
+    {
+      "id": "d29-c5-en-de",
+      "sourceId": "d29-c5",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "to fill in",
+      "answer": "ausfüllen",
+      "german": "ausfüllen",
+      "english": "to fill in"
+    },
+    {
+      "id": "d29-c5-de-en",
+      "sourceId": "d29-c5",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "ausfüllen",
+      "answer": "to fill in",
+      "german": "ausfüllen",
+      "english": "to fill in"
+    },
+    {
+      "id": "d29-c6-en-de",
+      "sourceId": "d29-c6",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "Dear Sir or Madam,",
+      "answer": "Sehr geehrte Damen und Herren,",
+      "german": "Sehr geehrte Damen und Herren,",
+      "english": "Dear Sir or Madam,"
+    },
+    {
+      "id": "d29-c6-de-en",
+      "sourceId": "d29-c6",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "Sehr geehrte Damen und Herren,",
+      "answer": "Dear Sir or Madam,",
+      "german": "Sehr geehrte Damen und Herren,",
+      "english": "Dear Sir or Madam,"
+    },
+    {
+      "id": "d29-c7-en-de",
+      "sourceId": "d29-c7",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "Kind regards",
+      "answer": "Mit freundlichen Grüßen",
+      "german": "Mit freundlichen Grüßen",
+      "english": "Kind regards"
+    },
+    {
+      "id": "d29-c7-de-en",
+      "sourceId": "d29-c7",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "Mit freundlichen Grüßen",
+      "answer": "Kind regards",
+      "german": "Mit freundlichen Grüßen",
+      "english": "Kind regards"
+    },
+    {
+      "id": "d29-c8-en-de",
+      "sourceId": "d29-c8",
+      "day": 29,
+      "direction": "en-de",
+      "prompt": "Thanks in advance",
+      "answer": "Vielen Dank im Voraus",
+      "german": "Vielen Dank im Voraus",
+      "english": "Thanks in advance"
+    },
+    {
+      "id": "d29-c8-de-en",
+      "sourceId": "d29-c8",
+      "day": 29,
+      "direction": "de-en",
+      "prompt": "Vielen Dank im Voraus",
+      "answer": "Thanks in advance",
+      "german": "Vielen Dank im Voraus",
+      "english": "Thanks in advance"
+    }
+  ]
+}
