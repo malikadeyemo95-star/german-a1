@@ -45,10 +45,21 @@ export function buildQueue(cards, records, unlockedDay, now = Date.now(), newLim
   const fresh = unlocked.filter((card) => !records[card.id]?.reps).slice(0, newLimit);
   const remaining = [...due.sort((a, b) => new Date(records[a.id].due) - new Date(records[b.id].due)), ...fresh];
   const queue = [];
+  const GAP = 4; // a card and its reverse twin must sit at least this far apart
   while (remaining.length) {
-    const previousSource = queue.at(-1)?.sourceId;
-    const nextIndex = remaining.findIndex((card) => !previousSource || card.sourceId !== previousSource);
-    queue.push(remaining.splice(nextIndex < 0 ? 0 : nextIndex, 1)[0]);
+    const recent = queue.slice(-GAP).map((card) => card.sourceId);
+    let nextIndex = remaining.findIndex((card) => !recent.includes(card.sourceId));
+    if (nextIndex < 0) {
+      // no card qualifies: pick the one whose twin appeared longest ago
+      let bestAge = -1;
+      nextIndex = 0;
+      remaining.forEach((card, index) => {
+        const lastSeen = queue.map((q) => q.sourceId).lastIndexOf(card.sourceId);
+        const age = lastSeen < 0 ? Infinity : queue.length - lastSeen;
+        if (age > bestAge) { bestAge = age; nextIndex = index; }
+      });
+    }
+    queue.push(remaining.splice(nextIndex, 1)[0]);
   }
   return queue;
 }

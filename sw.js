@@ -1,4 +1,4 @@
-const CACHE = 'deutschweg-v23';
+const CACHE = 'deutschweg-v24';
 const DAY_FILES = Array.from({ length: 30 }, (_, index) => `./content/day-${String(index + 1).padStart(2, '0')}.json`);
 const APP_FILES = [
   './','./index.html','./manifest.json','./icon.png','./icon512.png',
@@ -20,12 +20,12 @@ self.addEventListener('message', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
+  // note: no forced window reloads here — yanking a learner out of a review
+  // session mid-card is worse than waiting one load for fresh assets.
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
-      .then(() => self.clients.claim())
-      .then(() => location.hostname.endsWith('github.io') ? self.clients.matchAll({ type:'window' }) : [])
-      .then((windows) => Promise.all(windows.map((client) => client.navigate(client.url)))),
+      .then(() => self.clients.claim()),
   );
 });
 
@@ -43,13 +43,19 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
+  // assets & content: stale-while-revalidate — serve cached instantly, but
+  // ALWAYS refresh the cache in the background so an old app.js can never
+  // outlive a new index.html (the cause of "fixed on desktop, broken on phone").
   event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request).then((response) => {
-        if (response.ok) caches.open(CACHE).then((cache) => cache.put(event.request, response.clone()));
-        return response;
-      });
+    caches.open(CACHE).then(async (cache) => {
+      const cached = await cache.match(event.request);
+      const refresh = fetch(event.request)
+        .then((response) => {
+          if (response.ok) cache.put(event.request, response.clone());
+          return response;
+        })
+        .catch(() => null);
+      return cached || refresh.then((response) => response || Response.error());
     }),
   );
 });
