@@ -1,6 +1,6 @@
 // German A1 in 30 Days — offline service worker.
 // Bump CACHE version whenever index.html changes to push updates to installed users.
-const CACHE = 'ga1-v10';
+const CACHE = 'ga1-v11';
 const ASSETS = ['./', './index.html', './manifest.json', './icon.png', './icon512.png'];
 
 self.addEventListener('install', e => {

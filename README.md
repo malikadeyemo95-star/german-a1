@@ -15,6 +15,9 @@ mock exam in **one HTML file**. Built for studying 2–3 hours a day on a phone.
 
 This is no longer just a textbook — it's an interactive A1 trainer:
 
+- **🧭 Guided learning journey** — a calm Learn / Review / Practice / Progress shell,
+  one clear next action, a visual 30-day path, and lessons organized into
+  Learn → Listen → Speak → Practice → Review without removing the original content.
 - **🏠 Dashboard** — today's mission, study-mode picker (Light 30 min / Normal 75 min /
   Beast 2.5 h), due reviews, skill bars for vocabulary, grammar, listening, speaking,
   reading, writing, pronunciation and exam readiness.
