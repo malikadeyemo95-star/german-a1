@@ -28,6 +28,7 @@ let allTests;
 let referenceData;
 let referenceTab = 'glossary';
 let pendingSectionId;
+let pendingAssessmentDay;
 let reviewQueue = [];
 let reviewIndex = 0;
 let installPrompt;
@@ -231,6 +232,39 @@ function addQuizMistakeCard(quiz, question) {
   if (allCards) allCards.push(card);
 }
 
+function assessmentPassed(day) {
+  if (state.completedDays.includes(day) || state.assessmentComplete?.[day]) return true;
+  const quizPass = (state.quizResults || []).some((result) =>
+    result.day === day && (result.passed === true || (result.passed == null && result.percent >= 80)));
+  const testPass = (state.testResults || []).some((result) => {
+    const fallbackThreshold = day === 30 ? 60 : 75;
+    return result.day === day && (result.passed === true || (result.passed == null && result.percent >= fallbackThreshold));
+  });
+  return quizPass || testPass;
+}
+
+function markAssessmentPassed(day) {
+  state.assessmentComplete ||= {};
+  state.assessmentComplete[day] = true;
+}
+
+function bestAssessmentResult(day) {
+  return [...(state.quizResults || []), ...(state.testResults || [])]
+    .filter((result) => result.day === day)
+    .sort((a, b) => b.percent - a.percent)[0];
+}
+
+function assessmentReturnButton(day) {
+  return `<button type="button" class="secondary-button return-to-lesson" data-return-day="${day}">Return to Day ${day}</button>`;
+}
+
+function wireAssessmentReturn(body) {
+  body.querySelector('[data-return-day]')?.addEventListener('click', (event) => {
+    pendingSectionId = 'assessment';
+    navigate(`day/${event.currentTarget.dataset.returnDay}`);
+  });
+}
+
 function renderQuiz(quiz) {
   const body = document.querySelector('#quizBody');
   const answers = new Map();
@@ -271,17 +305,20 @@ function renderQuiz(quiz) {
     card.querySelector('[data-check]').addEventListener('click', check);
     card.querySelector('input')?.addEventListener('keydown', (event) => { if (event.key === 'Enter') check(); });
   });
-  body.querySelector('#finishQuiz').addEventListener('click', () => {
+  body.querySelector('#finishQuiz').addEventListener('click', (event) => {
     quiz.questions.forEach((question) => {
       if (!answers.get(question.id)?.correct) body.querySelector(`[data-question="${question.id}"] [data-check]`).click();
     });
     const score = quiz.questions.filter((question) => answers.get(question.id)?.correct).length;
+    event.currentTarget.disabled = true;
     state.quizResults ||= [];
-    state.quizResults.push({ quizId:quiz.id,day:quiz.day,score,total:quiz.questions.length,percent:Math.round(score / quiz.questions.length * 100),at:new Date().toISOString() });
-    saveState(true);
     const passed = score >= quiz.threshold;
-    body.querySelector('#quizResult').innerHTML = `<div class="quiz-result"><span class="eyebrow">${passed ? 'Lesson check passed' : 'Keep practising'}</span><strong>${score}/${quiz.questions.length}</strong><p>${passed ? 'Good work. Your result is saved.' : 'Wrong answers are now in your flashcard review queue.'}</p><button type="button" class="primary-button" data-retake>Retake quiz <span>↻</span></button></div>`;
+    state.quizResults.push({ quizId:quiz.id,day:quiz.day,score,total:quiz.questions.length,percent:Math.round(score / quiz.questions.length * 100),passed,at:new Date().toISOString() });
+    if (passed) markAssessmentPassed(quiz.day);
+    saveState(true);
+    body.querySelector('#quizResult').innerHTML = `<div class="quiz-result"><span class="eyebrow">${passed ? 'Lesson check passed' : 'Keep practising'}</span><strong>${score}/${quiz.questions.length}</strong><p>${passed ? `Good work. Day ${quiz.day} progress is updated.` : 'Wrong answers are now in your flashcard review queue.'}</p><button type="button" class="primary-button" data-retake>Retake quiz <span>↻</span></button>${assessmentReturnButton(quiz.day)}</div>`;
     body.querySelector('[data-retake]').addEventListener('click', () => renderQuiz(quiz));
+    wireAssessmentReturn(body);
     body.querySelector('#quizResult').scrollIntoView({ behavior:preferredScrollBehavior(),block:'center' });
   });
 }
@@ -342,7 +379,9 @@ async function renderQuizHub() {
   const picker = document.querySelector('#quizPicker');
   picker.innerHTML = '<optgroup label="Lesson quizzes">'+unlocked.map((quiz) => `<option value="${quiz.id}">Day ${quiz.day} · Mini quiz</option>`).join('')+'</optgroup>'+
     (unlockedTests.length?'<optgroup label="Tests">'+unlockedTests.map((test)=>`<option value="${test.id}">Day ${test.day} · ${escapeHtml(test.title)}</option>`).join('')+'</optgroup>':'');
-  const preferred = unlocked.find((quiz) => quiz.day === nextDay()) || unlocked.at(-1) || allQuizzes[0];
+  const requestedQuiz = unlocked.find((quiz) => quiz.day === pendingAssessmentDay);
+  const requestedTest = unlockedTests.find((test) => test.day === pendingAssessmentDay);
+  const preferred = requestedQuiz || requestedTest || unlocked.find((quiz) => quiz.day === nextDay()) || unlocked.at(-1) || allQuizzes[0];
   picker.value = preferred.id;
   picker.onchange = () => {
     const quiz = unlocked.find((item) => item.id === picker.value);
@@ -351,7 +390,8 @@ async function renderQuizHub() {
   elements.title.textContent = 'Quiz';
   elements.eyebrow.textContent = `${unlocked.length} unlocked`;
   setView('quiz');
-  renderQuiz(preferred);
+  if (requestedTest) renderTest(requestedTest); else renderQuiz(preferred);
+  pendingAssessmentDay = undefined;
 }
 
 function renderTest(test) {
@@ -365,15 +405,20 @@ function renderTest(test) {
   });
   const panel = body.querySelector('.answer-panel');
   body.querySelector('[data-submit-test]').addEventListener('click', () => { panel.hidden = false;panel.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'}); });
-  body.querySelector('[data-save-test]').addEventListener('click', () => {
+  body.querySelector('[data-save-test]').addEventListener('click', (event) => {
     const score = Number(panel.querySelector('input').value);
     if (!Number.isFinite(score) || score < 0 || score > test.maxScore) return;
     state.testResults ||= [];
-    state.testResults.push({testId:test.id,day:test.day,score,total:test.maxScore,percent:Math.round(score/test.maxScore*100),at:new Date().toISOString()});
-    saveState(true);
     const pass = score >= test.passScore,feedback=panel.querySelector('.quiz-feedback');
+    event.currentTarget.disabled = true;
+    state.testResults.push({testId:test.id,day:test.day,score,total:test.maxScore,percent:Math.round(score/test.maxScore*100),passed:pass,at:new Date().toISOString()});
+    if (pass) markAssessmentPassed(test.day);
+    saveState(true);
     feedback.className=`quiz-feedback ${pass?'good':'bad'}`;
-    feedback.textContent=pass?`Passed — ${score}/${test.maxScore}. Result saved.`:`${score}/${test.maxScore}. Review the key, then retake when ready.`;
+    feedback.innerHTML=pass
+      ? `Passed — ${score}/${test.maxScore}. Day ${test.day} progress is updated.${assessmentReturnButton(test.day)}`
+      : `${score}/${test.maxScore}. Review the key, then retake when ready.${assessmentReturnButton(test.day)}`;
+    wireAssessmentReturn(body);
   });
 }
 
@@ -395,11 +440,17 @@ function refreshLessonProgress(day) {
   const completed = Math.min(total, Object.keys(state.sectionProgress[day] || {}).length);
   const progressCopy = document.querySelector('#lessonProgressCopy');
   const speakingCopy = document.querySelector('#lessonSpeakingCopy');
+  const assessmentCopy = document.querySelector('#lessonAssessmentCopy');
   if (progressCopy) progressCopy.textContent = `${completed} of ${total} sections complete`;
   if (speakingCopy) {
     const speakingDone = Boolean(state.speakingLessons?.[day]?.complete);
     speakingCopy.textContent = speakingDone ? 'Speaking complete ✓' : 'Speaking still to do';
     speakingCopy.classList.toggle('complete', speakingDone);
+  }
+  if (assessmentCopy) {
+    const assessmentDone = assessmentPassed(day);
+    assessmentCopy.textContent = assessmentDone ? 'Quiz complete ✓' : 'Quiz still to do';
+    assessmentCopy.classList.toggle('complete', assessmentDone);
   }
   refreshDayCompletionButton(day);
 }
@@ -409,20 +460,30 @@ function refreshDayCompletionButton(day) {
   if (!button || activeDay !== day) return;
   if (state.completedDays.includes(day)) {
     button.textContent = 'Day complete ✓';
-    button.classList.remove('needs-speaking');
+    button.classList.remove('needs-requirements');
     return;
   }
   const speakingDone = Boolean(state.speakingLessons?.[day]?.complete);
-  button.textContent = speakingDone ? 'Finish this day →' : 'Complete speaking to finish';
-  button.classList.toggle('needs-speaking', !speakingDone);
+  const assessmentDone = assessmentPassed(day);
+  if (speakingDone && assessmentDone) button.textContent = 'Finish this day →';
+  else if (!speakingDone && !assessmentDone) button.textContent = 'Complete speaking and quiz to finish';
+  else if (!speakingDone) button.textContent = 'Complete speaking to finish';
+  else button.textContent = 'Pass the lesson quiz to finish';
+  button.classList.toggle('needs-requirements', !speakingDone || !assessmentDone);
 }
 
 function renderHome() {
   const day = nextDay();
   const info = manifest.days[day - 1];
-  document.querySelector('#continueEyebrow').textContent = `Today · Day ${day}`;
+  const total = info.sectionCount + (info.types.includes('speaking') ? 0 : 1);
+  const completed = Math.min(total, Object.keys(state.sectionProgress[day] || {}).length);
+  const started = completed > 0 || Boolean(state.speakingLessons?.[day]) || Boolean(bestAssessmentResult(day));
+  document.querySelector('#continueEyebrow').textContent = `${started ? 'Continue' : 'Today'} · Day ${day}`;
   document.querySelector('#continueTitle').textContent = info.title.replace(/^Day \d+ [—·-]\s*/, '');
   document.querySelector('#continueGoal').textContent = info.goal.replace(/^🎯\s*/, '');
+  document.querySelector('#continueProgress').textContent = started
+    ? `${completed}/${total} sections · ${state.speakingLessons?.[day]?.complete ? 'speaking done' : 'speaking due'} · ${assessmentPassed(day) ? 'quiz done' : 'quiz due'}`
+    : 'A fresh lesson is ready when you are.';
   document.querySelector('#daysComplete').textContent = state.completedDays.length;
   document.querySelector('#coursePercent').textContent = `${Math.round(state.completedDays.length / 30 * 100)}%`;
   document.querySelector('#studyDays').textContent = state.activityDays.length;
@@ -430,6 +491,7 @@ function renderHome() {
   Promise.all([loadCards(), loadSrsApi()]).then(([cards, srs]) => {
     document.querySelector('#dueToday').textContent = srs.buildQueue(cards, state.srs || {}, day, Date.now(), 15).length;
   }).catch(() => { document.querySelector('#dueToday').textContent = '—'; });
+  document.querySelector('#continueButton').innerHTML = `${started ? 'Continue' : 'Start'} lesson <span>→</span>`;
   document.querySelector('#continueButton').onclick = () => navigate(`day/${day}`);
   updateChrome();
   setView('home');
@@ -623,11 +685,14 @@ function renderDays() {
   const current = nextDay();
   document.querySelector('#dayGrid').innerHTML = manifest.days.map((day) => {
     const classes = ['day-tile'];
-    if (state.completedDays.includes(day.day)) classes.push('complete');
-    else if (Object.keys(state.sectionProgress[day.day] || {}).length) classes.push('in-progress');
+    const complete = state.completedDays.includes(day.day);
+    const inProgress = !complete && (Object.keys(state.sectionProgress[day.day] || {}).length || state.speakingLessons?.[day.day] || bestAssessmentResult(day.day));
+    if (complete) classes.push('complete');
+    else if (inProgress) classes.push('in-progress');
     if (day.day === current) classes.push('current');
     if (TEST_DAYS.has(day.day)) classes.push('test');
-    return `<button type="button" class="${classes.join(' ')}" data-day="${day.day}" aria-label="Day ${day.day}: ${escapeHtml(day.title)}">${state.completedDays.includes(day.day) ? '✓' : day.day}</button>`;
+    const status = complete ? 'Complete' : inProgress ? 'In progress' : 'Not started';
+    return `<button type="button" class="${classes.join(' ')}" data-day="${day.day}" aria-label="Day ${day.day}: ${escapeHtml(day.title)}. ${status}${TEST_DAYS.has(day.day) ? '. Test day' : ''}">${complete ? '✓' : day.day}</button>`;
   }).join('');
   document.querySelectorAll('.day-tile').forEach((button) => button.addEventListener('click', () => navigate(`day/${button.dataset.day}`)));
   elements.title.textContent = 'Your 30 days';
@@ -785,6 +850,37 @@ async function enhanceSpeaking(root, day) {
   });
 }
 
+function findAssessmentSection(data) {
+  if (data.day === 30) return data.sections.find((section) => /how to run your mock exam/i.test(section.title));
+  return data.sections.find((section) =>
+    section.type === 'quiz' &&
+    !/answer key/i.test(section.title) &&
+    (/mini quiz/i.test(section.title) || /\btest\s*\d/i.test(section.title)));
+}
+
+async function enhanceAssessment(root, data) {
+  await Promise.all([loadQuizzes(), loadTests()]);
+  const sectionData = findAssessmentSection(data);
+  const section = sectionData ? document.getElementById(sectionData.id) : null;
+  if (!section) return;
+  const test = allTests.find((item) => item.day === data.day);
+  const quiz = allQuizzes.find((item) => item.day === data.day);
+  const assessment = test || quiz;
+  if (!assessment) return;
+  const passed = assessmentPassed(data.day);
+  const result = bestAssessmentResult(data.day);
+  const unlocked = data.day <= nextDay() || passed || state.completedDays.includes(data.day);
+  const required = test ? `${test.passScore}/${test.maxScore} to pass` : `${quiz.threshold}/${quiz.questions.length} to pass`;
+  const card = document.createElement('div');
+  card.className = `lesson-assessment-card ${passed ? 'complete' : ''}`;
+  card.innerHTML = `<div class="assessment-copy"><span class="eyebrow">${test ? 'Weekly assessment' : 'Lesson check'}</span><strong>${passed ? 'Assessment passed ✓' : test ? test.title : 'Ready to check what you learned?'}</strong><p>${result ? `Best result: ${result.percent}% · ` : ''}${passed ? 'This lesson requirement is complete.' : required}</p></div><button type="button" class="${passed ? 'secondary-button' : 'primary-button'}" data-open-assessment ${unlocked ? '' : 'disabled'}>${unlocked ? (passed ? 'Review assessment' : test ? 'Start test' : 'Take interactive quiz') : 'Complete earlier days first'}</button>`;
+  section.querySelector('.section-body').prepend(card);
+  card.querySelector('[data-open-assessment]').addEventListener('click', () => {
+    pendingAssessmentDay = data.day;
+    navigate('quiz');
+  });
+}
+
 function showCelebration(day, goal) {
   const overlay = document.querySelector('#celebration');
   document.querySelector('#celebrationCopy').textContent = goal.replace(/^🎯\s*/, '') || `Day ${day} is complete.`;
@@ -801,17 +897,22 @@ async function renderDay(day) {
   updateChrome(activeDay);
   try {
     const data = await loadDay(activeDay);
+    const assessmentSection = findAssessmentSection(data);
+    if (assessmentSection && assessmentPassed(activeDay)) {
+      state.sectionProgress[activeDay] ||= {};
+      state.sectionProgress[activeDay][assessmentSection.id] = true;
+    }
     const article = document.createDocumentFragment();
     const heading = document.createElement('header');
     heading.className = 'lesson-heading';
     const sectionTotal = data.sections.length + (data.sections.some((section) => section.type === 'speaking') ? 0 : 1);
-    heading.innerHTML = `<p class="eyebrow">Day ${activeDay} · ${sectionTotal} sections</p><h1>${escapeHtml(data.title.replace(/^Day \d+ [—·-]\s*/, ''))}</h1><p>${escapeHtml(data.goal.replace(/^🎯\s*/, ''))}</p><div class="lesson-progress-summary"><span id="lessonProgressCopy">0 of ${sectionTotal} sections complete</span><span id="lessonSpeakingCopy">Speaking still to do</span></div>`;
+    heading.innerHTML = `<p class="eyebrow">Day ${activeDay} · ${sectionTotal} sections</p><h1>${escapeHtml(data.title.replace(/^Day \d+ [—·-]\s*/, ''))}</h1><p>${escapeHtml(data.goal.replace(/^🎯\s*/, ''))}</p><div class="lesson-progress-summary"><span id="lessonProgressCopy">0 of ${sectionTotal} sections complete</span><span id="lessonSpeakingCopy">Speaking still to do</span><span id="lessonAssessmentCopy">Quiz still to do</span></div>`;
     article.appendChild(heading);
     const firstIncomplete = data.sections.findIndex((section) => !state.sectionProgress[activeDay]?.[section.id]);
     data.sections.forEach((section, index) => article.appendChild(renderSection(section, activeDay, index === Math.max(0, firstIncomplete))));
     const complete = document.createElement('button');
     complete.type = 'button'; complete.className = 'primary-button complete-day';
-    complete.textContent = state.completedDays.includes(activeDay) ? 'Day complete ✓' : 'Complete speaking to finish';
+    complete.textContent = state.completedDays.includes(activeDay) ? 'Day complete ✓' : 'Complete speaking and quiz to finish';
     complete.addEventListener('click', () => {
       if (state.completedDays.includes(activeDay)) return;
       if (!state.speakingLessons?.[activeDay]?.complete) {
@@ -822,6 +923,15 @@ async function renderDay(day) {
           if (status) status.textContent = 'Make one speaking attempt and save it before finishing this day.';
           speaking.scrollIntoView({ behavior:preferredScrollBehavior(), block:'start' });
           speaking.querySelector('[data-start]')?.focus({ preventScroll:true });
+        }
+        return;
+      }
+      if (!assessmentPassed(activeDay)) {
+        const assessment = elements.content.querySelector('.lesson-assessment-card');
+        if (assessment) {
+          assessment.closest('.section-card').open = true;
+          assessment.scrollIntoView({ behavior:preferredScrollBehavior(), block:'center' });
+          assessment.querySelector('[data-open-assessment]')?.focus({ preventScroll:true });
         }
         return;
       }
@@ -840,13 +950,19 @@ async function renderDay(day) {
     dayNav.querySelector('[data-next]').addEventListener('click', () => navigate(`day/${activeDay + 1}`));
     article.appendChild(dayNav);
     elements.content.appendChild(article);
-    await Promise.all([enhanceAudio(elements.content, activeDay), enhanceSpeaking(elements.content, activeDay)]);
+    await Promise.all([enhanceAudio(elements.content, activeDay), enhanceSpeaking(elements.content, activeDay), enhanceAssessment(elements.content, data)]);
     refreshLessonProgress(activeDay);
     if (pendingSectionId) {
       const target = pendingSectionId === 'speaking'
         ? elements.content.querySelector('.section-card[data-type="speaking"]')
+        : pendingSectionId === 'assessment'
+        ? elements.content.querySelector('.lesson-assessment-card')
         : document.getElementById(pendingSectionId);
-      if (target) { target.open = true;target.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'}); }
+      if (target) {
+        const disclosure = target.matches('.section-card') ? target : target.closest('.section-card');
+        if (disclosure) disclosure.open = true;
+        target.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'});
+      }
       pendingSectionId = null;
     }
     elements.loading.hidden = true;

@@ -9,11 +9,12 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 ## Learning experience
 
 - A focused Home → Lesson → Review flow with a 30-day status grid.
+- The home card distinguishes Start from Continue, summarizes the two remaining lesson gates, and resumes the first unfinished section.
 - All original lessons, tables, dialogues, quizzes, flashcards, tests, answer keys, and the Day 30 mock exam preserved.
 - Typed, collapsible lesson sections with independent completion tracking.
 - Lesson-integrated speaking coaches for all 30 days. Each coach offers Repeat, Answer, Build, and Roleplay tasks using only that lesson or earlier material.
 - Microphone transcription where the browser supports German speech recognition, plus lesson-aware corrections, grammar and clarity scores, content checklists, saved best attempts, and Weak List cards.
-- Speaking is now a real lesson-completion gate: the app guides the learner back to the speaking card instead of silently marking a skipped lesson complete.
+- Speaking and the day’s assessment are real completion gates: the app guides the learner to whichever step is still missing instead of silently marking a skipped lesson complete.
 - An actionable Speaking Mistakes review in Stats lets learners reveal and hear corrections, reopen the source lesson, and archive resolved mistakes.
 - A typed fallback for browsers without speech recognition; model-answer audio remains available through German text-to-speech.
 - German TTS on vocabulary, examples, dialogue lines, and flashcards, with line-by-line dialogue playback and 0.7× / 1× speed.
@@ -21,6 +22,7 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - A bidirectional FSRS-lite flashcard deck with Again / Hard / Good / Easy grading, typed answers, special-character keys, due counts, and hardest-card history.
 - Interactive mini quizzes with typed answers, multiple choice, tap-to-order sentences, matching pairs, explanations, saved results, and automatic mistake cards.
 - Four weekly tests and the Day 30 mock exam with locked answer keys, scoring, and retakes.
+- Every lesson surfaces its exact quiz or test inside the daily journey; passing updates the lesson checklist and offers a one-tap return to that day.
 - Stats for streaks, section and day completion, cards reviewed, scores, study days, and weak topics.
 - JSON progress export/import and automatic migration from the original `ga1done` and `ga1x` localStorage keys.
 - Global course search, a 345-entry glossary, and a 26-section grammar reference.

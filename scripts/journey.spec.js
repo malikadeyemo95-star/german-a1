@@ -11,6 +11,7 @@ test('speaking gates day completion and saved mistakes become actionable review'
       lastDay:3,
       theme:'dark',
       activityDays:[],
+      assessmentComplete:{ 3:true },
     }));
   });
   await page.goto('http://127.0.0.1:8765/?journey-test=1#day/3');
@@ -47,4 +48,104 @@ test('speaking gates day completion and saved mistakes become actionable review'
   await hungerCard.locator('[data-resolve]').click();
   await expect(page.locator('.speaking-mistake:not(.resolved)')).toHaveCount(activeBefore - 1);
   await expect(page.locator('.resolved-mistakes')).toContainText('1 resolved');
+});
+
+test('the lesson assessment opens the exact quiz and a pass returns to the day', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('ga1:v2', JSON.stringify({
+      schemaVersion:2,
+      completedDays:[],
+      sectionProgress:{},
+      lastDay:1,
+      theme:'dark',
+      activityDays:[],
+      speakingLessons:{ 1:{ complete:true,tasks:{ 0:{ score:90,text:'Hallo, ich heiße Malik.' } } } },
+    }));
+  });
+  await page.goto('http://127.0.0.1:8765/?assessment-test=1#day/1');
+
+  await expect(page.locator('#lessonSpeakingCopy')).toContainText('Speaking complete');
+  await expect(page.locator('#lessonAssessmentCopy')).toContainText('Quiz still to do');
+  await page.locator('.complete-day').click();
+  await expect(page.locator('.lesson-assessment-card')).toBeVisible();
+  await page.locator('[data-open-assessment]').click();
+
+  await expect(page.locator('#quizView')).toBeVisible();
+  await expect(page.locator('#quizPicker')).toHaveValue('day-1-mini');
+
+  const q1 = page.locator('[data-question="d1-q1"]');
+  await q1.locator('input').fill('Auf Wiedersehen');
+  await q1.locator('[data-check]').click();
+  const q2 = page.locator('[data-question="d1-q2"]');
+  await q2.getByRole('button', { name:'"vine"' }).click();
+  await q2.locator('[data-check]').click();
+  const q3 = page.locator('[data-question="d1-q3"]');
+  await q3.getByRole('button', { name:'Guten Abend' }).click();
+  await q3.locator('[data-check]').click();
+  const q4 = page.locator('[data-question="d1-q4"]');
+  await q4.locator('input').fill('Bitte!');
+  await q4.locator('[data-check]').click();
+  const q5 = page.locator('[data-question="d1-q5"]');
+  await q5.locator('input').fill('True');
+  await q5.locator('[data-check]').click();
+  await page.locator('#finishQuiz').click();
+
+  await expect(page.locator('#quizResult')).toContainText('Lesson check passed');
+  await page.locator('[data-return-day="1"]').click();
+  await expect(page.locator('#dayView')).toBeVisible();
+  await expect(page.locator('#lessonAssessmentCopy')).toContainText('Quiz complete');
+  await expect(page.locator('.complete-day')).toContainText('Finish this day');
+  await page.locator('.complete-day').click();
+  await expect(page.locator('#celebration')).toBeVisible();
+});
+
+test('weekly test days use their original threshold and return to the review day', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('ga1:v2', JSON.stringify({
+      schemaVersion:2,
+      completedDays:[1,2,3,4,5,6],
+      sectionProgress:{},
+      lastDay:7,
+      theme:'dark',
+      activityDays:[],
+      speakingLessons:{ 7:{ complete:true,tasks:{ 0:{ score:85,text:'Hallo, ich heiße Malik.' } } } },
+    }));
+  });
+  await page.goto('http://127.0.0.1:8765/?weekly-test=1#day/7');
+
+  await page.locator('.complete-day').click();
+  await expect(page.locator('.lesson-assessment-card')).toContainText('30/40 to pass');
+  await page.locator('[data-open-assessment]').click();
+  await expect(page.locator('#quizPicker')).toHaveValue('weekly-test-1');
+  await expect(page.locator('.test-paper')).toContainText('Week 1 test');
+
+  await page.locator('[data-submit-test]').click();
+  await page.locator('.test-score input').fill('30');
+  await page.locator('[data-save-test]').click();
+  await expect(page.locator('.answer-panel .quiz-feedback')).toContainText('Passed — 30/40');
+  await page.locator('[data-return-day="7"]').click();
+  await expect(page.locator('#lessonAssessmentCopy')).toContainText('Quiz complete');
+});
+
+test('home and day grid clearly resume the first unfinished lesson section', async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('ga1:v2', JSON.stringify({
+      schemaVersion:2,
+      completedDays:[],
+      sectionProgress:{ 1:{ 'd1-s1':true } },
+      lastDay:1,
+      theme:'dark',
+      activityDays:['2026-07-05'],
+    }));
+  });
+  await page.goto('http://127.0.0.1:8765/?resume-test=1');
+
+  await expect(page.locator('#continueEyebrow')).toContainText('Continue · Day 1');
+  await expect(page.locator('#continueProgress')).toContainText('1/12 sections');
+  await expect(page.locator('#continueButton')).toContainText('Continue lesson');
+  await page.locator('#continueButton').click();
+  await expect(page.locator('#d1-s2')).toHaveAttribute('open', '');
+
+  await page.locator('[data-route="days"]').click();
+  await expect(page.locator('[data-day="1"]')).toHaveAttribute('aria-label', /In progress/);
 });

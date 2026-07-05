@@ -25,6 +25,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - Token-based dark/light design system with persisted theme.
 - Sticky progress top bar and exact Home / Days / Flashcards / Quiz / Stats mobile navigation.
 - 30-day status grid, test-day styling, swipe navigation, per-section checks, responsive tables, card transitions, and reduced-motion support.
+- Returning learners see an explicit Continue state, requirement summary, and the first unfinished section opened automatically.
 - Browser QA found no horizontal overflow at 390 px, 768 px, or 1280 px.
 
 ## Workstream 3 — Audio
@@ -45,6 +46,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - 25 mini quizzes and 125 explained questions.
 - Typed, multiple-choice, tap-to-order, and matching-pair interactions.
 - Four weekly tests and the Day 30 mock retain their original tasks, keys, pass thresholds, scores, and retake flow.
+- Every one of the 30 lesson journeys links to its exact quiz or test, records the original pass threshold, and returns to the source day with progress updated.
 - Wrong mini-quiz and speaking answers create persistent review cards.
 
 ## Workstream 6 — Progress and motivation
@@ -78,7 +80,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - Every day has a lesson-scoped coach with Repeat, Answer, Build, and Roleplay.
 - Each coach includes a goal, model, microphone action, live transcript, correction, grammar and clarity feedback, checklist, retry, best-attempt save, and Weak List action.
 - Saving an attempt marks the lesson’s speaking section complete.
-- A day cannot be finished until its speaking attempt is saved; the completion control opens and focuses the missing speaking step.
+- A day cannot be finished until its speaking attempt is saved and its quiz or test is passed; the completion control opens and focuses the next missing requirement.
 - Day 3 explicitly catches “Ich bin Hunger” and corrects it to “Ich habe Hunger.”
 - Stats includes an actionable Speaking Mistakes review with reveal, audio, source-lesson, and resolve actions.
 - Unsupported speech-recognition browsers receive a typed transcript fallback while model audio remains available.
