@@ -225,7 +225,7 @@ test('search modal traps focus, closes with Escape, and returns focus to its tri
   await expect(page.locator('#searchButton')).toBeFocused();
 });
 
-test('a revealed flashcard automatically advances after its reading window', async ({ page }) => {
+test('choosing a flashcard grade immediately advances to the next card', async ({ page }) => {
   await page.addInitScript(() => {
     localStorage.setItem('ga1:v2', JSON.stringify({
       schemaVersion:2,
@@ -241,7 +241,7 @@ test('a revealed flashcard automatically advances after its reading window', asy
   const firstPrompt = await page.locator('#reviewPrompt').textContent();
   await page.locator('#reviewCard').click();
   await expect(page.locator('#reviewAnswer')).toBeVisible();
-  await expect(page.locator('#autoAdvanceStatus')).toContainText('Next card in 5s (Good)');
-  await expect.poll(() => page.locator('#reviewPrompt').textContent(), { timeout:7000 }).not.toBe(firstPrompt);
+  await page.locator('#gradeButtons [data-grade="easy"]').click();
+  await expect.poll(() => page.locator('#reviewPrompt').textContent()).not.toBe(firstPrompt);
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('ga1:v2')).cardsReviewed)).toBe(1);
 });

@@ -31,8 +31,6 @@ let pendingSectionId;
 let pendingAssessmentDay;
 let reviewQueue = [];
 let reviewIndex = 0;
-let autoAdvanceTimeout;
-let autoAdvanceInterval;
 let installPrompt;
 let audioApi;
 let srsApi;
@@ -111,7 +109,6 @@ function setTheme(theme) {
 }
 
 function setView(name) {
-  if (name !== 'flashcards') clearReviewAutoAdvance();
   Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,stats:elements.stats,reference:elements.reference,placeholder:elements.placeholder})
     .forEach((view) => { view.hidden = true; });
   elements[name].hidden = false;
@@ -215,36 +212,7 @@ function renderHardest() {
     : '<p class="lede">No difficult cards yet.</p>';
 }
 
-function clearReviewAutoAdvance() {
-  window.clearTimeout(autoAdvanceTimeout);
-  window.clearInterval(autoAdvanceInterval);
-  autoAdvanceTimeout = undefined;
-  autoAdvanceInterval = undefined;
-  const status = document.querySelector('#autoAdvanceStatus');
-  if (status) status.textContent = '';
-}
-
-function startReviewAutoAdvance(cardId, seconds = 5) {
-  clearReviewAutoAdvance();
-  let remaining = seconds;
-  const status = document.querySelector('#autoAdvanceStatus');
-  const updateStatus = () => {
-    status.textContent = `Next card in ${remaining}s (Good) · choose another grade to override`;
-  };
-  updateStatus();
-  autoAdvanceInterval = window.setInterval(() => {
-    remaining -= 1;
-    if (remaining > 0) updateStatus();
-  }, 1000);
-  autoAdvanceTimeout = window.setTimeout(() => {
-    if (reviewQueue[reviewIndex]?.id === cardId && document.querySelector('#reviewCard').classList.contains('revealed')) {
-      gradeCurrent('good');
-    }
-  }, seconds * 1000);
-}
-
 function paintReviewCard() {
-  clearReviewAutoAdvance();
   const session = document.querySelector('#reviewSession'),empty = document.querySelector('#reviewEmpty');
   if (reviewIndex >= reviewQueue.length) {
     session.hidden = true; empty.hidden = false; renderHardest(); return;
@@ -275,7 +243,6 @@ function revealReviewCard() {
   document.querySelector('#gradeButtons').hidden = false;
   document.querySelector('#revealAnswer').hidden = true;
   speakGerman(card.german, 1);
-  startReviewAutoAdvance(card.id);
 }
 
 async function renderFlashcards() {
@@ -293,7 +260,6 @@ async function renderFlashcards() {
 function gradeCurrent(grade) {
   const card = reviewQueue[reviewIndex];
   if (!card) return;
-  clearReviewAutoAdvance();
   state.srs[card.id] = srsApi.scheduleCard(state.srs[card.id], grade);
   state.cardsReviewed = (state.cardsReviewed || 0) + 1;
   if (grade === 'again') reviewQueue.push(card);
