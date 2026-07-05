@@ -31,6 +31,7 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - Imported backups receive strict schema and size validation plus a human-readable preview; the app saves a reversible pre-import recovery point before replacing anything.
 - Global course search, a 345-entry glossary, and a 26-section grammar reference.
 - Dark and light themes, keyboard support, reduced-motion support, responsive tables, swipe lesson navigation, and no horizontal page overflow.
+- Search and completion dialogs trap keyboard focus, close with Escape, and return focus to their trigger; choice, matching, speaking-tab, and correction controls expose their selected or expanded state.
 - Installable PWA with all 30 lessons cached for offline study.
 - Safe in-app update prompts let installed learners choose when to reload a newly cached release without risking their local progress.
 

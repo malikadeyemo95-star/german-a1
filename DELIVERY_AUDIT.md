@@ -75,6 +75,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 ## Workstream 9 — Accessibility and QA
 
 - Semantic landmarks, skip link, labels, live regions, keyboard controls, visible focus, and reduced motion.
+- Modal focus is trapped and restored, Escape closes overlays, and interactive selection/expansion state is exposed through ARIA.
 - Both themes pass Lighthouse accessibility at 100.
 - Automated and visual checks cover phone, tablet, desktop, Android Chromium, iPhone WebKit, offline use, content integrity, state migration, SRS, speaking rules, quizzes, reference data, PWA cache, and static accessibility contracts.
 

@@ -82,6 +82,7 @@ test('the lesson assessment opens the exact quiz and a pass returns to the day',
   await q1.locator('[data-check]').click();
   const q2 = page.locator('[data-question="d1-q2"]');
   await q2.getByRole('button', { name:'"vine"' }).click();
+  await expect(q2.getByRole('button', { name:'"vine"' })).toHaveAttribute('aria-pressed','true');
   await q2.locator('[data-check]').click();
   const q3 = page.locator('[data-question="d1-q3"]');
   await q3.getByRole('button', { name:'Guten Abend' }).click();
@@ -101,6 +102,10 @@ test('the lesson assessment opens the exact quiz and a pass returns to the day',
   await expect(page.locator('.complete-day')).toContainText('Finish this day');
   await page.locator('.complete-day').click();
   await expect(page.locator('#celebration')).toBeVisible();
+  await expect(page.locator('#celebrationNext')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#celebration')).toBeHidden();
+  await expect(page.locator('.complete-day')).toBeFocused();
 });
 
 test('weekly test days use their original threshold and return to the review day', async ({ page }) => {
@@ -206,4 +211,16 @@ test('progress imports are previewed, validated, and reversibly restored', async
   });
   await expect(page.locator('#importFeedback')).toContainText('not a valid Deutschweg progress file');
   await expect(page.locator('#importPreview')).toBeHidden();
+});
+
+test('search modal traps focus, closes with Escape, and returns focus to its trigger', async ({ page }) => {
+  await page.goto('http://127.0.0.1:8765/?keyboard-test=1');
+  await page.locator('#searchButton').click();
+  await expect(page.locator('#searchOverlay')).toBeVisible();
+  await expect(page.locator('#globalSearch')).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.locator('#closeSearch')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#searchOverlay')).toBeHidden();
+  await expect(page.locator('#searchButton')).toBeFocused();
 });

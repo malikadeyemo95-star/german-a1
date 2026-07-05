@@ -233,12 +233,12 @@ export function mountSpeakingCoach(context) {
     <h3>Speaking Practice</h3>
     <p><strong>Goal:</strong> ${lesson.goal}</p>
     <div class="speaking-tasks" role="tablist" aria-label="Speaking task type">
-      <button type="button" class="active" data-task="0">Repeat</button>
-      <button type="button" data-task="1">Answer</button>
-      <button type="button" data-task="2">Build</button>
-      <button type="button" data-task="3">Roleplay</button>
+      <button type="button" role="tab" class="active" data-task="0">Repeat</button>
+      <button type="button" role="tab" data-task="1">Answer</button>
+      <button type="button" role="tab" data-task="2">Build</button>
+      <button type="button" role="tab" data-task="3">Roleplay</button>
     </div>
-    <div class="speaking-prompt"></div>
+    <div class="speaking-prompt" role="tabpanel"></div>
     <div class="speaking-model"><strong>Model:</strong> <span lang="de"></span><button type="button" class="speak-button" data-model aria-label="Hear model answer">▶</button></div>
     <button type="button" class="primary-button microphone-button" data-start aria-pressed="false">Start speaking</button>
     <div class="speaking-live" aria-live="polite">Your live transcript will appear here.</div>

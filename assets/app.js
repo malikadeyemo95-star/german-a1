@@ -37,6 +37,8 @@ let srsApi;
 let speakingApi;
 let refreshingForUpdate = false;
 let pendingImportState;
+let focusBeforeSearch;
+let focusBeforeCelebration;
 
 async function loadAudioApi() {
   audioApi ||= await import('./audio.js');
@@ -161,6 +163,20 @@ function normalizeAnswer(value) {
 
 function preferredScrollBehavior() {
   return matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+}
+
+function focusableElements(container) {
+  return [...container.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])')]
+    .filter((element) => !element.hidden && element.getClientRects().length);
+}
+
+function trapDialogFocus(event, container) {
+  if (event.key !== 'Tab') return;
+  const focusable = focusableElements(container);
+  if (!focusable.length) return;
+  const first = focusable[0],last = focusable.at(-1);
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault();last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault();first.focus(); }
 }
 
 function quizAnswerVariants(question) {
@@ -308,7 +324,7 @@ function renderQuiz(quiz) {
   body.dataset.day = quiz.day;
   body.innerHTML = renderMatchingWarmup(quiz) + quiz.questions.map((question, index) => {
     const control = question.type === 'choice'
-      ? `<div class="choice-grid">${question.choices.map((choice) => `<button type="button" class="choice-option" data-choice="${escapeHtml(choice)}">${escapeHtml(choice)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check</button>`
+      ? `<div class="choice-grid">${question.choices.map((choice) => `<button type="button" class="choice-option" data-choice="${escapeHtml(choice)}" aria-pressed="false">${escapeHtml(choice)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check</button>`
       : question.type === 'reorder'
       ? `<div class="word-answer" aria-label="Your sentence"></div><div class="word-bank">${question.tokens.map((token) => `<button type="button" class="word-chip">${escapeHtml(token)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check order</button>`
       : `<div class="quiz-input-row"><input type="text" lang="de" autocapitalize="off" aria-label="Answer question ${index + 1}"><button type="button" class="quiz-check" data-check>Check</button></div>`;
@@ -318,7 +334,11 @@ function renderQuiz(quiz) {
   quiz.questions.forEach((question) => {
     const card = body.querySelector(`[data-question="${question.id}"]`);
     card.querySelectorAll('[data-choice]').forEach((button) => button.addEventListener('click', () => {
-      card.querySelectorAll('[data-choice]').forEach((item) => item.classList.toggle('selected', item === button));
+      card.querySelectorAll('[data-choice]').forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle('selected', selected);
+        item.setAttribute('aria-pressed',String(selected));
+      });
       answers.set(question.id, button.dataset.choice);
     }));
     card.querySelectorAll('.word-chip').forEach((button) => button.addEventListener('click', () => {
@@ -374,8 +394,8 @@ function renderMatchingWarmup(quiz) {
     <p class="eyebrow">Vocabulary warm-up</p>
     <h2>Match the German and English</h2>
     <div class="matching-grid">
-      <div class="matching-column" aria-label="German words">${cards.map((card) => `<button type="button" class="match-option" data-match-side="left" data-pair="${card.sourceId}">${escapeHtml(card.german)}</button>`).join('')}</div>
-      <div class="matching-column" aria-label="English meanings">${right.map((card) => `<button type="button" class="match-option" data-match-side="right" data-pair="${card.sourceId}">${escapeHtml(card.english)}</button>`).join('')}</div>
+      <div class="matching-column" aria-label="German words">${cards.map((card) => `<button type="button" class="match-option" data-match-side="left" data-pair="${card.sourceId}" aria-pressed="false">${escapeHtml(card.german)}</button>`).join('')}</div>
+      <div class="matching-column" aria-label="English meanings">${right.map((card) => `<button type="button" class="match-option" data-match-side="right" data-pair="${card.sourceId}" aria-pressed="false">${escapeHtml(card.english)}</button>`).join('')}</div>
     </div>
     <div class="quiz-feedback" aria-live="polite">Choose one item from each column.</div>
   </article>`;
@@ -390,12 +410,17 @@ function wireMatchingWarmup(body) {
   const totalPairs = matchingCardsForDay(Number(body.dataset.day)).length;
   warmup.querySelectorAll('.match-option').forEach((button) => button.addEventListener('click', () => {
     const side = button.dataset.matchSide;
-    warmup.querySelectorAll(`[data-match-side="${side}"]:not(.matched)`).forEach((item) => item.classList.remove('selected'));
+    warmup.querySelectorAll(`[data-match-side="${side}"]:not(.matched)`).forEach((item) => {
+      item.classList.remove('selected');
+      item.setAttribute('aria-pressed','false');
+    });
     button.classList.add('selected');
+    button.setAttribute('aria-pressed','true');
     if (side === 'left') left = button; else right = button;
     if (!left || !right) return;
     if (left.dataset.pair === right.dataset.pair) {
       left.classList.add('matched'); right.classList.add('matched');
+      left.setAttribute('aria-pressed','true');right.setAttribute('aria-pressed','true');
       left.disabled = true; right.disabled = true;
       feedback.className = 'quiz-feedback good';
       feedback.textContent = warmup.querySelectorAll('.matched').length === totalPairs * 2 ? 'All pairs matched.' : 'Correct pair.';
@@ -404,6 +429,8 @@ function wireMatchingWarmup(body) {
       feedback.textContent = 'Not a match. Try those two again.';
     }
     left.classList.remove('selected'); right.classList.remove('selected');
+    if (!left.classList.contains('matched')) left.setAttribute('aria-pressed','false');
+    if (!right.classList.contains('matched')) right.setAttribute('aria-pressed','false');
     left = undefined; right = undefined;
   }));
 }
@@ -592,7 +619,7 @@ function speakingMistakeCard(item, resolved = false) {
       <span>Correction</span><p lang="de">${escapeHtml(item.correction)}</p>
     </div>
     ${resolved ? '<span class="resolved-label">Resolved ✓</span>' : `<div class="mistake-actions">
-      <button type="button" data-reveal aria-label="Show correction for ${escapeHtml(item.issue)}">Show correction</button>
+      <button type="button" data-reveal aria-expanded="false" aria-label="Show correction for ${escapeHtml(item.issue)}">Show correction</button>
       <button type="button" data-hear aria-label="Hear correction for ${escapeHtml(item.issue)}">Hear</button>
       <button type="button" data-practise aria-label="Open Day ${item.day} speaking lesson">Open lesson</button>
       <button type="button" data-resolve aria-label="Mark this speaking mistake resolved">Mark resolved</button>
@@ -615,6 +642,7 @@ function renderSpeakingMistakes() {
     card.querySelector('[data-reveal]').addEventListener('click', (event) => {
       const correction = card.querySelector('[data-correction]');
       correction.hidden = !correction.hidden;
+      event.currentTarget.setAttribute('aria-expanded',String(!correction.hidden));
       event.currentTarget.textContent = correction.hidden ? 'Show correction' : 'Hide correction';
     });
     card.querySelector('[data-hear]').addEventListener('click', () => speakGerman(item.correction, .85));
@@ -694,12 +722,19 @@ async function renderReference(tab = 'glossary') {
 
 async function openGlobalSearch() {
   await loadReference();
+  focusBeforeSearch = document.activeElement;
   const overlay = document.querySelector('#searchOverlay');
   overlay.hidden = false;
   const input = document.querySelector('#globalSearch');
   input.value = '';
   document.querySelector('#searchResults').innerHTML = '<p class="lede">Search vocabulary and grammar from all 30 days.</p>';
   input.focus();
+}
+
+function closeGlobalSearch() {
+  document.querySelector('#searchOverlay').hidden = true;
+  if (focusBeforeSearch?.isConnected) focusBeforeSearch.focus();
+  focusBeforeSearch = undefined;
 }
 
 function runGlobalSearch(value) {
@@ -710,7 +745,7 @@ function runGlobalSearch(value) {
     : '<p class="lede">No matches yet.</p>';
   document.querySelectorAll('.search-result').forEach((button) => button.addEventListener('click', () => {
     pendingSectionId = button.dataset.section;
-    document.querySelector('#searchOverlay').hidden = true;
+    closeGlobalSearch();
     navigate(`day/${button.dataset.day}`);
   }));
 }
@@ -1007,10 +1042,18 @@ async function enhanceAssessment(root, data) {
 
 function showCelebration(day, goal) {
   const overlay = document.querySelector('#celebration');
+  focusBeforeCelebration = document.activeElement;
   document.querySelector('#celebrationCopy').textContent = goal.replace(/^🎯\s*/, '') || `Day ${day} is complete.`;
-  document.querySelector('#celebrationNext').onclick = () => { overlay.hidden = true; navigate(day < 30 ? `day/${day + 1}` : 'stats'); };
-  document.querySelector('#celebrationHome').onclick = () => { overlay.hidden = true; navigate('home'); };
+  document.querySelector('#celebrationNext').onclick = () => { closeCelebration(false); navigate(day < 30 ? `day/${day + 1}` : 'stats'); };
+  document.querySelector('#celebrationHome').onclick = () => { closeCelebration(false); navigate('home'); };
   overlay.hidden = false;
+  requestAnimationFrame(() => document.querySelector('#celebrationNext').focus());
+}
+
+function closeCelebration(returnFocus = true) {
+  document.querySelector('#celebration').hidden = true;
+  if (returnFocus && focusBeforeCelebration?.isConnected) focusBeforeCelebration.focus();
+  focusBeforeCelebration = undefined;
 }
 
 async function renderDay(day) {
@@ -1169,8 +1212,16 @@ document.querySelector('#cancelImport').addEventListener('click', () => {
 });
 document.querySelector('#recoverImport').addEventListener('click', recoverPreviousProgress);
 document.querySelector('#searchButton').addEventListener('click', openGlobalSearch);
-document.querySelector('#closeSearch').addEventListener('click', () => { document.querySelector('#searchOverlay').hidden = true; });
-document.querySelector('#searchOverlay').addEventListener('click', (event) => { if (event.target.id === 'searchOverlay') event.currentTarget.hidden = true; });
+document.querySelector('#closeSearch').addEventListener('click', closeGlobalSearch);
+document.querySelector('#searchOverlay').addEventListener('click', (event) => { if (event.target.id === 'searchOverlay') closeGlobalSearch(); });
+document.querySelector('#searchOverlay').addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') { event.preventDefault();closeGlobalSearch(); }
+  else trapDialogFocus(event, event.currentTarget);
+});
+document.querySelector('#celebration').addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') { event.preventDefault();closeCelebration(); }
+  else trapDialogFocus(event, event.currentTarget);
+});
 document.querySelector('#globalSearch').addEventListener('input', (event) => runGlobalSearch(event.target.value));
 document.querySelectorAll('[data-reference]').forEach((button) => button.addEventListener('click', () => navigate(`reference/${button.dataset.reference}`)));
 document.querySelectorAll('[data-reference-tab]').forEach((button) => button.addEventListener('click', () => setReferenceTab(button.dataset.referenceTab)));
