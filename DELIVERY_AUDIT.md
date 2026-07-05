@@ -57,6 +57,7 @@ Verified on 2026-07-05 against the requested nine workstreams.
 
 - Standalone manifest, 192 px and 512 px icons, install prompt, and offline indicator.
 - Service worker pre-caches the shell, all 30 lessons, reference data, quiz/test data, and every lazy JavaScript module.
+- Installed learners receive an explicit update prompt; a waiting worker activates only when they choose to reload.
 - Automated Chromium offline test reloads the shell and opens Day 30 plus its speaking coach with the network disabled.
 
 ## Workstream 8 — Search and reference
@@ -77,6 +78,8 @@ Verified on 2026-07-05 against the requested nine workstreams.
 - Every day has a lesson-scoped coach with Repeat, Answer, Build, and Roleplay.
 - Each coach includes a goal, model, microphone action, live transcript, correction, grammar and clarity feedback, checklist, retry, best-attempt save, and Weak List action.
 - Saving an attempt marks the lesson’s speaking section complete.
+- A day cannot be finished until its speaking attempt is saved; the completion control opens and focuses the missing speaking step.
 - Day 3 explicitly catches “Ich bin Hunger” and corrects it to “Ich habe Hunger.”
+- Stats includes an actionable Speaking Mistakes review with reveal, audio, source-lesson, and resolve actions.
 - Unsupported speech-recognition browsers receive a typed transcript fallback while model audio remains available.
 - There is no disconnected Speaking Studio.

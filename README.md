@@ -13,6 +13,8 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - Typed, collapsible lesson sections with independent completion tracking.
 - Lesson-integrated speaking coaches for all 30 days. Each coach offers Repeat, Answer, Build, and Roleplay tasks using only that lesson or earlier material.
 - Microphone transcription where the browser supports German speech recognition, plus lesson-aware corrections, grammar and clarity scores, content checklists, saved best attempts, and Weak List cards.
+- Speaking is now a real lesson-completion gate: the app guides the learner back to the speaking card instead of silently marking a skipped lesson complete.
+- An actionable Speaking Mistakes review in Stats lets learners reveal and hear corrections, reopen the source lesson, and archive resolved mistakes.
 - A typed fallback for browsers without speech recognition; model-answer audio remains available through German text-to-speech.
 - German TTS on vocabulary, examples, dialogue lines, and flashcards, with line-by-line dialogue playback and 0.7× / 1× speed.
 - Listening drills, including confusing number pairs such as 24 and 42.
@@ -24,6 +26,7 @@ The app is static and deploys directly to GitHub Pages. There is no account, bac
 - Global course search, a 345-entry glossary, and a 26-section grammar reference.
 - Dark and light themes, keyboard support, reduced-motion support, responsive tables, swipe lesson navigation, and no horizontal page overflow.
 - Installable PWA with all 30 lessons cached for offline study.
+- Safe in-app update prompts let installed learners choose when to reload a newly cached release without risking their local progress.
 
 ## Architecture
 
@@ -80,6 +83,7 @@ Optional end-to-end checks require Playwright:
 ```sh
 npm install --no-save @playwright/test playwright
 npx playwright test scripts/offline.spec.js --workers=1
+npx playwright test scripts/journey.spec.js --workers=1
 node scripts/device-qa.cjs
 ```
 

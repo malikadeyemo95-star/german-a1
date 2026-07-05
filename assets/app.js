@@ -34,6 +34,7 @@ let installPrompt;
 let audioApi;
 let srsApi;
 let speakingApi;
+let refreshingForUpdate = false;
 
 async function loadAudioApi() {
   audioApi ||= await import('./audio.js');
@@ -154,6 +155,10 @@ async function loadReference() {
 
 function normalizeAnswer(value) {
   return value.toLowerCase().trim().replace(/[.,!?;:„“"']/g,'').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/\s+/g,' ');
+}
+
+function preferredScrollBehavior() {
+  return matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 }
 
 function renderHardest() {
@@ -277,7 +282,7 @@ function renderQuiz(quiz) {
     const passed = score >= quiz.threshold;
     body.querySelector('#quizResult').innerHTML = `<div class="quiz-result"><span class="eyebrow">${passed ? 'Lesson check passed' : 'Keep practising'}</span><strong>${score}/${quiz.questions.length}</strong><p>${passed ? 'Good work. Your result is saved.' : 'Wrong answers are now in your flashcard review queue.'}</p><button type="button" class="primary-button" data-retake>Retake quiz <span>↻</span></button></div>`;
     body.querySelector('[data-retake]').addEventListener('click', () => renderQuiz(quiz));
-    body.querySelector('#quizResult').scrollIntoView({ behavior:'smooth',block:'center' });
+    body.querySelector('#quizResult').scrollIntoView({ behavior:preferredScrollBehavior(),block:'center' });
   });
 }
 
@@ -359,7 +364,7 @@ function renderTest(test) {
     item.appendChild(input);
   });
   const panel = body.querySelector('.answer-panel');
-  body.querySelector('[data-submit-test]').addEventListener('click', () => { panel.hidden = false;panel.scrollIntoView({behavior:'smooth',block:'start'}); });
+  body.querySelector('[data-submit-test]').addEventListener('click', () => { panel.hidden = false;panel.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'}); });
   body.querySelector('[data-save-test]').addEventListener('click', () => {
     const score = Number(panel.querySelector('input').value);
     if (!Number.isFinite(score) || score < 0 || score > test.maxScore) return;
@@ -376,10 +381,40 @@ function updateChrome(day = null) {
   const complete = state.completedDays.length;
   const dayInfo = day ? manifest.days[day - 1] : null;
   const dayDone = day ? Object.keys(state.sectionProgress[day] || {}).length : 0;
-  const dayRatio = day && state.completedDays.includes(day) ? 1 : dayDone / Math.max(1, dayInfo?.sectionCount || 1);
+  const sectionTotal = dayInfo ? dayInfo.sectionCount + (dayInfo.types.includes('speaking') ? 0 : 1) : 1;
+  const dayRatio = day && state.completedDays.includes(day) ? 1 : Math.min(1, dayDone / Math.max(1, sectionTotal));
   elements.progress.style.width = day ? `${dayRatio * 100}%` : `${complete / 30 * 100}%`;
   elements.eyebrow.textContent = day ? `Day ${day} of 30` : 'Deutschweg · A1';
   elements.title.textContent = day ? manifest.days[day - 1].title.replace(/^Day \d+ [—·-]\s*/, '') : 'Your 30-day journey';
+  if (day) refreshLessonProgress(day);
+}
+
+function refreshLessonProgress(day) {
+  const dayInfo = manifest.days[day - 1];
+  const total = dayInfo.sectionCount + (dayInfo.types.includes('speaking') ? 0 : 1);
+  const completed = Math.min(total, Object.keys(state.sectionProgress[day] || {}).length);
+  const progressCopy = document.querySelector('#lessonProgressCopy');
+  const speakingCopy = document.querySelector('#lessonSpeakingCopy');
+  if (progressCopy) progressCopy.textContent = `${completed} of ${total} sections complete`;
+  if (speakingCopy) {
+    const speakingDone = Boolean(state.speakingLessons?.[day]?.complete);
+    speakingCopy.textContent = speakingDone ? 'Speaking complete ✓' : 'Speaking still to do';
+    speakingCopy.classList.toggle('complete', speakingDone);
+  }
+  refreshDayCompletionButton(day);
+}
+
+function refreshDayCompletionButton(day) {
+  const button = document.querySelector('.complete-day');
+  if (!button || activeDay !== day) return;
+  if (state.completedDays.includes(day)) {
+    button.textContent = 'Day complete ✓';
+    button.classList.remove('needs-speaking');
+    return;
+  }
+  const speakingDone = Boolean(state.speakingLessons?.[day]?.complete);
+  button.textContent = speakingDone ? 'Finish this day →' : 'Complete speaking to finish';
+  button.classList.toggle('needs-speaking', !speakingDone);
 }
 
 function renderHome() {
@@ -412,13 +447,65 @@ function weakTopicEntries() {
   (state.customCards || []).forEach((card) => {
     if (!String(card.id).startsWith('speaking-')) add(`Day ${card.day} quiz`);
   });
-  (state.speakingWeakList || []).forEach((item) => add(`${item.category} · Day ${item.day}`));
+  (state.speakingWeakList || []).filter((item) => !item.resolvedAt).forEach((item) => add(`${item.category} · Day ${item.day}`));
   Object.entries(state.srs || {}).forEach(([id, record]) => {
     if (!(record.lapses > 0)) return;
     const card = allCards?.find((item) => item.id === id);
     add(card ? `Day ${card.day} flashcards` : 'Flashcards', record.lapses);
   });
   return [...counts].sort((a,b) => b[1] - a[1]).slice(0,8);
+}
+
+function speakingReviewItems() {
+  return (state.speakingWeakList || [])
+    .filter((item) => state.speakingLessons?.[item.day]?.complete || state.completedDays.includes(item.day))
+    .sort((a, b) => Number(Boolean(a.resolvedAt)) - Number(Boolean(b.resolvedAt)) || new Date(b.at) - new Date(a.at));
+}
+
+function speakingMistakeCard(item, resolved = false) {
+  return `<article class="speaking-mistake ${resolved ? 'resolved' : ''}" data-speaking-mistake="${escapeHtml(item.id)}">
+    <div class="mistake-meta"><span>${escapeHtml(item.category)}</span><span>Day ${item.day}</span></div>
+    <strong>${escapeHtml(item.issue)}</strong>
+    <div class="mistake-correction" data-correction ${resolved ? '' : 'hidden'}>
+      <span>Correction</span><p lang="de">${escapeHtml(item.correction)}</p>
+    </div>
+    ${resolved ? '<span class="resolved-label">Resolved ✓</span>' : `<div class="mistake-actions">
+      <button type="button" data-reveal aria-label="Show correction for ${escapeHtml(item.issue)}">Show correction</button>
+      <button type="button" data-hear aria-label="Hear correction for ${escapeHtml(item.issue)}">Hear</button>
+      <button type="button" data-practise aria-label="Open Day ${item.day} speaking lesson">Open lesson</button>
+      <button type="button" data-resolve aria-label="Mark this speaking mistake resolved">Mark resolved</button>
+    </div>`}
+  </article>`;
+}
+
+function renderSpeakingMistakes() {
+  const items = speakingReviewItems();
+  const active = items.filter((item) => !item.resolvedAt);
+  const resolved = items.filter((item) => item.resolvedAt);
+  document.querySelector('#speakingMistakeCount').textContent = `${active.length} active`;
+  document.querySelector('#speakingMistakes').innerHTML = active.length
+    ? active.map((item) => speakingMistakeCard(item)).join('') +
+      (resolved.length ? `<details class="resolved-mistakes"><summary>${resolved.length} resolved</summary>${resolved.map((item) => speakingMistakeCard(item, true)).join('')}</details>` : '')
+    : `<div class="empty-review"><strong>${resolved.length ? 'No active speaking mistakes.' : 'Your Speaking Review is clear.'}</strong><p>${resolved.length ? 'Resolved items remain below as a record.' : 'Lesson mistakes you save will appear here for focused review.'}</p></div>${resolved.length ? `<details class="resolved-mistakes"><summary>${resolved.length} resolved</summary>${resolved.map((item) => speakingMistakeCard(item, true)).join('')}</details>` : ''}`;
+  document.querySelectorAll('[data-speaking-mistake]').forEach((card) => {
+    const item = items.find((entry) => entry.id === card.dataset.speakingMistake);
+    if (!item || item.resolvedAt) return;
+    card.querySelector('[data-reveal]').addEventListener('click', (event) => {
+      const correction = card.querySelector('[data-correction]');
+      correction.hidden = !correction.hidden;
+      event.currentTarget.textContent = correction.hidden ? 'Show correction' : 'Hide correction';
+    });
+    card.querySelector('[data-hear]').addEventListener('click', () => speakGerman(item.correction, .85));
+    card.querySelector('[data-practise]').addEventListener('click', () => {
+      pendingSectionId = 'speaking';
+      navigate(`day/${item.day}`);
+    });
+    card.querySelector('[data-resolve]').addEventListener('click', () => {
+      item.resolvedAt = new Date().toISOString();
+      saveState(true);
+      renderStats();
+    });
+  });
 }
 
 async function renderStats() {
@@ -441,6 +528,7 @@ async function renderStats() {
   document.querySelector('#weakTopics').innerHTML = weak.length
     ? weak.map(([topic,count]) => `<div class="weak-row"><strong>${escapeHtml(topic)}</strong><span>${count} misses</span></div>`).join('')
     : '<p class="lede">No weak topics recorded yet.</p>';
+  renderSpeakingMistakes();
   elements.title.textContent = 'Stats';
   elements.eyebrow.textContent = `${calculateStreak(state.activityDays)} day streak`;
   setView('stats');
@@ -716,14 +804,27 @@ async function renderDay(day) {
     const article = document.createDocumentFragment();
     const heading = document.createElement('header');
     heading.className = 'lesson-heading';
-    heading.innerHTML = `<p class="eyebrow">Day ${activeDay} · ${data.sections.length} sections</p><h1>${escapeHtml(data.title.replace(/^Day \d+ [—·-]\s*/, ''))}</h1><p>${escapeHtml(data.goal.replace(/^🎯\s*/, ''))}</p>`;
+    const sectionTotal = data.sections.length + (data.sections.some((section) => section.type === 'speaking') ? 0 : 1);
+    heading.innerHTML = `<p class="eyebrow">Day ${activeDay} · ${sectionTotal} sections</p><h1>${escapeHtml(data.title.replace(/^Day \d+ [—·-]\s*/, ''))}</h1><p>${escapeHtml(data.goal.replace(/^🎯\s*/, ''))}</p><div class="lesson-progress-summary"><span id="lessonProgressCopy">0 of ${sectionTotal} sections complete</span><span id="lessonSpeakingCopy">Speaking still to do</span></div>`;
     article.appendChild(heading);
     const firstIncomplete = data.sections.findIndex((section) => !state.sectionProgress[activeDay]?.[section.id]);
     data.sections.forEach((section, index) => article.appendChild(renderSection(section, activeDay, index === Math.max(0, firstIncomplete))));
     const complete = document.createElement('button');
     complete.type = 'button'; complete.className = 'primary-button complete-day';
-    complete.textContent = state.completedDays.includes(activeDay) ? 'Day complete ✓' : 'Mark day complete';
+    complete.textContent = state.completedDays.includes(activeDay) ? 'Day complete ✓' : 'Complete speaking to finish';
     complete.addEventListener('click', () => {
+      if (state.completedDays.includes(activeDay)) return;
+      if (!state.speakingLessons?.[activeDay]?.complete) {
+        const speaking = elements.content.querySelector('.section-card[data-type="speaking"]');
+        if (speaking) {
+          speaking.open = true;
+          const status = speaking.querySelector('.speaking-status');
+          if (status) status.textContent = 'Make one speaking attempt and save it before finishing this day.';
+          speaking.scrollIntoView({ behavior:preferredScrollBehavior(), block:'start' });
+          speaking.querySelector('[data-start]')?.focus({ preventScroll:true });
+        }
+        return;
+      }
       if (!state.completedDays.includes(activeDay)) state.completedDays.push(activeDay);
       state.lastDay = activeDay < 30 ? activeDay + 1 : 30;
       saveState(true);
@@ -740,9 +841,12 @@ async function renderDay(day) {
     article.appendChild(dayNav);
     elements.content.appendChild(article);
     await Promise.all([enhanceAudio(elements.content, activeDay), enhanceSpeaking(elements.content, activeDay)]);
+    refreshLessonProgress(activeDay);
     if (pendingSectionId) {
-      const target = document.getElementById(pendingSectionId);
-      if (target) { target.open = true;target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      const target = pendingSectionId === 'speaking'
+        ? elements.content.querySelector('.section-card[data-type="speaking"]')
+        : document.getElementById(pendingSectionId);
+      if (target) { target.open = true;target.scrollIntoView({behavior:preferredScrollBehavior(),block:'start'}); }
       pendingSectionId = null;
     }
     elements.loading.hidden = true;
@@ -840,7 +944,29 @@ function updateConnection() {
 window.addEventListener('online', updateConnection);
 window.addEventListener('offline', updateConnection);
 updateConnection();
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+function offerAppUpdate(worker) {
+  if (!navigator.serviceWorker.controller || !worker) return;
+  const toast = document.querySelector('#updateToast');
+  toast.hidden = false;
+  document.querySelector('#applyUpdate').onclick = () => {
+    refreshingForUpdate = true;
+    worker.postMessage({ type:'SKIP_WAITING' });
+  };
+}
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (refreshingForUpdate) location.reload();
+  });
+  navigator.serviceWorker.register('./sw.js').then((registration) => {
+    offerAppUpdate(registration.waiting);
+    registration.addEventListener('updatefound', () => {
+      const worker = registration.installing;
+      worker?.addEventListener('statechange', () => {
+        if (worker.state === 'installed') offerAppUpdate(worker);
+      });
+    });
+  }).catch(() => {});
+}
 document.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive:true });
 document.addEventListener('touchend', (event) => {
   if (elements.day.hidden) return;

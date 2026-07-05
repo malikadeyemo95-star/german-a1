@@ -107,6 +107,11 @@
       <div class="stat-grid" id="statGrid"></div>
       <section class="stats-section"><h2>Scores over time</h2><div id="scoreTimeline"></div></section>
       <section class="stats-section"><h2>Weakest topics</h2><div id="weakTopics"></div></section>
+      <section class="stats-section speaking-review-section" aria-labelledby="speakingMistakesTitle">
+        <div class="section-heading-row"><div><p class="eyebrow">From completed lessons</p><h2 id="speakingMistakesTitle">Speaking Mistakes</h2></div><span class="count-badge" id="speakingMistakeCount">0 active</span></div>
+        <p class="lede">Reveal the correction, listen, then return to that lesson when you are ready to try it again.</p>
+        <div id="speakingMistakes"></div>
+      </section>
       <section class="stats-section"><h2>Protect your progress</h2><p class="lede">Export a backup whenever you like. Importing restores the complete learning record on this device.</p><div class="data-actions"><button class="secondary-button" id="exportProgress" type="button">Export progress</button><label class="secondary-button import-label">Import progress<input type="file" id="importProgress" accept="application/json"></label></div><p id="importFeedback" aria-live="polite"></p></section>
     </section>
 
@@ -150,6 +155,10 @@
       <input type="search" id="globalSearch" placeholder="Try Termin, accusative, Bahnhof…" autocomplete="off">
       <div id="searchResults" aria-live="polite"></div>
     </div>
+  </div>
+  <div class="update-toast" id="updateToast" role="status" hidden>
+    <div><strong>A fresh lesson update is ready.</strong><span>Your progress is already safe on this device.</span></div>
+    <button type="button" id="applyUpdate">Update now</button>
   </div>
 
   <noscript>This course needs JavaScript to load its lesson files.</noscript>

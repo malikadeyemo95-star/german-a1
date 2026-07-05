@@ -91,7 +91,11 @@ function addWeakItems(state, day, task, result) {
   if (!additions.length) additions.push({ category:'Pronunciation', issue:`Day ${day}: improve speaking clarity`, correction:task.model });
   additions.forEach((item) => {
     const id = `speaking-${day}-${normalize(item.issue).slice(0, 36)}`;
-    if (!state.speakingWeakList.some((entry) => entry.id === id)) state.speakingWeakList.push({ id, day, ...item, at:new Date().toISOString() });
+    const existing = state.speakingWeakList.find((entry) => entry.id === id);
+    if (existing) {
+      existing.at = new Date().toISOString();
+      delete existing.resolvedAt;
+    } else state.speakingWeakList.push({ id, day, ...item, at:new Date().toISOString() });
     state.customCards ||= [];
     if (!state.customCards.some((card) => card.id === id)) {
       state.customCards.push({ id, sourceId:id, day, direction:'mistake', prompt:item.issue, answer:item.correction, german:item.correction, english:item.issue });
