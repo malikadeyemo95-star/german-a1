@@ -22,7 +22,7 @@
     },
     {
       "id": "d4-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Woher kommst du? — Ich komme aus Nigeria.</span> <span class=\"tr\">Where are you from? — I'm from Nigeria.</span></li>\n<li><span class=\"de\">Wo wohnst du? — Ich wohne in Lagos.</span> <span class=\"tr\">Where do you live? — I live in Lagos.</span></li>\n<li><span class=\"de\">Ich spreche Englisch und ein bisschen Deutsch.</span> <span class=\"tr\">I speak English and a little German.</span></li>\n<li><span class=\"de\">Sie kommt aus der Schweiz, aber sie wohnt in Berlin.</span> <span class=\"tr\">She's from Switzerland but lives in Berlin.</span></li>\n<li><span class=\"de\">Wir lernen Deutsch.</span> <span class=\"tr\">We are learning German.</span></li>\n<li><span class=\"de\">Sprichst du Französisch? — Nein, aber ich lerne Spanisch.</span> <span class=\"tr\">Do you speak French? — No, but I'm learning Spanish.</span></li>\n</ol>\n</details>",
       "sourceHash": "542d4da283e03da650568af43b6a71b3761b14d862c4757c72671660ec454f90"

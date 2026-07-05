@@ -22,7 +22,7 @@
     },
     {
       "id": "d17-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich kann ein bisschen Deutsch sprechen.</span> <span class=\"tr\">I can speak a little German.</span></li>\n<li><span class=\"de\">Kannst du langsam sprechen, bitte?</span> <span class=\"tr\">Can you speak slowly, please?</span></li>\n<li><span class=\"de\">Ich verstehe das nicht. Können Sie das wiederholen?</span> <span class=\"tr\">I don't understand. Could you repeat that?</span></li>\n<li><span class=\"de\">Ich muss morgen früh aufstehen.</span> <span class=\"tr\">I have to get up early tomorrow.</span></li>\n<li><span class=\"de\">Wir wollen unbedingt nach Berlin fahren.</span> <span class=\"tr\">We really want to go to Berlin.</span></li>\n<li><span class=\"de\">Er kann leider nicht kommen — er muss arbeiten.</span> <span class=\"tr\">Unfortunately he can't come — he has to work.</span></li>\n</ol>\n</details>",
       "sourceHash": "93d8c34203c3f51c3390f6076095d12f6e6bd811900a6b3afc78e3fbddc94213"

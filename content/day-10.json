@@ -22,7 +22,7 @@
     },
     {
       "id": "d10-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich brauche einen Kaffee!</span> <span class=\"tr\">I need a coffee!</span></li>\n<li><span class=\"de\">Er kauft den Tisch und die Lampe.</span> <span class=\"tr\">He buys the table and the lamp.</span></li>\n<li><span class=\"de\">Wir suchen den Schlüssel.</span> <span class=\"tr\">We're looking for the key.</span></li>\n<li><span class=\"de\">Siehst du das Auto? — Ja, natürlich.</span> <span class=\"tr\">Do you see the car? — Yes, of course.</span></li>\n<li><span class=\"de\">Sie hat keinen Hund, aber eine Katze.</span> <span class=\"tr\">She has no dog, but a cat.</span></li>\n<li><span class=\"de\">Ich trinke Wasser, er trinkt Tee.</span> <span class=\"tr\">I drink water, he drinks tea.</span></li>\n</ol>\n</details>",
       "sourceHash": "8699574c683f1614e22d8064e54a787e427acef09b3c2c67b2f180fd95282d3d"

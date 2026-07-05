@@ -59,6 +59,7 @@ function text(value) {
 
 function sectionType(summary) {
   const value = summary.toLowerCase();
+  if (/quiz|test|exam/.test(value)) return 'quiz';
   if (/grammar|alphabet|pronunciation rule|theory/.test(value)) return 'grammar';
   if (/vocabulary|wortschatz/.test(value)) return 'vocab';
   if (/example|sentence/.test(value)) return 'sentences';
@@ -67,7 +68,6 @@ function sectionType(summary) {
   if (/listening|hören/.test(value)) return 'listening';
   if (/reading|lesen/.test(value)) return 'reading';
   if (/writing|schreiben/.test(value)) return 'writing';
-  if (/quiz|test|exam/.test(value)) return 'quiz';
   if (/flashcard|karte/.test(value)) return 'flashcards';
   if (/homework|hausaufgabe/.test(value)) return 'homework';
   if (/revision|review|answer key|scoring/.test(value)) return 'revision';

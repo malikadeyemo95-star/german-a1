@@ -1,0 +1,1376 @@
+{
+  "schemaVersion": 1,
+  "quizzes": [
+    {
+      "id": "day-1-mini",
+      "day": 1,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d1-q1",
+          "type": "fill",
+          "prompt": "How do you say goodbye formally ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Auf Wiedersehen",
+          "explanation": "Auf Wiedersehen"
+        },
+        {
+          "id": "d1-q2",
+          "type": "choice",
+          "prompt": "Wein is pronounced:",
+          "choices": [
+            "\"veen\"",
+            "\"vine\"",
+            "\"wine\""
+          ],
+          "tokens": null,
+          "answer": "\"vine\"",
+          "explanation": "b — W sounds like V, ei sounds like \"eye\""
+        },
+        {
+          "id": "d1-q3",
+          "type": "choice",
+          "prompt": "Which greeting fits at 21:00?",
+          "choices": [
+            "Guten Morgen",
+            "Guten Abend",
+            "Gute Nacht"
+          ],
+          "tokens": null,
+          "answer": "Guten Abend",
+          "explanation": "b (Gute Nacht is only for bedtime)"
+        },
+        {
+          "id": "d1-q4",
+          "type": "fill",
+          "prompt": "Someone says Danke! — what do you reply?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Bitte!",
+          "explanation": "Bitte!"
+        },
+        {
+          "id": "d1-q5",
+          "type": "fill",
+          "prompt": "True or false: German nouns are always capitalized.",
+          "choices": null,
+          "tokens": null,
+          "answer": "True",
+          "explanation": "True"
+        }
+      ]
+    },
+    {
+      "id": "day-2-mini",
+      "day": 2,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d2-q1",
+          "type": "fill",
+          "prompt": "Fill in: du ___ (sein)",
+          "choices": null,
+          "tokens": null,
+          "answer": "bist",
+          "explanation": "bist"
+        },
+        {
+          "id": "d2-q2",
+          "type": "fill",
+          "prompt": "Fill in: wir ___ (sein)",
+          "choices": null,
+          "tokens": null,
+          "answer": "sind",
+          "explanation": "sind"
+        },
+        {
+          "id": "d2-q3",
+          "type": "fill",
+          "prompt": "Formal \"What is your name?\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Wie heißen Sie?",
+          "explanation": "Wie heißen Sie?"
+        },
+        {
+          "id": "d2-q4",
+          "type": "choice",
+          "prompt": "Sie sind can mean:",
+          "choices": [
+            "she is",
+            "you are (formal)",
+            "I am"
+          ],
+          "tokens": null,
+          "answer": "you are (formal)",
+          "explanation": "b (it can also mean \"they are\" — but never \"she is\", that's sie ist )"
+        },
+        {
+          "id": "d2-q5",
+          "type": "fill",
+          "prompt": "Translate: \"That is Mrs Klein.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Das ist Frau Klein.",
+          "explanation": "Das ist Frau Klein."
+        }
+      ]
+    },
+    {
+      "id": "day-3-mini",
+      "day": 3,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d3-q1",
+          "type": "fill",
+          "prompt": "siebenundsechzig = ? (digits)",
+          "choices": null,
+          "tokens": null,
+          "answer": "67",
+          "explanation": "67"
+        },
+        {
+          "id": "d3-q2",
+          "type": "fill",
+          "prompt": "Write 48 in German words.",
+          "choices": null,
+          "tokens": null,
+          "answer": "achtundvierzig",
+          "explanation": "achtundvierzig"
+        },
+        {
+          "id": "d3-q3",
+          "type": "fill",
+          "prompt": "Fill in: du ___ (haben) Hunger.",
+          "choices": null,
+          "tokens": null,
+          "answer": "hast",
+          "explanation": "hast"
+        },
+        {
+          "id": "d3-q4",
+          "type": "fill",
+          "prompt": "Fill in: er ___ (haben) kein Handy.",
+          "choices": null,
+          "tokens": null,
+          "answer": "hat",
+          "explanation": "hat"
+        },
+        {
+          "id": "d3-q5",
+          "type": "fill",
+          "prompt": "\"I am 25 years old\" — sein or haben? Write the sentence.",
+          "choices": null,
+          "tokens": null,
+          "answer": "sein: Ich bin fünfundzwanzig Jahre alt.",
+          "explanation": "sein: Ich bin fünfundzwanzig Jahre alt."
+        }
+      ]
+    },
+    {
+      "id": "day-4-mini",
+      "day": 4,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d4-q1",
+          "type": "fill",
+          "prompt": "Fill in: du wohn___ in Berlin.",
+          "choices": null,
+          "tokens": null,
+          "answer": "wohnst",
+          "explanation": "wohnst"
+        },
+        {
+          "id": "d4-q2",
+          "type": "fill",
+          "prompt": "Fill in: ihr lern___ Deutsch.",
+          "choices": null,
+          "tokens": null,
+          "answer": "lernt",
+          "explanation": "lernt"
+        },
+        {
+          "id": "d4-q3",
+          "type": "fill",
+          "prompt": "Fill in: er sprich___ Englisch.",
+          "choices": null,
+          "tokens": null,
+          "answer": "spricht",
+          "explanation": "spricht"
+        },
+        {
+          "id": "d4-q4",
+          "type": "fill",
+          "prompt": "\"Where are you from?\" (informal) = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Woher kommst du?",
+          "explanation": "Woher kommst du?"
+        },
+        {
+          "id": "d4-q5",
+          "type": "fill",
+          "prompt": "Correct or wrong: Ich komme aus der Schweiz.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Correct! Schweiz always keeps its article.",
+          "explanation": "Correct! Schweiz always keeps its article."
+        }
+      ]
+    },
+    {
+      "id": "day-5-mini",
+      "day": 5,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d5-q1",
+          "type": "fill",
+          "prompt": "Make it a question: Du arbeitest heute.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Arbeitest du heute?",
+          "explanation": "Arbeitest du heute?"
+        },
+        {
+          "id": "d5-q2",
+          "type": "fill",
+          "prompt": "Fill in: du ___ (werden) Arzt.",
+          "choices": null,
+          "tokens": null,
+          "answer": "wirst",
+          "explanation": "wirst"
+        },
+        {
+          "id": "d5-q3",
+          "type": "fill",
+          "prompt": "Female form of der Lehrer ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "die Lehrerin",
+          "explanation": "die Lehrerin"
+        },
+        {
+          "id": "d5-q4",
+          "type": "fill",
+          "prompt": "Translate: \"I am a student and I work as a waitress.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich bin Studentin und ich arbeite als Kellnerin.",
+          "explanation": "Ich bin Studentin und ich arbeite als Kellnerin."
+        },
+        {
+          "id": "d5-q5",
+          "type": "fill",
+          "prompt": "Fill in: er arbeit___ im Büro.",
+          "choices": null,
+          "tokens": null,
+          "answer": "arbeitet",
+          "explanation": "arbeitet (extra e because the stem ends in -t)"
+        }
+      ]
+    },
+    {
+      "id": "day-6-mini",
+      "day": 6,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d6-q1",
+          "type": "fill",
+          "prompt": "\"her husband\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "ihr Mann",
+          "explanation": "ihr Mann"
+        },
+        {
+          "id": "d6-q2",
+          "type": "fill",
+          "prompt": "\"his wife\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "seine Frau",
+          "explanation": "seine Frau"
+        },
+        {
+          "id": "d6-q3",
+          "type": "fill",
+          "prompt": "Fill in: Das ist ___ Mutter. (my)",
+          "choices": null,
+          "tokens": null,
+          "answer": "meine",
+          "explanation": "meine (Mutter is feminine)"
+        },
+        {
+          "id": "d6-q4",
+          "type": "fill",
+          "prompt": "Fill in: ___ Kinder sind nett. (our)",
+          "choices": null,
+          "tokens": null,
+          "answer": "Unsere",
+          "explanation": "Unsere (plural → -e)"
+        },
+        {
+          "id": "d6-q5",
+          "type": "fill",
+          "prompt": "Translate: \"Do you have siblings? — Yes, two brothers.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Hast du Geschwister?",
+          "explanation": "Hast du Geschwister? — Ja, zwei Brüder."
+        }
+      ]
+    },
+    {
+      "id": "day-8-mini",
+      "day": 8,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d8-q1",
+          "type": "fill",
+          "prompt": "___ Lampe (article?)",
+          "choices": null,
+          "tokens": null,
+          "answer": "die",
+          "explanation": "die"
+        },
+        {
+          "id": "d8-q2",
+          "type": "fill",
+          "prompt": "___ Buch (article?)",
+          "choices": null,
+          "tokens": null,
+          "answer": "das",
+          "explanation": "das"
+        },
+        {
+          "id": "d8-q3",
+          "type": "fill",
+          "prompt": "___ Schlüssel (article?)",
+          "choices": null,
+          "tokens": null,
+          "answer": "der",
+          "explanation": "der"
+        },
+        {
+          "id": "d8-q4",
+          "type": "fill",
+          "prompt": "die Zeitung — how could you have guessed \"die\"?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Nouns ending in -ung are feminine",
+          "explanation": "Nouns ending in -ung are feminine"
+        },
+        {
+          "id": "d8-q5",
+          "type": "fill",
+          "prompt": "Fill in: Ist das ___ Uhr? (a)",
+          "choices": null,
+          "tokens": null,
+          "answer": "eine",
+          "explanation": "eine"
+        }
+      ]
+    },
+    {
+      "id": "day-9-mini",
+      "day": 9,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d9-q1",
+          "type": "fill",
+          "prompt": "Plural of das Buch ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "die Bücher",
+          "explanation": "die Bücher"
+        },
+        {
+          "id": "d9-q2",
+          "type": "fill",
+          "prompt": "Plural of die Frau ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "die Frauen",
+          "explanation": "die Frauen"
+        },
+        {
+          "id": "d9-q3",
+          "type": "fill",
+          "prompt": "Plural of der Lehrer ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "die Lehrer",
+          "explanation": "die Lehrer (unchanged)"
+        },
+        {
+          "id": "d9-q4",
+          "type": "fill",
+          "prompt": "Which article do ALL plurals take?",
+          "choices": null,
+          "tokens": null,
+          "answer": "die",
+          "explanation": "die"
+        },
+        {
+          "id": "d9-q5",
+          "type": "fill",
+          "prompt": "Translate: \"The children have many books.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Die Kinder haben viele Bücher.",
+          "explanation": "Die Kinder haben viele Bücher."
+        }
+      ]
+    },
+    {
+      "id": "day-10-mini",
+      "day": 10,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d10-q1",
+          "type": "fill",
+          "prompt": "Fill in: Ich kaufe ___ Tisch. (the)",
+          "choices": null,
+          "tokens": null,
+          "answer": "den",
+          "explanation": "den"
+        },
+        {
+          "id": "d10-q2",
+          "type": "fill",
+          "prompt": "Fill in: Sie braucht ___ Lampe. (a)",
+          "choices": null,
+          "tokens": null,
+          "answer": "eine",
+          "explanation": "eine"
+        },
+        {
+          "id": "d10-q3",
+          "type": "fill",
+          "prompt": "Fill in: Wir haben ___ Auto. (no)",
+          "choices": null,
+          "tokens": null,
+          "answer": "kein",
+          "explanation": "kein"
+        },
+        {
+          "id": "d10-q4",
+          "type": "fill",
+          "prompt": "Fill in: Er hat ___ Bruder. (a)",
+          "choices": null,
+          "tokens": null,
+          "answer": "einen",
+          "explanation": "einen"
+        },
+        {
+          "id": "d10-q5",
+          "type": "fill",
+          "prompt": "Why does only Q1/Q4 change the article but not Q2?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Only masculine changes in the accusative ; feminine and neuter stay the same.",
+          "explanation": "Only masculine changes in the accusative (der→den, ein→einen); feminine and neuter stay the same."
+        }
+      ]
+    },
+    {
+      "id": "day-11-mini",
+      "day": 11,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d11-q1",
+          "type": "fill",
+          "prompt": "Negate: Ich habe Zeit.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich habe keine Zeit.",
+          "explanation": "Ich habe keine Zeit."
+        },
+        {
+          "id": "d11-q2",
+          "type": "fill",
+          "prompt": "Negate: Das Brot ist frisch.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Das Brot ist nicht frisch.",
+          "explanation": "Das Brot ist nicht frisch."
+        },
+        {
+          "id": "d11-q3",
+          "type": "fill",
+          "prompt": "Negate: Er trinkt einen Kaffee.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Er trinkt keinen Kaffee.",
+          "explanation": "Er trinkt keinen Kaffee."
+        },
+        {
+          "id": "d11-q4",
+          "type": "fill",
+          "prompt": "Negate: Das ist meine Tasche.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Das ist nicht meine Tasche.",
+          "explanation": "Das ist nicht meine Tasche. (possessive → nicht)"
+        },
+        {
+          "id": "d11-q5",
+          "type": "fill",
+          "prompt": "nicht or kein: Ich esse ___ Fleisch.",
+          "choices": null,
+          "tokens": null,
+          "answer": "kein",
+          "explanation": "kein (no article → kein)"
+        }
+      ]
+    },
+    {
+      "id": "day-12-mini",
+      "day": 12,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d12-q1",
+          "type": "fill",
+          "prompt": "Fill in: ich ___ , du ___ (möchten)",
+          "choices": null,
+          "tokens": null,
+          "answer": "möchte, möchtest",
+          "explanation": "möchte, möchtest"
+        },
+        {
+          "id": "d12-q2",
+          "type": "fill",
+          "prompt": "Politely order a coffee (two different ways).",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich möchte einen Kaffee. / Ich hätte gern einen Kaffee.",
+          "explanation": "Ich möchte einen Kaffee(, bitte). / Ich hätte gern einen Kaffee."
+        },
+        {
+          "id": "d12-q3",
+          "type": "fill",
+          "prompt": "Ask for the bill (two ways).",
+          "choices": null,
+          "tokens": null,
+          "answer": "Die Rechnung, bitte! / Zahlen, bitte!",
+          "explanation": "Die Rechnung, bitte! / Zahlen, bitte!"
+        },
+        {
+          "id": "d12-q4",
+          "type": "fill",
+          "prompt": "What does Zusammen oder getrennt? mean?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Are you paying together or separately?",
+          "explanation": "Are you paying together or separately?"
+        },
+        {
+          "id": "d12-q5",
+          "type": "reorder",
+          "prompt": "Word order: rearrange \"möchte / Suppe / ich / eine / essen\".",
+          "choices": null,
+          "tokens": [
+            "eine",
+            "Suppe",
+            "essen",
+            "Ich",
+            "möchte"
+          ],
+          "answer": "Ich möchte eine Suppe essen.",
+          "explanation": "Ich möchte eine Suppe essen. (second verb at the end)"
+        }
+      ]
+    },
+    {
+      "id": "day-13-mini",
+      "day": 13,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d13-q1",
+          "type": "fill",
+          "prompt": "Fill in: du ___ (essen) viel.",
+          "choices": null,
+          "tokens": null,
+          "answer": "isst",
+          "explanation": "isst"
+        },
+        {
+          "id": "d13-q2",
+          "type": "fill",
+          "prompt": "Fill in: er ___ (fahren) nach Berlin.",
+          "choices": null,
+          "tokens": null,
+          "answer": "fährt",
+          "explanation": "fährt"
+        },
+        {
+          "id": "d13-q3",
+          "type": "fill",
+          "prompt": "Fill in: sie ___ (lesen) ein Buch.",
+          "choices": null,
+          "tokens": null,
+          "answer": "liest",
+          "explanation": "liest"
+        },
+        {
+          "id": "d13-q4",
+          "type": "fill",
+          "prompt": "Say 4,75 € in words.",
+          "choices": null,
+          "tokens": null,
+          "answer": "vier Euro fünfundsiebzig",
+          "explanation": "vier Euro fünfundsiebzig"
+        },
+        {
+          "id": "d13-q5",
+          "type": "fill",
+          "prompt": "\"Is there a supermarket here?\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Gibt es hier einen Supermarkt?",
+          "explanation": "Gibt es hier einen Supermarkt?"
+        }
+      ]
+    },
+    {
+      "id": "day-15-mini",
+      "day": 15,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d15-q1",
+          "type": "fill",
+          "prompt": "halb sechs = what time?",
+          "choices": null,
+          "tokens": null,
+          "answer": "5:30",
+          "explanation": "5:30"
+        },
+        {
+          "id": "d15-q2",
+          "type": "fill",
+          "prompt": "Say 16:45 in everyday German.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Viertel vor fünf",
+          "explanation": "Viertel vor fünf"
+        },
+        {
+          "id": "d15-q3",
+          "type": "fill",
+          "prompt": "um, am or im: ___ Montag / ___ 9 Uhr / ___ Sommer.",
+          "choices": null,
+          "tokens": null,
+          "answer": "am Montag, um 9 Uhr, im Sommer",
+          "explanation": "am Montag, um 9 Uhr, im Sommer"
+        },
+        {
+          "id": "d15-q4",
+          "type": "fill",
+          "prompt": "\"My birthday is on May 3rd\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Mein Geburtstag ist am dritten Mai.",
+          "explanation": "Mein Geburtstag ist am dritten Mai."
+        },
+        {
+          "id": "d15-q5",
+          "type": "fill",
+          "prompt": "The day after Mittwoch ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Donnerstag",
+          "explanation": "Donnerstag"
+        }
+      ]
+    },
+    {
+      "id": "day-16-mini",
+      "day": 16,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d16-q1",
+          "type": "reorder",
+          "prompt": "Build a sentence: ich / aufstehen / um 7 Uhr.",
+          "choices": null,
+          "tokens": [
+            "um",
+            "7",
+            "Uhr",
+            "auf",
+            "Ich",
+            "stehe"
+          ],
+          "answer": "Ich stehe um 7 Uhr auf.",
+          "explanation": "Ich stehe um 7 Uhr auf."
+        },
+        {
+          "id": "d16-q2",
+          "type": "reorder",
+          "prompt": "Build a question: du / mitkommen?",
+          "choices": null,
+          "tokens": [
+            "mit",
+            "Kommst",
+            "du"
+          ],
+          "answer": "Kommst du mit?",
+          "explanation": "Kommst du mit?"
+        },
+        {
+          "id": "d16-q3",
+          "type": "fill",
+          "prompt": "Fill in: Der Film ___ um acht ___. (anfangen)",
+          "choices": null,
+          "tokens": null,
+          "answer": "fängt ... an",
+          "explanation": "fängt ... an"
+        },
+        {
+          "id": "d16-q4",
+          "type": "fill",
+          "prompt": "Fix the error: Ich aufstehe um sechs.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich stehe um sechs auf.",
+          "explanation": "Ich stehe um sechs auf."
+        },
+        {
+          "id": "d16-q5",
+          "type": "fill",
+          "prompt": "Where does the verb go with möchten: \"Ich möchte am Samstag ___\" (einkaufen)?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich möchte am Samstag einkaufen.",
+          "explanation": "Ich möchte am Samstag einkaufen. (whole verb at the end)"
+        }
+      ]
+    },
+    {
+      "id": "day-17-mini",
+      "day": 17,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d17-q1",
+          "type": "fill",
+          "prompt": "Fill in: er ___ (können) gut singen.",
+          "choices": null,
+          "tokens": null,
+          "answer": "kann",
+          "explanation": "kann"
+        },
+        {
+          "id": "d17-q2",
+          "type": "fill",
+          "prompt": "Fill in: ich ___ (müssen) einkaufen.",
+          "choices": null,
+          "tokens": null,
+          "answer": "muss",
+          "explanation": "muss"
+        },
+        {
+          "id": "d17-q3",
+          "type": "fill",
+          "prompt": "Fill in: ihr ___ (wollen) fernsehen.",
+          "choices": null,
+          "tokens": null,
+          "answer": "wollt",
+          "explanation": "wollt"
+        },
+        {
+          "id": "d17-q4",
+          "type": "reorder",
+          "prompt": "Rearrange: kann / heute / nicht / kommen / sie.",
+          "choices": null,
+          "tokens": [
+            "heute",
+            "nicht",
+            "kommen",
+            "Sie",
+            "kann"
+          ],
+          "answer": "Sie kann heute nicht kommen.",
+          "explanation": "Sie kann heute nicht kommen."
+        },
+        {
+          "id": "d17-q5",
+          "type": "fill",
+          "prompt": "What does Ich will NOT mean?",
+          "choices": null,
+          "tokens": null,
+          "answer": "It does NOT mean \"I will \"",
+          "explanation": "It does NOT mean \"I will (future)\" — it means \"I want\"."
+        }
+      ]
+    },
+    {
+      "id": "day-18-mini",
+      "day": 18,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d18-q1",
+          "type": "fill",
+          "prompt": "Fill in: ___ ich hier rauchen? (may)",
+          "choices": null,
+          "tokens": null,
+          "answer": "Darf",
+          "explanation": "Darf"
+        },
+        {
+          "id": "d18-q2",
+          "type": "fill",
+          "prompt": "Fill in: du ___ mehr schlafen. (should)",
+          "choices": null,
+          "tokens": null,
+          "answer": "sollst",
+          "explanation": "sollst"
+        },
+        {
+          "id": "d18-q3",
+          "type": "fill",
+          "prompt": "Fill in: Hier ___ man nicht parken. (may)",
+          "choices": null,
+          "tokens": null,
+          "answer": "darf",
+          "explanation": "darf"
+        },
+        {
+          "id": "d18-q4",
+          "type": "fill",
+          "prompt": "\"I'd like to make an appointment\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich möchte einen Termin vereinbaren/machen.",
+          "explanation": "Ich möchte einen Termin vereinbaren/machen."
+        },
+        {
+          "id": "d18-q5",
+          "type": "fill",
+          "prompt": "\"Does Friday at 9 suit you?\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Passt es am Freitag um 9 Uhr?",
+          "explanation": "Passt es am Freitag um 9 Uhr?"
+        }
+      ]
+    },
+    {
+      "id": "day-19-mini",
+      "day": 19,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d19-q1",
+          "type": "fill",
+          "prompt": "Imperative (Sie): \"Take the bus!\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Nehmen Sie den Bus!",
+          "explanation": "Nehmen Sie den Bus!"
+        },
+        {
+          "id": "d19-q2",
+          "type": "fill",
+          "prompt": "Imperative (du): \"Go straight!\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Geh geradeaus!",
+          "explanation": "Geh geradeaus!"
+        },
+        {
+          "id": "d19-q3",
+          "type": "fill",
+          "prompt": "What's the difference between einsteigen, aussteigen, umsteigen?",
+          "choices": null,
+          "tokens": null,
+          "answer": "get on / get off / change",
+          "explanation": "get on / get off / change (vehicles)"
+        },
+        {
+          "id": "d19-q4",
+          "type": "fill",
+          "prompt": "\"How do I get to the airport?\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Wie komme ich zum Flughafen?",
+          "explanation": "Wie komme ich zum Flughafen?"
+        },
+        {
+          "id": "d19-q5",
+          "type": "fill",
+          "prompt": "Fill in: Ich fahre ___ ___ Zug. (by train)",
+          "choices": null,
+          "tokens": null,
+          "answer": "mit dem",
+          "explanation": "mit dem"
+        }
+      ]
+    },
+    {
+      "id": "day-20-mini",
+      "day": 20,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d20-q1",
+          "type": "fill",
+          "prompt": "nach or zum: Ich fahre ___ Berlin. / Ich gehe ___ Arzt.",
+          "choices": null,
+          "tokens": null,
+          "answer": "nach Berlin, zum Arzt",
+          "explanation": "nach Berlin, zum Arzt"
+        },
+        {
+          "id": "d20-q2",
+          "type": "fill",
+          "prompt": "Fill in: Wir gehen ___ Kino. (into the)",
+          "choices": null,
+          "tokens": null,
+          "answer": "ins",
+          "explanation": "ins"
+        },
+        {
+          "id": "d20-q3",
+          "type": "fill",
+          "prompt": "Fill in: Das Geschenk ist ___ dich. (for)",
+          "choices": null,
+          "tokens": null,
+          "answer": "für",
+          "explanation": "für"
+        },
+        {
+          "id": "d20-q4",
+          "type": "fill",
+          "prompt": "zu Hause or nach Hause: Ich bin ___ . / Ich gehe ___ .",
+          "choices": null,
+          "tokens": null,
+          "answer": "zu Hause , nach Hause",
+          "explanation": "zu Hause (position), nach Hause (movement)"
+        },
+        {
+          "id": "d20-q5",
+          "type": "fill",
+          "prompt": "Fill in: Ich lerne ___ einem Monat Deutsch. (for/since)",
+          "choices": null,
+          "tokens": null,
+          "answer": "seit",
+          "explanation": "seit"
+        }
+      ]
+    },
+    {
+      "id": "day-22-mini",
+      "day": 22,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d22-q1",
+          "type": "fill",
+          "prompt": "Fix: Am Samstag ich spiele Fußball.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Am Samstag spiele ich Fußball.",
+          "explanation": "Am Samstag spiele ich Fußball."
+        },
+        {
+          "id": "d22-q2",
+          "type": "fill",
+          "prompt": "Rank it: gern → ? → ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "gern → lieber → am liebsten",
+          "explanation": "gern → lieber → am liebsten"
+        },
+        {
+          "id": "d22-q3",
+          "type": "fill",
+          "prompt": "Translate: \"Sometimes I read in the evening.\" (start with Manchmal)",
+          "choices": null,
+          "tokens": null,
+          "answer": "Manchmal lese ich am Abend. / Manchmal lese ich abends.",
+          "explanation": "Manchmal lese ich am Abend. / Manchmal lese ich abends."
+        },
+        {
+          "id": "d22-q4",
+          "type": "fill",
+          "prompt": "\"never\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "nie",
+          "explanation": "nie"
+        },
+        {
+          "id": "d22-q5",
+          "type": "fill",
+          "prompt": "Time or place first: \"Ich fahre ___ ___\" (am Sonntag / nach Bonn)?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich fahre am Sonntag nach Bonn.",
+          "explanation": "Ich fahre am Sonntag nach Bonn. (time before place)"
+        }
+      ]
+    },
+    {
+      "id": "day-23-mini",
+      "day": 23,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d23-q1",
+          "type": "fill",
+          "prompt": "Fill in: Es gibt ___ Balkon. (a, m)",
+          "choices": null,
+          "tokens": null,
+          "answer": "einen",
+          "explanation": "einen"
+        },
+        {
+          "id": "d23-q2",
+          "type": "fill",
+          "prompt": "Fill in: Es gibt ___ Aufzug. (no, m)",
+          "choices": null,
+          "tokens": null,
+          "answer": "keinen",
+          "explanation": "keinen"
+        },
+        {
+          "id": "d23-q3",
+          "type": "fill",
+          "prompt": "What's the difference between Kaltmiete and Warmmiete?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Kaltmiete = rent only; Warmmiete = rent including heating/utilities",
+          "explanation": "Kaltmiete = rent only; Warmmiete = rent including heating/utilities"
+        },
+        {
+          "id": "d23-q4",
+          "type": "fill",
+          "prompt": "Translate: \"The bedroom is small but bright.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Das Schlafzimmer ist klein, aber hell.",
+          "explanation": "Das Schlafzimmer ist klein, aber hell."
+        },
+        {
+          "id": "d23-q5",
+          "type": "fill",
+          "prompt": "\"We're moving on Saturday\" (umziehen) = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Wir ziehen am Samstag um.",
+          "explanation": "Wir ziehen am Samstag um."
+        }
+      ]
+    },
+    {
+      "id": "day-24-mini",
+      "day": 24,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d24-q1",
+          "type": "fill",
+          "prompt": "\"It's raining\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Es regnet.",
+          "explanation": "Es regnet."
+        },
+        {
+          "id": "d24-q2",
+          "type": "fill",
+          "prompt": "\"I'm cold\" = ? (careful!)",
+          "choices": null,
+          "tokens": null,
+          "answer": "Mir ist kalt.",
+          "explanation": "Mir ist kalt."
+        },
+        {
+          "id": "d24-q3",
+          "type": "fill",
+          "prompt": "Fill in: Im Winter ___ es oft. (snow)",
+          "choices": null,
+          "tokens": null,
+          "answer": "schneit",
+          "explanation": "schneit"
+        },
+        {
+          "id": "d24-q4",
+          "type": "fill",
+          "prompt": "Say: \"It's 18 degrees.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Es sind achtzehn Grad.",
+          "explanation": "Es sind achtzehn Grad."
+        },
+        {
+          "id": "d24-q5",
+          "type": "fill",
+          "prompt": "Join with denn: Ich nehme den Regenschirm. Es regnet.",
+          "choices": null,
+          "tokens": null,
+          "answer": "Ich nehme den Regenschirm, denn es regnet.",
+          "explanation": "Ich nehme den Regenschirm, denn es regnet."
+        }
+      ]
+    },
+    {
+      "id": "day-25-mini",
+      "day": 25,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d25-q1",
+          "type": "fill",
+          "prompt": "\"My back hurts\" = ? (two ways)",
+          "choices": null,
+          "tokens": null,
+          "answer": "Mein Rücken tut weh. / Ich habe Rückenschmerzen.",
+          "explanation": "Mein Rücken tut weh. / Ich habe Rückenschmerzen."
+        },
+        {
+          "id": "d25-q2",
+          "type": "fill",
+          "prompt": "\"Get well soon!\" = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Gute Besserung!",
+          "explanation": "Gute Besserung!"
+        },
+        {
+          "id": "d25-q3",
+          "type": "fill",
+          "prompt": "What is a Krankschreibung?",
+          "choices": null,
+          "tokens": null,
+          "answer": "A sick note from the doctor for your employer.",
+          "explanation": "A sick note from the doctor for your employer."
+        },
+        {
+          "id": "d25-q4",
+          "type": "fill",
+          "prompt": "Doctor's advice with sollen: \"You should drink a lot of tea.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Sie sollen viel Tee trinken.",
+          "explanation": "Sie sollen viel Tee trinken."
+        },
+        {
+          "id": "d25-q5",
+          "type": "fill",
+          "prompt": "Rezept has two meanings — which?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Prescription AND recipe.",
+          "explanation": "Prescription AND recipe."
+        }
+      ]
+    },
+    {
+      "id": "day-26-mini",
+      "day": 26,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d26-q1",
+          "type": "fill",
+          "prompt": "Fill in: Wo ___ du gestern? (sein)",
+          "choices": null,
+          "tokens": null,
+          "answer": "warst",
+          "explanation": "warst"
+        },
+        {
+          "id": "d26-q2",
+          "type": "fill",
+          "prompt": "Fill in: Wir ___ viel Spaß. (haben)",
+          "choices": null,
+          "tokens": null,
+          "answer": "hatten",
+          "explanation": "hatten"
+        },
+        {
+          "id": "d26-q3",
+          "type": "fill",
+          "prompt": "Fill in: Ihr ___ im Kino. (sein)",
+          "choices": null,
+          "tokens": null,
+          "answer": "wart",
+          "explanation": "wart"
+        },
+        {
+          "id": "d26-q4",
+          "type": "fill",
+          "prompt": "Fill in: Sie (she) ___ keine Zeit. (haben)",
+          "choices": null,
+          "tokens": null,
+          "answer": "hatte",
+          "explanation": "hatte"
+        },
+        {
+          "id": "d26-q5",
+          "type": "fill",
+          "prompt": "Translate: \"The weather was nice and we were at the beach.\"",
+          "choices": null,
+          "tokens": null,
+          "answer": "Das Wetter war schön und wir waren am Strand.",
+          "explanation": "Das Wetter war schön und wir waren am Strand."
+        }
+      ]
+    },
+    {
+      "id": "day-27-mini",
+      "day": 27,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d27-q1",
+          "type": "fill",
+          "prompt": "Participle of: machen, essen, trinken, einkaufen, bestellen?",
+          "choices": null,
+          "tokens": null,
+          "answer": "gemacht, gegessen, getrunken, eingekauft, bestellt",
+          "explanation": "gemacht, gegessen, getrunken, eingekauft, bestellt"
+        },
+        {
+          "id": "d27-q2",
+          "type": "reorder",
+          "prompt": "Build: ich / gestern / Deutsch / lernen (perfect).",
+          "choices": null,
+          "tokens": [
+            "gestern",
+            "Deutsch",
+            "gelernt",
+            "Ich",
+            "habe"
+          ],
+          "answer": "Ich habe gestern Deutsch gelernt.",
+          "explanation": "Ich habe gestern Deutsch gelernt."
+        },
+        {
+          "id": "d27-q3",
+          "type": "reorder",
+          "prompt": "Build: du / schon / essen / ? (perfect question)",
+          "choices": null,
+          "tokens": [
+            "schon",
+            "gegessen",
+            "Hast",
+            "du"
+          ],
+          "answer": "Hast du schon gegessen?",
+          "explanation": "Hast du schon gegessen?"
+        },
+        {
+          "id": "d27-q4",
+          "type": "fill",
+          "prompt": "Why is it \"studiert\" and not \"gestudiert\"?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Verbs ending in -ieren never take ge-.",
+          "explanation": "Verbs ending in -ieren never take ge-."
+        },
+        {
+          "id": "d27-q5",
+          "type": "fill",
+          "prompt": "Where does the participle always go?",
+          "choices": null,
+          "tokens": null,
+          "answer": "At the very end of the sentence.",
+          "explanation": "At the very end of the sentence."
+        }
+      ]
+    },
+    {
+      "id": "day-29-mini",
+      "day": 29,
+      "title": "❓ Mini quiz",
+      "threshold": 4,
+      "questions": [
+        {
+          "id": "d29-q1",
+          "type": "fill",
+          "prompt": "What goes in the field \"Staatsangehörigkeit\"?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Your nationality",
+          "explanation": "Your nationality (e.g. nigerianisch, britisch)"
+        },
+        {
+          "id": "d29-q2",
+          "type": "fill",
+          "prompt": "Formal letter opening to an unknown company?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Sehr geehrte Damen und Herren,",
+          "explanation": "Sehr geehrte Damen und Herren,"
+        },
+        {
+          "id": "d29-q3",
+          "type": "fill",
+          "prompt": "Formal sign-off?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Mit freundlichen Grüßen",
+          "explanation": "Mit freundlichen Grüßen"
+        },
+        {
+          "id": "d29-q4",
+          "type": "fill",
+          "prompt": "\"Please sign here\" (formal) = ?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Unterschreiben Sie bitte hier.",
+          "explanation": "Unterschreiben Sie bitte hier."
+        },
+        {
+          "id": "d29-q5",
+          "type": "fill",
+          "prompt": "What are the 4 parts of the A1 exam?",
+          "choices": null,
+          "tokens": null,
+          "answer": "Hören, Lesen, Schreiben, Sprechen",
+          "explanation": "Hören, Lesen, Schreiben, Sprechen"
+        }
+      ]
+    }
+  ]
+}

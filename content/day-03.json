@@ -22,7 +22,7 @@
     },
     {
       "id": "d3-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich bin dreißig Jahre alt.</span> <span class=\"tr\">I am 30 years old.</span></li>\n<li><span class=\"de\">Wie alt bist du? — Ich bin einundzwanzig.</span> <span class=\"tr\">How old are you? — I'm 21.</span></li>\n<li><span class=\"de\">Meine Telefonnummer ist null-eins-sieben-zwei...</span> <span class=\"tr\">My phone number is 0172...</span></li>\n<li><span class=\"de\">Ich habe Hunger und Durst.</span> <span class=\"tr\">I'm hungry and thirsty.</span></li>\n<li><span class=\"de\">Hast du Zeit? — Nein, ich habe wenig Zeit.</span> <span class=\"tr\">Do you have time? — No, I have little time.</span></li>\n<li><span class=\"de\">Er hat zwei Handys.</span> <span class=\"tr\">He has two mobile phones.</span></li>\n</ol>\n</details>",
       "sourceHash": "9737cbee0afff28c01193ed06326c33400158b4568d29b77ebefd73c060523e1"

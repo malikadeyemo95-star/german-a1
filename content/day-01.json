@@ -22,7 +22,7 @@
     },
     {
       "id": "d1-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Guten Morgen!</span> <span class=\"tr\">Good morning!</span></li>\n<li><span class=\"de\">Hallo, alles klar?</span> <span class=\"tr\">Hi, everything OK?</span></li>\n<li><span class=\"de\">Danke schön! — Bitte!</span> <span class=\"tr\">Thanks a lot! — You're welcome!</span></li>\n<li><span class=\"de\">Entschuldigung, wie bitte?</span> <span class=\"tr\">Sorry, could you say that again?</span></li>\n<li><span class=\"de\">Ja oder nein?</span> <span class=\"tr\">Yes or no?</span></li>\n<li><span class=\"de\">Tschüss, gute Nacht!</span> <span class=\"tr\">Bye, good night!</span></li>\n</ol>\n</details>",
       "sourceHash": "12662c58469a701d01d4fdb9f0f86601ddd0f28d081758def234a4c89422a0b1"

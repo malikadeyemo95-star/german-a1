@@ -22,7 +22,7 @@
     },
     {
       "id": "d8-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was ist das? — Das ist eine Lampe.</span> <span class=\"tr\">What is that? — That's a lamp.</span></li>\n<li><span class=\"de\">Der Tisch ist neu.</span> <span class=\"tr\">The table is new.</span></li>\n<li><span class=\"de\">Das Handy ist kaputt.</span> <span class=\"tr\">The phone is broken.</span></li>\n<li><span class=\"de\">Ist das ein Buch? — Nein, das ist eine Tasche.</span> <span class=\"tr\">Is that a book? — No, that's a bag.</span></li>\n<li><span class=\"de\">Die Tür ist alt, aber das Fenster ist neu.</span> <span class=\"tr\">The door is old but the window is new.</span></li>\n<li><span class=\"de\">Wo ist der Schlüssel?</span> <span class=\"tr\">Where is the key?</span></li>\n</ol>\n</details>",
       "sourceHash": "499b5110291b88123e926828cc4cd74eaf27b070703b55b61bf967fd3a6fddf5"

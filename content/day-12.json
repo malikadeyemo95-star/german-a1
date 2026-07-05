@@ -22,7 +22,7 @@
     },
     {
       "id": "d12-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Die Speisekarte, bitte!</span> <span class=\"tr\">The menu, please!</span></li>\n<li><span class=\"de\">Ich möchte bestellen.</span> <span class=\"tr\">I'd like to order.</span></li>\n<li><span class=\"de\">Ich hätte gern das Schnitzel mit Pommes.</span> <span class=\"tr\">I'd like the schnitzel with fries.</span></li>\n<li><span class=\"de\">Ich nehme die Suppe als Vorspeise.</span> <span class=\"tr\">I'll have the soup as a starter.</span></li>\n<li><span class=\"de\">Möchten Sie einen Nachtisch? — Nein danke, die Rechnung bitte.</span> <span class=\"tr\">Would you like a dessert? — No thanks, the bill please.</span></li>\n<li><span class=\"de\">Zusammen oder getrennt? — Getrennt, bitte.</span> <span class=\"tr\">Together or separate? — Separate, please.</span></li>\n</ol>\n</details>",
       "sourceHash": "fd5b157def887d5ca9b1a5d692683b1f37cbbdc3fa309dd9a85e6dbffffb0152"

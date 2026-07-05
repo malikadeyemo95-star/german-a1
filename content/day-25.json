@@ -22,7 +22,7 @@
     },
     {
       "id": "d25-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Mir geht es nicht gut. Ich habe Kopfschmerzen und Fieber.</span> <span class=\"tr\">I'm not well. I have a headache and fever.</span></li>\n<li><span class=\"de\">Mein Hals tut weh.</span> <span class=\"tr\">My throat hurts.</span></li>\n<li><span class=\"de\">Ich habe eine Erkältung — Husten und Schnupfen.</span> <span class=\"tr\">I have a cold — cough and runny nose.</span></li>\n<li><span class=\"de\">Sie sollen drei Tage im Bett bleiben.</span> <span class=\"tr\">You should stay in bed for three days.</span></li>\n<li><span class=\"de\">Gibt es hier eine Apotheke? Ich brauche Tabletten.</span> <span class=\"tr\">Is there a pharmacy here? I need tablets.</span></li>\n<li><span class=\"de\">Nehmen Sie das Medikament zweimal am Tag.</span> <span class=\"tr\">Take the medicine twice a day.</span></li>\n</ol>\n</details>",
       "sourceHash": "ed4e5c2b91ac78c143f3ba915ad2a64ed7a6f462cf002140811a5f67b306687d"

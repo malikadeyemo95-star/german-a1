@@ -22,7 +22,7 @@
     },
     {
       "id": "d16-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich stehe um halb sieben auf.</span> <span class=\"tr\">I get up at 6:30.</span></li>\n<li><span class=\"de\">Zuerst dusche ich, dann frühstücke ich.</span> <span class=\"tr\">First I shower, then I have breakfast.</span></li>\n<li><span class=\"de\">Die Arbeit fängt um acht an.</span> <span class=\"tr\">Work starts at eight.</span></li>\n<li><span class=\"de\">Um zwölf mache ich eine Pause.</span> <span class=\"tr\">At twelve I take a break.</span></li>\n<li><span class=\"de\">Abends sehe ich fern oder ich rufe meine Mutter an.</span> <span class=\"tr\">In the evening I watch TV or call my mother.</span></li>\n<li><span class=\"de\">Ich gehe um elf ins Bett.</span> <span class=\"tr\">I go to bed at eleven.</span></li>\n</ol>\n</details>",
       "sourceHash": "0d9cdbfd0d9271ec338413cb46a404942c5c41cba80c2567f12356ef0a1a60f7"

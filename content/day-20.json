@@ -22,7 +22,7 @@
     },
     {
       "id": "d20-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich fahre am Samstag nach Hamburg.</span> <span class=\"tr\">I'm going to Hamburg on Saturday.</span></li>\n<li><span class=\"de\">Um 15 Uhr muss ich zum Arzt.</span> <span class=\"tr\">At 3pm I have to go to the doctor.</span></li>\n<li><span class=\"de\">Gehen wir heute Abend ins Kino?</span> <span class=\"tr\">Shall we go to the cinema tonight?</span></li>\n<li><span class=\"de\">Das Handy liegt auf dem Tisch in der Küche.</span> <span class=\"tr\">The phone is on the table in the kitchen.</span></li>\n<li><span class=\"de\">Das Geschenk ist für meinen Bruder — von mir und meiner Schwester.</span> <span class=\"tr\">The present is for my brother — from me and my sister.</span></li>\n<li><span class=\"de\">Ich lerne seit drei Wochen Deutsch — ohne Pause!</span> <span class=\"tr\">I've been learning German for three weeks — without a break!</span></li>\n</ol>\n</details>",
       "sourceHash": "1913931732223e4d95106c608d04e7ba912d33d0d52ed4434a0a7b9428549910"

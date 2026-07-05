@@ -22,7 +22,7 @@
     },
     {
       "id": "d23-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Meine Wohnung hat drei Zimmer, eine Küche und ein Bad.</span> <span class=\"tr\">My flat has three rooms, a kitchen and a bathroom.</span></li>\n<li><span class=\"de\">Es gibt einen Balkon, aber keinen Garten.</span> <span class=\"tr\">There's a balcony but no garden.</span></li>\n<li><span class=\"de\">Die Miete ist 700 Euro warm.</span> <span class=\"tr\">The rent is €700 including costs.</span></li>\n<li><span class=\"de\">Das Wohnzimmer ist hell und ruhig.</span> <span class=\"tr\">The living room is bright and quiet.</span></li>\n<li><span class=\"de\">Wir ziehen im August um.</span> <span class=\"tr\">We're moving in August.</span></li>\n<li><span class=\"de\">Die Wohnung liegt im dritten Stock — ohne Aufzug!</span> <span class=\"tr\">The flat is on the third floor — no lift!</span></li>\n</ol>\n</details>",
       "sourceHash": "636e1674b078190f9ef3597ad42d5921ed49ee505945daad0f1e01671b260f83"

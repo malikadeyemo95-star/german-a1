@@ -11,7 +11,7 @@ const SECTION_ICONS = {
 
 const elements = {
   home:document.querySelector('#homeView'),days:document.querySelector('#daysView'),
-  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),placeholder:document.querySelector('#placeholderView'),
+  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),quiz:document.querySelector('#quizView'),placeholder:document.querySelector('#placeholderView'),
   content:document.querySelector('#dayContent'),loading:document.querySelector('#dayLoading'),
   title:document.querySelector('#topbarTitle'),eyebrow:document.querySelector('#topbarEyebrow'),
   progress:document.querySelector('#topbarProgress'),back:document.querySelector('#backButton'),
@@ -22,6 +22,8 @@ let state = migrateLegacyState(localStorage);
 let activeDay = state.lastDay || nextDay();
 let touchStartX = 0;
 let allCards;
+let allQuizzes;
+let allTests;
 let reviewQueue = [];
 let reviewIndex = 0;
 
@@ -76,7 +78,7 @@ function setTheme(theme) {
 }
 
 function setView(name) {
-  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,placeholder:elements.placeholder})
+  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,placeholder:elements.placeholder})
     .forEach((view) => { view.hidden = true; });
   elements[name].hidden = false;
   elements.back.hidden = name === 'home';
@@ -91,8 +93,24 @@ async function loadCards() {
   if (allCards) return allCards;
   const response = await fetch(`${CONTENT_ROOT}cards.json`);
   if (!response.ok) throw new Error('Flashcard deck unavailable');
-  allCards = (await response.json()).cards;
+  allCards = [...(await response.json()).cards, ...(state.customCards || [])];
   return allCards;
+}
+
+async function loadQuizzes() {
+  if (allQuizzes) return allQuizzes;
+  const response = await fetch(`${CONTENT_ROOT}quizzes.json`);
+  if (!response.ok) throw new Error('Quiz data unavailable');
+  allQuizzes = (await response.json()).quizzes;
+  return allQuizzes;
+}
+
+async function loadTests() {
+  if (allTests) return allTests;
+  const response = await fetch(`${CONTENT_ROOT}tests.json`);
+  if (!response.ok) throw new Error('Test data unavailable');
+  allTests = (await response.json()).tests;
+  return allTests;
 }
 
 function normalizeAnswer(value) {
@@ -158,6 +176,110 @@ function gradeCurrent(grade) {
   reviewIndex += 1;
   saveState(true);
   paintReviewCard();
+}
+
+function addQuizMistakeCard(quiz, question) {
+  state.customCards ||= [];
+  const id = `mistake-${quiz.id}-${question.id}`;
+  if (state.customCards.some((card) => card.id === id)) return;
+  const card = { id,sourceId:id,day:quiz.day,direction:'mistake',prompt:question.prompt,answer:question.answer,german:question.answer,english:question.prompt };
+  state.customCards.push(card);
+  if (allCards) allCards.push(card);
+}
+
+function renderQuiz(quiz) {
+  const body = document.querySelector('#quizBody');
+  const answers = new Map();
+  body.innerHTML = quiz.questions.map((question, index) => {
+    const control = question.type === 'choice'
+      ? `<div class="choice-grid">${question.choices.map((choice) => `<button type="button" class="choice-option" data-choice="${escapeHtml(choice)}">${escapeHtml(choice)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check</button>`
+      : question.type === 'reorder'
+      ? `<div class="word-answer" aria-label="Your sentence"></div><div class="word-bank">${question.tokens.map((token) => `<button type="button" class="word-chip">${escapeHtml(token)}</button>`).join('')}</div><button type="button" class="quiz-check" data-check>Check order</button>`
+      : `<div class="quiz-input-row"><input type="text" lang="de" autocapitalize="off" aria-label="Answer question ${index + 1}"><button type="button" class="quiz-check" data-check>Check</button></div>`;
+    return `<article class="quiz-question" data-question="${question.id}"><h2>${index + 1}. ${escapeHtml(question.prompt)}</h2>${control}<div class="quiz-feedback" aria-live="polite"></div></article>`;
+  }).join('') + '<button type="button" class="primary-button" id="finishQuiz">Finish quiz <span>→</span></button><div id="quizResult"></div>';
+  quiz.questions.forEach((question) => {
+    const card = body.querySelector(`[data-question="${question.id}"]`);
+    card.querySelectorAll('[data-choice]').forEach((button) => button.addEventListener('click', () => {
+      card.querySelectorAll('[data-choice]').forEach((item) => item.classList.toggle('selected', item === button));
+      answers.set(question.id, button.dataset.choice);
+    }));
+    card.querySelectorAll('.word-chip').forEach((button) => button.addEventListener('click', () => {
+      const answer = card.querySelector('.word-answer'),bank=card.querySelector('.word-bank');
+      (button.parentElement === bank ? answer : bank).appendChild(button);
+    }));
+    const check = () => {
+      const selected = answers.get(question.id);
+      const value = question.type === 'choice' ? (typeof selected === 'string' ? selected : selected?.value || '')
+        : question.type === 'reorder' ? [...card.querySelectorAll('.word-answer .word-chip')].map((chip) => chip.textContent).join(' ')
+        : card.querySelector('input').value;
+      const normalizedValue = normalizeAnswer(value);
+      const correct = normalizedValue === normalizeAnswer(question.answer) || (normalizedValue.length > 1 && normalizeAnswer(question.explanation).startsWith(normalizedValue));
+      answers.set(question.id, { value, correct });
+      const feedback = card.querySelector('.quiz-feedback');
+      feedback.className = `quiz-feedback ${correct ? 'good' : 'bad'}`;
+      feedback.innerHTML = `${correct ? 'Correct.' : `Correct answer: <b>${escapeHtml(question.answer)}</b>`}<span class="quiz-explanation">${escapeHtml(question.explanation)}</span>`;
+      if (!correct) addQuizMistakeCard(quiz, question);
+      saveState(true);
+    };
+    card.querySelector('[data-check]').addEventListener('click', check);
+    card.querySelector('input')?.addEventListener('keydown', (event) => { if (event.key === 'Enter') check(); });
+  });
+  body.querySelector('#finishQuiz').addEventListener('click', () => {
+    quiz.questions.forEach((question) => {
+      if (!answers.get(question.id)?.correct) body.querySelector(`[data-question="${question.id}"] [data-check]`).click();
+    });
+    const score = quiz.questions.filter((question) => answers.get(question.id)?.correct).length;
+    state.quizResults ||= [];
+    state.quizResults.push({ quizId:quiz.id,day:quiz.day,score,total:quiz.questions.length,percent:Math.round(score / quiz.questions.length * 100),at:new Date().toISOString() });
+    saveState(true);
+    const passed = score >= quiz.threshold;
+    body.querySelector('#quizResult').innerHTML = `<div class="quiz-result"><span class="eyebrow">${passed ? 'Lesson check passed' : 'Keep practising'}</span><strong>${score}/${quiz.questions.length}</strong><p>${passed ? 'Good work. Your result is saved.' : 'Wrong answers are now in your flashcard review queue.'}</p><button type="button" class="primary-button" data-retake>Retake quiz <span>↻</span></button></div>`;
+    body.querySelector('[data-retake]').addEventListener('click', () => renderQuiz(quiz));
+    body.querySelector('#quizResult').scrollIntoView({ behavior:'smooth',block:'center' });
+  });
+}
+
+async function renderQuizHub() {
+  await Promise.all([loadQuizzes(), loadTests()]);
+  const unlocked = allQuizzes.filter((quiz) => quiz.day <= nextDay());
+  const unlockedTests = allTests.filter((test) => test.day <= nextDay());
+  const picker = document.querySelector('#quizPicker');
+  picker.innerHTML = '<optgroup label="Lesson quizzes">'+unlocked.map((quiz) => `<option value="${quiz.id}">Day ${quiz.day} · Mini quiz</option>`).join('')+'</optgroup>'+
+    (unlockedTests.length?'<optgroup label="Tests">'+unlockedTests.map((test)=>`<option value="${test.id}">Day ${test.day} · ${escapeHtml(test.title)}</option>`).join('')+'</optgroup>':'');
+  const preferred = unlocked.find((quiz) => quiz.day === nextDay()) || unlocked.at(-1) || allQuizzes[0];
+  picker.value = preferred.id;
+  picker.onchange = () => {
+    const quiz = unlocked.find((item) => item.id === picker.value);
+    if (quiz) renderQuiz(quiz); else renderTest(unlockedTests.find((item) => item.id === picker.value));
+  };
+  elements.title.textContent = 'Quiz';
+  elements.eyebrow.textContent = `${unlocked.length} unlocked`;
+  setView('quiz');
+  renderQuiz(preferred);
+}
+
+function renderTest(test) {
+  const body = document.querySelector('#quizBody');
+  body.innerHTML = `<div class="test-paper"><span class="eyebrow">Day ${test.day} · ${test.maxScore} points</span><h2>${escapeHtml(test.title)}</h2>${test.taskHtml.map(cleanSectionHtml).join('')}<button type="button" class="primary-button" data-submit-test>Finish and unlock key <span>→</span></button><div class="answer-panel" hidden><h2>Answer key</h2>${cleanSectionHtml(test.keyHtml)}<label class="test-score">My score <input type="number" min="0" max="${test.maxScore}" inputmode="numeric"> / ${test.maxScore}</label><button type="button" class="primary-button" data-save-test>Save result <span>→</span></button><div class="quiz-feedback" aria-live="polite"></div></div></div>`;
+  body.querySelectorAll('.test-paper li').forEach((item, index) => {
+    if (item.closest('.answer-panel')) return;
+    const input = document.createElement('input');
+    input.className = 'test-response';input.type = 'text';input.setAttribute('aria-label',`Response ${index + 1}`);
+    item.appendChild(input);
+  });
+  const panel = body.querySelector('.answer-panel');
+  body.querySelector('[data-submit-test]').addEventListener('click', () => { panel.hidden = false;panel.scrollIntoView({behavior:'smooth',block:'start'}); });
+  body.querySelector('[data-save-test]').addEventListener('click', () => {
+    const score = Number(panel.querySelector('input').value);
+    if (!Number.isFinite(score) || score < 0 || score > test.maxScore) return;
+    state.testResults ||= [];
+    state.testResults.push({testId:test.id,day:test.day,score,total:test.maxScore,percent:Math.round(score/test.maxScore*100),at:new Date().toISOString()});
+    saveState(true);
+    const pass = score >= test.passScore,feedback=panel.querySelector('.quiz-feedback');
+    feedback.className=`quiz-feedback ${pass?'good':'bad'}`;
+    feedback.textContent=pass?`Passed — ${score}/${test.maxScore}. Result saved.`:`${score}/${test.maxScore}. Review the key, then retake when ready.`;
+  });
 }
 
 function updateChrome(day = null) {
@@ -408,7 +530,8 @@ function routeFromHash() {
   else if (route === 'days') renderDays();
   else if (/^day\/\d+$/.test(route)) renderDay(route.split('/')[1]);
   else if (route === 'flashcards') renderFlashcards();
-  else if (['quiz','stats'].includes(route)) renderPlaceholder(route);
+  else if (route === 'quiz') renderQuizHub();
+  else if (route === 'stats') renderPlaceholder(route);
   else renderHome();
 }
 

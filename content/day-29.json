@@ -15,7 +15,7 @@
     },
     {
       "id": "d29-s2",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example: a complete formal email",
       "html": "<details><summary>💬 Example: a complete formal email</summary>\n<p class=\"de\">Sehr geehrte Damen und Herren,<br><br>ich möchte einen Deutschkurs machen. Ich habe eine Frage: Wann beginnt der Kurs und was kostet er? Ich arbeite bis 16 Uhr — gibt es einen Abendkurs?<br><br>Vielen Dank im Voraus.<br><br>Mit freundlichen Grüßen<br>Martin Adeyemo</p>\n<p class=\"tr\">(Dear Sir or Madam, I would like to take a German course. I have a question: when does the course start and what does it cost? I work until 4pm — is there an evening course? Many thanks in advance. Kind regards, ...)</p>\n</details>",
       "sourceHash": "bf01e2a505c8b20d1bf6e238d84fb11e1f69fbc597843603d982f7c00acc692b"
@@ -36,14 +36,14 @@
     },
     {
       "id": "d29-s5",
-      "type": "writing",
+      "type": "quiz",
       "title": "✍️ Writing task (exam format!)",
       "html": "<details><summary>✍️ Writing task (exam format!)</summary>\n<p>Write a ~30-word message to your German teacher, Frau Schneider. Cover all 3 points: 1) you are sick, 2) you cannot come to class tomorrow, 3) ask for the homework. Formal frame!</p>\n<details class=\"key\"><summary>Model answer</summary>\n<p class=\"de\">Sehr geehrte Frau Schneider,<br>ich bin leider krank und habe Fieber. Ich kann morgen nicht zum Kurs kommen. Können Sie mir bitte die Hausaufgaben schicken?<br>Mit freundlichen Grüßen<br>[Name]</p>\n</details>\n</details>",
       "sourceHash": "94af7d9560572ae04ea0441ba5e7fc7bdcd638be0808ab7d568072bf1fc8628d"
     },
     {
       "id": "d29-s6",
-      "type": "speaking",
+      "type": "quiz",
       "title": "🎤 Speaking practice (exam format!)",
       "html": "<details><summary>🎤 Speaking practice (exam format!)</summary>\n<ol>\n<li><b>Part 1 rehearsal:</b> deliver your self-introduction: <span class=\"de\">Ich heiße ... Ich bin ... Jahre alt. Ich komme aus ... Ich wohne in ... Ich spreche ... Ich bin ... von Beruf. Mein Hobby ist ...</span> Then SPELL your surname and say your phone number.</li>\n<li><b>Part 2 rehearsal:</b> topic \"Essen\" — form 3 questions with W-words (Was isst du gern? ...) and answer them.</li>\n<li><b>Part 3 rehearsal:</b> make 3 polite requests: <span class=\"de\">Können Sie bitte ...? / Gib mir bitte ... / Machen Sie bitte ...</span></li>\n</ol>\n</details>",
       "sourceHash": "80ef0c414f53fb2c212de32fd105b6f6c37a2cb43979e539dff9fa91e6689263"

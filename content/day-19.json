@@ -22,7 +22,7 @@
     },
     {
       "id": "d19-s3",
-      "type": "sentences",
+      "type": "quiz",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Entschuldigung, wie komme ich zum Bahnhof?</span> <span class=\"tr\">Excuse me, how do I get to the station?</span></li>\n<li><span class=\"de\">Gehen Sie geradeaus und dann die zweite Straße links.</span> <span class=\"tr\">Go straight, then take the second street left.</span></li>\n<li><span class=\"de\">Nehmen Sie den Bus Nummer 12, Richtung Zentrum.</span> <span class=\"tr\">Take bus 12, direction city centre.</span></li>\n<li><span class=\"de\">Steigen Sie an der Haltestelle „Rathaus\" aus.</span> <span class=\"tr\">Get off at the \"Rathaus\" stop.</span></li>\n<li><span class=\"de\">Der Zug fährt um 14:32 von Gleis 5 ab.</span> <span class=\"tr\">The train departs at 14:32 from platform 5.</span></li>\n<li><span class=\"de\">Ist es weit? — Nein, nur fünf Minuten zu Fuß.</span> <span class=\"tr\">Is it far? — No, only 5 minutes on foot.</span></li>\n</ol>\n</details>",
       "sourceHash": "ceba7ef84f1c2e1cb7fc457cf8ae4c8c308c9e6d2d3f321846dca941de2a115f"

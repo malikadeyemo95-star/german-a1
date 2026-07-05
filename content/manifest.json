@@ -11,13 +11,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -34,13 +33,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -57,13 +55,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -80,13 +77,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -103,13 +99,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -126,13 +121,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -148,7 +142,6 @@
       "sectionCount": 5,
       "types": [
         "lesson",
-        "writing",
         "quiz",
         "speaking",
         "homework"
@@ -165,13 +158,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -188,13 +180,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -211,13 +202,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -234,13 +224,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -257,13 +246,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -280,13 +268,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -318,13 +305,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -341,13 +327,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -364,13 +349,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -387,13 +371,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -410,13 +393,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -433,13 +415,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -471,13 +452,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -494,13 +474,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -517,13 +496,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -540,13 +518,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -563,13 +540,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -586,13 +562,12 @@
       "types": [
         "grammar",
         "vocab",
-        "sentences",
+        "quiz",
         "dialogue",
         "speaking",
         "listening",
         "reading",
         "writing",
-        "quiz",
         "flashcards",
         "homework",
         "revision"
@@ -608,9 +583,8 @@
       "sectionCount": 7,
       "types": [
         "grammar",
-        "sentences",
-        "speaking",
         "quiz",
+        "speaking",
         "flashcards",
         "homework"
       ],
@@ -625,13 +599,10 @@
       "sectionCount": 10,
       "types": [
         "grammar",
-        "sentences",
+        "quiz",
         "dialogue",
         "reading",
-        "writing",
-        "speaking",
         "listening",
-        "quiz",
         "flashcards",
         "homework"
       ],
