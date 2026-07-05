@@ -43,7 +43,14 @@ export function buildQueue(cards, records, unlockedDay, now = Date.now(), newLim
   const unlocked = cards.filter((card) => card.day <= unlockedDay);
   const due = unlocked.filter((card) => records[card.id]?.reps && isDue(records[card.id], now));
   const fresh = unlocked.filter((card) => !records[card.id]?.reps).slice(0, newLimit);
-  return [...due.sort((a, b) => new Date(records[a.id].due) - new Date(records[b.id].due)), ...fresh];
+  const remaining = [...due.sort((a, b) => new Date(records[a.id].due) - new Date(records[b.id].due)), ...fresh];
+  const queue = [];
+  while (remaining.length) {
+    const previousSource = queue.at(-1)?.sourceId;
+    const nextIndex = remaining.findIndex((card) => !previousSource || card.sourceId !== previousSource);
+    queue.push(remaining.splice(nextIndex < 0 ? 0 : nextIndex, 1)[0]);
+  }
+  return queue;
 }
 
 export function hardestCards(cards, records, limit = 10) {

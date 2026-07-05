@@ -239,9 +239,11 @@ test('choosing a flashcard grade immediately advances to the next card', async (
   await page.goto('http://127.0.0.1:8765/?flashcard-auto-test=1#flashcards');
   await expect(page.locator('#reviewPrompt')).not.toHaveText('');
   const firstPrompt = await page.locator('#reviewPrompt').textContent();
+  const firstPair = await page.locator('#reviewAnswer').textContent();
   await page.locator('#reviewCard').click();
   await expect(page.locator('#reviewAnswer')).toBeVisible();
   await page.locator('#gradeButtons [data-grade="easy"]').click();
   await expect.poll(() => page.locator('#reviewPrompt').textContent()).not.toBe(firstPrompt);
+  await expect(page.locator('#reviewPrompt')).not.toHaveText(firstPair);
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('ga1:v2')).cardsReviewed)).toBe(1);
 });
