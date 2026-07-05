@@ -22,7 +22,7 @@
     },
     {
       "id": "d26-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wo warst du gestern? — Ich war zu Hause.</span> <span class=\"tr\">Where were you yesterday? — I was at home.</span></li>\n<li><span class=\"de\">Die Party war toll! Wir hatten viel Spaß.</span> <span class=\"tr\">The party was great! We had a lot of fun.</span></li>\n<li><span class=\"de\">Letztes Jahr waren wir im Urlaub in Italien.</span> <span class=\"tr\">Last year we were on holiday in Italy.</span></li>\n<li><span class=\"de\">Ich hatte gestern Kopfschmerzen.</span> <span class=\"tr\">I had a headache yesterday.</span></li>\n<li><span class=\"de\">Das Wetter war schrecklich — es war kalt und windig.</span> <span class=\"tr\">The weather was terrible — cold and windy.</span></li>\n<li><span class=\"de\">Früher hatte ich keine Zeit für Hobbys.</span> <span class=\"tr\">In the past I had no time for hobbies.</span></li>\n</ol>\n</details>",
       "sourceHash": "9be3b34c8a015ed8e0bb122934b1dd4ce047ad709a1fdc313ddec61c3438d0d9"

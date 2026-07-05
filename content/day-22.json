@@ -22,7 +22,7 @@
     },
     {
       "id": "d22-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was machst du in deiner Freizeit?</span> <span class=\"tr\">What do you do in your free time?</span></li>\n<li><span class=\"de\">Ich höre gern Musik und ich koche sehr gern.</span> <span class=\"tr\">I like listening to music and I really like cooking.</span></li>\n<li><span class=\"de\">Am Wochenende treffe ich oft Freunde.</span> <span class=\"tr\">On weekends I often meet friends.</span></li>\n<li><span class=\"de\">Er spielt lieber Fußball als Tennis.</span> <span class=\"tr\">He prefers football to tennis.</span></li>\n<li><span class=\"de\">Am liebsten reise ich.</span> <span class=\"tr\">Most of all, I like travelling.</span></li>\n<li><span class=\"de\">Schach finde ich langweilig.</span> <span class=\"tr\">I find chess boring.</span></li>\n</ol>\n</details>",
       "sourceHash": "68a3d2329fa50dfdf7aaffde9b21cbe9e6610873b275608313d7fdf68d67a144"

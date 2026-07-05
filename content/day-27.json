@@ -22,7 +22,7 @@
     },
     {
       "id": "d27-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was hast du gestern gemacht?</span> <span class=\"tr\">What did you do yesterday?</span></li>\n<li><span class=\"de\">Ich habe Deutsch gelernt und einen Film gesehen.</span> <span class=\"tr\">I studied German and watched a film.</span></li>\n<li><span class=\"de\">Wir haben Pizza gegessen und Cola getrunken.</span> <span class=\"tr\">We ate pizza and drank cola.</span></li>\n<li><span class=\"de\">Hast du schon eingekauft? — Nein, noch nicht.</span> <span class=\"tr\">Have you shopped yet? — No, not yet.</span></li>\n<li><span class=\"de\">Er hat den ganzen Tag gearbeitet.</span> <span class=\"tr\">He worked the whole day.</span></li>\n<li><span class=\"de\">Ich habe meine Freunde getroffen.</span> <span class=\"tr\">I met my friends.</span></li>\n</ol>\n</details>",
       "sourceHash": "5a21b506ba11cee07db8e0458ae94e09fd8ffccb96ee1df77a393894e99be9fd"

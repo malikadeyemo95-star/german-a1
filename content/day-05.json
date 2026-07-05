@@ -22,7 +22,7 @@
     },
     {
       "id": "d5-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was bist du von Beruf? — Ich bin Ingenieurin.</span> <span class=\"tr\">What's your job? — I'm an engineer.</span></li>\n<li><span class=\"de\">Ich arbeite als Kellner in einem Café.</span> <span class=\"tr\">I work as a waiter in a café.</span></li>\n<li><span class=\"de\">Arbeitest du heute? — Nein, heute nicht.</span> <span class=\"tr\">Are you working today? — No, not today.</span></li>\n<li><span class=\"de\">Sie studiert Medizin. Sie wird Ärztin.</span> <span class=\"tr\">She studies medicine. She's going to be a doctor.</span></li>\n<li><span class=\"de\">Mein Chef ist sehr gut.</span> <span class=\"tr\">My boss is very good.</span></li>\n<li><span class=\"de\">Bist du Student? — Ja, ich studiere in Köln.</span> <span class=\"tr\">Are you a student? — Yes, I study in Cologne.</span></li>\n</ol>\n</details>",
       "sourceHash": "7d3c04160afb64ea6b755b44f32044d501fabf4f16cd474f7933dcce6b2d2f66"

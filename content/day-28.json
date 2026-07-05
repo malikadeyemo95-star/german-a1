@@ -15,7 +15,7 @@
     },
     {
       "id": "d28-s2",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences & mini-dialogue",
       "html": "<details><summary>💬 Example sentences &amp; mini-dialogue</summary>\n<ol>\n<li><span class=\"de\">Wann bist du gekommen? — Ich bin um acht gekommen.</span> <span class=\"tr\">When did you come? — At eight.</span></li>\n<li><span class=\"de\">Wir sind ans Meer gefahren.</span> <span class=\"tr\">We drove to the sea.</span></li>\n<li><span class=\"de\">Sie ist nach New York geflogen.</span> <span class=\"tr\">She flew to New York.</span></li>\n<li><span class=\"de\">Ich bin heute früh aufgestanden und habe Sport gemacht.</span> <span class=\"tr\">I got up early and did sport. (sein + haben mixed!)</span></li>\n<li><span class=\"de\">Warum bist du zu Hause geblieben? — Ich war krank.</span> <span class=\"tr\">Why did you stay home? — I was sick.</span></li>\n</ol>\n<div class=\"dlg\">\n<p><b>Ben:</b> <span class=\"de\">Du warst nicht auf der Party! Wo bist du gewesen?</span> <span class=\"tr\">(You weren't at the party! Where were you?)</span></p>\n<p><b>Ada:</b> <span class=\"de\">Ich bin nach Köln gefahren. Meine Oma hatte Geburtstag.</span> <span class=\"tr\">(I went to Cologne. It was my grandma's birthday.)</span></p>\n<p><b>Ben:</b> <span class=\"de\">Ah, schön! Wie bist du gefahren — mit dem Zug?</span> <span class=\"tr\">(Ah, nice! How did you travel — by train?)</span></p>\n<p><b>Ada:</b> <span class=\"de\">Ja, und ich bin erst um Mitternacht nach Hause gekommen!</span> <span class=\"tr\">(Yes, and I only got home at midnight!)</span></p>\n</div>\n</details>",
       "sourceHash": "4e6e44d266d2016354e6586bedc1135d3101578f9128237a1614896a9ac65217"

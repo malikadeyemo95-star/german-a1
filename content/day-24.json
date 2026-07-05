@@ -22,7 +22,7 @@
     },
     {
       "id": "d24-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wie ist das Wetter heute? — Es ist sonnig und warm.</span> <span class=\"tr\">How's the weather? — Sunny and warm.</span></li>\n<li><span class=\"de\">Es regnet. Nimm einen Regenschirm mit!</span> <span class=\"tr\">It's raining. Take an umbrella!</span></li>\n<li><span class=\"de\">Im Winter schneit es oft in München.</span> <span class=\"tr\">In winter it often snows in Munich.</span></li>\n<li><span class=\"de\">Es sind heute 30 Grad — viel zu heiß!</span> <span class=\"tr\">It's 30 degrees today — way too hot!</span></li>\n<li><span class=\"de\">Morgen wird es kalt, denn der Wind kommt aus dem Norden.</span> <span class=\"tr\">Tomorrow it'll get cold because the wind is from the north.</span></li>\n<li><span class=\"de\">Mir ist kalt. Ich brauche eine Jacke.</span> <span class=\"tr\">I'm cold. I need a jacket.</span></li>\n</ol>\n</details>",
       "sourceHash": "1634fae5fe67f7d5aba41015f91641b992022d1b0a76ad7fae41044036598fde"

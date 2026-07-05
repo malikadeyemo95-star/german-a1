@@ -22,7 +22,7 @@
     },
     {
       "id": "d13-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Was kostet ein Kilo Äpfel? — Zwei Euro neunzig.</span> <span class=\"tr\">What does a kilo of apples cost? — €2.90.</span></li>\n<li><span class=\"de\">Das ist zu teuer!</span> <span class=\"tr\">That's too expensive!</span></li>\n<li><span class=\"de\">Er fährt zum Supermarkt und kauft Brot.</span> <span class=\"tr\">He drives to the supermarket and buys bread.</span></li>\n<li><span class=\"de\">Sie liest die Preise und nimmt den Käse.</span> <span class=\"tr\">She reads the prices and takes the cheese.</span></li>\n<li><span class=\"de\">Zahlen Sie bar oder mit Karte? — Bar, bitte.</span> <span class=\"tr\">Cash or card? — Cash, please.</span></li>\n<li><span class=\"de\">Gibt es hier eine Bäckerei? — Ja, es gibt eine am Markt.</span> <span class=\"tr\">Is there a bakery here? — Yes, there's one at the market.</span></li>\n</ol>\n</details>",
       "sourceHash": "9246adf623349327f9eda97ac86291c9aa4624d3c449eb31f187d9d3b3937553"

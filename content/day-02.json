@@ -22,7 +22,7 @@
     },
     {
       "id": "d2-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich heiße Martin. Und du?</span> <span class=\"tr\">My name is Martin. And you?</span></li>\n<li><span class=\"de\">Ich bin Anna. Freut mich!</span> <span class=\"tr\">I'm Anna. Nice to meet you!</span></li>\n<li><span class=\"de\">Wer ist das? — Das ist Herr Schmidt.</span> <span class=\"tr\">Who is that? — That's Mr Schmidt.</span></li>\n<li><span class=\"de\">Wie geht's? — Sehr gut, danke. Und dir?</span> <span class=\"tr\">How are you? — Very well, thanks. And you?</span></li>\n<li><span class=\"de\">Wir sind müde.</span> <span class=\"tr\">We are tired.</span></li>\n<li><span class=\"de\">Sie ist Anna und sie sind Ben und Tom.</span> <span class=\"tr\">She is Anna and they are Ben and Tom.</span></li>\n</ol>\n</details>",
       "sourceHash": "fb1bb75702bfbe21c28accf4424b3d7bd807099b63b6ac0e9211a8fcd317d380"

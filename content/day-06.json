@@ -22,7 +22,7 @@
     },
     {
       "id": "d6-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Meine Familie ist groß.</span> <span class=\"tr\">My family is big.</span></li>\n<li><span class=\"de\">Hast du Geschwister? — Ja, einen Bruder und eine Schwester.</span> <span class=\"tr\">Do you have siblings? — Yes, a brother and a sister.</span></li>\n<li><span class=\"de\">Mein Bruder heißt Daniel. Er ist verheiratet.</span> <span class=\"tr\">My brother's name is Daniel. He's married.</span></li>\n<li><span class=\"de\">Seine Frau kommt aus Polen.</span> <span class=\"tr\">His wife is from Poland.</span></li>\n<li><span class=\"de\">Ihre Kinder sind sehr nett.</span> <span class=\"tr\">Her/Their children are very nice.</span></li>\n<li><span class=\"de\">Unsere Oma ist achtzig Jahre alt.</span> <span class=\"tr\">Our grandma is 80 years old.</span></li>\n</ol>\n</details>",
       "sourceHash": "770d4052a556858e9a6af346824baa6dcc92ab07ee5d463c7aacb56361e4b1b7"

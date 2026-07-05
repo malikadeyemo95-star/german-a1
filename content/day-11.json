@@ -22,7 +22,7 @@
     },
     {
       "id": "d11-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich esse gern Käse, aber ich esse kein Fleisch.</span> <span class=\"tr\">I like cheese, but I don't eat meat.</span></li>\n<li><span class=\"de\">Trinkst du Milch? — Nein, ich trinke keine Milch.</span> <span class=\"tr\">Do you drink milk? — No, I don't drink milk.</span></li>\n<li><span class=\"de\">Das Brot ist nicht frisch.</span> <span class=\"tr\">The bread is not fresh.</span></li>\n<li><span class=\"de\">Wir frühstücken heute nicht.</span> <span class=\"tr\">We're not having breakfast today.</span></li>\n<li><span class=\"de\">Der Fisch ist lecker!</span> <span class=\"tr\">The fish is delicious!</span></li>\n<li><span class=\"de\">Ich habe keinen Hunger, aber Durst.</span> <span class=\"tr\">I'm not hungry, but thirsty.</span></li>\n</ol>\n</details>",
       "sourceHash": "62769013f9156f49f17afbed8eef5613b9ed76081b1f96017e51cd3ea0ab5007"

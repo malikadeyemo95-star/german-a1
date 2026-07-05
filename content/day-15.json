@@ -22,7 +22,7 @@
     },
     {
       "id": "d15-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Wie spät ist es? — Es ist halb acht.</span> <span class=\"tr\">What time is it? — It's 7:30.</span></li>\n<li><span class=\"de\">Der Kurs beginnt um neun Uhr.</span> <span class=\"tr\">The course starts at 9.</span></li>\n<li><span class=\"de\">Am Samstag arbeite ich nicht.</span> <span class=\"tr\">On Saturday I don't work.</span></li>\n<li><span class=\"de\">Mein Geburtstag ist im Oktober — am zwölften Oktober.</span> <span class=\"tr\">My birthday is in October — on October 12th.</span></li>\n<li><span class=\"de\">Im Winter ist es kalt.</span> <span class=\"tr\">In winter it's cold.</span></li>\n<li><span class=\"de\">Bitte sei pünktlich!</span> <span class=\"tr\">Please be on time!</span></li>\n</ol>\n</details>",
       "sourceHash": "bf2d4f6ad09ed0596b8dbf83061f981919e2719416fb8b001526df71c6a1e198"

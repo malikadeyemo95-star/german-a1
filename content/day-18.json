@@ -22,7 +22,7 @@
     },
     {
       "id": "d18-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Darf ich hier parken? — Nein, hier dürfen Sie nicht parken.</span> <span class=\"tr\">May I park here? — No, you may not park here.</span></li>\n<li><span class=\"de\">Man darf hier nicht rauchen.</span> <span class=\"tr\">Smoking isn't allowed here.</span></li>\n<li><span class=\"de\">Soll ich dich anrufen? — Ja, gern!</span> <span class=\"tr\">Shall I call you? — Yes, please!</span></li>\n<li><span class=\"de\">Ich möchte einen Termin vereinbaren.</span> <span class=\"tr\">I'd like to make an appointment.</span></li>\n<li><span class=\"de\">Passt es am Donnerstag um halb drei? — Ja, das passt gut.</span> <span class=\"tr\">Does Thursday at 2:30 work? — Yes, that works well.</span></li>\n<li><span class=\"de\">Ich muss den Termin leider verschieben.</span> <span class=\"tr\">Unfortunately I have to postpone the appointment.</span></li>\n</ol>\n</details>",
       "sourceHash": "fa7f5c08fd3b54ec5526410c3e4a5c6182fbad5af0c1f0d9de5a184c0b755a02"

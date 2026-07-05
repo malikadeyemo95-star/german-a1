@@ -22,7 +22,7 @@
     },
     {
       "id": "d9-s3",
-      "type": "quiz",
+      "type": "sentences",
       "title": "💬 Example sentences",
       "html": "<details><summary>💬 Example sentences</summary>\n<ol>\n<li><span class=\"de\">Ich habe zwei Brüder und eine Schwester.</span> <span class=\"tr\">I have two brothers and one sister.</span></li>\n<li><span class=\"de\">Die Kinder sind müde.</span> <span class=\"tr\">The children are tired.</span></li>\n<li><span class=\"de\">Viele Frauen arbeiten hier.</span> <span class=\"tr\">Many women work here.</span></li>\n<li><span class=\"de\">Die Bücher sind neu.</span> <span class=\"tr\">The books are new.</span></li>\n<li><span class=\"de\">Wir haben drei Lampen, aber nur einen Tisch.</span> <span class=\"tr\">We have three lamps but only one table.</span></li>\n<li><span class=\"de\">Die Äpfel sind lecker.</span> <span class=\"tr\">The apples are tasty.</span></li>\n</ol>\n</details>",
       "sourceHash": "457b357874ec332e5b048c3d0567561b5386f06c247c0996e9428d24740a14f1"

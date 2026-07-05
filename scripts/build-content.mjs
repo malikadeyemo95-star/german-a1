@@ -59,7 +59,7 @@ function text(value) {
 
 function sectionType(summary) {
   const value = summary.toLowerCase();
-  if (/quiz|test|exam/.test(value)) return 'quiz';
+  if (/\b(quiz|test|exam)\b/.test(value)) return 'quiz';
   if (/grammar|alphabet|pronunciation rule|theory/.test(value)) return 'grammar';
   if (/vocabulary|wortschatz/.test(value)) return 'vocab';
   if (/example|sentence/.test(value)) return 'sentences';
