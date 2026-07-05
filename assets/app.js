@@ -1,4 +1,5 @@
 import { STATE_KEY, migrateLegacyState } from './state.js';
+import { loadGermanVoice, speakGerman, stopGermanSpeech } from './audio.js';
 
 const CONTENT_ROOT = './content/';
 const TEST_DAYS = new Set([7, 14, 21, 28, 30]);
@@ -154,6 +155,100 @@ function renderSection(section, day, open = false) {
   return wrapper;
 }
 
+function addSpeechButtons(root) {
+  root.querySelectorAll('.section-card[data-type="vocab"] .de,.section-card[data-type="sentences"] .de,.section-card[data-type="dialogue"] .de,.section-card[data-type="flashcards"] .de,.section-card[data-type="flashcards"] .fc .a').forEach((target) => {
+    if (target.querySelector('.speak-button')) return;
+    const spoken = target.textContent.replace(/🔊/g, '').trim();
+    if (!spoken) return;
+    target.dataset.spoken = spoken;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'speak-button';
+    button.setAttribute('aria-label', `Hear German: ${spoken.slice(0, 70)}`);
+    button.textContent = '▶';
+    button.addEventListener('click', async (event) => {
+      event.stopPropagation();
+      document.querySelectorAll('.speak-button.playing').forEach((item) => item.classList.remove('playing'));
+      button.classList.add('playing');
+      await speakGerman(spoken, 1);
+      button.classList.remove('playing');
+    });
+    target.appendChild(button);
+  });
+}
+
+function addDialoguePlayers(root) {
+  root.querySelectorAll('.section-card[data-type="dialogue"]').forEach((card) => {
+    const body = card.querySelector('.section-body');
+    const lines = [...body.querySelectorAll('.dlg p')].filter((line) => line.querySelector('.de'));
+    if (!lines.length) return;
+    const toolbar = document.createElement('div');
+    toolbar.className = 'audio-toolbar';
+    toolbar.innerHTML = '<button type="button" data-play>▶ Play dialogue</button><button type="button" data-stop>Stop</button><label>Speed <select aria-label="Dialogue speed"><option value="0.7">0.7×</option><option value="1" selected>1×</option></select></label>';
+    body.prepend(toolbar);
+    let stopped = false;
+    toolbar.querySelector('[data-play]').addEventListener('click', async () => {
+      stopped = false;
+      const rate = Number(toolbar.querySelector('select').value);
+      for (const line of lines) {
+        if (stopped) break;
+        lines.forEach((item) => item.classList.remove('dialogue-line-playing'));
+        line.classList.add('dialogue-line-playing');
+        const german = line.querySelector('.de');
+        await speakGerman(german.dataset.spoken || german.textContent.replace('▶',''), rate);
+      }
+      lines.forEach((item) => item.classList.remove('dialogue-line-playing'));
+    });
+    toolbar.querySelector('[data-stop]').addEventListener('click', () => { stopped = true; stopGermanSpeech(); lines.forEach((item) => item.classList.remove('dialogue-line-playing')); });
+  });
+}
+
+function normalizeGerman(value) {
+  return value.toLowerCase().trim().replace(/[.,!?;:„“"']/g, '').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/\s+/g,' ');
+}
+
+function collectListeningItems(root, day) {
+  const items = [...root.querySelectorAll('.section-card[data-type="vocab"] .de')]
+    .map((node) => node.dataset.spoken || node.textContent.replace(/[🔊▶]/g,'').trim())
+    .filter((value) => value && value.length < 70);
+  if (day === 3 || day === 15) [14,17,24,42,48,67,76,89,98].forEach((number) => items.push(String(number)));
+  return [...new Set(items)];
+}
+
+function addListeningDrills(root, day) {
+  const items = collectListeningItems(root, day);
+  if (!items.length) return;
+  root.querySelectorAll('.section-card[data-type="listening"]').forEach((card) => {
+    const body = card.querySelector('.section-body');
+    const drill = document.createElement('div');
+    drill.className = 'listening-drill';
+    drill.innerHTML = '<h3>Listen and type</h3><p>Play one word from today, then type exactly what you hear.</p><div class="audio-toolbar"><button type="button" data-hear>▶ Hear a word</button><button type="button" data-slow>Slow 0.7×</button></div><div class="listen-row"><input type="text" lang="de" autocapitalize="off" aria-label="Type what you heard" placeholder="Type what you heard…"><button type="button" class="secondary-button" data-check>Check</button></div><div class="listen-feedback" aria-live="polite"></div>';
+    body.prepend(drill);
+    let current = items[0];
+    const choose = () => { current = items[Math.floor(Math.random() * items.length)]; };
+    drill.querySelector('[data-hear]').addEventListener('click', () => { choose(); speakGerman(current, 1); });
+    drill.querySelector('[data-slow]').addEventListener('click', () => speakGerman(current, .7));
+    const check = () => {
+      const input = drill.querySelector('input'),feedback = drill.querySelector('.listen-feedback');
+      const correct = normalizeGerman(input.value) === normalizeGerman(current);
+      feedback.className = `listen-feedback ${correct ? 'good' : 'bad'}`;
+      feedback.textContent = correct ? 'Correct — gut gehört.' : `Not quite. The answer was: ${current}`;
+      if (!correct) state.listeningMistakes = [...(state.listeningMistakes || []), { day, expected:current, said:input.value, at:new Date().toISOString() }].slice(-100);
+      saveState(true);
+    };
+    drill.querySelector('[data-check]').addEventListener('click', check);
+    drill.querySelector('input').addEventListener('keydown', (event) => { if (event.key === 'Enter') check(); });
+  });
+}
+
+async function enhanceAudio(root, day) {
+  const voice = await loadGermanVoice();
+  addSpeechButtons(root);
+  addDialoguePlayers(root);
+  addListeningDrills(root, day);
+  if (!voice && !('speechSynthesis' in window)) root.querySelectorAll('.speak-button,.audio-toolbar').forEach((control) => { control.hidden = true; });
+}
+
 function showCelebration(day, goal) {
   const overlay = document.querySelector('#celebration');
   document.querySelector('#celebrationCopy').textContent = goal.replace(/^🎯\s*/, '') || `Day ${day} is complete.`;
@@ -196,6 +291,7 @@ async function renderDay(day) {
     dayNav.querySelector('[data-next]').addEventListener('click', () => navigate(`day/${activeDay + 1}`));
     article.appendChild(dayNav);
     elements.content.appendChild(article);
+    enhanceAudio(elements.content, activeDay);
     elements.loading.hidden = true;
     state.lastDay = activeDay;
     saveState();
