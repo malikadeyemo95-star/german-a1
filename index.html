@@ -47,6 +47,7 @@
       <p class="eyebrow">Course map</p>
       <h1 id="daysTitle">Your 30 days</h1>
       <p class="lede">Completed lessons stay available. Test days are marked separately.</p>
+      <div class="status-legend" aria-label="Day status legend"><span><i></i>Not started</span><span><i class="progress"></i>In progress</span><span><i class="complete"></i>Complete</span><span><i class="test"></i>Test day</span></div>
       <div class="day-grid" id="dayGrid"></div>
     </section>
 
@@ -70,6 +71,17 @@
     <button type="button" data-route="quiz"><span>✓</span>Quiz</button>
     <button type="button" data-route="stats"><span>⌁</span>Stats</button>
   </nav>
+
+  <div class="celebration" id="celebration" hidden>
+    <div class="celebration-card" role="dialog" aria-modal="true" aria-labelledby="celebrationTitle">
+      <div class="celebration-mark">✓</div>
+      <p class="eyebrow">Lesson complete</p>
+      <h2 id="celebrationTitle">You moved your German forward.</h2>
+      <p id="celebrationCopy"></p>
+      <button class="primary-button" id="celebrationNext" type="button">Continue <span>→</span></button>
+      <button class="secondary-button" id="celebrationHome" type="button">Back home</button>
+    </div>
+  </div>
 
   <noscript>This course needs JavaScript to load its lesson files.</noscript>
   <script type="module" src="./assets/app.js"></script>

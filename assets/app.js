@@ -84,7 +84,10 @@ function setView(name) {
 
 function updateChrome(day = null) {
   const complete = state.completedDays.length;
-  elements.progress.style.width = `${complete / 30 * 100}%`;
+  const dayInfo = day ? manifest.days[day - 1] : null;
+  const dayDone = day ? Object.keys(state.sectionProgress[day] || {}).length : 0;
+  const dayRatio = day && state.completedDays.includes(day) ? 1 : dayDone / Math.max(1, dayInfo?.sectionCount || 1);
+  elements.progress.style.width = day ? `${dayRatio * 100}%` : `${complete / 30 * 100}%`;
   elements.eyebrow.textContent = day ? `Day ${day} of 30` : 'Deutschweg · A1';
   elements.title.textContent = day ? manifest.days[day - 1].title.replace(/^Day \d+ [—·-]\s*/, '') : 'Your 30-day journey';
 }
@@ -108,6 +111,7 @@ function renderDays() {
   document.querySelector('#dayGrid').innerHTML = manifest.days.map((day) => {
     const classes = ['day-tile'];
     if (state.completedDays.includes(day.day)) classes.push('complete');
+    else if (Object.keys(state.sectionProgress[day.day] || {}).length) classes.push('in-progress');
     if (day.day === current) classes.push('current');
     if (TEST_DAYS.has(day.day)) classes.push('test');
     return `<button type="button" class="${classes.join(' ')}" data-day="${day.day}" aria-label="Day ${day.day}: ${escapeHtml(day.title)}">${state.completedDays.includes(day.day) ? '✓' : day.day}</button>`;
@@ -122,22 +126,40 @@ function cleanSectionHtml(html) {
   return html.replace(/^<details\b[^>]*>/i, '').replace(/<\/details>\s*$/i, '').replace(/^<summary[^>]*>[\s\S]*?<\/summary>/i, '');
 }
 
-function renderSection(section, day) {
+function renderSection(section, day, open = false) {
   const done = Boolean(state.sectionProgress[day]?.[section.id]);
   const wrapper = document.createElement('details');
   wrapper.className = 'section-card';
   wrapper.dataset.type = section.type;
-  wrapper.open = !done;
-  wrapper.innerHTML = `<summary><span class="section-icon" aria-hidden="true">${SECTION_ICONS[section.type] || '·'}</span><span class="section-title">${escapeHtml(section.title)}</span><span class="section-status">${done ? '✓' : ''}</span></summary><div class="section-body">${cleanSectionHtml(section.html)}</div>`;
-  wrapper.addEventListener('toggle', () => {
-    if (!wrapper.open) {
-      state.sectionProgress[day] ||= {};
-      state.sectionProgress[day][section.id] = true;
-      wrapper.querySelector('.section-status').textContent = '✓';
-      saveState(true);
-    }
+  wrapper.open = open;
+  wrapper.innerHTML = `<summary><span class="section-icon" aria-hidden="true">${SECTION_ICONS[section.type] || '·'}</span><span class="section-title">${escapeHtml(section.title)}</span><span class="section-status">${done ? '✓' : ''}</span></summary><div class="section-body">${cleanSectionHtml(section.html)}<button type="button" class="section-complete ${done ? 'done' : ''}">${done ? 'Completed ✓' : 'Mark section complete'}</button></div>`;
+  const complete = wrapper.querySelector('.section-complete');
+  complete.addEventListener('click', () => {
+    state.sectionProgress[day] ||= {};
+    state.sectionProgress[day][section.id] = true;
+    wrapper.querySelector('.section-status').textContent = '✓';
+    complete.textContent = 'Completed ✓';
+    complete.classList.add('done');
+    saveState(true);
+    updateChrome(day);
+  });
+  wrapper.querySelectorAll('.fc').forEach((card) => {
+    card.tabIndex = 0;
+    card.setAttribute('role','button');
+    card.setAttribute('aria-label','Flip flashcard');
+    const flip = () => card.classList.toggle('flip');
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); flip(); } });
   });
   return wrapper;
+}
+
+function showCelebration(day, goal) {
+  const overlay = document.querySelector('#celebration');
+  document.querySelector('#celebrationCopy').textContent = goal.replace(/^🎯\s*/, '') || `Day ${day} is complete.`;
+  document.querySelector('#celebrationNext').onclick = () => { overlay.hidden = true; navigate(day < 30 ? `day/${day + 1}` : 'stats'); };
+  document.querySelector('#celebrationHome').onclick = () => { overlay.hidden = true; navigate('home'); };
+  overlay.hidden = false;
 }
 
 async function renderDay(day) {
@@ -153,7 +175,8 @@ async function renderDay(day) {
     heading.className = 'lesson-heading';
     heading.innerHTML = `<p class="eyebrow">Day ${activeDay} · ${data.sections.length} sections</p><h1>${escapeHtml(data.title.replace(/^Day \d+ [—·-]\s*/, ''))}</h1><p>${escapeHtml(data.goal.replace(/^🎯\s*/, ''))}</p>`;
     article.appendChild(heading);
-    data.sections.forEach((section) => article.appendChild(renderSection(section, activeDay)));
+    const firstIncomplete = data.sections.findIndex((section) => !state.sectionProgress[activeDay]?.[section.id]);
+    data.sections.forEach((section, index) => article.appendChild(renderSection(section, activeDay, index === Math.max(0, firstIncomplete))));
     const complete = document.createElement('button');
     complete.type = 'button'; complete.className = 'primary-button complete-day';
     complete.textContent = state.completedDays.includes(activeDay) ? 'Day complete ✓' : 'Mark day complete';
@@ -163,8 +186,15 @@ async function renderDay(day) {
       saveState(true);
       complete.textContent = 'Day complete ✓';
       updateChrome(activeDay);
+      showCelebration(activeDay, data.goal);
     });
     article.appendChild(complete);
+    const dayNav = document.createElement('div');
+    dayNav.className = 'lesson-nav';
+    dayNav.innerHTML = `<button type="button" class="secondary-button" data-previous ${activeDay === 1 ? 'disabled' : ''}>← Previous</button><button type="button" class="secondary-button" data-next ${activeDay === 30 ? 'disabled' : ''}>Next →</button>`;
+    dayNav.querySelector('[data-previous]').addEventListener('click', () => navigate(`day/${activeDay - 1}`));
+    dayNav.querySelector('[data-next]').addEventListener('click', () => navigate(`day/${activeDay + 1}`));
+    article.appendChild(dayNav);
     elements.content.appendChild(article);
     elements.loading.hidden = true;
     state.lastDay = activeDay;
