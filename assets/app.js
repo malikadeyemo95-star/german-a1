@@ -1,4 +1,4 @@
-import { STATE_KEY, migrateLegacyState } from './state.js';
+import { STATE_KEY, calculateStreak, migrateLegacyState, shiftedDateKey, validateImportedState } from './state.js';
 import { loadGermanVoice, speakGerman, stopGermanSpeech } from './audio.js';
 import { buildQueue, cardStatus, hardestCards, scheduleCard } from './srs.js';
 
@@ -11,7 +11,7 @@ const SECTION_ICONS = {
 
 const elements = {
   home:document.querySelector('#homeView'),days:document.querySelector('#daysView'),
-  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),quiz:document.querySelector('#quizView'),placeholder:document.querySelector('#placeholderView'),
+  day:document.querySelector('#dayView'),flashcards:document.querySelector('#flashcardsView'),quiz:document.querySelector('#quizView'),stats:document.querySelector('#statsView'),placeholder:document.querySelector('#placeholderView'),
   content:document.querySelector('#dayContent'),loading:document.querySelector('#dayLoading'),
   title:document.querySelector('#topbarTitle'),eyebrow:document.querySelector('#topbarEyebrow'),
   progress:document.querySelector('#topbarProgress'),back:document.querySelector('#backButton'),
@@ -19,6 +19,9 @@ const elements = {
 
 let manifest;
 let state = migrateLegacyState(localStorage);
+state.activityDays ||= [];
+state.sectionProgress ||= {};
+state.completedDays ||= [];
 let activeDay = state.lastDay || nextDay();
 let touchStartX = 0;
 let allCards;
@@ -27,15 +30,11 @@ let allTests;
 let reviewQueue = [];
 let reviewIndex = 0;
 
-function dateKey(date = new Date()) {
-  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
-  return local.toISOString().slice(0, 10);
-}
-
 function saveState(activity = false) {
   if (activity) {
-    const today = dateKey();
+    const today = shiftedDateKey();
     if (!state.activityDays.includes(today)) state.activityDays.push(today);
+    state.activityLog = [...(state.activityLog || []), new Date().toISOString()].slice(-1000);
   }
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
 }
@@ -78,7 +77,7 @@ function setTheme(theme) {
 }
 
 function setView(name) {
-  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,placeholder:elements.placeholder})
+  Object.values({home:elements.home,days:elements.days,day:elements.day,flashcards:elements.flashcards,quiz:elements.quiz,stats:elements.stats,placeholder:elements.placeholder})
     .forEach((view) => { view.hidden = true; });
   elements[name].hidden = false;
   elements.back.hidden = name === 'home';
@@ -301,9 +300,83 @@ function renderHome() {
   document.querySelector('#daysComplete').textContent = state.completedDays.length;
   document.querySelector('#coursePercent').textContent = `${Math.round(state.completedDays.length / 30 * 100)}%`;
   document.querySelector('#studyDays').textContent = state.activityDays.length;
+  document.querySelector('#dueToday').textContent = '…';
+  loadCards().then((cards) => {
+    document.querySelector('#dueToday').textContent = buildQueue(cards, state.srs || {}, day, Date.now(), 15).length;
+  }).catch(() => { document.querySelector('#dueToday').textContent = '—'; });
   document.querySelector('#continueButton').onclick = () => navigate(`day/${day}`);
   updateChrome();
   setView('home');
+}
+
+function scoreEntries() {
+  return [...(state.quizResults || []).map((result) => ({...result,label:`Day ${result.day} quiz`})),
+    ...(state.testResults || []).map((result) => ({...result,label:result.day === 30 ? 'A1 mock' : `Day ${result.day} test`}))].sort((a,b) => new Date(a.at) - new Date(b.at));
+}
+
+function weakTopicEntries() {
+  const counts = new Map();
+  const add = (topic, amount = 1) => counts.set(topic, (counts.get(topic) || 0) + amount);
+  (state.listeningMistakes || []).forEach((mistake) => add(`Day ${mistake.day} listening`));
+  (state.customCards || []).forEach((card) => add(`Day ${card.day} quiz`));
+  Object.entries(state.srs || {}).forEach(([id, record]) => {
+    if (!(record.lapses > 0)) return;
+    const card = allCards?.find((item) => item.id === id);
+    add(card ? `Day ${card.day} flashcards` : 'Flashcards', record.lapses);
+  });
+  return [...counts].sort((a,b) => b[1] - a[1]).slice(0,8);
+}
+
+async function renderStats() {
+  await loadCards();
+  const scores = scoreEntries();
+  const sectionTotal = Object.values(state.sectionProgress).reduce((sum, sections) => sum + Object.keys(sections || {}).length, 0);
+  const stats = [
+    [calculateStreak(state.activityDays),'day streak'],
+    [state.completedDays.length,'days complete'],
+    [sectionTotal,'sections complete'],
+    [state.cardsReviewed || 0,'cards reviewed'],
+    [scores.length,'quiz/test attempts'],
+    [state.activityDays.length,'total study days'],
+  ];
+  document.querySelector('#statGrid').innerHTML = stats.map(([value,label]) => `<div class="stat-card"><strong>${value}</strong><span>${label}</span></div>`).join('');
+  document.querySelector('#scoreTimeline').innerHTML = scores.length
+    ? scores.slice(-12).map((score) => `<div class="score-row"><span>${escapeHtml(score.label)}</span><div class="score-track"><i style="width:${score.percent}%"></i></div><strong>${score.percent}%</strong></div>`).join('')
+    : '<p class="lede">Complete a quiz to start your score history.</p>';
+  const weak = weakTopicEntries();
+  document.querySelector('#weakTopics').innerHTML = weak.length
+    ? weak.map(([topic,count]) => `<div class="weak-row"><strong>${escapeHtml(topic)}</strong><span>${count} misses</span></div>`).join('')
+    : '<p class="lede">No weak topics recorded yet.</p>';
+  elements.title.textContent = 'Stats';
+  elements.eyebrow.textContent = `${calculateStreak(state.activityDays)} day streak`;
+  setView('stats');
+}
+
+function exportProgress() {
+  const payload = { app:'Deutschweg A1',exportedAt:new Date().toISOString(),state };
+  const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;link.download = `deutschweg-progress-${shiftedDateKey()}.json`;
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(() => URL.revokeObjectURL(url),1000);
+}
+
+async function importProgress(file) {
+  const feedback = document.querySelector('#importFeedback');
+  try {
+    const payload = JSON.parse(await file.text());
+    const imported = payload.state || payload;
+    if (!validateImportedState(imported)) throw new Error('This is not a valid Deutschweg progress file.');
+    state = imported;
+    saveState();
+    feedback.className = 'quiz-feedback good';
+    feedback.textContent = 'Progress restored. Reloading…';
+    setTimeout(() => location.reload(),500);
+  } catch (error) {
+    feedback.className = 'quiz-feedback bad';
+    feedback.textContent = error.message;
+  }
 }
 
 function renderDays() {
@@ -531,7 +604,7 @@ function routeFromHash() {
   else if (/^day\/\d+$/.test(route)) renderDay(route.split('/')[1]);
   else if (route === 'flashcards') renderFlashcards();
   else if (route === 'quiz') renderQuizHub();
-  else if (route === 'stats') renderPlaceholder(route);
+  else if (route === 'stats') renderStats();
   else renderHome();
 }
 
@@ -558,6 +631,8 @@ document.querySelector('#checkTypedAnswer').addEventListener('click', () => {
   revealReviewCard();
 });
 document.querySelectorAll('#gradeButtons [data-grade]').forEach((button) => button.addEventListener('click', () => gradeCurrent(button.dataset.grade)));
+document.querySelector('#exportProgress').addEventListener('click', exportProgress);
+document.querySelector('#importProgress').addEventListener('change', (event) => { const [file] = event.target.files;if (file) importProgress(file); });
 document.addEventListener('touchstart', (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive:true });
 document.addEventListener('touchend', (event) => {
   if (elements.day.hidden) return;

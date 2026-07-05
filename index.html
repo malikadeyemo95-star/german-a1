@@ -40,6 +40,7 @@
         <div><strong id="daysComplete">0</strong><span>days complete</span></div>
         <div><strong id="coursePercent">0%</strong><span>course progress</span></div>
         <div><strong id="studyDays">0</strong><span>study days</span></div>
+        <div><strong id="dueToday">0</strong><span>cards due</span></div>
       </div>
     </section>
 
@@ -91,6 +92,15 @@
       <h1 id="quizTitle">Quiz</h1>
       <label class="quiz-picker">Choose a lesson <select id="quizPicker"></select></label>
       <div id="quizBody"></div>
+    </section>
+
+    <section id="statsView" class="view" hidden aria-labelledby="statsTitle">
+      <p class="eyebrow">Your learning record</p>
+      <h1 id="statsTitle">Stats</h1>
+      <div class="stat-grid" id="statGrid"></div>
+      <section class="stats-section"><h2>Scores over time</h2><div id="scoreTimeline"></div></section>
+      <section class="stats-section"><h2>Weakest topics</h2><div id="weakTopics"></div></section>
+      <section class="stats-section"><h2>Protect your progress</h2><p class="lede">Export a backup whenever you like. Importing restores the complete learning record on this device.</p><div class="data-actions"><button class="secondary-button" id="exportProgress" type="button">Export progress</button><label class="secondary-button import-label">Import progress<input type="file" id="importProgress" accept="application/json"></label></div><p id="importFeedback" aria-live="polite"></p></section>
     </section>
 
     <section id="placeholderView" class="view" hidden>

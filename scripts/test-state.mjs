@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { STATE_KEY, migrateLegacyState } from '../assets/state.js';
+import { STATE_KEY, calculateStreak, migrateLegacyState, shiftedDateKey, validateImportedState } from '../assets/state.js';
 
 class MemoryStorage {
   #values = new Map();
@@ -20,5 +20,9 @@ assert.equal(JSON.parse(legacy.getItem(STATE_KEY)).schemaVersion, 2);
 const existing = new MemoryStorage();
 existing.setItem(STATE_KEY, JSON.stringify({ schemaVersion: 2, completedDays: [7], sectionProgress: {} }));
 assert.deepEqual(migrateLegacyState(existing).completedDays, [7]);
+assert.equal(shiftedDateKey(new Date('2026-07-05T02:00:00+02:00')), '2026-07-04');
+assert.equal(calculateStreak(['2026-07-02','2026-07-03','2026-07-04'], new Date('2026-07-05T02:00:00+02:00')), 3);
+assert.equal(validateImportedState(migrated), true);
+assert.equal(validateImportedState({ schemaVersion:2,completedDays:[99],activityDays:[],sectionProgress:{} }), false);
 
-console.log('Legacy ga1done/ga1x migration and existing v2 preservation verified.');
+console.log('Legacy migration, shift-day streaks and import validation verified.');
