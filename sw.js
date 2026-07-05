@@ -1,4 +1,4 @@
-const CACHE = 'deutschweg-v22';
+const CACHE = 'deutschweg-v23';
 const DAY_FILES = Array.from({ length: 30 }, (_, index) => `./content/day-${String(index + 1).padStart(2, '0')}.json`);
 const APP_FILES = [
   './','./index.html','./manifest.json','./icon.png','./icon512.png',
@@ -8,7 +8,11 @@ const APP_FILES = [
 ];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(APP_FILES)));
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((cache) => cache.addAll(APP_FILES))
+      .then(() => self.skipWaiting()),
+  );
 });
 
 self.addEventListener('message', (event) => {
@@ -19,7 +23,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
-      .then(() => self.clients.claim()),
+      .then(() => self.clients.claim())
+      .then(() => location.hostname.endsWith('github.io') ? self.clients.matchAll({ type:'window' }) : [])
+      .then((windows) => Promise.all(windows.map((client) => client.navigate(client.url)))),
   );
 });
 

@@ -262,7 +262,6 @@ function gradeCurrent(grade) {
   if (!card) return;
   state.srs[card.id] = srsApi.scheduleCard(state.srs[card.id], grade);
   state.cardsReviewed = (state.cardsReviewed || 0) + 1;
-  if (grade === 'again') reviewQueue.push(card);
   reviewIndex += 1;
   saveState(true);
   paintReviewCard();
@@ -1256,8 +1255,11 @@ function offerAppUpdate(worker) {
   };
 }
 if ('serviceWorker' in navigator) {
+  const controlledAtLoad = Boolean(navigator.serviceWorker.controller);
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (refreshingForUpdate) location.reload();
+    if (!controlledAtLoad || refreshingForUpdate) return;
+    refreshingForUpdate = true;
+    location.reload();
   });
   navigator.serviceWorker.register('./sw.js').then((registration) => {
     offerAppUpdate(registration.waiting);

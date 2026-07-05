@@ -225,25 +225,27 @@ test('search modal traps focus, closes with Escape, and returns focus to its tri
   await expect(page.locator('#searchButton')).toBeFocused();
 });
 
-test('choosing a flashcard grade immediately advances to the next card', async ({ page }) => {
-  await page.addInitScript(() => {
-    localStorage.setItem('ga1:v2', JSON.stringify({
-      schemaVersion:2,
-      completedDays:[],
-      sectionProgress:{},
-      lastDay:1,
-      theme:'dark',
-      activityDays:[],
-    }));
+for (const grade of ['again','hard','good','easy']) {
+  test(`choosing ${grade} immediately advances to a different flashcard`, async ({ page }) => {
+    await page.addInitScript(() => {
+      localStorage.setItem('ga1:v2', JSON.stringify({
+        schemaVersion:2,
+        completedDays:[],
+        sectionProgress:{},
+        lastDay:1,
+        theme:'dark',
+        activityDays:[],
+      }));
+    });
+    await page.goto(`http://127.0.0.1:8765/?flashcard-${grade}-test=1#flashcards`);
+    await expect(page.locator('#reviewPrompt')).not.toHaveText('');
+    const firstPrompt = await page.locator('#reviewPrompt').textContent();
+    const firstPair = await page.locator('#reviewAnswer').textContent();
+    await page.locator('#reviewCard').click();
+    await expect(page.locator('#reviewAnswer')).toBeVisible();
+    await page.locator(`#gradeButtons [data-grade="${grade}"]`).click();
+    await expect.poll(() => page.locator('#reviewPrompt').textContent()).not.toBe(firstPrompt);
+    await expect(page.locator('#reviewPrompt')).not.toHaveText(firstPair);
+    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('ga1:v2')).cardsReviewed)).toBe(1);
   });
-  await page.goto('http://127.0.0.1:8765/?flashcard-auto-test=1#flashcards');
-  await expect(page.locator('#reviewPrompt')).not.toHaveText('');
-  const firstPrompt = await page.locator('#reviewPrompt').textContent();
-  const firstPair = await page.locator('#reviewAnswer').textContent();
-  await page.locator('#reviewCard').click();
-  await expect(page.locator('#reviewAnswer')).toBeVisible();
-  await page.locator('#gradeButtons [data-grade="easy"]').click();
-  await expect.poll(() => page.locator('#reviewPrompt').textContent()).not.toBe(firstPrompt);
-  await expect(page.locator('#reviewPrompt')).not.toHaveText(firstPair);
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('ga1:v2')).cardsReviewed)).toBe(1);
-});
+}

@@ -17,7 +17,9 @@ const shell = [
 ];
 await Promise.all(shell.map((file) => access(resolve(root, file))));
 const worker = await readFile(resolve(root, 'sw.js'), 'utf8');
-assert.match(worker, /deutschweg-v22/);
+assert.match(worker, /deutschweg-v23/);
+assert.match(worker, /skipWaiting/);
+assert.match(worker, /client\.navigate/);
 assert.match(worker, /cache\.addAll\(APP_FILES\)/);
 assert.match(worker, /event\.request\.mode === 'navigate'/);
 assert.match(worker, /SKIP_WAITING/);
